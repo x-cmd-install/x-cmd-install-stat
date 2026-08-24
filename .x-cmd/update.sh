@@ -15,6 +15,7 @@
 #     ./.x-cmd/update.sh --dry-run      # list actions without writing
 #     ./.x-cmd/update.sh --jobs 4       # set parallelism (default 2)
 #     ./.x-cmd/update.sh --retries 3    # retries per card (default 2)
+#     ./.x-cmd/update.sh --input FILE   # run on an explicit owner/repo list
 #     ./.x-cmd/update.sh --date 260825  # override the date stamp
 
 set -u
@@ -36,6 +37,8 @@ while [ $# -gt 0 ]; do
         --retries)     shift; retries="${1:-2}" ;;
         --date=*)      date_stamp="${1#--date=}" ;;
         --date)        shift; date_stamp="${1:-$(date +%y%m%d)}" ;;
+        --input=*)     input_file="${1#--input=}" ;;
+        --input)       shift; input_file="${1:-}" ;;
         -h|--help)
             sed -n '2,22p' "$0"
             exit 0 ;;
@@ -46,18 +49,27 @@ done
 
 mkdir -p "$stat_dir"
 
-# Pull the GitHub owner/repo list from column 4 (source URL) of `x install --ls`.
+# Pull the GitHub owner/repo list. Default: column 4 of `x install --ls`.
+# --input FILE overrides with an explicit owner/repo list (one per line).
 repos_file="$(mktemp -t xcmdrepos.XXXXXX)"
 fail_file="$(mktemp -t xcmdfail.XXXXXX)"
 trap 'rm -f "$repos_file" "$fail_file" "${retry_file:-}"' EXIT
 
-x install --ls 2>/dev/null \
-    | awk -F'\t' 'NR>1 && $4 ~ /^https?:\/\/github\.com\// {print $4}' \
-    | awk -F'/' '{print $4"/"$5}' \
-    | sed 's/\.git$//' \
-    | grep -E '^[^/]+/[^/]+$' \
-    | sort -u \
-    > "$repos_file"
+if [ -n "${input_file:-}" ]; then
+    if [ ! -r "$input_file" ]; then
+        echo "input file not readable: $input_file" >&2
+        exit 1
+    fi
+    grep -E '^[^/]+/[^/]+$' "$input_file" | sort -u > "$repos_file"
+else
+    x install --ls 2>/dev/null \
+        | awk -F'\t' 'NR>1 && $4 ~ /^https?:\/\/github\.com\// {print $4}' \
+        | awk -F'/' '{print $4"/"$5}' \
+        | sed 's/\.git$//' \
+        | grep -E '^[^/]+/[^/]+$' \
+        | sort -u \
+        > "$repos_file"
+fi
 
 count=$(wc -l < "$repos_file" | tr -d ' ')
 if [ "$count" -eq 0 ]; then
