@@ -47,9 +47,11 @@ done
 
 mkdir -p "$stat_dir"
 missing_file="$repo_root/.x-cmd/${date_stamp}.missing.txt"
+fetched_file="$(mktemp -t xcmdfetched.XXXXXX)"
+have_file="$(mktemp -t xcmdhave.XXXXXX)"
 
 list_file="$(mktemp -t xcmdcollect.XXXXXX)"
-trap 'rm -f "$list_file"' EXIT
+trap 'rm -f "$list_file" "$fetched_file" "$have_file"' EXIT
 if [ -n "$input_file" ]; then
     grep -E '^[A-Za-z0-9._-]+$' "$input_file" | sort -u > "$list_file"
 else
@@ -63,7 +65,7 @@ echo "==> $total repos, date $date_stamp (UTC), jobs=$jobs"
 fetch_one() {
     repo="$1"
     out="$stat_dir/$repo/${date_stamp}.card.yml"
-    [ -s "$out" ] && return 0
+    [ -s "$out" ] && { printf '%s\n' "$repo" >> "$have_file"; return 0; }
 
     url="https://raw.githubusercontent.com/$org/$repo/main/data/${date_stamp}.yml"
     mkdir -p "$(dirname "$out")"
@@ -71,6 +73,8 @@ fetch_one() {
         # Guard against a 200 that isn't a card (e.g. an HTML error page).
         if head -1 "$out.tmp" | grep -q '^about:'; then
             mv "$out.tmp" "$out"
+            printf '%s\n' "$repo" >> "$fetched_file"
+            printf '%s\n' "$repo" >> "$have_file"
             return 0
         fi
     fi
@@ -80,13 +84,17 @@ fetch_one() {
 }
 
 export -f fetch_one
-export org stat_dir date_stamp missing_file
+export org stat_dir date_stamp missing_file fetched_file have_file
 
 xargs -n1 -P"$jobs" -I{} bash -c 'fetch_one "$@"' _ {} < "$list_file"
 
-got=$(find "$stat_dir" -name "${date_stamp}.card.yml" -type f -size +0 | wc -l | tr -d ' ')
+# Report against the repo list this run actually walked. Counting
+# stat/*/<date>.card.yml on disk would also sweep in cards left by an earlier
+# update.sh run and overstate what the org workflows delivered.
+new=$(grep -c . "$fetched_file" 2>/dev/null; true)
+have=$(grep -c . "$have_file" 2>/dev/null; true)
 miss=$(grep -c . "$missing_file" 2>/dev/null; true)   # grep -c prints 0 and exits 1 when empty
-echo "==> fetched from org repos: $got; missing: $miss (see $missing_file)"
+echo "==> of $total repos: $have have a card ($new newly fetched), $miss missing (see $missing_file)"
 
 [ "$miss" = 0 ] && exit 0
 [ "$fallback" = 0 ] && { echo "==> --no-fallback: stopping"; exit 0; }
