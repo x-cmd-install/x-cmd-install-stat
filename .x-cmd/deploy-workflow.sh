@@ -83,6 +83,19 @@ deploy_one() {
         return 0
     fi
 
+    # Only per-software install stubs get the card workflow. `gh repo list`
+    # also returns the org's own project repos (x-cmd-install, this stat repo)
+    # and a few empty leftovers with no upstream at all; card.sh would fail on
+    # every scheduled run there, so skip anything without owner-repo yfm.
+    upstream=$(curl -fsSL --max-time 25 \
+        "https://raw.githubusercontent.com/$org/$repo/main/README.md" 2>/dev/null \
+        | awk -F':[[:space:]]*' '/^owner-repo:/{print $2; exit}' | tr -d '[:space:]')
+    case "$upstream" in
+        */*) : ;;
+        *)   printf 'SKIP %s (no owner-repo frontmatter)\n' "$repo" >> "$progress_file"
+             return 0 ;;
+    esac
+
     # Spread the cron minute: first byte of md5(repo) mod 60.
     hexbyte=$(printf '%s' "$repo" | md5sum 2>/dev/null | cut -c1-2) \
         || hexbyte=$(printf '%s' "$repo" | md5 | cut -c1-2)
