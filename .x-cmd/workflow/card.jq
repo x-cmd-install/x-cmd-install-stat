@@ -121,15 +121,26 @@ def card_yaml($merged30;  $merged90;  $merged180;  $merged360;
               $days90;    $collected_at):
 
     # YAML output policy:
-    # - Every string field is double-quoted (with `\` and `"` escaped). Bare
-    #   scalars are unsafe: a description of "is: 5 stars!" or a lastRelease
-    #   of "?" will break a strict parser (Bark/FFmpeg in our stat dir hit
-    #   this — `?` is YAML's complex-key indicator).
-    # - Missing values are emitted as `""`, not "?" or "null" — empty is
-    #   honest and unambiguous.
-    # - Numeric fields (popularity, recent counts, language bytes, totalLine)
-    #   stay unquoted so downstream can compare / sum them as numbers.
-    def q: tostring | gsub("\\\\"; "\\\\\\\\") | gsub("\""; "\\\\\"");
+    # - description is emitted as a literal block scalar (`|`). jq strings
+    #   can contain `\n`, `:`, `"`, `?` — any of those breaks a bare scalar
+    #   AND requires ugly backslash escaping in a double-quoted form. A
+    #   literal block preserves the newlines exactly and never interprets
+    #   a single character, so no escaping is needed.
+    # - Other short string fields (license, homepage, head, dates, version,
+    #   collectedAt) are bare scalars — they don't contain `:` or `?` in
+    #   practice (spdxId, dates, hex SHAs).
+    # - Missing values render as empty after the colon (which the parser
+    #   reads as null, distinct from "?" or `"?"`).
+    # - Numeric fields stay unquoted so downstream can compare / sum.
+    #
+    # literal: stream a YAML literal block (`|`) for the current string.
+    # Comma-separated outputs (`header_line, content_lines...`) so each
+    # emits as a separate document line. Empty / null -> just the header
+    # with one indented space; the parser reads that as an empty string.
+    def literal:
+        if . == null or . == "" then "  |", "    "
+        else "  |", (. | split("\n") | .[] | "    " + .)
+        end;
 
     .data.a as $r
     | (.data.b.defaultBranchRef // {}) as $branch
@@ -139,17 +150,18 @@ def card_yaml($merged30;  $merged90;  $merged180;  $merged360;
     | ($r.releases.nodes // [] | map(select(.publishedAt[:10] >= $date180)) | length) as $release180
     | ($r.releases.nodes // [] | map(select(.publishedAt[:10] >= $date360)) | length) as $release360
     | "about:",
-      "  description: \"\($r.description // "" | q)\"",
-      "  license: \"\($r.licenseInfo.spdxId // "NOASSERTION" | q)\"",
-      "  homepage: \"\($r.homepageUrl // "" | q)\"",
-      "  head: \"\($head.oid[:7] // "" | q)\"",
+      "  description:",
+      ($r.description // "" | . | literal),
+      "  license: \($r.licenseInfo.spdxId // "NOASSERTION")",
+      "  homepage: \($r.homepageUrl // "")",
+      "  head: \($head.oid[:7] // "")",
       "  archived: \($r.isArchived // false)",
-      "  latestVersion: \"\($r.releases.nodes[0].tagName // $r.releases.nodes[0].name // "" | q)\"",
-      "  collectedAt: \"\($collected_at | q)\"",
+      "  latestVersion: \($r.releases.nodes[0].tagName // $r.releases.nodes[0].name // "")",
+      "  collectedAt: \($collected_at)",
       "timeline:",
-      "  created: \"\($r.createdAt[:10] // "" | q)\"",
-      "  lastCommit: \"\($head.committedDate[:10] // "" | q)\"",
-      "  lastRelease: \"\($r.releases.nodes[0].publishedAt[:10] // "" | q)\"",
+      "  created: \($r.createdAt[:10] // "")",
+      "  lastCommit: \($head.committedDate[:10] // "")",
+      "  lastRelease: \($r.releases.nodes[0].publishedAt[:10] // "")",
       "popularity:",
       "  star: \($r.stargazerCount // 0)",
       "  watcher: \($r.watchers.totalCount // 0)",
@@ -160,7 +172,7 @@ def card_yaml($merged30;  $merged90;  $merged180;  $merged360;
       "  issue: \($r.issues.totalCount // 0)",
       (if ($r.languages.edges // [] | length) > 0
        then "language:",
-            ($r.languages.edges // [] | sort_by(-.size)[] | "  \"\(.node.name | q)\": \(.size)"),
+            ($r.languages.edges // [] | sort_by(-.size)[] | "  \(.node.name): \(.size)"),
             ($r.languages.edges // [] | map(.size) | add | "totalBytes: \(.)")
        else empty end),
       "recent:",
