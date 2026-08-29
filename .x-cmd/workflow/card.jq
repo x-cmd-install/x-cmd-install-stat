@@ -106,7 +106,8 @@ def card_commit_counts:
 #   timeline:   created / lastCommit / lastRelease / latestVersion
 #   popularity: star / watcher / fork / release / contributor /
 #               pullRequest / issue
-#   language:   sorted by size desc; totalLine appended
+#   language:   sorted by size desc; totalBytes appended (sum of language
+#               bytes — matches GitHub's LanguageEdge.size unit)
 #   detail:     head
 #   recent:     last{30,90,180,360}d × {since, release, mergedPR,
 #               openPR, closedIssue, openIssue, commit}
@@ -118,6 +119,18 @@ def card_yaml($merged30;  $merged90;  $merged180;  $merged360;
               $commit30;  $commit90;  $commit180;  $commit360;
               $date30;    $date90;    $date180;    $date360;
               $days90;    $collected_at):
+
+    # YAML output policy:
+    # - Every string field is double-quoted (with `\` and `"` escaped). Bare
+    #   scalars are unsafe: a description of "is: 5 stars!" or a lastRelease
+    #   of "?" will break a strict parser (Bark/FFmpeg in our stat dir hit
+    #   this — `?` is YAML's complex-key indicator).
+    # - Missing values are emitted as `""`, not "?" or "null" — empty is
+    #   honest and unambiguous.
+    # - Numeric fields (popularity, recent counts, language bytes, totalLine)
+    #   stay unquoted so downstream can compare / sum them as numbers.
+    def q: tostring | gsub("\\\\"; "\\\\\\\\") | gsub("\""; "\\\\\"");
+
     .data.a as $r
     | (.data.b.defaultBranchRef // {}) as $branch
     | ($branch.target // {}) as $head
@@ -126,17 +139,17 @@ def card_yaml($merged30;  $merged90;  $merged180;  $merged360;
     | ($r.releases.nodes // [] | map(select(.publishedAt[:10] >= $date180)) | length) as $release180
     | ($r.releases.nodes // [] | map(select(.publishedAt[:10] >= $date360)) | length) as $release360
     | "about:",
-      "  description: \($r.description // "")",
-      "  license: \($r.licenseInfo.spdxId // "NOASSERTION")",
-      "  homepage: \($r.homepageUrl // "")",
-      "  head: \($head.oid[:7] // "?")",
+      "  description: \"\($r.description // "" | q)\"",
+      "  license: \"\($r.licenseInfo.spdxId // "NOASSERTION" | q)\"",
+      "  homepage: \"\($r.homepageUrl // "" | q)\"",
+      "  head: \"\($head.oid[:7] // "" | q)\"",
       "  archived: \($r.isArchived // false)",
-      "  latestVersion: \($r.releases.nodes[0].tagName // $r.releases.nodes[0].name // "")",
-      "  collectedAt: \($collected_at)",
+      "  latestVersion: \"\($r.releases.nodes[0].tagName // $r.releases.nodes[0].name // "" | q)\"",
+      "  collectedAt: \"\($collected_at | q)\"",
       "timeline:",
-      "  created: \($r.createdAt[:10] // "?")",
-      "  lastCommit: \($head.committedDate[:10] // "?")",
-      "  lastRelease: \($r.releases.nodes[0].publishedAt[:10] // "?")",
+      "  created: \"\($r.createdAt[:10] // "" | q)\"",
+      "  lastCommit: \"\($head.committedDate[:10] // "" | q)\"",
+      "  lastRelease: \"\($r.releases.nodes[0].publishedAt[:10] // "" | q)\"",
       "popularity:",
       "  star: \($r.stargazerCount // 0)",
       "  watcher: \($r.watchers.totalCount // 0)",
@@ -147,8 +160,8 @@ def card_yaml($merged30;  $merged90;  $merged180;  $merged360;
       "  issue: \($r.issues.totalCount // 0)",
       (if ($r.languages.edges // [] | length) > 0
        then "language:",
-            ($r.languages.edges // [] | sort_by(-.size)[] | "  \(.node.name): \(.size)"),
-            ($r.languages.edges // [] | map(.size) | add | "totalLine: \(.)")
+            ($r.languages.edges // [] | sort_by(-.size)[] | "  \"\(.node.name | q)\": \(.size)"),
+            ($r.languages.edges // [] | map(.size) | add | "totalBytes: \(.)")
        else empty end),
       "recent:",
       "  last30d:",
