@@ -123,7 +123,7 @@ sync_one() {
 export -f sync_one
 export stat_dir org date_list dry_run
 
-xargs -n1 -P"$concurrency" -I{} bash -c 'sync_one "$@"' _ {} < "$repo_list"
+xargs -P"$concurrency" -I{} bash -c 'sync_one "$@"' _ {} < "$repo_list"
 
 ok=$(find "$stat_dir" -mindepth 2 -name latest.card.yml -size +0 | wc -l | tr -d ' ')
 echo "==> done: $ok latest.card.yml files in stat/"
