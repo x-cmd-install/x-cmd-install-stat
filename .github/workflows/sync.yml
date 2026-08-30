@@ -1,0 +1,46 @@
+name: sync
+
+# Pull the freshest card from each x-cmd-install/<software> repo every
+# 3 hours and write stat/<software>/latest.card.yml. No API usage —
+# fetches go through raw.githubusercontent.com.
+#
+# Initial setup: this workflow needs write access to the repo. Open
+# Settings → Actions → General → Workflow permissions and switch
+# "Read and write permissions" on (or add a GH_TOKEN secret scoped to
+# this repo).
+
+on:
+  schedule:
+    # Every 3 hours, UTC. GitHub Actions cron is UTC; pick off-hours
+    # to avoid the noon peak where runs get delayed/dropped.
+    - cron: '0 */3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run sync
+        # --lookback 2 = try today, fall back 2 prior days. Most repos'
+        # upstream workflows run ~00:00 UTC; this gives a 3-day cushion.
+        run: ./.x-cmd/sync.sh --concurrency 16 --lookback 2
+
+      - name: Commit & push
+        run: |
+          if git status --porcelain -- stat/ | grep -q .; then
+              git config user.name  "x-cmd-install-sync"
+              git config user.email "sync@x-cmd-install.local"
+              git add stat/
+              git commit -m "sync: pull latest card from x-cmd-install/<software>"
+              git push origin main
+          else
+              echo "no card updates to commit"
+          fi
