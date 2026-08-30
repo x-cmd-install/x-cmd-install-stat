@@ -1,8 +1,8 @@
 name: sync
 
-# Pull the freshest card from each x-cmd-install/<software> repo every
-# 3 hours and write stat/<software>/latest.card.yml. No API usage —
-# fetches go through raw.githubusercontent.com.
+# Pull the freshest card from each x-cmd-install/<software> repo at
+# 16:00 UTC daily and write stat/<software>/latest.card.yml. No API
+# usage — fetches go through raw.githubusercontent.com.
 #
 # Initial setup: this workflow needs write access to the repo. Open
 # Settings → Actions → General → Workflow permissions and switch
@@ -11,9 +11,11 @@ name: sync
 
 on:
   schedule:
-    # Every 3 hours, UTC. GitHub Actions cron is UTC; pick off-hours
-    # to avoid the noon peak where runs get delayed/dropped.
-    - cron: '0 */3 * * *'
+    # Daily at 16:00 UTC. Most upstream x-cmd-install/<software>
+    # workflows run ~00:00 UTC, so by 16:00 they're all published and
+    # we pull a full day's worth of cards in one sweep. timeout-minutes
+    # below caps the run at 3h so a runaway loop can't pin the runner.
+    - cron: '0 16 * * *'
   workflow_dispatch:
 
 permissions:
@@ -22,7 +24,7 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 180
 
     steps:
       - name: Checkout
