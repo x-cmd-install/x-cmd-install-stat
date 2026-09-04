@@ -1,11 +1,13 @@
 about:
-  description: Audits Python environments, requirements files and dependency trees for known security vulnerabilities, and can automatically fix them
+  description:
+  |
+    Audits Python environments, requirements files and dependency trees for known security vulnerabilities, and can automatically fix them
   license: Apache-2.0
   homepage: https://pypi.org/project/pip-audit/
   head: 089ac0e
   archived: false
   latestVersion: v2.10.1
-  collectedAt: 2026-09-04T23:20:48Z
+  collectedAt: 2026-09-04T23:30:37Z
 timeline:
   created: 2021-09-02
   lastCommit: 2026-09-03
@@ -16,12 +18,12 @@ popularity:
   fork: 126
   release: 63
   contributor: 102
-  pullRequest: 97
+  pullRequest: 810
   issue: 300
 language:
   Python: 258147
   Makefile: 2157
-totalLine: 260304
+totalBytes: 260304
 recent:
   last30d:
     since: 2026-08-05
@@ -31,6 +33,14 @@ recent:
     closedIssue: 2
     openIssue: 0
     commit: 10
+  last60d:
+    since: 2026-07-06
+    release: 0
+    mergedPR: 19
+    openPR: 2
+    closedIssue: 3
+    openIssue: 0
+    commit: 20
   last90d:
     since: 2026-06-06
     release: 1
@@ -55,3 +65,160 @@ recent:
     closedIssue: 16
     openIssue: 6
     commit: 87
+  last720d:
+    since: 2024-09-14
+    release: 4
+    mergedPR: 180
+    openPR: 7
+    closedIssue: 27
+    openIssue: 8
+    commit: 203
+total:
+  release: 63
+  mergedPR: 713
+  openPR: 9
+  closedIssue: 245
+  openIssue: 55
+  commit: 850
+---
+path: /home/runner/.x-repo/github.com/pypa/pip-audit
+collectedAt: 2026-09-04T23:30:38Z
+loc:
+  Python:
+    code: 5942
+    comments: 446
+    blanks: 1367
+    files: 55
+  Toml:
+    code: 221
+    comments: 8
+    blanks: 22
+    files: 8
+  Makefile:
+    code: 66
+    comments: 9
+    blanks: 19
+    files: 1
+  Markdown:
+    code: 0
+    comments: 1074
+    blanks: 421
+    files: 3
+total:
+  code: 6260
+  comments: 1540
+  blanks: 1830
+  files: 67
+---
+date: "2026-09-03T00:53:11Z"
+repo:
+  name: github.com/pypa/pip-audit
+  commit: 089ac0ede7cb99beb41e59c018124552307597b7
+scorecard:
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+score: 8.4
+checks:
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 9 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Token-Permissions
+    score: 10
+    reason: GitHub workflow tokens follow principle of least privilege
+    details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:15'
+      - 'Info: found token with ''none'' permissions: .github/workflows/ci.yml:1'
+      - 'Info: found token with ''none'' permissions: .github/workflows/docs.yml:1'
+      - 'Info: found token with ''none'' permissions: .github/workflows/lint.yml:1'
+      - 'Info: found token with ''none'' permissions: .github/workflows/release.yml:1'
+      - 'Info: found token with ''none'' permissions: .github/workflows/scorecards.yml:1'
+      - 'Info: found token with ''none'' permissions: .github/workflows/zizmor.yml:1'
+      - 'Info: no jobLevel write permissions found'
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
+  - name: Pinned-Dependencies
+    score: 8
+    reason: dependency not pinned by hash detected -- score normalized to 8
+    details:
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/release.yml:28'
+      - 'Info:  26 out of  26 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   4 out of   4 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   1 pipCommand dependencies pinned'
+  - name: Vulnerabilities
+    score: 10
+    reason: 0 existing vulnerabilities detected
+    details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
+  - name: Signed-Releases
+    score: 8
+    reason: 1 out of the last 1 releases have a total of 1 signed artifacts.
+    details:
+      - 'Info: signed release artifact: pip_audit-2.7.3-py3-none-any.whl.sigstore: https://github.com/pypa/pip-audit/releases/tag/v2.7.3'
+      - 'Warn: release artifact v2.7.3 does not have provenance: https://api.github.com/repos/pypa/pip-audit/releases/153572767'
+  - name: SAST
+    score: 10
+    reason: SAST tool is run on all commits
+    details:
+      - 'Info: all commits (30) are checked with a SAST tool'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:38'
+  - name: Branch-Protection
+    score: 8
+    reason: branch protection is not maximal on development and all release branches
+    details:
+      - 'Info: ''allow deletion'' disabled on branch ''main'''
+      - 'Info: ''force pushes'' disabled on branch ''main'''
+      - 'Warn: required approving review count is 1 on branch ''main'''
+      - 'Warn: codeowners review is not required on branch ''main'''
+      - 'Info: status check found to merge onto on branch ''main'''
+      - 'Info: PRs are required in order to make changes on branch ''main'''
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+  - name: CI-Tests
+    score: 10
+    reason: 28 out of 28 merged PRs checked by a CI test -- score normalized to 10
+    details: null
+  - name: Contributors
+    score: 10
+    reason: project has 32 contributing companies or organizations
+    details:
+      - 'Info: found contributions from: GoogleCloudPlatform, Homebrew, PhillyPUG, UMD-CS-STICs, astral-sh, astral-sh @openai, beedog, berkeley-ospo, cloudevents, digitalr00ts, disposable-email-domains, german-transcendental-idealism, google, googlers, grinchrb, hexchat, kbsecret, nvidia, ossf, psf, pyca, pypa, pypi, python, python-organizers, sigstore, slsa-framework, socallinuxexpo, woodruffw-experiments, woodruffw-forks, woodruffw-hackathons, zizmorcore'
