@@ -1,21 +1,22 @@
 about:
-  description: |
+  description:
+  |
     Release engineering, simplified
   license: MIT
   homepage: https://goreleaser.com
   head: f5edd73
   archived: false
-  latestVersion: v2.19.0-6e408712-nightly
-  collectedAt: 2026-09-04T21:04:47Z
+  latestVersion: v2.19.0-f5edd739-nightly
+  collectedAt: 2026-09-05T04:45:18Z
 timeline:
   created: 2016-12-21
   lastCommit: 2026-09-04
-  lastRelease: 2026-09-04
+  lastRelease: 2026-09-05
 popularity:
-  star: 16015
+  star: 16016
   watcher: 110
-  fork: 1102
-  release: 600
+  fork: 1103
+  release: 601
   contributor: 485
   pullRequest: 4466
   issue: 1648
@@ -29,55 +30,55 @@ language:
 totalBytes: 2612553
 recent:
   last30d:
-    since: 2026-08-05
-    release: 6
+    since: 2026-08-06
+    release: 7
     mergedPR: 88
     openPR: 5
     closedIssue: 13
     openIssue: 1
     commit: 104
   last60d:
-    since: 2026-07-06
-    release: 7
-    mergedPR: 124
+    since: 2026-07-07
+    release: 8
+    mergedPR: 123
     openPR: 6
     closedIssue: 18
     openIssue: 2
     commit: 144
   last90d:
-    since: 2026-06-06
-    release: 8
+    since: 2026-06-07
+    release: 9
     mergedPR: 157
     openPR: 6
     closedIssue: 22
     openIssue: 2
     commit: 208
   last180d:
-    since: 2026-03-08
+    since: 2026-03-09
     release: 17
-    mergedPR: 286
+    mergedPR: 283
     openPR: 6
-    closedIssue: 58
+    closedIssue: 55
     openIssue: 2
     commit: 534
   last360d:
-    since: 2025-09-09
-    release: 30
-    mergedPR: 518
+    since: 2025-09-10
+    release: 31
+    mergedPR: 516
     openPR: 6
     closedIssue: 79
     openIssue: 2
     commit: 1060
   last720d:
-    since: 2024-09-14
-    release: 56
+    since: 2024-09-15
+    release: 57
     mergedPR: 1138
     openPR: 7
     closedIssue: 188
     openIssue: 4
     commit: 2158
 total:
-  release: 600
+  release: 601
   mergedPR: 3932
   openPR: 7
   closedIssue: 1640
@@ -85,7 +86,7 @@ total:
   commit: 8071
 ---
 path: /home/runner/.x-repo/github.com/goreleaser/goreleaser
-collectedAt: 2026-09-04T21:04:49Z
+collectedAt: 2026-09-05T04:45:20Z
 loc:
   Go:
     code: 81338
@@ -173,7 +174,7 @@ total:
   blanks: 15633
   files: 811
 ---
-date: "2026-09-04T12:53:38Z"
+date: "2026-09-04T21:24:03Z"
 repo:
   name: github.com/goreleaser/goreleaser
   commit: f5edd7395693c0c6b501dc722d445d2e86af854d
@@ -186,6 +187,11 @@ checks:
     score: 10
     reason: 30 commit(s) and 21 issue activity found in the last 90 days -- score normalized to 10
     details: null
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Code-Review
     score: 1
     reason: Found 3/29 approved changesets -- score normalized to 1
@@ -198,11 +204,10 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dependency-Update-Tool
+  - name: Binary-Artifacts
     score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+    reason: no binaries found in the repo
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -222,11 +227,11 @@ checks:
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/gitleaks.yml:14'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/gitleaks.yml:15'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/govulncheck.yml:18'
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/grype.yml:15'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/grype.yml:16'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/grype.yml:15'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/milestone.yml:18'
-      - 'Info: jobLevel ''models'' permission set to ''read'': .github/workflows/moderator.yml:17'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/moderator.yml:18'
+      - 'Info: jobLevel ''models'' permission set to ''read'': .github/workflows/moderator.yml:17'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/nightly-oss.yml:101'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/build.yml:24'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/cleanup-nightlies.yml:9'
@@ -243,10 +248,6 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:9'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/sbom-scan.yml:6'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:9'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Pinned-Dependencies
     score: 9
     reason: dependency not pinned by hash detected -- score normalized to 9
@@ -276,6 +277,17 @@ checks:
     details:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Info: all commits (29) are checked with a SAST tool'
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: GoBuiltInFuzzer integration found: internal/artifact/artifact_fuzz_test.go:12'
+      - 'Info: GoBuiltInFuzzer integration found: internal/artifact/artifact_fuzz_test.go:43'
+      - 'Info: GoBuiltInFuzzer integration found: internal/tmpl/fuzz_test.go:13'
+      - 'Info: GoBuiltInFuzzer integration found: internal/tmpl/fuzz_test.go:25'
+      - 'Info: GoBuiltInFuzzer integration found: internal/tmpl/fuzz_test.go:44'
+      - 'Info: GoBuiltInFuzzer integration found: internal/tmpl/fuzz_test.go:56'
+      - 'Info: GoBuiltInFuzzer integration found: internal/tmpl/fuzz_test.go:68'
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -295,17 +307,6 @@ checks:
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/build.yml:193'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: GoBuiltInFuzzer integration found: internal/artifact/artifact_fuzz_test.go:12'
-      - 'Info: GoBuiltInFuzzer integration found: internal/artifact/artifact_fuzz_test.go:43'
-      - 'Info: GoBuiltInFuzzer integration found: internal/tmpl/fuzz_test.go:13'
-      - 'Info: GoBuiltInFuzzer integration found: internal/tmpl/fuzz_test.go:25'
-      - 'Info: GoBuiltInFuzzer integration found: internal/tmpl/fuzz_test.go:44'
-      - 'Info: GoBuiltInFuzzer integration found: internal/tmpl/fuzz_test.go:56'
-      - 'Info: GoBuiltInFuzzer integration found: internal/tmpl/fuzz_test.go:68'
   - name: License
     score: 10
     reason: license file detected

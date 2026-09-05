@@ -1,12 +1,13 @@
 about:
-  description: |
+  description:
+  |
     The Modern Application Platform.
   license: Apache-2.0
   homepage: https://kubevela.io
   head: e6bbce3
   archived: false
   latestVersion: v1.11.0
-  collectedAt: 2026-09-04T20:28:41Z
+  collectedAt: 2026-09-05T04:45:33Z
 timeline:
   created: 2020-07-03
   lastCommit: 2026-09-02
@@ -30,23 +31,23 @@ language:
 totalBytes: 9061222
 recent:
   last30d:
-    since: 2026-08-05
+    since: 2026-08-06
     release: 0
-    mergedPR: 16
+    mergedPR: 14
     openPR: 34
-    closedIssue: 4
+    closedIssue: 2
     openIssue: 9
     commit: 18
   last60d:
-    since: 2026-07-06
+    since: 2026-07-07
     release: 2
-    mergedPR: 35
+    mergedPR: 32
     openPR: 53
-    closedIssue: 11
+    closedIssue: 10
     openIssue: 28
     commit: 44
   last90d:
-    since: 2026-06-06
+    since: 2026-06-07
     release: 6
     mergedPR: 54
     openPR: 66
@@ -54,7 +55,7 @@ recent:
     openIssue: 28
     commit: 51
   last180d:
-    since: 2026-03-08
+    since: 2026-03-09
     release: 10
     mergedPR: 81
     openPR: 84
@@ -62,15 +63,15 @@ recent:
     openIssue: 48
     commit: 80
   last360d:
-    since: 2025-09-09
+    since: 2025-09-10
     release: 14
-    mergedPR: 162
+    mergedPR: 160
     openPR: 98
-    closedIssue: 66
+    closedIssue: 63
     openIssue: 66
     commit: 151
   last720d:
-    since: 2024-09-14
+    since: 2024-09-15
     release: 21
     mergedPR: 250
     openPR: 108
@@ -86,7 +87,7 @@ total:
   commit: 4145
 ---
 path: /home/runner/.x-repo/github.com/kubevela/kubevela
-collectedAt: 2026-09-04T20:28:46Z
+collectedAt: 2026-09-05T04:45:38Z
 loc:
   Go:
     code: 214842
@@ -159,7 +160,7 @@ total:
   blanks: 37076
   files: 1845
 ---
-date: "2026-09-02T16:34:22Z"
+date: "2026-09-05T01:40:30Z"
 repo:
   name: github.com/kubevela/kubevela
   commit: e6bbce3fcc241a4857731553e6dc50ba3d88922a
@@ -168,11 +169,18 @@ scorecard:
   commit: cd152cb6742c5b8f2f3d2b5193b41d9c50905198
 score: 8.2
 checks:
-  - name: Dependency-Update-Tool
+  - name: Code-Review
     score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+    reason: all changesets reviewed
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 11 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -181,18 +189,11 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
+  - name: Dependency-Update-Tool
     score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 11 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -202,24 +203,24 @@ checks:
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/definition-lint.yml:24'
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/e2e-multicluster-test.yml:27'
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/e2e-test.yml:27'
+      - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/go.yml:28'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/go.yml:66'
       - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/go.yml:67'
-      - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/go.yml:28'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/issue-commands.yml:16'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/issue-commands.yml:90'
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/issue-commands.yml:139'
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/license.yml:18'
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/registry.yml:237'
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/registry.yml:239'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/registry.yml:21'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/registry.yml:211'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/registry.yml:212'
-      - 'Warn: jobLevel ''checks'' permission set to ''write'': .github/workflows/release.yml:19'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/registry.yml:237'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/registry.yml:239'
       - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/release.yml:22'
       - 'Info: jobLevel ''repository-projects'' permission set to ''read'': .github/workflows/release.yml:23'
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release.yml:18'
-      - 'Info: jobLevel ''issues'' permission set to ''read'': .github/workflows/release.yml:20'
       - 'Info: jobLevel ''statuses'' permission set to ''read'': .github/workflows/release.yml:24'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release.yml:18'
+      - 'Warn: jobLevel ''checks'' permission set to ''write'': .github/workflows/release.yml:19'
+      - 'Info: jobLevel ''issues'' permission set to ''read'': .github/workflows/release.yml:20'
       - 'Info: jobLevel ''repository-projects'' permission set to ''read'': .github/workflows/release.yml:109'
       - 'Info: jobLevel ''statuses'' permission set to ''read'': .github/workflows/release.yml:110'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release.yml:104'
@@ -227,8 +228,8 @@ checks:
       - 'Info: jobLevel ''issues'' permission set to ''read'': .github/workflows/release.yml:106'
       - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/release.yml:108'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release.yml:125'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/scorecards.yml:22'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/scorecards.yml:21'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/scorecards.yml:22'
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/trivy-scan.yml:13'
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/unit-test.yml:20'
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/webhook-upgrade-validation.yml:25'
@@ -263,14 +264,20 @@ checks:
     score: 2
     reason: 'badge detected: InProgress'
     details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Pinned-Dependencies
     score: 7
     reason: dependency not pinned by hash detected -- score normalized to 7
     details:
       - 'Info: Possibly incomplete results: error parsing shell code: unclosed here-document ''CHART'': .github/workflows/webhook-upgrade-validation.yml:66'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/core-api-test.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/kubevela/kubevela/core-api-test.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/go.yml:172: update your workflow using https://app.stepsecurity.io/secureworkflow/kubevela/kubevela/go.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/go.yml:85: update your workflow using https://app.stepsecurity.io/secureworkflow/kubevela/kubevela/go.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/go.yml:172: update your workflow using https://app.stepsecurity.io/secureworkflow/kubevela/kubevela/go.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/registry.yml:112: update your workflow using https://app.stepsecurity.io/secureworkflow/kubevela/kubevela/registry.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/registry.yml:169: update your workflow using https://app.stepsecurity.io/secureworkflow/kubevela/kubevela/registry.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/registry.yml:194: update your workflow using https://app.stepsecurity.io/secureworkflow/kubevela/kubevela/registry.yml/master?enable=pin'
@@ -291,7 +298,7 @@ checks:
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
   - name: Vulnerabilities
     score: 0
-    reason: 80 existing vulnerabilities detected
+    reason: 82 existing vulnerabilities detected
     details:
       - 'Warn: Project is vulnerable to: GO-2026-4514 / GHSA-6g7g-w4f8-9c9x'
       - 'Warn: Project is vulnerable to: GO-2026-4550 / GHSA-q9hv-hpm4-hj6x'
@@ -349,6 +356,8 @@ checks:
       - 'Warn: Project is vulnerable to: GO-2025-4116'
       - 'Warn: Project is vulnerable to: GO-2026-5932'
       - 'Warn: Project is vulnerable to: GO-2026-6303'
+      - 'Warn: Project is vulnerable to: GO-2026-6354'
+      - 'Warn: Project is vulnerable to: GO-2026-6355'
       - 'Warn: Project is vulnerable to: GO-2026-6179'
       - 'Warn: Project is vulnerable to: GO-2026-6180'
       - 'Warn: Project is vulnerable to: GO-2026-5028 / GHSA-5cv4-jp36-h3mw'
@@ -373,6 +382,12 @@ checks:
       - 'Warn: Project is vulnerable to: GO-2025-3888 / GHSA-f9f8-9pmf-xv68'
       - 'Warn: Project is vulnerable to: GO-2026-5435 / GHSA-hr2v-4r36-88hr'
       - 'Warn: Project is vulnerable to: GHSA-xf85-363p-868w'
+  - name: SAST
+    score: 9
+    reason: SAST tool detected but not run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: 23 commits out of 30 are checked with a SAST tool'
   - name: Signed-Releases
     score: 8
     reason: 4 out of the last 5 releases have a total of 8 signed artifacts.
@@ -387,18 +402,6 @@ checks:
       - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/kubevela/kubevela/releases/tag/v1.11.0-alpha.5'
       - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/kubevela/kubevela/releases/tag/v1.11.0-alpha.4'
       - 'Warn: release artifact v1.9.14 does not have provenance: https://api.github.com/repos/kubevela/kubevela/releases/346558176'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: SAST
-    score: 9
-    reason: SAST tool detected but not run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 23 commits out of 30 are checked with a SAST tool'
   - name: Packaging
     score: 10
     reason: packaging workflow detected

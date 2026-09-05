@@ -1,12 +1,13 @@
 about:
-  description: |
+  description:
+  |
     Code signing and transparency for containers and binaries
   license: Apache-2.0
-  homepage:
+  homepage: 
   head: 00c1772
   archived: false
   latestVersion: v3.1.3
-  collectedAt: 2026-09-04T21:22:30Z
+  collectedAt: 2026-09-05T04:23:16Z
 timeline:
   created: 2021-02-04
   lastCommit: 2026-09-03
@@ -28,39 +29,39 @@ language:
 totalBytes: 2001622
 recent:
   last30d:
-    since: 2026-08-05
+    since: 2026-08-06
     release: 2
-    mergedPR: 18
+    mergedPR: 17
     openPR: 24
     closedIssue: 4
     openIssue: 3
     commit: 17
   last60d:
-    since: 2026-07-06
+    since: 2026-07-07
     release: 4
     mergedPR: 34
     openPR: 31
     closedIssue: 6
-    openIssue: 13
+    openIssue: 12
     commit: 35
   last90d:
-    since: 2026-06-06
+    since: 2026-06-07
     release: 5
     mergedPR: 72
     openPR: 41
-    closedIssue: 12
+    closedIssue: 10
     openIssue: 15
     commit: 72
   last180d:
-    since: 2026-03-08
+    since: 2026-03-09
     release: 7
-    mergedPR: 144
+    mergedPR: 134
     openPR: 49
     closedIssue: 30
     openIssue: 23
     commit: 139
   last360d:
-    since: 2025-09-09
+    since: 2025-09-10
     release: 15
     mergedPR: 325
     openPR: 54
@@ -68,11 +69,11 @@ recent:
     openIssue: 45
     commit: 322
   last720d:
-    since: 2024-09-14
+    since: 2024-09-15
     release: 22
     mergedPR: 621
     openPR: 59
-    closedIssue: 173
+    closedIssue: 172
     openIssue: 69
     commit: 621
 total:
@@ -84,7 +85,7 @@ total:
   commit: 3207
 ---
 path: /home/runner/.x-repo/github.com/sigstore/cosign
-collectedAt: 2026-09-04T21:22:31Z
+collectedAt: 2026-09-05T04:23:18Z
 loc:
   Go:
     code: 47663
@@ -142,7 +143,7 @@ total:
   blanks: 8939
   files: 425
 ---
-date: "2026-09-03T18:26:42Z"
+date: "2026-09-05T01:34:36Z"
 repo:
   name: github.com/sigstore/cosign
   commit: 00c17724d9e05a58af030a9f14eb82c177e6dcb2
@@ -151,32 +152,32 @@ scorecard:
   commit: c22063e786c11f9dd714d777a687ff7c4599b600
 score: 7.8
 checks:
-  - name: Maintained
+  - name: Code-Review
     score: 10
-    reason: 30 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
+    reason: all changesets reviewed
     details: null
   - name: Dependency-Update-Tool
     score: 10
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -221,16 +222,6 @@ checks:
       - 'Info: found token with ''none'' permissions: .github/workflows/validate-release.yml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/verify-docgen.yaml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/whitespace.yaml:1'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: CII-Best-Practices
-    score: 2
-    reason: 'badge detected: InProgress'
-    details: null
   - name: Pinned-Dependencies
     score: 8
     reason: dependency not pinned by hash detected -- score normalized to 8
@@ -247,6 +238,16 @@ checks:
       - 'Info:  22 out of  28 third-party GitHubAction dependencies pinned'
       - 'Info:   1 out of   2 containerImage dependencies pinned'
       - 'Info:   2 out of   3 goCommand dependencies pinned'
+  - name: CII-Best-Practices
+    score: 2
+    reason: 'badge detected: InProgress'
+    details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Vulnerabilities
     score: 1
     reason: 9 existing vulnerabilities detected
@@ -260,6 +261,16 @@ checks:
       - 'Warn: Project is vulnerable to: GO-2026-6179'
       - 'Warn: Project is vulnerable to: GO-2026-6180'
       - 'Warn: Project is vulnerable to: GHSA-vp52-pcj8-j9qc'
+  - name: SAST
+    score: 7
+    reason: SAST tool detected but not run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -270,10 +281,6 @@ checks:
       - 'Info: GoBuiltInFuzzer integration found: pkg/cosign/fuzz_test.go:40'
       - 'Info: GoBuiltInFuzzer integration found: pkg/cosign/fuzz_test.go:71'
       - 'Info: GoBuiltInFuzzer integration found: pkg/cosign/rego/fuzz_test.go:22'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -296,12 +303,6 @@ checks:
       - 'Info: Found linked content: github.com/sigstore/.github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/sigstore/.github/SECURITY.md:1'
       - 'Info: Found text in security policy: github.com/sigstore/.github/SECURITY.md:1'
-  - name: SAST
-    score: 7
-    reason: SAST tool detected but not run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
   - name: CI-Tests
     score: 10
     reason: 30 out of 30 merged PRs checked by a CI test -- score normalized to 10
