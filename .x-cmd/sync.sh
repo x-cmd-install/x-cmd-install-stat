@@ -110,6 +110,18 @@ sync_one() {
         tmp="$(mktemp -t xcmdsync.XXXXXX)"
         if curl -sfS --max-time 15 "$url" -o "$tmp" 2>/dev/null; then
             mv "$tmp" "$out"
+            # Also emit JSON alongside the YAML. yq merges the three
+            # `---`-separated sections (about / path / date) into a
+            # single object because the top-level keys don't collide.
+            # If yq fails (e.g. the upstream file has a parse error),
+            # skip JSON but keep the YAML — the next sync can try again.
+            json_out="${out%.yml}.json"
+            if yq -o=json -I=0 '.' "$out" > "$json_out.tmp" 2>/dev/null \
+               && [ -s "$json_out.tmp" ]; then
+                mv "$json_out.tmp" "$json_out"
+            else
+                rm -f "$json_out.tmp" "$json_out"
+            fi
             printf 'OK   %-40s %s\n' "$name" "$d"
             return 0
         fi
@@ -126,4 +138,5 @@ export stat_dir org date_list dry_run
 xargs -P"$concurrency" -I{} bash -c 'sync_one "$@"' _ {} < "$repo_list"
 
 ok=$(find "$stat_dir" -mindepth 2 -name latest.card.yml -size +0 | wc -l | tr -d ' ')
-echo "==> done: $ok latest.card.yml files in stat/"
+json=$(find "$stat_dir" -mindepth 2 -name latest.card.json -size +0 | wc -l | tr -d ' ')
+echo "==> done: $ok latest.card.yml + $json latest.card.json in stat/"
