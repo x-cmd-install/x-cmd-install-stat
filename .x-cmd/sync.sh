@@ -95,18 +95,19 @@ echo "==> $count repos, dates tried (newest first):$date_list, concurrency=$conc
 sync_one() {
     local name="$1"
     local out="$stat_dir/$name/latest.card.yml"
+    local release_out="$stat_dir/$name/latest.release.json"
     local url d tmp
 
     if [ "$dry_run" = 1 ]; then
         for d in $date_list; do
-            url="https://raw.githubusercontent.com/${org}/${name}/main/data/${d}.yml"
+            url="https://raw.githubusercontent.com/${org}/${name}/main/data/card/${d}.yml"
             printf '[dry-run] %s -> %s\n' "$url" "$out"
         done
         return 0
     fi
 
     for d in $date_list; do
-        url="https://raw.githubusercontent.com/${org}/${name}/main/data/${d}.yml"
+        url="https://raw.githubusercontent.com/${org}/${name}/main/data/card/${d}.yml"
         tmp="$(mktemp -t xcmdsync.XXXXXX)"
         if curl -sfS --max-time 15 "$url" -o "$tmp" 2>/dev/null; then
             mv "$tmp" "$out"
@@ -122,13 +123,25 @@ sync_one() {
             else
                 rm -f "$json_out.tmp" "$json_out"
             fi
+            # v0.4 also produces data/release/latest.release.raw.json.
+            # Fetch it as a separate CDN GET (no auth needed for
+            # public repos). Failures are non-fatal — we just don't
+            # have a release for this mirror yet.
+            release_url="https://raw.githubusercontent.com/${org}/${name}/main/data/release/latest.release.raw.json"
+            if curl -sfS --max-time 15 "$release_url" -o "$release_out" 2>/dev/null; then
+                :    # success — keep file
+            else
+                # No release yet (or 404); write an empty placeholder
+                # so downstream consumers don't see "file missing".
+                printf '{"error":"no release yet"}\n' > "$release_out"
+            fi
             printf 'OK   %-40s %s\n' "$name" "$d"
             return 0
         fi
         rm -f "$tmp"
     done
 
-    printf 'SKIP %-40s (no data/<today-or-prior>.yml yet)\n' "$name" >&2
+    printf 'SKIP %-40s (no data/card/<today-or-prior>.yml yet)\n' "$name" >&2
     return 1
 }
 
