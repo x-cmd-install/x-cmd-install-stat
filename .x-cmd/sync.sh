@@ -111,19 +111,23 @@ sync_one() {
         tmp="$(mktemp -t xcmdsync.XXXXXX)"
         if curl -sfS --max-time 15 "$url" -o "$tmp" 2>/dev/null; then
             mv "$tmp" "$out"
+
             # The action v0.5 also writes a single merged file at
-            # data/latest.report.yml (card+release joined with '---').
-            # That's the primary read path now; the separate card and
-            # release files in stat/ are kept as fallbacks.
+            # data/latest.report.yml (card+release joined with '---',
+            # release section with url* keys already stripped). That's
+            # the primary read path now; fetching the report means
+            # 1 CDN GET per mirror instead of 2.
             report_url="https://raw.githubusercontent.com/${org}/${name}/main/data/latest.report.yml"
             report_out="${out%.card.yml}.report.yml"
             if curl -sfS --max-time 15 "$report_url" -o "$report_out" 2>/dev/null; then
                 :    # got the merged view
             else
-                # No report.yml yet (older action, or first run after
-                # upgrade). Fall back to a copy of the card.
+                # Older action, or first run after upgrade. Fall back
+                # to a copy of the card so consumers at least have
+                # the card fields.
                 cp "$out" "$report_out"
             fi
+
             # Also emit a single JSON per mirror by parsing the card
             # YAML's multi-document stream with yq.
             json_out="${out%.yml}.json"
