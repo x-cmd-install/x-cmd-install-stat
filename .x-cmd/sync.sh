@@ -111,29 +111,27 @@ sync_one() {
         tmp="$(mktemp -t xcmdsync.XXXXXX)"
         if curl -sfS --max-time 15 "$url" -o "$tmp" 2>/dev/null; then
             mv "$tmp" "$out"
-            # Also emit JSON alongside the YAML. yq merges the three
-            # `---`-separated sections (about / path / date) into a
-            # single object because the top-level keys don't collide.
-            # If yq fails (e.g. the upstream file has a parse error),
-            # skip JSON but keep the YAML — the next sync can try again.
+            # The action v0.5 also writes a single merged file at
+            # data/latest.report.yml (card+release joined with '---').
+            # That's the primary read path now; the separate card and
+            # release files in stat/ are kept as fallbacks.
+            report_url="https://raw.githubusercontent.com/${org}/${name}/main/data/latest.report.yml"
+            report_out="${out%.card.yml}.report.yml"
+            if curl -sfS --max-time 15 "$report_url" -o "$report_out" 2>/dev/null; then
+                :    # got the merged view
+            else
+                # No report.yml yet (older action, or first run after
+                # upgrade). Fall back to a copy of the card.
+                cp "$out" "$report_out"
+            fi
+            # Also emit a single JSON per mirror by parsing the card
+            # YAML's multi-document stream with yq.
             json_out="${out%.yml}.json"
             if yq -o=json -I=0 '.' "$out" > "$json_out.tmp" 2>/dev/null \
                && [ -s "$json_out.tmp" ]; then
                 mv "$json_out.tmp" "$json_out"
             else
                 rm -f "$json_out.tmp" "$json_out"
-            fi
-            # v0.4 also produces data/release/latest.release.raw.json.
-            # Fetch it as a separate CDN GET (no auth needed for
-            # public repos). Failures are non-fatal — we just don't
-            # have a release for this mirror yet.
-            release_url="https://raw.githubusercontent.com/${org}/${name}/main/data/release/latest.release.raw.json"
-            if curl -sfS --max-time 15 "$release_url" -o "$release_out" 2>/dev/null; then
-                :    # success — keep file
-            else
-                # No release yet (or 404); write an empty placeholder
-                # so downstream consumers don't see "file missing".
-                printf '{"error":"no release yet"}\n' > "$release_out"
             fi
             printf 'OK   %-40s %s\n' "$name" "$d"
             return 0
