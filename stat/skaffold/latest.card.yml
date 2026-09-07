@@ -1,21 +1,19 @@
 about:
-  description:
-  |
-    Easy and Repeatable Kubernetes Development
+  description: "Easy and Repeatable Kubernetes Development"
   license: Apache-2.0
   homepage: https://skaffold.dev/
   head: a1189de
   archived: false
-  latestVersion: v2.24.0
-  collectedAt: 2026-09-05T19:05:10Z
+  latestVersion: "v2.24.0"
+  collectedAt: 2026-09-07T19:36:47Z
 timeline:
   created: 2018-01-23
   lastCommit: 2026-08-31
   lastRelease: 2026-07-23
 popularity:
-  star: 15889
-  watcher: 185
-  fork: 1704
+  star: 15888
+  watcher: 186
+  fork: 1703
   release: 200
   contributor: 443
   pullRequest: 5872
@@ -43,39 +41,39 @@ language:
 totalBytes: 9966892
 recent:
   last30d:
-    since: 2026-08-06
+    since: 2026-08-08
     release: 0
     mergedPR: 4
-    openPR: 11
+    openPR: 10
     closedIssue: 1
     openIssue: 2
     commit: 7
   last60d:
-    since: 2026-07-07
+    since: 2026-07-09
     release: 1
     mergedPR: 10
     openPR: 12
     closedIssue: 1
     openIssue: 5
-    commit: 13
+    commit: 8
   last90d:
-    since: 2026-06-07
-    release: 3
-    mergedPR: 25
+    since: 2026-06-09
+    release: 2
+    mergedPR: 23
     openPR: 19
     closedIssue: 1
-    openIssue: 13
+    openIssue: 12
     commit: 25
   last180d:
-    since: 2026-03-09
+    since: 2026-03-11
     release: 10
     mergedPR: 70
     openPR: 34
     closedIssue: 8
     openIssue: 18
-    commit: 73
+    commit: 65
   last360d:
-    since: 2025-09-10
+    since: 2025-09-12
     release: 14
     mergedPR: 126
     openPR: 50
@@ -83,12 +81,12 @@ recent:
     openIssue: 36
     commit: 123
   last720d:
-    since: 2024-09-15
+    since: 2024-09-17
     release: 20
     mergedPR: 300
     openPR: 62
     closedIssue: 49
-    openIssue: 93
+    openIssue: 92
     commit: 308
 total:
   release: 200
@@ -99,7 +97,7 @@ total:
   commit: 9241
 ---
 path: /home/runner/.x-repo/github.com/GoogleContainerTools/skaffold
-collectedAt: 2026-09-05T19:05:20Z
+collectedAt: 2026-09-07T19:37:07Z
 loc:
   Go:
     code: 2247588
@@ -277,7 +275,7 @@ total:
   blanks: 355329
   files: 13921
 ---
-date: "2026-08-31T20:30:48Z"
+date: "2026-09-06T06:40:36Z"
 repo:
   name: github.com/GoogleContainerTools/skaffold
   commit: a1189de023efc32d4b8e11f395acc678aa555011
@@ -286,18 +284,35 @@ scorecard:
   commit: c22063e786c11f9dd714d777a687ff7c4599b600
 score: 7.2
 checks:
-  - name: Maintained
+  - name: Code-Review
     score: 10
-    reason: 29 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 10
+    reason: all changesets reviewed
     details: null
   - name: Dependency-Update-Tool
     score: 10
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Code-Review
+  - name: Maintained
     score: 10
-    reason: all changesets reviewed
+    reason: 25 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: SECURITY.md:1'
+      - 'Info: Found linked content: SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
+      - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 10
@@ -316,39 +331,16 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/unit-tests-windows.yml:6'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/verify-examples.yml:10'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
+  - name: License
     score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
+    reason: license file detected
     details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: SECURITY.md:1'
-      - 'Info: Found linked content: SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
-      - 'Info: Found text in security policy: SECURITY.md:1'
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: CII-Best-Practices
     score: 2
     reason: 'badge detected: InProgress'
     details: null
-  - name: Signed-Releases
-    score: 8
-    reason: 4 out of the last 4 releases have a total of 4 signed artifacts.
-    details:
-      - 'Info: signed release artifact: skaffold-darwin-amd64.sha256.sig: https://github.com/GoogleContainerTools/skaffold/releases/tag/v2.24.0'
-      - 'Info: signed release artifact: skaffold-darwin-amd64.sha256.sig: https://github.com/GoogleContainerTools/skaffold/releases/tag/v2.23.0'
-      - 'Info: signed release artifact: skaffold-darwin-amd64.sha256.sig: https://github.com/GoogleContainerTools/skaffold/releases/tag/v2.22.0'
-      - 'Info: signed release artifact: skaffold-darwin-amd64.sha256.sig: https://github.com/GoogleContainerTools/skaffold/releases/tag/v2.21.0'
-      - 'Warn: release artifact v2.24.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/358950205'
-      - 'Warn: release artifact v2.23.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/345534770'
-      - 'Warn: release artifact v2.22.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/336055187'
-      - 'Warn: release artifact v2.21.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/326280646'
   - name: Binary-Artifacts
     score: 6
     reason: binaries present in source code
@@ -357,17 +349,17 @@ checks:
       - 'Warn: binary detected: examples/jib-sync/gradle/wrapper/gradle-wrapper.jar:1'
       - 'Warn: binary detected: integration/examples/jib-gradle/gradle/wrapper/gradle-wrapper.jar:1'
       - 'Warn: binary detected: integration/examples/jib-sync/gradle/wrapper/gradle-wrapper.jar:1'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: SAST
+    score: 7
+    reason: SAST tool detected but not run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
   - name: Branch-Protection
     score: 6
     reason: branch protection is not maximal on development and all release branches
@@ -382,15 +374,21 @@ checks:
       - 'Info: ''up-to-date branches'' is required to merge on branch ''main'''
       - 'Warn: no status checks found to merge onto branch ''main'''
       - 'Info: PRs are required in order to make changes on branch ''main'''
-  - name: SAST
-    score: 7
-    reason: SAST tool detected but not run on all commits
+  - name: Signed-Releases
+    score: 8
+    reason: 4 out of the last 4 releases have a total of 4 signed artifacts.
     details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
+      - 'Info: signed release artifact: skaffold-darwin-amd64.sha256.sig: https://github.com/GoogleContainerTools/skaffold/releases/tag/v2.24.0'
+      - 'Info: signed release artifact: skaffold-darwin-amd64.sha256.sig: https://github.com/GoogleContainerTools/skaffold/releases/tag/v2.23.0'
+      - 'Info: signed release artifact: skaffold-darwin-amd64.sha256.sig: https://github.com/GoogleContainerTools/skaffold/releases/tag/v2.22.0'
+      - 'Info: signed release artifact: skaffold-darwin-amd64.sha256.sig: https://github.com/GoogleContainerTools/skaffold/releases/tag/v2.21.0'
+      - 'Warn: release artifact v2.24.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/358950205'
+      - 'Warn: release artifact v2.23.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/345534770'
+      - 'Warn: release artifact v2.22.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/336055187'
+      - 'Warn: release artifact v2.21.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/326280646'
   - name: Vulnerabilities
     score: 0
-    reason: 141 existing vulnerabilities detected
+    reason: 147 existing vulnerabilities detected
     details:
       - 'Warn: Project is vulnerable to: GHSA-vmq6-5m68-f53m'
       - 'Warn: Project is vulnerable to: GHSA-25qh-j22f-pwp8'
@@ -422,14 +420,17 @@ checks:
       - 'Warn: Project is vulnerable to: GHSA-83qj-6fr2-vhqg'
       - 'Warn: Project is vulnerable to: GHSA-9m3c-qcxr-9x87'
       - 'Warn: Project is vulnerable to: GHSA-9m89-8frq-c98c'
+      - 'Warn: Project is vulnerable to: GHSA-9xv2-5v5q-p794'
       - 'Warn: Project is vulnerable to: GHSA-fccv-jmmp-qg76'
       - 'Warn: Project is vulnerable to: GHSA-fpj8-gq4v-p354'
       - 'Warn: Project is vulnerable to: GHSA-fv25-8xcx-gqjc'
       - 'Warn: Project is vulnerable to: GHSA-g8pj-r55q-5c2v'
+      - 'Warn: Project is vulnerable to: GHSA-gcx9-497g-6cp6'
       - 'Warn: Project is vulnerable to: GHSA-gqp3-2cvr-x8m3'
       - 'Warn: Project is vulnerable to: GHSA-gx5v-xp9w-j4cg'
       - 'Warn: Project is vulnerable to: GHSA-h2fw-rfh5-95r3'
       - 'Warn: Project is vulnerable to: GHSA-h3gc-qfqq-6h8f'
+      - 'Warn: Project is vulnerable to: GHSA-h3x4-894j-xpx5'
       - 'Warn: Project is vulnerable to: GHSA-h6fc-48rj-7qqh'
       - 'Warn: Project is vulnerable to: GHSA-hfrx-6qgj-fp6c'
       - 'Warn: Project is vulnerable to: GHSA-hgrr-935x-pq79'
@@ -487,6 +488,7 @@ checks:
       - 'Warn: Project is vulnerable to: PYSEC-2026-2151 / GHSA-68rp-wp8r-4726'
       - 'Warn: Project is vulnerable to: GO-2026-5942'
       - 'Warn: Project is vulnerable to: GO-2026-5970'
+      - 'Warn: Project is vulnerable to: GHSA-vp52-pcj8-j9qc'
       - 'Warn: Project is vulnerable to: GO-2023-1988 / GHSA-2wrh-6pvc-2jm9'
       - 'Warn: Project is vulnerable to: GO-2023-2102 / GHSA-4374-p667-p6c8'
       - 'Warn: Project is vulnerable to: GO-2024-2687 / GHSA-4v7x-pqxf-cx7m'
@@ -526,6 +528,8 @@ checks:
       - 'Warn: Project is vulnerable to: GO-2026-4529'
       - 'Warn: Project is vulnerable to: GO-2026-5932'
       - 'Warn: Project is vulnerable to: GO-2026-6303'
+      - 'Warn: Project is vulnerable to: GO-2026-6354'
+      - 'Warn: Project is vulnerable to: GO-2026-6355'
       - 'Warn: Project is vulnerable to: GO-2026-6179'
       - 'Warn: Project is vulnerable to: GO-2026-6180'
       - 'Warn: Project is vulnerable to: GO-2025-3488 / GHSA-6v2p-p543-phr9'
@@ -567,7 +571,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: deploy/docs-v2/Dockerfile:31: pin your Docker image by updating alpine:3.10 to alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
       - 'Warn: containerImage not pinned by hash: deploy/docs-v2/Dockerfile:37: pin your Docker image by updating alpine:3.10 to alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
       - 'Warn: containerImage not pinned by hash: deploy/docs-v2/Dockerfile:43: pin your Docker image by updating node:20-bookworm to node:20-bookworm@sha256:8f693eaa7e0a8e71560c9a82b55fd54c2ae920a2ba5d2cde28bac7d1c01c9ba5'
-      - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:16: pin your Docker image by updating gcr.io/k8s-skaffold/build_deps:latest to gcr.io/k8s-skaffold/build_deps:latest@sha256:417ef4e3115434cedb743af3f5124a12ef1dded5de26a65dafa15184004269be'
+      - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:16: pin your Docker image by updating gcr.io/k8s-skaffold/build_deps:latest to gcr.io/k8s-skaffold/build_deps:latest@sha256:bd3afc3b7852e1e5ec8f6ec8befbdcf29c042a2f4494c73d59d15f5d04abb47a'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:19'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:24'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:18: pin your Docker image by updating mirror.gcr.io/library/docker:28.1.1 to mirror.gcr.io/library/docker:28.1.1@sha256:eceba5b0fc2fcf83a74c298391c2ed9e1adbdaf04ee173611bd6282ec973e7ba'
@@ -605,7 +609,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: examples/compose/Dockerfile:10: pin your Docker image by updating mirror.gcr.io/library/alpine:3 to mirror.gcr.io/library/alpine:3@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
       - 'Warn: containerImage not pinned by hash: examples/cross-platform-builds/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.18 to mirror.gcr.io/library/golang:1.18@sha256:50c889275d26f816b5314fc99f55425fa76b18fcaf16af255f5d57f09e1f48da'
       - 'Warn: containerImage not pinned by hash: examples/cross-platform-builds/Dockerfile:10: pin your Docker image by updating mirror.gcr.io/library/alpine:3 to mirror.gcr.io/library/alpine:3@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
-      - 'Warn: containerImage not pinned by hash: examples/custom-buildx/Dockerfile:7: pin your Docker image by updating golang:alpine to golang:alpine@sha256:4c9fe60190a2a3350ddc51de80d0224b8a6698d12bdfc999fee45ea9d6c46dbc'
+      - 'Warn: containerImage not pinned by hash: examples/custom-buildx/Dockerfile:7: pin your Docker image by updating golang:alpine to golang:alpine@sha256:cf6fca6641884b8433441b2b0652976f975e1d0fdd26d177eaaf8596087f3125'
       - 'Warn: containerImage not pinned by hash: examples/custom-buildx/Dockerfile:19: pin your Docker image by updating mirror.gcr.io/library/alpine:3 to mirror.gcr.io/library/alpine:3@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
       - 'Warn: containerImage not pinned by hash: examples/custom-tests/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.18 to mirror.gcr.io/library/golang:1.18@sha256:50c889275d26f816b5314fc99f55425fa76b18fcaf16af255f5d57f09e1f48da'
       - 'Warn: containerImage not pinned by hash: examples/custom-tests/Dockerfile:10: pin your Docker image by updating mirror.gcr.io/library/alpine:3 to mirror.gcr.io/library/alpine:3@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
@@ -625,10 +629,10 @@ checks:
       - 'Warn: containerImage not pinned by hash: examples/google-cloud-build/Dockerfile:10: pin your Docker image by updating mirror.gcr.io/library/alpine:3 to mirror.gcr.io/library/alpine:3@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
       - 'Warn: containerImage not pinned by hash: examples/grpc-e2e-tests/cloud-spanner-bootstrap/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.23 to mirror.gcr.io/library/golang:1.23@sha256:60deed95d3888cc5e4d9ff8a10c54e5edc008c6ae3fba6187be6fb592e19e8c0'
       - 'Warn: containerImage not pinned by hash: examples/grpc-e2e-tests/cloud-spanner-bootstrap/Dockerfile:10: pin your Docker image by updating gcr.io/distroless/base:latest to gcr.io/distroless/base:latest@sha256:9ef50bca108839d5986e4d84b7f7b2d79024c9293b7c35b162c6c55485bd5868'
-      - 'Warn: containerImage not pinned by hash: examples/grpc-e2e-tests/cloud-spanner/Dockerfile:2: pin your Docker image by updating google/cloud-sdk to google/cloud-sdk@sha256:2e480d7977829f1534665da1fffd98170f5345d0a6322b369b0fe08a932ce574'
+      - 'Warn: containerImage not pinned by hash: examples/grpc-e2e-tests/cloud-spanner/Dockerfile:2: pin your Docker image by updating google/cloud-sdk to google/cloud-sdk@sha256:c6c6bec5b8b94e4eb2f8ade1f17cf4cb01f07973b7fbb3a4843f0a61592ad5ed'
       - 'Warn: containerImage not pinned by hash: examples/grpc-e2e-tests/service/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.23 to mirror.gcr.io/library/golang:1.23@sha256:60deed95d3888cc5e4d9ff8a10c54e5edc008c6ae3fba6187be6fb592e19e8c0'
       - 'Warn: containerImage not pinned by hash: examples/grpc-e2e-tests/service/Dockerfile:10: pin your Docker image by updating gcr.io/distroless/base:latest to gcr.io/distroless/base:latest@sha256:9ef50bca108839d5986e4d84b7f7b2d79024c9293b7c35b162c6c55485bd5868'
-      - 'Warn: containerImage not pinned by hash: examples/helm-deployment-dependencies/Dockerfile:2: pin your Docker image by updating nginx:stable to nginx:stable@sha256:09cc2702709e6388d979d8030e3ab4eb1ceb699b2dced26d7543e872a822e823'
+      - 'Warn: containerImage not pinned by hash: examples/helm-deployment-dependencies/Dockerfile:2: pin your Docker image by updating nginx:stable to nginx:stable@sha256:d5792f71a9496b833bc08ea834a758c46e2b6a6306c10f4be926f38a656cdc1c'
       - 'Warn: containerImage not pinned by hash: examples/helm-deployment/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.18 to mirror.gcr.io/library/golang:1.18@sha256:50c889275d26f816b5314fc99f55425fa76b18fcaf16af255f5d57f09e1f48da'
       - 'Warn: containerImage not pinned by hash: examples/helm-deployment/Dockerfile:10: pin your Docker image by updating mirror.gcr.io/library/alpine:3.10 to mirror.gcr.io/library/alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
       - 'Warn: containerImage not pinned by hash: examples/helm-render/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.18 to mirror.gcr.io/library/golang:1.18@sha256:50c889275d26f816b5314fc99f55425fa76b18fcaf16af255f5d57f09e1f48da'
@@ -683,7 +687,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: integration/examples/compose/Dockerfile:10: pin your Docker image by updating mirror.gcr.io/library/alpine:3 to mirror.gcr.io/library/alpine:3@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
       - 'Warn: containerImage not pinned by hash: integration/examples/cross-platform-builds/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.18 to mirror.gcr.io/library/golang:1.18@sha256:50c889275d26f816b5314fc99f55425fa76b18fcaf16af255f5d57f09e1f48da'
       - 'Warn: containerImage not pinned by hash: integration/examples/cross-platform-builds/Dockerfile:10: pin your Docker image by updating mirror.gcr.io/library/alpine:3 to mirror.gcr.io/library/alpine:3@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
-      - 'Warn: containerImage not pinned by hash: integration/examples/custom-buildx/Dockerfile:7: pin your Docker image by updating golang:alpine to golang:alpine@sha256:4c9fe60190a2a3350ddc51de80d0224b8a6698d12bdfc999fee45ea9d6c46dbc'
+      - 'Warn: containerImage not pinned by hash: integration/examples/custom-buildx/Dockerfile:7: pin your Docker image by updating golang:alpine to golang:alpine@sha256:cf6fca6641884b8433441b2b0652976f975e1d0fdd26d177eaaf8596087f3125'
       - 'Warn: containerImage not pinned by hash: integration/examples/custom-buildx/Dockerfile:19: pin your Docker image by updating mirror.gcr.io/library/alpine:3 to mirror.gcr.io/library/alpine:3@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
       - 'Warn: containerImage not pinned by hash: integration/examples/custom-tests/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.18 to mirror.gcr.io/library/golang:1.18@sha256:50c889275d26f816b5314fc99f55425fa76b18fcaf16af255f5d57f09e1f48da'
       - 'Warn: containerImage not pinned by hash: integration/examples/custom-tests/Dockerfile:10: pin your Docker image by updating mirror.gcr.io/library/alpine:3 to mirror.gcr.io/library/alpine:3@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
@@ -703,10 +707,10 @@ checks:
       - 'Warn: containerImage not pinned by hash: integration/examples/google-cloud-build/Dockerfile:10: pin your Docker image by updating mirror.gcr.io/library/alpine:3 to mirror.gcr.io/library/alpine:3@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
       - 'Warn: containerImage not pinned by hash: integration/examples/grpc-e2e-tests/cloud-spanner-bootstrap/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.23 to mirror.gcr.io/library/golang:1.23@sha256:60deed95d3888cc5e4d9ff8a10c54e5edc008c6ae3fba6187be6fb592e19e8c0'
       - 'Warn: containerImage not pinned by hash: integration/examples/grpc-e2e-tests/cloud-spanner-bootstrap/Dockerfile:10: pin your Docker image by updating gcr.io/distroless/base:latest to gcr.io/distroless/base:latest@sha256:9ef50bca108839d5986e4d84b7f7b2d79024c9293b7c35b162c6c55485bd5868'
-      - 'Warn: containerImage not pinned by hash: integration/examples/grpc-e2e-tests/cloud-spanner/Dockerfile:2: pin your Docker image by updating google/cloud-sdk to google/cloud-sdk@sha256:2e480d7977829f1534665da1fffd98170f5345d0a6322b369b0fe08a932ce574'
+      - 'Warn: containerImage not pinned by hash: integration/examples/grpc-e2e-tests/cloud-spanner/Dockerfile:2: pin your Docker image by updating google/cloud-sdk to google/cloud-sdk@sha256:c6c6bec5b8b94e4eb2f8ade1f17cf4cb01f07973b7fbb3a4843f0a61592ad5ed'
       - 'Warn: containerImage not pinned by hash: integration/examples/grpc-e2e-tests/service/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.23 to mirror.gcr.io/library/golang:1.23@sha256:60deed95d3888cc5e4d9ff8a10c54e5edc008c6ae3fba6187be6fb592e19e8c0'
       - 'Warn: containerImage not pinned by hash: integration/examples/grpc-e2e-tests/service/Dockerfile:10: pin your Docker image by updating gcr.io/distroless/base:latest to gcr.io/distroless/base:latest@sha256:9ef50bca108839d5986e4d84b7f7b2d79024c9293b7c35b162c6c55485bd5868'
-      - 'Warn: containerImage not pinned by hash: integration/examples/helm-deployment-dependencies/Dockerfile:2: pin your Docker image by updating nginx:stable to nginx:stable@sha256:09cc2702709e6388d979d8030e3ab4eb1ceb699b2dced26d7543e872a822e823'
+      - 'Warn: containerImage not pinned by hash: integration/examples/helm-deployment-dependencies/Dockerfile:2: pin your Docker image by updating nginx:stable to nginx:stable@sha256:d5792f71a9496b833bc08ea834a758c46e2b6a6306c10f4be926f38a656cdc1c'
       - 'Warn: containerImage not pinned by hash: integration/examples/helm-deployment/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.18 to mirror.gcr.io/library/golang:1.18@sha256:50c889275d26f816b5314fc99f55425fa76b18fcaf16af255f5d57f09e1f48da'
       - 'Warn: containerImage not pinned by hash: integration/examples/helm-deployment/Dockerfile:10: pin your Docker image by updating mirror.gcr.io/library/alpine:3.10 to mirror.gcr.io/library/alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
       - 'Warn: containerImage not pinned by hash: integration/examples/helm-render/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.18 to mirror.gcr.io/library/golang:1.18@sha256:50c889275d26f816b5314fc99f55425fa76b18fcaf16af255f5d57f09e1f48da'
@@ -781,8 +785,42 @@ checks:
       - 'Warn: goCommand not pinned by hash: vendor/github.com/pelletier/go-toml/benchmark.sh:10'
       - 'Info:  16 out of  23 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
+      - 'Info:   0 out of   4 pipCommand dependencies pinned'
       - 'Info:  10 out of  14 goCommand dependencies pinned'
       - 'Info:   0 out of 201 containerImage dependencies pinned'
       - 'Info:   0 out of  15 npmCommand dependencies pinned'
-      - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
-      - 'Info:   0 out of   4 pipCommand dependencies pinned'
+---
+eget:
+  collectedAt: 2026-09-07T19:37:12+00:00
+  platform:
+    darwin/arm64:
+      name:  skaffold-darwin-arm64
+      url:   https://github.com/GoogleContainerTools/skaffold/releases/download/v2.24.0/skaffold-darwin-arm64
+      size:  130093984
+      score: 38
+    darwin/amd64:
+      name:  skaffold-darwin-amd64
+      url:   https://github.com/GoogleContainerTools/skaffold/releases/download/v2.24.0/skaffold-darwin-amd64
+      size:  138258768
+      score: 38
+    linux/arm64:
+      name:  skaffold-linux-arm64
+      url:   https://github.com/GoogleContainerTools/skaffold/releases/download/v2.24.0/skaffold-linux-arm64
+      size:  121526272
+      score: 38
+    linux/amd64:
+      name:  skaffold-linux-amd64
+      url:   https://github.com/GoogleContainerTools/skaffold/releases/download/v2.24.0/skaffold-linux-amd64
+      size:  130036968
+      score: 38
+    win/arm64:
+      name:  null
+      url:   null
+      size:  null
+      score: null
+    win/amd64:
+      name:  skaffold-windows-amd64.exe
+      url:   https://github.com/GoogleContainerTools/skaffold/releases/download/v2.24.0/skaffold-windows-amd64.exe
+      size:  122144408
+      score: 38

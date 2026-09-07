@@ -1,24 +1,22 @@
 about:
-  description:
-  |
-    nFPM is Not FPM - a simple deb, rpm, apk, ipk, and arch linux packager written in Go
+  description: "nFPM is Not FPM - a simple deb, rpm, apk, ipk, and arch linux packager written in Go"
   license: MIT
   homepage: https://nfpm.goreleaser.com/
   head: a32b892
   archived: false
-  latestVersion: v2.47.0
-  collectedAt: 2026-09-05T18:16:58Z
+  latestVersion: "v2.47.0"
+  collectedAt: 2026-09-07T19:27:48Z
 timeline:
   created: 2018-01-04
   lastCommit: 2026-09-03
   lastRelease: 2026-06-20
 popularity:
-  star: 2632
+  star: 2631
   watcher: 23
   fork: 191
   release: 163
   contributor: 89
-  pullRequest: 849
+  pullRequest: 851
   issue: 233
 language:
   Go: 436973
@@ -28,63 +26,63 @@ language:
 totalBytes: 438511
 recent:
   last30d:
-    since: 2026-08-06
+    since: 2026-08-08
     release: 0
     mergedPR: 8
-    openPR: 1
+    openPR: 3
     closedIssue: 0
-    openIssue: 1
-    commit: 0
+    openIssue: 0
+    commit: 6
   last60d:
-    since: 2026-07-07
+    since: 2026-07-09
     release: 0
     mergedPR: 14
-    openPR: 2
+    openPR: 4
     closedIssue: 2
     openIssue: 2
-    commit: 0
+    commit: 16
   last90d:
-    since: 2026-06-07
+    since: 2026-06-09
     release: 1
-    mergedPR: 26
-    openPR: 3
+    mergedPR: 25
+    openPR: 5
     closedIssue: 3
     openIssue: 2
-    commit: 0
+    commit: 39
   last180d:
-    since: 2026-03-09
+    since: 2026-03-11
     release: 7
     mergedPR: 57
-    openPR: 7
+    openPR: 9
     closedIssue: 7
     openIssue: 3
-    commit: 0
+    commit: 96
   last360d:
-    since: 2025-09-10
+    since: 2025-09-12
     release: 14
-    mergedPR: 115
-    openPR: 7
+    mergedPR: 114
+    openPR: 9
     closedIssue: 19
     openIssue: 4
-    commit: 0
+    commit: 190
   last720d:
-    since: 2024-09-15
+    since: 2024-09-17
     release: 22
-    mergedPR: 199
-    openPR: 7
-    closedIssue: 38
+    mergedPR: 198
+    openPR: 9
+    closedIssue: 37
     openIssue: 5
     commit: 307
 total:
   release: 163
   mergedPR: 735
-  openPR: 8
+  openPR: 10
   closedIssue: 225
   openIssue: 8
   commit: 1304
 ---
 path: /home/runner/.x-repo/github.com/goreleaser/nfpm
-collectedAt: 2026-09-05T18:16:59Z
+collectedAt: 2026-09-07T19:27:49Z
 loc:
   Go:
     code: 13509
@@ -152,15 +150,27 @@ total:
   blanks: 2713
   files: 187
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/goreleaser/nfpm
-  commit: 9f0a520afb6393d0b9687220b0795da55fea49ac
+  commit: a32b89262e05e2574d82493c9fae378f6b7f00b7
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
-score: 7.2
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+score: 7.3
 checks:
+  - name: Code-Review
+    score: 5
+    reason: Found 6/11 approved changesets -- score normalized to 5
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -173,25 +183,23 @@ checks:
     score: 10
     reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
     details: null
-  - name: Code-Review
-    score: 4
-    reason: Found 6/14 approved changesets -- score normalized to 4
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
+  - name: Pinned-Dependencies
+    score: 9
+    reason: dependency not pinned by hash detected -- score normalized to 9
+    details:
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/sponsors.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/goreleaser/nfpm/sponsors.yml/main?enable=pin'
+      - 'Warn: goCommand not pinned by hash: .github/workflows/generate.yml:33'
+      - 'Info:  33 out of  33 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:  27 out of  28 third-party GitHubAction dependencies pinned'
+      - 'Info:   1 out of   1 containerImage dependencies pinned'
+      - 'Info:   0 out of   1 goCommand dependencies pinned'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
+      - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/codeql.yml:28'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql.yml:26'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:27'
-      - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/codeql.yml:28'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/generate.yml:23'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/govulncheck.yml:18'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/grype.yml:15'
@@ -209,31 +217,21 @@ checks:
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:9'
       - 'Warn: topLevel ''packages'' permission set to ''write'': .github/workflows/release.yml:11'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/sponsors.yml:9'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Pinned-Dependencies
-    score: 9
-    reason: dependency not pinned by hash detected -- score normalized to 9
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
     details:
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/sponsors.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/goreleaser/nfpm/sponsors.yml/main?enable=pin'
-      - 'Warn: goCommand not pinned by hash: .github/workflows/generate.yml:33'
-      - 'Info:  33 out of  33 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:  28 out of  29 third-party GitHubAction dependencies pinned'
-      - 'Info:   1 out of   1 containerImage dependencies pinned'
-      - 'Info:   0 out of   1 goCommand dependencies pinned'
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE.md:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE.md:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
@@ -262,4 +260,38 @@ checks:
     reason: SAST tool is run on all commits
     details:
       - 'Info: SAST configuration detected: CodeQL'
-      - 'Info: all commits (22) are checked with a SAST tool'
+      - 'Info: all commits (25) are checked with a SAST tool'
+---
+eget:
+  collectedAt: 2026-09-07T19:27:50+00:00
+  platform:
+    darwin/arm64:
+      name:  nfpm_2.47.0_Darwin_arm64.tar.gz
+      url:   https://github.com/goreleaser/nfpm/releases/download/v2.47.0/nfpm_2.47.0_Darwin_arm64.tar.gz
+      size:  6213344
+      score: 145
+    darwin/amd64:
+      name:  nfpm_2.47.0_Darwin_x86_64.tar.gz
+      url:   https://github.com/goreleaser/nfpm/releases/download/v2.47.0/nfpm_2.47.0_Darwin_x86_64.tar.gz
+      size:  6724252
+      score: 45
+    linux/arm64:
+      name:  nfpm_2.47.0_Linux_arm64.tar.gz
+      url:   https://github.com/goreleaser/nfpm/releases/download/v2.47.0/nfpm_2.47.0_Linux_arm64.tar.gz
+      size:  5983430
+      score: 145
+    linux/amd64:
+      name:  nfpm_2.47.0_Linux_x86_64.tar.gz
+      url:   https://github.com/goreleaser/nfpm/releases/download/v2.47.0/nfpm_2.47.0_Linux_x86_64.tar.gz
+      size:  6612023
+      score: 45
+    win/arm64:
+      name:  nfpm_2.47.0_Windows_arm64.zip
+      url:   https://github.com/goreleaser/nfpm/releases/download/v2.47.0/nfpm_2.47.0_Windows_arm64.zip
+      size:  6089941
+      score: 45
+    win/amd64:
+      name:  nfpm_2.47.0_Windows_x86_64.zip
+      url:   https://github.com/goreleaser/nfpm/releases/download/v2.47.0/nfpm_2.47.0_Windows_x86_64.zip
+      size:  6831692
+      score: 45

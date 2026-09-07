@@ -1,13 +1,11 @@
 about:
-  description:
-  |
-    Validation of best practices in your Kubernetes clusters
+  description: "Validation of best practices in your Kubernetes clusters"
   license: Apache-2.0
   homepage: https://www.fairwinds.com/polaris
   head: a4ca8b6
   archived: false
-  latestVersion: v10.2.2
-  collectedAt: 2026-09-05T18:57:12Z
+  latestVersion: "v10.2.2"
+  collectedAt: 2026-09-07T18:19:25Z
 timeline:
   created: 2018-11-15
   lastCommit: 2026-09-03
@@ -18,7 +16,7 @@ popularity:
   fork: 232
   release: 108
   contributor: 56
-  pullRequest: 972
+  pullRequest: 973
   issue: 259
 language:
   Go: 262928
@@ -30,63 +28,63 @@ language:
 totalBytes: 299086
 recent:
   last30d:
-    since: 2026-08-06
+    since: 2026-08-08
     release: 1
     mergedPR: 12
-    openPR: 1
+    openPR: 2
     closedIssue: 0
     openIssue: 0
     commit: 12
   last60d:
-    since: 2026-07-07
+    since: 2026-07-09
     release: 2
     mergedPR: 18
-    openPR: 4
+    openPR: 5
     closedIssue: 1
     openIssue: 1
     commit: 20
   last90d:
-    since: 2026-06-07
+    since: 2026-06-09
     release: 2
     mergedPR: 21
-    openPR: 4
+    openPR: 5
     closedIssue: 3
     openIssue: 1
     commit: 24
   last180d:
-    since: 2026-03-09
-    release: 6
+    since: 2026-03-11
+    release: 5
     mergedPR: 28
-    openPR: 5
+    openPR: 6
     closedIssue: 6
     openIssue: 1
     commit: 37
   last360d:
-    since: 2025-09-10
+    since: 2025-09-12
     release: 10
     mergedPR: 33
-    openPR: 5
+    openPR: 6
     closedIssue: 7
     openIssue: 1
     commit: 46
   last720d:
-    since: 2024-09-15
+    since: 2024-09-17
     release: 21
-    mergedPR: 61
-    openPR: 5
+    mergedPR: 60
+    openPR: 6
     closedIssue: 18
     openIssue: 1
     commit: 85
 total:
   release: 108
   mergedPR: 627
-  openPR: 5
+  openPR: 6
   closedIssue: 249
   openIssue: 10
   commit: 1108
 ---
 path: /home/runner/.x-repo/github.com/FairwindsOps/polaris
-collectedAt: 2026-09-05T18:57:15Z
+collectedAt: 2026-09-07T18:19:31Z
 loc:
   Json:
     code: 18700
@@ -144,22 +142,18 @@ total:
   blanks: 1434
   files: 515
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/FairwindsOps/polaris
-  commit: c0e23a233b2087272a7f524f1b922f4e3f2f9689
+  commit: a4ca8b6c32cb07196ad3cbf2508dce4304b6a6c3
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
-score: 4.7
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+score: 4.6
 checks:
   - name: Code-Review
-    score: 5
-    reason: Found 9/18 approved changesets -- score normalized to 5
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 16 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 10
+    score: 4
+    reason: Found 5/11 approved changesets -- score normalized to 4
     details: null
   - name: Packaging
     score: -1
@@ -170,25 +164,42 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Maintained
+    score: 10
+    reason: 25 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/test_setup.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
+    details: null
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
     details: null
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: Pinned-Dependencies
+    score: 0
+    reason: dependency not pinned by hash detected -- score normalized to 0
+    details:
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/stale.yml:14: update your workflow using https://app.stepsecurity.io/secureworkflow/FairwindsOps/polaris/stale.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test_setup.yml:10: update your workflow using https://app.stepsecurity.io/secureworkflow/FairwindsOps/polaris/test_setup.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test_setup.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/FairwindsOps/polaris/test_setup.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test_setup.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/FairwindsOps/polaris/test_setup.yml/master?enable=pin'
+      - 'Warn: containerImage not pinned by hash: .github/actions/setup-polaris/Dockerfile:3: pin your Docker image by updating alpine:3.24 to alpine:3.24@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating alpine:3.24.1 to alpine:3.24.1@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
+      - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   2 containerImage dependencies pinned'
   - name: License
     score: 10
     reason: license file detected
@@ -199,6 +210,14 @@ checks:
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Signed-Releases
     score: 4
     reason: 3 out of the last 5 releases have a total of 3 signed artifacts.
@@ -213,29 +232,42 @@ checks:
       - 'Warn: release artifact v10.2.0 does not have provenance: https://api.github.com/repos/FairwindsOps/polaris/releases/314246180'
       - 'Warn: release artifact 10.1.8 does not have provenance: https://api.github.com/repos/FairwindsOps/polaris/releases/311900970'
       - 'Warn: release artifact 10.1.7 does not have provenance: https://api.github.com/repos/FairwindsOps/polaris/releases/304382408'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-  - name: Pinned-Dependencies
-    score: 0
-    reason: dependency not pinned by hash detected -- score normalized to 0
-    details:
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/stale.yml:14: update your workflow using https://app.stepsecurity.io/secureworkflow/FairwindsOps/polaris/stale.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test_setup.yml:10: update your workflow using https://app.stepsecurity.io/secureworkflow/FairwindsOps/polaris/test_setup.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test_setup.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/FairwindsOps/polaris/test_setup.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test_setup.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/FairwindsOps/polaris/test_setup.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: .github/actions/setup-polaris/Dockerfile:3: pin your Docker image by updating alpine:3.24 to alpine:3.24@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating alpine:3.24.1 to alpine:3.24.1@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
-      - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   2 containerImage dependencies pinned'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
-      - 'Warn: 0 commits out of 21 are checked with a SAST tool'
+      - 'Warn: 0 commits out of 24 are checked with a SAST tool'
+---
+eget:
+  collectedAt: 2026-09-07T18:19:32+00:00
+  platform:
+    darwin/arm64:
+      name:  polaris_10.2.2_darwin_arm64.tar.gz
+      url:   https://github.com/FairwindsOps/polaris/releases/download/v10.2.2/polaris_10.2.2_darwin_arm64.tar.gz
+      size:  14670106
+      score: 145
+    darwin/amd64:
+      name:  polaris_10.2.2_darwin_amd64.tar.gz
+      url:   https://github.com/FairwindsOps/polaris/releases/download/v10.2.2/polaris_10.2.2_darwin_amd64.tar.gz
+      size:  15986501
+      score: 145
+    linux/arm64:
+      name:  polaris_10.2.2_linux_arm64.tar.gz
+      url:   https://github.com/FairwindsOps/polaris/releases/download/v10.2.2/polaris_10.2.2_linux_arm64.tar.gz
+      size:  14013414
+      score: 145
+    linux/amd64:
+      name:  polaris_10.2.2_linux_amd64.tar.gz
+      url:   https://github.com/FairwindsOps/polaris/releases/download/v10.2.2/polaris_10.2.2_linux_amd64.tar.gz
+      size:  15724702
+      score: 145
+    win/arm64:
+      name:  null
+      url:   null
+      size:  null
+      score: null
+    win/amd64:
+      name:  polaris_10.2.2_windows_amd64.tar.gz
+      url:   https://github.com/FairwindsOps/polaris/releases/download/v10.2.2/polaris_10.2.2_windows_amd64.tar.gz
+      size:  16149622
+      score: 45
