@@ -5,19 +5,23 @@ about:
   head: 223e04f
   archived: false
   latestVersion: "openssl-3.0.22"
-  collectedAt: 2026-09-08T04:58:54Z
+  latestRelease: "openssl-3.0.22"
+  latestPrerelease: "openssl-4.0.0-beta1"
+  collectedAt: 2026-09-08T11:36:47Z
 timeline:
   created: 2013-01-15
   lastCommit: 2026-09-07
+  lastVersion: 2026-08-25
   lastRelease: 2026-08-25
+  lastPrerelease: 2026-03-24
 popularity:
-  star: 30764
+  star: 30762
   watcher: 1017
   fork: 11451
   release: 315
   contributor: 1231
-  pullRequest: 19099
-  issue: 11706
+  pullRequest: 19104
+  issue: 11707
 language:
   C: 31091460
   Perl: 9760592
@@ -41,60 +45,60 @@ recent:
     since: 2026-08-09
     release: 5
     mergedPR: 0
-    openPR: 189
+    openPR: 193
     closedIssue: 29
-    openIssue: 72
+    openIssue: 73
     commit: 122
   last60d:
     since: 2026-07-10
     release: 5
     mergedPR: 0
-    openPR: 249
+    openPR: 253
     closedIssue: 67
-    openIssue: 105
+    openIssue: 106
     commit: 324
   last90d:
     since: 2026-06-10
     release: 5
     mergedPR: 0
-    openPR: 297
+    openPR: 301
     closedIssue: 123
-    openIssue: 153
+    openIssue: 154
     commit: 638
   last180d:
     since: 2026-03-12
     release: 17
     mergedPR: 3
-    openPR: 402
+    openPR: 405
     closedIssue: 259
-    openIssue: 247
+    openIssue: 248
     commit: 1267
   last360d:
     since: 2025-09-13
     release: 31
     mergedPR: 3
-    openPR: 485
+    openPR: 487
     closedIssue: 522
-    openIssue: 386
+    openIssue: 387
     commit: 2461
   last720d:
     since: 2024-09-18
     release: 64
     mergedPR: 12
-    openPR: 526
+    openPR: 528
     closedIssue: 1242
-    openIssue: 547
+    openIssue: 548
     commit: 5183
 total:
   release: 315
   mergedPR: 148
   openPR: 560
-  closedIssue: 10708
+  closedIssue: 10709
   openIssue: 998
   commit: 41025
 ---
 path: /home/runner/.x-repo/github.com/openssl/openssl
-collectedAt: 2026-09-08T04:59:50Z
+collectedAt: 2026-09-08T11:37:36Z
 loc:
   C:
     code: 639828
@@ -207,39 +211,48 @@ total:
   blanks: 191473
   files: 3235
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/openssl/openssl
-  commit: 81d84030f432322afa28a858a6756b23d606d921
+  commit: 223e04f993f0df5c81358715eb7ed243ac31b1a6
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 6.3
 checks:
+  - name: Code-Review
+    score: 0
+    reason: Found 0/30 approved changesets -- score normalized to 0
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: -1
-    reason: no workflows found
-    details: null
-  - name: Code-Review
-    score: 0
-    reason: Found 0/30 approved changesets -- score normalized to 0
-    details: null
   - name: Token-Permissions
     score: -1
     reason: No tokens found
     details: null
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 20 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 12 issue activity found in the last 90 days -- score normalized to 10
     details: null
+  - name: Dangerous-Workflow
+    score: -1
+    reason: no workflows found
+    details: null
+  - name: SAST
+    score: 0
+    reason: no SAST tool detected
+    details:
+      - 'Warn: no pull requests merged into dev branch'
   - name: CII-Best-Practices
     score: 5
     reason: 'badge detected: Passing'
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: License
     score: 10
@@ -247,19 +260,35 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE.txt:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE.txt:0'
-  - name: SAST
-    score: 0
-    reason: no SAST tool detected
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
     details:
-      - 'Warn: no pull requests merged into dev branch'
+      - 'Info: OSSFuzz integration found'
+      - 'Info: CLibFuzzer integration found: fuzz/driver.c:19'
+      - 'Info: CLibFuzzer integration found: fuzz/driver.c:26'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
-  - name: Binary-Artifacts
+  - name: Pinned-Dependencies
+    score: 0
+    reason: dependency not pinned by hash detected -- score normalized to 0
+    details:
+      - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered (: util/shlib_wrap.sh.in:0'
+      - 'Warn: containerImage not pinned by hash: test/quic-openssl-docker/Dockerfile:1: pin your Docker image by updating martenseemann/quic-network-simulator-endpoint:latest to martenseemann/quic-network-simulator-endpoint:latest@sha256:3b2b9e6fa317da238c8140a7b6d2bf8d4d45a8464b873eecac3ff2a32520b71a'
+      - 'Warn: pipCommand not pinned by hash: test/recipes/95-test_external_pyca_data/cryptography.sh:59'
+      - 'Warn: pipCommand not pinned by hash: test/recipes/95-test_external_pyca_data/cryptography.sh:66'
+      - 'Info:   0 out of   1 containerImage dependencies pinned'
+      - 'Info:   0 out of   2 pipCommand dependencies pinned'
+  - name: Security-Policy
     score: 10
-    reason: no binaries found in the repo
-    details: null
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: github.com/openssl/.github/SECURITY.md:1'
+      - 'Info: Found linked content: github.com/openssl/.github/SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/openssl/.github/SECURITY.md:1'
+      - 'Info: Found text in security policy: github.com/openssl/.github/SECURITY.md:1'
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -274,31 +303,5 @@ checks:
       - 'Warn: release artifact openssl-3.5.8 does not have provenance: https://api.github.com/repos/openssl/openssl/releases/376369271'
       - 'Warn: release artifact openssl-3.4.7 does not have provenance: https://api.github.com/repos/openssl/openssl/releases/376374617'
       - 'Warn: release artifact openssl-3.0.22 does not have provenance: https://api.github.com/repos/openssl/openssl/releases/376379592'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: OSSFuzz integration found'
-      - 'Info: CLibFuzzer integration found: fuzz/driver.c:19'
-      - 'Info: CLibFuzzer integration found: fuzz/driver.c:26'
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: github.com/openssl/.github/SECURITY.md:1'
-      - 'Info: Found linked content: github.com/openssl/.github/SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/openssl/.github/SECURITY.md:1'
-      - 'Info: Found text in security policy: github.com/openssl/.github/SECURITY.md:1'
-  - name: Pinned-Dependencies
-    score: 0
-    reason: dependency not pinned by hash detected -- score normalized to 0
-    details:
-      - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered (: util/shlib_wrap.sh.in:0'
-      - 'Warn: containerImage not pinned by hash: test/quic-openssl-docker/Dockerfile:1: pin your Docker image by updating martenseemann/quic-network-simulator-endpoint:latest to martenseemann/quic-network-simulator-endpoint:latest@sha256:3b2b9e6fa317da238c8140a7b6d2bf8d4d45a8464b873eecac3ff2a32520b71a'
-      - 'Warn: pipCommand not pinned by hash: test/recipes/95-test_external_pyca_data/cryptography.sh:43'
-      - 'Warn: pipCommand not pinned by hash: test/recipes/95-test_external_pyca_data/cryptography.sh:50'
-      - 'Warn: pipCommand not pinned by hash: test/recipes/95-test_external_pyca_data/cryptography.sh:51'
-      - 'Info:   0 out of   1 containerImage dependencies pinned'
-      - 'Info:   0 out of   3 pipCommand dependencies pinned'
 ---
-{"id":376359337,"author":{"login":"openssl-machine","id":25405787,"node_id":"MDQ6VXNlcjI1NDA1Nzg3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAHR-9c4Wbsmp","tag_name":"openssl-4.0.2","target_commitish":"master","name":"OpenSSL 4.0.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-25T11:39:23Z","updated_at":"2026-08-25T11:44:22Z","published_at":"2026-08-25T11:44:22Z","assets":[{"id":529116792,"node_id":"RA_kwDOAHR-9c4fia54","name":"openssl-4.0.2.tar.gz","label":"","uploader":{"login":"openssl-machine","id":25405787,"node_id":"MDQ6VXNlcjI1NDA1Nzg3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":55153883,"digest":"sha256:736b467530f916737b7031310ccb21d8218c6229e61e8e160cd1d3458cd543a8","download_count":18765,"created_at":"2026-08-25T11:42:22Z","updated_at":"2026-08-25T11:42:25Z"},{"id":529116791,"node_id":"RA_kwDOAHR-9c4fia53","name":"openssl-4.0.2.tar.gz.asc","label":"","uploader":{"login":"openssl-machine","id":25405787,"node_id":"MDQ6VXNlcjI1NDA1Nzg3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":931,"digest":"sha256:2eade0aa5a3734301b6e53dc25b5c681a4aec7a2d3b2632c74bbac9b65cb9e60","download_count":594,"created_at":"2026-08-25T11:42:22Z","updated_at":"2026-08-25T11:42:23Z"},{"id":529116794,"node_id":"RA_kwDOAHR-9c4fia56","name":"openssl-4.0.2.tar.gz.sha1","label":"","uploader":{"login":"openssl-machine","id":25405787,"node_id":"MDQ6VXNlcjI1NDA1Nzg3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":63,"digest":"sha256:42746a10ce6b1fafd30db8332c6fab240bbff43c2d0c325be33401b9c8dde846","download_count":455,"created_at":"2026-08-25T11:42:22Z","updated_at":"2026-08-25T11:42:23Z"},{"id":529116789,"node_id":"RA_kwDOAHR-9c4fia51","name":"openssl-4.0.2.tar.gz.sha256","label":"","uploader":{"login":"openssl-machine","id":25405787,"node_id":"MDQ6VXNlcjI1NDA1Nzg3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":87,"digest":"sha256:20cf6487d38b622b5c076ffcee6419f45e89e400bda28ca4dc47739c3d2f1d7c","download_count":1820,"created_at":"2026-08-25T11:42:22Z","updated_at":"2026-08-25T11:42:22Z"}],"body":"OpenSSL 4.0.2 is a security patch release.  The most severe CVE fixed\r\nin this release is Moderate.\r\n\r\nThis release incorporates the following bug fixes and mitigations:\r\n\r\n  * Fixed QUIC server being able to trigger double free when processing\r\n    `INITIAL` packet.\r\n    ([CVE-2026-18798])\r\n\r\n  * Fixed heap buffer overflow in CMS key unwrapping.\r\n    ([CVE-2026-63072])\r\n\r\n  * Fixed invalid pointer dereference in CMP server via crafted `protectionAlg`.\r\n    ([CVE-2026-63076])\r\n\r\n  * Fixed unbounded memory growth in QUIC server incoming channel queue.\r\n    ([CVE-2026-14456])\r\n\r\n  * Fixed RPK server signature algorithm selection being able to dereference\r\n    a missing certificate.\r\n    ([CVE-2026-14457])\r\n\r\n  * Fixed excessive memory use buffering DTLS records for a future epoch.\r\n    ([CVE-2026-54874])\r\n\r\n  * Fixed client-side memory leak in OCSP response checking.\r\n    ([CVE-2026-54876])\r\n\r\n  * Fixed untrusted Sender DN being used as a format string in CMP response\r\n    validation.\r\n    ([CVE-2026-63073])\r\n\r\n  * Fixed CMP indefinite cache growth of `extraCerts`.\r\n    ([CVE-2026-63074])\r\n\r\n  * Fixed QUIC ACK-only packet retention being able to cause memory exhaustion.\r\n    ([CVE-2026-63075])\r\n\r\n  * Fixed possibility of AEAD forgeries with empty ciphertext when using\r\n    `EVP_Cipher()`.\r\n    ([CVE-2026-75803])\r\n\r\n  * Fixed checking of authentication tags for empty ciphertexts for AEAD ciphers\r\n    in CCM cipher mode.\r\n\r\n[CVE-2026-18798]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-18798\r\n[CVE-2026-63072]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-63072\r\n[CVE-2026-63076]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-63076\r\n[CVE-2026-14456]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-14456\r\n[CVE-2026-14457]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-14457\r\n[CVE-2026-54874]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-54874\r\n[CVE-2026-54876]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-54876\r\n[CVE-2026-63073]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-63073\r\n[CVE-2026-63074]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-63074\r\n[CVE-2026-63075]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-63075\r\n[CVE-2026-75803]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-75803","reactions":{"total_count":11,"+1":3,"-1":0,"laugh":0,"hooray":6,"confused":0,"heart":1,"rocket":0,"eyes":1}}
+{"id":376359337,"author":{"login":"openssl-machine","id":25405787,"node_id":"MDQ6VXNlcjI1NDA1Nzg3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAHR-9c4Wbsmp","tag_name":"openssl-4.0.2","target_commitish":"master","name":"OpenSSL 4.0.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-25T11:39:23Z","updated_at":"2026-08-25T11:44:22Z","published_at":"2026-08-25T11:44:22Z","assets":[{"id":529116792,"node_id":"RA_kwDOAHR-9c4fia54","name":"openssl-4.0.2.tar.gz","label":"","uploader":{"login":"openssl-machine","id":25405787,"node_id":"MDQ6VXNlcjI1NDA1Nzg3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":55153883,"digest":"sha256:736b467530f916737b7031310ccb21d8218c6229e61e8e160cd1d3458cd543a8","download_count":19335,"created_at":"2026-08-25T11:42:22Z","updated_at":"2026-08-25T11:42:25Z"},{"id":529116791,"node_id":"RA_kwDOAHR-9c4fia53","name":"openssl-4.0.2.tar.gz.asc","label":"","uploader":{"login":"openssl-machine","id":25405787,"node_id":"MDQ6VXNlcjI1NDA1Nzg3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":931,"digest":"sha256:2eade0aa5a3734301b6e53dc25b5c681a4aec7a2d3b2632c74bbac9b65cb9e60","download_count":609,"created_at":"2026-08-25T11:42:22Z","updated_at":"2026-08-25T11:42:23Z"},{"id":529116794,"node_id":"RA_kwDOAHR-9c4fia56","name":"openssl-4.0.2.tar.gz.sha1","label":"","uploader":{"login":"openssl-machine","id":25405787,"node_id":"MDQ6VXNlcjI1NDA1Nzg3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":63,"digest":"sha256:42746a10ce6b1fafd30db8332c6fab240bbff43c2d0c325be33401b9c8dde846","download_count":460,"created_at":"2026-08-25T11:42:22Z","updated_at":"2026-08-25T11:42:23Z"},{"id":529116789,"node_id":"RA_kwDOAHR-9c4fia51","name":"openssl-4.0.2.tar.gz.sha256","label":"","uploader":{"login":"openssl-machine","id":25405787,"node_id":"MDQ6VXNlcjI1NDA1Nzg3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":87,"digest":"sha256:20cf6487d38b622b5c076ffcee6419f45e89e400bda28ca4dc47739c3d2f1d7c","download_count":1881,"created_at":"2026-08-25T11:42:22Z","updated_at":"2026-08-25T11:42:22Z"}],"body":"OpenSSL 4.0.2 is a security patch release.  The most severe CVE fixed\r\nin this release is Moderate.\r\n\r\nThis release incorporates the following bug fixes and mitigations:\r\n\r\n  * Fixed QUIC server being able to trigger double free when processing\r\n    `INITIAL` packet.\r\n    ([CVE-2026-18798])\r\n\r\n  * Fixed heap buffer overflow in CMS key unwrapping.\r\n    ([CVE-2026-63072])\r\n\r\n  * Fixed invalid pointer dereference in CMP server via crafted `protectionAlg`.\r\n    ([CVE-2026-63076])\r\n\r\n  * Fixed unbounded memory growth in QUIC server incoming channel queue.\r\n    ([CVE-2026-14456])\r\n\r\n  * Fixed RPK server signature algorithm selection being able to dereference\r\n    a missing certificate.\r\n    ([CVE-2026-14457])\r\n\r\n  * Fixed excessive memory use buffering DTLS records for a future epoch.\r\n    ([CVE-2026-54874])\r\n\r\n  * Fixed client-side memory leak in OCSP response checking.\r\n    ([CVE-2026-54876])\r\n\r\n  * Fixed untrusted Sender DN being used as a format string in CMP response\r\n    validation.\r\n    ([CVE-2026-63073])\r\n\r\n  * Fixed CMP indefinite cache growth of `extraCerts`.\r\n    ([CVE-2026-63074])\r\n\r\n  * Fixed QUIC ACK-only packet retention being able to cause memory exhaustion.\r\n    ([CVE-2026-63075])\r\n\r\n  * Fixed possibility of AEAD forgeries with empty ciphertext when using\r\n    `EVP_Cipher()`.\r\n    ([CVE-2026-75803])\r\n\r\n  * Fixed checking of authentication tags for empty ciphertexts for AEAD ciphers\r\n    in CCM cipher mode.\r\n\r\n[CVE-2026-18798]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-18798\r\n[CVE-2026-63072]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-63072\r\n[CVE-2026-63076]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-63076\r\n[CVE-2026-14456]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-14456\r\n[CVE-2026-14457]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-14457\r\n[CVE-2026-54874]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-54874\r\n[CVE-2026-54876]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-54876\r\n[CVE-2026-63073]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-63073\r\n[CVE-2026-63074]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-63074\r\n[CVE-2026-63075]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-63075\r\n[CVE-2026-75803]: https://openssl-library.org/news/vulnerabilities/#CVE-2026-75803","reactions":{"total_count":11,"+1":3,"-1":0,"laugh":0,"hooray":6,"confused":0,"heart":1,"rocket":0,"eyes":1}}

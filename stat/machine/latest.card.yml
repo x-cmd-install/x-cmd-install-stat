@@ -5,11 +5,15 @@ about:
   head: b170508
   archived: true
   latestVersion: "v0.16.2"
-  collectedAt: 2026-09-08T04:57:02Z
+  latestRelease: "v0.16.2"
+  latestPrerelease: "v0.14.0-rc1"
+  collectedAt: 2026-09-08T11:17:20Z
 timeline:
   created: 2014-12-03
   lastCommit: 2019-09-02
+  lastVersion: 2019-09-02
   lastRelease: 2019-09-02
+  lastPrerelease: 2018-02-26
 popularity:
   star: 6610
   watcher: 1
@@ -82,7 +86,7 @@ total:
   commit: 3463
 ---
 path: /home/runner/.x-repo/github.com/docker/machine
-collectedAt: 2026-09-08T04:57:04Z
+collectedAt: 2026-09-08T11:17:23Z
 loc:
   Go:
     code: 355031
@@ -175,19 +179,15 @@ total:
   blanks: 70487
   files: 1296
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/docker/machine
   commit: b170508bf44c3405e079e26d5fdffe35a64c6972
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 2.9
 checks:
-  - name: Dangerous-Workflow
-    score: -1
-    reason: no workflows found
-    details: null
   - name: Code-Review
     score: 8
     reason: Found 18/21 approved changesets -- score normalized to 8
@@ -197,34 +197,32 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Token-Permissions
+    score: -1
+    reason: No tokens found
+    details: null
+  - name: Dangerous-Workflow
+    score: -1
+    reason: no workflows found
+    details: null
   - name: Maintained
     score: 0
     reason: project is archived
     details:
       - 'Warn: Repository is archived.'
-  - name: Token-Permissions
-    score: -1
-    reason: No tokens found
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
     details: null
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -233,6 +231,12 @@ checks:
       - 'Warn: goCommand not pinned by hash: Dockerfile:10-12'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   0 out of   1 goCommand dependencies pinned'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
@@ -265,10 +269,3 @@ checks:
     details:
       - 'Warn: 0 commits out of 28 are checked with a SAST tool'
 ---
-platform	name	url	size	score
-darwin/arm64			
-darwin/amd64	docker-machine-Darwin-x86_64	https://github.com/docker-archive-public/docker.machine/releases/download/v0.16.2/docker-machine-Darwin-x86_64	40419176	40
-linux/arm64	docker-machine-Linux-aarch64	https://github.com/docker-archive-public/docker.machine/releases/download/v0.16.2/docker-machine-Linux-aarch64	32931968	40
-linux/amd64	docker-machine-Linux-x86_64	https://github.com/docker-archive-public/docker.machine/releases/download/v0.16.2/docker-machine-Linux-x86_64	34213952	40
-win/arm64			
-win/amd64	docker-machine-Windows-x86_64.exe	https://github.com/docker-archive-public/docker.machine/releases/download/v0.16.2/docker-machine-Windows-x86_64.exe	34462720	40

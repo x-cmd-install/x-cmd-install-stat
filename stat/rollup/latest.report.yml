@@ -5,11 +5,15 @@ about:
   head: 02340ec
   archived: false
   latestVersion: "v4.63.1"
-  collectedAt: 2026-09-08T04:58:39Z
+  latestRelease: "v4.63.1"
+  latestPrerelease: ""
+  collectedAt: 2026-09-08T11:11:15Z
 timeline:
   created: 2015-05-14
   lastCommit: 2026-09-07
+  lastVersion: 2026-08-28
   lastRelease: 2026-08-28
+  lastPrerelease: 
 popularity:
   star: 26309
   watcher: 251
@@ -83,7 +87,7 @@ total:
   commit: 6362
 ---
 path: /home/runner/.x-repo/github.com/rollup/rollup
-collectedAt: 2026-09-08T04:58:47Z
+collectedAt: 2026-09-08T11:11:23Z
 loc:
   JavaScript:
     code: 238029
@@ -166,27 +170,36 @@ total:
   blanks: 34215
   files: 13336
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/rollup/rollup
-  commit: 34b8b924c815ec9413d7821f6fd54cc615584a51
+  commit: 02340ecdd312b0e4db8d1dc9446c0edaffedec68
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
-score: 5.3
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+score: 5.2
 checks:
-  - name: Code-Review
-    score: 4
-    reason: Found 6/14 approved changesets -- score normalized to 4
-    details: null
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: SECURITY.md:1'
+      - 'Info: Found linked content: SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
+      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 5 issue activity found in the last 90 days -- score normalized to 10
     details: null
+  - name: Code-Review
+    score: 3
+    reason: Found 4/11 approved changesets -- score normalized to 3
+    details: null
+  - name: Dangerous-Workflow
+    score: 0
+    reason: dangerous workflow patterns detected
+    details:
+      - 'Warn: untrusted code checkout ''${{ github.event.pull_request.head.sha }}'': .github/workflows/performance-report.yml:75'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -198,28 +211,32 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/performance-report.yml:16'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/repl-artefacts-upload.yml:11'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/repl-artefacts.yml:16'
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: SECURITY.md:1'
-      - 'Info: Found linked content: SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
-      - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
+  - name: CII-Best-Practices
     score: 0
-    reason: dangerous workflow patterns detected
-    details:
-      - 'Warn: untrusted code checkout ''${{ github.event.pull_request.head.sha }}'': .github/workflows/performance-report.yml:75'
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
   - name: License
     score: 9
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE.md:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
+  - name: Pinned-Dependencies
+    score: 9
+    reason: dependency not pinned by hash detected -- score normalized to 9
+    details:
+      - 'Warn: npmCommand not pinned by hash: .github/workflows/build-and-tests.yml:613'
+      - 'Warn: npmCommand not pinned by hash: .github/workflows/build-and-tests.yml:570'
+      - 'Info:  32 out of  32 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:  21 out of  21 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   2 npmCommand dependencies pinned'
   - name: Signed-Releases
     score: -1
     reason: no releases found
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Branch-Protection
     score: 8
@@ -232,19 +249,11 @@ checks:
       - 'Warn: codeowners review is not required on branch ''master'''
       - 'Info: status check found to merge onto on branch ''master'''
       - 'Info: PRs are required in order to make changes on branch ''master'''
-  - name: Pinned-Dependencies
-    score: 9
-    reason: dependency not pinned by hash detected -- score normalized to 9
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
     details:
-      - 'Warn: npmCommand not pinned by hash: .github/workflows/build-and-tests.yml:613'
-      - 'Warn: npmCommand not pinned by hash: .github/workflows/build-and-tests.yml:570'
-      - 'Info:  32 out of  32 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:  21 out of  21 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   2 npmCommand dependencies pinned'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
+      - 'Warn: no fuzzer integrations found'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
@@ -255,10 +264,5 @@ checks:
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 24 are checked with a SAST tool'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
 ---
 {"id":378287108,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAh_Tpc4WjDQE","tag_name":"v4.63.1","target_commitish":"master","name":"v4.63.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-28T05:39:33Z","updated_at":"2026-08-28T06:01:35Z","published_at":"2026-08-28T06:01:35Z","assets":[],"body":"## 4.63.1\n\n_2026-08-28_\n\n### Bug Fixes\n\n- Revert function return value tracking until the most recent issue is understood (#6490)\n\n### Pull Requests\n\n- [#6489](https://github.com/rollup/rollup/pull/6489): fix(deps): update minor/patch updates (@renovate[bot])\n- [#6490](https://github.com/rollup/rollup/pull/6490): Revert improve function return value tracking (@lukastaegert)","reactions":{"total_count":2,"+1":0,"-1":0,"laugh":0,"hooray":2,"confused":0,"heart":0,"rocket":0,"eyes":0},"mentions_count":2}

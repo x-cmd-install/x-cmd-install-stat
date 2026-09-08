@@ -5,11 +5,15 @@ about:
   head: 17c751e
   archived: false
   latestVersion: "v0.5.3"
-  collectedAt: 2026-09-08T05:33:00Z
+  latestRelease: "v0.5.3"
+  latestPrerelease: ""
+  collectedAt: 2026-09-08T11:46:56Z
 timeline:
   created: 2015-02-23
   lastCommit: 2022-01-21
+  lastVersion: 2018-04-24
   lastRelease: 2018-04-24
+  lastPrerelease: 
 popularity:
   star: 2514
   watcher: 61
@@ -82,7 +86,7 @@ total:
   commit: 267
 ---
 path: /home/runner/.x-repo/github.com/pressly/sup
-collectedAt: 2026-09-08T05:33:01Z
+collectedAt: 2026-09-08T11:46:57Z
 loc:
   Go:
     code: 1324
@@ -125,15 +129,20 @@ total:
   blanks: 363
   files: 19
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/pressly/sup
   commit: 17c751e8ca547e2ef7fb5b6b2017543cd7172a05
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 2.3
 checks:
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Dangerous-Workflow
     score: -1
     reason: no workflows found
@@ -146,18 +155,13 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 6
-    reason: Found 8/12 approved changesets -- score normalized to 6
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
+    details: null
+  - name: Code-Review
+    score: 6
+    reason: Found 8/12 approved changesets -- score normalized to 6
     details: null
   - name: CII-Best-Practices
     score: 0
@@ -171,23 +175,23 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
       - 'Warn: containerImage not pinned by hash: example/Dockerfile:5: pin your Docker image by updating ubuntu:14.04 to ubuntu:14.04@sha256:64483f3496c1373bfd55348e88694d1c4d0c9b660dee6bfef5e12f43b9933b30'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -213,10 +217,3 @@ checks:
     details:
       - 'Warn: 0 commits out of 29 are checked with a SAST tool'
 ---
-platform	name	url	size	score
-darwin/arm64			
-darwin/amd64			
-linux/arm64			
-linux/amd64	sup-linux64	https://github.com/pressly/sup/releases/download/v0.5.3/sup-linux64	5889057	40
-win/arm64	sup-windows64.exe	https://github.com/pressly/sup/releases/download/v0.5.3/sup-windows64.exe	5743616	25
-win/amd64	sup-windows64.exe	https://github.com/pressly/sup/releases/download/v0.5.3/sup-windows64.exe	5743616	25

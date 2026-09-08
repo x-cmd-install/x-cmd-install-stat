@@ -2,89 +2,93 @@ about:
   description: "🙃   A delightful community-driven (with 2,500+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community."
   license: MIT
   homepage: https://ohmyz.sh
-  head: 8d10cc9
+  head: 6aa1669
   archived: false
   latestVersion: ""
-  collectedAt: 2026-09-08T02:50:26Z
+  latestRelease: ""
+  latestPrerelease: ""
+  collectedAt: 2026-09-08T11:57:32Z
 timeline:
   created: 2009-08-28
-  lastCommit: 2026-09-07
+  lastCommit: 2026-09-08
+  lastVersion: 
   lastRelease: 
+  lastPrerelease: 
 popularity:
-  star: 189618
+  star: 189629
   watcher: 2696
   fork: 26594
   release: 0
   contributor: 2539
-  pullRequest: 8338
+  pullRequest: 8339
   issue: 5086
 language:
-  Shell: 1854115
+  Shell: 1854157
   Python: 23800
   Makefile: 1298
-totalBytes: 1879213
+totalBytes: 1879255
 recent:
   last30d:
     since: 2026-08-09
     release: 0
-    mergedPR: 38
-    openPR: 31
+    mergedPR: 39
+    openPR: 32
     closedIssue: 7
     openIssue: 4
-    commit: 45
+    commit: 46
   last60d:
     since: 2026-07-10
     release: 0
-    mergedPR: 64
-    openPR: 34
+    mergedPR: 65
+    openPR: 35
     closedIssue: 12
     openIssue: 9
-    commit: 81
+    commit: 82
   last90d:
     since: 2026-06-10
     release: 0
-    mergedPR: 87
-    openPR: 44
+    mergedPR: 88
+    openPR: 45
     closedIssue: 18
     openIssue: 13
-    commit: 98
+    commit: 99
   last180d:
     since: 2026-03-12
     release: 0
-    mergedPR: 163
-    openPR: 78
+    mergedPR: 164
+    openPR: 79
     closedIssue: 31
     openIssue: 20
-    commit: 173
+    commit: 174
   last360d:
     since: 2025-09-13
     release: 0
-    mergedPR: 287
-    openPR: 121
+    mergedPR: 288
+    openPR: 122
     closedIssue: 84
     openIssue: 33
-    commit: 309
+    commit: 310
   last720d:
     since: 2024-09-18
     release: 0
-    mergedPR: 474
-    openPR: 184
+    mergedPR: 475
+    openPR: 185
     closedIssue: 218
     openIssue: 63
-    commit: 522
+    commit: 523
 total:
   release: 0
-  mergedPR: 3695
-  openPR: 333
+  mergedPR: 3696
+  openPR: 334
   closedIssue: 4989
   openIssue: 97
-  commit: 7899
+  commit: 7900
 ---
 path: /home/runner/.x-repo/github.com/ohmyzsh/ohmyzsh
-collectedAt: 2026-09-08T02:50:30Z
+collectedAt: 2026-09-08T11:57:35Z
 loc:
   Zsh:
-    code: 25138
+    code: 25139
     comments: 4944
     blanks: 3185
     files: 360
@@ -130,7 +134,7 @@ loc:
     files: 2
   Markdown:
     code: 0
-    comments: 10506
+    comments: 10507
     blanks: 4007
     files: 368
   Text:
@@ -139,15 +143,15 @@ loc:
     blanks: 137
     files: 4
 total:
-  code: 53885
-  comments: 20930
+  code: 53886
+  comments: 20931
   blanks: 8297
   files: 766
 ---
-date: "2026-09-07T14:49:27Z"
+date: "2026-09-08T09:06:01Z"
 repo:
   name: github.com/ohmyzsh/ohmyzsh
-  commit: 8d10cc948887e3cff29923d758999afa6edf87fb
+  commit: 6aa16696d508f368586c5dc215b0f73a41d9ff16
 scorecard:
   version: v5.5.0
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
@@ -166,6 +170,26 @@ checks:
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Token-Permissions
+    score: 10
+    reason: GitHub workflow tokens follow principle of least privilege
+    details:
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/dependencies.yml:16'
+      - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/scorecard.yml:33'
+      - 'Info: jobLevel ''checks'' permission set to ''read'': .github/workflows/scorecard.yml:35'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/scorecard.yml:29'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/scorecard.yml:30'
+      - 'Info: jobLevel ''issues'' permission set to ''read'': .github/workflows/scorecard.yml:32'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/dependencies.yml:8'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/installer.yml:15'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:18'
+      - 'Info: found token with ''none'' permissions: .github/workflows/project.yml:1'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:18'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -174,26 +198,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Token-Permissions
-    score: 10
-    reason: GitHub workflow tokens follow principle of least privilege
-    details:
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/dependencies.yml:16'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/scorecard.yml:29'
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/scorecard.yml:30'
-      - 'Info: jobLevel ''issues'' permission set to ''read'': .github/workflows/scorecard.yml:32'
-      - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/scorecard.yml:33'
-      - 'Info: jobLevel ''checks'' permission set to ''read'': .github/workflows/scorecard.yml:35'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/dependencies.yml:8'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/installer.yml:15'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:18'
-      - 'Info: found token with ''none'' permissions: .github/workflows/project.yml:1'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:18'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -201,10 +205,6 @@ checks:
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
-    details: null
-  - name: CII-Best-Practices
-    score: 2
-    reason: 'badge detected: InProgress'
     details: null
   - name: Pinned-Dependencies
     score: 7
@@ -221,24 +221,34 @@ checks:
       - 'Info:   7 out of   7 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 pipCommand dependencies pinned'
       - 'Info:   0 out of   1 npmCommand dependencies pinned'
+  - name: CII-Best-Practices
+    score: 2
+    reason: 'badge detected: InProgress'
+    details: null
   - name: Signed-Releases
     score: -1
     reason: no releases found
     details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE.txt:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE.txt:0'
   - name: Vulnerabilities
     score: 10
     reason: 0 existing vulnerabilities detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: SAST
     score: 3
     reason: SAST tool is not run on all commits -- score normalized to 3
     details:
       - 'Warn: 10 commits out of 30 are checked with a SAST tool'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: 6
     reason: branch protection is not maximal on development and all release branches
@@ -252,12 +262,6 @@ checks:
       - 'Info: ''last push approval'' is required to merge on branch ''master'''
       - 'Warn: no status checks found to merge onto branch ''master'''
       - 'Info: PRs are required in order to make changes on branch ''master'''
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE.txt:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE.txt:0'
   - name: CI-Tests
     score: 9
     reason: 29 out of 30 merged PRs checked by a CI test -- score normalized to 9

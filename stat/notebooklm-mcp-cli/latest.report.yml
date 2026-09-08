@@ -5,13 +5,17 @@ about:
   head: 0ec1f85
   archived: false
   latestVersion: "v0.11.1"
-  collectedAt: 2026-09-08T05:08:57Z
+  latestRelease: "v0.11.1"
+  latestPrerelease: ""
+  collectedAt: 2026-09-08T10:58:47Z
 timeline:
   created: 2025-12-23
   lastCommit: 2026-09-07
+  lastVersion: 2026-09-07
   lastRelease: 2026-09-07
+  lastPrerelease: 
 popularity:
-  star: 6038
+  star: 6040
   watcher: 41
   fork: 927
   release: 144
@@ -79,7 +83,7 @@ total:
   commit: 791
 ---
 path: /home/runner/.x-repo/github.com/jacob-bd/notebooklm-mcp-cli
-collectedAt: 2026-09-08T05:08:59Z
+collectedAt: 2026-09-08T10:58:48Z
 loc:
   Python:
     code: 48985
@@ -109,4 +113,4 @@ total:
 ---
 
 ---
-{"id":384202309,"author":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQtfMFM4W5nZF","tag_name":"v0.11.1","target_commitish":"main","name":"v0.11.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-07T16:04:15Z","updated_at":"2026-09-07T16:05:52Z","published_at":"2026-09-07T16:04:27Z","assets":[{"id":549042099,"node_id":"RA_kwDOQtfMFM4gubez","name":"notebooklm-mcp-0.11.1.mcpb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":2546,"digest":"sha256:655b0387a29671b156774883532ced0b005f7a6063976f541b416537731f1e0d","download_count":24,"created_at":"2026-09-07T16:05:51Z","updated_at":"2026-09-07T16:05:51Z"}],"body":"Security release. Upgrading is recommended for anyone running the MCP server.\n\n## Security\n\n- **Pipeline names are validated to prevent path traversal (GHSA-596g-p98x-c7hw)** \u2014 `_load_pipeline` (reachable from a model through the MCP `pipeline` tool with `action=\"run\"`) and `pipeline_create` (CLI) interpolated a caller-supplied name straight into a filesystem path (`pipelines_dir / f\"{name}.yaml\"`) with no sanitization, so a name containing `..` or an absolute path escaped the pipelines directory. On the read side, a crafted `pipeline_name` reached via prompt injection could load and execute any `.yaml` file on disk as a pipeline \u2014 bounded to the whitelisted actions, which include `notebook_delete`, so the reachable outcome was destructive action against the user's notebooks. Pipeline names are now validated as identifiers (letters, digits, dot, dash, underscore; no path separators) at both entry points. Reported privately by @Naor-Peretz.","mentions_count":1}
+{"id":384202309,"author":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQtfMFM4W5nZF","tag_name":"v0.11.1","target_commitish":"main","name":"v0.11.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-07T16:04:15Z","updated_at":"2026-09-07T16:05:52Z","published_at":"2026-09-07T16:04:27Z","assets":[{"id":549042099,"node_id":"RA_kwDOQtfMFM4gubez","name":"notebooklm-mcp-0.11.1.mcpb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":2546,"digest":"sha256:655b0387a29671b156774883532ced0b005f7a6063976f541b416537731f1e0d","download_count":33,"created_at":"2026-09-07T16:05:51Z","updated_at":"2026-09-07T16:05:51Z"}],"body":"Security release. Upgrading is recommended for anyone running the MCP server.\n\n## Security\n\n- **Pipeline names are validated to prevent path traversal (GHSA-596g-p98x-c7hw)** \u2014 `_load_pipeline` (reachable from a model through the MCP `pipeline` tool with `action=\"run\"`) and `pipeline_create` (CLI) interpolated a caller-supplied name straight into a filesystem path (`pipelines_dir / f\"{name}.yaml\"`) with no sanitization, so a name containing `..` or an absolute path escaped the pipelines directory. On the read side, a crafted `pipeline_name` reached via prompt injection could load and execute any `.yaml` file on disk as a pipeline \u2014 bounded to the whitelisted actions, which include `notebook_delete`, so the reachable outcome was destructive action against the user's notebooks. Pipeline names are now validated as identifiers (letters, digits, dot, dash, underscore; no path separators) at both entry points. Reported privately by @Naor-Peretz.","mentions_count":1}

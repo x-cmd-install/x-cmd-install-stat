@@ -5,11 +5,15 @@ about:
   head: aadf2e7
   archived: false
   latestVersion: "v0.49.0"
-  collectedAt: 2026-09-08T05:00:01Z
+  latestRelease: "v0.49.0"
+  latestPrerelease: "v0.21.0-rc2"
+  collectedAt: 2026-09-08T11:10:17Z
 timeline:
   created: 2021-03-30
   lastCommit: 2026-08-26
+  lastVersion: 2026-08-27
   lastRelease: 2026-08-27
+  lastPrerelease: 2023-07-31
 popularity:
   star: 3200
   watcher: 11
@@ -82,7 +86,7 @@ total:
   commit: 496
 ---
 path: /home/runner/.x-repo/github.com/danvergara/dblab
-collectedAt: 2026-09-08T05:00:03Z
+collectedAt: 2026-09-08T11:10:19Z
 loc:
   Go:
     code: 8568
@@ -120,22 +124,18 @@ total:
   blanks: 2010
   files: 62
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/danvergara/dblab
-  commit: 8a8403b16f8037a72888605f562514ba343b1ada
+  commit: aadf2e74ccdfff694bfe2ab693a5bc7414743f8a
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 4.2
 checks:
   - name: Code-Review
     score: 4
-    reason: Found 12/30 approved changesets -- score normalized to 4
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 29 commit(s) and 22 issue activity found in the last 90 days -- score normalized to 10
+    reason: Found 13/30 approved changesets -- score normalized to 4
     details: null
   - name: Dangerous-Workflow
     score: 10
@@ -144,6 +144,10 @@ checks:
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 29 commit(s) and 22 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Token-Permissions
     score: 0
@@ -155,10 +159,6 @@ checks:
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:10'
       - 'Warn: no topLevel permission defined: .github/workflows/test.yaml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -174,21 +174,20 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/danvergara/dblab/release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/danvergara/dblab/release.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:28: update your workflow using https://app.stepsecurity.io/secureworkflow/danvergara/dblab/release.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yaml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/danvergara/dblab/test.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yaml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/danvergara/dblab/test.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yaml:35: update your workflow using https://app.stepsecurity.io/secureworkflow/danvergara/dblab/test.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yaml:39: update your workflow using https://app.stepsecurity.io/secureworkflow/danvergara/dblab/test.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yaml:44: update your workflow using https://app.stepsecurity.io/secureworkflow/danvergara/dblab/test.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yaml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/danvergara/dblab/test.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yaml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/danvergara/dblab/test.yaml/main?enable=pin'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/docs.yml:24'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/docs.yml:25'
       - 'Info:   0 out of  13 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 pipCommand dependencies pinned'
-  - name: Fuzzing
+  - name: CII-Best-Practices
     score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -197,31 +196,36 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v0.48.1 not signed: https://api.github.com/repos/danvergara/dblab/releases/371884990'
-      - 'Warn: release artifact v0.48.0 not signed: https://api.github.com/repos/danvergara/dblab/releases/370814750'
-      - 'Warn: release artifact v0.47.4 not signed: https://api.github.com/repos/danvergara/dblab/releases/365974535'
-      - 'Warn: release artifact v0.47.3 not signed: https://api.github.com/repos/danvergara/dblab/releases/365697840'
-      - 'Warn: release artifact v0.47.2 not signed: https://api.github.com/repos/danvergara/dblab/releases/365692634'
-      - 'Warn: release artifact v0.48.1 does not have provenance: https://api.github.com/repos/danvergara/dblab/releases/371884990'
-      - 'Warn: release artifact v0.48.0 does not have provenance: https://api.github.com/repos/danvergara/dblab/releases/370814750'
-      - 'Warn: release artifact v0.47.4 does not have provenance: https://api.github.com/repos/danvergara/dblab/releases/365974535'
-      - 'Warn: release artifact v0.47.3 does not have provenance: https://api.github.com/repos/danvergara/dblab/releases/365697840'
-      - 'Warn: release artifact v0.47.2 does not have provenance: https://api.github.com/repos/danvergara/dblab/releases/365692634'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''main'''
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v0.49.0 not signed: https://api.github.com/repos/danvergara/dblab/releases/378159164'
+      - 'Warn: release artifact v0.48.1 not signed: https://api.github.com/repos/danvergara/dblab/releases/371884990'
+      - 'Warn: release artifact v0.48.0 not signed: https://api.github.com/repos/danvergara/dblab/releases/370814750'
+      - 'Warn: release artifact v0.47.4 not signed: https://api.github.com/repos/danvergara/dblab/releases/365974535'
+      - 'Warn: release artifact v0.47.3 not signed: https://api.github.com/repos/danvergara/dblab/releases/365697840'
+      - 'Warn: release artifact v0.49.0 does not have provenance: https://api.github.com/repos/danvergara/dblab/releases/378159164'
+      - 'Warn: release artifact v0.48.1 does not have provenance: https://api.github.com/repos/danvergara/dblab/releases/371884990'
+      - 'Warn: release artifact v0.48.0 does not have provenance: https://api.github.com/repos/danvergara/dblab/releases/370814750'
+      - 'Warn: release artifact v0.47.4 does not have provenance: https://api.github.com/repos/danvergara/dblab/releases/365974535'
+      - 'Warn: release artifact v0.47.3 does not have provenance: https://api.github.com/repos/danvergara/dblab/releases/365697840'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
@@ -233,10 +237,3 @@ checks:
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---
-platform	name	url	size	score
-darwin/arm64	dblab_0.49.0_darwin_arm64.tar.gz	https://github.com/danvergara/dblab/releases/download/v0.49.0/dblab_0.49.0_darwin_arm64.tar.gz	11758309	145
-darwin/amd64	dblab_0.49.0_darwin_amd64.tar.gz	https://github.com/danvergara/dblab/releases/download/v0.49.0/dblab_0.49.0_darwin_amd64.tar.gz	12264588	145
-linux/arm64	dblab_0.49.0_linux_arm64.tar.gz	https://github.com/danvergara/dblab/releases/download/v0.49.0/dblab_0.49.0_linux_arm64.tar.gz	11425759	145
-linux/amd64	dblab_0.49.0_linux_amd64.tar.gz	https://github.com/danvergara/dblab/releases/download/v0.49.0/dblab_0.49.0_linux_amd64.tar.gz	12235619	145
-win/arm64			
-win/amd64	dblab_0.49.0_windows_amd64.tar.gz	https://github.com/danvergara/dblab/releases/download/v0.49.0/dblab_0.49.0_windows_amd64.tar.gz	12307041	45

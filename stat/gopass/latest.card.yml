@@ -5,11 +5,15 @@ about:
   head: e2dd748
   archived: false
   latestVersion: "v1.17.0"
-  collectedAt: 2026-09-08T04:48:17Z
+  latestRelease: "v1.17.0"
+  latestPrerelease: "v1.17.0-rc.3"
+  collectedAt: 2026-09-08T11:09:30Z
 timeline:
   created: 2017-02-02
   lastCommit: 2026-09-02
+  lastVersion: 2026-08-30
   lastRelease: 2026-08-30
+  lastPrerelease: 2026-08-21
 popularity:
   star: 7130
   watcher: 72
@@ -83,7 +87,7 @@ total:
   commit: 2324
 ---
 path: /home/runner/.x-repo/github.com/gopasspw/gopass
-collectedAt: 2026-09-08T04:48:22Z
+collectedAt: 2026-09-08T11:09:33Z
 loc:
   Go:
     code: 59068
@@ -121,15 +125,40 @@ total:
   blanks: 14734
   files: 675
 ---
-date: "2026-09-02T13:44:36Z"
+date: "2026-09-08T08:45:55Z"
 repo:
   name: github.com/gopasspw/gopass
   commit: e2dd748cdbe12829f51f3e79035a11401e939616
 scorecard:
   version: v5.5.0
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
-score: 8.9
+score: 8.8
 checks:
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: docs/security.md:1'
+      - 'Info: Found linked content: docs/security.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: docs/security.md:1'
+      - 'Info: Found text in security policy: docs/security.md:1'
+  - name: Code-Review
+    score: 3
+    reason: Found 6/16 approved changesets -- score normalized to 3
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 20 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -142,45 +171,21 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/build.yml:16'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:31'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/container.yml:19'
-      - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/golangci-lint.yml:17'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/golangci-lint.yml:16'
+      - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/golangci-lint.yml:17'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/grype.yml:12'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/key-canary.yml:13'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:18'
-  - name: Code-Review
-    score: 3
-    reason: Found 6/16 approved changesets -- score normalized to 3
-    details: null
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 21 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: docs/security.md:1'
-      - 'Info: Found linked content: docs/security.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: docs/security.md:1'
-      - 'Info: Found text in security policy: docs/security.md:1'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Packaging
+  - name: License
     score: 10
-    reason: packaging workflow detected
+    reason: license file detected
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/autorelease.yml:17'
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: CII-Best-Practices
     score: 5
     reason: 'badge detected: Passing'
@@ -193,12 +198,29 @@ checks:
       - 'Info:  26 out of  26 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  24 out of  24 third-party GitHubAction dependencies pinned'
       - 'Info:   2 out of   3 containerImage dependencies pinned'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/autorelease.yml:17'
+  - name: SAST
+    score: 10
+    reason: SAST tool is run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Info: all commits (27) are checked with a SAST tool'
   - name: Vulnerabilities
-    score: 8
-    reason: 2 existing vulnerabilities detected
+    score: 6
+    reason: 4 existing vulnerabilities detected
     details:
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5932'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6354'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6355'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6222'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -213,28 +235,12 @@ checks:
       - 'Warn: release artifact v1.17.0-rc.2 does not have provenance: https://api.github.com/repos/gopasspw/gopass/releases/335544702'
       - 'Warn: release artifact v1.17.0-rc.1 does not have provenance: https://api.github.com/repos/gopasspw/gopass/releases/323857779'
       - 'Warn: release artifact v1.16.1 does not have provenance: https://api.github.com/repos/gopasspw/gopass/releases/270100496'
-  - name: SAST
-    score: 10
-    reason: SAST tool is run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Info: all commits (27) are checked with a SAST tool'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
     details:
       - 'Info: GoBuiltInFuzzer integration found: pkg/gopass/secrets/akv_test.go:451'
       - 'Info: GoBuiltInFuzzer integration found: pkg/gopass/secrets/secparse/parse_test.go:43'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: CI-Tests
     score: 9
     reason: 26 out of 27 merged PRs checked by a CI test -- score normalized to 9
@@ -245,10 +251,3 @@ checks:
     details:
       - 'Info: found contributions from: CoBUG, MiniMetalMaker, TNG, acb16zje, asciidoctor, beyondstorage, bibleref-french, cc-translators, ccfrance, chezmoi, cilium, docker-multiarch, drand, foonyew-ezj, golang, google, gopasspw, hercules-team, ioplane, isovalent, knoxite, kubernetes, kubernetes-monitoring, nextcloud, openlab-aux, owncast, parca-dev, polarsignals, prometheus, prometheus-operator, puppet-champions, pyrra-dev, red hat, reviewdog, techcultivation, tng, tomahawk-player, undefined, urfave, voxpupuli'
 ---
-platform	name	url	size	score
-darwin/arm64	gopass-1.17.0-darwin-arm64.tar.gz	https://github.com/gopasspw/gopass/releases/download/v1.17.0/gopass-1.17.0-darwin-arm64.tar.gz	7010281	145
-darwin/amd64	gopass-1.17.0-darwin-amd64.tar.gz	https://github.com/gopasspw/gopass/releases/download/v1.17.0/gopass-1.17.0-darwin-amd64.tar.gz	7570226	145
-linux/arm64	gopass-1.17.0-linux-arm64.tar.gz	https://github.com/gopasspw/gopass/releases/download/v1.17.0/gopass-1.17.0-linux-arm64.tar.gz	7399302	145
-linux/amd64	gopass-1.17.0-linux-amd64.tar.gz	https://github.com/gopasspw/gopass/releases/download/v1.17.0/gopass-1.17.0-linux-amd64.tar.gz	8154858	145
-win/arm64	gopass-1.17.0-windows-arm64.zip	https://github.com/gopasspw/gopass/releases/download/v1.17.0/gopass-1.17.0-windows-arm64.zip	7233871	45
-win/amd64	gopass-1.17.0-windows-amd64.zip	https://github.com/gopasspw/gopass/releases/download/v1.17.0/gopass-1.17.0-windows-amd64.zip	8091894	45

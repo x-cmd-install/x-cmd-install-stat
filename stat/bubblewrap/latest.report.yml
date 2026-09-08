@@ -2,93 +2,97 @@ about:
   description: "Low-level unprivileged sandboxing tool used by Flatpak and similar projects"
   license: NOASSERTION
   homepage: 
-  head: 26bb788
+  head: 4df8ddc
   archived: false
   latestVersion: "v0.12.0"
-  collectedAt: 2026-09-08T05:02:03Z
+  latestRelease: "v0.12.0"
+  latestPrerelease: ""
+  collectedAt: 2026-09-08T11:20:01Z
 timeline:
   created: 2016-02-16
-  lastCommit: 2026-09-07
+  lastCommit: 2026-09-08
+  lastVersion: 2026-08-26
   lastRelease: 2026-08-26
+  lastPrerelease: 
 popularity:
-  star: 8634
+  star: 8635
   watcher: 61
   fork: 383
   release: 26
   contributor: 73
-  pullRequest: 390
+  pullRequest: 391
   issue: 393
 language:
-  C: 198917
+  C: 198907
   Python: 57861
   Shell: 42959
   Meson: 9379
   Emacs Lisp: 63
-totalBytes: 309179
+totalBytes: 309169
 recent:
   last30d:
     since: 2026-08-09
     release: 1
-    mergedPR: 8
+    mergedPR: 9
     openPR: 5
     closedIssue: 1
     openIssue: 5
-    commit: 16
+    commit: 17
   last60d:
     since: 2026-07-10
     release: 1
-    mergedPR: 8
+    mergedPR: 9
     openPR: 6
     closedIssue: 2
     openIssue: 7
-    commit: 24
+    commit: 25
   last90d:
     since: 2026-06-10
     release: 1
-    mergedPR: 8
+    mergedPR: 9
     openPR: 6
     closedIssue: 3
     openIssue: 7
-    commit: 27
+    commit: 28
   last180d:
     since: 2026-03-12
     release: 3
-    mergedPR: 13
+    mergedPR: 14
     openPR: 11
     closedIssue: 12
     openIssue: 13
-    commit: 50
+    commit: 51
   last360d:
     since: 2025-09-13
     release: 3
-    mergedPR: 17
+    mergedPR: 18
     openPR: 14
     closedIssue: 23
     openIssue: 25
-    commit: 54
+    commit: 55
   last720d:
     since: 2024-09-18
     release: 4
-    mergedPR: 25
+    mergedPR: 26
     openPR: 19
     closedIssue: 44
     openIssue: 33
-    commit: 88
+    commit: 89
 total:
   release: 26
-  mergedPR: 140
+  mergedPR: 141
   openPR: 43
   closedIssue: 240
   openIssue: 153
-  commit: 716
+  commit: 717
 ---
 path: /home/runner/.x-repo/github.com/containers/bubblewrap
-collectedAt: 2026-09-08T05:02:07Z
+collectedAt: 2026-09-08T11:20:04Z
 loc:
   C:
-    code: 4819
+    code: 4815
     comments: 695
-    blanks: 1021
+    blanks: 1022
     files: 8
   Python:
     code: 1368
@@ -136,9 +140,9 @@ loc:
     blanks: 113
     files: 5
 total:
-  code: 8673
+  code: 8669
   comments: 1345
-  blanks: 1679
+  blanks: 1680
   files: 44
 ---
 date: "2026-09-07"
@@ -236,4 +240,4 @@ checks:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Info: all commits (14) are checked with a SAST tool'
 ---
-{"id":377041403,"author":{"login":"alexlarsson","id":990736,"node_id":"MDQ6VXNlcjk5MDczNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAxdxas4WeTH7","tag_name":"v0.12.0","target_commitish":"main","name":"Release 0.12.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-26T10:09:31Z","updated_at":"2026-08-26T10:11:18Z","published_at":"2026-08-26T10:11:18Z","assets":[{"id":530629244,"node_id":"RA_kwDOAxdxas4foMJ8","name":"bubblewrap-0.12.0.tar.xz","label":null,"uploader":{"login":"alexlarsson","id":990736,"node_id":"MDQ6VXNlcjk5MDczNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-xz","state":"uploaded","size":126452,"digest":"sha256:9760d007363e3abba7c747489910f9f82d9fca53ba3bd3282e396fa3c97a3314","download_count":3129,"created_at":"2026-08-26T10:11:02Z","updated_at":"2026-08-26T10:11:03Z"},{"id":530629263,"node_id":"RA_kwDOAxdxas4foMKP","name":"bubblewrap-0.12.0.tar.xz.sha256sum","label":null,"uploader":{"login":"alexlarsson","id":990736,"node_id":"MDQ6VXNlcjk5MDczNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":91,"digest":"sha256:6f1804eb45fd2727e08b4964b64cadd699a1c8086a996f01db037e294db021fc","download_count":339,"created_at":"2026-08-26T10:11:03Z","updated_at":"2026-08-26T10:11:04Z"}],"body":"Enhancements:\r\n\r\n * The flag --not-a-security-boundary was added. If this is enabled\r\n   then failure of some sandbox setup steps (like remounting a\r\n   submount) are not fatal.\r\n\r\n * The license has been updated from LGPL 2.0 (or later) to LGPL 2.1\r\n   (or later).\r\n\r\n * This version removes the support for building a setuid\r\n   bubblewrap. Changes in this version made it difficult to support\r\n   and basically all modern linux distributions now support\r\n   unprivileged user namespaces to some extent.\r\n\r\n * The assume_kernel build option was added, if specified no backwards\r\n   compatiblity for kernels older than this is built in (and will result\r\n   in hard failures at runtime). Currently specifying 5.6.0 or\r\n   later will disable the fallback implementation of\r\n   openat2(RESOLVE_IN_ROOT).\r\n\r\nBug fixes:\r\n\r\n  * Bubblewrap now correctly resolves absolute symlinks during the\r\n    sandbox setup by using openat2 with RESOLVE_IN_ROOT (or a fallback\r\n    implementation). This fixes a security issue ([GHSA-pxhw-h44j-8pfx](https://github.com/containers/bubblewrap/security/advisories/GHSA-pxhw-h44j-8pfx))\r\n    where file or directories created during sandbox setup could\r\n    follow parent symlinks out of the sandbox.\r\n","reactions":{"total_count":12,"+1":0,"-1":0,"laugh":0,"hooray":5,"confused":0,"heart":0,"rocket":7,"eyes":0}}
+{"id":377041403,"author":{"login":"alexlarsson","id":990736,"node_id":"MDQ6VXNlcjk5MDczNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAxdxas4WeTH7","tag_name":"v0.12.0","target_commitish":"main","name":"Release 0.12.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-26T10:09:31Z","updated_at":"2026-08-26T10:11:18Z","published_at":"2026-08-26T10:11:18Z","assets":[{"id":530629244,"node_id":"RA_kwDOAxdxas4foMJ8","name":"bubblewrap-0.12.0.tar.xz","label":null,"uploader":{"login":"alexlarsson","id":990736,"node_id":"MDQ6VXNlcjk5MDczNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-xz","state":"uploaded","size":126452,"digest":"sha256:9760d007363e3abba7c747489910f9f82d9fca53ba3bd3282e396fa3c97a3314","download_count":3294,"created_at":"2026-08-26T10:11:02Z","updated_at":"2026-08-26T10:11:03Z"},{"id":530629263,"node_id":"RA_kwDOAxdxas4foMKP","name":"bubblewrap-0.12.0.tar.xz.sha256sum","label":null,"uploader":{"login":"alexlarsson","id":990736,"node_id":"MDQ6VXNlcjk5MDczNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":91,"digest":"sha256:6f1804eb45fd2727e08b4964b64cadd699a1c8086a996f01db037e294db021fc","download_count":348,"created_at":"2026-08-26T10:11:03Z","updated_at":"2026-08-26T10:11:04Z"}],"body":"Enhancements:\r\n\r\n * The flag --not-a-security-boundary was added. If this is enabled\r\n   then failure of some sandbox setup steps (like remounting a\r\n   submount) are not fatal.\r\n\r\n * The license has been updated from LGPL 2.0 (or later) to LGPL 2.1\r\n   (or later).\r\n\r\n * This version removes the support for building a setuid\r\n   bubblewrap. Changes in this version made it difficult to support\r\n   and basically all modern linux distributions now support\r\n   unprivileged user namespaces to some extent.\r\n\r\n * The assume_kernel build option was added, if specified no backwards\r\n   compatiblity for kernels older than this is built in (and will result\r\n   in hard failures at runtime). Currently specifying 5.6.0 or\r\n   later will disable the fallback implementation of\r\n   openat2(RESOLVE_IN_ROOT).\r\n\r\nBug fixes:\r\n\r\n  * Bubblewrap now correctly resolves absolute symlinks during the\r\n    sandbox setup by using openat2 with RESOLVE_IN_ROOT (or a fallback\r\n    implementation). This fixes a security issue ([GHSA-pxhw-h44j-8pfx](https://github.com/containers/bubblewrap/security/advisories/GHSA-pxhw-h44j-8pfx))\r\n    where file or directories created during sandbox setup could\r\n    follow parent symlinks out of the sandbox.\r\n","reactions":{"total_count":12,"+1":0,"-1":0,"laugh":0,"hooray":5,"confused":0,"heart":0,"rocket":7,"eyes":0}}

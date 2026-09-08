@@ -5,11 +5,15 @@ about:
   head: 5b18148
   archived: false
   latestVersion: "v1.34.8"
-  collectedAt: 2026-09-08T05:59:52Z
+  latestRelease: "v1.34.8"
+  latestPrerelease: ""
+  collectedAt: 2026-09-08T12:19:48Z
 timeline:
   created: 2010-03-20
   lastCommit: 2026-09-01
+  lastVersion: 2026-07-07
   lastRelease: 2026-07-07
+  lastPrerelease: 
 popularity:
   star: 2190
   watcher: 76
@@ -40,7 +44,7 @@ recent:
     since: 2026-07-10
     release: 0
     mergedPR: 2
-    openPR: 24
+    openPR: 23
     closedIssue: 1
     openIssue: 9
     commit: 2
@@ -48,7 +52,7 @@ recent:
     since: 2026-06-10
     release: 2
     mergedPR: 64
-    openPR: 30
+    openPR: 29
     closedIssue: 4
     openIssue: 10
     commit: 42
@@ -56,7 +60,7 @@ recent:
     since: 2026-03-12
     release: 2
     mergedPR: 105
-    openPR: 33
+    openPR: 32
     closedIssue: 18
     openIssue: 11
     commit: 76
@@ -64,7 +68,7 @@ recent:
     since: 2025-09-13
     release: 3
     mergedPR: 123
-    openPR: 33
+    openPR: 32
     closedIssue: 40
     openIssue: 13
     commit: 89
@@ -72,20 +76,20 @@ recent:
     since: 2024-09-18
     release: 9
     mergedPR: 186
-    openPR: 36
+    openPR: 35
     closedIssue: 85
     openIssue: 20
     commit: 185
 total:
   release: 41
   mergedPR: 574
-  openPR: 37
+  openPR: 36
   closedIssue: 424
   openIssue: 36
   commit: 3000
 ---
 path: /home/runner/.x-repo/github.com/c-ares/c-ares
-collectedAt: 2026-09-08T05:59:55Z
+collectedAt: 2026-09-08T12:19:51Z
 loc:
   C:
     code: 37770
@@ -308,4 +312,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 29 are checked with a SAST tool'
 ---
-{"id":350440488,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAAi5PM4U40wo","tag_name":"v1.34.8","target_commitish":"main","name":"1.34.8","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-07-07T16:11:58Z","updated_at":"2026-07-07T16:16:48Z","published_at":"2026-07-07T16:16:04Z","assets":[{"id":469348415,"node_id":"RA_kwDOAAi5PM4b-bA_","name":"c-ares-1.34.8.intoto.jsonl","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":16420,"digest":"sha256:28c5a57dfc63820a047bd5e111b3e3809f4747fb87a908ec6aa93249defd3a7d","download_count":50,"created_at":"2026-07-07T16:15:25Z","updated_at":"2026-07-07T16:15:25Z"},{"id":469347865,"node_id":"RA_kwDOAAi5PM4b-a4Z","name":"c-ares-1.34.8.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":1036098,"digest":"sha256:c222b6d681096f9444d2c4863d2c1174019e27cacca0a4a5c114d36dd7d7bf78","download_count":131102,"created_at":"2026-07-07T16:14:33Z","updated_at":"2026-07-07T16:14:33Z"},{"id":469349344,"node_id":"RA_kwDOAAi5PM4b-bPg","name":"c-ares-1.34.8.tar.gz.asc","label":null,"uploader":{"login":"bradh352","id":19732188,"node_id":"MDQ6VXNlcjE5NzMyMTg4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":265,"digest":"sha256:06b5fefc70e74ba09f79454876a817ad30d4f648b5a5a175fb5b6c440a58edc0","download_count":6130,"created_at":"2026-07-07T16:16:47Z","updated_at":"2026-07-07T16:16:48Z"}],"body":"## c-ares version 1.34.8 - July 7 2026\r\n\r\nThis is a bugfix release.\r\n\r\nBugfixes:\r\n* Revert \"Mark parameters in callbacks as const\" which shipped in 1.34.7.\r\n  Changing the parameter types of the `ares_callback`, `ares_host_callback`,\r\n  and `ares_nameinfo_callback` function pointer typedefs was an unintended\r\n  API break: existing applications with the historical non-const callback\r\n  signatures no longer compiled, particularly in C++ where function pointer\r\n  types must match exactly. The read-only nature of the callback parameters\r\n  is now documented instead.\r\n  [PR #1244](https://github.com/c-ares/c-ares/pull/1244)\r\n\r\nThanks go to these friendly people for their efforts and contributions for this\r\nrelease:\r\n\r\n* Brad House (@bradh352)","mentions_count":1}
+{"id":350440488,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAAi5PM4U40wo","tag_name":"v1.34.8","target_commitish":"main","name":"1.34.8","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-07-07T16:11:58Z","updated_at":"2026-07-07T16:16:48Z","published_at":"2026-07-07T16:16:04Z","assets":[{"id":469348415,"node_id":"RA_kwDOAAi5PM4b-bA_","name":"c-ares-1.34.8.intoto.jsonl","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":16420,"digest":"sha256:28c5a57dfc63820a047bd5e111b3e3809f4747fb87a908ec6aa93249defd3a7d","download_count":50,"created_at":"2026-07-07T16:15:25Z","updated_at":"2026-07-07T16:15:25Z"},{"id":469347865,"node_id":"RA_kwDOAAi5PM4b-a4Z","name":"c-ares-1.34.8.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":1036098,"digest":"sha256:c222b6d681096f9444d2c4863d2c1174019e27cacca0a4a5c114d36dd7d7bf78","download_count":132087,"created_at":"2026-07-07T16:14:33Z","updated_at":"2026-07-07T16:14:33Z"},{"id":469349344,"node_id":"RA_kwDOAAi5PM4b-bPg","name":"c-ares-1.34.8.tar.gz.asc","label":null,"uploader":{"login":"bradh352","id":19732188,"node_id":"MDQ6VXNlcjE5NzMyMTg4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":265,"digest":"sha256:06b5fefc70e74ba09f79454876a817ad30d4f648b5a5a175fb5b6c440a58edc0","download_count":6210,"created_at":"2026-07-07T16:16:47Z","updated_at":"2026-07-07T16:16:48Z"}],"body":"## c-ares version 1.34.8 - July 7 2026\r\n\r\nThis is a bugfix release.\r\n\r\nBugfixes:\r\n* Revert \"Mark parameters in callbacks as const\" which shipped in 1.34.7.\r\n  Changing the parameter types of the `ares_callback`, `ares_host_callback`,\r\n  and `ares_nameinfo_callback` function pointer typedefs was an unintended\r\n  API break: existing applications with the historical non-const callback\r\n  signatures no longer compiled, particularly in C++ where function pointer\r\n  types must match exactly. The read-only nature of the callback parameters\r\n  is now documented instead.\r\n  [PR #1244](https://github.com/c-ares/c-ares/pull/1244)\r\n\r\nThanks go to these friendly people for their efforts and contributions for this\r\nrelease:\r\n\r\n* Brad House (@bradh352)","mentions_count":1}

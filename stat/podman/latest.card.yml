@@ -5,19 +5,23 @@ about:
   head: 7d39ce8
   archived: false
   latestVersion: "v6.1.1"
-  collectedAt: 2026-09-08T05:21:24Z
+  latestRelease: "v6.1.1"
+  latestPrerelease: "v6.1.0-rc1"
+  collectedAt: 2026-09-08T11:41:24Z
 timeline:
   created: 2017-11-01
   lastCommit: 2026-09-07
+  lastVersion: 2026-09-02
   lastRelease: 2026-09-02
+  lastPrerelease: 2026-07-31
 popularity:
-  star: 32808
+  star: 32805
   watcher: 222
-  fork: 3361
+  fork: 3363
   release: 249
   contributor: 911
-  pullRequest: 16392
-  issue: 10895
+  pullRequest: 16394
+  issue: 10896
 language:
   Go: 9070864
   Shell: 1551885
@@ -84,13 +88,13 @@ recent:
 total:
   release: 249
   mergedPR: 12927
-  openPR: 189
-  closedIssue: 9960
+  openPR: 190
+  closedIssue: 9961
   openIssue: 935
   commit: 28311
 ---
 path: /home/runner/.x-repo/github.com/containers/podman
-collectedAt: 2026-09-08T05:21:52Z
+collectedAt: 2026-09-08T11:42:02Z
 loc:
   Go:
     code: 1628496
@@ -268,26 +272,22 @@ total:
   blanks: 252118
   files: 8903
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/containers/podman
-  commit: de350af4b10b2d50d88141da646d0d0f2c0aa872
+  commit: 7d39ce8fe43f7d400dc3decc0c5961c18857ee55
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 7.8
 checks:
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 5 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: CII-Best-Practices
-    score: 5
-    reason: 'badge detected: Passing'
     details: null
   - name: Security-Policy
     score: 10
@@ -306,24 +306,18 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Token-Permissions
     score: 9
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/cherry-pick.yml:18'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/cherry-pick.yml:202'
+      - 'Info: found token with ''none'' permissions: .github/workflows/ci.yml:1'
       - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/ci.yml:56'
+      - 'Info: found token with ''none'' permissions: .github/workflows/ci.yml:1'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:226'
-      - 'Info: found token with ''none'' permissions: .github/workflows/ci.yml:1'
-      - 'Info: found token with ''none'' permissions: .github/workflows/ci.yml:1'
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/dev-bump.yml:15'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/dev-bump.yml:91'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/dev-bump.yml:15'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/issue-labeler.yml:13'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/labeler.yml:12'
       - 'Info: found token with ''none'' permissions: .github/workflows/lima.yml:1'
@@ -349,11 +343,25 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/stale.yml:13'
       - 'Info: found token with ''none'' permissions: .github/workflows/update-podmanio.yml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/zizmor.yml:1'
+  - name: CII-Best-Practices
+    score: 5
+    reason: 'badge detected: Passing'
+    details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
     details:
       - 'Info: GoBuiltInFuzzer integration found: pkg/systemd/parser/unitfile_test.go:400'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Branch-Protection
     score: 4
     reason: branch protection is not maximal on development and all release branches
@@ -372,20 +380,16 @@ checks:
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
+      - 'Warn: release artifact v6.1.1 not signed: https://api.github.com/repos/podman-container-tools/podman/releases/381417560'
       - 'Warn: release artifact v5.8.6 not signed: https://api.github.com/repos/podman-container-tools/podman/releases/370216422'
       - 'Warn: release artifact v6.1.0 not signed: https://api.github.com/repos/podman-container-tools/podman/releases/369501266'
       - 'Warn: release artifact v6.1.0-rc1 not signed: https://api.github.com/repos/podman-container-tools/podman/releases/363246007'
       - 'Warn: release artifact v6.0.2 not signed: https://api.github.com/repos/podman-container-tools/podman/releases/357755080'
-      - 'Warn: release artifact v6.0.1 not signed: https://api.github.com/repos/podman-container-tools/podman/releases/351158256'
+      - 'Warn: release artifact v6.1.1 does not have provenance: https://api.github.com/repos/podman-container-tools/podman/releases/381417560'
       - 'Warn: release artifact v5.8.6 does not have provenance: https://api.github.com/repos/podman-container-tools/podman/releases/370216422'
       - 'Warn: release artifact v6.1.0 does not have provenance: https://api.github.com/repos/podman-container-tools/podman/releases/369501266'
       - 'Warn: release artifact v6.1.0-rc1 does not have provenance: https://api.github.com/repos/podman-container-tools/podman/releases/363246007'
       - 'Warn: release artifact v6.0.2 does not have provenance: https://api.github.com/repos/podman-container-tools/podman/releases/357755080'
-      - 'Warn: release artifact v6.0.1 does not have provenance: https://api.github.com/repos/podman-container-tools/podman/releases/351158256'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits
@@ -419,8 +423,8 @@ checks:
       - 'Warn: containerImage not pinned by hash: test/python/docker/build_labels/Dockerfile:1: pin your Docker image by updating quay.io/libpod/alpine:latest to quay.io/libpod/alpine:latest@sha256:fa93b01658e3a5a1686dc3ae55f170d8de487006fb53a28efcd12ab0710a2e5f'
       - 'Warn: pipCommand not pinned by hash: hack/ci/runner.sh:186'
       - 'Warn: pipCommand not pinned by hash: hack/ci/runner.sh:187'
-      - 'Warn: pipCommand not pinned by hash: hack/ci/runner.sh:218'
-      - 'Warn: pipCommand not pinned by hash: hack/ci/runner.sh:219'
+      - 'Warn: pipCommand not pinned by hash: hack/ci/runner.sh:220'
+      - 'Warn: pipCommand not pinned by hash: hack/ci/runner.sh:221'
       - 'Warn: downloadThenRun not pinned by hash: hack/install_golangci.sh:29'
       - 'Warn: goCommand not pinned by hash: vendor/github.com/json-iterator/go/build.sh:10'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/machine-os-pr.yml:70'
@@ -431,10 +435,3 @@ checks:
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
       - 'Info:   0 out of   1 goCommand dependencies pinned'
 ---
-platform	name	url	size	score
-darwin/arm64	podman-remote-release-darwin_arm64.zip	https://github.com/podman-container-tools/podman/releases/download/v6.1.1/podman-remote-release-darwin_arm64.zip	26428947	45
-darwin/amd64			
-linux/arm64	podman-remote-static-linux_arm64.tar.gz	https://github.com/podman-container-tools/podman/releases/download/v6.1.1/podman-remote-static-linux_arm64.tar.gz	22396740	45
-linux/amd64	podman-remote-static-linux_amd64.tar.gz	https://github.com/podman-container-tools/podman/releases/download/v6.1.1/podman-remote-static-linux_amd64.tar.gz	24472587	45
-win/arm64	podman-remote-release-windows_arm64.zip	https://github.com/podman-container-tools/podman/releases/download/v6.1.1/podman-remote-release-windows_arm64.zip	29436231	45
-win/amd64	podman-remote-release-windows_amd64.zip	https://github.com/podman-container-tools/podman/releases/download/v6.1.1/podman-remote-release-windows_amd64.zip	32323887	45

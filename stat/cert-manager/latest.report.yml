@@ -5,18 +5,22 @@ about:
   head: 70b9845
   archived: false
   latestVersion: "v1.21.1"
-  collectedAt: 2026-09-08T04:54:34Z
+  latestRelease: "v1.21.1"
+  latestPrerelease: "v1.21.0-beta.0"
+  collectedAt: 2026-09-08T10:55:11Z
 timeline:
   created: 2017-05-24
   lastCommit: 2026-09-08
+  lastVersion: 2026-07-29
   lastRelease: 2026-07-29
+  lastPrerelease: 2026-07-01
 popularity:
   star: 14069
   watcher: 144
   fork: 2444
   release: 255
   contributor: 531
-  pullRequest: 5160
+  pullRequest: 5162
   issue: 3816
 language:
   Go: 5977306
@@ -31,7 +35,7 @@ recent:
     since: 2026-08-09
     release: 0
     mergedPR: 117
-    openPR: 28
+    openPR: 30
     closedIssue: 14
     openIssue: 21
     commit: 173
@@ -39,7 +43,7 @@ recent:
     since: 2026-07-10
     release: 1
     mergedPR: 169
-    openPR: 41
+    openPR: 43
     closedIssue: 22
     openIssue: 30
     commit: 273
@@ -47,7 +51,7 @@ recent:
     since: 2026-06-10
     release: 5
     mergedPR: 270
-    openPR: 50
+    openPR: 52
     closedIssue: 28
     openIssue: 36
     commit: 431
@@ -55,7 +59,7 @@ recent:
     since: 2026-03-12
     release: 10
     mergedPR: 429
-    openPR: 64
+    openPR: 66
     closedIssue: 57
     openIssue: 51
     commit: 735
@@ -63,7 +67,7 @@ recent:
     since: 2025-09-13
     release: 24
     mergedPR: 782
-    openPR: 85
+    openPR: 87
     closedIssue: 125
     openIssue: 86
     commit: 1444
@@ -71,20 +75,20 @@ recent:
     since: 2024-09-18
     release: 50
     mergedPR: 1183
-    openPR: 98
+    openPR: 100
     closedIssue: 309
     openIssue: 122
     commit: 2325
 total:
   release: 255
   mergedPR: 4153
-  openPR: 102
+  openPR: 104
   closedIssue: 3656
   openIssue: 160
   commit: 11370
 ---
 path: /home/runner/.x-repo/github.com/cert-manager/cert-manager
-collectedAt: 2026-09-08T04:54:46Z
+collectedAt: 2026-09-08T10:55:24Z
 loc:
   Go:
     code: 180513
@@ -256,4 +260,4 @@ checks:
     details:
       - 'Info: found contributions from: AMD-AGI, ClangBuiltLinux, FOSDEM, NixOS, ScatterHQ, UoLCompSoc, abercompsoc, abersailbot, apple, argoproj, bevelgacom, boatd, centos-livepatching, cert-manager, cyberark, diagridio, ex @redhatofficial, g-research, garnercorp, google, grand-central-garbage, hybridcluster, indentlabs, istio, itfactory-tm, jetstack, kalopa, kubernetes, kubernetes-sigs, mect & @cofide, metalbear-co, ngrok @wobscale, openshift, paloaltonetworks, pytent, python-hyper, research scientist @nvidia, rkt, sails-simulator, systemetric, tailscale, tensorchord, thought-machine, touist, twisted, walmart, wobscale, womenwhogo, zenior as'
 ---
-{"id":361831037,"author":{"login":"jetstack-release-bot","id":60484088,"node_id":"MDQ6VXNlcjYwNDg0MDg4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBYCWqs4VkRp9","tag_name":"v1.21.1","target_commitish":"24e33194fb39488eff2bbf10c6dc640f407cad44","name":"v1.21.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-07-29T13:41:59Z","updated_at":"2026-07-29T15:36:11Z","published_at":"2026-07-29T15:36:11Z","assets":[{"id":494156318,"node_id":"RA_kwDOBYCWqs4ddDoe","name":"cert-manager.crds.yaml","label":"","uploader":{"login":"jetstack-release-bot","id":60484088,"node_id":"MDQ6VXNlcjYwNDg0MDg4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-yaml","state":"uploaded","size":997110,"digest":"sha256:a1383be02862dd2802e6810f19dd1f4784550f336ff4eb27788e842302f76977","download_count":515883,"created_at":"2026-07-29T14:45:59Z","updated_at":"2026-07-29T14:46:00Z"},{"id":494156333,"node_id":"RA_kwDOBYCWqs4ddDot","name":"cert-manager.yaml","label":"","uploader":{"login":"jetstack-release-bot","id":60484088,"node_id":"MDQ6VXNlcjYwNDg0MDg4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-yaml","state":"uploaded","size":1034400,"digest":"sha256:5f6a499b8c1857d57f560f536e0dcc830914b45c420899fe7ad0692c8624e408","download_count":408731,"created_at":"2026-07-29T14:46:00Z","updated_at":"2026-07-29T14:46:01Z"}],"body":"cert-manager is the easiest way to automatically manage certificates in Kubernetes and OpenShift clusters.\r\n\r\nv1.21.1 fixes a controller panic for Certificates with `spec.renewal.policy: Disabled`, a regression in 1.21.0 which caused log spam and dropped Secret informer events, Issuers and ClusterIssuers getting stuck at `Ready=False` (`InvalidSolver`) when a referenced ACME DNS-01 solver Secret is created after the Issuer, and the commented Gateway API example in the Helm chart values. It also updates several dependencies to fix reported security vulnerabilities.\r\n\r\nAll users should upgrade.\r\n\r\n## Changes by Kind\r\n\r\n### Bug or Regression\r\n\r\n- Avoid controller panic if a Certificate sets spec.renewal.policy=Disabled (#9038, @sklirg)\r\n- Fix Issuer/ClusterIssuer stuck at Ready=False/InvalidSolver after a missing ACME DNS-01 solver Secret is created (#9083, @SebTardif)\r\n- Fix log spam and dropped Secret informer events for non-cert-manager Secrets, caused by a generics regression introduced in 1.21.0. (#9037, @wallrj-cyberark)\r\n- Fixed the commented Gateway API config example in the Helm chart values to use `gatewayAPI.enabled` instead of the invalid `gatewayAPI.enable`. (#9012, @mateenali66)\r\n\r\n### Other (Cleanup or Flake)\r\n\r\n- Bump `golang.org/x/text` to v0.40.0 to fix a reported security vulnerability (#9039, @wallrj-cyberark)\r\n- Bump `google.golang.org/grpc` to v1.82.1 to fix a reported security vulnerability (#9063)\r\n- Bump `github.com/google/cel-go` to v0.29.0 to fix a reported security vulnerability (#9072)\r\n- Bump `go.opentelemetry.io/otel` to v1.44.0 to fix a reported security vulnerability (#9073)\r\n- Update distroless base images (#9000, #9025)\r\n","reactions":{"total_count":6,"+1":0,"-1":0,"laugh":0,"hooray":3,"confused":0,"heart":0,"rocket":3,"eyes":0},"mentions_count":4}
+{"id":361831037,"author":{"login":"jetstack-release-bot","id":60484088,"node_id":"MDQ6VXNlcjYwNDg0MDg4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBYCWqs4VkRp9","tag_name":"v1.21.1","target_commitish":"24e33194fb39488eff2bbf10c6dc640f407cad44","name":"v1.21.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-07-29T13:41:59Z","updated_at":"2026-07-29T15:36:11Z","published_at":"2026-07-29T15:36:11Z","assets":[{"id":494156318,"node_id":"RA_kwDOBYCWqs4ddDoe","name":"cert-manager.crds.yaml","label":"","uploader":{"login":"jetstack-release-bot","id":60484088,"node_id":"MDQ6VXNlcjYwNDg0MDg4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-yaml","state":"uploaded","size":997110,"digest":"sha256:a1383be02862dd2802e6810f19dd1f4784550f336ff4eb27788e842302f76977","download_count":520513,"created_at":"2026-07-29T14:45:59Z","updated_at":"2026-07-29T14:46:00Z"},{"id":494156333,"node_id":"RA_kwDOBYCWqs4ddDot","name":"cert-manager.yaml","label":"","uploader":{"login":"jetstack-release-bot","id":60484088,"node_id":"MDQ6VXNlcjYwNDg0MDg4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-yaml","state":"uploaded","size":1034400,"digest":"sha256:5f6a499b8c1857d57f560f536e0dcc830914b45c420899fe7ad0692c8624e408","download_count":412440,"created_at":"2026-07-29T14:46:00Z","updated_at":"2026-07-29T14:46:01Z"}],"body":"cert-manager is the easiest way to automatically manage certificates in Kubernetes and OpenShift clusters.\r\n\r\nv1.21.1 fixes a controller panic for Certificates with `spec.renewal.policy: Disabled`, a regression in 1.21.0 which caused log spam and dropped Secret informer events, Issuers and ClusterIssuers getting stuck at `Ready=False` (`InvalidSolver`) when a referenced ACME DNS-01 solver Secret is created after the Issuer, and the commented Gateway API example in the Helm chart values. It also updates several dependencies to fix reported security vulnerabilities.\r\n\r\nAll users should upgrade.\r\n\r\n## Changes by Kind\r\n\r\n### Bug or Regression\r\n\r\n- Avoid controller panic if a Certificate sets spec.renewal.policy=Disabled (#9038, @sklirg)\r\n- Fix Issuer/ClusterIssuer stuck at Ready=False/InvalidSolver after a missing ACME DNS-01 solver Secret is created (#9083, @SebTardif)\r\n- Fix log spam and dropped Secret informer events for non-cert-manager Secrets, caused by a generics regression introduced in 1.21.0. (#9037, @wallrj-cyberark)\r\n- Fixed the commented Gateway API config example in the Helm chart values to use `gatewayAPI.enabled` instead of the invalid `gatewayAPI.enable`. (#9012, @mateenali66)\r\n\r\n### Other (Cleanup or Flake)\r\n\r\n- Bump `golang.org/x/text` to v0.40.0 to fix a reported security vulnerability (#9039, @wallrj-cyberark)\r\n- Bump `google.golang.org/grpc` to v1.82.1 to fix a reported security vulnerability (#9063)\r\n- Bump `github.com/google/cel-go` to v0.29.0 to fix a reported security vulnerability (#9072)\r\n- Bump `go.opentelemetry.io/otel` to v1.44.0 to fix a reported security vulnerability (#9073)\r\n- Update distroless base images (#9000, #9025)\r\n","reactions":{"total_count":6,"+1":0,"-1":0,"laugh":0,"hooray":3,"confused":0,"heart":0,"rocket":3,"eyes":0},"mentions_count":4}

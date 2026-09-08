@@ -5,13 +5,17 @@ about:
   head: 8b5af06
   archived: false
   latestVersion: "v4.53.6"
-  collectedAt: 2026-09-08T05:25:27Z
+  latestRelease: "v4.53.6"
+  latestPrerelease: "v4.40.1"
+  collectedAt: 2026-09-08T11:26:17Z
 timeline:
   created: 2015-09-26
   lastCommit: 2026-08-25
+  lastVersion: 2026-08-20
   lastRelease: 2026-08-20
+  lastPrerelease: 2023-11-07
 popularity:
-  star: 15933
+  star: 15934
   watcher: 67
   fork: 833
   release: 169
@@ -82,7 +86,7 @@ total:
   commit: 2308
 ---
 path: /home/runner/.x-repo/github.com/mikefarah/yq
-collectedAt: 2026-09-08T05:25:31Z
+collectedAt: 2026-09-08T11:26:19Z
 loc:
   Go:
     code: 38289
@@ -155,7 +159,7 @@ total:
   blanks: 7487
   files: 514
 ---
-date: "2026-09-01T07:43:41Z"
+date: "2026-09-08T07:43:49Z"
 repo:
   name: github.com/mikefarah/yq
   commit: 8b5af0694bb82b41d4ae180fac9972029066f90a
@@ -164,33 +168,24 @@ scorecard:
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 7.6
 checks:
-  - name: Code-Review
-    score: 6
-    reason: Found 12/20 approved changesets -- score normalized to 6
-    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
     details: null
-  - name: Dependency-Update-Tool
+  - name: Dangerous-Workflow
     score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: SECURITY.md:1'
-      - 'Info: Found linked content: SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
-      - 'Info: Found text in security policy: SECURITY.md:1'
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Code-Review
+    score: 6
+    reason: Found 12/20 approved changesets -- score normalized to 6
+    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
     details:
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql.yml:30'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:31'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql.yml:30'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/docker-githubaction.yml:15'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/docker-release.yml:19'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:14'
@@ -203,14 +198,23 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:18'
       - 'Info: found token with ''none'' permissions: .github/workflows/snap-release.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test-yq.yml:7'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: SECURITY.md:1'
+      - 'Info: Found linked content: SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
+      - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Pinned-Dependencies
     score: 9
     reason: dependency not pinned by hash detected -- score normalized to 9
@@ -221,6 +225,12 @@ checks:
       - 'Info:  14 out of  16 third-party GitHubAction dependencies pinned'
       - 'Info:   4 out of   4 containerImage dependencies pinned'
       - 'Info:   2 out of   2 goCommand dependencies pinned'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -229,31 +239,11 @@ checks:
     score: 10
     reason: 0 existing vulnerabilities detected
     details: null
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v4.53.6 not signed: https://api.github.com/repos/mikefarah/yq/releases/373613231'
-      - 'Warn: release artifact v4.53.4 not signed: https://api.github.com/repos/mikefarah/yq/releases/372802948'
-      - 'Warn: release artifact v4.53.3 not signed: https://api.github.com/repos/mikefarah/yq/releases/335390315'
-      - 'Warn: release artifact v4.53.2 not signed: https://api.github.com/repos/mikefarah/yq/releases/310192188'
-      - 'Warn: release artifact v4.52.5 not signed: https://api.github.com/repos/mikefarah/yq/releases/301486546'
-      - 'Warn: release artifact v4.53.6 does not have provenance: https://api.github.com/repos/mikefarah/yq/releases/373613231'
-      - 'Warn: release artifact v4.53.4 does not have provenance: https://api.github.com/repos/mikefarah/yq/releases/372802948'
-      - 'Warn: release artifact v4.53.3 does not have provenance: https://api.github.com/repos/mikefarah/yq/releases/335390315'
-      - 'Warn: release artifact v4.53.2 does not have provenance: https://api.github.com/repos/mikefarah/yq/releases/310192188'
-      - 'Warn: release artifact v4.52.5 does not have provenance: https://api.github.com/repos/mikefarah/yq/releases/301486546'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker-githubaction.yml:9'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: SAST
     score: 8
     reason: SAST tool detected but not run on all commits
@@ -275,6 +265,20 @@ checks:
       - 'Warn: could not determine whether codeowners review is allowed'
       - 'Warn: no status checks found to merge onto branch ''master'''
       - 'Warn: PRs are not required to make changes on branch ''master''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v4.53.6 not signed: https://api.github.com/repos/mikefarah/yq/releases/373613231'
+      - 'Warn: release artifact v4.53.4 not signed: https://api.github.com/repos/mikefarah/yq/releases/372802948'
+      - 'Warn: release artifact v4.53.3 not signed: https://api.github.com/repos/mikefarah/yq/releases/335390315'
+      - 'Warn: release artifact v4.53.2 not signed: https://api.github.com/repos/mikefarah/yq/releases/310192188'
+      - 'Warn: release artifact v4.52.5 not signed: https://api.github.com/repos/mikefarah/yq/releases/301486546'
+      - 'Warn: release artifact v4.53.6 does not have provenance: https://api.github.com/repos/mikefarah/yq/releases/373613231'
+      - 'Warn: release artifact v4.53.4 does not have provenance: https://api.github.com/repos/mikefarah/yq/releases/372802948'
+      - 'Warn: release artifact v4.53.3 does not have provenance: https://api.github.com/repos/mikefarah/yq/releases/335390315'
+      - 'Warn: release artifact v4.53.2 does not have provenance: https://api.github.com/repos/mikefarah/yq/releases/310192188'
+      - 'Warn: release artifact v4.52.5 does not have provenance: https://api.github.com/repos/mikefarah/yq/releases/301486546'
   - name: CI-Tests
     score: 8
     reason: 17 out of 21 merged PRs checked by a CI test -- score normalized to 8
@@ -285,10 +289,3 @@ checks:
     details:
       - 'Info: found contributions from: Perl, Perl-Toolchain-Gang, ProntoPro, SUSE, agavee, associazionedrupalitalia, caddyserver, cisco systems, cloudfoundry-incubator, cncf-maintainers, contact harald, drupaldevdays, forge, lima-vm, pep, perl-libwin32, rancher, rancher labs @ suse, rancher-sandbox, sysdiglabs @draios, three''s'
 ---
-platform	name	url	size	score
-darwin/arm64	yq_darwin_arm64.tar.gz	https://github.com/mikefarah/yq/releases/download/v4.53.6/yq_darwin_arm64.tar.gz	5313594	45
-darwin/amd64	yq_darwin_amd64.tar.gz	https://github.com/mikefarah/yq/releases/download/v4.53.6/yq_darwin_amd64.tar.gz	5790294	45
-linux/arm64	yq_linux_arm64.tar.gz	https://github.com/mikefarah/yq/releases/download/v4.53.6/yq_linux_arm64.tar.gz	5146582	45
-linux/amd64	yq_linux_amd64.tar.gz	https://github.com/mikefarah/yq/releases/download/v4.53.6/yq_linux_amd64.tar.gz	5729058	45
-win/arm64	yq_windows_arm64.zip	https://github.com/mikefarah/yq/releases/download/v4.53.6/yq_windows_arm64.zip	5186900	45
-win/amd64	yq_windows_amd64.zip	https://github.com/mikefarah/yq/releases/download/v4.53.6/yq_windows_amd64.zip	5829127	45
