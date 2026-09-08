@@ -137,6 +137,20 @@ sync_one() {
             else
                 rm -f "$json_out.tmp" "$json_out"
             fi
+
+            # Convert the merged report.yml to NDJSON for consumers
+            # that prefer JSON. yq's default parser handles multi-doc
+            # YAML streams natively — the file's first 3 docs are YAML
+            # mappings (card / loc / scorecard) and the 4th is a JSON
+            # object (release), both are valid YAML 1.1. Result: 4
+            # one-line JSON objects, one per line, in the same order.
+            report_json_out="${report_out%.yml}.json"
+            if yq -o=json -I=0 '.' "$report_out" > "$report_json_out.tmp" 2>/dev/null \
+               && [ -s "$report_json_out.tmp" ]; then
+                mv "$report_json_out.tmp" "$report_json_out"
+            else
+                rm -f "$report_json_out.tmp" "$report_json_out"
+            fi
             printf 'OK   %-40s %s\n' "$name" "$d"
             return 0
         fi
