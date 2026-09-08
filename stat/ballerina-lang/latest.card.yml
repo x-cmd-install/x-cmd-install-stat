@@ -5,7 +5,7 @@ about:
   head: 9c0ab2f
   archived: false
   latestVersion: "v2201.13.6"
-  collectedAt: 2026-09-07T18:15:51Z
+  collectedAt: 2026-09-08T03:21:53Z
 timeline:
   created: 2016-11-16
   lastCommit: 2026-08-28
@@ -30,7 +30,7 @@ language:
 totalBytes: 168405893
 recent:
   last30d:
-    since: 2026-08-08
+    since: 2026-08-09
     release: 1
     mergedPR: 7
     openPR: 8
@@ -38,15 +38,15 @@ recent:
     openIssue: 12
     commit: 2
   last60d:
-    since: 2026-07-09
+    since: 2026-07-10
     release: 2
-    mergedPR: 17
+    mergedPR: 16
     openPR: 16
     closedIssue: 1
     openIssue: 18
     commit: 2
   last90d:
-    since: 2026-06-09
+    since: 2026-06-10
     release: 2
     mergedPR: 23
     openPR: 24
@@ -54,29 +54,29 @@ recent:
     openIssue: 26
     commit: 6
   last180d:
-    since: 2026-03-11
-    release: 6
+    since: 2026-03-12
+    release: 5
     mergedPR: 61
     openPR: 39
     closedIssue: 14
     openIssue: 43
     commit: 84
   last360d:
-    since: 2025-09-12
+    since: 2025-09-13
     release: 9
-    mergedPR: 168
+    mergedPR: 167
     openPR: 46
     closedIssue: 79
     openIssue: 84
     commit: 467
   last720d:
-    since: 2024-09-17
+    since: 2024-09-18
     release: 35
-    mergedPR: 588
+    mergedPR: 582
     openPR: 48
     closedIssue: 250
     openIssue: 238
-    commit: 1812
+    commit: 1807
 total:
   release: 259
   mergedPR: 22071
@@ -86,7 +86,7 @@ total:
   commit: 127475
 ---
 path: /home/runner/.x-repo/github.com/ballerina-platform/ballerina-lang
-collectedAt: 2026-09-07T18:17:42Z
+collectedAt: 2026-09-08T03:23:40Z
 loc:
   Json:
     code: 1528320
@@ -189,26 +189,18 @@ total:
   blanks: 127225
   files: 14701
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/ballerina-platform/ballerina-lang
-  commit: baf7355ae6b4dcb40216332c2984dc24fbf83103
+  commit: 9c0ab2feee3fe9d0c918441255cd4b0f9bdce6b0
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 6.2
 checks:
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 10 commit(s) and 8 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
     details: null
   - name: Security-Policy
     score: 9
@@ -221,6 +213,10 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 8 commit(s) and 14 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Token-Permissions
     score: 0
@@ -243,6 +239,15 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/push_master.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/trivy-scan.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
+  - name: Binary-Artifacts
+    score: 9
+    reason: binaries present in source code
+    details:
+      - 'Warn: binary detected: gradle/wrapper/gradle-wrapper.jar:1'
   - name: License
     score: 10
     reason: license file detected
@@ -253,20 +258,6 @@ checks:
     score: -1
     reason: no releases found
     details: null
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
-  - name: Binary-Artifacts
-    score: 9
-    reason: binaries present in source code
-    details:
-      - 'Warn: binary detected: gradle/wrapper/gradle-wrapper.jar:1'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -277,14 +268,14 @@ checks:
       - 'Info: Possibly incomplete results: error parsing shell code: not a valid arithmetic operator: '': .github/workflows/publish_timestamped_release.yml:36'
       - 'Info: Possibly incomplete results: error parsing shell code: not a valid arithmetic operator: ": .github/workflows/pull_request_full_build.yml:34'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/automate_issue_labels.yml:11: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/automate_issue_labels.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/daily_build.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/daily_build.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/daily_build.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/daily_build.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/daily_build.yml:29: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/daily_build.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/daily_build.yml:36: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/daily_build.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/daily_build.yml:68: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/daily_build.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/daily_build.yml:73: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/daily_build.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/daily_build.yml:82: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/daily_build.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/daily_build.yml:89: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/daily_build.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/daily_build.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/daily_build.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/daily_build.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/daily_build.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/daily_build.yml:29: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/daily_build.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/daily_build.yml:36: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/daily_build.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/daily_spec_conformance_test_runner.yml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/daily_spec_conformance_test_runner.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/daily_spec_conformance_test_runner.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/daily_spec_conformance_test_runner.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/daily_spec_conformance_test_runner.yml:38: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/daily_spec_conformance_test_runner.yml/master?enable=pin'
@@ -305,19 +296,15 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish_timestamped_release.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/publish_timestamped_release.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/publish_timestamped_release.yml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/publish_timestamped_release.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/publish_timestamped_release.yml:55: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/publish_timestamped_release.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_debugger_tests.yml:30: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_debugger_tests.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_debugger_tests.yml:33: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_debugger_tests.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_debugger_tests.yml:42: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_debugger_tests.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pull_request_debugger_tests.yml:49: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_debugger_tests.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_debugger_tests.yml:75: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_debugger_tests.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_debugger_tests.yml:78: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_debugger_tests.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pull_request_debugger_tests.yml:84: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_debugger_tests.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_debugger_tests.yml:94: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_debugger_tests.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pull_request_debugger_tests.yml:101: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_debugger_tests.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_debugger_tests.yml:30: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_debugger_tests.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_debugger_tests.yml:33: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_debugger_tests.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_debugger_tests.yml:42: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_debugger_tests.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pull_request_debugger_tests.yml:49: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_debugger_tests.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_full_build.yml:168: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_full_build.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_full_build.yml:173: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_full_build.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_full_build.yml:179: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_full_build.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_full_build.yml:197: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_full_build.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_full_build.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_full_build.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_full_build.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_full_build.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_full_build.yml:44: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_full_build.yml/master?enable=pin'
@@ -327,6 +314,10 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_full_build.yml:87: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_full_build.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_full_build.yml:91: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_full_build.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_full_build.yml:148: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_full_build.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_full_build.yml:168: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_full_build.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_full_build.yml:173: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_full_build.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_full_build.yml:179: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_full_build.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_full_build.yml:197: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_full_build.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_ubuntu_build.yml:30: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_ubuntu_build.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_ubuntu_build.yml:33: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_ubuntu_build.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_ubuntu_build.yml:42: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_ubuntu_build.yml/master?enable=pin'
@@ -341,10 +332,6 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pull_request_windows_build.yml:39: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_windows_build.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pull_request_windows_build.yml:49: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_windows_build.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pull_request_windows_build.yml:56: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/pull_request_windows_build.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/push_master.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/push_master.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/push_master.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/push_master.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/push_master.yml:32: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/push_master.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/push_master.yml:39: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/push_master.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/push_master.yml:64: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/push_master.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/push_master.yml:67: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/push_master.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/push_master.yml:73: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/push_master.yml/master?enable=pin'
@@ -354,6 +341,10 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/push_master.yml:117: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/push_master.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/push_master.yml:126: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/push_master.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/push_master.yml:133: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/push_master.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/push_master.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/push_master.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/push_master.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/push_master.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/push_master.yml:32: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/push_master.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/push_master.yml:39: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/push_master.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/trivy-scan.yml:14: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/trivy-scan.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/trivy-scan.yml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/trivy-scan.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/trivy-scan.yml:24: update your workflow using https://app.stepsecurity.io/secureworkflow/ballerina-platform/ballerina-lang/trivy-scan.yml/master?enable=pin'
@@ -362,6 +353,15 @@ checks:
       - 'Info:   0 out of  63 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of  19 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Packaging
     score: 10
     reason: packaging workflow detected
@@ -373,36 +373,10 @@ checks:
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---
-eget:
-  collectedAt: 2026-09-07T18:17:53+00:00
-  platform:
-    darwin/arm64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    darwin/amd64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    linux/arm64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    linux/amd64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    win/arm64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    win/amd64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
+platform	name	url	size	score
+darwin/arm64			
+darwin/amd64			
+linux/arm64			
+linux/amd64			
+win/arm64			
+win/amd64			

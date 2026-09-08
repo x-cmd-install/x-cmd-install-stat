@@ -5,7 +5,7 @@ about:
   head: 82195c6
   archived: false
   latestVersion: "v0.5.0"
-  collectedAt: 2026-09-07T18:56:05Z
+  collectedAt: 2026-09-08T05:32:30Z
 timeline:
   created: 2017-01-30
   lastCommit: 2026-08-04
@@ -25,7 +25,7 @@ language:
 totalBytes: 78221
 recent:
   last30d:
-    since: 2026-08-08
+    since: 2026-08-09
     release: 0
     mergedPR: 0
     openPR: 0
@@ -33,7 +33,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-09
+    since: 2026-07-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -41,7 +41,7 @@ recent:
     openIssue: 0
     commit: 6
   last90d:
-    since: 2026-06-09
+    since: 2026-06-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -49,7 +49,7 @@ recent:
     openIssue: 0
     commit: 6
   last180d:
-    since: 2026-03-11
+    since: 2026-03-12
     release: 0
     mergedPR: 0
     openPR: 0
@@ -57,7 +57,7 @@ recent:
     openIssue: 0
     commit: 6
   last360d:
-    since: 2025-09-12
+    since: 2025-09-13
     release: 0
     mergedPR: 1
     openPR: 0
@@ -65,7 +65,7 @@ recent:
     openIssue: 1
     commit: 8
   last720d:
-    since: 2024-09-17
+    since: 2024-09-18
     release: 0
     mergedPR: 4
     openPR: 0
@@ -81,7 +81,7 @@ total:
   commit: 251
 ---
 path: /home/runner/.x-repo/github.com/asciimoo/wuzz
-collectedAt: 2026-09-07T18:56:06Z
+collectedAt: 2026-09-08T05:32:30Z
 loc:
   Go:
     code: 2702
@@ -119,19 +119,15 @@ total:
   blanks: 405
   files: 20
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/asciimoo/wuzz
   commit: 82195c607ed2547487de9f10c2411683e51e4d0f
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
-score: 3.2
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+score: 3
 checks:
-  - name: Code-Review
-    score: 4
-    reason: Found 9/21 approved changesets -- score normalized to 4
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -145,18 +141,27 @@ checks:
     score: -1
     reason: No tokens found
     details: null
+  - name: Maintained
+    score: 6
+    reason: 8 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 6
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Maintained
-    score: 6
-    reason: 8 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 6
+  - name: Code-Review
+    score: 3
+    reason: Found 8/22 approved changesets -- score normalized to 3
     details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -165,11 +170,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
@@ -194,11 +194,6 @@ checks:
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 18 are checked with a SAST tool'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -208,37 +203,16 @@ checks:
       - 'Warn: containerImage not pinned by hash: Dockerfile:15: pin your Docker image by updating alpine:3.12 to alpine:3.12@sha256:c75ac27b49326926b803b9ed43bf088bc220d22556de1bc5f72d742c91398f69'
       - 'Warn: containerImage not pinned by hash: Dockerfile:22: pin your Docker image by updating alpine:3.12 to alpine:3.12@sha256:c75ac27b49326926b803b9ed43bf088bc220d22556de1bc5f72d742c91398f69'
       - 'Info:   0 out of   4 containerImage dependencies pinned'
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 16 are checked with a SAST tool'
 ---
-eget:
-  collectedAt: 2026-09-07T18:56:06+00:00
-  platform:
-    darwin/arm64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    darwin/amd64:
-      name:  wuzz_darwin_amd64
-      url:   https://github.com/asciimoo/wuzz/releases/download/v0.5.0/wuzz_darwin_amd64
-      size:  10527136
-      score: 40
-    linux/arm64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    linux/amd64:
-      name:  wuzz_linux_amd64
-      url:   https://github.com/asciimoo/wuzz/releases/download/v0.5.0/wuzz_linux_amd64
-      size:  10738719
-      score: 40
-    win/arm64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    win/amd64:
-      name:  wuzz_windows_amd64.exe
-      url:   https://github.com/asciimoo/wuzz/releases/download/v0.5.0/wuzz_windows_amd64.exe
-      size:  10554880
-      score: 40
+platform	name	url	size	score
+darwin/arm64			
+darwin/amd64	wuzz_darwin_amd64	https://github.com/asciimoo/wuzz/releases/download/v0.5.0/wuzz_darwin_amd64	10527136	40
+linux/arm64			
+linux/amd64	wuzz_linux_amd64	https://github.com/asciimoo/wuzz/releases/download/v0.5.0/wuzz_linux_amd64	10738719	40
+win/arm64			
+win/amd64	wuzz_windows_amd64.exe	https://github.com/asciimoo/wuzz/releases/download/v0.5.0/wuzz_windows_amd64.exe	10554880	40

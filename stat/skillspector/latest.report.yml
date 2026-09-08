@@ -1,0 +1,142 @@
+about:
+  description: "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, security risks, prompt injection, data exfiltration, and supply-chain risks in Claude Code, Codex, and MCP skills before you install them."
+  license: Apache-2.0
+  homepage: https://docs.nvidia.com/skills/scanning-agent-skills
+  head: 704bc95
+  archived: false
+  latestVersion: "v2.11.1"
+  collectedAt: 2026-09-08T03:19:27Z
+timeline:
+  created: 2026-03-21
+  lastCommit: 2026-09-07
+  lastRelease: 2026-09-07
+popularity:
+  star: 16572
+  watcher: 66
+  fork: 1411
+  release: 15
+  contributor: 67
+  pullRequest: 294
+  issue: 193
+language:
+  Python: 4227673
+  YARA: 18669
+  Makefile: 5705
+  TypeScript: 5601
+  Shell: 2248
+  Dockerfile: 596
+totalBytes: 4260492
+recent:
+  last30d:
+    since: 2026-08-09
+    release: 9
+    mergedPR: 42
+    openPR: 42
+    closedIssue: 14
+    openIssue: 30
+    commit: 71
+  last60d:
+    since: 2026-07-10
+    release: 15
+    mergedPR: 82
+    openPR: 44
+    closedIssue: 38
+    openIssue: 41
+    commit: 118
+  last90d:
+    since: 2026-06-10
+    release: 15
+    mergedPR: 190
+    openPR: 54
+    closedIssue: 129
+    openIssue: 53
+    commit: 260
+  last180d:
+    since: 2026-03-12
+    release: 15
+    mergedPR: 197
+    openPR: 57
+    closedIssue: 138
+    openIssue: 55
+    commit: 288
+  last360d:
+    since: 2025-09-13
+    release: 15
+    mergedPR: 197
+    openPR: 57
+    closedIssue: 138
+    openIssue: 55
+    commit: 288
+  last720d:
+    since: 2024-09-18
+    release: 15
+    mergedPR: 197
+    openPR: 57
+    closedIssue: 138
+    openIssue: 55
+    commit: 422
+total:
+  release: 15
+  mergedPR: 197
+  openPR: 57
+  closedIssue: 138
+  openIssue: 55
+  commit: 422
+---
+path: /home/runner/.x-repo/github.com/nvidia/skillspector
+collectedAt: 2026-09-08T03:19:29Z
+loc:
+  Python:
+    code: 91432
+    comments: 5035
+    blanks: 13462
+    files: 222
+  Yaml:
+    code: 136
+    comments: 116
+    blanks: 28
+    files: 11
+  TypeScript:
+    code: 121
+    comments: 0
+    blanks: 21
+    files: 1
+  Makefile:
+    code: 112
+    comments: 20
+    blanks: 22
+    files: 1
+  Toml:
+    code: 106
+    comments: 3
+    blanks: 13
+    files: 1
+  Json:
+    code: 76
+    comments: 0
+    blanks: 0
+    files: 4
+  Sh:
+    code: 50
+    comments: 1
+    blanks: 13
+    files: 1
+  Dockerfile:
+    code: 14
+    comments: 0
+    blanks: 6
+    files: 1
+  Markdown:
+    code: 0
+    comments: 5771
+    blanks: 1977
+    files: 74
+total:
+  code: 92556
+  comments: 11037
+  blanks: 15619
+  files: 316
+---
+
+---
+{"id":384063596,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDORsnMJ84W5Fhs","tag_name":"v2.11.1","target_commitish":"main","name":"SkillSpector v2.11.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-07T12:11:43Z","updated_at":"2026-09-07T12:12:02Z","published_at":"2026-09-07T12:12:02Z","assets":[{"id":548734353,"node_id":"RA_kwDORsnMJ84gtQWR","name":"skillspector-2.11.1-py3-none-any.whl","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":537041,"digest":"sha256:a744afa570a9c693c1a0e4bd348a166e6e8745571af5a0bbd309357dc63c4753","download_count":45,"created_at":"2026-09-07T12:12:01Z","updated_at":"2026-09-07T12:12:02Z"},{"id":548734354,"node_id":"RA_kwDORsnMJ84gtQWS","name":"skillspector-2.11.1.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":1202838,"digest":"sha256:ada15d044b81cce6eac8b92daabdb8e28d30a6157080fe80879169f3ae84adcd","download_count":3,"created_at":"2026-09-07T12:12:01Z","updated_at":"2026-09-07T12:12:02Z"}],"body":"# SkillSpector v2.11.1\n\nReleased: 2026-09-07\n\n## Summary\n\nSkillSpector 2.11.1 raises the default aggregate scan deadline from 60 seconds to 600 seconds and makes it configurable, preventing larger valid scans from timing out under the previous one-minute workflow budget. This patch release also includes security-analysis correctness fixes merged since 2.11.0.\n\n## Highlights\n\n- Give direct, recursive, transitive, and multi-skill scans a 600-second aggregate workflow deadline by default.\n- Allow operators to set a positive finite deadline with `SKILLSPECTOR_MAX_WORKFLOW_SECONDS` while retaining the safe default for invalid values.\n- Preserve security finding classifications during scan-view and report deduplication, and strengthen detection of concealed instructions.\n\n## Added\n\n- Add `SKILLSPECTOR_MAX_WORKFLOW_SECONDS` as an optional environment setting for the aggregate workflow deadline.\n\n## Changed\n\n- Increase the default end-to-end workflow and transitive traversal deadline from 60 seconds to 600 seconds.\n- Apply the configured deadline consistently across direct CLI, recursive, transitive, and multi-skill analysis paths.\n- Enforce `SKILLSPECTOR_MAX_LLM_CONCURRENCY` across all concurrently running LLM analyzers instead of separately within each analyzer.\n\n## Fixed\n\n- Prevent premature workflow termination for scans that legitimately need more than one minute.\n- Parse whitespace-separated `allowed-tools` declarations without producing least-privilege false positives.\n- Normalize bounded concealed-instruction text and fail closed when inter-character obfuscation prevents complete interpretation.\n- Keep safe and unsafe findings distinct when they share a rule fingerprint so deduplication cannot discard or misclassify security evidence.\n\n## Security\n\n- Retain classification and bounded evidence in finding identity across raw, normalized, continuity, report, JSON, and SARIF projections.\n- Detect security-relevant instructions concealed with default-ignorable characters or bounded inter-character separators while preserving benign multilingual, punctuation, URL, email, table, and code controls.\n- Bound total in-flight LLM requests across analyzers sharing an event loop and configured limit, improving behavior with rate-limited providers.\n\n## Breaking Changes and Migration\n\n- None. Existing users automatically receive the 600-second default.\n- Deployments that require a different aggregate deadline can set `SKILLSPECTOR_MAX_WORKFLOW_SECONDS` to a positive finite number of seconds. Invalid, zero, negative, infinite, and NaN values retain the 600-second default.\n\n## Deprecations\n\n- None.\n\n## Validation\n\n- `uv lock --check` \u2014 passed.\n- `uv run --no-sync pytest -q` \u2014 3,985 passed, 14 skipped, 38 deselected, and 4 expected failures.\n- `uv run --no-sync ruff check src/ tests/ scripts/` \u2014 passed.\n- `uv run --no-sync ruff format --check src/ tests/ scripts/` \u2014 201 files already formatted.\n- Built wheel and source distributions; `twine check` passed for both artifacts.\n- `skillspector --version` \u2014 reported `SkillSpector v2.11.1`.\n- The GitHub release helper dry run resolved tag `v2.11.1` and the matching versioned release notes.\n- `git diff --check` \u2014 passed.\n\n## Known Limitations\n\n- The deadline is an aggregate ceiling, not a per-analyzer allowance. All work in a direct or recursive scan shares the same configured budget.\n- Changing `SKILLSPECTOR_MAX_WORKFLOW_SECONDS` requires starting a new SkillSpector process because the setting is resolved when the workflow state module is imported.\n- Provider-specific request timeouts and deterministic byte, artifact, and analyzer ceilings remain independently enforced.\n\n## References\n\n- [GitHub PR #330](https://github.com/NVIDIA/SkillSpector/pull/330)\n- [GitHub PR #401](https://github.com/NVIDIA/SkillSpector/pull/401)\n- [GitHub PR #408](https://github.com/NVIDIA/SkillSpector/pull/408)\n- [GitHub PR #462](https://github.com/NVIDIA/SkillSpector/pull/462)\n- [GitHub PR #468](https://github.com/NVIDIA/SkillSpector/pull/468)\n","reactions":{"total_count":2,"+1":2,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0}}

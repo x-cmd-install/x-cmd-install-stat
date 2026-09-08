@@ -1,0 +1,130 @@
+about:
+  description: "A self-hosted web dashboard for the Hermes AI agent stack. Provides a browser-based terminal, file explorer, session overview, cron management, system metrics, and an agent status panel — all behind a single password gate."
+  license: MIT
+  homepage: 
+  head: ee0f580
+  archived: false
+  latestVersion: "v3.6.2"
+  collectedAt: 2026-09-08T05:34:52Z
+timeline:
+  created: 2026-04-08
+  lastCommit: 2026-06-28
+  lastRelease: 2026-06-28
+popularity:
+  star: 891
+  watcher: 2
+  fork: 131
+  release: 27
+  contributor: 15
+  pullRequest: 50
+  issue: 30
+language:
+  JavaScript: 845785
+  CSS: 122908
+  Shell: 12918
+  HTML: 8195
+totalBytes: 989806
+recent:
+  last30d:
+    since: 2026-08-09
+    release: 0
+    mergedPR: 0
+    openPR: 1
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+  last60d:
+    since: 2026-07-10
+    release: 0
+    mergedPR: 0
+    openPR: 1
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+  last90d:
+    since: 2026-06-10
+    release: 2
+    mergedPR: 2
+    openPR: 1
+    closedIssue: 0
+    openIssue: 0
+    commit: 17
+  last180d:
+    since: 2026-03-12
+    release: 27
+    mergedPR: 38
+    openPR: 2
+    closedIssue: 29
+    openIssue: 1
+    commit: 258
+  last360d:
+    since: 2025-09-13
+    release: 27
+    mergedPR: 38
+    openPR: 2
+    closedIssue: 29
+    openIssue: 1
+    commit: 258
+  last720d:
+    since: 2024-09-18
+    release: 27
+    mergedPR: 38
+    openPR: 2
+    closedIssue: 29
+    openIssue: 1
+    commit: 285
+total:
+  release: 27
+  mergedPR: 38
+  openPR: 2
+  closedIssue: 29
+  openIssue: 1
+  commit: 285
+---
+path: /home/runner/.x-repo/github.com/xaspx/hermes-control-interface
+collectedAt: 2026-09-08T05:34:54Z
+loc:
+  JavaScript:
+    code: 16960
+    comments: 1267
+    blanks: 1569
+    files: 52
+  Css:
+    code: 5000
+    comments: 227
+    blanks: 555
+    files: 5
+  Json:
+    code: 3740
+    comments: 0
+    blanks: 0
+    files: 5
+  Sh:
+    code: 285
+    comments: 53
+    blanks: 58
+    files: 4
+  Html:
+    code: 128
+    comments: 0
+    blanks: 5
+    files: 1
+  Svg:
+    code: 11
+    comments: 0
+    blanks: 0
+    files: 2
+  Markdown:
+    code: 0
+    comments: 2437
+    blanks: 987
+    files: 17
+total:
+  code: 27194
+  comments: 4091
+  blanks: 3258
+  files: 86
+---
+
+---
+{"id":345851115,"author":{"login":"xaspx","id":38959282,"node_id":"MDQ6VXNlcjM4OTU5Mjgy","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOR9T72s4UnUTr","tag_name":"v3.6.2","target_commitish":"main","name":"v3.6.2 - Profile-Based Access Control & Windows Compatibility","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-06-28T06:28:17Z","updated_at":"2026-06-28T06:28:21Z","published_at":"2026-06-28T06:28:21Z","assets":[],"body":"## v3.6.2 \u2014 Profile-Based Access Control & Windows Compatibility\n\n**Release date:** 2026-06-28\n\nA maintenance release focusing on two community-contributed improvements: profile-based access isolation for multi-agent deployments, and Windows compatibility fixes.\n\n### \u2728 Feature: Profile-Based Access Control (PR #78 by @sfalsin)\n\n**What it does:** Restricts which Hermes agent profiles each HCI user can see and manage. In multi-agent setups where you run multiple Hermes profiles (e.g. \"jorah\", \"varys\", \"production\"), this prevents users from accessing profiles they shouldn't.\n\n**Backend changes:**\n- New `allowed_profiles` field on user records \u2014 an array of profile names, or `['*']` for unrestricted access\n- `requireProfileAccess` Express middleware applied to all profile-scoped endpoints: `/api/gateway/:profile/*`, `/api/config/:profile`, `/api/keys/:profile`\n- `/api/profiles` endpoint now filters results per-user \u2014 users only see profiles they're authorized for\n- `/api/office/agent-states` also filtered per-user\n- `canAccessProfile(user, profileName)` and `updateUserProfiles()` helper functions exported from auth module\n- `POST /api/users` accepts optional `allowed_profiles` array\n\n**Frontend changes:**\n- Create User form now includes an \"Agent Access\" section with live-loaded checkboxes for each available profile\n- Admin role auto-sets full access (`['*']`) \u2014 no checkbox interaction needed\n- Files tab hidden for users without `files.read` permission\n- Maintenance tab hidden for non-admin users\n\n**Compatibility:** Fully backward compatible. Existing users without `allowed_profiles` see all profiles (fallback to `['*']` behavior). No migration required.\n\n### \ud83d\udc1b Fix: Windows Compatibility (PR #79 by @jpntw-dotcom)\n\n**Problem:** `process.getuid()` is a Unix-only API. On Windows, it throws `TypeError: process.getuid is not a function` at startup, preventing HCI from running entirely.\n\n**Changes in `server.js`:**\n- `const IS_ROOT = process.getuid === 0` \u2192 `process.getuid ? process.getuid() === 0 : false` (gracefully returns `false` on Windows, which is correct \u2014 Windows has no root concept)\n- XDG_RUNTIME_DIR auto-detection block now guarded with `process.getuid` check (Linux-only feature, safely skipped on Windows)\n\n**No functional impact on Linux/macOS** \u2014 the guard is a no-op where `process.getuid` exists.\n\n### \ud83d\udce6 Files changed since v3.6.1\n\n| File | Changes |\n|---|---|\n| `README.md` | +18 lines \u2014 Profile-Based Access Control documentation |\n| `auth.js` | +23 lines, -2 \u2014 new auth functions for profile access |\n| `server.js` | +46 lines, -23 \u2014 middleware + route guards + Windows fix |\n| `src/index.html` | +2 lines, -2 \u2014 `id` attributes for nav elements |\n| `src/js/core/auth.js` | +9 lines, -1 \u2014 nav visibility based on permissions |\n| `src/js/pages/users.js` | +32 lines, -3 \u2014 profile selection UI in Create User form |\n| `package.json` | version 3.6.1 \u2192 3.6.2 |\n\n### \ud83d\udd17 PRs\n- **#78** \u2014 feat: Profile-Based Access Control (per-agent user isolation)\n- **#79** \u2014 fix: guard process.getuid() calls for Windows compatibility\n","mentions_count":2}

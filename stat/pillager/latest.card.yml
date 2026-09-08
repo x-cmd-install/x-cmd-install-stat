@@ -5,7 +5,7 @@ about:
   head: 32ff84a
   archived: false
   latestVersion: "v0.12.4"
-  collectedAt: 2026-09-07T19:59:49Z
+  collectedAt: 2026-09-08T04:21:58Z
 timeline:
   created: 2020-12-06
   lastCommit: 2025-11-28
@@ -24,7 +24,7 @@ language:
 totalBytes: 93784
 recent:
   last30d:
-    since: 2026-08-08
+    since: 2026-08-09
     release: 0
     mergedPR: 0
     openPR: 0
@@ -32,7 +32,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-09
+    since: 2026-07-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -40,7 +40,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-09
+    since: 2026-06-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -48,7 +48,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-11
+    since: 2026-03-12
     release: 0
     mergedPR: 0
     openPR: 0
@@ -56,7 +56,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-12
+    since: 2025-09-13
     release: 2
     mergedPR: 2
     openPR: 0
@@ -64,7 +64,7 @@ recent:
     openIssue: 0
     commit: 5
   last720d:
-    since: 2024-09-17
+    since: 2024-09-18
     release: 12
     mergedPR: 10
     openPR: 6
@@ -80,7 +80,7 @@ total:
   commit: 138
 ---
 path: /home/runner/.x-repo/github.com/brittonhayes/pillager
-collectedAt: 2026-09-07T19:59:51Z
+collectedAt: 2026-09-08T04:22:04Z
 loc:
   Go:
     code: 2896
@@ -118,28 +118,19 @@ total:
   blanks: 797
   files: 37
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/brittonhayes/pillager
   commit: 32ff84ac9f49704ea03a08b8d6e74b30999e5359
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 3.2
 checks:
   - name: Code-Review
     score: 0
     reason: Found 0/21 approved changesets -- score normalized to 0
     details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:39'
-      - 'Warn: no topLevel permission defined: .github/workflows/gobuild.yml:1'
-      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:13'
-      - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
@@ -152,18 +143,19 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:39'
+      - 'Warn: no topLevel permission defined: .github/workflows/gobuild.yml:1'
+      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:13'
+      - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -188,6 +180,20 @@ checks:
       - 'Info:   0 out of   7 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
@@ -197,12 +203,6 @@ checks:
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -223,36 +223,10 @@ checks:
     details:
       - 'Warn: 0 commits out of 20 are checked with a SAST tool'
 ---
-eget:
-  collectedAt: 2026-09-07T19:59:53+00:00
-  platform:
-    darwin/arm64:
-      name:  pillager_0.12.4_darwin_arm64.tar.gz
-      url:   https://github.com/brittonhayes/pillager/releases/download/v0.12.4/pillager_0.12.4_darwin_arm64.tar.gz
-      size:  7319402
-      score: 145
-    darwin/amd64:
-      name:  pillager_0.12.4_darwin_amd64.tar.gz
-      url:   https://github.com/brittonhayes/pillager/releases/download/v0.12.4/pillager_0.12.4_darwin_amd64.tar.gz
-      size:  7569067
-      score: 145
-    linux/arm64:
-      name:  pillager_0.12.4_linux_arm64.tar.gz
-      url:   https://github.com/brittonhayes/pillager/releases/download/v0.12.4/pillager_0.12.4_linux_arm64.tar.gz
-      size:  6654945
-      score: 145
-    linux/amd64:
-      name:  pillager_0.12.4_linux_amd64.tar.gz
-      url:   https://github.com/brittonhayes/pillager/releases/download/v0.12.4/pillager_0.12.4_linux_amd64.tar.gz
-      size:  7271711
-      score: 145
-    win/arm64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    win/amd64:
-      name:  pillager_0.12.4_windows_amd64.tar.gz
-      url:   https://github.com/brittonhayes/pillager/releases/download/v0.12.4/pillager_0.12.4_windows_amd64.tar.gz
-      size:  7457451
-      score: 45
+platform	name	url	size	score
+darwin/arm64	pillager_0.12.4_darwin_arm64.tar.gz	https://github.com/brittonhayes/pillager/releases/download/v0.12.4/pillager_0.12.4_darwin_arm64.tar.gz	7319402	145
+darwin/amd64	pillager_0.12.4_darwin_amd64.tar.gz	https://github.com/brittonhayes/pillager/releases/download/v0.12.4/pillager_0.12.4_darwin_amd64.tar.gz	7569067	145
+linux/arm64	pillager_0.12.4_linux_arm64.tar.gz	https://github.com/brittonhayes/pillager/releases/download/v0.12.4/pillager_0.12.4_linux_arm64.tar.gz	6654945	145
+linux/amd64	pillager_0.12.4_linux_amd64.tar.gz	https://github.com/brittonhayes/pillager/releases/download/v0.12.4/pillager_0.12.4_linux_amd64.tar.gz	7271711	145
+win/arm64			
+win/amd64	pillager_0.12.4_windows_amd64.tar.gz	https://github.com/brittonhayes/pillager/releases/download/v0.12.4/pillager_0.12.4_windows_amd64.tar.gz	7457451	45

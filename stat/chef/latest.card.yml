@@ -5,7 +5,7 @@ about:
   head: 58f5970
   archived: false
   latestVersion: "v15.8.23"
-  collectedAt: 2026-09-07T19:12:43Z
+  collectedAt: 2026-09-08T05:20:15Z
 timeline:
   created: 2009-01-15
   lastCommit: 2026-09-04
@@ -16,7 +16,7 @@ popularity:
   fork: 2522
   release: 4
   contributor: 677
-  pullRequest: 12488
+  pullRequest: 12490
   issue: 3790
 language:
   Ruby: 9948652
@@ -32,39 +32,39 @@ language:
 totalBytes: 10165113
 recent:
   last30d:
-    since: 2026-08-08
+    since: 2026-08-09
     release: 0
-    mergedPR: 21
+    mergedPR: 20
     openPR: 51
     closedIssue: 0
     openIssue: 4
     commit: 25
   last60d:
-    since: 2026-07-09
+    since: 2026-07-10
     release: 0
-    mergedPR: 57
+    mergedPR: 53
     openPR: 64
     closedIssue: 0
     openIssue: 6
     commit: 79
   last90d:
-    since: 2026-06-09
+    since: 2026-06-10
     release: 0
-    mergedPR: 116
-    openPR: 72
+    mergedPR: 113
+    openPR: 71
     closedIssue: 0
-    openIssue: 8
+    openIssue: 7
     commit: 149
   last180d:
-    since: 2026-03-11
+    since: 2026-03-12
     release: 0
     mergedPR: 356
     openPR: 75
-    closedIssue: 4
+    closedIssue: 3
     openIssue: 9
     commit: 474
   last360d:
-    since: 2025-09-12
+    since: 2025-09-13
     release: 0
     mergedPR: 593
     openPR: 84
@@ -72,7 +72,7 @@ recent:
     openIssue: 20
     commit: 782
   last720d:
-    since: 2024-09-17
+    since: 2024-09-18
     release: 0
     mergedPR: 906
     openPR: 84
@@ -88,7 +88,7 @@ total:
   commit: 34388
 ---
 path: /home/runner/.x-repo/github.com/chef/chef
-collectedAt: 2026-09-07T19:13:17Z
+collectedAt: 2026-09-08T05:20:46Z
 loc:
   Ruby:
     code: 184033
@@ -186,14 +186,14 @@ total:
   blanks: 40864
   files: 1973
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/chef/chef
-  commit: 688d3ad3c3a0716b0d0189be6a349ffecada5268
+  commit: 58f59709aec0d3f064bee532e0cf9178b86e225d
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
-score: 3.2
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+score: 3
 checks:
   - name: Maintained
     score: 10
@@ -201,8 +201,13 @@ checks:
     details: null
   - name: Code-Review
     score: 5
-    reason: Found 17/30 approved changesets -- score normalized to 5
+    reason: Found 15/29 approved changesets -- score normalized to 5
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Dangerous-Workflow
     score: 0
     reason: dangerous workflow patterns detected
@@ -213,17 +218,8 @@ checks:
       - 'Warn: untrusted code checkout ''${{ github.event.pull_request.head.sha }}'': .github/workflows/kitchen.yml:392'
       - 'Warn: untrusted code checkout ''${{ github.event.pull_request.head.sha || github.sha }}'': .github/workflows/macos_verify.yml:46'
       - 'Warn: untrusted code checkout ''${{ github.event.pull_request.head.sha || github.sha }}'': .github/workflows/macos_verify.yml:84'
-      - 'Warn: untrusted code checkout ''${{ github.event.pull_request.head.sha }}'': .github/workflows/selfhosted-linux-fips.yml:51'
+      - 'Warn: untrusted code checkout ''${{ github.event.pull_request.head.sha }}'': .github/workflows/selfhosted-linux-fips.yml:65'
       - 'Warn: untrusted code checkout ''${{ github.event.pull_request.head.sha }}'': .github/workflows/windows-fips.yml:44'
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -236,18 +232,18 @@ checks:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/danger.yml:19'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/dco.yml:9'
       - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/dco.yml:10'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/kitchen.yml:34'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/kitchen.yml:214'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/kitchen.yml:279'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/kitchen.yml:362'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/kitchen.yml:29'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/kitchen.yml:34'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/macos_verify.yml:28'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/macos_verify.yml:37'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/macos_verify.yml:69'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/macos_verify.yml:28'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/selfhosted-linux-fips.yml:25'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/selfhosted-linux-fips.yml:30'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/windows-fips.yml:29'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/selfhosted-linux-fips.yml:25'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/windows-fips.yml:24'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/windows-fips.yml:29'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/workflow-change-guard.yml:16'
       - 'Info: found token with ''none'' permissions: .github/workflows/workflow-change-guard.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/allchecks.yml:1'
@@ -257,6 +253,7 @@ checks:
       - 'Info: found token with ''none'' permissions: .github/workflows/dco.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/func_spec.yml:11'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/gem_tests.yml:11'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/generate-habitat-sbom.yml:11'
       - 'Info: found token with ''none'' permissions: .github/workflows/kitchen.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/labeler.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/lint.yml:1'
@@ -269,11 +266,10 @@ checks:
       - 'Info: found token with ''none'' permissions: .github/workflows/windows-fips.yml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/workflow-change-guard.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Fuzzing
+  - name: CII-Best-Practices
     score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
   - name: Binary-Artifacts
     score: 0
     reason: binaries present in source code
@@ -315,24 +311,17 @@ checks:
       - 'Warn: binary detected: spec/functional/assets/zypprepo/chef_rpm-1.2-1.s390x.rpm:1'
       - 'Warn: binary detected: spec/functional/assets/zypprepo/chef_rpm-1.2-1.src.rpm:1'
       - 'Warn: binary detected: spec/functional/assets/zypprepo/chef_rpm-1.2-1.x86_64.rpm:1'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: github.com/chef/.github/SECURITY.md:1'
-      - 'Info: Found linked content: github.com/chef/.github/SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/chef/.github/SECURITY.md:1'
-      - 'Info: Found text in security policy: github.com/chef/.github/SECURITY.md:1'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -352,14 +341,17 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/func_spec.yml:159: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/func_spec.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/func_spec.yml:177: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/func_spec.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/func_spec.yml:178: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/func_spec.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/gem_tests.yml:101: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/gem_tests.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/gem_tests.yml:108: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/gem_tests.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/gem_tests.yml:29: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/gem_tests.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/gem_tests.yml:36: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/gem_tests.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/gem_tests.yml:53: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/gem_tests.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/gem_tests.yml:60: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/gem_tests.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/gem_tests.yml:77: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/gem_tests.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/gem_tests.yml:84: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/gem_tests.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/gem_tests.yml:101: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/gem_tests.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/gem_tests.yml:108: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/gem_tests.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/generate-habitat-sbom.yml:37: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/generate-habitat-sbom.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/generate-habitat-sbom.yml:42: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/generate-habitat-sbom.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/generate-habitat-sbom.yml:89: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/generate-habitat-sbom.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/kitchen.yml:27: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/kitchen.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/kitchen.yml:53: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/kitchen.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/kitchen.yml:233: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/kitchen.yml/main?enable=pin'
@@ -378,7 +370,7 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/macos_verify.yml:53: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/macos_verify.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/macos_verify.yml:84: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/macos_verify.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/selfhosted-linux-fips.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/selfhosted-linux-fips.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/selfhosted-linux-fips.yml:52: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/selfhosted-linux-fips.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/selfhosted-linux-fips.yml:66: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/selfhosted-linux-fips.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/sonarqube.yml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/sonarqube.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/sonarqube.yml:31: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/sonarqube.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/target_mode_integration.yml:54: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/target_mode_integration.yml/main?enable=pin'
@@ -394,8 +386,8 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/unit_specs.yml:52: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/unit_specs.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/unit_specs.yml:60: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/unit_specs.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/unit_specs.yml:119: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/unit_specs.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/windows-fips.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/windows-fips.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/windows-fips.yml:45: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/windows-fips.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/windows-fips.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/windows-fips.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/workflow-change-guard.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/chef/chef/workflow-change-guard.yml/main?enable=pin'
       - 'Warn: containerImage not pinned by hash: Dockerfile:17: pin your Docker image by updating busybox to busybox@sha256:dc2d74b28e4cf8984fa52af1f39bc7c3d9c73760b41a74d629f5d11b1ab28616'
       - 'Warn: containerImage not pinned by hash: spec/integration/target_mode/support/docker/linux-ssh/Dockerfile:3: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:2edbbc5dc405e9612ba3584ce95480277e3eb374407b5505fe26f17df77c7dbc'
@@ -404,11 +396,23 @@ checks:
       - 'Warn: npmCommand not pinned by hash: .github/workflows/danger.yml:29'
       - 'Warn: downloadThenRun not pinned by hash: .github/workflows/func_spec.yml:138'
       - 'Warn: downloadThenRun not pinned by hash: .github/workflows/unit_specs.yml:132'
-      - 'Info:   0 out of  31 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   0 out of  29 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of  33 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   0 out of  30 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
       - 'Info:   0 out of   4 downloadThenRun dependencies pinned'
       - 'Info:   0 out of   1 npmCommand dependencies pinned'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: github.com/chef/.github/SECURITY.md:1'
+      - 'Info: Found linked content: github.com/chef/.github/SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/chef/.github/SECURITY.md:1'
+      - 'Info: Found text in security policy: github.com/chef/.github/SECURITY.md:1'
   - name: Branch-Protection
     score: 1
     reason: branch protection is not maximal on development and all release branches
@@ -424,41 +428,15 @@ checks:
       - 'Info: status check found to merge onto on branch ''main'''
       - 'Info: PRs are required in order to make changes on branch ''main'''
   - name: SAST
-    score: 8
-    reason: SAST tool is not run on all commits -- score normalized to 8
+    score: 5
+    reason: SAST tool is not run on all commits -- score normalized to 5
     details:
-      - 'Warn: 15 commits out of 17 are checked with a SAST tool'
+      - 'Warn: 9 commits out of 16 are checked with a SAST tool'
 ---
-eget:
-  collectedAt: 2026-09-07T19:13:18+00:00
-  platform:
-    darwin/arm64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    darwin/amd64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    linux/arm64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    linux/amd64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    win/arm64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    win/amd64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
+platform	name	url	size	score
+darwin/arm64			
+darwin/amd64			
+linux/arm64			
+linux/amd64			
+win/arm64			
+win/amd64			

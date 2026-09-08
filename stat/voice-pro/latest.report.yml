@@ -1,0 +1,171 @@
+about:
+  description: "Gradio WebUI for creators and developers, featuring key TTS (Edge-TTS, kokoro) and zero-shot Voice Cloning (E2 & F5-TTS, CosyVoice), with Whisper audio processing, YouTube download, Demucs vocal isolation, and multilingual translation."
+  license: GPL-3.0
+  homepage: https://www.wctokyoseoul.com
+  head: 7231384
+  archived: false
+  latestVersion: "v4.0.0"
+  collectedAt: 2026-09-08T05:25:32Z
+timeline:
+  created: 2024-07-29
+  lastCommit: 2026-07-13
+  lastRelease: 2026-07-13
+popularity:
+  star: 12768
+  watcher: 80
+  fork: 1844
+  release: 11
+  contributor: 2
+  pullRequest: 27
+  issue: 63
+language:
+  Python: 1568889
+  CSS: 30448
+  JavaScript: 19763
+  Batchfile: 17485
+  Shell: 9954
+totalBytes: 1646539
+recent:
+  last30d:
+    since: 2026-08-09
+    release: 0
+    mergedPR: 0
+    openPR: 4
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+  last60d:
+    since: 2026-07-10
+    release: 1
+    mergedPR: 0
+    openPR: 14
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+  last90d:
+    since: 2026-06-10
+    release: 1
+    mergedPR: 0
+    openPR: 14
+    closedIssue: 0
+    openIssue: 2
+    commit: 6
+  last180d:
+    since: 2026-03-12
+    release: 1
+    mergedPR: 0
+    openPR: 19
+    closedIssue: 2
+    openIssue: 13
+    commit: 6
+  last360d:
+    since: 2025-09-13
+    release: 3
+    mergedPR: 0
+    openPR: 23
+    closedIssue: 2
+    openIssue: 17
+    commit: 8
+  last720d:
+    since: 2024-09-18
+    release: 11
+    mergedPR: 0
+    openPR: 23
+    closedIssue: 26
+    openIssue: 37
+    commit: 90
+total:
+  release: 11
+  mergedPR: 0
+  openPR: 23
+  closedIssue: 26
+  openIssue: 37
+  commit: 120
+---
+path: /home/runner/.x-repo/github.com/abus-aikorea/voice-pro
+collectedAt: 2026-09-08T05:25:37Z
+loc:
+  Python:
+    code: 35592
+    comments: 2380
+    blanks: 6552
+    files: 232
+  Json:
+    code: 1627
+    comments: 0
+    blanks: 11
+    files: 17
+  Css:
+    code: 1318
+    comments: 36
+    blanks: 269
+    files: 11
+  JavaScript:
+    code: 433
+    comments: 73
+    blanks: 97
+    files: 5
+  Yaml:
+    code: 378
+    comments: 134
+    blanks: 116
+    files: 53
+  Batch:
+    code: 368
+    comments: 76
+    blanks: 99
+    files: 4
+  Sh:
+    code: 244
+    comments: 46
+    blanks: 52
+    files: 5
+  Html:
+    code: 202
+    comments: 0
+    blanks: 8
+    files: 3
+  Toml:
+    code: 157
+    comments: 22
+    blanks: 9
+    files: 2
+  Jupyter:
+    code: 105
+    comments: 24
+    blanks: 20
+    files: 1
+  Cython:
+    code: 38
+    comments: 0
+    blanks: 9
+    files: 1
+  Makefile:
+    code: 31
+    comments: 0
+    blanks: 11
+    files: 1
+  Autoconf:
+    code: 14
+    comments: 0
+    blanks: 0
+    files: 1
+  Markdown:
+    code: 0
+    comments: 4724
+    blanks: 1180
+    files: 14
+  Text:
+    code: 0
+    comments: 81
+    blanks: 4
+    files: 4
+total:
+  code: 40718
+  comments: 7650
+  blanks: 8466
+  files: 354
+---
+
+---
+{"id":352876740,"author":{"login":"abus-aikorea","id":161691694,"node_id":"U_kgDOCaM4Lg","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOMce-kc4VCHjE","tag_name":"v4.0.0","target_commitish":"main","name":"v4.0.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-07-13T00:17:47Z","updated_at":"2026-07-13T00:18:37Z","published_at":"2026-07-13T00:18:37Z","assets":[],"body":"# Voice-Pro v4.0.0\n\nVoice-Pro is now fully open source and completely free. This release rebuilds the entire installation stack and modernizes every AI engine.\n\n## \u26a1 Highlights\n\n- **Installer migrated from Miniconda/pip to [uv](https://docs.astral.sh/uv/)** \u2014 installation now takes **minutes, not hours**, and is fully reproducible from the committed `uv.lock`. Everything stays inside `installer_files/` (uv, Python, packages) \u2014 a truly portable install.\n- **No administrator rights needed** \u2014 `configure.bat` is now optional. `start.bat` auto-downloads a portable **ffmpeg** if it is not installed. CUDA Toolkit and Visual Studio Build Tools are **no longer required** (PyTorch bundles the CUDA runtime; all dependencies ship prebuilt wheels).\n- **Upgraded runtime**: Python 3.12, Torch 2.8.0+cu128 (**RTX 50-series supported**), Gradio 6.20.\n\n## \ud83c\udf99\ufe0f Latest AI engines\n\n- **ASR**: faster-whisper 1.2.1 (large-v3-turbo, distil-large-v3.5), openai-whisper 20250625, whisper-timestamped 1.15.9. whisperX was removed (its dependency pins blocked the Gradio 6 upgrade; existing configs fall back to faster-whisper).\n- **TTS**: F5-TTS 1.1.21, kokoro 0.9.4, edge-tts 7.x, and re-vendored CosyVoice (upstream main).\n- \ud83c\uddf0\ud83c\uddf7 **New optional TTS model: Fun-CosyVoice3-0.5B** \u2014 9 languages including Korean, selectable in the CosyVoice tab (downloads from the official HF repo on first use).\n\n## \ud83d\udee1\ufe0f Restricted / corporate PC friendly\n\n- Whisper model downloads self-heal after interrupted/corrupted transfers.\n- Translation automatically retries with backoff when the network rate-limits the free Google endpoint (failed lines are reported, originals kept).\n- Optional **Azure Translator / Azure TTS** with your own keys via `.env` \u2014 see the \"Azure services\" section in the README.\n\n## \ud83d\udda5\ufe0f UI improvements\n\n- Migrated to **Gradio 6**: full-width layout for all tabs, subtitle tracks shown directly in the video players.\n- **Errors are now visible**: every failure shows a red error toast that stays on screen until you close it, with actionable messages for common causes (missing ffmpeg, no media registered, etc.).\n- `uninstall.bat` no longer requires administrator rights and no longer force-reboots; `uninstall.bat silent` runs unattended.\n\n## \ud83d\udcc0 Install / Upgrade\n\n- **Fresh install**: clone or download the source, then run `start.bat`. First run installs uv + Python 3.12 + all dependencies from the lockfile (minutes), then downloads AI models (~10GB \u2014 this is the slow part).\n- **Upgrading from v3.x**: delete the `installer_files/` folder and run `start.bat` again. Your `model/` and `workspace/` folders are kept.\n\n**Full Changelog**: https://github.com/abus-aikorea/voice-pro/compare/v3.2.0...v4.0.0\n","reactions":{"total_count":3,"+1":1,"-1":0,"laugh":2,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0}}

@@ -5,7 +5,7 @@ about:
   head: bdb1496
   archived: false
   latestVersion: "v1.10.0"
-  collectedAt: 2026-09-07T19:27:08Z
+  collectedAt: 2026-09-08T04:47:57Z
 timeline:
   created: 2018-11-17
   lastCommit: 2026-09-04
@@ -16,7 +16,7 @@ popularity:
   fork: 1210
   release: 84
   contributor: 459
-  pullRequest: 3113
+  pullRequest: 3115
   issue: 1512
 language:
   Go: 4211056
@@ -31,7 +31,7 @@ language:
 totalBytes: 4828248
 recent:
   last30d:
-    since: 2026-08-08
+    since: 2026-08-09
     release: 1
     mergedPR: 19
     openPR: 24
@@ -39,31 +39,31 @@ recent:
     openIssue: 4
     commit: 23
   last60d:
-    since: 2026-07-09
+    since: 2026-07-10
     release: 2
     mergedPR: 79
     openPR: 51
     closedIssue: 10
-    openIssue: 18
+    openIssue: 17
     commit: 88
   last90d:
-    since: 2026-06-09
+    since: 2026-06-10
     release: 3
-    mergedPR: 103
-    openPR: 57
+    mergedPR: 101
+    openPR: 58
     closedIssue: 16
     openIssue: 28
     commit: 113
   last180d:
-    since: 2026-03-11
+    since: 2026-03-12
     release: 4
-    mergedPR: 147
+    mergedPR: 145
     openPR: 75
     closedIssue: 30
-    openIssue: 52
+    openIssue: 51
     commit: 149
   last360d:
-    since: 2025-09-12
+    since: 2025-09-13
     release: 7
     mergedPR: 224
     openPR: 92
@@ -71,23 +71,23 @@ recent:
     openIssue: 85
     commit: 223
   last720d:
-    since: 2024-09-17
+    since: 2024-09-18
     release: 13
-    mergedPR: 468
-    openPR: 122
+    mergedPR: 466
+    openPR: 123
     closedIssue: 112
     openIssue: 173
     commit: 462
 total:
   release: 84
   mergedPR: 2116
-  openPR: 165
+  openPR: 166
   closedIssue: 1017
   openIssue: 495
   commit: 2251
 ---
 path: /home/runner/.x-repo/github.com/argoproj/argo-rollouts
-collectedAt: 2026-09-07T19:27:28Z
+collectedAt: 2026-09-08T04:48:14Z
 loc:
   Go:
     code: 162914
@@ -180,13 +180,13 @@ total:
   blanks: 22617
   files: 944
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/argoproj/argo-rollouts
-  commit: 9442b498e58997442eb240fc821aeddb196a3299
+  commit: bdb14969a0802c15c11afb2227381cbb194df425
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 7.2
 checks:
   - name: Code-Review
@@ -209,6 +209,10 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -226,17 +230,17 @@ checks:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/image-reuse.yaml:53'
       - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/pr-title-check.yml:16'
       - 'Warn: jobLevel ''statuses'' permission set to ''write'': .github/workflows/pr-title-check.yml:17'
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release.yaml:158'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:48'
       - 'Warn: jobLevel ''packages'' permission set to ''write'': .github/workflows/release.yaml:49'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:48'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release.yaml:68'
       - 'Warn: jobLevel ''packages'' permission set to ''write'': .github/workflows/release.yaml:70'
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release.yaml:85'
       - 'Warn: jobLevel ''packages'' permission set to ''write'': .github/workflows/release.yaml:87'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release.yaml:85'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release.yaml:158'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:31'
       - 'Warn: jobLevel ''packages'' permission set to ''write'': .github/workflows/release.yaml:32'
-      - 'Warn: jobLevel ''checks'' permission set to ''write'': .github/workflows/testing-results.yml:17'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/testing-results.yml:19'
+      - 'Warn: jobLevel ''checks'' permission set to ''write'': .github/workflows/testing-results.yml:17'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/changelog.yml:6'
       - 'Warn: no topLevel permission defined: .github/workflows/cherry-pick-single.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/cherry-pick.yml:1'
@@ -250,20 +254,10 @@ checks:
       - 'Info: found token with ''none'' permissions: .github/workflows/testing-results.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/testing.yaml:23'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/waiting-issues.yml:7'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 5
     reason: 'badge detected: Passing'
     details: null
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -274,6 +268,12 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
@@ -282,15 +282,15 @@ checks:
     score: 10
     reason: 5 out of the last 5 releases have a total of 9 signed artifacts.
     details:
+      - 'Info: signed release artifact: sbom.tar.gz.sig: https://github.com/argoproj/argo-rollouts/releases/tag/v1.10.0'
       - 'Info: signed release artifact: sbom.tar.gz.sig: https://github.com/argoproj/argo-rollouts/releases/tag/v1.9.1'
       - 'Info: signed release artifact: sbom.tar.gz.sig: https://github.com/argoproj/argo-rollouts/releases/tag/v1.9.0'
       - 'Info: signed release artifact: sbom.tar.gz.sig: https://github.com/argoproj/argo-rollouts/releases/tag/v1.8.4'
-      - 'Info: signed release artifact: sbom.tar.gz.sig: https://github.com/argoproj/argo-rollouts/releases/tag/v1.9.0-rc3'
+      - 'Info: provenance for release artifact: argo-rollouts.intoto.jsonl: https://github.com/argoproj/argo-rollouts/releases/tag/v1.10.0'
       - 'Info: provenance for release artifact: argo-rollouts.intoto.jsonl: https://github.com/argoproj/argo-rollouts/releases/tag/v1.9.1'
       - 'Info: provenance for release artifact: argo-rollouts.intoto.jsonl: https://github.com/argoproj/argo-rollouts/releases/tag/v1.10.0-rc1'
       - 'Info: provenance for release artifact: argo-rollouts.intoto.jsonl: https://github.com/argoproj/argo-rollouts/releases/tag/v1.9.0'
       - 'Info: provenance for release artifact: argo-rollouts.intoto.jsonl: https://github.com/argoproj/argo-rollouts/releases/tag/v1.8.4'
-      - 'Info: provenance for release artifact: argo-rollouts.intoto.jsonl: https://github.com/argoproj/argo-rollouts/releases/tag/v1.9.0-rc3'
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
@@ -303,7 +303,6 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:60: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/codeql.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker-publish.yml:41: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/docker-publish.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker-publish.yml:51: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/docker-publish.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/go.yml:27: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/go.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/go.yml:47: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/go.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/go.yml:51: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/go.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/go.yml:53: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/go.yml/master?enable=pin'
@@ -315,12 +314,13 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/go.yml:117: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/go.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/go.yml:121: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/go.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/go.yml:125: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/go.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/go.yml:27: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/go.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/image-reuse.yaml:61: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/image-reuse.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/image-reuse.yaml:68: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/image-reuse.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/image-reuse.yaml:72: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/image-reuse.yaml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yaml:72: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/release.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yaml:261: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/release.yaml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yaml:89: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/release.yaml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yaml:72: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/release.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yaml:107: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/release.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yaml:113: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/release.yaml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yaml:162: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/release.yaml/master?enable=pin'
@@ -329,6 +329,8 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/stale-issues-pr.yml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/stale-issues-pr.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/testing-results.yml:29: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/testing-results.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/testing-results.yml:40: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/testing-results.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/testing.yaml:214: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/testing.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/testing.yaml:218: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/testing.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/testing.yaml:31: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/testing.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/testing.yaml:46: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/testing.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/testing.yaml:57: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/testing.yaml/master?enable=pin'
@@ -342,15 +344,13 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/testing.yaml:163: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/testing.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/testing.yaml:169: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/testing.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/testing.yaml:175: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/testing.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/testing.yaml:214: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/testing.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/testing.yaml:218: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/testing.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/waiting-issues.yml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/argoproj/argo-rollouts/waiting-issues.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:6: pin your Docker image by updating golang:1.26 to golang:1.26@sha256:45a5f7a810238aabcbad211d70b9ae082022d96f7c7259e94041ad1b933575ac'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:27: pin your Docker image by updating docker.io/library/node:22 to docker.io/library/node:22@sha256:0557ac14e0d45d02ed563067b82856ca5e7aa3437fa28d98d4350ea9c3d9494a'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:44: pin your Docker image by updating golang:1.26 to golang:1.26@sha256:45a5f7a810238aabcbad211d70b9ae082022d96f7c7259e94041ad1b933575ac'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:6: pin your Docker image by updating golang:1.26 to golang:1.26@sha256:9d2f36f06329b2a141b9db99ffa32765cf695ee57b813ca29e245e8670bcbfff'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:27: pin your Docker image by updating docker.io/library/node:22 to docker.io/library/node:22@sha256:8a34c4ab3ea2c5cd194f07e317b2a8f09461d3c8b05c4e34c8ccd56d56024c4d'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:44: pin your Docker image by updating golang:1.26 to golang:1.26@sha256:9d2f36f06329b2a141b9db99ffa32765cf695ee57b813ca29e245e8670bcbfff'
       - 'Warn: containerImage not pinned by hash: Dockerfile:73'
       - 'Warn: containerImage not pinned by hash: Dockerfile:88: pin your Docker image by updating gcr.io/distroless/static-debian12 to gcr.io/distroless/static-debian12@sha256:d75cdd72874d4790092fcb1b058493ecf6bb5bf2b2b897045b00ff01d91843f2'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.dev:4: pin your Docker image by updating golang:1.26 to golang:1.26@sha256:45a5f7a810238aabcbad211d70b9ae082022d96f7c7259e94041ad1b933575ac'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.dev:4: pin your Docker image by updating golang:1.26 to golang:1.26@sha256:9d2f36f06329b2a141b9db99ffa32765cf695ee57b813ca29e245e8670bcbfff'
       - 'Warn: containerImage not pinned by hash: Dockerfile.dev:11: pin your Docker image by updating gcr.io/distroless/static-debian12 to gcr.io/distroless/static-debian12@sha256:d75cdd72874d4790092fcb1b058493ecf6bb5bf2b2b897045b00ff01d91843f2'
       - 'Warn: downloadThenRun not pinned by hash: Dockerfile:15-16'
       - 'Warn: npmCommand not pinned by hash: Dockerfile:30'
@@ -368,36 +368,10 @@ checks:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Info: all commits (30) are checked with a SAST tool'
 ---
-eget:
-  collectedAt: 2026-09-07T19:27:29+00:00
-  platform:
-    darwin/arm64:
-      name:  kubectl-argo-rollouts-darwin-arm64
-      url:   https://github.com/argoproj/argo-rollouts/releases/download/v1.10.0/kubectl-argo-rollouts-darwin-arm64
-      size:  140265570
-      score: 38
-    darwin/amd64:
-      name:  kubectl-argo-rollouts-darwin-amd64
-      url:   https://github.com/argoproj/argo-rollouts/releases/download/v1.10.0/kubectl-argo-rollouts-darwin-amd64
-      size:  145827664
-      score: 38
-    linux/arm64:
-      name:  kubectl-argo-rollouts-linux-arm64
-      url:   https://github.com/argoproj/argo-rollouts/releases/download/v1.10.0/kubectl-argo-rollouts-linux-arm64
-      size:  134979461
-      score: 38
-    linux/amd64:
-      name:  kubectl-argo-rollouts-linux-amd64
-      url:   https://github.com/argoproj/argo-rollouts/releases/download/v1.10.0/kubectl-argo-rollouts-linux-amd64
-      size:  141635843
-      score: 38
-    win/arm64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    win/amd64:
-      name:  kubectl-argo-rollouts-windows-amd64
-      url:   https://github.com/argoproj/argo-rollouts/releases/download/v1.10.0/kubectl-argo-rollouts-windows-amd64
-      size:  142977024
-      score: 38
+platform	name	url	size	score
+darwin/arm64	kubectl-argo-rollouts-darwin-arm64	https://github.com/argoproj/argo-rollouts/releases/download/v1.10.0/kubectl-argo-rollouts-darwin-arm64	140265570	38
+darwin/amd64	kubectl-argo-rollouts-darwin-amd64	https://github.com/argoproj/argo-rollouts/releases/download/v1.10.0/kubectl-argo-rollouts-darwin-amd64	145827664	38
+linux/arm64	kubectl-argo-rollouts-linux-arm64	https://github.com/argoproj/argo-rollouts/releases/download/v1.10.0/kubectl-argo-rollouts-linux-arm64	134979461	38
+linux/amd64	kubectl-argo-rollouts-linux-amd64	https://github.com/argoproj/argo-rollouts/releases/download/v1.10.0/kubectl-argo-rollouts-linux-amd64	141635843	38
+win/arm64			
+win/amd64	kubectl-argo-rollouts-windows-amd64	https://github.com/argoproj/argo-rollouts/releases/download/v1.10.0/kubectl-argo-rollouts-windows-amd64	142977024	38

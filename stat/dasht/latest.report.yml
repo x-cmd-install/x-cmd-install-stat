@@ -1,0 +1,107 @@
+about:
+  description: "💁 Search API docs offline, in terminal or browser"
+  license: NOASSERTION
+  homepage: https://sunaku.github.io/dasht/man
+  head: 882c7f2
+  archived: false
+  latestVersion: "v2.4.0"
+  collectedAt: 2026-09-08T05:03:55Z
+timeline:
+  created: 2016-01-17
+  lastCommit: 2021-10-30
+  lastRelease: 2020-05-16
+popularity:
+  star: 866
+  watcher: 11
+  fork: 32
+  release: 8
+  contributor: 7
+  pullRequest: 13
+  issue: 50
+language:
+  Shell: 82554
+totalBytes: 82554
+recent:
+  last30d:
+    since: 2026-08-09
+    release: 0
+    mergedPR: 0
+    openPR: 0
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+  last60d:
+    since: 2026-07-10
+    release: 0
+    mergedPR: 0
+    openPR: 0
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+  last90d:
+    since: 2026-06-10
+    release: 0
+    mergedPR: 0
+    openPR: 0
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+  last180d:
+    since: 2026-03-12
+    release: 0
+    mergedPR: 0
+    openPR: 1
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+  last360d:
+    since: 2025-09-13
+    release: 0
+    mergedPR: 0
+    openPR: 1
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+  last720d:
+    since: 2024-09-18
+    release: 0
+    mergedPR: 0
+    openPR: 1
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+total:
+  release: 8
+  mergedPR: 4
+  openPR: 6
+  closedIssue: 37
+  openIssue: 13
+  commit: 145
+---
+path: /home/runner/.x-repo/github.com/sunaku/dasht
+collectedAt: 2026-09-08T05:03:56Z
+loc:
+  Sh:
+    code: 575
+    comments: 1297
+    blanks: 54
+    files: 11
+  Zsh:
+    code: 3
+    comments: 10
+    blanks: 0
+    files: 1
+  Markdown:
+    code: 0
+    comments: 331
+    blanks: 211
+    files: 2
+total:
+  code: 578
+  comments: 1638
+  blanks: 265
+  files: 14
+---
+
+---
+{"id":26591706,"author":{"login":"sunaku","id":9863,"node_id":"MDQ6VXNlcjk4NjM=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"MDc6UmVsZWFzZTI2NTkxNzA2","tag_name":"v2.4.0","target_commitish":"master","name":"","draft":false,"immutable":false,"prerelease":false,"created_at":"2020-05-16T20:29:56Z","updated_at":"2020-05-16T20:30:40Z","published_at":"2020-05-16T19:48:22Z","assets":[],"body":"## Version 2.4.0 (2020-05-16)\r\n\r\nThis release drops special Web browser requirements to access dasht-server(1),\r\nimproves error messages in dasht-docset-install(1), ensures clean up of stale\r\nfiles that contain whitespace in their names, and resolves a few other issues.\r\n\r\n### Minor:\r\n\r\n  * dasht-server-http(1): serve local `file://` URLs through `http://` URLs.\r\n\r\n    Users no longer have to use special browsers or special configurations\r\n    that allow the loading of `file://` links from `http://127.0.0.1` URLs.\r\n    All browsers can now natively access the dasht-server(1) search engine.\r\n\r\n    See https://github.com/sunaku/dasht/issues/45\r\n\r\n### Patch:\r\n\r\n  * dasht-docsets-update(1): remove stale files with whitespace in names.\r\n\r\n    Thanks to @frodeaa for reporting this issue and contributing a patch:\r\n\r\n    > Replace `xargs` with `while read` and avoid globbing. The same could be\r\n    > achived by using `xargs -0` (GNU/BSD) if newline is replaced with `\\0`.\r\n    >\r\n    >     tr '\\n' '\\0' | xargs -0 sh -e -u -c '\r\n\r\n    See https://github.com/sunaku/dasht/issues/35\r\n\r\n  * dasht-server-http(1): escape \"C++\" docset name as `^C\\+\\+$` regex.\r\n\r\n    When the \"C++\" docset was selected from the \"in docsets\" dropdown menu in\r\n    dasht-server(1), the plus signs weren't properly escaped per regex syntax.\r\n\r\n    See https://github.com/sunaku/dasht/issues/49\r\n\r\n  * dasht-docsets-install(1): validate gzip(1) integrity before extraction.\r\n\r\n    This avoids cryptic errors from tarball extraction:\r\n\r\n        gzip: stdin: unexpected end of file\r\n        tar: Child returned status 1\r\n        tar: Error is not recoverable: exiting now\r\n\r\n    By pointing out the cause of the error to the user:\r\n\r\n        gzip: Apple_Guides_and_Sample_Code.tgz: unexpected end of file\r\n\r\n  * dasht-docsets-install(1): restore support for older wget(1) versions.\r\n\r\n    Older wget versions don't support the `--show-progress` option:\r\n\r\n        wget: unrecognized option '--show-progress'\r\n        Usage: wget [OPTION]... [URL]...\r\n\r\n        Try \u2018wget --help\u2019 for more options.\r\n\r\n  * dasht-query-line(1): update URI fragments for HTML and CSS docsets."}

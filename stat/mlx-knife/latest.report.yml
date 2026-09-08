@@ -1,0 +1,134 @@
+about:
+  description: "ollama like cli tool for MLX models on huggingface (pull, rm, list, show, serve etc.)"
+  license: Apache-2.0
+  homepage: 
+  head: b2cedb5
+  archived: false
+  latestVersion: "2.0.7"
+  collectedAt: 2026-09-08T04:48:38Z
+timeline:
+  created: 2025-08-11
+  lastCommit: 2026-08-28
+  lastRelease: 2026-07-24
+popularity:
+  star: 152
+  watcher: 2
+  fork: 10
+  release: 28
+  contributor: 3
+  pullRequest: 2
+  issue: 65
+language:
+  Python: 1979044
+  Shell: 26934
+  Tape: 902
+totalBytes: 2006880
+recent:
+  last30d:
+    since: 2026-08-09
+    release: 0
+    mergedPR: 0
+    openPR: 0
+    closedIssue: 0
+    openIssue: 5
+    commit: 14
+  last60d:
+    since: 2026-07-10
+    release: 1
+    mergedPR: 0
+    openPR: 0
+    closedIssue: 3
+    openIssue: 8
+    commit: 41
+  last90d:
+    since: 2026-06-10
+    release: 1
+    mergedPR: 0
+    openPR: 0
+    closedIssue: 3
+    openIssue: 9
+    commit: 52
+  last180d:
+    since: 2026-03-12
+    release: 3
+    mergedPR: 0
+    openPR: 0
+    closedIssue: 8
+    openIssue: 10
+    commit: 80
+  last360d:
+    since: 2025-09-13
+    release: 14
+    mergedPR: 1
+    openPR: 0
+    closedIssue: 20
+    openIssue: 15
+    commit: 112
+  last720d:
+    since: 2024-09-18
+    release: 28
+    mergedPR: 1
+    openPR: 0
+    closedIssue: 45
+    openIssue: 20
+    commit: 145
+total:
+  release: 28
+  mergedPR: 1
+  openPR: 0
+  closedIssue: 45
+  openIssue: 20
+  commit: 145
+---
+path: /home/runner/.x-repo/github.com/mzau/mlx-knife
+collectedAt: 2026-09-08T04:48:45Z
+loc:
+  Python:
+    code: 42009
+    comments: 4705
+    blanks: 8759
+    files: 195
+  Json:
+    code: 1071
+    comments: 0
+    blanks: 2
+    files: 6
+  Sh:
+    code: 485
+    comments: 195
+    blanks: 110
+    files: 10
+  Svg:
+    code: 74
+    comments: 18
+    blanks: 18
+    files: 1
+  Toml:
+    code: 72
+    comments: 51
+    blanks: 9
+    files: 1
+  Ini:
+    code: 24
+    comments: 0
+    blanks: 0
+    files: 1
+  Markdown:
+    code: 0
+    comments: 15128
+    blanks: 5166
+    files: 55
+  Text:
+    code: 0
+    comments: 10
+    blanks: 2
+    files: 2
+total:
+  code: 46692
+  comments: 20840
+  blanks: 14465
+  files: 271
+---
+
+---
+{"id":359556132,"author":{"login":"mzau","id":11637059,"node_id":"MDQ6VXNlcjExNjM3MDU5","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOPcP5wM4VbmQk","tag_name":"2.0.7","target_commitish":"main","name":"2.0.7 \u2014 Embeddings + Whisper translation + examples","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-07-24T21:12:12Z","updated_at":"2026-07-24T21:28:33Z","published_at":"2026-07-24T21:28:33Z","assets":[],"body":"\n> **On-device embeddings (experimental).** A new `mlxk embed` verb, a\n> separate-process `mlxk embed-serve` backend exposing an OpenAI-compatible\n> `POST /v1/embeddings`, and a `mlxk serve --embed-backend URL` proxy so a\n> client uses one base URL for chat *and* embeddings. Two runnable paths: a\n> vendored MIT BERT encoder (bge/e5/mxbai) and the zero-vendored `mlx-lm`\n> decoder path (Qwen3-Embedding). The whole surface is experimental and\n> gated by `MLXK2_ENABLE_ALPHA_FEATURES=1`\n> ([ADR-015](https://github.com/mzau/mlx-knife/blob/main/docs/ADR/ADR-015-Embeddings-API.md)).\n>\n> **Whisper speech\u2192English translation**\n> ([#54](https://github.com/mzau/mlx-knife/issues/54)). `mlxk run \u2026 --audio\n> FILE --translate` on the CLI, `POST /v1/audio/translations` on the server.\n> Models that cannot translate \u2014 whisper-turbo, `.en` variants, non-Whisper\n> STT such as Voxtral \u2014 are rejected before execution instead of silently\n> transcribing.\n>\n> **Embedding models are labelled honestly.** Config-first detection\n> replaces the `\"embed\" in name` heuristic that showed encoders without an\n> \"embed\" substring (e.g. `bge-small-en-v1.5`) as plain text models. In the\n> same pass, `/v1/models` started listing workspace models\n> ([#58](https://github.com/mzau/mlx-knife/issues/58)).\n>\n> **MLX stack moves forward.** mlx-vlm 0.4.4 \u2192 0.6.2, mlx-audio 0.4.3 \u2192\n> 0.4.4. 0.6.2 unblocks Mistral-Small-3.1 repairs and Kimi-VL; the stale\n> 0.4.3-era gemma-4-e4b community conversion falls off the verified list \u2014\n> see *Upgrade Notes*.\n>\n> **Consumer examples published.** `examples/` ships runnable pipe,\n> model-routing and RAG templates, including an OpenAI-compatible RAG server\n> driven end-to-end against a real browser chat client.\n>\n> **MCP is rejected \u2014 not planned, for any release**\n> ([ADR-021](https://github.com/mzau/mlx-knife/blob/main/docs/ADR/ADR-021-MCP-Integration.md)). mlx-knife ships no MCP\n> surface; an MCP server over mlx-knife is a consumer of `serve`.\n\n### \u26a0\ufe0f Upgrade Notes\n\n- **Embeddings are off by default.** `embed`, `embed-serve` and\n  `serve --embed-backend` require `MLXK2_ENABLE_ALPHA_FEATURES=1`. The\n  surface is experimental \u2014 flags, fields and defaults may still change.\n- **`mlx-vlm==0.6.2`** (was `==0.4.4`). The stale 0.4.3-era `gemma-4-e4b`\n  community conversion crashes under 0.6.x KV-sharing and is off the\n  verified list; recovery is a fresh conversion \u2014 see\n  [`docs/MODEL-COVERAGE.md`](https://github.com/mzau/mlx-knife/blob/main/docs/MODEL-COVERAGE.md).\n- **`torch` + `torchvision` remain base dependencies.** mlx-vlm#1011 is\n  resolved upstream in 0.6.4, but the 0.6.2 pin still requires them. The\n  lean-stack recipe in the 2.0.6 notes still applies.\n- **There are no `[audio]` / `[vision]` / `[all]` install extras** \u2014 and\n  there never were. `pip install mlx-knife` includes vision and audio;\n  `docs/SERVER-HANDBOOK.md` wrongly documented such extras and has been\n  corrected (see *Documentation*).\n\n### Added\n\n- **`mlxk embed <model> [text|-] [--batch] [--query] [--instruct STR]\n  [--cpu] [--json]`** \u2014 text-embedding verb (experimental, gated by\n  `MLXK2_ENABLE_ALPHA_FEATURES=1`;\n  [ADR-015](https://github.com/mzau/mlx-knife/blob/main/docs/ADR/ADR-015-Embeddings-API.md)). JSONL output by default\n  (one `{text, embedding, metadata}` record per line \u2014 pipe-first), with\n  `metadata.{model, dimensions, content_hash, device}` so a consumer can\n  enforce the same-model rule. `--json` emits the records wrapped in the\n  standard envelope (JSON-API schema 0.2.3). Two runnable paths: a vendored\n  MIT BERT encoder (`model_type: bert` \u2014 bge/e5/mxbai, CLS or mean pooling,\n  L2-normalize) and the zero-vendored `mlx-lm` decoder path (`qwen3` \u2014\n  Qwen3-Embedding, last-token pool + instruction prefix). Embedders are\n  detected **config-first**: non-vendored encoder types\n  (xlm-roberta/modernbert/nomic_bert) declare the capability but reject\n  pre-execution with an honest \"encoder not vendored\" message instead of\n  failing silently. The contract is single-vector \u2014 exactly one vector per\n  input, `dimensions` a scalar; multi-vector / late-interaction embedders\n  (ColPali/ColQwen) are outside it.\n- **`mlxk embed-serve <model> [--port 8002] [--host] [--cpu] [--log-json]`** \u2014\n  single-model, localhost-internal embeddings backend exposing an\n  OpenAI-compatible `POST /v1/embeddings` (+ `/health`) (experimental, gated\n  by `MLXK2_ENABLE_ALPHA_FEATURES=1`;\n  [ADR-015](https://github.com/mzau/mlx-knife/blob/main/docs/ADR/ADR-015-Embeddings-API.md)). A **separate process**\n  from `mlxk serve` \u2014 the embedding model is never loaded into serve's\n  address space, so serve's memory gates stay intact. `encoding_format`\n  defaults to `base64` (little-endian float32, what the OpenAI SDK decodes)\n  with `float` opt-in; `input` takes a string or a batch array; vectors are\n  L2-normalized; `usage` token counts are best-effort; mlxk extensions\n  `input_type`/`instruct` drive RAG query embedding. Responses and `/health`\n  carry `system_fingerprint` (`hash.device`, e.g. `a1b2c3d4.gpu`) \u2014 a\n  change-detection token so a RAG client notices a model / revision / device\n  swap and re-indexes instead of silently mixing incomparable vectors, while\n  `model` stays the clean `org/name` selector (= the `/v1/models` id). One\n  `EmbeddingRunner` is held for the process lifetime behind an inference\n  lock (single model, no swapping); a non-runnable embedder is rejected at\n  startup. Built as a clean three-layer split (handler\n  `core/server/handlers/embeddings.py` \u00b7 app `core/embed_server_base.py` \u00b7\n  orchestrator `operations/embed_serve.py`), reusing serve's\n  supervised-subprocess and JSON-log machinery via shared seams. Full\n  interface: [docs/SERVER-HANDBOOK.md](https://github.com/mzau/mlx-knife/blob/main/docs/SERVER-HANDBOOK.md).\n- **`mlxk serve --embed-backend URL`** \u2014 thin proxy that forwards\n  `POST /v1/embeddings` to a separately-running `embed-serve` backend, so a\n  client uses **one base URL** (serve's port) for both\n  `/v1/chat/completions` and `/v1/embeddings` (experimental, gated by\n  `MLXK2_ENABLE_ALPHA_FEATURES=1`;\n  [ADR-015](https://github.com/mzau/mlx-knife/blob/main/docs/ADR/ADR-015-Embeddings-API.md)). serve forwards bytes\n  only \u2014 the embedding model is never loaded into its address space. The\n  backend is not probed at startup (it may start after serve); per-request\n  failures map to ADR-004 gateway errors: **501** when no `--embed-backend`\n  is configured, **502** when the backend is unreachable, **504** on backend\n  read-timeout (502/504 are retryable); backend `4xx/5xx` responses pass\n  through verbatim. `GET /v1/models` does not yet advertise the backend's\n  embedders (discovery merge deferred to 2.1).\n- **Whisper speech\u2192English translation \u2014 `mlxk run <model> --audio FILE\n  --translate [LANG]` and `POST /v1/audio/translations`**\n  ([#54](https://github.com/mzau/mlx-knife/issues/54)). The server endpoint\n  is OpenAI-compatible (`client.audio.translations.create(...)`) and mirrors\n  `/v1/audio/transcriptions` with the task hardcoded to `translate`. New\n  `audio-translate-en` capability detection covers multilingual non-turbo\n  Whisper only \u2014 `.en` variants lack the `<|translate|>` token, and turbo's\n  4-layer decoder is functionally broken for translate even though the token\n  is present. Incompatible models are rejected up front, never a silent\n  transcription: pre-execution on the CLI; on the server a non-audio model \u2192\n  **HTTP 400**, an audio model that cannot translate (whisper-turbo, `.en`,\n  or non-Whisper STT such as Voxtral/VibeVoice) \u2192 **HTTP 422**. `LANG` (CLI)\n  and the optional `language` form field (server, an OpenAI superset) are\n  source-language hints. The server's translate path passes no synthetic\n  `\"Transcribe this audio.\"` prompt \u2014 it would bias Whisper's decoder on\n  non-English source (the CLI path still does, see *Known Issues*) \u2014 and\n  `condition_on_previous_text=False` on translate tasks prevents Whisper's\n  repetition loop on long non-English sources. Full interface:\n  [docs/SERVER-HANDBOOK.md](https://github.com/mzau/mlx-knife/blob/main/docs/SERVER-HANDBOOK.md).\n- **`examples/` \u2014 runnable consumer templates, now tracked.**\n  `examples/pipes/` (Unix-pipe chains), `examples/model-routing/`, and\n  `examples/rag-server/`: a pipe-based RAG toolbox plus an\n  OpenAI-compatible RAG server that a browser chat client can be pointed at\n  directly (CORS, `/v1/models` proxy, SSE streaming passthrough). The\n  retrieval side enforces the same-model rule \u2014 `cosine-search.py` aborts\n  rather than ranking across incompatible vector spaces, and queries are\n  embedded with `--query` while the index stays in document mode \u2014 and a\n  failing RAG pipeline or a missing index fails loudly instead of silently\n  answering without context. `examples/photo-rag/` carries the design record\n  for the vision-embedding case (spec only, no scripts yet). The RAG\n  examples run against `mlxk embed` and are therefore alpha-gated too.\n\n### Fixed\n\n- **Embedding models are now labelled honestly in `mlxk list`/`show`.**\n  Config-first detection (`classify_embedder()`, the single source of truth\n  shared by `embed`, `detect_model_type`, the runtime gate and the\n  serve-load probe) replaces the `\"embed\" in name` heuristic that\n  mislabelled encoders without an \"embed\" substring (e.g.\n  `bge-small-en-v1.5`, `model_type: bert`) as plain `base`/text models.\n  Runnable embedders (`bert` encoder, `qwen3` decoder) now report\n  `runtime_compatible=True`; declared-but-not-vendored encoders\n  (`xlm-roberta`/`modernbert`/`nomic_bert`) report `False` with a \"not\n  vendored\" reason. `mlxk run <embedder>` rejects pre-execution pointing to\n  `mlxk embed`. Serve's `/v1/models` deliberately hides embedders (the\n  embed-backend merge is deferred to 2.1); `mlxk list` shows them.\n- **Server `/v1/models` now lists workspace models**\n  ([#58](https://github.com/mzau/mlx-knife/issues/58), closes an ADR-022\n  workspace-first gap). The endpoint previously scanned only the HF cache,\n  leaving workspace models invisible to OpenAI-compatible clients unless\n  preloaded \u2014 and then only under an absolute-path id. It now returns the\n  runnable (healthy + runtime-compatible) models from both the HF cache and\n  `MLXK_WORKSPACE_HOME` \u2014 matching the default `mlxk list` view. Workspace\n  models are advertised by their directory basename (a stable short id that\n  resolves workspace-first at request time) instead of an absolute path. The\n  runnable filter now also applies to preloaded models; the preloaded model\n  still sorts first.\n- **Gemma conversions without declared `eos_token_id` no longer loop on\n  `<end_of_turn>`.** The runner's common-stop probe now includes Gemma's\n  turn terminator, so conversions whose `generation_config.json` lacks\n  `eos_token_id: [1, 106]` (e.g. TranslateGemma) stop at string level\n  instead of emitting literal `<end_of_turn>` until max_tokens. The probe\n  adds the token only when the tokenizer encodes it as a single token \u2014 a\n  no-op for non-Gemma models.\n\n### Changed\n\n- **Dependency pins (vs 2.0.6):**\n  - `mlx-vlm`: `==0.4.4` \u2192 `==0.6.2` (text-first, upstream-follows;\n    unblocks Mistral-Small-3.1 repairs and Kimi-VL, mlx-vlm#1309)\n  - `mlx-audio`: `==0.4.3` \u2192 `==0.4.4`\n\n### Documentation\n\n- **README:** new `## Embeddings (Experimental)` section plus Commands /\n  Workspace-Commands entries, \"What's New\" reframed to 2.0.7, and all\n  cross-file documentation links absolutised so they resolve in the PyPI\n  render.\n- **`docs/SERVER-HANDBOOK.md`:** documents the `embed-serve` backend and the\n  `serve --embed-backend` proxy (topology, flags, and the 501/502/504 error\n  contract), `POST /v1/audio/translations` with its 400/422 reject table,\n  the browser-client transport contract (CORS: origin reflected with\n  `allow_credentials`, all methods/headers, `null`-origin allowed \u2014 honestly\n  flagged as a local/trusted-network posture), `embed-serve`'s `/health`\n  identity payload, and a `2.0.6 \u2192 2.0.7` migration entry.\n- **The `[audio]` / `[vision]` / `[all]` install extras documented in\n  `docs/SERVER-HANDBOOK.md` never existed** \u2014 removed from all 13 sites.\n  `mlx-vlm` and `mlx-audio` are base dependencies, so `pip install\n  mlx-knife` has always covered vision and audio;\n  [ADR-020](https://github.com/mzau/mlx-knife/blob/main/docs/ADR/ADR-020-Audio-Backend-Architecture.md) carries the\n  correction note.\n- **The embeddings `instruct` extension is scoped honestly.** It applies on\n  the decoder path (Qwen3) only; the bge/e5 encoders ignore the field. The\n  `mlxk embed --instruct` help text and the handbook say so. `input_type` /\n  `--query` are unaffected.\n- **[ADR-021](https://github.com/mzau/mlx-knife/blob/main/docs/ADR/ADR-021-MCP-Integration.md): MCP is `Rejected` \u2014 not\n  planned, for any release.** mlx-knife ships no MCP surface; an MCP server\n  over mlx-knife is a consumer of `serve`.\n  [#56](https://github.com/mzau/mlx-knife/issues/56) closed as *not\n  planned*. MCP references removed from ADR-014, ADR-015, ADR-023 and\n  `docs/ARCHITECTURE.md`.\n- **[ADR-016](https://github.com/mzau/mlx-knife/blob/main/docs/ADR/ADR-016-Memory-Aware-Model-Loading.md) reconciled\n  with the code.** The model-switch gate is 8 GB (text/vision) / 4 GB\n  (audio) \u2014 not the 20/10 GB the document claimed; it polls memory pressure\n  *and* free pages, and excludes `inactive` pages. The gate arbitrates one\n  process, not the machine.\n- **`docs/MODEL-COVERAGE.md`: Voxtral's off-list rationale corrected.**\n  mlx-audio #450 is a *pull request*, closed unmerged on 2026-01-29 \u2014 not an\n  open issue; no upstream issue tracks the `tekken.json` tokenizer at all.\n  The row claimed #450 was \"still open upstream\" and told readers to\n  re-evaluate when it closes. Voxtral stays off the verified list for two\n  independent reasons: the `tekken.json` conversion, and transformers 5.5.x\n  `VoxtralProcessor` hardcoding `return_tensors=\"pt\"` (a torch dependency).\n  mlx-audio #677 \u2014 the Voxtral `eos_token_ids` crash fix, a different\n  problem \u2014 shipped in 0.4.3 and is in the current pin. Separately: molmo2\n  evaluated under mlx-vlm 0.6.0, not adopted (off-list).\n- **`docs/RUNTIME-FEATURES.md`:** health-vs-reachable semantics corrected,\n  second-vendor open question resolved, and the \u00a73.2 capability claims now\n  carry `[CURRENT]` / `[TARGET]` markers where the shipped code still\n  diverges from the target model (health axis, Class C reachability, and the\n  absent `/v1/models` capability field).\n- **`docs/ARCHITECTURE.md`** synced to current reality (`detect_capabilities()`\n  enum, ADR-024 anchors, the `MLXK2_ENABLE_ALPHA_FEATURES` scope, and the\n  dependency-stack table); ADR index rows synchronised; project infographic\n  refreshed.\n\n### Known Issues / Upstream Tracking\n\n- **CLI `--translate` still sends the synthetic `\"Transcribe this audio.\"`\n  prompt** to Whisper as `initial_prompt`\n  ([#61](https://github.com/mzau/mlx-knife/issues/61)); on non-English\n  source this can pull the output toward transcription. `cli.py` fills the\n  empty prompt slot for every `--audio` invocation, before the run path can\n  decide per backend/task. The server endpoint is not affected.\n- **`/v1/audio/translations` capability rejects (HTTP 422) carry\n  `error.type: internal_error`** instead of the ADR-004 taxonomy value\n  ([#62](https://github.com/mzau/mlx-knife/issues/62)). The status code and\n  message are correct.\n- **`mlxk serve`: SIGTERM to the parent orphans the server process** and\n  leaves the port bound, so a restart can silently hit the old server\n  ([#60](https://github.com/mzau/mlx-knife/issues/60)). Ctrl-C is clean.\n- **Text-only `mlxk run` against multimodal VLMs fails late with a cryptic\n  mlx-lm loader error** ([#53](https://github.com/mzau/mlx-knife/issues/53),\n  carried from 2.0.6). Workaround: pass `--image` or `--audio`.\n- **mlx-vlm#1011** ([upstream\n  link](https://github.com/Blaizzy/mlx-vlm/issues/1011)): resolved upstream\n  in 0.6.4, but the 0.6.2 pin still requires the bundled `torch` +\n  `torchvision`.\n- **mlx-audio#645** still open \u2014 the two `post_load_hook` / `get_tokenizer`\n  patches in `mlxk2/core/audio_runner.py` remain load-bearing for Whisper.\n"}

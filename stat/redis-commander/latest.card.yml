@@ -5,7 +5,7 @@ about:
   head: 2a222de
   archived: false
   latestVersion: ""
-  collectedAt: 2026-09-07T18:46:16Z
+  collectedAt: 2026-09-08T05:38:35Z
 timeline:
   created: 2012-06-18
   lastCommit: 2025-09-11
@@ -30,7 +30,7 @@ language:
 totalBytes: 325567
 recent:
   last30d:
-    since: 2026-08-08
+    since: 2026-08-09
     release: 0
     mergedPR: 0
     openPR: 1
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-09
+    since: 2026-07-10
     release: 0
     mergedPR: 0
     openPR: 1
@@ -46,7 +46,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-09
+    since: 2026-06-10
     release: 0
     mergedPR: 0
     openPR: 1
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-11
+    since: 2026-03-12
     release: 0
     mergedPR: 0
     openPR: 2
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-12
+    since: 2025-09-13
     release: 0
     mergedPR: 0
     openPR: 7
@@ -70,13 +70,13 @@ recent:
     openIssue: 3
     commit: 0
   last720d:
-    since: 2024-09-17
+    since: 2024-09-18
     release: 0
     mergedPR: 2
     openPR: 11
     closedIssue: 8
     openIssue: 13
-    commit: 27
+    commit: 24
 total:
   release: 0
   mergedPR: 215
@@ -86,7 +86,7 @@ total:
   commit: 1132
 ---
 path: /home/runner/.x-repo/github.com/joeferner/redis-commander
-collectedAt: 2026-09-07T18:46:19Z
+collectedAt: 2026-09-08T05:38:37Z
 loc:
   Json:
     code: 37121
@@ -144,15 +144,19 @@ total:
   blanks: 2670
   files: 73
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/joeferner/redis-commander
   commit: 2a222de65ed15832d4d4adfbbce564539b80115f
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 3.5
 checks:
+  - name: Code-Review
+    score: 0
+    reason: Found 1/26 approved changesets -- score normalized to 0
+    details: null
   - name: Security-Policy
     score: 4
     reason: security policy file detected
@@ -161,9 +165,9 @@ checks:
       - 'Warn: no linked content found'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Code-Review
+  - name: Maintained
     score: 0
-    reason: Found 1/26 approved changesets -- score normalized to 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Dangerous-Workflow
     score: 10
@@ -173,61 +177,57 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/chart-test.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/dependency-checks.yml:5'
+      - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/docker-publish.yml:41'
+      - 'Info: topLevel ''checks'' permission set to ''read'': .github/workflows/docker-publish.yml:37'
+      - 'Info: topLevel ''deployments'' permission set to ''read'': .github/workflows/docker-publish.yml:39'
       - 'Warn: topLevel ''packages'' permission set to ''write'': .github/workflows/docker-publish.yml:40'
       - 'Info: topLevel ''repository-projects'' permission set to ''read'': .github/workflows/docker-publish.yml:42'
-      - 'Info: topLevel ''deployments'' permission set to ''read'': .github/workflows/docker-publish.yml:39'
-      - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/docker-publish.yml:41'
       - 'Info: topLevel ''security-events'' permission set to ''read'': .github/workflows/docker-publish.yml:43'
       - 'Info: topLevel ''statuses'' permission set to ''read'': .github/workflows/docker-publish.yml:44'
       - 'Info: topLevel ''actions'' permission set to ''read'': .github/workflows/docker-publish.yml:36'
-      - 'Info: topLevel ''checks'' permission set to ''read'': .github/workflows/docker-publish.yml:37'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/docker-publish.yml:38'
       - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: -1
     reason: no releases found
     details: null
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
     details:
-      - 'Warn: branch protection not enabled for branch ''master'''
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker-publish.yml:47'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/chart-test.yml:53: update your workflow using https://app.stepsecurity.io/secureworkflow/joeferner/redis-commander/chart-test.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/chart-test.yml:86: update your workflow using https://app.stepsecurity.io/secureworkflow/joeferner/redis-commander/chart-test.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/chart-test.yml:90: update your workflow using https://app.stepsecurity.io/secureworkflow/joeferner/redis-commander/chart-test.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/chart-test.yml:33: update your workflow using https://app.stepsecurity.io/secureworkflow/joeferner/redis-commander/chart-test.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/chart-test.yml:37: update your workflow using https://app.stepsecurity.io/secureworkflow/joeferner/redis-commander/chart-test.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/chart-test.yml:40: update your workflow using https://app.stepsecurity.io/secureworkflow/joeferner/redis-commander/chart-test.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/chart-test.yml:44: update your workflow using https://app.stepsecurity.io/secureworkflow/joeferner/redis-commander/chart-test.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/chart-test.yml:53: update your workflow using https://app.stepsecurity.io/secureworkflow/joeferner/redis-commander/chart-test.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/chart-test.yml:86: update your workflow using https://app.stepsecurity.io/secureworkflow/joeferner/redis-commander/chart-test.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/chart-test.yml:90: update your workflow using https://app.stepsecurity.io/secureworkflow/joeferner/redis-commander/chart-test.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/dependency-checks.yml:12: update your workflow using https://app.stepsecurity.io/secureworkflow/joeferner/redis-commander/dependency-checks.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/dependency-checks.yml:14: update your workflow using https://app.stepsecurity.io/secureworkflow/joeferner/redis-commander/dependency-checks.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/docker-publish.yml:54: update your workflow using https://app.stepsecurity.io/secureworkflow/joeferner/redis-commander/docker-publish.yml/master?enable=pin'
@@ -235,54 +235,28 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker-publish.yml:64: update your workflow using https://app.stepsecurity.io/secureworkflow/joeferner/redis-commander/docker-publish.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker-publish.yml:79: update your workflow using https://app.stepsecurity.io/secureworkflow/joeferner/redis-commander/docker-publish.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker-publish.yml:117: update your workflow using https://app.stepsecurity.io/secureworkflow/joeferner/redis-commander/docker-publish.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: .devcontainer/Dockerfile:1: pin your Docker image by updating mcr.microsoft.com/devcontainers/javascript-node:22 to mcr.microsoft.com/devcontainers/javascript-node:22@sha256:3bdc47194215f83b47b49fe5403ac6d8b105e704a19e2b2b3fcc88e8657fb33e'
+      - 'Warn: containerImage not pinned by hash: .devcontainer/Dockerfile:1: pin your Docker image by updating mcr.microsoft.com/devcontainers/javascript-node:22 to mcr.microsoft.com/devcontainers/javascript-node:22@sha256:fcbc5024294e6d60cbd4661d2f908fe10d3411d1427c3101321d85f7b553ad2c'
       - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating alpine:3.21 to alpine:3.21@sha256:48b0309ca019d89d40f670aa1bc06e426dc0931948452e8491e3d65087abc07d'
       - 'Warn: npmCommand not pinned by hash: Dockerfile:19-35'
       - 'Info:   0 out of   7 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   7 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
       - 'Info:   0 out of   1 npmCommand dependencies pinned'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker-publish.yml:47'
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 6 are checked with a SAST tool'
 ---
-eget:
-  collectedAt: 2026-09-07T18:46:22+00:00
-  platform:
-    darwin/arm64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    darwin/amd64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    linux/arm64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    linux/amd64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    win/arm64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    win/amd64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
+platform	name	url	size	score
+darwin/arm64			
+darwin/amd64			
+linux/arm64			
+linux/amd64			
+win/arm64			
+win/amd64			

@@ -1,0 +1,123 @@
+about:
+  description: "Official Python library for the DeepL language translation API."
+  license: MIT
+  homepage: https://www.deepl.com
+  head: 74415f9
+  archived: false
+  latestVersion: "v1.31.0"
+  collectedAt: 2026-09-08T03:18:05Z
+timeline:
+  created: 2021-07-19
+  lastCommit: 2026-09-01
+  lastRelease: 2026-08-12
+popularity:
+  star: 1333
+  watcher: 23
+  fork: 91
+  release: 38
+  contributor: 16
+  pullRequest: 21
+  issue: 136
+language:
+  Python: 353236
+  Shell: 393
+totalBytes: 353629
+recent:
+  last30d:
+    since: 2026-08-09
+    release: 1
+    mergedPR: 0
+    openPR: 0
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+  last60d:
+    since: 2026-07-10
+    release: 1
+    mergedPR: 0
+    openPR: 0
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+  last90d:
+    since: 2026-06-10
+    release: 1
+    mergedPR: 0
+    openPR: 0
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+  last180d:
+    since: 2026-03-12
+    release: 3
+    mergedPR: 0
+    openPR: 0
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+  last360d:
+    since: 2025-09-13
+    release: 9
+    mergedPR: 0
+    openPR: 0
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+  last720d:
+    since: 2024-09-18
+    release: 13
+    mergedPR: 0
+    openPR: 0
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+total:
+  release: 38
+  mergedPR: 9
+  openPR: 2
+  closedIssue: 84
+  openIssue: 52
+  commit: 315
+---
+path: /home/runner/.x-repo/github.com/deeplcom/deepl-python
+collectedAt: 2026-09-08T03:18:06Z
+loc:
+  Python:
+    code: 9412
+    comments: 322
+    blanks: 1441
+    files: 30
+  Toml:
+    code: 69
+    comments: 8
+    blanks: 16
+    files: 2
+  Yaml:
+    code: 11
+    comments: 0
+    blanks: 0
+    files: 1
+  Ini:
+    code: 2
+    comments: 0
+    blanks: 0
+    files: 1
+  Sh:
+    code: 1
+    comments: 4
+    blanks: 2
+    files: 1
+  Markdown:
+    code: 0
+    comments: 1430
+    blanks: 443
+    files: 10
+total:
+  code: 9860
+  comments: 1830
+  blanks: 1936
+  files: 45
+---
+
+---
+{"id":368962812,"author":{"login":"BriannaDelgado","id":13628220,"node_id":"MDQ6VXNlcjEzNjI4MjIw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOFxhQS84V_ez8","tag_name":"v1.31.0","target_commitish":"main","name":"","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-12T02:23:23Z","updated_at":"2026-08-12T02:39:00Z","published_at":"2026-08-12T02:39:00Z","assets":[],"body":"### Added\r\n- Added support for using multiple glossaries via the `glossary_ids` parameter\r\n  (up to 5 glossaries) in `translate_text()`, `translate_document()`,\r\n  `translate_document_upload()`, and `translate_document_from_filepath()`.\r\n- Added support for style rules in document translation via the `style_rule`\r\n  parameter in `translate_document()`, `translate_document_upload()`, and\r\n  `translate_document_from_filepath()`.\r\n- Added support for translation memories in document translation via the\r\n  `translation_memory` and `translation_memory_threshold` parameters in\r\n  `translate_document()`, `translate_document_upload()`, and\r\n  `translate_document_from_filepath()`.\r\n- Added `--glossary-ids` CLI argument for the `text` and `document` commands,\r\n  allowing up to 5 glossaries to be used per translation.\r\n- Added `--style-id`, `--translation-memory-id`, and\r\n  `--translation-memory-threshold` CLI arguments to the `document` command.\r\n- Added support for the translation memory management APIs:\r\n  `get_translation_memory()`, `list_translation_memory_segments()`,\r\n  `delete_translation_memory()`, `create_translation_memory_import()`,\r\n  `upload_translation_memory_file()`, `create_translation_memory_export()`,\r\n  `get_translation_memory_job()`,\r\n  `wait_until_translation_memory_job_done()`, and\r\n  `download_translation_memory_export()`, along with the\r\n  `import_translation_memory_from_filepath()` and\r\n  `export_translation_memory_to_filepath()` convenience functions that create\r\n  the job, transfer the TMX file, and wait for the job to finish. Because the\r\n  API detects the file upload asynchronously, an import job keeps reporting\r\n  `awaiting_input` for a while after the upload; the wait loop polls through\r\n  that status, so pass `timeout_s` to bound the wait.\r\n- Added the `TranslationMemorySegments`, `TranslationMemorySegment`,\r\n  `TranslationMemoryTargetSegment`, `TranslationMemoryImport`,\r\n  `TranslationMemoryExport`, `TranslationMemoryJob`, and\r\n  `TranslationMemoryJobResult` types.\r\n- Added `creation_time` and `updated_time` properties to\r\n  `TranslationMemoryInfo`.\r\n- Added the `translation-memory` CLI command with the `list`, `get`,\r\n  `segments`, `import`, `export`, `job`, and `delete` subcommands."}

@@ -1,0 +1,140 @@
+about:
+  description: "Portable project memory across Claude Code, Codex and OpenCode, plus token accounting measured from harness transcripts. Local file I/O, no API calls, no telemetry."
+  license: AGPL-3.0
+  homepage: https://openwolf.com
+  head: 06ed881
+  archived: false
+  latestVersion: "v2.5.1"
+  collectedAt: 2026-09-08T04:55:38Z
+timeline:
+  created: 2026-03-15
+  lastCommit: 2026-08-29
+  lastRelease: 2026-08-29
+popularity:
+  star: 2281
+  watcher: 11
+  fork: 203
+  release: 11
+  contributor: 21
+  pullRequest: 62
+  issue: 56
+language:
+  TypeScript: 902550
+  JavaScript: 13183
+  CSS: 4963
+  HTML: 624
+totalBytes: 921320
+recent:
+  last30d:
+    since: 2026-08-09
+    release: 9
+    mergedPR: 1
+    openPR: 6
+    closedIssue: 17
+    openIssue: 6
+    commit: 38
+  last60d:
+    since: 2026-07-10
+    release: 11
+    mergedPR: 2
+    openPR: 18
+    closedIssue: 17
+    openIssue: 9
+    commit: 47
+  last90d:
+    since: 2026-06-10
+    release: 11
+    mergedPR: 4
+    openPR: 19
+    closedIssue: 20
+    openIssue: 9
+    commit: 68
+  last180d:
+    since: 2026-03-12
+    release: 11
+    mergedPR: 12
+    openPR: 28
+    closedIssue: 28
+    openIssue: 28
+    commit: 97
+  last360d:
+    since: 2025-09-13
+    release: 11
+    mergedPR: 12
+    openPR: 28
+    closedIssue: 28
+    openIssue: 28
+    commit: 98
+  last720d:
+    since: 2024-09-18
+    release: 11
+    mergedPR: 12
+    openPR: 28
+    closedIssue: 28
+    openIssue: 28
+    commit: 111
+total:
+  release: 11
+  mergedPR: 12
+  openPR: 28
+  closedIssue: 28
+  openIssue: 28
+  commit: 111
+---
+path: /home/runner/.x-repo/github.com/cytostack/openwolf
+collectedAt: 2026-09-08T04:55:39Z
+loc:
+  TypeScript:
+    code: 15766
+    comments: 2262
+    blanks: 1829
+    files: 119
+  Json:
+    code: 3592
+    comments: 0
+    blanks: 0
+    files: 10
+  Yaml:
+    code: 3559
+    comments: 0
+    blanks: 987
+    files: 1
+  Tsx:
+    code: 1724
+    comments: 53
+    blanks: 101
+    files: 19
+  JavaScript:
+    code: 209
+    comments: 31
+    blanks: 32
+    files: 2
+  Css:
+    code: 132
+    comments: 12
+    blanks: 14
+    files: 1
+  Html:
+    code: 15
+    comments: 0
+    blanks: 0
+    files: 1
+  Svg:
+    code: 1
+    comments: 0
+    blanks: 0
+    files: 1
+  Markdown:
+    code: 0
+    comments: 2628
+    blanks: 721
+    files: 37
+total:
+  code: 25090
+  comments: 4987
+  blanks: 3684
+  files: 191
+---
+
+---
+{"id":379097316,"author":{"login":"cytostack","id":268406248,"node_id":"U_kgDOD_-N6A","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDORnz07s4WmJDk","tag_name":"v2.5.1","target_commitish":"main","name":"v2.5.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-29T20:44:42Z","updated_at":"2026-08-29T20:45:43Z","published_at":"2026-08-29T20:45:43Z","assets":[],"body":"## [2.5.1] - 2026-08-30\n\nSixteen reported defects, fixed. Fifteen were found and reported by\n[@davdittrich](https://github.com/davdittrich), one by\n[@krsfer](https://github.com/krsfer), each with a reproduction. Every fix\ncarries a regression test that was first run against the unfixed code and\nobserved to fail.\n\n### Fixed\n\n- **`daemon stop` could terminate an unrelated process** (#78). The fallback\n  path sent SIGTERM to every PID listening on the configured dashboard port.\n  Port occupancy is not ownership. The daemon now records `.wolf/daemon.pid`\n  after a successful bind, and stop signals a process only when the record was\n  written on this host, for this project root, for a live PID that still looks\n  like the daemon. Anything else holding the port is reported and left alone.\n- **An existing dashboard token kept its permissions** (#79). New tokens were\n  written 0600; a token file that already existed at 0644 was returned as-is\n  and stayed readable by other local users. It is now repaired in place, never\n  rotated, since a readable token is still the token a live browser tab holds.\n- **Read tracking escaped the project root** (#80). Containment was a\n  `startsWith` check, so `../project-private/secret.ts` shares a prefix with\n  `../project` and was recorded in that project's session state and token\n  metrics. The Bash read channel had no root check at all. All three hooks now\n  share one lexical `path.relative` check, with a realpath fallback so a\n  project reached through a symlink is not silently dropped.\n- **Codex install destroyed a malformed `hooks.json`** (#81). A parse failure\n  was caught and OpenWolf-only defaults were written over the user's file,\n  reporting success. The file is now left byte-identical, hooks are not\n  reported as registered, and one actionable warning explains how to recover.\n- **Parallel hooks lost session state** (#83). Atomic writes prevent torn\n  files, not lost updates: two hook processes that each read, modify and write\n  both produce valid JSON, and the second erases the first. Measured at 60\n  concurrent post-read hooks, 6 of 60 reads survived. Every shared-state\n  read-modify-write now runs through one bounded lock-backed transaction that\n  reads inside the lock. 21 call sites across 13 files.\n- **Concurrent SessionStart lost ledger increments** (#84). 60 concurrent\n  startups created 60 session files and counted 31.\n- **Cron state writes bypassed the lock after timeout** (#86). The fallback\n  wrote anyway once the budget expired, which defeats the lock for every\n  writer that respects it. Contention now fails closed and reports itself.\n- **Concurrent registry updates lost projects** (#88). 60 concurrent\n  registrations kept 31. `openwolf init` in several projects at once is\n  exactly this shape.\n- **Concurrent OpenCode sessions shared one state file** (#89). Every handler\n  received a session id but all of them persisted to `hooks/_session.json`, so\n  a second session overwrote the first and later reads from either mutated the\n  survivor. State is now per session id, with the legacy file kept only when\n  no usable id exists, and session files are garbage collected after 7 days.\n- **The Bash governor pointed at a deleted log** (#82). Full output was\n  written, the cache was pruned, and the model was then handed a pointer to a\n  file the prune had just removed, described as \"preserved verbatim\". Output\n  is now verified present before anything claims it was preserved; an output\n  larger than the whole cache budget says so plainly instead.\n- **A skipped anatomy write still advanced freshness** (#85). On lock\n  contention the scan wrote nothing but recorded the current Git HEAD in\n  `_scan-state.json`, so the index was reported current when it was empty and\n  the rescan that would have fixed it was suppressed.\n- **Unknown cron task IDs reported success** (#87). `runTask` logged a warning\n  and resolved, so the API returned 200 and the CLI printed \"triggered\" for a\n  task that does not exist. It now raises a typed not-found, mapped to HTTP\n  404 with the known task list, and a nonzero CLI exit.\n- **Benchmark arms could run different source revisions** (#90). Every arm and\n  repeat cloned mutable HEAD independently, so a branch that moved mid-run\n  confounded the comparison the benchmark exists to make. One commit is now\n  resolved up front, checked out for every arm, printed, and recorded in each\n  result row.\n- **The daemon watcher broadcast files nothing consumed** (#91). Per-session\n  hook state was read and pushed to every websocket client on every update.\n  Lock files and the Bash output cache are now excluded too.\n- **The scanner read every file twice** (#92). Each eligible file was read in\n  full for hashing, tokens and symbols, then reopened for the first 12 KiB of\n  description. Descriptions now reuse the bytes already in hand, and a read\n  failure no longer leaks the descriptor.\n- **Anatomy indexed virtualenvs and build caches** (#93). `.venv`, `.gradle`,\n  `.DS_Store` and `site-packages` were missing from the defaults, and `init`\n  and the scanner fallback shipped two different lists. On a mixed\n  Android/Python project 513 of 526 indexed files were virtualenv noise. There\n  is now one shared list, the project's own `.gitignore` is respected, and\n  Python virtualenvs are detected by `pyvenv.cfg` under any directory name.\n\n### Changed\n\n- File-lock acquisition starts at a 2 ms poll and backs off, instead of a flat\n  25-50 ms. A 60-way herd took roughly two seconds to drain, which is the\n  entire hook budget.\n- Projects created before this release pick up the new anatomy exclusions on\n  `openwolf update`. Nothing is ever removed from a customised list.\n\n"}

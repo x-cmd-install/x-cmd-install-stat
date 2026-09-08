@@ -5,7 +5,7 @@ about:
   head: 11ec3f8
   archived: false
   latestVersion: "v1.7.0"
-  collectedAt: 2026-09-07T18:58:57Z
+  collectedAt: 2026-09-08T05:33:39Z
 timeline:
   created: 2020-11-22
   lastCommit: 2026-08-19
@@ -25,7 +25,7 @@ language:
 totalBytes: 561156
 recent:
   last30d:
-    since: 2026-08-08
+    since: 2026-08-09
     release: 0
     mergedPR: 1
     openPR: 6
@@ -33,7 +33,7 @@ recent:
     openIssue: 3
     commit: 2
   last60d:
-    since: 2026-07-09
+    since: 2026-07-10
     release: 0
     mergedPR: 7
     openPR: 9
@@ -41,7 +41,7 @@ recent:
     openIssue: 3
     commit: 12
   last90d:
-    since: 2026-06-09
+    since: 2026-06-10
     release: 0
     mergedPR: 8
     openPR: 9
@@ -49,15 +49,15 @@ recent:
     openIssue: 7
     commit: 12
   last180d:
-    since: 2026-03-11
+    since: 2026-03-12
     release: 0
     mergedPR: 11
-    openPR: 21
+    openPR: 20
     closedIssue: 4
     openIssue: 15
     commit: 12
   last360d:
-    since: 2025-09-12
+    since: 2025-09-13
     release: 0
     mergedPR: 17
     openPR: 44
@@ -65,7 +65,7 @@ recent:
     openIssue: 29
     commit: 18
   last720d:
-    since: 2024-09-17
+    since: 2024-09-18
     release: 3
     mergedPR: 41
     openPR: 53
@@ -81,7 +81,7 @@ total:
   commit: 479
 ---
 path: /home/runner/.x-repo/github.com/ankitpokhrel/jira-cli
-collectedAt: 2026-09-07T18:59:00Z
+collectedAt: 2026-09-08T05:33:45Z
 loc:
   Go:
     code: 18716
@@ -124,13 +124,13 @@ total:
   blanks: 3598
   files: 173
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/ankitpokhrel/jira-cli
   commit: 11ec3f844ab282d88367ded20de548bb6629ee14
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 4.7
 checks:
   - name: Code-Review
@@ -180,6 +180,24 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Pinned-Dependencies
+    score: 0
+    reason: dependency not pinned by hash detected -- score normalized to 0
+    details:
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:15: update your workflow using https://app.stepsecurity.io/secureworkflow/ankitpokhrel/jira-cli/ci.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/ankitpokhrel/jira-cli/ci.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/docker.yml:24: update your workflow using https://app.stepsecurity.io/secureworkflow/ankitpokhrel/jira-cli/docker.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker.yml:27: update your workflow using https://app.stepsecurity.io/secureworkflow/ankitpokhrel/jira-cli/docker.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker.yml:35: update your workflow using https://app.stepsecurity.io/secureworkflow/ankitpokhrel/jira-cli/docker.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker.yml:40: update your workflow using https://app.stepsecurity.io/secureworkflow/ankitpokhrel/jira-cli/docker.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker.yml:43: update your workflow using https://app.stepsecurity.io/secureworkflow/ankitpokhrel/jira-cli/docker.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker.yml:49: update your workflow using https://app.stepsecurity.io/secureworkflow/ankitpokhrel/jira-cli/docker.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/docker.yml:60: update your workflow using https://app.stepsecurity.io/secureworkflow/ankitpokhrel/jira-cli/docker.yml/main?enable=pin'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:5: pin your Docker image by updating golang:1.26-alpine3.24 to golang:1.26-alpine3.24@sha256:ce864e7223ac17b1775e6fd0b4c0db580c2eb50e7953a427916379e4b92a1628'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:20: pin your Docker image by updating alpine:3.24 to alpine:3.24@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
+      - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   0 out of   5 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   2 containerImage dependencies pinned'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -210,60 +228,16 @@ checks:
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker.yml:14'
-  - name: Pinned-Dependencies
-    score: 0
-    reason: dependency not pinned by hash detected -- score normalized to 0
-    details:
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:15: update your workflow using https://app.stepsecurity.io/secureworkflow/ankitpokhrel/jira-cli/ci.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/ankitpokhrel/jira-cli/ci.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/docker.yml:24: update your workflow using https://app.stepsecurity.io/secureworkflow/ankitpokhrel/jira-cli/docker.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker.yml:27: update your workflow using https://app.stepsecurity.io/secureworkflow/ankitpokhrel/jira-cli/docker.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker.yml:35: update your workflow using https://app.stepsecurity.io/secureworkflow/ankitpokhrel/jira-cli/docker.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker.yml:40: update your workflow using https://app.stepsecurity.io/secureworkflow/ankitpokhrel/jira-cli/docker.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker.yml:43: update your workflow using https://app.stepsecurity.io/secureworkflow/ankitpokhrel/jira-cli/docker.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker.yml:49: update your workflow using https://app.stepsecurity.io/secureworkflow/ankitpokhrel/jira-cli/docker.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/docker.yml:60: update your workflow using https://app.stepsecurity.io/secureworkflow/ankitpokhrel/jira-cli/docker.yml/main?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:5: pin your Docker image by updating golang:1.26-alpine3.24 to golang:1.26-alpine3.24@sha256:28d89ee9cc0ff9fec75c82ca201e6bf7fdf9a679d4b7b24dfa04f2bb766bb468'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:20: pin your Docker image by updating alpine:3.24 to alpine:3.24@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
-      - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   0 out of   5 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   2 containerImage dependencies pinned'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 26 are checked with a SAST tool'
 ---
-eget:
-  collectedAt: 2026-09-07T18:59:02+00:00
-  platform:
-    darwin/arm64:
-      name:  jira_1.7.0_macOS_arm64.tar.gz
-      url:   https://github.com/ankitpokhrel/jira-cli/releases/download/v1.7.0/jira_1.7.0_macOS_arm64.tar.gz
-      size:  6797872
-      score: 42
-    darwin/amd64:
-      name:  jira_1.7.0_macOS_x86_64.tar.gz
-      url:   https://github.com/ankitpokhrel/jira-cli/releases/download/v1.7.0/jira_1.7.0_macOS_x86_64.tar.gz
-      size:  7241672
-      score: 42
-    linux/arm64:
-      name:  jira_1.7.0_linux_arm64.tar.gz
-      url:   https://github.com/ankitpokhrel/jira-cli/releases/download/v1.7.0/jira_1.7.0_linux_arm64.tar.gz
-      size:  6667294
-      score: 42
-    linux/amd64:
-      name:  jira_1.7.0_linux_x86_64.tar.gz
-      url:   https://github.com/ankitpokhrel/jira-cli/releases/download/v1.7.0/jira_1.7.0_linux_x86_64.tar.gz
-      size:  7272246
-      score: 42
-    win/arm64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    win/amd64:
-      name:  jira_1.7.0_windows_x86_64.zip
-      url:   https://github.com/ankitpokhrel/jira-cli/releases/download/v1.7.0/jira_1.7.0_windows_x86_64.zip
-      size:  7264457
-      score: 42
+platform	name	url	size	score
+darwin/arm64	jira_1.7.0_macOS_arm64.tar.gz	https://github.com/ankitpokhrel/jira-cli/releases/download/v1.7.0/jira_1.7.0_macOS_arm64.tar.gz	6797872	42
+darwin/amd64	jira_1.7.0_macOS_x86_64.tar.gz	https://github.com/ankitpokhrel/jira-cli/releases/download/v1.7.0/jira_1.7.0_macOS_x86_64.tar.gz	7241672	42
+linux/arm64	jira_1.7.0_linux_arm64.tar.gz	https://github.com/ankitpokhrel/jira-cli/releases/download/v1.7.0/jira_1.7.0_linux_arm64.tar.gz	6667294	42
+linux/amd64	jira_1.7.0_linux_x86_64.tar.gz	https://github.com/ankitpokhrel/jira-cli/releases/download/v1.7.0/jira_1.7.0_linux_x86_64.tar.gz	7272246	42
+win/arm64			
+win/amd64	jira_1.7.0_windows_x86_64.zip	https://github.com/ankitpokhrel/jira-cli/releases/download/v1.7.0/jira_1.7.0_windows_x86_64.zip	7264457	42
