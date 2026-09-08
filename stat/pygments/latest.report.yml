@@ -5,11 +5,15 @@ about:
   head: 38f426a
   archived: false
   latestVersion: "2.21.0"
-  collectedAt: 2026-09-08T04:26:43Z
+  latestRelease: "2.21.0"
+  latestPrerelease: ""
+  collectedAt: 2026-09-08T10:37:05Z
 timeline:
   created: 2019-08-31
   lastCommit: 2026-08-17
+  lastVersion: 2026-08-17
   lastRelease: 2026-08-17
+  lastPrerelease: 
 popularity:
   star: 2207
   watcher: 39
@@ -17,7 +21,7 @@ popularity:
   release: 37
   contributor: 784
   pullRequest: 1286
-  issue: 1948
+  issue: 1949
 language:
   Python: 4830921
   HTML: 136803
@@ -127,58 +131,58 @@ recent:
     mergedPR: 0
     openPR: 45
     closedIssue: 0
-    openIssue: 6
-    commit: 3
+    openIssue: 7
+    commit: 0
   last60d:
     since: 2026-07-10
     release: 1
     mergedPR: 19
     openPR: 70
     closedIssue: 0
-    openIssue: 11
-    commit: 11
+    openIssue: 12
+    commit: 0
   last90d:
     since: 2026-06-10
     release: 1
     mergedPR: 54
     openPR: 74
     closedIssue: 2
-    openIssue: 11
-    commit: 77
+    openIssue: 12
+    commit: 0
   last180d:
     since: 2026-03-12
     release: 2
     mergedPR: 87
     openPR: 100
     closedIssue: 18
-    openIssue: 16
-    commit: 127
+    openIssue: 17
+    commit: 0
   last360d:
     since: 2025-09-13
     release: 2
     mergedPR: 122
     openPR: 117
     closedIssue: 39
-    openIssue: 24
-    commit: 190
+    openIssue: 25
+    commit: 0
   last720d:
     since: 2024-09-18
     release: 5
     mergedPR: 168
     openPR: 164
     closedIssue: 78
-    openIssue: 56
+    openIssue: 57
     commit: 383
 total:
   release: 37
   mergedPR: 928
   openPR: 219
   closedIssue: 1518
-  openIssue: 430
+  openIssue: 431
   commit: 7275
 ---
 path: /home/runner/.x-repo/github.com/pygments/pygments
-collectedAt: 2026-09-08T04:26:48Z
+collectedAt: 2026-09-08T10:37:09Z
 loc:
   Python:
     code: 121095
@@ -891,20 +895,31 @@ total:
   blanks: 26685
   files: 1714
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/pygments/pygments
   commit: 38f426a6b1cd4ffc6429f5808031b7c62ea57b1f
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 6.2
 checks:
+  - name: Code-Review
+    score: 7
+    reason: Found 22/28 approved changesets -- score normalized to 7
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Token-Permissions
+    score: 10
+    reason: GitHub workflow tokens follow principle of least privilege
+    details:
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/build.yaml:13'
+      - 'Info: found token with ''none'' permissions: .github/workflows/docs.yaml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -913,20 +928,13 @@ checks:
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
-  - name: Code-Review
-    score: 7
-    reason: Found 22/28 approved changesets -- score normalized to 7
-    details: null
-  - name: Token-Permissions
-    score: 10
-    reason: GitHub workflow tokens follow principle of least privilege
-    details:
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/build.yaml:13'
-      - 'Info: found token with ''none'' permissions: .github/workflows/docs.yaml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Security-Policy
     score: 0
@@ -936,16 +944,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: BSD 2-Clause "Simplified" License: LICENSE:0'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -965,28 +963,34 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/docs.yaml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/pygments/pygments/docs.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/docs.yaml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/pygments/pygments/docs.yaml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docs.yaml:36: update your workflow using https://app.stepsecurity.io/secureworkflow/pygments/pygments/docs.yaml/master?enable=pin'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/build.yaml:85'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/build.yaml:39'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/build.yaml:52'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/build.yaml:66'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/build.yaml:85'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/docs.yaml:28'
       - 'Info:   0 out of  10 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   5 pipCommand dependencies pinned'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
     details:
       - 'Info: OSSFuzz integration found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: BSD 2-Clause "Simplified" License: LICENSE:0'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

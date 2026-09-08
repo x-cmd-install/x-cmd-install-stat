@@ -5,18 +5,22 @@ about:
   head: 312030c
   archived: false
   latestVersion: "v1.63.0"
-  collectedAt: 2026-09-08T03:52:55Z
+  latestRelease: "v1.63.0"
+  latestPrerelease: ""
+  collectedAt: 2026-09-08T10:18:06Z
 timeline:
   created: 2019-11-15
   lastCommit: 2026-09-07
+  lastVersion: 2026-09-04
   lastRelease: 2026-09-04
+  lastPrerelease: 
 popularity:
-  star: 95788
-  watcher: 608
-  fork: 6400
+  star: 95799
+  watcher: 609
+  fork: 6401
   release: 166
   contributor: 781
-  pullRequest: 21034
+  pullRequest: 21035
   issue: 17929
 language:
   TypeScript: 12036320
@@ -40,7 +44,7 @@ recent:
     since: 2026-08-09
     release: 1
     mergedPR: 158
-    openPR: 20
+    openPR: 22
     closedIssue: 117
     openIssue: 40
     commit: 122
@@ -48,7 +52,7 @@ recent:
     since: 2026-07-10
     release: 3
     mergedPR: 374
-    openPR: 21
+    openPR: 23
     closedIssue: 230
     openIssue: 51
     commit: 395
@@ -56,7 +60,7 @@ recent:
     since: 2026-06-10
     release: 5
     mergedPR: 634
-    openPR: 21
+    openPR: 23
     closedIssue: 351
     openIssue: 62
     commit: 650
@@ -64,7 +68,7 @@ recent:
     since: 2026-03-12
     release: 8
     mergedPR: 1478
-    openPR: 21
+    openPR: 23
     closedIssue: 709
     openIssue: 85
     commit: 1492
@@ -72,7 +76,7 @@ recent:
     since: 2025-09-13
     release: 15
     mergedPR: 2604
-    openPR: 21
+    openPR: 23
     closedIssue: 1438
     openIssue: 96
     commit: 2628
@@ -80,20 +84,20 @@ recent:
     since: 2024-09-18
     release: 33
     mergedPR: 4676
-    openPR: 21
+    openPR: 23
     closedIssue: 3612
     openIssue: 114
     commit: 4605
 total:
   release: 166
   mergedPR: 17826
-  openPR: 21
+  openPR: 23
   closedIssue: 17765
   openIssue: 164
   commit: 17836
 ---
 path: /home/runner/.x-repo/github.com/microsoft/playwright
-collectedAt: 2026-09-08T03:53:27Z
+collectedAt: 2026-09-08T10:18:37Z
 loc:
   TypeScript:
     code: 298319
@@ -642,4 +646,4 @@ checks:
       - 'Warn: no status checks found to merge onto branch ''release-1.19'''
       - 'Warn: number of required reviewers is only 0 on branch ''release-1.19'''
 ---
-{"id":383045028,"author":{"login":"yury-s","id":9798949,"node_id":"MDQ6VXNlcjk3OTg5NDk=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDODTssw84W1M2k","tag_name":"v1.63.0","target_commitish":"release-1.63","name":"v1.63.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-04T22:11:59Z","updated_at":"2026-09-04T22:40:31Z","published_at":"2026-09-04T22:40:31Z","assets":[],"body":"## \ud83d\udd12 Test locks\r\n\r\nTests that access a shared resource \u2014 an external service, a global account setting \u2014 can now declare a named `lock`.\r\nTests that share a lock name never run concurrently, across files, workers and [projects](https://playwright.dev/docs/test-projects), while\r\neverything else keeps running in parallel:\r\n\r\n```js\r\ntest('update user settings', { lock: 'user-settings' }, async ({ page }) => {\r\n  // never runs at the same time as other tests holding 'user-settings'\r\n});\r\n```\r\n\r\nA test can hold multiple locks, and [test.describe()](https://playwright.dev/docs/api/class-test#test-describe) accepts a `lock` for the whole group.\r\nLearn more about [test locks](https://playwright.dev/docs/test-parallel#test-locks).\r\n\r\n## \ud83e\ude9f Locate across frames\r\n\r\n[page.frameLocator()](https://playwright.dev/docs/api/class-page#page-frame-locator) and [frame.frameLocator()](https://playwright.dev/docs/api/class-frame#frame-frame-locator) called without a selector search in any frame of the\r\nsubtree, so you no longer need to locate the iframe first:\r\n\r\n```js\r\n// Finds the button in any frame on the page.\r\nawait page.frameLocator().getByRole('button').click();\r\n```\r\n\r\nThe rest of the locator resolves inside a single frame, just like a regular locator, and an error is thrown when it\r\nmatches elements in several frames.\r\n\r\n## \ud83d\udc41\ufe0f Visible-only locators\r\n\r\nNew [locator.visible()](https://playwright.dev/docs/api/class-locator#locator-visible) returns a locator that matches only visible elements. It is the recommended\r\nreplacement for the `:visible` CSS pseudo-class:\r\n\r\n```js\r\nawait page.locator('button').visible().click();\r\n```\r\n\r\n## \ud83e\uddfe Step params and subtitles\r\n\r\nSteps now carry structured data for reporters. Playwright API steps report the target locator and call arguments,\r\nand [test.step()](https://playwright.dev/docs/api/class-test#test-step) accepts `subtitle` and `params` options for your own steps:\r\n\r\n```js\r\nawait test.step('Login', async () => {\r\n  // ...\r\n}, { subtitle: 'as admin', params: { user: 'admin' } });\r\n```\r\n\r\nReporters receive them via [testStep.subtitle](https://playwright.dev/docs/api/class-teststep#test-step-subtitle) and [testStep.params](https://playwright.dev/docs/api/class-teststep#test-step-params). For Playwright API\r\nsteps, the subtitle is the locator or the navigation url \u2014 for example, `Click` with subtitle `getByRole('button')`.\r\nBoth are rendered next to the step title in the trace viewer and the HTML report.\r\n\r\n## \ud83d\uddbc\ufe0f Aria and screen snapshots in traces\r\n\r\nThe `snapshots` option of [tracing.start()](https://playwright.dev/docs/api/class-tracing#tracing-start) and the [testOptions.trace](https://playwright.dev/docs/api/class-testoptions#test-options-trace) fixture option now accept an\r\nobject selecting what to capture on every action:\r\n\r\n```js\r\n// playwright.config.ts\r\nexport default defineConfig({\r\n  use: {\r\n    trace: {\r\n      mode: 'on',\r\n      snapshots: { dom: true, aria: true, screen: true }\r\n    },\r\n  },\r\n});\r\n```\r\n\r\nWith aria and screen snapshots recorded, the new **Display Aria** mode in the trace viewer shows the action screenshot\r\nside by side with the aria snapshot, and hovering an aria node highlights it on the screenshot.\r\n\r\n## New APIs\r\n\r\n### Browser and Context\r\n- [`httpCredentials`](https://playwright.dev/docs/api/class-browser#browser-new-context-option-http-credentials) now also accepts an array of credentials. The first entry matching the request origin is used, and entries without an origin match any request.\r\n- New option [`opfs`](https://playwright.dev/docs/api/class-browsercontext#browser-context-storage-state-option-opfs) includes the [origin private file system](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system) in the storage state, so it can be persisted and restored into later contexts.\r\n- New events [page.on('dialogclosed')](https://playwright.dev/docs/api/class-page#page-event-dialog-closed) and [browserContext.on('dialogclosed')](https://playwright.dev/docs/api/class-browsercontext#browser-context-event-dialog-closed) are emitted when a JavaScript dialog is accepted, dismissed or closed by the user.\r\n\r\n### Locators\r\n- New [locator.ariaSnapshotJSON()](https://playwright.dev/docs/api/class-locator#locator-aria-snapshot-json) and [page.ariaSnapshotJSON()](https://playwright.dev/docs/api/class-page#page-aria-snapshot-json) return the aria snapshot as a JSON value instead of YAML markup, with `mode`, `depth` and `boxes` options.\r\n- [apiRequestContext.get()](https://playwright.dev/docs/api/class-apirequestcontext#api-request-context-get) and other request methods accept a type argument that types the response `json()`:\r\n\r\n```js\r\nconst response = await request.get<User>('/api/users/42');\r\nconst user = await response.json(); // typed as User\r\n```\r\n\r\n### Test runner\r\n- New standalone [testOptions.reducedMotion](https://playwright.dev/docs/api/class-testoptions#test-options-reduced-motion), [testOptions.forcedColors](https://playwright.dev/docs/api/class-testoptions#test-options-forced-colors) and [testOptions.contrast](https://playwright.dev/docs/api/class-testoptions#test-options-contrast) options.\r\n- New `--add-reporter` command line option appends a reporter on top of the ones configured in `playwright.config`, instead of replacing them like `--reporter` does.\r\n- New `omitTags` option for the `list`, `line`, `dot`, `github` and `junit` reporters suppresses the tags that are automatically appended to test titles.\r\n\r\n### Command line\r\n- `npx playwright install --no-remove` keeps the browsers of other Playwright installations instead of removing them.\r\n- `npx playwright codegen --http-credentials` records against pages behind HTTP authentication.\r\n\r\n### Miscellaneous\r\n- New built-in [`perfetto`](https://playwright.dev/docs/test-reporters#perfetto-reporter) reporter writes a Trace Event Format file for the [Perfetto UI](https://ui.perfetto.dev) or `chrome://tracing`, rendering the test run as a timeline with a lane per worker.\r\n- The HTML report renders a duration waterfall next to test steps.\r\n\r\n## Announcements\r\n* \u26a0\ufe0f The experimental `@playwright/experimental-ct-react`, `@playwright/experimental-ct-react17` and `@playwright/experimental-ct-vue` packages will no longer be updated. Follow the [migration guide](https://playwright.dev/docs/test-components#migration-from-the-experimental-packages) to move to the stories model introduced in 1.62. Story ids passed to [fixtures.mount()](https://playwright.dev/docs/api/class-fixtures#fixtures-mount) can now be typed through the generated `Stories` registry.\r\n* \u26a0\ufe0f Ubuntu 20.04 is not supported anymore.\r\n* \ud83d\udc27 On Linux arm64, Playwright now downloads the [Chrome for Testing](https://developer.chrome.com/blog/chrome-for-testing) build of Chromium, the same build used on all other platforms.\r\n\r\n## Browser Versions\r\n- Chromium 153.0.8010.12\r\n- Mozilla Firefox 155.0\r\n- WebKit 26.6\r\n\r\nThis version was also tested against the following stable channels:\r\n- Google Chrome 153\r\n- Microsoft Edge 153\r\n","reactions":{"total_count":52,"+1":15,"-1":0,"laugh":1,"hooray":12,"confused":0,"heart":8,"rocket":12,"eyes":4}}
+{"id":383045028,"author":{"login":"yury-s","id":9798949,"node_id":"MDQ6VXNlcjk3OTg5NDk=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDODTssw84W1M2k","tag_name":"v1.63.0","target_commitish":"release-1.63","name":"v1.63.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-04T22:11:59Z","updated_at":"2026-09-04T22:40:31Z","published_at":"2026-09-04T22:40:31Z","assets":[],"body":"## \ud83d\udd12 Test locks\r\n\r\nTests that access a shared resource \u2014 an external service, a global account setting \u2014 can now declare a named `lock`.\r\nTests that share a lock name never run concurrently, across files, workers and [projects](https://playwright.dev/docs/test-projects), while\r\neverything else keeps running in parallel:\r\n\r\n```js\r\ntest('update user settings', { lock: 'user-settings' }, async ({ page }) => {\r\n  // never runs at the same time as other tests holding 'user-settings'\r\n});\r\n```\r\n\r\nA test can hold multiple locks, and [test.describe()](https://playwright.dev/docs/api/class-test#test-describe) accepts a `lock` for the whole group.\r\nLearn more about [test locks](https://playwright.dev/docs/test-parallel#test-locks).\r\n\r\n## \ud83e\ude9f Locate across frames\r\n\r\n[page.frameLocator()](https://playwright.dev/docs/api/class-page#page-frame-locator) and [frame.frameLocator()](https://playwright.dev/docs/api/class-frame#frame-frame-locator) called without a selector search in any frame of the\r\nsubtree, so you no longer need to locate the iframe first:\r\n\r\n```js\r\n// Finds the button in any frame on the page.\r\nawait page.frameLocator().getByRole('button').click();\r\n```\r\n\r\nThe rest of the locator resolves inside a single frame, just like a regular locator, and an error is thrown when it\r\nmatches elements in several frames.\r\n\r\n## \ud83d\udc41\ufe0f Visible-only locators\r\n\r\nNew [locator.visible()](https://playwright.dev/docs/api/class-locator#locator-visible) returns a locator that matches only visible elements. It is the recommended\r\nreplacement for the `:visible` CSS pseudo-class:\r\n\r\n```js\r\nawait page.locator('button').visible().click();\r\n```\r\n\r\n## \ud83e\uddfe Step params and subtitles\r\n\r\nSteps now carry structured data for reporters. Playwright API steps report the target locator and call arguments,\r\nand [test.step()](https://playwright.dev/docs/api/class-test#test-step) accepts `subtitle` and `params` options for your own steps:\r\n\r\n```js\r\nawait test.step('Login', async () => {\r\n  // ...\r\n}, { subtitle: 'as admin', params: { user: 'admin' } });\r\n```\r\n\r\nReporters receive them via [testStep.subtitle](https://playwright.dev/docs/api/class-teststep#test-step-subtitle) and [testStep.params](https://playwright.dev/docs/api/class-teststep#test-step-params). For Playwright API\r\nsteps, the subtitle is the locator or the navigation url \u2014 for example, `Click` with subtitle `getByRole('button')`.\r\nBoth are rendered next to the step title in the trace viewer and the HTML report.\r\n\r\n## \ud83d\uddbc\ufe0f Aria and screen snapshots in traces\r\n\r\nThe `snapshots` option of [tracing.start()](https://playwright.dev/docs/api/class-tracing#tracing-start) and the [testOptions.trace](https://playwright.dev/docs/api/class-testoptions#test-options-trace) fixture option now accept an\r\nobject selecting what to capture on every action:\r\n\r\n```js\r\n// playwright.config.ts\r\nexport default defineConfig({\r\n  use: {\r\n    trace: {\r\n      mode: 'on',\r\n      snapshots: { dom: true, aria: true, screen: true }\r\n    },\r\n  },\r\n});\r\n```\r\n\r\nWith aria and screen snapshots recorded, the new **Display Aria** mode in the trace viewer shows the action screenshot\r\nside by side with the aria snapshot, and hovering an aria node highlights it on the screenshot.\r\n\r\n## New APIs\r\n\r\n### Browser and Context\r\n- [`httpCredentials`](https://playwright.dev/docs/api/class-browser#browser-new-context-option-http-credentials) now also accepts an array of credentials. The first entry matching the request origin is used, and entries without an origin match any request.\r\n- New option [`opfs`](https://playwright.dev/docs/api/class-browsercontext#browser-context-storage-state-option-opfs) includes the [origin private file system](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system) in the storage state, so it can be persisted and restored into later contexts.\r\n- New events [page.on('dialogclosed')](https://playwright.dev/docs/api/class-page#page-event-dialog-closed) and [browserContext.on('dialogclosed')](https://playwright.dev/docs/api/class-browsercontext#browser-context-event-dialog-closed) are emitted when a JavaScript dialog is accepted, dismissed or closed by the user.\r\n\r\n### Locators\r\n- New [locator.ariaSnapshotJSON()](https://playwright.dev/docs/api/class-locator#locator-aria-snapshot-json) and [page.ariaSnapshotJSON()](https://playwright.dev/docs/api/class-page#page-aria-snapshot-json) return the aria snapshot as a JSON value instead of YAML markup, with `mode`, `depth` and `boxes` options.\r\n- [apiRequestContext.get()](https://playwright.dev/docs/api/class-apirequestcontext#api-request-context-get) and other request methods accept a type argument that types the response `json()`:\r\n\r\n```js\r\nconst response = await request.get<User>('/api/users/42');\r\nconst user = await response.json(); // typed as User\r\n```\r\n\r\n### Test runner\r\n- New standalone [testOptions.reducedMotion](https://playwright.dev/docs/api/class-testoptions#test-options-reduced-motion), [testOptions.forcedColors](https://playwright.dev/docs/api/class-testoptions#test-options-forced-colors) and [testOptions.contrast](https://playwright.dev/docs/api/class-testoptions#test-options-contrast) options.\r\n- New `--add-reporter` command line option appends a reporter on top of the ones configured in `playwright.config`, instead of replacing them like `--reporter` does.\r\n- New `omitTags` option for the `list`, `line`, `dot`, `github` and `junit` reporters suppresses the tags that are automatically appended to test titles.\r\n\r\n### Command line\r\n- `npx playwright install --no-remove` keeps the browsers of other Playwright installations instead of removing them.\r\n- `npx playwright codegen --http-credentials` records against pages behind HTTP authentication.\r\n\r\n### Miscellaneous\r\n- New built-in [`perfetto`](https://playwright.dev/docs/test-reporters#perfetto-reporter) reporter writes a Trace Event Format file for the [Perfetto UI](https://ui.perfetto.dev) or `chrome://tracing`, rendering the test run as a timeline with a lane per worker.\r\n- The HTML report renders a duration waterfall next to test steps.\r\n\r\n## Announcements\r\n* \u26a0\ufe0f The experimental `@playwright/experimental-ct-react`, `@playwright/experimental-ct-react17` and `@playwright/experimental-ct-vue` packages will no longer be updated. Follow the [migration guide](https://playwright.dev/docs/test-components#migration-from-the-experimental-packages) to move to the stories model introduced in 1.62. Story ids passed to [fixtures.mount()](https://playwright.dev/docs/api/class-fixtures#fixtures-mount) can now be typed through the generated `Stories` registry.\r\n* \u26a0\ufe0f Ubuntu 20.04 is not supported anymore.\r\n* \ud83d\udc27 On Linux arm64, Playwright now downloads the [Chrome for Testing](https://developer.chrome.com/blog/chrome-for-testing) build of Chromium, the same build used on all other platforms.\r\n\r\n## Browser Versions\r\n- Chromium 153.0.8010.12\r\n- Mozilla Firefox 155.0\r\n- WebKit 26.6\r\n\r\nThis version was also tested against the following stable channels:\r\n- Google Chrome 153\r\n- Microsoft Edge 153\r\n","reactions":{"total_count":55,"+1":17,"-1":0,"laugh":1,"hooray":12,"confused":0,"heart":8,"rocket":13,"eyes":4}}

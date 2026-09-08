@@ -5,18 +5,22 @@ about:
   head: 48cc562
   archived: false
   latestVersion: "8.10.1"
-  collectedAt: 2026-09-08T03:28:08Z
+  latestRelease: "8.10.1"
+  latestPrerelease: "8.10-rc2"
+  collectedAt: 2026-09-08T10:20:55Z
 timeline:
   created: 2009-03-21
   lastCommit: 2026-09-08
+  lastVersion: 2026-08-17
   lastRelease: 2026-08-17
+  lastPrerelease: 2026-07-20
 popularity:
-  star: 76267
+  star: 76273
   watcher: 2485
   fork: 24794
   release: 150
   contributor: 839
-  pullRequest: 8227
+  pullRequest: 8229
   issue: 7067
 language:
   C: 9293545
@@ -34,7 +38,7 @@ recent:
     since: 2026-08-09
     release: 8
     mergedPR: 43
-    openPR: 57
+    openPR: 59
     closedIssue: 4
     openIssue: 13
     commit: 44
@@ -42,7 +46,7 @@ recent:
     since: 2026-07-10
     release: 18
     mergedPR: 108
-    openPR: 88
+    openPR: 90
     closedIssue: 21
     openIssue: 27
     commit: 128
@@ -50,7 +54,7 @@ recent:
     since: 2026-06-10
     release: 18
     mergedPR: 153
-    openPR: 109
+    openPR: 111
     closedIssue: 35
     openIssue: 41
     commit: 205
@@ -58,7 +62,7 @@ recent:
     since: 2026-03-12
     release: 32
     mergedPR: 326
-    openPR: 177
+    openPR: 179
     closedIssue: 80
     openIssue: 69
     commit: 409
@@ -66,7 +70,7 @@ recent:
     since: 2025-09-13
     release: 54
     mergedPR: 587
-    openPR: 223
+    openPR: 225
     closedIssue: 146
     openIssue: 124
     commit: 713
@@ -74,20 +78,20 @@ recent:
     since: 2024-09-18
     release: 80
     mergedPR: 935
-    openPR: 272
+    openPR: 274
     closedIssue: 263
     openIssue: 270
     commit: 1028
 total:
   release: 150
   mergedPR: 4785
-  openPR: 671
+  openPR: 673
   closedIssue: 4806
   openIssue: 2261
   commit: 13280
 ---
 path: /home/runner/.x-repo/github.com/redis/redis
-collectedAt: 2026-09-08T03:28:37Z
+collectedAt: 2026-09-08T10:21:23Z
 loc:
   C:
     code: 226012
@@ -414,4 +418,4 @@ checks:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Info: all commits (30) are checked with a SAST tool'
 ---
-{"id":371822189,"author":{"login":"YaacovHazan","id":31382944,"node_id":"MDQ6VXNlcjMxMzgyOTQ0","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAAJhcs4WKY5t","tag_name":"8.10.1","target_commitish":"8.10","name":"8.10.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-17T16:41:23Z","updated_at":"2026-08-17T16:46:02Z","published_at":"2026-08-17T16:44:04Z","assets":[{"id":518271091,"node_id":"RA_kwDOAAJhcs4e5DBz","name":"redis-full.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":21568864,"digest":"sha256:e5cae2686231290bf55ae5cc4da01e646c3424233cae7618ebf3a64250ef1583","download_count":1889,"created_at":"2026-08-17T16:46:00Z","updated_at":"2026-08-17T16:46:02Z"}],"body":"Update urgency: `SECURITY`: There are security fixes in the release.\r\n\r\n### Security fixes\r\n\r\n- (CVE-2026-62356) Miscalculated buffer size in `CMSketch` RDB loading may lead to heap OOB write\r\n- Out-of-bounds access in TopK heap cleanup path (MOD-15410)\r\n- Use-after-free in the TLS pending-data list when a command closes another pending connection\r\n- A malicious RDB payload with an out-of-range `SLOT_INFO` slot id causes memory corruption during RDB loading, which may lead to Remote Code Execution\r\n- Vector Sets: missing node level validation when loading a vector set from RDB may lead to out-of-bounds access\r\n- Vector Sets: use-after-free when `VREM` mutates the HNSW graph while background `VSIM` threads are still running\r\n- Vector Sets: a negative `hnsw_search()` return was treated as a huge unsigned count, reading past the end of the result arrays\r\n- TLS client certificate authentication bypass: a Common Name containing an embedded NUL byte was truncated, allowing a client to authenticate as another (possibly privileged) ACL user\r\n- #15594 Use-after-free in the blocked-client list when reprocessing a command evicts another client blocked on the same key\r\n","reactions":{"total_count":7,"+1":4,"-1":0,"laugh":0,"hooray":3,"confused":0,"heart":0,"rocket":0,"eyes":0}}
+{"id":371822189,"author":{"login":"YaacovHazan","id":31382944,"node_id":"MDQ6VXNlcjMxMzgyOTQ0","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAAJhcs4WKY5t","tag_name":"8.10.1","target_commitish":"8.10","name":"8.10.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-17T16:41:23Z","updated_at":"2026-08-17T16:46:02Z","published_at":"2026-08-17T16:44:04Z","assets":[{"id":518271091,"node_id":"RA_kwDOAAJhcs4e5DBz","name":"redis-full.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":21568864,"digest":"sha256:e5cae2686231290bf55ae5cc4da01e646c3424233cae7618ebf3a64250ef1583","download_count":1912,"created_at":"2026-08-17T16:46:00Z","updated_at":"2026-08-17T16:46:02Z"}],"body":"Update urgency: `SECURITY`: There are security fixes in the release.\r\n\r\n### Security fixes\r\n\r\n- (CVE-2026-62356) Miscalculated buffer size in `CMSketch` RDB loading may lead to heap OOB write\r\n- Out-of-bounds access in TopK heap cleanup path (MOD-15410)\r\n- Use-after-free in the TLS pending-data list when a command closes another pending connection\r\n- A malicious RDB payload with an out-of-range `SLOT_INFO` slot id causes memory corruption during RDB loading, which may lead to Remote Code Execution\r\n- Vector Sets: missing node level validation when loading a vector set from RDB may lead to out-of-bounds access\r\n- Vector Sets: use-after-free when `VREM` mutates the HNSW graph while background `VSIM` threads are still running\r\n- Vector Sets: a negative `hnsw_search()` return was treated as a huge unsigned count, reading past the end of the result arrays\r\n- TLS client certificate authentication bypass: a Common Name containing an embedded NUL byte was truncated, allowing a client to authenticate as another (possibly privileged) ACL user\r\n- #15594 Use-after-free in the blocked-client list when reprocessing a command evicts another client blocked on the same key\r\n","reactions":{"total_count":7,"+1":4,"-1":0,"laugh":0,"hooray":3,"confused":0,"heart":0,"rocket":0,"eyes":0}}

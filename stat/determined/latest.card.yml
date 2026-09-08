@@ -5,11 +5,15 @@ about:
   head: c1e9c6d
   archived: false
   latestVersion: "v0.38.1"
-  collectedAt: 2026-09-08T03:35:17Z
+  latestRelease: "v0.38.1"
+  latestPrerelease: ""
+  collectedAt: 2026-09-08T10:16:26Z
 timeline:
   created: 2020-04-07
   lastCommit: 2025-03-20
+  lastVersion: 2025-03-19
   lastRelease: 2025-03-19
+  lastPrerelease: 
 popularity:
   star: 3239
   watcher: 75
@@ -92,7 +96,7 @@ total:
   commit: 8394
 ---
 path: /home/runner/.x-repo/github.com/determined-ai/determined
-collectedAt: 2026-09-08T03:35:39Z
+collectedAt: 2026-09-08T10:16:49Z
 loc:
   Go:
     code: 249139
@@ -235,19 +239,15 @@ total:
   blanks: 83826
   files: 3386
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/determined-ai/determined
   commit: c1e9c6d7b821ef246d612bb9922f7fb1b58dcf2e
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 4.8
 checks:
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
@@ -256,15 +256,15 @@ checks:
     score: 8
     reason: Found 26/29 approved changesets -- score normalized to 8
     details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -275,8 +275,8 @@ checks:
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/publish-helm.yml:22'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/start-minor-release.yml:17'
       - 'Warn: no topLevel permission defined: .github/workflows/backport.yaml:1'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/check-rebaseable.yml:21'
       - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/check-rebaseable.yml:20'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/check-rebaseable.yml:21'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/doc-review.yml:14'
       - 'Warn: no topLevel permission defined: .github/workflows/labeler.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/link-artifacts.yml:1'
@@ -294,27 +294,20 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/scan-docker-images.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/semantic.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/start-minor-release.yml:1'
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Branch-Protection
-    score: 1
-    reason: branch protection is not maximal on development and all release branches
-    details:
-      - 'Info: ''allow deletion'' disabled on branch ''main'''
-      - 'Warn: ''force pushes'' enabled on branch ''main'''
-      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''main'''
-      - 'Warn: required approving review count is 1 on branch ''main'''
-      - 'Info: codeowner review is required on branch ''main'''
-      - 'Info: status check found to merge onto on branch ''main'''
-      - 'Info: PRs are required in order to make changes on branch ''main'''
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -323,25 +316,6 @@ checks:
       - 'Info: Found linked content: github.com/determined-ai/.github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/determined-ai/.github/SECURITY.md:1'
       - 'Info: Found text in security policy: github.com/determined-ai/.github/SECURITY.md:1'
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v0.38.1-ee not signed: https://api.github.com/repos/determined-ai/determined/releases/207017159'
-      - 'Warn: release artifact v0.38.1 not signed: https://api.github.com/repos/determined-ai/determined/releases/207017193'
-      - 'Warn: release artifact v0.38.0-ee not signed: https://api.github.com/repos/determined-ai/determined/releases/204251952'
-      - 'Warn: release artifact v0.38.0 not signed: https://api.github.com/repos/determined-ai/determined/releases/187053727'
-      - 'Warn: release artifact 0.35.1 not signed: https://api.github.com/repos/determined-ai/determined/releases/184466010'
-      - 'Warn: release artifact v0.38.1-ee does not have provenance: https://api.github.com/repos/determined-ai/determined/releases/207017159'
-      - 'Warn: release artifact v0.38.1 does not have provenance: https://api.github.com/repos/determined-ai/determined/releases/207017193'
-      - 'Warn: release artifact v0.38.0-ee does not have provenance: https://api.github.com/repos/determined-ai/determined/releases/204251952'
-      - 'Warn: release artifact v0.38.0 does not have provenance: https://api.github.com/repos/determined-ai/determined/releases/187053727'
-      - 'Warn: release artifact 0.35.1 does not have provenance: https://api.github.com/repos/determined-ai/determined/releases/184466010'
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 27 are checked with a SAST tool'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -354,6 +328,17 @@ checks:
       - 'Info: TypeScriptPropertyBasedTesting integration found: webui/react/src/utils/mergeAbortControllers.test.ts:3'
       - 'Info: TypeScriptPropertyBasedTesting integration found: webui/react/src/utils/table.test.ts:2'
       - 'Info: TypeScriptPropertyBasedTesting integration found: webui/react/src/hooks/useTypedParams.test.tsx:2'
+  - name: Branch-Protection
+    score: 1
+    reason: branch protection is not maximal on development and all release branches
+    details:
+      - 'Info: ''allow deletion'' disabled on branch ''main'''
+      - 'Warn: ''force pushes'' enabled on branch ''main'''
+      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''main'''
+      - 'Warn: required approving review count is 1 on branch ''main'''
+      - 'Info: codeowner review is required on branch ''main'''
+      - 'Info: status check found to merge onto on branch ''main'''
+      - 'Info: PRs are required in order to make changes on branch ''main'''
   - name: Pinned-Dependencies
     score: 3
     reason: dependency not pinned by hash detected -- score normalized to 3
@@ -426,16 +411,28 @@ checks:
       - 'Warn: pipCommand not pinned by hash: .github/workflows/lint-python.yml:51'
       - 'Info:   0 out of  32 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of  11 third-party GitHubAction dependencies pinned'
+      - 'Info:  19 out of  19 goCommand dependencies pinned'
       - 'Info:   0 out of   5 containerImage dependencies pinned'
       - 'Info:   0 out of  15 pipCommand dependencies pinned'
       - 'Info:   0 out of   2 npmCommand dependencies pinned'
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
-      - 'Info:  19 out of  19 goCommand dependencies pinned'
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v0.38.1-ee not signed: https://api.github.com/repos/determined-ai/determined/releases/207017159'
+      - 'Warn: release artifact v0.38.1 not signed: https://api.github.com/repos/determined-ai/determined/releases/207017193'
+      - 'Warn: release artifact v0.38.0-ee not signed: https://api.github.com/repos/determined-ai/determined/releases/204251952'
+      - 'Warn: release artifact v0.38.0 not signed: https://api.github.com/repos/determined-ai/determined/releases/187053727'
+      - 'Warn: release artifact 0.35.1 not signed: https://api.github.com/repos/determined-ai/determined/releases/184466010'
+      - 'Warn: release artifact v0.38.1-ee does not have provenance: https://api.github.com/repos/determined-ai/determined/releases/207017159'
+      - 'Warn: release artifact v0.38.1 does not have provenance: https://api.github.com/repos/determined-ai/determined/releases/207017193'
+      - 'Warn: release artifact v0.38.0-ee does not have provenance: https://api.github.com/repos/determined-ai/determined/releases/204251952'
+      - 'Warn: release artifact v0.38.0 does not have provenance: https://api.github.com/repos/determined-ai/determined/releases/187053727'
+      - 'Warn: release artifact 0.35.1 does not have provenance: https://api.github.com/repos/determined-ai/determined/releases/184466010'
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 27 are checked with a SAST tool'
 ---
-platform	name	url	size	score
-darwin/arm64	hpe-mlde-agent_0.38.1-ee_darwin_arm64.tar.gz	https://github.com/determined-ai/determined/releases/download/v0.38.1-ee/hpe-mlde-agent_0.38.1-ee_darwin_arm64.tar.gz	10279365	42
-darwin/amd64	hpe-mlde-agent_0.38.1-ee_darwin_amd64.tar.gz	https://github.com/determined-ai/determined/releases/download/v0.38.1-ee/hpe-mlde-agent_0.38.1-ee_darwin_amd64.tar.gz	10926643	42
-linux/arm64	hpe-mlde-agent_0.38.1-ee_linux_arm64.tar.gz	https://github.com/determined-ai/determined/releases/download/v0.38.1-ee/hpe-mlde-agent_0.38.1-ee_linux_arm64.tar.gz	9792392	42
-linux/amd64	hpe-mlde-agent_0.38.1-ee_linux_amd64.tar.gz	https://github.com/determined-ai/determined/releases/download/v0.38.1-ee/hpe-mlde-agent_0.38.1-ee_linux_amd64.tar.gz	10723059	42
-win/arm64			
-win/amd64			

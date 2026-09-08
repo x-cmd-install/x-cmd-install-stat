@@ -2,21 +2,25 @@ about:
   description: "Vulnerability scanner written in Go which uses the data provided by https://osv.dev"
   license: Apache-2.0
   homepage: https://google.github.io/osv-scanner/
-  head: 43026d7
+  head: 6126a8e
   archived: false
   latestVersion: "v2.5.1"
-  collectedAt: 2026-09-08T04:05:05Z
+  latestRelease: "v2.5.1"
+  latestPrerelease: "v2.0.0-rc1"
+  collectedAt: 2026-09-08T10:23:09Z
 timeline:
   created: 2022-11-14
-  lastCommit: 2026-09-07
+  lastCommit: 2026-09-08
+  lastVersion: 2026-08-17
   lastRelease: 2026-08-17
+  lastPrerelease: 2025-03-10
 popularity:
   star: 10992
   watcher: 76
   fork: 789
   release: 54
   contributor: 120
-  pullRequest: 2441
+  pullRequest: 2442
   issue: 550
 language:
   Go: 810404
@@ -36,61 +40,61 @@ recent:
   last30d:
     since: 2026-08-09
     release: 1
-    mergedPR: 34
+    mergedPR: 35
     openPR: 10
     closedIssue: 7
     openIssue: 12
-    commit: 34
+    commit: 35
   last60d:
     since: 2026-07-10
     release: 2
-    mergedPR: 58
+    mergedPR: 59
     openPR: 11
     closedIssue: 10
     openIssue: 16
-    commit: 64
+    commit: 65
   last90d:
     since: 2026-06-10
     release: 3
-    mergedPR: 74
+    mergedPR: 75
     openPR: 15
     closedIssue: 17
     openIssue: 20
-    commit: 75
+    commit: 76
   last180d:
     since: 2026-03-12
     release: 6
-    mergedPR: 204
+    mergedPR: 205
     openPR: 17
     closedIssue: 42
     openIssue: 26
-    commit: 205
+    commit: 206
   last360d:
     since: 2025-09-13
     release: 12
-    mergedPR: 523
+    mergedPR: 524
     openPR: 21
     closedIssue: 71
     openIssue: 30
-    commit: 522
+    commit: 523
   last720d:
     since: 2024-09-18
     release: 26
-    mergedPR: 1192
+    mergedPR: 1193
     openPR: 21
     closedIssue: 220
     openIssue: 59
-    commit: 1182
+    commit: 1183
 total:
   release: 54
-  mergedPR: 2038
+  mergedPR: 2039
   openPR: 21
   closedIssue: 449
   openIssue: 101
-  commit: 2014
+  commit: 2015
 ---
 path: /home/runner/.x-repo/github.com/google/osv-scanner
-collectedAt: 2026-09-08T04:05:10Z
+collectedAt: 2026-09-08T10:23:15Z
 loc:
   Yaml:
     code: 123180
@@ -253,35 +257,35 @@ total:
   blanks: 9075
   files: 573
 ---
-date: "2026-09-07T01:04:59Z"
+date: "2026-09-08T06:23:03Z"
 repo:
   name: github.com/google/osv-scanner
-  commit: 43026d7a28e5a8ad52c7b4ba3b62047fbf52ad31
+  commit: 6126a8e7111d6394d75c8ca1e13aa1bb3a07149a
 scorecard:
   version: v5.5.0
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 8.6
 checks:
-  - name: Dangerous-Workflow
+  - name: Maintained
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: 30 commit(s) and 13 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Dependency-Update-Tool
     score: 10
     reason: update tool detected
     details:
       - 'Info: detected update tool: RenovateBot: renovate.json:1'
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 10 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
     details: null
-  - name: Binary-Artifacts
+  - name: Dangerous-Workflow
     score: 10
-    reason: no binaries found in the repo
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 8
@@ -289,10 +293,10 @@ checks:
     details:
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/cassettes.yml:19'
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/cassettes.yml:20'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/checks.yml:37'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/checks.yml:57'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/checks.yml:69'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/checks.yml:85'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/checks.yml:37'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:30'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:31'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/dependencies.yml:19'
@@ -301,31 +305,31 @@ checks:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/docs-deploy.yml:55'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/goreleaser.yml:75'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/links.yml:20'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/osv-scanner-unified-action.yml:34'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/osv-scanner-unified-action.yml:32'
       - 'Warn: jobLevel ''security-events'' permission set to ''write'': .github/workflows/osv-scanner-unified-action.yml:33'
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/osv-scanner-unified-action.yml:34'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/osv-scanner-unified-action.yml:40'
       - 'Warn: jobLevel ''security-events'' permission set to ''write'': .github/workflows/osv-scanner-unified-action.yml:41'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/osv-scanner-unified-action.yml:42'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/osv-scanner-unified-action.yml:40'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/prerelease-check.yml:92'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/prerelease-check.yml:145'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/prerelease-check.yml:167'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/prerelease-check.yml:34'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/prerelease-check.yml:46'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/prerelease-check.yml:58'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/prerelease-check.yml:145'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/prerelease-check.yml:74'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/prerelease-check.yml:92'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/prerelease-check.yml:115'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/prerelease-check.yml:167'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/prerelease-check.yml:22'
       - 'Warn: jobLevel ''security-events'' permission set to ''write'': .github/workflows/prerelease-check.yml:23'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/prerelease-check.yml:24'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/prerelease-check.yml:22'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/prerelease-check.yml:58'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/prerelease-check.yml:74'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/prerelease-check.yml:34'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/renovate-validator.yml:21'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/snapshots.yml:19'
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/snapshots.yml:20'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/tests.yml:37'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/tests.yml:59'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/tests.yml:84'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/tests.yml:116'
       - 'Info: found token with ''none'' permissions: .github/workflows/tests.yml:1'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/tests.yml:37'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/zizmor.yml:16'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/zizmor.yml:17'
       - 'Info: found token with ''none'' permissions: .github/workflows/cassettes.yml:1'
@@ -360,30 +364,16 @@ checks:
       - 'Info:  57 out of  57 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  21 out of  25 third-party GitHubAction dependencies pinned'
       - 'Info:   8 out of   8 containerImage dependencies pinned'
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
-  - name: Branch-Protection
-    score: 4
-    reason: branch protection is not maximal on development and all release branches
-    details:
-      - 'Info: ''allow deletion'' disabled on branch ''main'''
-      - 'Info: ''force pushes'' disabled on branch ''main'''
-      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''main'''
-      - 'Warn: ''stale review dismissal'' is disabled on branch ''main'''
-      - 'Warn: required approving review count is 1 on branch ''main'''
-      - 'Warn: codeowners review is not required on branch ''main'''
-      - 'Warn: ''last push approval'' is disabled on branch ''main'''
-      - 'Warn: ''up-to-date branches'' is disabled on branch ''main'''
-      - 'Info: status check found to merge onto on branch ''main'''
-      - 'Info: PRs are required in order to make changes on branch ''main'''
   - name: Signed-Releases
     score: 10
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -403,6 +393,20 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: 4
+    reason: branch protection is not maximal on development and all release branches
+    details:
+      - 'Info: ''allow deletion'' disabled on branch ''main'''
+      - 'Info: ''force pushes'' disabled on branch ''main'''
+      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''main'''
+      - 'Warn: ''stale review dismissal'' is disabled on branch ''main'''
+      - 'Warn: required approving review count is 1 on branch ''main'''
+      - 'Warn: codeowners review is not required on branch ''main'''
+      - 'Warn: ''last push approval'' is disabled on branch ''main'''
+      - 'Warn: ''up-to-date branches'' is disabled on branch ''main'''
+      - 'Info: status check found to merge onto on branch ''main'''
+      - 'Info: PRs are required in order to make changes on branch ''main'''
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -411,10 +415,6 @@ checks:
       - 'Info: Found linked content: github.com/google/.github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/google/.github/SECURITY.md:1'
       - 'Info: Found text in security policy: github.com/google/.github/SECURITY.md:1'
-  - name: Vulnerabilities
-    score: -1
-    reason: 'internal error: vulnerabilitiesClient.ListUnfixedVulnerabilities: osvscanner.DoScan: client error: status="400 Bad Request" body={"code":3,"message":"error in query at index 76: rpc error: code = InvalidArgument desc = invalid hash"}'
-    details: null
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits
@@ -430,5 +430,9 @@ checks:
     reason: project has 7 contributing companies or organizations
     details:
       - 'Info: found contributions from: ackama, google, googlers, mend, octokit, openssf, ossf'
+  - name: Vulnerabilities
+    score: -1
+    reason: 'internal error: vulnerabilitiesClient.ListUnfixedVulnerabilities: osvscanner.DoScan: client error: status="400 Bad Request" body={"code":3,"message":"error in query at index 76: rpc error: code = InvalidArgument desc = invalid hash"}'
+    details: null
 ---
-{"id":371526268,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOIbbQxM4WJQp8","tag_name":"v2.5.1","target_commitish":"main","name":"v2.5.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-17T03:44:26Z","updated_at":"2026-08-17T04:29:53Z","published_at":"2026-08-17T04:29:53Z","assets":[{"id":517615867,"node_id":"RA_kwDOIbbQxM4e2jD7","name":"multiple.intoto.jsonl","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":24443,"digest":"sha256:664273601759eb6540f35bfdbfa6ff083026c09e2e9bb7ad3cded795967dd462","download_count":13404,"created_at":"2026-08-17T04:24:38Z","updated_at":"2026-08-17T04:24:38Z"},{"id":517615385,"node_id":"RA_kwDOIbbQxM4e2i8Z","name":"osv-scanner_darwin_amd64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":58916784,"digest":"sha256:9f89beb6c3d784893cb1cae0a3d56c529bfe91075418c2f9440c45b79654198b","download_count":1270,"created_at":"2026-08-17T04:23:47Z","updated_at":"2026-08-17T04:23:49Z"},{"id":517615384,"node_id":"RA_kwDOIbbQxM4e2i8Y","name":"osv-scanner_darwin_arm64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":55484002,"digest":"sha256:75c44d6332f892a1e56286f4105a98ed751ae28d215ca0a8b65cc00d84103054","download_count":9351,"created_at":"2026-08-17T04:23:47Z","updated_at":"2026-08-17T04:23:49Z"},{"id":517615411,"node_id":"RA_kwDOIbbQxM4e2i8z","name":"osv-scanner_linux_amd64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":57725090,"digest":"sha256:f9f25499a2c8cc367b3af45df2ea7eeca7fbccceab9c35079968f4b3652194be","download_count":225203,"created_at":"2026-08-17T04:23:50Z","updated_at":"2026-08-17T04:23:52Z"},{"id":517615386,"node_id":"RA_kwDOIbbQxM4e2i8a","name":"osv-scanner_linux_arm64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":53870754,"digest":"sha256:3d0f5aa5a6baa8eb32bcef247388e149ef6030a6634ccae6fa0d62681fb27a6d","download_count":9726,"created_at":"2026-08-17T04:23:47Z","updated_at":"2026-08-17T04:23:49Z"},{"id":517615414,"node_id":"RA_kwDOIbbQxM4e2i82","name":"osv-scanner_SHA256SUMS","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":554,"digest":"sha256:40120ab7d670199f6663d76f9806b6d11ab3c402df808e5cc4e13c5cb0643356","download_count":20204,"created_at":"2026-08-17T04:23:50Z","updated_at":"2026-08-17T04:23:50Z"},{"id":517615387,"node_id":"RA_kwDOIbbQxM4e2i8b","name":"osv-scanner_windows_amd64.exe","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":58970112,"digest":"sha256:25e42f5ef6711fd8c0fb45390972205891dd44c6bd02ac93f0f63e8e98d9bfb6","download_count":9074,"created_at":"2026-08-17T04:23:47Z","updated_at":"2026-08-17T04:23:50Z"},{"id":517615408,"node_id":"RA_kwDOIbbQxM4e2i8w","name":"osv-scanner_windows_arm64.exe","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":54433280,"digest":"sha256:33feb0b210a3e5ea7b338c719defc899f8833d990cdd297bcad4ff1a2586ec8b","download_count":894,"created_at":"2026-08-17T04:23:50Z","updated_at":"2026-08-17T04:23:52Z"}],"body":"## What's Changed\r\n### Fixes:\r\n\r\n- Preserve package namespaces when querying osv.dev API (fixes [#2978](https://github.com/google/osv-scanner/issues/2978)).\r\n- Re-add support for the `OSV_SCANNER_LOCAL_DB_CACHE_DIRECTORY` environment variable (fixes [#2983](https://github.com/google/osv-scanner/issues/2983)).\r\n- Fix local vulnerability matching (`--offline-vulnerabilities`) not working when network capability is `NetworkOnline`.\r\n\r\n**Full Changelog**: https://github.com/google/osv-scanner/compare/v2.5.0...v2.5.1"}
+{"id":371526268,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOIbbQxM4WJQp8","tag_name":"v2.5.1","target_commitish":"main","name":"v2.5.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-17T03:44:26Z","updated_at":"2026-08-17T04:29:53Z","published_at":"2026-08-17T04:29:53Z","assets":[{"id":517615867,"node_id":"RA_kwDOIbbQxM4e2jD7","name":"multiple.intoto.jsonl","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":24443,"digest":"sha256:664273601759eb6540f35bfdbfa6ff083026c09e2e9bb7ad3cded795967dd462","download_count":13901,"created_at":"2026-08-17T04:24:38Z","updated_at":"2026-08-17T04:24:38Z"},{"id":517615385,"node_id":"RA_kwDOIbbQxM4e2i8Z","name":"osv-scanner_darwin_amd64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":58916784,"digest":"sha256:9f89beb6c3d784893cb1cae0a3d56c529bfe91075418c2f9440c45b79654198b","download_count":1277,"created_at":"2026-08-17T04:23:47Z","updated_at":"2026-08-17T04:23:49Z"},{"id":517615384,"node_id":"RA_kwDOIbbQxM4e2i8Y","name":"osv-scanner_darwin_arm64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":55484002,"digest":"sha256:75c44d6332f892a1e56286f4105a98ed751ae28d215ca0a8b65cc00d84103054","download_count":9473,"created_at":"2026-08-17T04:23:47Z","updated_at":"2026-08-17T04:23:49Z"},{"id":517615411,"node_id":"RA_kwDOIbbQxM4e2i8z","name":"osv-scanner_linux_amd64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":57725090,"digest":"sha256:f9f25499a2c8cc367b3af45df2ea7eeca7fbccceab9c35079968f4b3652194be","download_count":229876,"created_at":"2026-08-17T04:23:50Z","updated_at":"2026-08-17T04:23:52Z"},{"id":517615386,"node_id":"RA_kwDOIbbQxM4e2i8a","name":"osv-scanner_linux_arm64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":53870754,"digest":"sha256:3d0f5aa5a6baa8eb32bcef247388e149ef6030a6634ccae6fa0d62681fb27a6d","download_count":10014,"created_at":"2026-08-17T04:23:47Z","updated_at":"2026-08-17T04:23:49Z"},{"id":517615414,"node_id":"RA_kwDOIbbQxM4e2i82","name":"osv-scanner_SHA256SUMS","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":554,"digest":"sha256:40120ab7d670199f6663d76f9806b6d11ab3c402df808e5cc4e13c5cb0643356","download_count":20715,"created_at":"2026-08-17T04:23:50Z","updated_at":"2026-08-17T04:23:50Z"},{"id":517615387,"node_id":"RA_kwDOIbbQxM4e2i8b","name":"osv-scanner_windows_amd64.exe","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":58970112,"digest":"sha256:25e42f5ef6711fd8c0fb45390972205891dd44c6bd02ac93f0f63e8e98d9bfb6","download_count":9194,"created_at":"2026-08-17T04:23:47Z","updated_at":"2026-08-17T04:23:50Z"},{"id":517615408,"node_id":"RA_kwDOIbbQxM4e2i8w","name":"osv-scanner_windows_arm64.exe","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":54433280,"digest":"sha256:33feb0b210a3e5ea7b338c719defc899f8833d990cdd297bcad4ff1a2586ec8b","download_count":897,"created_at":"2026-08-17T04:23:50Z","updated_at":"2026-08-17T04:23:52Z"}],"body":"## What's Changed\r\n### Fixes:\r\n\r\n- Preserve package namespaces when querying osv.dev API (fixes [#2978](https://github.com/google/osv-scanner/issues/2978)).\r\n- Re-add support for the `OSV_SCANNER_LOCAL_DB_CACHE_DIRECTORY` environment variable (fixes [#2983](https://github.com/google/osv-scanner/issues/2983)).\r\n- Fix local vulnerability matching (`--offline-vulnerabilities`) not working when network capability is `NetworkOnline`.\r\n\r\n**Full Changelog**: https://github.com/google/osv-scanner/compare/v2.5.0...v2.5.1"}

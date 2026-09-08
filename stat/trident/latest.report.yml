@@ -5,11 +5,15 @@ about:
   head: 8ce1236
   archived: false
   latestVersion: "v26.06.1"
-  collectedAt: 2026-09-08T03:39:30Z
+  latestRelease: "v26.06.1"
+  latestPrerelease: "v20.01.0-beta.1"
+  collectedAt: 2026-09-08T10:32:27Z
 timeline:
   created: 2016-12-22
   lastCommit: 2026-08-18
+  lastVersion: 2026-08-19
   lastRelease: 2026-08-19
+  lastPrerelease: 2019-12-20
 popularity:
   star: 876
   watcher: 78
@@ -86,7 +90,7 @@ total:
   commit: 1875
 ---
 path: /home/runner/.x-repo/github.com/NetApp/trident
-collectedAt: 2026-09-08T03:39:57Z
+collectedAt: 2026-09-08T10:32:43Z
 loc:
   Go:
     code: 2084177
@@ -272,4 +276,4 @@ checks:
       - 'Info:   0 out of   5 containerImage dependencies pinned'
       - 'Info:   0 out of   1 goCommand dependencies pinned'
 ---
-{"id":373344191,"author":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBJmq8s4WQMe_","tag_name":"v26.06.1","target_commitish":"4c655f64cffa82f9d90c80ea5672658b2bbb45f5","name":"v26.06.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-17T23:22:06Z","updated_at":"2026-08-19T21:05:58Z","published_at":"2026-08-19T21:05:58Z","assets":[{"id":521334219,"node_id":"RA_kwDOBJmq8s4fEu3L","name":"trident-installer-26.06.1.tar.gz","label":"","uploader":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":111017635,"digest":"sha256:606752c85238cb0d54121ecaf811bca0d5adea80247f9b55d2a12238d8e8bf04","download_count":1170,"created_at":"2026-08-19T20:52:37Z","updated_at":"2026-08-19T20:52:40Z"}],"body":"## Changes since v26.06.0\r\n\r\n### Trident\r\n\r\n**Fixes:**\r\n\r\n- **Kubernetes:** Fixed a race between CSI publish and volume move that could attach a volume using stale access information.\r\n- **Kubernetes:** Fixed a race where `NodeGetInfo` could return empty topology labels before node registration completed, causing topology-aware provisioning failures.\r\n- **Kubernetes:** Fixed a rare NVMe disconnect race that could tear down a shared subsystem while another pod was still attaching.\r\n- **Kubernetes:** Fixed NVMe PVC clone publish failures (and incorrect parent-namespace mapping) when creating clones of a mounted volume under concurrency.\r\n- **Kubernetes:** Fixed snapshot creation failures for PVCs on ONTAP-SAN-Economy backends using a `nameTemplate`.\r\n\r\n**Enhancements:**\r\n\r\n- Added optional `storageAPITimeout` (seconds) on ONTAP backend config to set REST and ZAPI API client timeouts per backend."}
+{"id":373344191,"author":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBJmq8s4WQMe_","tag_name":"v26.06.1","target_commitish":"4c655f64cffa82f9d90c80ea5672658b2bbb45f5","name":"v26.06.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-17T23:22:06Z","updated_at":"2026-08-19T21:05:58Z","published_at":"2026-08-19T21:05:58Z","assets":[{"id":521334219,"node_id":"RA_kwDOBJmq8s4fEu3L","name":"trident-installer-26.06.1.tar.gz","label":"","uploader":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":111017635,"digest":"sha256:606752c85238cb0d54121ecaf811bca0d5adea80247f9b55d2a12238d8e8bf04","download_count":1196,"created_at":"2026-08-19T20:52:37Z","updated_at":"2026-08-19T20:52:40Z"}],"body":"## Changes since v26.06.0\r\n\r\n### Trident\r\n\r\n**Fixes:**\r\n\r\n- **Kubernetes:** Fixed a race between CSI publish and volume move that could attach a volume using stale access information.\r\n- **Kubernetes:** Fixed a race where `NodeGetInfo` could return empty topology labels before node registration completed, causing topology-aware provisioning failures.\r\n- **Kubernetes:** Fixed a rare NVMe disconnect race that could tear down a shared subsystem while another pod was still attaching.\r\n- **Kubernetes:** Fixed NVMe PVC clone publish failures (and incorrect parent-namespace mapping) when creating clones of a mounted volume under concurrency.\r\n- **Kubernetes:** Fixed snapshot creation failures for PVCs on ONTAP-SAN-Economy backends using a `nameTemplate`.\r\n\r\n**Enhancements:**\r\n\r\n- Added optional `storageAPITimeout` (seconds) on ONTAP backend config to set REST and ZAPI API client timeouts per backend."}
