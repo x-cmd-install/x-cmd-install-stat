@@ -7,7 +7,7 @@ about:
   latestVersion: "dist"
   latestRelease: "dist"
   latestPrerelease: ""
-  collectedAt: 2026-09-08T12:29:18Z
+  collectedAt: 2026-09-09T20:39:52Z
 timeline:
   created: 2017-02-16
   lastCommit: 2026-07-21
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2019-10-01
   lastPrerelease: 
 popularity:
-  star: 3700
+  star: 3699
   watcher: 73
   fork: 822
   release: 954
@@ -34,7 +34,7 @@ language:
 totalBytes: 2551952
 recent:
   last30d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -42,7 +42,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-10
+    since: 2026-07-11
     release: 0
     mergedPR: 1
     openPR: 1
@@ -50,7 +50,7 @@ recent:
     openIssue: 4
     commit: 1
   last90d:
-    since: 2026-06-10
+    since: 2026-06-11
     release: 0
     mergedPR: 1
     openPR: 1
@@ -58,7 +58,7 @@ recent:
     openIssue: 11
     commit: 1
   last180d:
-    since: 2026-03-12
+    since: 2026-03-13
     release: 0
     mergedPR: 1
     openPR: 2
@@ -66,7 +66,7 @@ recent:
     openIssue: 11
     commit: 1
   last360d:
-    since: 2025-09-13
+    since: 2025-09-14
     release: 0
     mergedPR: 1
     openPR: 9
@@ -74,7 +74,7 @@ recent:
     openIssue: 37
     commit: 1
   last720d:
-    since: 2024-09-18
+    since: 2024-09-19
     release: 0
     mergedPR: 1
     openPR: 48
@@ -90,7 +90,7 @@ total:
   commit: 6373
 ---
 path: /home/runner/.x-repo/github.com/webhintio/hint
-collectedAt: 2026-09-08T12:29:30Z
+collectedAt: 2026-09-09T20:40:05Z
 loc:
   TypeScript:
     code: 50175
@@ -188,22 +188,27 @@ total:
   blanks: 35679
   files: 1783
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/webhintio/hint
   commit: 62bfce68b934aab205bd60beb136112a5bfa1da1
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 3
 checks:
-  - name: Code-Review
-    score: 2
-    reason: Found 5/24 approved changesets -- score normalized to 2
-    details: null
   - name: Maintained
     score: 0
     reason: 1 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 2
+    reason: Found 5/24 approved changesets -- score normalized to 2
     details: null
   - name: Token-Permissions
     score: 0
@@ -211,11 +216,6 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/3rdparty.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -224,39 +224,31 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/3rdparty.yml:13: update your workflow using https://app.stepsecurity.io/secureworkflow/webhintio/hint/3rdparty.yml/main?enable=pin'
       - 'Info:   0 out of   1 GitHub-owned GitHubAction dependencies pinned'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE.txt:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE.txt:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact dist not signed: https://api.github.com/repos/webhintio/hint/releases/20378720'
-      - 'Warn: release artifact parser-javascript-v2.1.0 not signed: https://api.github.com/repos/webhintio/hint/releases/15983643'
-      - 'Warn: release artifact dist does not have provenance: https://api.github.com/repos/webhintio/hint/releases/20378720'
-      - 'Warn: release artifact parser-javascript-v2.1.0 does not have provenance: https://api.github.com/repos/webhintio/hint/releases/15983643'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -265,6 +257,14 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact dist not signed: https://api.github.com/repos/webhintio/hint/releases/20378720'
+      - 'Warn: release artifact parser-javascript-v2.1.0 not signed: https://api.github.com/repos/webhintio/hint/releases/15983643'
+      - 'Warn: release artifact dist does not have provenance: https://api.github.com/repos/webhintio/hint/releases/20378720'
+      - 'Warn: release artifact parser-javascript-v2.1.0 does not have provenance: https://api.github.com/repos/webhintio/hint/releases/15983643'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

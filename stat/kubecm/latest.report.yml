@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.35.1"
   latestRelease: "v0.35.1"
   latestPrerelease: ""
-  collectedAt: 2026-09-08T10:42:08Z
+  collectedAt: 2026-09-09T18:43:39Z
 timeline:
   created: 2019-07-23
   lastCommit: 2026-09-01
@@ -29,7 +29,7 @@ language:
 totalBytes: 333742
 recent:
   last30d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 0
     mergedPR: 1
     openPR: 1
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 1
   last60d:
-    since: 2026-07-10
+    since: 2026-07-11
     release: 0
     mergedPR: 3
     openPR: 1
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 3
   last90d:
-    since: 2026-06-10
+    since: 2026-06-11
     release: 0
     mergedPR: 4
     openPR: 4
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 4
   last180d:
-    since: 2026-03-12
+    since: 2026-03-13
     release: 0
     mergedPR: 8
     openPR: 5
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 8
   last360d:
-    since: 2025-09-13
+    since: 2025-09-14
     release: 5
     mergedPR: 32
     openPR: 8
@@ -69,7 +69,7 @@ recent:
     openIssue: 2
     commit: 32
   last720d:
-    since: 2024-09-18
+    since: 2024-09-19
     release: 11
     mergedPR: 78
     openPR: 8
@@ -85,7 +85,7 @@ total:
   commit: 613
 ---
 path: /home/runner/.x-repo/github.com/sunny0826/kubecm
-collectedAt: 2026-09-08T10:42:12Z
+collectedAt: 2026-09-09T18:43:45Z
 loc:
   Go:
     code: 10372
@@ -138,14 +138,14 @@ total:
   blanks: 2437
   files: 142
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/sunny0826/kubecm
-  commit: 7d5ad3187014f6d83f79b1d6661da66559765654
+  commit: d9b2aa7c5ab4116a68fd121153fb8546173dbf8e
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
-score: 5.6
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+score: 5.7
 checks:
   - name: Security-Policy
     score: 10
@@ -155,24 +155,28 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Code-Review
+    score: 9
+    reason: Found 10/11 approved changesets -- score normalized to 9
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Code-Review
-    score: 9
-    reason: Found 9/10 approved changesets -- score normalized to 9
-    details: null
   - name: Maintained
-    score: 2
-    reason: 3 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 2
+    score: 3
+    reason: 4 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 3
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:32'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:33'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:32'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/e2e-test.yaml:23'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/e2e-test.yaml:41'
       - 'Warn: no topLevel permission defined: .github/workflows/codeql-analysis.yml:1'
@@ -181,19 +185,10 @@ checks:
       - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/issue-metrics.yml:9'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yaml:10'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 5
     reason: 'badge detected: Passing'
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 1
     reason: dependency not pinned by hash detected -- score normalized to 1
@@ -221,21 +216,17 @@ checks:
       - 'Info:   0 out of  13 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   7 third-party GitHubAction dependencies pinned'
       - 'Info:   1 out of   1 goCommand dependencies pinned'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yaml:15'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -250,6 +241,15 @@ checks:
       - 'Warn: release artifact v0.34.0 does not have provenance: https://api.github.com/repos/sunny0826/kubecm/releases/272602229'
       - 'Warn: release artifact v0.33.3 does not have provenance: https://api.github.com/repos/sunny0826/kubecm/releases/261953792'
       - 'Warn: release artifact v0.33.2 does not have provenance: https://api.github.com/repos/sunny0826/kubecm/releases/261603803'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yaml:15'
   - name: SAST
     score: 7
     reason: SAST tool detected but not run on all commits
@@ -257,4 +257,4 @@ checks:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Warn: 9 commits out of 30 are checked with a SAST tool'
 ---
-{"id":294587200,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOC9JNaM4RjwtA","tag_name":"v0.35.1","target_commitish":"master","name":"kubecm-v0.35.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-03-09T08:16:51Z","updated_at":"2026-03-09T08:27:36Z","published_at":"2026-03-09T08:23:47Z","assets":[{"id":369953808,"node_id":"RA_kwDOC9JNaM4WDQwQ","name":"checksums.txt","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":707,"digest":"sha256:7dc1fe5647b93c7e75476ea1f802833cfbea27cd431966f58f7f250c2b987f73","download_count":74,"created_at":"2026-03-09T08:23:46Z","updated_at":"2026-03-09T08:23:46Z"},{"id":369953807,"node_id":"RA_kwDOC9JNaM4WDQwP","name":"kubecm_v0.35.1_Darwin_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":14582683,"digest":"sha256:35ea4876ae8d146536def212489056b08219b4a41ac82a7a7305072087b21aad","download_count":531,"created_at":"2026-03-09T08:23:45Z","updated_at":"2026-03-09T08:23:47Z"},{"id":369953800,"node_id":"RA_kwDOC9JNaM4WDQwI","name":"kubecm_v0.35.1_Darwin_x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":15632595,"digest":"sha256:213c10d018741df1ddf13b0764543b5e1d722d7e7c9094132acbe2aeffc138ca","download_count":172,"created_at":"2026-03-09T08:23:44Z","updated_at":"2026-03-09T08:23:45Z"},{"id":369953796,"node_id":"RA_kwDOC9JNaM4WDQwE","name":"kubecm_v0.35.1_Linux_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":13835396,"digest":"sha256:d2c1397415a3753af9dea32c5c7c97da4d89d7b2790366fcf01c480184106126","download_count":339,"created_at":"2026-03-09T08:23:44Z","updated_at":"2026-03-09T08:23:45Z"},{"id":369953795,"node_id":"RA_kwDOC9JNaM4WDQwD","name":"kubecm_v0.35.1_Linux_i386.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":14141499,"digest":"sha256:c5acc1c17eaa9869174d163769617049f4d9e02506ad1a3fd4f43b225db16ed0","download_count":77,"created_at":"2026-03-09T08:23:44Z","updated_at":"2026-03-09T08:23:45Z"},{"id":369953797,"node_id":"RA_kwDOC9JNaM4WDQwF","name":"kubecm_v0.35.1_Linux_x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":15277829,"digest":"sha256:65dbe79901d95f68fc9ddbe38acb3ee34acdfa3d71e69ff326bd972fc0525a85","download_count":7294,"created_at":"2026-03-09T08:23:44Z","updated_at":"2026-03-09T08:23:45Z"},{"id":369953810,"node_id":"RA_kwDOC9JNaM4WDQwS","name":"kubecm_v0.35.1_Windows_i386.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":14879066,"digest":"sha256:0b8a69254c4613a23f559261331598b8d5f1d87c6663eb37115f38c2e8dddef5","download_count":28,"created_at":"2026-03-09T08:23:46Z","updated_at":"2026-03-09T08:23:47Z"},{"id":369953812,"node_id":"RA_kwDOC9JNaM4WDQwU","name":"kubecm_v0.35.1_Windows_x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":15760624,"digest":"sha256:73e2fd06e8553b1dc71ccfe741017dbf444977452445861ffc355f7b835c0f8b","download_count":593,"created_at":"2026-03-09T08:23:46Z","updated_at":"2026-03-09T08:23:47Z"}],"body":"## Changelog\r\n\r\n## What's Changed\r\n* docs: add Registry to README highlights and sidebar by @clark42 in https://github.com/sunny0826/kubecm/pull/1173\r\n* fix(namespace): handle missing or empty current-context gracefully by @clark42 in https://github.com/sunny0826/kubecm/pull/1174\r\n* feat(registry): add User concept, cluster/user separation by @clark42 in https://github.com/sunny0826/kubecm/pull/1175\r\n* chore(deps): bump rajatjindal/krew-release-bot from 0.0.50 to 0.0.51 by @dependabot[bot] in https://github.com/sunny0826/kubecm/pull/1180\r\n\r\n\r\n**Full Changelog**: https://github.com/sunny0826/kubecm/compare/v0.35.0...v0.35.1","mentions_count":2}
+{"id":294587200,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOC9JNaM4RjwtA","tag_name":"v0.35.1","target_commitish":"master","name":"kubecm-v0.35.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-03-09T08:16:51Z","updated_at":"2026-03-09T08:27:36Z","published_at":"2026-03-09T08:23:47Z","assets":[{"id":369953808,"node_id":"RA_kwDOC9JNaM4WDQwQ","name":"checksums.txt","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":707,"digest":"sha256:7dc1fe5647b93c7e75476ea1f802833cfbea27cd431966f58f7f250c2b987f73","download_count":75,"created_at":"2026-03-09T08:23:46Z","updated_at":"2026-03-09T08:23:46Z"},{"id":369953807,"node_id":"RA_kwDOC9JNaM4WDQwP","name":"kubecm_v0.35.1_Darwin_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":14582683,"digest":"sha256:35ea4876ae8d146536def212489056b08219b4a41ac82a7a7305072087b21aad","download_count":532,"created_at":"2026-03-09T08:23:45Z","updated_at":"2026-03-09T08:23:47Z"},{"id":369953800,"node_id":"RA_kwDOC9JNaM4WDQwI","name":"kubecm_v0.35.1_Darwin_x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":15632595,"digest":"sha256:213c10d018741df1ddf13b0764543b5e1d722d7e7c9094132acbe2aeffc138ca","download_count":173,"created_at":"2026-03-09T08:23:44Z","updated_at":"2026-03-09T08:23:45Z"},{"id":369953796,"node_id":"RA_kwDOC9JNaM4WDQwE","name":"kubecm_v0.35.1_Linux_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":13835396,"digest":"sha256:d2c1397415a3753af9dea32c5c7c97da4d89d7b2790366fcf01c480184106126","download_count":345,"created_at":"2026-03-09T08:23:44Z","updated_at":"2026-03-09T08:23:45Z"},{"id":369953795,"node_id":"RA_kwDOC9JNaM4WDQwD","name":"kubecm_v0.35.1_Linux_i386.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":14141499,"digest":"sha256:c5acc1c17eaa9869174d163769617049f4d9e02506ad1a3fd4f43b225db16ed0","download_count":78,"created_at":"2026-03-09T08:23:44Z","updated_at":"2026-03-09T08:23:45Z"},{"id":369953797,"node_id":"RA_kwDOC9JNaM4WDQwF","name":"kubecm_v0.35.1_Linux_x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":15277829,"digest":"sha256:65dbe79901d95f68fc9ddbe38acb3ee34acdfa3d71e69ff326bd972fc0525a85","download_count":7385,"created_at":"2026-03-09T08:23:44Z","updated_at":"2026-03-09T08:23:45Z"},{"id":369953810,"node_id":"RA_kwDOC9JNaM4WDQwS","name":"kubecm_v0.35.1_Windows_i386.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":14879066,"digest":"sha256:0b8a69254c4613a23f559261331598b8d5f1d87c6663eb37115f38c2e8dddef5","download_count":28,"created_at":"2026-03-09T08:23:46Z","updated_at":"2026-03-09T08:23:47Z"},{"id":369953812,"node_id":"RA_kwDOC9JNaM4WDQwU","name":"kubecm_v0.35.1_Windows_x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":15760624,"digest":"sha256:73e2fd06e8553b1dc71ccfe741017dbf444977452445861ffc355f7b835c0f8b","download_count":596,"created_at":"2026-03-09T08:23:46Z","updated_at":"2026-03-09T08:23:47Z"}],"body":"## Changelog\r\n\r\n## What's Changed\r\n* docs: add Registry to README highlights and sidebar by @clark42 in https://github.com/sunny0826/kubecm/pull/1173\r\n* fix(namespace): handle missing or empty current-context gracefully by @clark42 in https://github.com/sunny0826/kubecm/pull/1174\r\n* feat(registry): add User concept, cluster/user separation by @clark42 in https://github.com/sunny0826/kubecm/pull/1175\r\n* chore(deps): bump rajatjindal/krew-release-bot from 0.0.50 to 0.0.51 by @dependabot[bot] in https://github.com/sunny0826/kubecm/pull/1180\r\n\r\n\r\n**Full Changelog**: https://github.com/sunny0826/kubecm/compare/v0.35.0...v0.35.1","mentions_count":2}

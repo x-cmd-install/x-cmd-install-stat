@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.10.0"
   latestRelease: "v0.10.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-08T11:17:45Z
+  collectedAt: 2026-09-09T19:56:04Z
 timeline:
   created: 2018-02-10
   lastCommit: 2026-06-21
@@ -30,7 +30,7 @@ language:
 totalBytes: 38937
 recent:
   last30d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-10
+    since: 2026-07-11
     release: 0
     mergedPR: 0
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-10
+    since: 2026-06-11
     release: 1
     mergedPR: 1
     openPR: 0
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 1
   last180d:
-    since: 2026-03-12
+    since: 2026-03-13
     release: 1
     mergedPR: 1
     openPR: 0
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 1
   last360d:
-    since: 2025-09-13
+    since: 2025-09-14
     release: 2
     mergedPR: 2
     openPR: 0
@@ -70,7 +70,7 @@ recent:
     openIssue: 0
     commit: 3
   last720d:
-    since: 2024-09-18
+    since: 2024-09-19
     release: 8
     mergedPR: 12
     openPR: 0
@@ -86,7 +86,7 @@ total:
   commit: 129
 ---
 path: /home/runner/.x-repo/github.com/slok/kube-code-generator
-collectedAt: 2026-09-08T11:17:49Z
+collectedAt: 2026-09-09T19:56:05Z
 loc:
   Go:
     code: 1847
@@ -124,15 +124,19 @@ total:
   blanks: 613
   files: 66
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/slok/kube-code-generator
   commit: 3c4e0cf9fd9beb840a73d25908f8ae09c83db0f0
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 2.4
 checks:
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Maintained
     score: 0
     reason: 1 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
@@ -141,15 +145,15 @@ checks:
     score: 0
     reason: Found 1/20 approved changesets -- score normalized to 0
     details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -157,10 +161,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/build-pr.yaml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yaml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -173,25 +173,16 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: License
-    score: 0
-    reason: license file not detected
-    details:
-      - 'Warn: project does not have a license file'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
-  - name: Branch-Protection
+  - name: License
     score: 0
-    reason: branch protection not enabled on development/release branches
+    reason: license file not detected
     details:
-      - 'Warn: branch protection not enabled for branch ''main'''
+      - 'Warn: project does not have a license file'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -209,12 +200,21 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:37: update your workflow using https://app.stepsecurity.io/secureworkflow/slok/kube-code-generator/ci.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:55: update your workflow using https://app.stepsecurity.io/secureworkflow/slok/kube-code-generator/ci.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:56: update your workflow using https://app.stepsecurity.io/secureworkflow/slok/kube-code-generator/ci.yaml/main?enable=pin'
-      - 'Warn: containerImage not pinned by hash: docker/dev/Dockerfile:1: pin your Docker image by updating golang:1.26 to golang:1.26@sha256:dc2521c2a906db43073b8b4d99f491b6341cf15610b6ebbab187c45153f9959e'
-      - 'Warn: containerImage not pinned by hash: docker/prod/Dockerfile:4: pin your Docker image by updating golang:1.26 to golang:1.26@sha256:dc2521c2a906db43073b8b4d99f491b6341cf15610b6ebbab187c45153f9959e'
-      - 'Warn: containerImage not pinned by hash: docker/prod/Dockerfile:17: pin your Docker image by updating golang:1.26 to golang:1.26@sha256:dc2521c2a906db43073b8b4d99f491b6341cf15610b6ebbab187c45153f9959e'
+      - 'Warn: containerImage not pinned by hash: docker/dev/Dockerfile:1: pin your Docker image by updating golang:1.26 to golang:1.26@sha256:9d2f36f06329b2a141b9db99ffa32765cf695ee57b813ca29e245e8670bcbfff'
+      - 'Warn: containerImage not pinned by hash: docker/prod/Dockerfile:4: pin your Docker image by updating golang:1.26 to golang:1.26@sha256:9d2f36f06329b2a141b9db99ffa32765cf695ee57b813ca29e245e8670bcbfff'
+      - 'Warn: containerImage not pinned by hash: docker/prod/Dockerfile:17: pin your Docker image by updating golang:1.26 to golang:1.26@sha256:9d2f36f06329b2a141b9db99ffa32765cf695ee57b813ca29e245e8670bcbfff'
       - 'Info:   0 out of  10 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 containerImage dependencies pinned'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''main'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

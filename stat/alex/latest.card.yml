@@ -7,7 +7,7 @@ about:
   latestVersion: "11.0.1"
   latestRelease: "11.0.1"
   latestPrerelease: ""
-  collectedAt: 2026-09-08T10:28:54Z
+  collectedAt: 2026-09-09T18:38:20Z
 timeline:
   created: 2015-08-15
   lastCommit: 2024-11-27
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2023-08-18
   lastPrerelease: 
 popularity:
-  star: 5098
+  star: 5097
   watcher: 72
   fork: 214
   release: 33
@@ -27,7 +27,7 @@ language:
 totalBytes: 28001
 recent:
   last30d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-10
+    since: 2026-07-11
     release: 0
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-10
+    since: 2026-06-11
     release: 0
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-12
+    since: 2026-03-13
     release: 0
     mergedPR: 0
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-13
+    since: 2025-09-14
     release: 0
     mergedPR: 0
     openPR: 2
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-09-18
+    since: 2024-09-19
     release: 0
     mergedPR: 1
     openPR: 3
@@ -83,7 +83,7 @@ total:
   commit: 301
 ---
 path: /home/runner/.x-repo/github.com/get-alex/alex
-collectedAt: 2026-09-08T10:28:55Z
+collectedAt: 2026-09-09T18:38:21Z
 loc:
   JavaScript:
     code: 832
@@ -126,26 +126,27 @@ total:
   blanks: 338
   files: 22
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/get-alex/alex
   commit: 9a57595d1050d8fff99dc073670ee2bb41c925f6
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 2.6
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Code-Review
     score: 1
     reason: Found 5/30 approved changesets -- score normalized to 1
     details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -153,14 +154,9 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Pinned-Dependencies
     score: 0
@@ -173,6 +169,10 @@ checks:
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 npmCommand dependencies pinned'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -188,17 +188,17 @@ checks:
     details:
       - 'Info: project has a license file: license:0'
       - 'Info: FSF or OSI recognized license: MIT License: license:0'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''main'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
       - 'Warn: release artifact 9.1.0 not signed: https://api.github.com/repos/get-alex/alex/releases/33910552'
       - 'Warn: release artifact 9.1.0 does not have provenance: https://api.github.com/repos/get-alex/alex/releases/33910552'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''main'''
   - name: Security-Policy
     score: 0
     reason: security policy file not detected

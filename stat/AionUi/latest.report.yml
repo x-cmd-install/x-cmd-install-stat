@@ -2,26 +2,26 @@ about:
   description: "Open-source 24/7 Cowork app for OpenClaw, Hermes, Claude Code, Codex, OpenCode and 20+ more CLI Agent | Customize your assistants | Team them up｜Star if you like it!"
   license: Apache-2.0
   homepage: https://www.aionui.com
-  head: 6a7fed3
+  head: 6744099
   archived: false
-  latestVersion: "v2.2.1"
-  latestRelease: "v2.2.1"
+  latestVersion: "v2.2.2"
+  latestRelease: "v2.2.2"
   latestPrerelease: "v2.1.3"
-  collectedAt: 2026-09-08T12:25:30Z
+  collectedAt: 2026-09-09T20:41:25Z
 timeline:
   created: 2025-08-07
-  lastCommit: 2026-09-07
-  lastVersion: 2026-09-01
-  lastRelease: 2026-09-01
+  lastCommit: 2026-09-09
+  lastVersion: 2026-09-09
+  lastRelease: 2026-09-09
   lastPrerelease: 2026-05-26
 popularity:
-  star: 32676
+  star: 32713
   watcher: 146
-  fork: 3364
-  release: 169
+  fork: 3370
+  release: 170
   contributor: 111
-  pullRequest: 2562
-  issue: 1540
+  pullRequest: 2566
+  issue: 1542
 language:
   TypeScript: 10422154
   JavaScript: 179798
@@ -36,63 +36,63 @@ language:
 totalBytes: 10977878
 recent:
   last30d:
-    since: 2026-08-09
-    release: 10
-    mergedPR: 86
-    openPR: 64
+    since: 2026-08-10
+    release: 11
+    mergedPR: 78
+    openPR: 63
     closedIssue: 14
-    openIssue: 96
-    commit: 68
+    openIssue: 93
+    commit: 69
   last60d:
-    since: 2026-07-10
-    release: 29
-    mergedPR: 246
-    openPR: 96
+    since: 2026-07-11
+    release: 30
+    mergedPR: 245
+    openPR: 95
     closedIssue: 86
-    openIssue: 160
-    commit: 234
+    openIssue: 158
+    commit: 235
   last90d:
-    since: 2026-06-10
+    since: 2026-06-11
     release: 44
-    mergedPR: 394
-    openPR: 111
-    closedIssue: 136
+    mergedPR: 383
+    openPR: 110
+    closedIssue: 135
     openIssue: 199
-    commit: 391
+    commit: 392
   last180d:
-    since: 2026-03-12
+    since: 2026-03-13
     release: 99
-    mergedPR: 1296
-    openPR: 217
-    closedIssue: 548
-    openIssue: 506
-    commit: 2039
+    mergedPR: 1291
+    openPR: 218
+    closedIssue: 545
+    openIssue: 504
+    commit: 2040
   last360d:
-    since: 2025-09-13
+    since: 2025-09-14
     release: 100
-    mergedPR: 1858
-    openPR: 217
+    mergedPR: 1859
+    openPR: 218
     closedIssue: 814
-    openIssue: 664
-    commit: 3511
+    openIssue: 666
+    commit: 3512
   last720d:
-    since: 2024-09-18
+    since: 2024-09-19
     release: 100
-    mergedPR: 1924
-    openPR: 217
+    mergedPR: 1925
+    openPR: 218
     closedIssue: 876
-    openIssue: 664
-    commit: 5987
+    openIssue: 666
+    commit: 5988
 total:
-  release: 169
-  mergedPR: 1924
-  openPR: 217
+  release: 170
+  mergedPR: 1925
+  openPR: 218
   closedIssue: 876
-  openIssue: 664
-  commit: 5987
+  openIssue: 666
+  commit: 5988
 ---
 path: /home/runner/.x-repo/github.com/iOfficeAI/AionUi
-collectedAt: 2026-09-08T12:26:24Z
+collectedAt: 2026-09-09T20:41:56Z
 loc:
   TypeScript:
     code: 119715
@@ -156,15 +156,15 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 22470
-    blanks: 10881
+    comments: 22478
+    blanks: 10889
     files: 95
 total:
   code: 291805
-  comments: 58825
-  blanks: 44807
+  comments: 58833
+  blanks: 44815
   files: 2168
 ---
 
 ---
-{"id":380374897,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOPZ417s4WrA9x","tag_name":"v2.2.1","target_commitish":"main","name":"v2.2.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-01T09:31:53Z","updated_at":"2026-09-01T14:24:31Z","published_at":"2026-09-01T13:13:26Z","assets":[],"body":"## Highlights\n\n### Clearer conversation notifications\n- Turn-completed notifications now include the conversation's name, so you can tell at a glance which conversation finished instead of seeing identical \"finished responding\" messages (long names are truncated).\n\n### Sidebar tells \"still working\" from \"needs your input\"\n- When a conversation pauses waiting on you \u2014 a tool permission request or an agent question (AskUserQuestion) \u2014 the sidebar now shows a distinct attention icon instead of the generic generating spinner, across the ACP, Codex, and Aion CLI backends.\n- A desktop notification also fires for the waiting state (when the window is unfocused), naming the conversation when its title is known, so a paused agent no longer waits unnoticed.\n\n### Fewer forced re-logins\n- WebUI sessions now silently refresh on a 401 instead of interrupting you to sign in again.\n\n### Engine updates (AionCore v0.1.72 \u2192 v0.2.1)\n- `@@` mentions in a conversation are now routed to the session-message skill, with a fallback to session capability blocks when needed \u2014 smoother handoffs in team and multi-session work.\n- Repository discovery now enumerates a repo's linked git worktrees, so multi-worktree projects are recognized more completely.\n- Auth uses a dual-token refresh with singleflight for more reliable session renewal.\n- **Breaking change:** skills are now delivered through an AionUi-owned view instead of being placed in the workspace directory \u2014 how skills are stored and loaded has changed.\n\n### Bug Fixes\n- Fixed the WebUI bridge WebSocket hammering reconnects after repeated failures (reconnect storm).\n- Aligned the recipient/sender capability wording in `@@` blocks for consistency.\n\n## What's Changed\n* feat(notification): name the conversation in turn-completed notifications by @piorpua in https://github.com/iOfficeAI/AionUi/pull/4195\n* feat(conversation): distinguish waiting-for-user state in sidebar and notify by @piorpua in https://github.com/iOfficeAI/AionUi/pull/4198\n* chore: bump version to 2.2.1 by @piorpua in https://github.com/iOfficeAI/AionUi/pull/4200\n\n\n**Full Changelog**: https://github.com/iOfficeAI/AionUi/compare/v2.2.0...v2.2.1\n\n---\n\n## \ud83d\udce6 Download\n\nInstallers are no longer published on GitHub. Download the latest build from the official website \u2014 **https://www.aionui.com/**\n","mentions_count":1}
+{"id":385325500,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOPZ417s4W95m8","tag_name":"v2.2.2","target_commitish":"main","name":"v2.2.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-09T07:56:13Z","updated_at":"2026-09-09T11:32:13Z","published_at":"2026-09-09T11:29:49Z","assets":[],"body":"## Highlights\n\n### Explorer: tab-scoped refresh and Collapse All\n- The Files and Changes panel now has a single top-bar Refresh button that does the right thing per tab: on Files it re-mounts every root and revalidates project detail; on Changes it re-discovers repositories and re-pulls their status.\n- A git worktree created inside an already-open project now shows up on the Changes tab after a single refresh \u2014 no more switching projects away and back to make it appear.\n- The Refresh button tracks real in-flight state (busy/spinner) and ignores repeated clicks until the refresh completes.\n- New Collapse All action (Files tab) collapses the whole file tree in one click.\n- The toolbar was regrouped to match VS Code: project actions (add folder, open workspace) first, view actions (refresh, collapse-all) at the far right, and tooltips on the right-docked panel are anchored so short labels no longer wrap. The scattered right-click \"Refresh\" and Changes-header refresh entries were consolidated into this single control.\n\n### Engine updates (AionCore v0.2.1 \u2192 v0.2.2)\n- Added agent-driven conversation creation, letting an agent start new conversations programmatically \u2014 supporting the cross-conversation (@@) messaging capabilities introduced in earlier releases.\n\n## What's Changed\n* feat(explorer): tab-scoped refresh with repo re-discovery and Collapse All by @piorpua in https://github.com/iOfficeAI/AionUi/pull/4202\n* chore(docs): update WeChat group QR code to wx-23 by @IceyLiu in https://github.com/iOfficeAI/AionUi/pull/4229\n* chore(docs): remove orphaned WeChat QR image wx-16.png by @IceyLiu in https://github.com/iOfficeAI/AionUi/pull/4230\n* chore: bump version to 2.2.2 by @piorpua in https://github.com/iOfficeAI/AionUi/pull/4236\n\n\n**Full Changelog**: https://github.com/iOfficeAI/AionUi/compare/v2.2.1...v2.2.2\n\n---\n\n## \ud83d\udce6 Download\n\nInstallers are no longer published on GitHub. Download the latest build from the official website \u2014 **https://www.aionui.com/**\n","mentions_count":2}

@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.3.0"
   latestRelease: "v0.3.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-08T11:21:51Z
+  collectedAt: 2026-09-09T19:30:21Z
 timeline:
   created: 2026-06-25
   lastCommit: 2026-07-19
@@ -27,7 +27,7 @@ language:
 totalBytes: 17260
 recent:
   last30d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 0
     mergedPR: 0
     openPR: 2
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-10
+    since: 2026-07-11
     release: 0
     mergedPR: 1
     openPR: 8
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 1
   last90d:
-    since: 2026-06-10
+    since: 2026-06-11
     release: 2
     mergedPR: 24
     openPR: 8
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 34
   last180d:
-    since: 2026-03-12
+    since: 2026-03-13
     release: 2
     mergedPR: 24
     openPR: 8
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 34
   last360d:
-    since: 2025-09-13
+    since: 2025-09-14
     release: 2
     mergedPR: 24
     openPR: 8
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 34
   last720d:
-    since: 2024-09-18
+    since: 2024-09-19
     release: 2
     mergedPR: 24
     openPR: 8
@@ -83,7 +83,7 @@ total:
   commit: 34
 ---
 path: /home/runner/.x-repo/github.com/ljh-sh/silk
-collectedAt: 2026-09-08T11:21:51Z
+collectedAt: 2026-09-09T19:30:22Z
 loc:
   Rust:
     code: 417
@@ -116,7 +116,7 @@ total:
   blanks: 266
   files: 23
 ---
-date: "2026-09-01T12:41:21Z"
+date: "2026-09-08T12:14:46Z"
 repo:
   name: github.com/ljh-sh/silk
   commit: 049e1871dc260999f5415ea1053b176354f2b9d2
@@ -125,33 +125,41 @@ scorecard:
   commit: c22063e786c11f9dd714d777a687ff7c4599b600
 score: 7.2
 checks:
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Code-Review
-    score: 1
-    reason: Found 4/23 approved changesets -- score normalized to 1
-    details: null
   - name: Maintained
     score: 0
     reason: project was created within the last 90 days. Please review its contents carefully
     details:
       - 'Warn: Repository was created within the last 90 days.'
-  - name: Dangerous-Workflow
+  - name: Binary-Artifacts
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: no binaries found in the repo
     details: null
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: SECURITY.md:1'
+      - 'Info: Found linked content: SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
+      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 1
+    reason: Found 4/23 approved changesets -- score normalized to 1
+    details: null
   - name: Dependency-Update-Tool
     score: 10
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -172,28 +180,14 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:42: update your workflow using https://app.stepsecurity.io/secureworkflow/ljh-sh/silk/release.yml/main?enable=pin'
       - 'Info:  14 out of  14 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   6 out of   8 third-party GitHubAction dependencies pinned'
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: SECURITY.md:1'
-      - 'Info: Found linked content: SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
-      - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
   - name: Vulnerabilities
     score: 10
     reason: 0 existing vulnerabilities detected
     details: null
-  - name: License
-    score: 9
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Warn: project license file does not contain an FSF or OSI license.'
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
   - name: Signed-Releases
     score: 8
     reason: 2 out of the last 2 releases have a total of 2 signed artifacts.
@@ -213,6 +207,12 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 9
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Warn: project license file does not contain an FSF or OSI license.'
   - name: Branch-Protection
     score: 8
     reason: branch protection is not maximal on development and all release branches

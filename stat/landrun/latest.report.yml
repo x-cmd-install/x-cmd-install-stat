@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.1.17"
   latestRelease: "v0.1.17"
   latestPrerelease: ""
-  collectedAt: 2026-09-08T12:04:17Z
+  collectedAt: 2026-09-09T20:26:52Z
 timeline:
   created: 2025-03-21
   lastCommit: 2026-07-23
@@ -17,7 +17,7 @@ timeline:
 popularity:
   star: 2285
   watcher: 19
-  fork: 52
+  fork: 53
   release: 10
   contributor: 11
   pullRequest: 16
@@ -28,7 +28,7 @@ language:
 totalBytes: 72104
 recent:
   last30d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-10
+    since: 2026-07-11
     release: 2
     mergedPR: 2
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 9
   last90d:
-    since: 2026-06-10
+    since: 2026-06-11
     release: 2
     mergedPR: 2
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 1
     commit: 9
   last180d:
-    since: 2026-03-12
+    since: 2026-03-13
     release: 2
     mergedPR: 2
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 1
     commit: 9
   last360d:
-    since: 2025-09-13
+    since: 2025-09-14
     release: 2
     mergedPR: 6
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 2
     commit: 15
   last720d:
-    since: 2024-09-18
+    since: 2024-09-19
     release: 10
     mergedPR: 14
     openPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 112
 ---
 path: /home/runner/.x-repo/github.com/Zouuup/landrun
-collectedAt: 2026-09-08T12:04:18Z
+collectedAt: 2026-09-09T20:26:54Z
 loc:
   Go:
     code: 1573
@@ -114,4 +114,4 @@ total:
 ---
 
 ---
-{"id":358163277,"author":{"login":"Zouuup","id":1652854,"node_id":"MDQ6VXNlcjE2NTI4NTQ=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOOMhOJc4VWSNN","tag_name":"v0.1.17","target_commitish":"main","name":"v0.1.17 - Landlock ABI v9 support","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-07-22T16:27:20Z","updated_at":"2026-07-22T18:40:21Z","published_at":"2026-07-22T16:29:10Z","assets":[{"id":486175444,"node_id":"RA_kwDOOMhOJc4c-nLU","name":"landrun-linux-amd64","label":null,"uploader":{"login":"Zouuup","id":1652854,"node_id":"MDQ6VXNlcjE2NTI4NTQ=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":6544872,"digest":"sha256:6ada66a06669e8994e174a7271af2db636308e55a0d6ec896cc7d326b46727f6","download_count":898,"created_at":"2026-07-22T16:39:33Z","updated_at":"2026-07-22T16:39:34Z"},{"id":486175420,"node_id":"RA_kwDOOMhOJc4c-nK8","name":"landrun-linux-arm64","label":null,"uploader":{"login":"Zouuup","id":1652854,"node_id":"MDQ6VXNlcjE2NTI4NTQ=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":6206112,"digest":"sha256:365d8c8656c732b14d70e621d972cb733e490621fb5b9c0876376bcf457dbb5d","download_count":171,"created_at":"2026-07-22T16:39:32Z","updated_at":"2026-07-22T16:39:33Z"}],"body":"## v0.1.17 \u2014 Landlock ABI v9 support\r\n\r\nlandrun now targets **Landlock ABI v9** (via go-landlock v0.9.0), adding\r\nIPC scoping, UNIX-socket connect controls, and audit-logging\r\nconfiguration on top of the existing filesystem and TCP restrictions.\r\n\r\n### \u26a0\ufe0f Breaking changes\r\n- The default target is now Landlock ABI v9 in **strict** mode. On\r\n  kernels that don't support v9, commands now fail unless you pass\r\n  `--best-effort` (which gracefully degrades to the best ABI your kernel\r\n  supports). Most users on current kernels will want `--best-effort`.\r\n- Building from source now requires **Go 1.24+**.\r\n- **New default restriction \u2014 IPC scoping:** sandboxed processes can no\r\n  longer connect to abstract UNIX sockets or signal processes outside\r\n  their Landlock domain (ABI v6+). Relax with `--unrestricted-scoped` if\r\n  this breaks your workload (e.g. some X11 / D-Bus setups).\r\n- **New default restriction \u2014 pathname UNIX sockets:** on ABI v9+\r\n  kernels, connecting to UNIX sockets created outside the sandbox (DNS\r\n  via nscd, D-Bus, database sockets, etc.) is restricted. Allow specific\r\n  sockets with `--unix <path>`.\r\n\r\n### \u2728 New features\r\n- `--unix <path>`: allow `connect(2)`/`sendmsg(2)` on a pathname UNIX\r\n  domain socket (ABI v9+).\r\n- `--unrestricted-scoped`: opt out of IPC scoping (ABI v6+).\r\n- `--ignore-missing`: gracefully ignore paths that don't exist instead\r\n  of erroring.\r\n- `--log-disable-originating`, `--log-enable-subprocesses`,\r\n  `--log-disable-subdomains`: configure audit logging of Landlock\r\n  denials (ABI v7+).\r\n- Automatic multithreaded enforcement via thread synchronization\r\n  (TSYNC, ABI v8) when supported by the kernel.\r\n\r\n### \ud83d\udd27 Internal / maintenance\r\n- Upgraded `go-landlock` to `v0.9.0` and `golang.org/x/sys` to `v0.40.0`.\r\n- Reworked the restriction engine to enforce all requested domains in a\r\n  single ruleset layer, fixing `refer` handling in mixed\r\n  restricted/unrestricted configurations.\r\n- CI: dropped Go 1.22 from the compatibility matrix (now 1.24 + stable).\r\n- Expanded README (kernel compatibility table V6\u2013V9, Multipath-TCP\r\n  caveat, new examples) and test suite.\r\n\r\n### \ud83d\udccb Kernel compatibility\r\n| Feature | Min kernel | ABI |\r\n| --- | --- | --- |\r\n| IPC scoping (abstract UNIX sockets, signals) | 6.12 | 6 |\r\n| Audit logging of denials | 6.15 | 7 |\r\n| Thread synchronization (TSYNC) | 7.0 | 8 |\r\n| Pathname UNIX socket connect/sendmsg control | latest | 9 |\r\n\r\n> Note: Landlock's TCP restrictions apply only to \"classic\" TCP sockets.\r\n> Since Go 1.24, `net.Listen` defaults to Multipath TCP and cannot\r\n> currently be restricted by Landlock.","reactions":{"total_count":3,"+1":0,"-1":0,"laugh":0,"hooray":3,"confused":0,"heart":0,"rocket":0,"eyes":0}}
+{"id":358163277,"author":{"login":"Zouuup","id":1652854,"node_id":"MDQ6VXNlcjE2NTI4NTQ=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOOMhOJc4VWSNN","tag_name":"v0.1.17","target_commitish":"main","name":"v0.1.17 - Landlock ABI v9 support","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-07-22T16:27:20Z","updated_at":"2026-07-22T18:40:21Z","published_at":"2026-07-22T16:29:10Z","assets":[{"id":486175444,"node_id":"RA_kwDOOMhOJc4c-nLU","name":"landrun-linux-amd64","label":null,"uploader":{"login":"Zouuup","id":1652854,"node_id":"MDQ6VXNlcjE2NTI4NTQ=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":6544872,"digest":"sha256:6ada66a06669e8994e174a7271af2db636308e55a0d6ec896cc7d326b46727f6","download_count":934,"created_at":"2026-07-22T16:39:33Z","updated_at":"2026-07-22T16:39:34Z"},{"id":486175420,"node_id":"RA_kwDOOMhOJc4c-nK8","name":"landrun-linux-arm64","label":null,"uploader":{"login":"Zouuup","id":1652854,"node_id":"MDQ6VXNlcjE2NTI4NTQ=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":6206112,"digest":"sha256:365d8c8656c732b14d70e621d972cb733e490621fb5b9c0876376bcf457dbb5d","download_count":174,"created_at":"2026-07-22T16:39:32Z","updated_at":"2026-07-22T16:39:33Z"}],"body":"## v0.1.17 \u2014 Landlock ABI v9 support\r\n\r\nlandrun now targets **Landlock ABI v9** (via go-landlock v0.9.0), adding\r\nIPC scoping, UNIX-socket connect controls, and audit-logging\r\nconfiguration on top of the existing filesystem and TCP restrictions.\r\n\r\n### \u26a0\ufe0f Breaking changes\r\n- The default target is now Landlock ABI v9 in **strict** mode. On\r\n  kernels that don't support v9, commands now fail unless you pass\r\n  `--best-effort` (which gracefully degrades to the best ABI your kernel\r\n  supports). Most users on current kernels will want `--best-effort`.\r\n- Building from source now requires **Go 1.24+**.\r\n- **New default restriction \u2014 IPC scoping:** sandboxed processes can no\r\n  longer connect to abstract UNIX sockets or signal processes outside\r\n  their Landlock domain (ABI v6+). Relax with `--unrestricted-scoped` if\r\n  this breaks your workload (e.g. some X11 / D-Bus setups).\r\n- **New default restriction \u2014 pathname UNIX sockets:** on ABI v9+\r\n  kernels, connecting to UNIX sockets created outside the sandbox (DNS\r\n  via nscd, D-Bus, database sockets, etc.) is restricted. Allow specific\r\n  sockets with `--unix <path>`.\r\n\r\n### \u2728 New features\r\n- `--unix <path>`: allow `connect(2)`/`sendmsg(2)` on a pathname UNIX\r\n  domain socket (ABI v9+).\r\n- `--unrestricted-scoped`: opt out of IPC scoping (ABI v6+).\r\n- `--ignore-missing`: gracefully ignore paths that don't exist instead\r\n  of erroring.\r\n- `--log-disable-originating`, `--log-enable-subprocesses`,\r\n  `--log-disable-subdomains`: configure audit logging of Landlock\r\n  denials (ABI v7+).\r\n- Automatic multithreaded enforcement via thread synchronization\r\n  (TSYNC, ABI v8) when supported by the kernel.\r\n\r\n### \ud83d\udd27 Internal / maintenance\r\n- Upgraded `go-landlock` to `v0.9.0` and `golang.org/x/sys` to `v0.40.0`.\r\n- Reworked the restriction engine to enforce all requested domains in a\r\n  single ruleset layer, fixing `refer` handling in mixed\r\n  restricted/unrestricted configurations.\r\n- CI: dropped Go 1.22 from the compatibility matrix (now 1.24 + stable).\r\n- Expanded README (kernel compatibility table V6\u2013V9, Multipath-TCP\r\n  caveat, new examples) and test suite.\r\n\r\n### \ud83d\udccb Kernel compatibility\r\n| Feature | Min kernel | ABI |\r\n| --- | --- | --- |\r\n| IPC scoping (abstract UNIX sockets, signals) | 6.12 | 6 |\r\n| Audit logging of denials | 6.15 | 7 |\r\n| Thread synchronization (TSYNC) | 7.0 | 8 |\r\n| Pathname UNIX socket connect/sendmsg control | latest | 9 |\r\n\r\n> Note: Landlock's TCP restrictions apply only to \"classic\" TCP sockets.\r\n> Since Go 1.24, `net.Listen` defaults to Multipath TCP and cannot\r\n> currently be restricted by Landlock.","reactions":{"total_count":3,"+1":0,"-1":0,"laugh":0,"hooray":3,"confused":0,"heart":0,"rocket":0,"eyes":0}}

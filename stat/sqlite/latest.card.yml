@@ -2,24 +2,28 @@ about:
   description: "Official Git mirror of the SQLite source tree"
   license: NOASSERTION
   homepage: 
-  head: f3b9f74
+  head: 220b580
   archived: false
   latestVersion: ""
-  collectedAt: 2026-09-08T03:11:09Z
+  latestRelease: ""
+  latestPrerelease: ""
+  collectedAt: 2026-09-09T20:26:15Z
 timeline:
   created: 2019-03-18
-  lastCommit: 2026-09-04
+  lastCommit: 2026-09-09
+  lastVersion: 
   lastRelease: 
+  lastPrerelease: 
 popularity:
-  star: 10437
+  star: 10444
   watcher: 149
-  fork: 1644
+  fork: 1647
   release: 0
   contributor: 1
   pullRequest: 47
   issue: 0
 language:
-  C: 14925156
+  C: 14925251
   Tcl: 1394990
   JavaScript: 1069320
   Java: 471722
@@ -32,10 +36,10 @@ language:
   PLpgSQL: 5955
   Roff: 5315
   CSS: 2823
-totalBytes: 18457809
+totalBytes: 18457904
 recent:
   last30d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 0
     mergedPR: 0
     openPR: 1
@@ -43,7 +47,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-10
+    since: 2026-07-11
     release: 0
     mergedPR: 0
     openPR: 2
@@ -51,15 +55,15 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-10
+    since: 2026-06-11
     release: 0
     mergedPR: 0
-    openPR: 4
+    openPR: 3
     closedIssue: 0
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-12
+    since: 2026-03-13
     release: 0
     mergedPR: 0
     openPR: 4
@@ -67,7 +71,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-13
+    since: 2025-09-14
     release: 0
     mergedPR: 0
     openPR: 9
@@ -75,26 +79,26 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-09-18
+    since: 2024-09-19
     release: 0
     mergedPR: 0
     openPR: 13
     closedIssue: 0
     openIssue: 0
-    commit: 3791
+    commit: 3788
 total:
   release: 0
   mergedPR: 0
   openPR: 23
   closedIssue: 0
   openIssue: 0
-  commit: 32438
+  commit: 32439
 ---
 path: /home/runner/.x-repo/github.com/sqlite/sqlite
-collectedAt: 2026-09-08T03:12:41Z
+collectedAt: 2026-09-09T20:28:03Z
 loc:
   C:
-    code: 304953
+    code: 304957
     comments: 90068
     blanks: 27233
     files: 315
@@ -139,10 +143,10 @@ loc:
     blanks: 223
     files: 3
   Sql:
-    code: 1525
+    code: 1561
     comments: 26
-    blanks: 72
-    files: 13
+    blanks: 73
+    files: 14
   Makefile:
     code: 1455
     comments: 780
@@ -184,23 +188,28 @@ loc:
     blanks: 229
     files: 18
 total:
-  code: 405279
+  code: 405319
   comments: 159684
-  blanks: 37252
-  files: 688
+  blanks: 37253
+  files: 689
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/sqlite/sqlite
-  commit: 8ded81032221fd3d1d5d19868f63715a74dd469b
+  commit: f3b9f74d81132426dee1ccc07a67fdad2ccfeaa9
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 4.5
 checks:
-  - name: Token-Permissions
+  - name: Packaging
     score: -1
-    reason: No tokens found
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Code-Review
     score: 0
@@ -210,18 +219,22 @@ checks:
     score: -1
     reason: no workflows found
     details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Packaging
+  - name: Token-Permissions
     score: -1
-    reason: packaging workflow not detected
+    reason: No tokens found
+    details: null
+  - name: SAST
+    score: 0
+    reason: no SAST tool detected
     details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+      - 'Warn: no pull requests merged into dev branch'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Security-Policy
     score: 0
@@ -237,24 +250,15 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE.md:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
-  - name: SAST
-    score: 0
-    reason: no SAST tool detected
-    details:
-      - 'Warn: no pull requests merged into dev branch'
-  - name: Signed-Releases
+  - name: Pinned-Dependencies
     score: -1
-    reason: no releases found
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
+    reason: no dependencies found
     details:
-      - 'Warn: branch protection not enabled for branch ''master'''
+      - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered (: autosetup/autosetup:0'
+      - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered (: ext/fts5/tool/mkfts5c.tcl:0'
+      - 'Info: Possibly incomplete results: error parsing shell code: | can only immediately follow a statement: test/speedtest.tcl:0'
+      - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered (: test/testrunner.tcl:0'
+      - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered (: tool/cg_anno.tcl:0'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -269,20 +273,13 @@ checks:
       - 'Info: CLibFuzzer integration found: test/ossfuzz.c:119'
       - 'Info: CLibFuzzer integration found: test/ossshell.c:24'
       - 'Info: CLibFuzzer integration found: test/ossshell.c:92'
-  - name: Pinned-Dependencies
+  - name: Signed-Releases
     score: -1
-    reason: no dependencies found
+    reason: no releases found
+    details: null
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
     details:
-      - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered (: autosetup/autosetup:0'
-      - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered (: ext/fts5/tool/mkfts5c.tcl:0'
-      - 'Info: Possibly incomplete results: error parsing shell code: | can only immediately follow a statement: test/speedtest.tcl:0'
-      - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered (: test/testrunner.tcl:0'
-      - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered (: tool/cg_anno.tcl:0'
+      - 'Warn: branch protection not enabled for branch ''master'''
 ---
-platform	name	url	size	score
-darwin/arm64			
-darwin/amd64			
-linux/arm64			
-linux/amd64			
-win/arm64			
-win/amd64			

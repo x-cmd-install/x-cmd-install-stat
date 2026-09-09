@@ -7,7 +7,7 @@ about:
   latestVersion: "1.4.5"
   latestRelease: "1.4.5"
   latestPrerelease: "0.8.18-beta2"
-  collectedAt: 2026-09-08T11:23:55Z
+  collectedAt: 2026-09-09T19:42:20Z
 timeline:
   created: 2014-05-30
   lastCommit: 2026-01-27
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2023-10-03
   lastPrerelease: 2016-01-18
 popularity:
-  star: 3133
+  star: 3135
   watcher: 105
-  fork: 395
+  fork: 396
   release: 28
   contributor: 128
-  pullRequest: 963
+  pullRequest: 964
   issue: 668
 language:
   C: 2500117
@@ -32,7 +32,7 @@ language:
 totalBytes: 2758301
 recent:
   last30d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 0
     mergedPR: 0
     openPR: 2
@@ -40,7 +40,7 @@ recent:
     openIssue: 4
     commit: 0
   last60d:
-    since: 2026-07-10
+    since: 2026-07-11
     release: 0
     mergedPR: 0
     openPR: 4
@@ -48,7 +48,7 @@ recent:
     openIssue: 4
     commit: 0
   last90d:
-    since: 2026-06-10
+    since: 2026-06-11
     release: 0
     mergedPR: 0
     openPR: 9
@@ -56,7 +56,7 @@ recent:
     openIssue: 4
     commit: 0
   last180d:
-    since: 2026-03-12
+    since: 2026-03-13
     release: 0
     mergedPR: 0
     openPR: 12
@@ -64,7 +64,7 @@ recent:
     openIssue: 10
     commit: 0
   last360d:
-    since: 2025-09-13
+    since: 2025-09-14
     release: 0
     mergedPR: 12
     openPR: 16
@@ -72,7 +72,7 @@ recent:
     openIssue: 15
     commit: 18
   last720d:
-    since: 2024-09-18
+    since: 2024-09-19
     release: 0
     mergedPR: 37
     openPR: 21
@@ -88,7 +88,7 @@ total:
   commit: 6931
 ---
 path: /home/runner/.x-repo/github.com/irssi/irssi
-collectedAt: 2026-09-08T11:23:57Z
+collectedAt: 2026-09-09T19:42:22Z
 loc:
   C:
     code: 60187
@@ -151,18 +151,22 @@ total:
   blanks: 18895
   files: 571
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/irssi/irssi
   commit: 43f1727ef9fe1cb51d5031ee2dd0e1965217e4cb
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
-score: 4.8
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+score: 5.1
 checks:
+  - name: Code-Review
+    score: 3
+    reason: Found 4/12 approved changesets -- score normalized to 3
+    details: null
   - name: Maintained
-    score: 2
-    reason: 0 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 2
+    score: 5
+    reason: 0 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 5
     details: null
   - name: Dangerous-Workflow
     score: 10
@@ -173,13 +177,9 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 3
-    reason: Found 4/12 approved changesets -- score normalized to 3
-    details: null
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -195,10 +195,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/trigger-pages.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/voiddocker.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -236,6 +232,10 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/voiddocker.yml:40: update your workflow using https://app.stepsecurity.io/secureworkflow/irssi/irssi/voiddocker.yml/master?enable=pin'
       - 'Info:   0 out of  26 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   5 third-party GitHubAction dependencies pinned'
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -259,6 +259,10 @@ checks:
     details:
       - 'Info: project has a license file: COPYING:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -273,10 +277,6 @@ checks:
       - 'Warn: release artifact 1.4.3 does not have provenance: https://api.github.com/repos/irssi/irssi/releases/81453355'
       - 'Warn: release artifact 1.4.2 does not have provenance: https://api.github.com/repos/irssi/irssi/releases/71929959'
       - 'Warn: release artifact 1.4.1 does not have provenance: https://api.github.com/repos/irssi/irssi/releases/68759929'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

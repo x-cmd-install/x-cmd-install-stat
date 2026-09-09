@@ -7,7 +7,7 @@ about:
   latestVersion: "2026.3.0"
   latestRelease: "2026.3.0"
   latestPrerelease: "2025.2.1-ofek-1"
-  collectedAt: 2026-09-08T12:40:57Z
+  collectedAt: 2026-09-09T06:24:30Z
 timeline:
   created: 2020-04-04
   lastCommit: 2026-06-10
@@ -28,7 +28,7 @@ language:
 totalBytes: 45591
 recent:
   last30d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-10
+    since: 2026-07-11
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-10
+    since: 2026-06-11
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-12
+    since: 2026-03-13
     release: 1
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 8
   last360d:
-    since: 2025-09-13
+    since: 2025-09-14
     release: 2
     mergedPR: 2
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 16
   last720d:
-    since: 2024-09-18
+    since: 2024-09-19
     release: 10
     mergedPR: 29
     openPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 347
 ---
 path: /home/runner/.x-repo/github.com/nickgerace/gfold
-collectedAt: 2026-09-08T12:40:59Z
+collectedAt: 2026-09-09T06:24:30Z
 loc:
   Rust:
     code: 949
@@ -107,27 +107,36 @@ total:
   blanks: 576
   files: 22
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/nickgerace/gfold
   commit: a59fb93a0478093cf44ccc18aca5fa7da93fcb17
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
-score: 3
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+score: 2.8
 checks:
-  - name: Code-Review
-    score: 0
-    reason: Found 0/30 approved changesets -- score normalized to 0
-    details: null
   - name: Maintained
-    score: 2
-    reason: 3 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 2
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Code-Review
+    score: 0
+    reason: Found 0/30 approved changesets -- score normalized to 0
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -136,11 +145,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/release-dry-run.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -160,19 +164,10 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:114: update your workflow using https://app.stepsecurity.io/secureworkflow/nickgerace/gfold/release.yml/main?enable=pin'
       - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of  10 third-party GitHubAction dependencies pinned'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -181,16 +176,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -205,6 +201,10 @@ checks:
       - 'Warn: release artifact 2025.9.0 does not have provenance: https://api.github.com/repos/nickgerace/gfold/releases/244154548'
       - 'Warn: release artifact 2025.8.0 does not have provenance: https://api.github.com/repos/nickgerace/gfold/releases/241009947'
       - 'Warn: release artifact 2025.7.0 does not have provenance: https://api.github.com/repos/nickgerace/gfold/releases/236427801'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

@@ -7,7 +7,7 @@ about:
   latestVersion: "v4.3.2"
   latestRelease: "v4.3.2"
   latestPrerelease: ""
-  collectedAt: 2026-09-08T12:12:14Z
+  collectedAt: 2026-09-09T20:29:45Z
 timeline:
   created: 2015-08-16
   lastCommit: 2021-11-13
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2021-01-21
   lastPrerelease: 
 popularity:
-  star: 6204
+  star: 6203
   watcher: 3
   fork: 537
   release: 36
@@ -30,7 +30,7 @@ language:
 totalBytes: 157692
 recent:
   last30d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-10
+    since: 2026-07-11
     release: 0
     mergedPR: 0
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-10
+    since: 2026-06-11
     release: 0
     mergedPR: 0
     openPR: 0
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-12
+    since: 2026-03-13
     release: 0
     mergedPR: 0
     openPR: 0
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-13
+    since: 2025-09-14
     release: 0
     mergedPR: 0
     openPR: 0
@@ -70,7 +70,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-09-18
+    since: 2024-09-19
     release: 0
     mergedPR: 0
     openPR: 0
@@ -86,7 +86,7 @@ total:
   commit: 997
 ---
 path: /home/runner/.x-repo/github.com/jarun/googler
-collectedAt: 2026-09-08T12:12:15Z
+collectedAt: 2026-09-09T20:29:47Z
 loc:
   Python:
     code: 3213
@@ -134,15 +134,29 @@ total:
   blanks: 627
   files: 9
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/jarun/googler
   commit: f55837974ae0566acd8125f59f5948be20e03b41
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 2.8
 checks:
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Maintained
+    score: 0
+    reason: project is archived
+    details:
+      - 'Warn: Repository is archived.'
   - name: Code-Review
     score: 3
     reason: Found 9/23 approved changesets -- score normalized to 3
@@ -151,29 +165,6 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
-    score: 0
-    reason: project is archived
-    details:
-      - 'Warn: Repository is archived.'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/build-and-upload-artifacts.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/lock.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/stylecheck.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -194,10 +185,24 @@ checks:
       - 'Info:   0 out of   6 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   6 pipCommand dependencies pinned'
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/build-and-upload-artifacts.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/lock.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/stylecheck.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -206,11 +211,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected

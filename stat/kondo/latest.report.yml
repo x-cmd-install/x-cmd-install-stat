@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.9"
   latestRelease: "v0.9"
   latestPrerelease: ""
-  collectedAt: 2026-09-08T11:13:50Z
+  collectedAt: 2026-09-09T19:46:36Z
 timeline:
   created: 2020-01-27
   lastCommit: 2026-01-28
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-01-23
   lastPrerelease: 
 popularity:
-  star: 2388
+  star: 2389
   watcher: 12
   fork: 69
   release: 9
@@ -28,7 +28,7 @@ language:
 totalBytes: 58978
 recent:
   last30d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 0
     mergedPR: 0
     openPR: 1
@@ -36,7 +36,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-10
+    since: 2026-07-11
     release: 0
     mergedPR: 0
     openPR: 2
@@ -44,7 +44,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-06-10
+    since: 2026-06-11
     release: 0
     mergedPR: 0
     openPR: 2
@@ -52,7 +52,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-03-12
+    since: 2026-03-13
     release: 0
     mergedPR: 0
     openPR: 4
@@ -60,7 +60,7 @@ recent:
     openIssue: 4
     commit: 0
   last360d:
-    since: 2025-09-13
+    since: 2025-09-14
     release: 1
     mergedPR: 4
     openPR: 6
@@ -68,7 +68,7 @@ recent:
     openIssue: 6
     commit: 12
   last720d:
-    since: 2024-09-18
+    since: 2024-09-19
     release: 1
     mergedPR: 16
     openPR: 8
@@ -84,7 +84,7 @@ total:
   commit: 272
 ---
 path: /home/runner/.x-repo/github.com/tbillington/kondo
-collectedAt: 2026-09-08T11:13:51Z
+collectedAt: 2026-09-09T19:46:37Z
 loc:
   Rust:
     code: 1587
@@ -112,32 +112,44 @@ total:
   blanks: 294
   files: 14
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/tbillington/kondo
   commit: 1d351ca80b3d3adfad9bbe7db872c27359190210
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
-score: 3.1
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+score: 3
 checks:
   - name: Code-Review
     score: 5
     reason: Found 12/21 approved changesets -- score normalized to 5
     details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
-    score: 1
-    reason: 0 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 1
-    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/deploys.yaml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/lint.yaml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/tests.yaml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -165,18 +177,6 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/tests.yaml:53: update your workflow using https://app.stepsecurity.io/secureworkflow/tbillington/kondo/tests.yaml/master?enable=pin'
       - 'Info:   0 out of  12 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   9 third-party GitHubAction dependencies pinned'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/deploys.yaml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/lint.yaml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/tests.yaml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -189,17 +189,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -225,4 +225,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 23 are checked with a SAST tool'
 ---
-{"id":279237968,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDODhds8c4QpNVQ","tag_name":"v0.9","target_commitish":"master","name":"v0.9","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-01-23T04:49:07Z","updated_at":"2026-01-23T05:15:00Z","published_at":"2026-01-23T04:52:37Z","assets":[{"id":344632608,"node_id":"RA_kwDODhds8c4Uiq0g","name":"kondo-aarch64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":1034232,"digest":"sha256:847d2f5d8fb242d8fc1eb64b08fba4b8ed9567bef7fb7ff23a7b8c7fd11fc3bc","download_count":48,"created_at":"2026-01-23T04:54:13Z","updated_at":"2026-01-23T04:54:13Z"},{"id":344632402,"node_id":"RA_kwDODhds8c4UiqxS","name":"kondo-aarch64-unknown-linux-gnu.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":1046726,"digest":"sha256:531cfc381e851300878e20f77ebd58724ddc28ecf5e48bec654f630f0bfc7fb0","download_count":20,"created_at":"2026-01-23T04:52:43Z","updated_at":"2026-01-23T04:52:43Z"},{"id":344632630,"node_id":"RA_kwDODhds8c4Uiq02","name":"kondo-x86_64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":1115970,"digest":"sha256:aa1500e275cefe8d8a7c84ef17367c00fcff5de2b2e595d4be91db940d69ff1d","download_count":22,"created_at":"2026-01-23T04:54:28Z","updated_at":"2026-01-23T04:54:29Z"},{"id":344632458,"node_id":"RA_kwDODhds8c4UiqyK","name":"kondo-x86_64-pc-windows-msvc.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":958920,"digest":"sha256:4c70e7de85bfaf1b66de931654e9943681af42b093cd591530fc0dd4cc4a0f88","download_count":571,"created_at":"2026-01-23T04:53:03Z","updated_at":"2026-01-23T04:53:03Z"},{"id":344632388,"node_id":"RA_kwDODhds8c4UiqxE","name":"kondo-x86_64-unknown-linux-gnu.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":1153136,"digest":"sha256:56f89890fd4e16cf5e11bb212bb812b60a8319dabfb05fabaf80c6c8b5133b65","download_count":210,"created_at":"2026-01-23T04:52:37Z","updated_at":"2026-01-23T04:52:37Z"},{"id":344632450,"node_id":"RA_kwDODhds8c4UiqyC","name":"kondo-x86_64-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":1192015,"digest":"sha256:b8855f3ba710661d9d2fb37a32919531697e020b2c0973dc46b1ac52a38048bc","download_count":484,"created_at":"2026-01-23T04:53:00Z","updated_at":"2026-01-23T04:53:00Z"}],"body":"This is the 0.9 release, finally \ud83d\ude05 \r\n\r\nIt adds support for 5 new project types (up to 24 total), dry runs, and a \"single key\" mode to make using the cli even speedier!\r\n\r\nAs always, thank you to all the new and existing contributors for their efforts <3\r\n\r\n## Added\r\n* Add Pixi support by @gzsombor in https://github.com/tbillington/kondo/pull/119\r\n* add: turborepo support by @alimehasin in https://github.com/tbillington/kondo/pull/125\r\n* feat: add `dry-run` option by @Rodrigodd in https://github.com/tbillington/kondo/pull/133\r\n* Support Haskell cabal projects by @SanchayanMaity in https://github.com/tbillington/kondo/pull/143\r\n* feat: add support for react-native projects (closes #148) by @mgcrea in https://github.com/tbillington/kondo/pull/173\r\n* feat: add support for terraform by @WookiesRpeople2 in https://github.com/tbillington/kondo/pull/170\r\n* Add a \"single key\" mode by @cstyles in https://github.com/tbillington/kondo/pull/163\r\n\r\n\r\n## Improvements\r\n* Fix: Add .zig-cache and zig-out dirs to zig project by @Tomcat-42 in https://github.com/tbillington/kondo/pull/147\r\n* Update README.md with winget install command by @licon4812 in https://github.com/tbillington/kondo/pull/116\r\n* added windows GUI install to readme by @licon4812 in https://github.com/tbillington/kondo/pull/129\r\n* readme: add MacPorts install info by @herbygillot in https://github.com/tbillington/kondo/pull/130\r\n* chore(ci): build with `--locked` flag by @orhun in https://github.com/tbillington/kondo/pull/115\r\n\r\n## New Contributors\r\n* @licon4812 made their first contribution in https://github.com/tbillington/kondo/pull/116\r\n* @alimehasin made their first contribution in https://github.com/tbillington/kondo/pull/125\r\n* @herbygillot made their first contribution in https://github.com/tbillington/kondo/pull/130\r\n* @Rodrigodd made their first contribution in https://github.com/tbillington/kondo/pull/133\r\n* @SanchayanMaity made their first contribution in https://github.com/tbillington/kondo/pull/143\r\n* @Tomcat-42 made their first contribution in https://github.com/tbillington/kondo/pull/147\r\n* @jarjk made their first contribution in https://github.com/tbillington/kondo/pull/172\r\n* @mgcrea made their first contribution in https://github.com/tbillington/kondo/pull/173\r\n* @WookiesRpeople2 made their first contribution in https://github.com/tbillington/kondo/pull/170\r\n* @cstyles made their first contribution in https://github.com/tbillington/kondo/pull/163\r\n\r\n**Full Changelog**: https://github.com/tbillington/kondo/compare/v0.8...v0.9","reactions":{"total_count":4,"+1":0,"-1":0,"laugh":0,"hooray":2,"confused":0,"heart":2,"rocket":0,"eyes":0},"mentions_count":12}
+{"id":279237968,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDODhds8c4QpNVQ","tag_name":"v0.9","target_commitish":"master","name":"v0.9","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-01-23T04:49:07Z","updated_at":"2026-01-23T05:15:00Z","published_at":"2026-01-23T04:52:37Z","assets":[{"id":344632608,"node_id":"RA_kwDODhds8c4Uiq0g","name":"kondo-aarch64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":1034232,"digest":"sha256:847d2f5d8fb242d8fc1eb64b08fba4b8ed9567bef7fb7ff23a7b8c7fd11fc3bc","download_count":50,"created_at":"2026-01-23T04:54:13Z","updated_at":"2026-01-23T04:54:13Z"},{"id":344632402,"node_id":"RA_kwDODhds8c4UiqxS","name":"kondo-aarch64-unknown-linux-gnu.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":1046726,"digest":"sha256:531cfc381e851300878e20f77ebd58724ddc28ecf5e48bec654f630f0bfc7fb0","download_count":21,"created_at":"2026-01-23T04:52:43Z","updated_at":"2026-01-23T04:52:43Z"},{"id":344632630,"node_id":"RA_kwDODhds8c4Uiq02","name":"kondo-x86_64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":1115970,"digest":"sha256:aa1500e275cefe8d8a7c84ef17367c00fcff5de2b2e595d4be91db940d69ff1d","download_count":23,"created_at":"2026-01-23T04:54:28Z","updated_at":"2026-01-23T04:54:29Z"},{"id":344632458,"node_id":"RA_kwDODhds8c4UiqyK","name":"kondo-x86_64-pc-windows-msvc.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":958920,"digest":"sha256:4c70e7de85bfaf1b66de931654e9943681af42b093cd591530fc0dd4cc4a0f88","download_count":578,"created_at":"2026-01-23T04:53:03Z","updated_at":"2026-01-23T04:53:03Z"},{"id":344632388,"node_id":"RA_kwDODhds8c4UiqxE","name":"kondo-x86_64-unknown-linux-gnu.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":1153136,"digest":"sha256:56f89890fd4e16cf5e11bb212bb812b60a8319dabfb05fabaf80c6c8b5133b65","download_count":211,"created_at":"2026-01-23T04:52:37Z","updated_at":"2026-01-23T04:52:37Z"},{"id":344632450,"node_id":"RA_kwDODhds8c4UiqyC","name":"kondo-x86_64-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":1192015,"digest":"sha256:b8855f3ba710661d9d2fb37a32919531697e020b2c0973dc46b1ac52a38048bc","download_count":490,"created_at":"2026-01-23T04:53:00Z","updated_at":"2026-01-23T04:53:00Z"}],"body":"This is the 0.9 release, finally \ud83d\ude05 \r\n\r\nIt adds support for 5 new project types (up to 24 total), dry runs, and a \"single key\" mode to make using the cli even speedier!\r\n\r\nAs always, thank you to all the new and existing contributors for their efforts <3\r\n\r\n## Added\r\n* Add Pixi support by @gzsombor in https://github.com/tbillington/kondo/pull/119\r\n* add: turborepo support by @alimehasin in https://github.com/tbillington/kondo/pull/125\r\n* feat: add `dry-run` option by @Rodrigodd in https://github.com/tbillington/kondo/pull/133\r\n* Support Haskell cabal projects by @SanchayanMaity in https://github.com/tbillington/kondo/pull/143\r\n* feat: add support for react-native projects (closes #148) by @mgcrea in https://github.com/tbillington/kondo/pull/173\r\n* feat: add support for terraform by @WookiesRpeople2 in https://github.com/tbillington/kondo/pull/170\r\n* Add a \"single key\" mode by @cstyles in https://github.com/tbillington/kondo/pull/163\r\n\r\n\r\n## Improvements\r\n* Fix: Add .zig-cache and zig-out dirs to zig project by @Tomcat-42 in https://github.com/tbillington/kondo/pull/147\r\n* Update README.md with winget install command by @licon4812 in https://github.com/tbillington/kondo/pull/116\r\n* added windows GUI install to readme by @licon4812 in https://github.com/tbillington/kondo/pull/129\r\n* readme: add MacPorts install info by @herbygillot in https://github.com/tbillington/kondo/pull/130\r\n* chore(ci): build with `--locked` flag by @orhun in https://github.com/tbillington/kondo/pull/115\r\n\r\n## New Contributors\r\n* @licon4812 made their first contribution in https://github.com/tbillington/kondo/pull/116\r\n* @alimehasin made their first contribution in https://github.com/tbillington/kondo/pull/125\r\n* @herbygillot made their first contribution in https://github.com/tbillington/kondo/pull/130\r\n* @Rodrigodd made their first contribution in https://github.com/tbillington/kondo/pull/133\r\n* @SanchayanMaity made their first contribution in https://github.com/tbillington/kondo/pull/143\r\n* @Tomcat-42 made their first contribution in https://github.com/tbillington/kondo/pull/147\r\n* @jarjk made their first contribution in https://github.com/tbillington/kondo/pull/172\r\n* @mgcrea made their first contribution in https://github.com/tbillington/kondo/pull/173\r\n* @WookiesRpeople2 made their first contribution in https://github.com/tbillington/kondo/pull/170\r\n* @cstyles made their first contribution in https://github.com/tbillington/kondo/pull/163\r\n\r\n**Full Changelog**: https://github.com/tbillington/kondo/compare/v0.8...v0.9","reactions":{"total_count":4,"+1":0,"-1":0,"laugh":0,"hooray":2,"confused":0,"heart":2,"rocket":0,"eyes":0},"mentions_count":12}

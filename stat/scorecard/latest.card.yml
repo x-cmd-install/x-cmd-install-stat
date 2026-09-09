@@ -2,26 +2,26 @@ about:
   description: "OpenSSF Scorecard - Security health metrics for Open Source"
   license: Apache-2.0
   homepage: https://scorecard.dev
-  head: 073f478
+  head: f92023a
   archived: false
   latestVersion: "v5.5.0"
   latestRelease: "v5.5.0"
   latestPrerelease: "v5.0.0-rc2"
-  collectedAt: 2026-09-08T12:14:42Z
+  collectedAt: 2026-09-09T20:22:53Z
 timeline:
   created: 2020-10-09
-  lastCommit: 2026-09-07
+  lastCommit: 2026-09-08
   lastVersion: 2026-04-23
   lastRelease: 2026-04-23
   lastPrerelease: 2024-05-07
 popularity:
-  star: 5677
+  star: 5682
   watcher: 71
-  fork: 718
+  fork: 720
   release: 48
   contributor: 209
-  pullRequest: 3867
-  issue: 1269
+  pullRequest: 3871
+  issue: 1261
 language:
   Go: 2657885
   Makefile: 21954
@@ -31,63 +31,63 @@ language:
 totalBytes: 2694054
 recent:
   last30d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 0
-    mergedPR: 2
-    openPR: 25
-    closedIssue: 4
-    openIssue: 12
-    commit: 2
+    mergedPR: 1
+    openPR: 26
+    closedIssue: 2
+    openIssue: 10
+    commit: 3
   last60d:
-    since: 2026-07-10
+    since: 2026-07-11
     release: 0
-    mergedPR: 10
+    mergedPR: 11
     openPR: 45
-    closedIssue: 5
-    openIssue: 18
-    commit: 14
+    closedIssue: 2
+    openIssue: 17
+    commit: 15
   last90d:
-    since: 2026-06-10
+    since: 2026-06-11
     release: 0
-    mergedPR: 13
+    mergedPR: 14
     openPR: 50
-    closedIssue: 6
-    openIssue: 20
-    commit: 14
+    closedIssue: 4
+    openIssue: 19
+    commit: 15
   last180d:
-    since: 2026-03-12
+    since: 2026-03-13
     release: 1
-    mergedPR: 40
+    mergedPR: 41
     openPR: 60
-    closedIssue: 9
-    openIssue: 33
-    commit: 53
+    closedIssue: 7
+    openIssue: 32
+    commit: 54
   last360d:
-    since: 2025-09-13
+    since: 2025-09-14
     release: 3
-    mergedPR: 133
+    mergedPR: 134
     openPR: 62
-    closedIssue: 20
-    openIssue: 45
-    commit: 137
+    closedIssue: 18
+    openIssue: 44
+    commit: 138
   last720d:
-    since: 2024-09-18
+    since: 2024-09-19
     release: 7
-    mergedPR: 350
+    mergedPR: 351
     openPR: 62
-    closedIssue: 68
-    openIssue: 80
-    commit: 359
+    closedIssue: 66
+    openIssue: 79
+    commit: 360
 total:
   release: 48
-  mergedPR: 2995
+  mergedPR: 2996
   openPR: 62
-  closedIssue: 877
-  openIssue: 392
-  commit: 3105
+  closedIssue: 875
+  openIssue: 386
+  commit: 3106
 ---
 path: /home/runner/.x-repo/github.com/ossf/scorecard
-collectedAt: 2026-09-08T12:15:21Z
+collectedAt: 2026-09-09T20:23:32Z
 loc:
   Go:
     code: 78117
@@ -165,15 +165,28 @@ total:
   blanks: 11513
   files: 856
 ---
-date: "2026-09-07T06:38:16Z"
+date: "2026-09-08T18:17:30Z"
 repo:
   name: github.com/ossf/scorecard
-  commit: 073f478dde5b22e5d304ad541785d8395e8a9944
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 scorecard:
   version: v5.5.0
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 9
 checks:
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+  - name: Maintained
+    score: 10
+    reason: 15 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -182,25 +195,29 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 9
     reason: detected GitHub workflow tokens with excessive permissions
     details:
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:45'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:46'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:45'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/docker.yml:33'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/docker.yml:68'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/goreleaser.yaml:74'
       - 'Info: jobLevel permissions set to ''read-all'': .github/workflows/goreleaser.yaml:85'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:139'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:168'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:217'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:256'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:361'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:37'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:91'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:217'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:256'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:298'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:326'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:139'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/osps-baseline.yml:13'
       - 'Warn: jobLevel ''security-events'' permission set to ''write'': .github/workflows/osps-baseline.yml:14'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/publishimage.yml:32'
@@ -221,23 +238,6 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard-analysis.yml:11'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/stale.yml:20'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/verify.yml:19'
-  - name: Maintained
-    score: 10
-    reason: 14 commit(s) and 5 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -264,9 +264,13 @@ checks:
       - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ossf/scorecard/releases/tag/v5.3.0'
       - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ossf/scorecard/releases/tag/v5.2.1'
       - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ossf/scorecard/releases/tag/v5.2.0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Vulnerabilities
     score: 0
-    reason: 68 existing vulnerabilities detected
+    reason: 43 existing vulnerabilities detected
     details:
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2022-0635'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2022-0646'
@@ -293,34 +297,9 @@ checks:
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5662'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5710'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5158'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5005'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5006'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5013'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5014'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5015'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5016'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5017'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5018'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5019'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5020'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5021'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5023'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5033'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5932'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6303'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6354'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6355'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6179'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6180'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5025'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5026'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5027'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5028'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5029'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5030'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5942'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5024'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5970'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-vp52-pcj8-j9qc'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6225'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5490'
@@ -342,27 +321,23 @@ checks:
     details:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Info: all commits (30) are checked with a SAST tool'
-  - name: License
+  - name: Packaging
     score: 10
-    reason: license file detected
+    reason: packaging workflow detected
     details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/goreleaser.yaml:29'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
     details:
       - 'Info: OSSFuzz integration found'
       - 'Info: GoBuiltInFuzzer integration found: checks/raw/fuzzing_test.go:177'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
-  - name: Packaging
+  - name: License
     score: 10
-    reason: packaging workflow detected
+    reason: license file detected
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/goreleaser.yaml:29'
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: CI-Tests
     score: 10
     reason: 30 out of 30 merged PRs checked by a CI test -- score normalized to 10

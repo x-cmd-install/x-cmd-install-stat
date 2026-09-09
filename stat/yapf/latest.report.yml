@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-09-08T11:38:30Z
+  collectedAt: 2026-09-09T19:47:13Z
 timeline:
   created: 2015-03-18
   lastCommit: 2025-02-10
@@ -21,7 +21,7 @@ popularity:
   release: 0
   contributor: 140
   pullRequest: 434
-  issue: 865
+  issue: 866
 language:
   Python: 801920
   Vim Script: 2859
@@ -29,63 +29,63 @@ language:
 totalBytes: 807563
 recent:
   last30d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 0
     mergedPR: 0
     openPR: 2
     closedIssue: 0
-    openIssue: 0
+    openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-10
+    since: 2026-07-11
     release: 0
     mergedPR: 0
     openPR: 6
     closedIssue: 0
-    openIssue: 2
+    openIssue: 3
     commit: 0
   last90d:
-    since: 2026-06-10
+    since: 2026-06-11
     release: 0
     mergedPR: 0
     openPR: 6
     closedIssue: 0
-    openIssue: 2
+    openIssue: 3
     commit: 0
   last180d:
-    since: 2026-03-12
+    since: 2026-03-13
     release: 0
     mergedPR: 0
     openPR: 7
     closedIssue: 0
-    openIssue: 4
+    openIssue: 5
     commit: 0
   last360d:
-    since: 2025-09-13
+    since: 2025-09-14
     release: 0
     mergedPR: 0
     openPR: 8
     closedIssue: 2
-    openIssue: 7
+    openIssue: 8
     commit: 0
   last720d:
-    since: 2024-09-18
+    since: 2024-09-19
     release: 0
     mergedPR: 7
     openPR: 12
     closedIssue: 4
-    openIssue: 21
+    openIssue: 22
     commit: 9
 total:
   release: 0
   mergedPR: 294
   openPR: 28
   closedIssue: 474
-  openIssue: 391
+  openIssue: 392
   commit: 1355
 ---
 path: /home/runner/.x-repo/github.com/google/yapf
-collectedAt: 2026-09-08T11:38:32Z
+collectedAt: 2026-09-09T19:47:14Z
 loc:
   Python:
     code: 22235
@@ -138,13 +138,13 @@ total:
   blanks: 3547
   files: 88
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/google/yapf
   commit: 12005095296072751e3e4c1f33a047d41b0ce18d
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 5.1
 checks:
   - name: Code-Review
@@ -159,18 +159,6 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
-      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/pre-commit-autoupdate.yml:14'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/pre-commit.yml:8'
-      - 'Info: no jobLevel write permissions found'
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -180,6 +168,14 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
+      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/pre-commit-autoupdate.yml:14'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/pre-commit.yml:8'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
@@ -191,6 +187,10 @@ checks:
       - 'Info:   6 out of   6 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   2 out of   2 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 pipCommand dependencies pinned'
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -206,10 +206,6 @@ checks:
     score: -1
     reason: no releases found
     details: null
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -218,6 +214,10 @@ checks:
       - 'Info: Found linked content: github.com/google/.github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/google/.github/SECURITY.md:1'
       - 'Info: Found text in security policy: github.com/google/.github/SECURITY.md:1'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

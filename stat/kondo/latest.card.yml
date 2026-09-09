@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.9"
   latestRelease: "v0.9"
   latestPrerelease: ""
-  collectedAt: 2026-09-08T11:13:50Z
+  collectedAt: 2026-09-09T19:46:36Z
 timeline:
   created: 2020-01-27
   lastCommit: 2026-01-28
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-01-23
   lastPrerelease: 
 popularity:
-  star: 2388
+  star: 2389
   watcher: 12
   fork: 69
   release: 9
@@ -28,7 +28,7 @@ language:
 totalBytes: 58978
 recent:
   last30d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 0
     mergedPR: 0
     openPR: 1
@@ -36,7 +36,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-10
+    since: 2026-07-11
     release: 0
     mergedPR: 0
     openPR: 2
@@ -44,7 +44,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-06-10
+    since: 2026-06-11
     release: 0
     mergedPR: 0
     openPR: 2
@@ -52,7 +52,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-03-12
+    since: 2026-03-13
     release: 0
     mergedPR: 0
     openPR: 4
@@ -60,7 +60,7 @@ recent:
     openIssue: 4
     commit: 0
   last360d:
-    since: 2025-09-13
+    since: 2025-09-14
     release: 1
     mergedPR: 4
     openPR: 6
@@ -68,7 +68,7 @@ recent:
     openIssue: 6
     commit: 12
   last720d:
-    since: 2024-09-18
+    since: 2024-09-19
     release: 1
     mergedPR: 16
     openPR: 8
@@ -84,7 +84,7 @@ total:
   commit: 272
 ---
 path: /home/runner/.x-repo/github.com/tbillington/kondo
-collectedAt: 2026-09-08T11:13:51Z
+collectedAt: 2026-09-09T19:46:37Z
 loc:
   Rust:
     code: 1587
@@ -112,32 +112,44 @@ total:
   blanks: 294
   files: 14
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/tbillington/kondo
   commit: 1d351ca80b3d3adfad9bbe7db872c27359190210
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
-score: 3.1
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+score: 3
 checks:
   - name: Code-Review
     score: 5
     reason: Found 12/21 approved changesets -- score normalized to 5
     details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
-    score: 1
-    reason: 0 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 1
-    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/deploys.yaml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/lint.yaml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/tests.yaml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -165,18 +177,6 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/tests.yaml:53: update your workflow using https://app.stepsecurity.io/secureworkflow/tbillington/kondo/tests.yaml/master?enable=pin'
       - 'Info:   0 out of  12 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   9 third-party GitHubAction dependencies pinned'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/deploys.yaml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/lint.yaml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/tests.yaml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -189,17 +189,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.

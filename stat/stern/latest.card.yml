@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.34.0"
   latestRelease: "v1.34.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-08T11:00:30Z
+  collectedAt: 2026-09-09T19:08:20Z
 timeline:
   created: 2020-10-21
   lastCommit: 2026-08-19
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-05-02
   lastPrerelease: 
 popularity:
-  star: 4851
+  star: 4856
   watcher: 28
   fork: 177
   release: 27
@@ -31,7 +31,7 @@ language:
 totalBytes: 172196
 recent:
   last30d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 0
     mergedPR: 0
     openPR: 4
@@ -39,7 +39,7 @@ recent:
     openIssue: 1
     commit: 1
   last60d:
-    since: 2026-07-10
+    since: 2026-07-11
     release: 0
     mergedPR: 1
     openPR: 7
@@ -47,7 +47,7 @@ recent:
     openIssue: 1
     commit: 2
   last90d:
-    since: 2026-06-10
+    since: 2026-06-11
     release: 0
     mergedPR: 4
     openPR: 7
@@ -55,7 +55,7 @@ recent:
     openIssue: 1
     commit: 4
   last180d:
-    since: 2026-03-12
+    since: 2026-03-13
     release: 1
     mergedPR: 10
     openPR: 8
@@ -63,7 +63,7 @@ recent:
     openIssue: 1
     commit: 10
   last360d:
-    since: 2025-09-13
+    since: 2025-09-14
     release: 2
     mergedPR: 13
     openPR: 9
@@ -71,7 +71,7 @@ recent:
     openIssue: 4
     commit: 13
   last720d:
-    since: 2024-09-18
+    since: 2024-09-19
     release: 5
     mergedPR: 28
     openPR: 11
@@ -87,7 +87,7 @@ total:
   commit: 318
 ---
 path: /home/runner/.x-repo/github.com/stern/stern
-collectedAt: 2026-09-08T11:00:31Z
+collectedAt: 2026-09-09T19:08:21Z
 loc:
   Go:
     code: 5525
@@ -130,35 +130,35 @@ total:
   blanks: 880
   files: 46
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/stern/stern
   commit: 29264611f990ecd270442466d13e2367c72bdeb0
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
-score: 4
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+score: 4.1
 checks:
   - name: Code-Review
-    score: 9
-    reason: Found 29/30 approved changesets -- score normalized to 9
+    score: 10
+    reason: all changesets reviewed
     details: null
-  - name: Maintained
-    score: 3
-    reason: 4 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 3
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 3
+    reason: 4 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 3
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -172,6 +172,19 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -186,25 +199,16 @@ checks:
       - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -219,13 +223,9 @@ checks:
       - 'Warn: release artifact v1.33.0 does not have provenance: https://api.github.com/repos/stern/stern/releases/245330163'
       - 'Warn: release artifact v1.32.0 does not have provenance: https://api.github.com/repos/stern/stern/releases/195739576'
       - 'Warn: release artifact v1.31.0 does not have provenance: https://api.github.com/repos/stern/stern/releases/178640231'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
-      - 'Warn: 0 commits out of 29 are checked with a SAST tool'
+      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---

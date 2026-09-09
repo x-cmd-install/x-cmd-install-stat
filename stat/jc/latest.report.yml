@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.25.7"
   latestRelease: "v1.25.7"
   latestPrerelease: ""
-  collectedAt: 2026-09-08T10:23:17Z
+  collectedAt: 2026-09-09T18:49:18Z
 timeline:
   created: 2019-10-15
   lastCommit: 2026-06-18
@@ -28,7 +28,7 @@ language:
 totalBytes: 3637673
 recent:
   last30d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 0
     mergedPR: 17
     openPR: 2
@@ -36,7 +36,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-10
+    since: 2026-07-11
     release: 0
     mergedPR: 21
     openPR: 2
@@ -44,7 +44,7 @@ recent:
     openIssue: 2
     commit: 0
   last90d:
-    since: 2026-06-10
+    since: 2026-06-11
     release: 1
     mergedPR: 25
     openPR: 2
@@ -52,7 +52,7 @@ recent:
     openIssue: 5
     commit: 5
   last180d:
-    since: 2026-03-12
+    since: 2026-03-13
     release: 1
     mergedPR: 32
     openPR: 2
@@ -60,7 +60,7 @@ recent:
     openIssue: 6
     commit: 20
   last360d:
-    since: 2025-09-13
+    since: 2025-09-14
     release: 2
     mergedPR: 36
     openPR: 2
@@ -68,11 +68,11 @@ recent:
     openIssue: 7
     commit: 46
   last720d:
-    since: 2024-09-18
+    since: 2024-09-19
     release: 4
     mergedPR: 54
     openPR: 3
-    closedIssue: 58
+    closedIssue: 57
     openIssue: 13
     commit: 172
 total:
@@ -84,7 +84,7 @@ total:
   commit: 3975
 ---
 path: /home/runner/.x-repo/github.com/kellyjonbrazil/jc
-collectedAt: 2026-09-08T10:23:28Z
+collectedAt: 2026-09-09T18:49:24Z
 loc:
   Python:
     code: 92148
@@ -152,27 +152,26 @@ total:
   blanks: 21999
   files: 1988
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/kellyjonbrazil/jc
   commit: 8290734a87a30e5f0af7e1fba5ecbda2e1c145a8
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 4.6
 checks:
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 10
+    reason: 6 commit(s) and 22 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Code-Review
     score: 8
     reason: Found 8/9 approved changesets -- score normalized to 8
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 6 commit(s) and 16 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Token-Permissions
     score: 0
@@ -180,13 +179,18 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/pythonapp.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Security-Policy
     score: 0
@@ -196,10 +200,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -211,10 +211,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE.md:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE.md:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -244,10 +240,14 @@ checks:
       - 'Warn: release artifact v1.25.5 does not have provenance: https://api.github.com/repos/kellyjonbrazil/jc/releases/217796315'
       - 'Warn: release artifact v1.25.4 does not have provenance: https://api.github.com/repos/kellyjonbrazil/jc/releases/187452856'
       - 'Warn: release artifact v1.25.3 does not have provenance: https://api.github.com/repos/kellyjonbrazil/jc/releases/159585485'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---
-{"id":341538320,"author":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDODNbRf84UW3YQ","tag_name":"v1.25.7","target_commitish":"master","name":"JC version 1.25.7","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-06-18T16:57:31Z","updated_at":"2026-09-06T22:49:31Z","published_at":"2026-06-18T20:07:07Z","assets":[{"id":451539433,"node_id":"RA_kwDODNbRf84a6fHp","name":"jc-1.25.7-1.aarch64.rpm","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":28122600,"digest":"sha256:93dbaf3d6a0304b6da29b15891b00269c33d532b23f86eafa410ce7fbe360b45","download_count":24,"created_at":"2026-06-18T20:06:04Z","updated_at":"2026-06-18T20:06:32Z"},{"id":460710971,"node_id":"RA_kwDODNbRf84bdeQ7","name":"jc-1.25.7-2.x86_64.rpm","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":26715401,"digest":"sha256:ebf46063eaecbc8bdab4fb8d5580dad32feb26f85bf1869a185de35de1ab891b","download_count":169,"created_at":"2026-06-29T03:01:07Z","updated_at":"2026-06-29T03:01:23Z"},{"id":451423532,"node_id":"RA_kwDODNbRf84a6C0s","name":"jc-1.25.7-darwin-aarch64.tar.gz","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gzip","state":"uploaded","size":21770975,"digest":"sha256:21d1775a186ddcd8b84e18d7d1774cd5c68f6056e5c770f80918fd2dbe293747","download_count":177,"created_at":"2026-06-18T17:18:16Z","updated_at":"2026-06-18T17:18:38Z"},{"id":547777363,"node_id":"RA_kwDODNbRf84gpmtT","name":"jc-1.25.7-darwin-x86_64.tar.gz","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gzip","state":"uploaded","size":21883524,"digest":"sha256:2f940b455f5aff968189c3f6655b1610100bd8b399c57fc0bba5db422f94ba07","download_count":10,"created_at":"2026-09-06T22:47:02Z","updated_at":"2026-09-06T22:47:29Z"},{"id":451430060,"node_id":"RA_kwDODNbRf84a6Eas","name":"jc-1.25.7-linux-aarch64.tar.gz","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gzip","state":"uploaded","size":28420349,"digest":"sha256:f1f15f9204c19ae70d50ca9b047de86bc00a1c9941b486a15f8586790d0ea323","download_count":457,"created_at":"2026-06-18T17:27:28Z","updated_at":"2026-06-18T17:27:55Z"},{"id":460709238,"node_id":"RA_kwDODNbRf84bdd12","name":"jc-1.25.7-linux-x86_64.tar.gz","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gzip","state":"uploaded","size":27005746,"digest":"sha256:5b7ab595bfbaa70f07a15136bbc3c09d6dbf65891248bf1f060ec3da29608a2c","download_count":3391,"created_at":"2026-06-29T02:59:22Z","updated_at":"2026-06-29T02:59:40Z"},{"id":451616556,"node_id":"RA_kwDODNbRf84a6x8s","name":"jc-1.25.7-windows.zip","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":20490514,"digest":"sha256:f9b2e4c1819781edfeedfeda9f6f51163b8dd8f704da4ade5271b7ade05d6914","download_count":337,"created_at":"2026-06-18T22:04:02Z","updated_at":"2026-06-18T22:04:04Z"},{"id":451615429,"node_id":"RA_kwDODNbRf84a6xrF","name":"jc-1.25.7.msi","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":21340160,"digest":"sha256:14efbaa4f72f5c73b15ccd8c0095905aef864ec513c85452dc59f95ea48cbeae","download_count":131,"created_at":"2026-06-18T22:02:11Z","updated_at":"2026-06-18T22:02:13Z"},{"id":451539805,"node_id":"RA_kwDODNbRf84a6fNd","name":"jc_1.25.7-1_arm64.deb","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":28355008,"digest":"sha256:ef19911f6f21867c4cc4e5a34c39e88f419641dcce610712c21f1f6e009c1fc7","download_count":49,"created_at":"2026-06-18T20:06:34Z","updated_at":"2026-06-18T20:07:01Z"},{"id":460711337,"node_id":"RA_kwDODNbRf84bdeWp","name":"jc_1.25.7-2_amd64.deb","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":26945020,"digest":"sha256:82ed1738ea031d2cc5674816351654ff907087ab061579b680f10c70d2720379","download_count":269,"created_at":"2026-06-29T03:01:33Z","updated_at":"2026-06-29T03:01:56Z"}],"body":">Note: I am now using Rosetta to build x86_64 binaries for macOS since my Intel mac finally died\r\n\r\n- Add `csv-ih`, `tsv`, and `tsv-ih` file parsers for CSV files without headers,\r\n  TSV files, and TSV files without headers. Note that these are standard and\r\n  not streaming parsers so the entire CSV/TSV will be loaded into memory. For\r\n  lazy loading equivalents, see below.\r\n- Add `csv-ih-s`, `tsv-s`, and `tsv-ih-s` streaming file parsers for CSV files\r\n  without headers, TSV files, and TSV files without headers. These streaming\r\n  parsers will lazily load the data into memory and may be more suitable for\r\n  extremely large files.\r\n- Add `typeset` and `declare` Bash internal command parser to convert variables\r\n  simple arrays, and associative arrays along with object metadata\r\n- Enhance `pip-show` command parser to add `-f` show files support\r\n- Enhance `rsync` and `rsync-s` parsers to add `--stats` or `--info=stats[1-3]` fields\r\n- Fix `certbot` command parser to allow parsing of named certs\r\n- Fix `dir` command parser for incorrect stripping of the `D:` drive letter\r\n- Fix `hashsum` command parser to correctly parse the `mode` indicator\r\n- Fix `ifconfig` command parser for incorrect stripping of leading zeros in some hex numbers\r\n- Fix `iptables` command parser when Target is blank and verbose output is used\r\n- Fix `lsattr` command parser for filenames with spaces (newlines in filenames are\r\n  still not supported)\r\n- Fix `proc-pid-smaps` proc parser when unknown VmFlags are output\r\n- Fix `jc.utils.timestamp` function and tests for behavior change in python 3.15\r\n- Fix `ufw` command parser to support rule logging. A new boolean `log` field is introduced","reactions":{"total_count":4,"+1":0,"-1":0,"laugh":0,"hooray":4,"confused":0,"heart":0,"rocket":0,"eyes":0}}
+{"id":341538320,"author":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDODNbRf84UW3YQ","tag_name":"v1.25.7","target_commitish":"master","name":"JC version 1.25.7","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-06-18T16:57:31Z","updated_at":"2026-09-06T22:49:31Z","published_at":"2026-06-18T20:07:07Z","assets":[{"id":451539433,"node_id":"RA_kwDODNbRf84a6fHp","name":"jc-1.25.7-1.aarch64.rpm","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":28122600,"digest":"sha256:93dbaf3d6a0304b6da29b15891b00269c33d532b23f86eafa410ce7fbe360b45","download_count":30,"created_at":"2026-06-18T20:06:04Z","updated_at":"2026-06-18T20:06:32Z"},{"id":460710971,"node_id":"RA_kwDODNbRf84bdeQ7","name":"jc-1.25.7-2.x86_64.rpm","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":26715401,"digest":"sha256:ebf46063eaecbc8bdab4fb8d5580dad32feb26f85bf1869a185de35de1ab891b","download_count":178,"created_at":"2026-06-29T03:01:07Z","updated_at":"2026-06-29T03:01:23Z"},{"id":451423532,"node_id":"RA_kwDODNbRf84a6C0s","name":"jc-1.25.7-darwin-aarch64.tar.gz","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gzip","state":"uploaded","size":21770975,"digest":"sha256:21d1775a186ddcd8b84e18d7d1774cd5c68f6056e5c770f80918fd2dbe293747","download_count":185,"created_at":"2026-06-18T17:18:16Z","updated_at":"2026-06-18T17:18:38Z"},{"id":547777363,"node_id":"RA_kwDODNbRf84gpmtT","name":"jc-1.25.7-darwin-x86_64.tar.gz","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gzip","state":"uploaded","size":21883524,"digest":"sha256:2f940b455f5aff968189c3f6655b1610100bd8b399c57fc0bba5db422f94ba07","download_count":17,"created_at":"2026-09-06T22:47:02Z","updated_at":"2026-09-06T22:47:29Z"},{"id":451430060,"node_id":"RA_kwDODNbRf84a6Eas","name":"jc-1.25.7-linux-aarch64.tar.gz","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gzip","state":"uploaded","size":28420349,"digest":"sha256:f1f15f9204c19ae70d50ca9b047de86bc00a1c9941b486a15f8586790d0ea323","download_count":467,"created_at":"2026-06-18T17:27:28Z","updated_at":"2026-06-18T17:27:55Z"},{"id":460709238,"node_id":"RA_kwDODNbRf84bdd12","name":"jc-1.25.7-linux-x86_64.tar.gz","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gzip","state":"uploaded","size":27005746,"digest":"sha256:5b7ab595bfbaa70f07a15136bbc3c09d6dbf65891248bf1f060ec3da29608a2c","download_count":3499,"created_at":"2026-06-29T02:59:22Z","updated_at":"2026-06-29T02:59:40Z"},{"id":451616556,"node_id":"RA_kwDODNbRf84a6x8s","name":"jc-1.25.7-windows.zip","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":20490514,"digest":"sha256:f9b2e4c1819781edfeedfeda9f6f51163b8dd8f704da4ade5271b7ade05d6914","download_count":344,"created_at":"2026-06-18T22:04:02Z","updated_at":"2026-06-18T22:04:04Z"},{"id":451615429,"node_id":"RA_kwDODNbRf84a6xrF","name":"jc-1.25.7.msi","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":21340160,"digest":"sha256:14efbaa4f72f5c73b15ccd8c0095905aef864ec513c85452dc59f95ea48cbeae","download_count":142,"created_at":"2026-06-18T22:02:11Z","updated_at":"2026-06-18T22:02:13Z"},{"id":451539805,"node_id":"RA_kwDODNbRf84a6fNd","name":"jc_1.25.7-1_arm64.deb","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":28355008,"digest":"sha256:ef19911f6f21867c4cc4e5a34c39e88f419641dcce610712c21f1f6e009c1fc7","download_count":65,"created_at":"2026-06-18T20:06:34Z","updated_at":"2026-06-18T20:07:01Z"},{"id":460711337,"node_id":"RA_kwDODNbRf84bdeWp","name":"jc_1.25.7-2_amd64.deb","label":null,"uploader":{"login":"kellyjonbrazil","id":24423665,"node_id":"MDQ6VXNlcjI0NDIzNjY1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":26945020,"digest":"sha256:82ed1738ea031d2cc5674816351654ff907087ab061579b680f10c70d2720379","download_count":275,"created_at":"2026-06-29T03:01:33Z","updated_at":"2026-06-29T03:01:56Z"}],"body":">Note: I am now using Rosetta to build x86_64 binaries for macOS since my Intel mac finally died\r\n\r\n- Add `csv-ih`, `tsv`, and `tsv-ih` file parsers for CSV files without headers,\r\n  TSV files, and TSV files without headers. Note that these are standard and\r\n  not streaming parsers so the entire CSV/TSV will be loaded into memory. For\r\n  lazy loading equivalents, see below.\r\n- Add `csv-ih-s`, `tsv-s`, and `tsv-ih-s` streaming file parsers for CSV files\r\n  without headers, TSV files, and TSV files without headers. These streaming\r\n  parsers will lazily load the data into memory and may be more suitable for\r\n  extremely large files.\r\n- Add `typeset` and `declare` Bash internal command parser to convert variables\r\n  simple arrays, and associative arrays along with object metadata\r\n- Enhance `pip-show` command parser to add `-f` show files support\r\n- Enhance `rsync` and `rsync-s` parsers to add `--stats` or `--info=stats[1-3]` fields\r\n- Fix `certbot` command parser to allow parsing of named certs\r\n- Fix `dir` command parser for incorrect stripping of the `D:` drive letter\r\n- Fix `hashsum` command parser to correctly parse the `mode` indicator\r\n- Fix `ifconfig` command parser for incorrect stripping of leading zeros in some hex numbers\r\n- Fix `iptables` command parser when Target is blank and verbose output is used\r\n- Fix `lsattr` command parser for filenames with spaces (newlines in filenames are\r\n  still not supported)\r\n- Fix `proc-pid-smaps` proc parser when unknown VmFlags are output\r\n- Fix `jc.utils.timestamp` function and tests for behavior change in python 3.15\r\n- Fix `ufw` command parser to support rule logging. A new boolean `log` field is introduced","reactions":{"total_count":4,"+1":0,"-1":0,"laugh":0,"hooray":4,"confused":0,"heart":0,"rocket":0,"eyes":0}}

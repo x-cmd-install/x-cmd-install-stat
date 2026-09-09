@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.16.8.2"
   latestRelease: ""
   latestPrerelease: "v0.16.8.2"
-  collectedAt: 2026-09-08T11:32:15Z
+  collectedAt: 2026-09-09T19:29:41Z
 timeline:
   created: 2018-01-31
   lastCommit: 2026-03-31
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 
   lastPrerelease: 2025-11-18
 popularity:
-  star: 1938
+  star: 1939
   watcher: 15
   fork: 92
   release: 38
@@ -29,7 +29,7 @@ language:
 totalBytes: 92513
 recent:
   last30d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-10
+    since: 2026-07-11
     release: 0
     mergedPR: 0
     openPR: 1
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-10
+    since: 2026-06-11
     release: 0
     mergedPR: 0
     openPR: 3
@@ -53,23 +53,23 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-12
+    since: 2026-03-13
     release: 0
     mergedPR: 1
     openPR: 6
     closedIssue: 0
     openIssue: 0
-    commit: 0
+    commit: 2
   last360d:
-    since: 2025-09-13
+    since: 2025-09-14
     release: 3
     mergedPR: 7
     openPR: 6
     closedIssue: 5
     openIssue: 4
-    commit: 0
+    commit: 16
   last720d:
-    since: 2024-09-18
+    since: 2024-09-19
     release: 3
     mergedPR: 8
     openPR: 6
@@ -85,7 +85,7 @@ total:
   commit: 495
 ---
 path: /home/runner/.x-repo/github.com/nosarthur/gita
-collectedAt: 2026-09-08T11:32:15Z
+collectedAt: 2026-09-09T19:29:43Z
 loc:
   Python:
     code: 2403
@@ -128,18 +128,35 @@ total:
   blanks: 531
   files: 20
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/nosarthur/gita
   commit: 062a5e1ed56cad9b5f81c63791cd4ab130f175d9
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 4
 checks:
+  - name: Code-Review
+    score: 3
+    reason: Found 10/30 approved changesets -- score normalized to 3
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 9
@@ -148,27 +165,6 @@ checks:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/nos.yml:10'
       - 'Warn: no topLevel permission defined: .github/workflows/nos.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Code-Review
-    score: 3
-    reason: Found 10/30 approved changesets -- score normalized to 3
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -182,6 +178,15 @@ checks:
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 pipCommand dependencies pinned'
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -190,11 +195,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected

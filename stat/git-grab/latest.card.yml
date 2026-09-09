@@ -7,7 +7,7 @@ about:
   latestVersion: "4.0.1"
   latestRelease: "4.0.1"
   latestPrerelease: ""
-  collectedAt: 2026-09-08T11:02:48Z
+  collectedAt: 2026-09-09T19:09:42Z
 timeline:
   created: 2021-07-07
   lastCommit: 2026-05-12
@@ -28,7 +28,7 @@ language:
 totalBytes: 21376
 recent:
   last30d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-10
+    since: 2026-07-11
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-10
+    since: 2026-06-11
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-12
+    since: 2026-03-13
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 1
   last360d:
-    since: 2025-09-13
+    since: 2025-09-14
     release: 2
     mergedPR: 1
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 1
     commit: 6
   last720d:
-    since: 2024-09-18
+    since: 2024-09-19
     release: 2
     mergedPR: 3
     openPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 61
 ---
 path: /home/runner/.x-repo/github.com/wezm/git-grab
-collectedAt: 2026-09-08T11:02:49Z
+collectedAt: 2026-09-09T19:09:42Z
 loc:
   Rust:
     code: 634
@@ -107,19 +107,36 @@ total:
   blanks: 151
   files: 7
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/wezm/git-grab
   commit: d87fea4669846a5faf780b8dbc652dd1270111da
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 1.9
 checks:
+  - name: Code-Review
+    score: 1
+    reason: Found 3/23 approved changesets -- score normalized to 1
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: -1
     reason: No tokens found
     details: null
+  - name: Dangerous-Workflow
+    score: -1
+    reason: no workflows found
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Maintained
     score: 0
     reason: project is archived
@@ -129,27 +146,15 @@ checks:
     score: -1
     reason: no dependencies found
     details: null
-  - name: Code-Review
-    score: 1
-    reason: Found 3/23 approved changesets -- score normalized to 1
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: -1
-    reason: no workflows found
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -158,17 +163,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE-APACHE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE-APACHE:0'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -179,6 +173,12 @@ checks:
       - 'Warn: release artifact 4.0.1 does not have provenance: https://api.github.com/repos/wezm/git-grab/releases/274133977'
       - 'Warn: release artifact 4.0.0 does not have provenance: https://api.github.com/repos/wezm/git-grab/releases/274017299'
       - 'Warn: release artifact 3.0.0 does not have provenance: https://api.github.com/repos/wezm/git-grab/releases/157767640'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE-APACHE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE-APACHE:0'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches

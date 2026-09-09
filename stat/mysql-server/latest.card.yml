@@ -5,19 +5,23 @@ about:
   head: e174239
   archived: false
   latestVersion: ""
-  collectedAt: 2026-09-07T19:18:48Z
+  latestRelease: ""
+  latestPrerelease: ""
+  collectedAt: 2026-09-09T05:08:56Z
 timeline:
   created: 2014-09-26
   lastCommit: 2026-09-01
+  lastVersion: 
   lastRelease: 
+  lastPrerelease: 
 popularity:
-  star: 12420
-  watcher: 557
+  star: 12419
+  watcher: 555
   fork: 4352
   release: 0
   contributor: 144
   pullRequest: 700
-  issue: 29
+  issue: 30
 language:
   C++: 340050363
   C: 28614311
@@ -66,63 +70,63 @@ language:
 totalBytes: 398623517
 recent:
   last30d:
-    since: 2026-08-08
+    since: 2026-08-10
     release: 0
     mergedPR: 1
-    openPR: 14
-    closedIssue: 3
-    openIssue: 4
+    openPR: 15
+    closedIssue: 2
+    openIssue: 5
     commit: 106
   last60d:
-    since: 2026-07-09
+    since: 2026-07-11
     release: 0
     mergedPR: 1
-    openPR: 18
+    openPR: 19
     closedIssue: 4
-    openIssue: 13
+    openIssue: 14
     commit: 267
   last90d:
-    since: 2026-06-09
+    since: 2026-06-11
     release: 0
     mergedPR: 1
     openPR: 20
     closedIssue: 5
-    openIssue: 24
+    openIssue: 25
     commit: 626
   last180d:
-    since: 2026-03-11
+    since: 2026-03-13
     release: 0
     mergedPR: 1
     openPR: 21
     closedIssue: 5
-    openIssue: 24
+    openIssue: 25
     commit: 1330
   last360d:
-    since: 2025-09-12
+    since: 2025-09-14
     release: 0
     mergedPR: 1
     openPR: 21
     closedIssue: 5
-    openIssue: 24
+    openIssue: 25
     commit: 1961
   last720d:
-    since: 2024-09-17
+    since: 2024-09-19
     release: 0
     mergedPR: 1
     openPR: 21
     closedIssue: 5
-    openIssue: 24
-    commit: 6022
+    openIssue: 25
+    commit: 5987
 total:
   release: 0
   mergedPR: 1
   openPR: 21
   closedIssue: 5
-  openIssue: 24
+  openIssue: 25
   commit: 191044
 ---
 path: /home/runner/.x-repo/github.com/mysql/mysql-server
-collectedAt: 2026-09-07T19:27:30Z
+collectedAt: 2026-09-09T05:18:31Z
 loc:
   Cpp:
     code: 2718138
@@ -440,26 +444,22 @@ total:
   blanks: 1289016
   files: 35466
 ---
-date: "2026-08-24"
+date: "2026-09-07"
 repo:
   name: github.com/mysql/mysql-server
-  commit: 23e360a7fac718d80b9e6a79f7d5a7bf37aa3bbc
+  commit: e174239c5b3c2bcf164649042ab8a7fc972ce88d
 scorecard:
-  version: v5.5.1-0.20260815060127-d1fab88f5463
-  commit: d1fab88f54636ff366076edfc5c239f97b3c8e66
+  version: v5.5.0
+  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 4.8
 checks:
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 13 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 14 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Code-Review
     score: 0
     reason: Found 0/30 approved changesets -- score normalized to 0
-    details: null
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
     details: null
   - name: Packaging
     score: -1
@@ -486,9 +486,9 @@ checks:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/cache-warmer.yml:23'
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/cache-warmer.yml:72'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/clang-format.yml:24'
-      - 'Warn: jobLevel ''statuses'' permission set to ''write'': .github/workflows/codex-pr-review.yml:420'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codex-pr-review.yml:24'
       - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/codex-pr-review.yml:25'
+      - 'Warn: jobLevel ''statuses'' permission set to ''write'': .github/workflows/codex-pr-review.yml:420'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/mtr.yml:41'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/pr-build.yml:21'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/pr-ci-report.yml:21'
@@ -505,6 +505,10 @@ checks:
       - 'Info: found token with ''none'' permissions: .github/workflows/pr-build.yml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/pr-ci-report.yml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/reset-pr-head-state.yml:1'
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
   - name: License
     score: 9
     reason: license file detected
@@ -538,75 +542,75 @@ checks:
     reason: project is fuzzed
     details:
       - 'Info: OSSFuzz integration found'
+      - 'Info: CppLibFuzzer integration found: extra/libcbor/libcbor-0.11.0/oss-fuzz/cbor_load_fuzzer.cc:71'
+      - 'Info: CppLibFuzzer integration found: extra/protobuf/protobuf-24.4/third_party/utf8_range/fuzz/utf8_validity_fuzzer.cc:9'
+      - 'Info: CppLibFuzzer integration found: router/src/http/tests/fuzz_auth_backend.cc:30'
+      - 'Info: CppLibFuzzer integration found: router/src/http/tests/fuzz_auth_method_basic.cc:32'
+      - 'Info: CppLibFuzzer integration found: router/src/http/tests/fuzz_base64.cc:31'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_binary_datetime.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_binary_time.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_binlog_dump.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_binlog_dump_gtid.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_change_user.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_client_greeting.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_clone.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_init_schema.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_kill.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_list_fields.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_ping.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_query.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_quit.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_register_replica.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_reload.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_reset_connection.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_set_option.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_statistics.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_close.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_execute.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_fetch.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_param_append_data.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_prepare.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_reset.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/routing/tests/fuzz_show_warnings.cc:35'
+      - 'Info: CppLibFuzzer integration found: router/src/routing/tests/fuzz_sql_lexer.cc:35'
+      - 'Info: CppLibFuzzer integration found: router/src/routing_guidelines/tests/fuzz_parser.cc:28'
+      - 'Info: CppLibFuzzer integration found: router/tests/fuzzers/fuzz_router_uri.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/tests/fuzzers/fuzz_router_uri_tostring.cc:36'
+      - 'Info: CppLibFuzzer integration found: extra/libcbor/libcbor-0.11.0/oss-fuzz/cbor_load_fuzzer.cc:71'
+      - 'Info: CppLibFuzzer integration found: extra/protobuf/protobuf-24.4/third_party/utf8_range/fuzz/utf8_validity_fuzzer.cc:9'
+      - 'Info: CppLibFuzzer integration found: router/src/http/tests/fuzz_auth_backend.cc:30'
+      - 'Info: CppLibFuzzer integration found: router/src/http/tests/fuzz_auth_method_basic.cc:32'
+      - 'Info: CppLibFuzzer integration found: router/src/http/tests/fuzz_base64.cc:31'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_binary_datetime.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_binary_time.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_binlog_dump.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_binlog_dump_gtid.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_change_user.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_client_greeting.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_clone.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_init_schema.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_kill.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_list_fields.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_ping.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_query.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_quit.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_register_replica.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_reload.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_reset_connection.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_set_option.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_statistics.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_close.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_execute.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_fetch.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_param_append_data.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_prepare.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_reset.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/src/routing/tests/fuzz_show_warnings.cc:35'
+      - 'Info: CppLibFuzzer integration found: router/src/routing/tests/fuzz_sql_lexer.cc:35'
+      - 'Info: CppLibFuzzer integration found: router/src/routing_guidelines/tests/fuzz_parser.cc:28'
+      - 'Info: CppLibFuzzer integration found: router/tests/fuzzers/fuzz_router_uri.cc:33'
+      - 'Info: CppLibFuzzer integration found: router/tests/fuzzers/fuzz_router_uri_tostring.cc:36'
       - 'Info: CLibFuzzer integration found: extra/libedit/libedit-20240808-3.1/examples/fuzz1.c:18'
-      - 'Info: CppLibFuzzer integration found: extra/libcbor/libcbor-0.11.0/oss-fuzz/cbor_load_fuzzer.cc:71'
-      - 'Info: CppLibFuzzer integration found: extra/protobuf/protobuf-24.4/third_party/utf8_range/fuzz/utf8_validity_fuzzer.cc:9'
-      - 'Info: CppLibFuzzer integration found: router/src/http/tests/fuzz_auth_backend.cc:30'
-      - 'Info: CppLibFuzzer integration found: router/src/http/tests/fuzz_auth_method_basic.cc:32'
-      - 'Info: CppLibFuzzer integration found: router/src/http/tests/fuzz_base64.cc:31'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_binary_datetime.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_binary_time.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_binlog_dump.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_binlog_dump_gtid.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_change_user.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_client_greeting.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_clone.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_init_schema.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_kill.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_list_fields.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_ping.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_query.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_quit.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_register_replica.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_reload.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_reset_connection.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_set_option.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_statistics.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_close.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_execute.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_fetch.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_param_append_data.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_prepare.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_reset.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/routing/tests/fuzz_show_warnings.cc:35'
-      - 'Info: CppLibFuzzer integration found: router/src/routing/tests/fuzz_sql_lexer.cc:35'
-      - 'Info: CppLibFuzzer integration found: router/src/routing_guidelines/tests/fuzz_parser.cc:28'
-      - 'Info: CppLibFuzzer integration found: router/tests/fuzzers/fuzz_router_uri.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/tests/fuzzers/fuzz_router_uri_tostring.cc:36'
-      - 'Info: CppLibFuzzer integration found: extra/libcbor/libcbor-0.11.0/oss-fuzz/cbor_load_fuzzer.cc:71'
-      - 'Info: CppLibFuzzer integration found: extra/protobuf/protobuf-24.4/third_party/utf8_range/fuzz/utf8_validity_fuzzer.cc:9'
-      - 'Info: CppLibFuzzer integration found: router/src/http/tests/fuzz_auth_backend.cc:30'
-      - 'Info: CppLibFuzzer integration found: router/src/http/tests/fuzz_auth_method_basic.cc:32'
-      - 'Info: CppLibFuzzer integration found: router/src/http/tests/fuzz_base64.cc:31'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_binary_datetime.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_binary_time.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_binlog_dump.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_binlog_dump_gtid.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_change_user.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_client_greeting.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_clone.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_init_schema.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_kill.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_list_fields.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_ping.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_query.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_quit.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_register_replica.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_reload.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_reset_connection.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_set_option.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_statistics.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_close.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_execute.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_fetch.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_param_append_data.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_prepare.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/mysql_protocol/tests/fuzz_stmt_reset.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/src/routing/tests/fuzz_show_warnings.cc:35'
-      - 'Info: CppLibFuzzer integration found: router/src/routing/tests/fuzz_sql_lexer.cc:35'
-      - 'Info: CppLibFuzzer integration found: router/src/routing_guidelines/tests/fuzz_parser.cc:28'
-      - 'Info: CppLibFuzzer integration found: router/tests/fuzzers/fuzz_router_uri.cc:33'
-      - 'Info: CppLibFuzzer integration found: router/tests/fuzzers/fuzz_router_uri_tostring.cc:36'
   - name: Binary-Artifacts
     score: 8
     reason: binaries present in source code
@@ -620,17 +624,18 @@ checks:
       - 'Info: Possibly incomplete results: error parsing shell code: "foo(" must be followed by ): storage/ndb/test/run-test/atrt-mysqltest:0'
       - 'Info: Possibly incomplete results: error parsing shell code: "fi" can only be used to end an if: storage/ndb/test/run-test/ndb-autotest.sh:0'
       - 'Info: Possibly incomplete results: error parsing shell code: "fi" can only be used to end an if: storage/ndb/test/run-test/upgrade-boot.sh:0'
-      - 'Warn: containerImage not pinned by hash: components/telemetry/test/collector/Dockerfile:25: pin your Docker image by updating otel/opentelemetry-collector to otel/opentelemetry-collector@sha256:7725a7a10c87d8853208bdd4bb3439ad3c0d7b32b4292b9300ac07c8daba14a2'
+      - 'Warn: containerImage not pinned by hash: components/telemetry/test/collector/Dockerfile:25: pin your Docker image by updating otel/opentelemetry-collector to otel/opentelemetry-collector@sha256:e495787f07dbe432ce763ebaf5bc3d113850e9eee2250ade7a3da6a882d0d69a'
       - 'Warn: containerImage not pinned by hash: components/telemetry/test/loki/Dockerfile-all:24: pin your Docker image by updating grafana/loki:3.0.0 to grafana/loki:3.0.0@sha256:757b5fadf816a1396f1fea598152947421fa49cb8b2db1ddd2a6e30fae003253'
       - 'Warn: containerImage not pinned by hash: components/telemetry/test/loki/Dockerfile-backend:24: pin your Docker image by updating grafana/loki:3.0.0 to grafana/loki:3.0.0@sha256:757b5fadf816a1396f1fea598152947421fa49cb8b2db1ddd2a6e30fae003253'
       - 'Warn: containerImage not pinned by hash: components/telemetry/test/loki/Dockerfile-read:24: pin your Docker image by updating grafana/loki:3.0.0 to grafana/loki:3.0.0@sha256:757b5fadf816a1396f1fea598152947421fa49cb8b2db1ddd2a6e30fae003253'
       - 'Warn: containerImage not pinned by hash: components/telemetry/test/loki/Dockerfile-write:24: pin your Docker image by updating grafana/loki:3.0.0 to grafana/loki:3.0.0@sha256:757b5fadf816a1396f1fea598152947421fa49cb8b2db1ddd2a6e30fae003253'
       - 'Warn: containerImage not pinned by hash: components/telemetry/test/prometheus/Dockerfile:24: pin your Docker image by updating prom/prometheus:latest to prom/prometheus:latest@sha256:5ce7540c3c00ef4ab0c9d2c995c6a5b9c421f44b4a115d97a2c7af3b1c21cbb0'
-      - 'Warn: containerImage not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.23.0/.devcontainer/Dockerfile.dev:4: pin your Docker image by updating otel/cpp_format_tools to otel/cpp_format_tools@sha256:de22a1047bf284d6f8de947609f13efe89532456a429d44c29f6ad89f4bfadb2'
-      - 'Warn: containerImage not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.23.0/ext/test/w3c_tracecontext_http_test_server/Dockerfile:4: pin your Docker image by updating python to python@sha256:b0aed0e0059e9b1527ef57689a7206f32526627b0713e2228a916df62880188a'
-      - 'Warn: pipCommand not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.23.0/.devcontainer/Dockerfile.conan:22'
-      - 'Warn: npmCommand not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.23.0/.devcontainer/Dockerfile.dev:42'
-      - 'Warn: pipCommand not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.23.0/ext/test/w3c_tracecontext_http_test_server/Dockerfile:6'
+      - 'Warn: containerImage not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/.devcontainer/Dockerfile.dev:4: pin your Docker image by updating otel/cpp_format_tools to otel/cpp_format_tools@sha256:03e5af4c7901882c6ab12a69e273b824c686fe78b4bd2d5554e5ef201e749420'
+      - 'Warn: containerImage not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/ext/test/w3c_tracecontext_http_test_server/Dockerfile:4: pin your Docker image by updating python to python@sha256:8edbf9e42c7fb168b9c523718ed907117e6d2e60f5889c0c499bbda3a787da53'
+      - 'Warn: pipCommand not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/.devcontainer/Dockerfile.conan:22'
+      - 'Warn: downloadThenRun not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/.devcontainer/Dockerfile.dev:18-28'
+      - 'Warn: npmCommand not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/.devcontainer/Dockerfile.dev:54'
+      - 'Warn: pipCommand not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/ext/test/w3c_tracecontext_http_test_server/Dockerfile:6'
       - 'Warn: nugetCommand not pinned by hash: extra/protobuf/protobuf-24.4/csharp/build_release.sh:10: pin your dependencies by either enabling central package management (https://learn.microsoft.com/nuget/consume-packages/Central-Package-Management) or using a lockfile (https://learn.microsoft.com/nuget/consume-packages/package-references-in-project-files#locking-dependencies)'
       - 'Warn: nugetCommand not pinned by hash: extra/protobuf/protobuf-24.4/csharp/buildall.sh:9: pin your dependencies by either enabling central package management (https://learn.microsoft.com/nuget/consume-packages/Central-Package-Management) or using a lockfile (https://learn.microsoft.com/nuget/consume-packages/package-references-in-project-files#locking-dependencies)'
       - 'Warn: nugetCommand not pinned by hash: extra/protobuf/protobuf-24.4/csharp/compatibility_tests/v3.0.0/test.sh:21: pin your dependencies by either enabling central package management (https://learn.microsoft.com/nuget/consume-packages/Central-Package-Management) or using a lockfile (https://learn.microsoft.com/nuget/consume-packages/package-references-in-project-files#locking-dependencies)'
@@ -639,41 +644,9 @@ checks:
       - 'Warn: pipCommand not pinned by hash: extra/protobuf/protobuf-24.4/python/release.sh:37'
       - 'Info:  26 out of  26 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   2 out of   2 third-party GitHubAction dependencies pinned'
+      - 'Info:   4 out of  12 containerImage dependencies pinned'
+      - 'Info:   0 out of   4 pipCommand dependencies pinned'
+      - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
       - 'Info:   0 out of   1 npmCommand dependencies pinned'
       - 'Info:   0 out of   4 nugetCommand dependencies pinned'
-      - 'Info:   2 out of  10 containerImage dependencies pinned'
-      - 'Info:   0 out of   4 pipCommand dependencies pinned'
 ---
-eget:
-  collectedAt: 2026-09-07T19:27:36+00:00
-  platform:
-    darwin/arm64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    darwin/amd64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    linux/arm64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    linux/amd64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    win/arm64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
-    win/amd64:
-      name:  null
-      url:   null
-      size:  null
-      score: null
