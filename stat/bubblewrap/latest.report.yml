@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.12.0"
   latestRelease: "v0.12.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-09T19:18:52Z
+  collectedAt: 2026-09-10T05:12:30Z
 timeline:
   created: 2016-02-16
   lastCommit: 2026-09-08
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-08-26
   lastPrerelease: 
 popularity:
-  star: 8660
+  star: 8661
   watcher: 61
   fork: 382
   release: 26
@@ -31,7 +31,7 @@ language:
 totalBytes: 309169
 recent:
   last30d:
-    since: 2026-08-10
+    since: 2026-08-11
     release: 1
     mergedPR: 9
     openPR: 5
@@ -39,15 +39,15 @@ recent:
     openIssue: 5
     commit: 17
   last60d:
-    since: 2026-07-11
+    since: 2026-07-12
     release: 1
     mergedPR: 9
     openPR: 6
-    closedIssue: 2
+    closedIssue: 1
     openIssue: 7
     commit: 25
   last90d:
-    since: 2026-06-11
+    since: 2026-06-12
     release: 1
     mergedPR: 9
     openPR: 6
@@ -55,7 +55,7 @@ recent:
     openIssue: 7
     commit: 28
   last180d:
-    since: 2026-03-13
+    since: 2026-03-14
     release: 3
     mergedPR: 14
     openPR: 11
@@ -63,7 +63,7 @@ recent:
     openIssue: 13
     commit: 51
   last360d:
-    since: 2025-09-14
+    since: 2025-09-15
     release: 3
     mergedPR: 18
     openPR: 14
@@ -71,7 +71,7 @@ recent:
     openIssue: 25
     commit: 55
   last720d:
-    since: 2024-09-19
+    since: 2024-09-20
     release: 4
     mergedPR: 26
     openPR: 19
@@ -87,7 +87,7 @@ total:
   commit: 717
 ---
 path: /home/runner/.x-repo/github.com/containers/bubblewrap
-collectedAt: 2026-09-09T19:18:53Z
+collectedAt: 2026-09-10T05:12:31Z
 loc:
   C:
     code: 4815
@@ -240,4 +240,4 @@ checks:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Info: all commits (14) are checked with a SAST tool'
 ---
-{"id":377041403,"author":{"login":"alexlarsson","id":990736,"node_id":"MDQ6VXNlcjk5MDczNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAxdxas4WeTH7","tag_name":"v0.12.0","target_commitish":"main","name":"Release 0.12.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-26T10:09:31Z","updated_at":"2026-08-26T10:11:18Z","published_at":"2026-08-26T10:11:18Z","assets":[{"id":530629244,"node_id":"RA_kwDOAxdxas4foMJ8","name":"bubblewrap-0.12.0.tar.xz","label":null,"uploader":{"login":"alexlarsson","id":990736,"node_id":"MDQ6VXNlcjk5MDczNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-xz","state":"uploaded","size":126452,"digest":"sha256:9760d007363e3abba7c747489910f9f82d9fca53ba3bd3282e396fa3c97a3314","download_count":4113,"created_at":"2026-08-26T10:11:02Z","updated_at":"2026-08-26T10:11:03Z"},{"id":530629263,"node_id":"RA_kwDOAxdxas4foMKP","name":"bubblewrap-0.12.0.tar.xz.sha256sum","label":null,"uploader":{"login":"alexlarsson","id":990736,"node_id":"MDQ6VXNlcjk5MDczNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":91,"digest":"sha256:6f1804eb45fd2727e08b4964b64cadd699a1c8086a996f01db037e294db021fc","download_count":376,"created_at":"2026-08-26T10:11:03Z","updated_at":"2026-08-26T10:11:04Z"}],"body":"Enhancements:\r\n\r\n * The flag --not-a-security-boundary was added. If this is enabled\r\n   then failure of some sandbox setup steps (like remounting a\r\n   submount) are not fatal.\r\n\r\n * The license has been updated from LGPL 2.0 (or later) to LGPL 2.1\r\n   (or later).\r\n\r\n * This version removes the support for building a setuid\r\n   bubblewrap. Changes in this version made it difficult to support\r\n   and basically all modern linux distributions now support\r\n   unprivileged user namespaces to some extent.\r\n\r\n * The assume_kernel build option was added, if specified no backwards\r\n   compatiblity for kernels older than this is built in (and will result\r\n   in hard failures at runtime). Currently specifying 5.6.0 or\r\n   later will disable the fallback implementation of\r\n   openat2(RESOLVE_IN_ROOT).\r\n\r\nBug fixes:\r\n\r\n  * Bubblewrap now correctly resolves absolute symlinks during the\r\n    sandbox setup by using openat2 with RESOLVE_IN_ROOT (or a fallback\r\n    implementation). This fixes a security issue ([GHSA-pxhw-h44j-8pfx](https://github.com/containers/bubblewrap/security/advisories/GHSA-pxhw-h44j-8pfx))\r\n    where file or directories created during sandbox setup could\r\n    follow parent symlinks out of the sandbox.\r\n","reactions":{"total_count":12,"+1":0,"-1":0,"laugh":0,"hooray":5,"confused":0,"heart":0,"rocket":7,"eyes":0}}
+{"id":377041403,"author":{"login":"alexlarsson","id":990736,"node_id":"MDQ6VXNlcjk5MDczNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAxdxas4WeTH7","tag_name":"v0.12.0","target_commitish":"main","name":"Release 0.12.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-26T10:09:31Z","updated_at":"2026-08-26T10:11:18Z","published_at":"2026-08-26T10:11:18Z","assets":[{"id":530629244,"node_id":"RA_kwDOAxdxas4foMJ8","name":"bubblewrap-0.12.0.tar.xz","label":null,"uploader":{"login":"alexlarsson","id":990736,"node_id":"MDQ6VXNlcjk5MDczNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-xz","state":"uploaded","size":126452,"digest":"sha256:9760d007363e3abba7c747489910f9f82d9fca53ba3bd3282e396fa3c97a3314","download_count":4332,"created_at":"2026-08-26T10:11:02Z","updated_at":"2026-08-26T10:11:03Z"},{"id":530629263,"node_id":"RA_kwDOAxdxas4foMKP","name":"bubblewrap-0.12.0.tar.xz.sha256sum","label":null,"uploader":{"login":"alexlarsson","id":990736,"node_id":"MDQ6VXNlcjk5MDczNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":91,"digest":"sha256:6f1804eb45fd2727e08b4964b64cadd699a1c8086a996f01db037e294db021fc","download_count":381,"created_at":"2026-08-26T10:11:03Z","updated_at":"2026-08-26T10:11:04Z"}],"body":"Enhancements:\r\n\r\n * The flag --not-a-security-boundary was added. If this is enabled\r\n   then failure of some sandbox setup steps (like remounting a\r\n   submount) are not fatal.\r\n\r\n * The license has been updated from LGPL 2.0 (or later) to LGPL 2.1\r\n   (or later).\r\n\r\n * This version removes the support for building a setuid\r\n   bubblewrap. Changes in this version made it difficult to support\r\n   and basically all modern linux distributions now support\r\n   unprivileged user namespaces to some extent.\r\n\r\n * The assume_kernel build option was added, if specified no backwards\r\n   compatiblity for kernels older than this is built in (and will result\r\n   in hard failures at runtime). Currently specifying 5.6.0 or\r\n   later will disable the fallback implementation of\r\n   openat2(RESOLVE_IN_ROOT).\r\n\r\nBug fixes:\r\n\r\n  * Bubblewrap now correctly resolves absolute symlinks during the\r\n    sandbox setup by using openat2 with RESOLVE_IN_ROOT (or a fallback\r\n    implementation). This fixes a security issue ([GHSA-pxhw-h44j-8pfx](https://github.com/containers/bubblewrap/security/advisories/GHSA-pxhw-h44j-8pfx))\r\n    where file or directories created during sandbox setup could\r\n    follow parent symlinks out of the sandbox.\r\n","reactions":{"total_count":12,"+1":0,"-1":0,"laugh":0,"hooray":5,"confused":0,"heart":0,"rocket":7,"eyes":0}}

@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.5.0"
   latestRelease: "v1.5.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-09T06:09:22Z
+  collectedAt: 2026-09-10T18:09:34Z
 timeline:
   created: 2026-04-08
   lastCommit: 2026-09-01
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-09-01
   lastPrerelease: 
 popularity:
-  star: 5845
+  star: 5901
   watcher: 41
-  fork: 645
+  fork: 660
   release: 21
   contributor: 17
   pullRequest: 0
-  issue: 84
+  issue: 85
 language:
   Python: 1161367
   HCL: 150431
@@ -34,63 +34,63 @@ language:
 totalBytes: 1435261
 recent:
   last30d:
-    since: 2026-08-10
+    since: 2026-08-11
     release: 4
     mergedPR: 0
     openPR: 0
     closedIssue: 12
-    openIssue: 12
+    openIssue: 13
     commit: 4
   last60d:
-    since: 2026-07-11
+    since: 2026-07-12
     release: 8
     mergedPR: 0
     openPR: 0
     closedIssue: 18
-    openIssue: 16
+    openIssue: 17
     commit: 8
   last90d:
-    since: 2026-06-11
+    since: 2026-06-12
     release: 14
     mergedPR: 0
     openPR: 0
-    closedIssue: 34
-    openIssue: 23
+    closedIssue: 33
+    openIssue: 24
     commit: 15
   last180d:
-    since: 2026-03-13
+    since: 2026-03-14
     release: 21
     mergedPR: 0
     openPR: 0
     closedIssue: 55
-    openIssue: 29
+    openIssue: 30
     commit: 34
   last360d:
-    since: 2025-09-14
+    since: 2025-09-15
     release: 21
     mergedPR: 0
     openPR: 0
     closedIssue: 55
-    openIssue: 29
+    openIssue: 30
     commit: 34
   last720d:
-    since: 2024-09-19
+    since: 2024-09-20
     release: 21
     mergedPR: 0
     openPR: 0
     closedIssue: 55
-    openIssue: 29
+    openIssue: 30
     commit: 39
 total:
   release: 21
   mergedPR: 0
   openPR: 0
   closedIssue: 55
-  openIssue: 29
+  openIssue: 30
   commit: 39
 ---
 path: /home/runner/.x-repo/github.com/google/agents-cli
-collectedAt: 2026-09-09T06:09:24Z
+collectedAt: 2026-09-10T18:09:35Z
 loc:
   Python:
     code: 24717
@@ -180,4 +180,4 @@ total:
 ---
 
 ---
-{"id":380767993,"author":{"login":"pwkowalski","id":214988617,"node_id":"U_kgDODNB3SQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOR9TwcM4Wsg75","tag_name":"v1.5.0","target_commitish":"main","name":"Release v1.5.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-01T19:21:13Z","updated_at":"2026-09-01T19:28:54Z","published_at":"2026-09-01T19:28:54Z","assets":[{"id":540030277,"node_id":"RA_kwDOR9TwcM4gMDVF","name":"google_agents_cli-1.5.0-py3-none-any.whl","label":"","uploader":{"login":"pwkowalski","id":214988617,"node_id":"U_kgDODNB3SQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":1269882,"digest":"sha256:a8729e26cb8373752e7fe0beb9787482d87ddb1a79e334d42c8534fcfe3c79a6","download_count":5,"created_at":"2026-09-01T19:28:54Z","updated_at":"2026-09-01T19:28:54Z"},{"id":540030275,"node_id":"RA_kwDOR9TwcM4gMDVD","name":"google_agents_cli-1.5.0.tar.gz","label":"","uploader":{"login":"pwkowalski","id":214988617,"node_id":"U_kgDODNB3SQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":1034515,"digest":"sha256:95c9d572dfd692623417345d0a059f77012f1277ebac40f9e97283accd1dfea6","download_count":4,"created_at":"2026-09-01T19:28:53Z","updated_at":"2026-09-01T19:28:54Z"}],"body":"Release v1.5.0\n\n- **Extension system with a LangChain template.** `agents-cli` can now be extended with custom commands and add-on agent templates, shipped with a LangChain extension and authoring guides. Extensions install from GitHub, other git hosts (including self-hosted and enterprise servers), or a local path for development.\n- Add `agents-cli infra show` to inspect the Terraform configuration provisioned by `agents-cli infra single-project`.\n- Add `--update-only` to `agents-cli deploy`, so a deploy updates an existing Agent Runtime engine instead of creating a duplicate.\n- Add a `--labels` flag to `agents-cli deploy` to tag Agent Runtime and Cloud Run deployments.\n- Add `--qps` to `agents-cli eval` that controls the request rate instead of being throttled to the default value.\n- Name the scaffolded root agent after its project instead of a generic default.\n- `agents-cli deploy` now retries throttled Agent Platform calls.\n- `agents-cli create` now reports precondition failures as clear errors instead of exiting successfully or printing a traceback.\n  - https://github.com/google/agents-cli/issues/68\n- Fix background server reuse ignoring the requested session mode.\n  - https://github.com/google/agents-cli/issues/70\n- Fix `reasoning_engine_adapter` streaming returning an empty response.\n  - https://github.com/google/agents-cli/issues/80\n- Prevent multi-region deployments in scaffold and deploy.\n  - https://github.com/google/agents-cli/issues/81\n- Give a clear error for malformed project manifests instead of silently defaulting or printing a traceback.\n  - https://github.com/google/agents-cli/issues/74\n- Fix stale command references in docs and CLI hints.\n  - https://github.com/google/agents-cli/issues/77\n- Scaffolded A2A agents now forward tool calls and responses to clients, not just text.\n- `agents-cli setup` now works without network or git access, with skills bundled into the package.\n- Fix a Windows failure loading a scaffolded project whose config points at a local path.","reactions":{"total_count":2,"+1":0,"-1":0,"laugh":0,"hooray":2,"confused":0,"heart":0,"rocket":0,"eyes":0}}
+{"id":380767993,"author":{"login":"pwkowalski","id":214988617,"node_id":"U_kgDODNB3SQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOR9TwcM4Wsg75","tag_name":"v1.5.0","target_commitish":"main","name":"Release v1.5.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-01T19:21:13Z","updated_at":"2026-09-01T19:28:54Z","published_at":"2026-09-01T19:28:54Z","assets":[{"id":540030277,"node_id":"RA_kwDOR9TwcM4gMDVF","name":"google_agents_cli-1.5.0-py3-none-any.whl","label":"","uploader":{"login":"pwkowalski","id":214988617,"node_id":"U_kgDODNB3SQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":1269882,"digest":"sha256:a8729e26cb8373752e7fe0beb9787482d87ddb1a79e334d42c8534fcfe3c79a6","download_count":7,"created_at":"2026-09-01T19:28:54Z","updated_at":"2026-09-01T19:28:54Z"},{"id":540030275,"node_id":"RA_kwDOR9TwcM4gMDVD","name":"google_agents_cli-1.5.0.tar.gz","label":"","uploader":{"login":"pwkowalski","id":214988617,"node_id":"U_kgDODNB3SQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":1034515,"digest":"sha256:95c9d572dfd692623417345d0a059f77012f1277ebac40f9e97283accd1dfea6","download_count":6,"created_at":"2026-09-01T19:28:53Z","updated_at":"2026-09-01T19:28:54Z"}],"body":"Release v1.5.0\n\n- **Extension system with a LangChain template.** `agents-cli` can now be extended with custom commands and add-on agent templates, shipped with a LangChain extension and authoring guides. Extensions install from GitHub, other git hosts (including self-hosted and enterprise servers), or a local path for development.\n- Add `agents-cli infra show` to inspect the Terraform configuration provisioned by `agents-cli infra single-project`.\n- Add `--update-only` to `agents-cli deploy`, so a deploy updates an existing Agent Runtime engine instead of creating a duplicate.\n- Add a `--labels` flag to `agents-cli deploy` to tag Agent Runtime and Cloud Run deployments.\n- Add `--qps` to `agents-cli eval` that controls the request rate instead of being throttled to the default value.\n- Name the scaffolded root agent after its project instead of a generic default.\n- `agents-cli deploy` now retries throttled Agent Platform calls.\n- `agents-cli create` now reports precondition failures as clear errors instead of exiting successfully or printing a traceback.\n  - https://github.com/google/agents-cli/issues/68\n- Fix background server reuse ignoring the requested session mode.\n  - https://github.com/google/agents-cli/issues/70\n- Fix `reasoning_engine_adapter` streaming returning an empty response.\n  - https://github.com/google/agents-cli/issues/80\n- Prevent multi-region deployments in scaffold and deploy.\n  - https://github.com/google/agents-cli/issues/81\n- Give a clear error for malformed project manifests instead of silently defaulting or printing a traceback.\n  - https://github.com/google/agents-cli/issues/74\n- Fix stale command references in docs and CLI hints.\n  - https://github.com/google/agents-cli/issues/77\n- Scaffolded A2A agents now forward tool calls and responses to clients, not just text.\n- `agents-cli setup` now works without network or git access, with skills bundled into the package.\n- Fix a Windows failure loading a scaffolded project whose config points at a local path.","reactions":{"total_count":2,"+1":0,"-1":0,"laugh":0,"hooray":2,"confused":0,"heart":0,"rocket":0,"eyes":0}}

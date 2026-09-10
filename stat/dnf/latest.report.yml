@@ -7,7 +7,7 @@ about:
   latestVersion: "4.24.0"
   latestRelease: "4.24.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-09T18:54:47Z
+  collectedAt: 2026-09-10T16:48:54Z
 timeline:
   created: 2012-03-09
   lastCommit: 2026-08-07
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2025-10-21
   lastPrerelease: 
 popularity:
-  star: 1379
+  star: 1380
   watcher: 58
   fork: 430
   release: 38
@@ -30,7 +30,7 @@ language:
 totalBytes: 1639744
 recent:
   last30d:
-    since: 2026-08-10
+    since: 2026-08-11
     release: 0
     mergedPR: 1
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-11
+    since: 2026-07-12
     release: 0
     mergedPR: 5
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-06-11
+    since: 2026-06-12
     release: 0
     mergedPR: 9
     openPR: 1
@@ -54,7 +54,7 @@ recent:
     openIssue: 2
     commit: 0
   last180d:
-    since: 2026-03-13
+    since: 2026-03-14
     release: 0
     mergedPR: 25
     openPR: 3
@@ -62,7 +62,7 @@ recent:
     openIssue: 5
     commit: 0
   last360d:
-    since: 2025-09-14
+    since: 2025-09-15
     release: 1
     mergedPR: 48
     openPR: 5
@@ -70,9 +70,9 @@ recent:
     openIssue: 7
     commit: 0
   last720d:
-    since: 2024-09-19
+    since: 2024-09-20
     release: 3
-    mergedPR: 124
+    mergedPR: 122
     openPR: 8
     closedIssue: 53
     openIssue: 17
@@ -86,7 +86,7 @@ total:
   commit: 9802
 ---
 path: /home/runner/.x-repo/github.com/rpm-software-management/dnf
-collectedAt: 2026-09-09T18:55:03Z
+collectedAt: 2026-09-10T16:49:03Z
 loc:
   Python:
     code: 31029
@@ -375,4 +375,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---
-{"id":256062290,"author":{"login":"ppisar","id":1064942,"node_id":"MDQ6VXNlcjEwNjQ5NDI=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOADgHZc4PQzNS","tag_name":"4.24.0","target_commitish":"master","name":"4.24.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2025-10-21T15:09:05Z","updated_at":"2025-10-21T15:47:44Z","published_at":"2025-10-21T15:47:44Z","assets":[{"id":306950553,"node_id":"RA_kwDOADgHZc4SS7GZ","name":"dnf-4.24.0.tar.gz","label":null,"uploader":{"login":"ppisar","id":1064942,"node_id":"MDQ6VXNlcjEwNjQ5NDI=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gunzip","state":"uploaded","size":2170986,"digest":"sha256:fabdc4436e9a8a152d38060602f491bee4245ad54656f01991f33d511c87bfb1","download_count":227,"created_at":"2025-10-21T15:47:29Z","updated_at":"2025-10-21T15:47:30Z"},{"id":306950586,"node_id":"RA_kwDOADgHZc4SS7G6","name":"dnf-4.24.0.tar.gz.asc","label":null,"uploader":{"login":"ppisar","id":1064942,"node_id":"MDQ6VXNlcjEwNjQ5NDI=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"text/plain","state":"uploaded","size":833,"digest":"sha256:87c014a78abca7ee821d9b33a1df930cc564890818534b373ed52808391e4146","download_count":41,"created_at":"2025-10-21T15:47:34Z","updated_at":"2025-10-21T15:47:35Z"}],"body":"Enhancements:\r\n\r\n- For all transactions on a Bootc system, store whether the transaction was\r\n  persistent or transient in the history database. This flags is visible in\r\n  \"dnf history info\" output.\r\n- Before performing a transient transaction on a Bootc system DNF checks for\r\n  changed files that could cause problems when discarding transient\r\n  transactions on the next reboot. The names of the files can be configured\r\n  using globs in paths configured in a new \"usr_drift_protected_paths\" option,\r\n  defaulting to \"glob:/etc/dnf/usr-drift-protected-paths.d/*.conf\".\r\n  Be ware that if the \"usr_drift_protected_paths\" option is set, filelist are\r\n  always downloaded.\r\n- Don't call scriptout() of TransactionProgress object with non-actionable\r\n  None argument.\r\n- Improve the included spec file to allow building with Ninja build system.\r\n- Document that modularity support, including \"module\" command, is\r\n  deprecated.\r\n- Document scriptout() hook of TransactionProgress class.\r\n\r\nChanges:\r\n\r\n- Minimal required libdnf version changed to 0.75.0.\r\n- Automatic plugin: Expand email_to variable in command_email emitter to\r\n  individual arguments. This is required to support s-nail. It is compatible\r\n  with mailx.\r\n- Remove support for building DNF for RHEL <= 7 from the included spec file.\r\n  This brings the spec file in line with DNF code which has been unbuildable\r\n  there for a long time.\r\n\r\nBug fixes:\r\n\r\n- Check all installed versions of a package for the newest change log date.\r\n  This corrects obtaining a change log entry for packages which can be\r\n  installed in multiple versions (like kernel).\r\n- Fix detecting releasever_minor variable value in dnf-automatic tool.\r\n- Fix building on CentOS 9.\r\n- Fix packaging the dnf-automatic.timer to keep the systemd timer enabled when\r\n  when upgrading to DNF5.\r\n- Document changes in exit codes of some history subcommands between YUM and\r\n  DNF.\r\n- Correct a documentation of \"--disableexcludes\" and \"--disableexcludepkgs\"\r\n  options so that its clear that their values are not optional.\r\n- Fix incorrect Bootc documentation link.\r\n- Correct documentation to point to #dnf channel on Libera.Chat IRC network.\r\n- Close file handles during tests.\r\n\r\nInternal changes:\r\n\r\n- Allow using destdir option for the new manifest plugin.\r\n","reactions":{"total_count":4,"+1":2,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":1,"rocket":0,"eyes":1}}
+{"id":256062290,"author":{"login":"ppisar","id":1064942,"node_id":"MDQ6VXNlcjEwNjQ5NDI=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOADgHZc4PQzNS","tag_name":"4.24.0","target_commitish":"master","name":"4.24.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2025-10-21T15:09:05Z","updated_at":"2025-10-21T15:47:44Z","published_at":"2025-10-21T15:47:44Z","assets":[{"id":306950553,"node_id":"RA_kwDOADgHZc4SS7GZ","name":"dnf-4.24.0.tar.gz","label":null,"uploader":{"login":"ppisar","id":1064942,"node_id":"MDQ6VXNlcjEwNjQ5NDI=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gunzip","state":"uploaded","size":2170986,"digest":"sha256:fabdc4436e9a8a152d38060602f491bee4245ad54656f01991f33d511c87bfb1","download_count":228,"created_at":"2025-10-21T15:47:29Z","updated_at":"2025-10-21T15:47:30Z"},{"id":306950586,"node_id":"RA_kwDOADgHZc4SS7G6","name":"dnf-4.24.0.tar.gz.asc","label":null,"uploader":{"login":"ppisar","id":1064942,"node_id":"MDQ6VXNlcjEwNjQ5NDI=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"text/plain","state":"uploaded","size":833,"digest":"sha256:87c014a78abca7ee821d9b33a1df930cc564890818534b373ed52808391e4146","download_count":41,"created_at":"2025-10-21T15:47:34Z","updated_at":"2025-10-21T15:47:35Z"}],"body":"Enhancements:\r\n\r\n- For all transactions on a Bootc system, store whether the transaction was\r\n  persistent or transient in the history database. This flags is visible in\r\n  \"dnf history info\" output.\r\n- Before performing a transient transaction on a Bootc system DNF checks for\r\n  changed files that could cause problems when discarding transient\r\n  transactions on the next reboot. The names of the files can be configured\r\n  using globs in paths configured in a new \"usr_drift_protected_paths\" option,\r\n  defaulting to \"glob:/etc/dnf/usr-drift-protected-paths.d/*.conf\".\r\n  Be ware that if the \"usr_drift_protected_paths\" option is set, filelist are\r\n  always downloaded.\r\n- Don't call scriptout() of TransactionProgress object with non-actionable\r\n  None argument.\r\n- Improve the included spec file to allow building with Ninja build system.\r\n- Document that modularity support, including \"module\" command, is\r\n  deprecated.\r\n- Document scriptout() hook of TransactionProgress class.\r\n\r\nChanges:\r\n\r\n- Minimal required libdnf version changed to 0.75.0.\r\n- Automatic plugin: Expand email_to variable in command_email emitter to\r\n  individual arguments. This is required to support s-nail. It is compatible\r\n  with mailx.\r\n- Remove support for building DNF for RHEL <= 7 from the included spec file.\r\n  This brings the spec file in line with DNF code which has been unbuildable\r\n  there for a long time.\r\n\r\nBug fixes:\r\n\r\n- Check all installed versions of a package for the newest change log date.\r\n  This corrects obtaining a change log entry for packages which can be\r\n  installed in multiple versions (like kernel).\r\n- Fix detecting releasever_minor variable value in dnf-automatic tool.\r\n- Fix building on CentOS 9.\r\n- Fix packaging the dnf-automatic.timer to keep the systemd timer enabled when\r\n  when upgrading to DNF5.\r\n- Document changes in exit codes of some history subcommands between YUM and\r\n  DNF.\r\n- Correct a documentation of \"--disableexcludes\" and \"--disableexcludepkgs\"\r\n  options so that its clear that their values are not optional.\r\n- Fix incorrect Bootc documentation link.\r\n- Correct documentation to point to #dnf channel on Libera.Chat IRC network.\r\n- Close file handles during tests.\r\n\r\nInternal changes:\r\n\r\n- Allow using destdir option for the new manifest plugin.\r\n","reactions":{"total_count":4,"+1":2,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":1,"rocket":0,"eyes":1}}

@@ -2,25 +2,25 @@ about:
   description: "The knowledge compiler. Raw sources in, interlinked wiki out. Inspired by Karpathy's LLM Wiki pattern."
   license: MIT
   homepage: https://llmwiki.atomicstrata.ai
-  head: 6a85a92
+  head: 84ed65c
   archived: false
-  latestVersion: "v1.1.0"
-  latestRelease: "v1.1.0"
+  latestVersion: "v1.2.0"
+  latestRelease: "v1.2.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-09T19:20:09Z
+  collectedAt: 2026-09-10T16:58:16Z
 timeline:
   created: 2026-04-05
-  lastCommit: 2026-09-09
-  lastVersion: 2026-07-16
-  lastRelease: 2026-07-16
+  lastCommit: 2026-09-10
+  lastVersion: 2026-09-10
+  lastRelease: 2026-09-10
   lastPrerelease: 
 popularity:
-  star: 2007
+  star: 2010
   watcher: 18
   fork: 201
-  release: 11
+  release: 12
   contributor: 17
-  pullRequest: 174
+  pullRequest: 175
   issue: 32
 language:
   TypeScript: 6967677
@@ -31,63 +31,63 @@ language:
 totalBytes: 7392262
 recent:
   last30d:
-    since: 2026-08-10
-    release: 0
-    mergedPR: 18
+    since: 2026-08-11
+    release: 1
+    mergedPR: 19
     openPR: 1
     closedIssue: 4
     openIssue: 4
-    commit: 18
+    commit: 19
   last60d:
-    since: 2026-07-11
+    since: 2026-07-12
     release: 2
     mergedPR: 31
     openPR: 1
     closedIssue: 7
     openIssue: 7
-    commit: 26
+    commit: 27
   last90d:
-    since: 2026-06-11
-    release: 3
-    mergedPR: 62
+    since: 2026-06-12
+    release: 4
+    mergedPR: 63
     openPR: 1
     closedIssue: 9
     openIssue: 9
-    commit: 50
+    commit: 51
   last180d:
-    since: 2026-03-13
-    release: 11
-    mergedPR: 143
+    since: 2026-03-14
+    release: 12
+    mergedPR: 144
     openPR: 1
     closedIssue: 22
     openIssue: 10
-    commit: 159
+    commit: 160
   last360d:
-    since: 2025-09-14
-    release: 11
-    mergedPR: 143
+    since: 2025-09-15
+    release: 12
+    mergedPR: 144
     openPR: 1
     closedIssue: 22
     openIssue: 10
-    commit: 159
+    commit: 160
   last720d:
-    since: 2024-09-19
-    release: 11
-    mergedPR: 143
+    since: 2024-09-20
+    release: 12
+    mergedPR: 144
     openPR: 1
     closedIssue: 22
     openIssue: 10
-    commit: 159
+    commit: 160
 total:
-  release: 11
-  mergedPR: 143
+  release: 12
+  mergedPR: 144
   openPR: 1
   closedIssue: 22
   openIssue: 10
-  commit: 159
+  commit: 160
 ---
 path: /home/runner/.x-repo/github.com/atomicstrata/llm-wiki-compiler
-collectedAt: 2026-09-09T19:20:11Z
+collectedAt: 2026-09-10T16:58:19Z
 loc:
   TypeScript:
     code: 111216
@@ -136,8 +136,8 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 1214
-    blanks: 573
+    comments: 1245
+    blanks: 584
     files: 22
   Text:
     code: 0
@@ -146,10 +146,10 @@ loc:
     files: 4
 total:
   code: 125989
-  comments: 46733
-  blanks: 17315
+  comments: 46764
+  blanks: 17326
   files: 1370
 ---
 
 ---
-{"id":354806030,"author":{"login":"ethanj","id":1934146,"node_id":"MDQ6VXNlcjE5MzQxNDY=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOR6jouM4VJekO","tag_name":"v1.1.0","target_commitish":"6963a7f8374282de5d4084a324be69b50f62a32d","name":"v1.1.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-07-16T00:33:34Z","updated_at":"2026-07-16T00:33:45Z","published_at":"2026-07-16T00:33:45Z","assets":[],"body":"## [1.1.0] - 2026-07-15\n\nAdds a security-first template distribution ecosystem \u2014 publishers sign and distribute profile templates offline, and consumers discover, install, update, and verify them through explicitly trusted taps \u2014 plus a guided path for authoring a first profile and the `llmwiki status` command. Every addition is opt-in; projects that do not use templates, taps, or profiles are unaffected.\n\n### Added\n\n- **Guided profile authoring** \u2014 `llmwiki profile init <profile-id> --entity <type>` scaffolds the smallest useful editable profile and a typed page. It validates before writing, serializes concurrent project mutations, and refuses to reinterpret an existing profile or typed corpus. There is no force mode, and a failed scaffold cleans up only the directories it created. A new \"Build your first profile\" guide and an interactive profile explorer teach the workflow end to end.\n- **Template lifecycle and signing foundations** \u2014 template status and read-only update planning with exact historical release resolution, local-drift detection, profile-identity protection, and compatibility audits across pages, artifacts, review history, and workflow state. Update plans are advisory and re-verified under lock. Ed25519 signing and provenance underpin the distribution surfaces below.\n- **Signed template taps and remote discovery** \u2014 configure explicitly trusted template taps, refresh signed catalogs, and search, inspect, and verify signed package evidence without installing or changing a profile. The tap layer is read-only and network-facing, with exact-origin fetch confinement, continuity state, and cache re-verification.\n- **Secure remote install and update** \u2014 install, inspect, and update signed templates discovered through taps. Packages resolve from cryptographically verified tap evidence; identity and revocation are rechecked under lock before any mutation; non-interactive installs require explicit consent; and updates refuse incompatible corpus changes, local profile drift, pending review candidates, and active workflow runs.\n- **Template publisher workflow** \u2014 `llmwiki template publish init | add | build | rotate | revoke` builds signed, verifiable, offline distributions. Private keys are exclusively created, stored `0600`, read no-follow, and never leave the workspace or appear in the manifest. `build` verifies the whole distribution as a consumer would before publishing and commits the sequence last, so a crash leaves the workspace at its prior sequence. `--refresh` renews an expiring index under a fresh lifetime, and a key rotation re-signs every package while content-addressed filenames never change. The output directory must live outside the workspace and be empty or a prior distribution of the same tap.\n- **Offline publisher verification** \u2014 `llmwiki template publish verify <directory>` verifies a signed distribution using the production tap-index and package parsers and Ed25519 verification with an independently selected tap key.\n- **`llmwiki status` command** \u2014 a readable snapshot of page and source counts, last compile time, stale and orphaned pages, pending changes, the review queue, active profile, and state-file health, with a next-command hint on each problem line. The status snapshot was previously reachable only over MCP (`wiki_status`) and the SDK (`status()`).\n\n"}
+{"id":385972944,"author":{"login":"ethanj","id":1934146,"node_id":"MDQ6VXNlcjE5MzQxNDY=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOR6jouM4XAXrQ","tag_name":"v1.2.0","target_commitish":"84ed65cdbac22905066f8bde7925967a567f8dc2","name":"v1.2.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-10T02:52:27Z","updated_at":"2026-09-10T02:52:30Z","published_at":"2026-09-10T02:52:30Z","assets":[],"body":"## [1.2.0] - 2026-09-09\n\n### Highlights\n\n- Profile-aware viewer navigation, declared record fields, relationships, provenance and evidence drill-down. Stored source previews are distinguished from original-publication links; artifact bytes are freshly verified and served only on loopback. Narrow layouts, plain-language labels and initially fitted, yielding graph layouts improve browsing.\n- OrcaRouter provider support with `openai/gpt-4o-mini` as its default and explicit credentials; embeddings remain unwired and fail closed.\n- Typed pages use the profile's declared title field. Citation line-list parsing is shared across consumers and accepts whitespace around commas.\n- Invalid concurrency warnings use stderr, preserving the quickstart JSON output channel.\n\n### Contributors\n\nCredit includes original proposals, reports and diagnoses, including work completed or extended by maintainers:\n\n- @PipDscvr: profile-aware viewer and declared fields (#176, #177, #180, #189), Windows path fixes (#172), separate embedding providers (#174), and source removal (#179).\n- @LorenzoGentile: optional Sources sections (#183), reasoning-model request compatibility (#184), and abbreviated-wikilink repair (#193).\n- @Marc-oss-hub: OrcaRouter provider support (#182).\n- @typevolant: citation line-list parsing and validation (#166), including the groundwork for #168.\n- @TigerOfCountryYao: original embedding opt-out, additive system policy, and shared-page reconciliation contributions (#169, #170, #171), completed in #198, #195 and #199.\n- @binyangzhu000-sudo: original Atlas Cloud provider contribution (#167), completed in #190.\n- @suyunzzz: subscription-authentication request (#56), addressed through local CLI-session reuse in #205.\n- @tienlx91: source-removal request (#60), implemented in #179.\n- @carmilso: project-level compile-instructions request (#144), partly addressed by the SDK system policy in #195.\n- @knew-inventai: separate embedding-endpoint request (#154), implemented in #174.\n- @squ1ddy: Windows profile-path report and diagnosis (#163), addressed in #172.\n- @graysoncooper: quickstart JSON-output corruption report (#191), addressed in #204.\n- @ddiall: ingestion-quality feedback in the source-removal discussion (#60).\n\n### Known limitations\n\n- Windows path fixes are included, but release CI remains Linux-only. Full Windows filesystem-confinement guarantees are not verified; use Linux for untrusted projects until #175 is resolved.\n\n### Added\n\n- **OpenAI Codex CLI provider** \u2014 `LLMWIKI_PROVIDER=codex-agent` or\n  `--provider codex-agent` delegates chat and structured generation to a locally\n  authenticated Codex CLI. The same one-run `--provider` override is now\n  available on `compile`, `refresh`, `query`, `watch`, `rules extract`, `eval`,\n  and `quickstart`. Codex runs non-interactively in an ephemeral read-only\n  sandbox with a minimal environment, bounded output and process-tree lifetime,\n  interruption cleanup, and independently validated structured results. It\n  never reads project `.env` files or falls back to API-key authentication when\n  explicitly selected; embeddings require an explicit existing backend.\n\n- **Skip embeddings on compile** \u2014 `compile({ embeddings: false })` runs page generation, links and the lexical index without any embedding-provider call or pending-embedding retry, for an SDK host that maintains its own semantic index. Omitting it is unchanged.\n\n  The flag closes a gap that is provider-specific. With `anthropic` or `claude-agent` a caller can already opt out by not setting `VOYAGE_API_KEY`, but the `openai` embedding credential falls back to `OPENAI_API_KEY` and `ollama` needs no key at all, so those callers had no way to compile without embedding except to break chat.\n\n  Contributed by **@TigerOfCountryYao** (#169).\n\n- **Caller system policy on compile** \u2014 `compile({ systemPolicy })` appends deployment-specific editorial or publication guidance to the built-in compile prompts, for SDK hosts that need it without forking the prompts. It is additive rather than a replacement, sits before the source material, and blank or omitted leaves the prompt byte-identical.\n\n  It is advisory rather than enforceable: a policy makes a model more likely to follow a rule, and nothing downstream verifies that it did. Anything that must hold belongs in a lint rule or a trust gate.\n\n  The policy is a prompt modifier, so changing or clearing it regenerates the pages compiled under the previous one, and replaces a pending review candidate produced under it. Each page records the policy's **digest**, never its text, since the modifier set travels into `state.json`, page frontmatter and the JSON export. `PROMPT_VERSION` advances to `v2`.\n\n  Groundwork by **@TigerOfCountryYao** (#170), and see #144 for the request this partly answers.\n\n- **Atlas Cloud provider** \u2014 `LLMWIKI_PROVIDER=atlascloud` (aliases `atlas-cloud`, `atlas`) routes chat and tool calls through the [Atlas Cloud](https://www.atlascloud.ai) gateway, which exposes an OpenAI-compatible API across models from several publishers. Authenticate with `ATLASCLOUD_API_KEY` or `ATLAS_CLOUD_API_KEY`; `ATLASCLOUD_BASE_URL` overrides the endpoint.\n\n  Model ids are namespaced by publisher, and `compile` extracts concepts through a tool call, so the default is a model Atlas Cloud lists as supporting tools. Embeddings are not wired up: the provider fails closed rather than inheriting OpenAI's semantics, so route them elsewhere with `LLMWIKI_EMBEDDING_PROVIDER` for semantic search.\n\n  Contributed by **@binyangzhu000-sudo** (#167).\n\n- **Separate embedding provider** \u2014 `LLMWIKI_EMBEDDING_PROVIDER` selects the backend that serves embeddings, independently of `LLMWIKI_PROVIDER`. This makes split setups possible, such as Claude Agent SDK for generation with a local vLLM instance serving embeddings over its OpenAI-compatible endpoint. Valid values are `anthropic`, `claude-agent`, `openai`, and `ollama`. `minimax` and `copilot` expose no embeddings API, and naming one now fails with a clear error listing the valid values instead of an opaque failure from the provider's `embed()`. When the variable is set, the provider's own credential is required \u2014 `VOYAGE_API_KEY` for `anthropic` and `claude-agent`, `OPENAI_API_KEY` for `openai` \u2014 unless `OPENAI_EMBEDDINGS_BASE_URL` points at a self-hosted endpoint, which needs no key. Behaviour is unchanged when the variable is unset.\n\n  Thanks to **@knew-inventai** for the request (#154).\n\n  Changing the embedding backend invalidates the embedding index. It records the provider, model, and endpoint that produced its vectors, so the next `llmwiki compile` re-embeds every page. The model name alone is not enough to tell two backends apart \u2014 a local server answering to `text-embedding-3-small` and cloud OpenAI tag a store identically while producing vectors that do not share a space, and nothing downstream would notice. Moving between `anthropic` and `claude-agent` does not rebuild: both embed via Voyage with the same model.\n\n  Set `OPENAI_EMBEDDINGS_API_KEY` to give a separate embeddings endpoint its own credential. Without it the embeddings client reuses `OPENAI_API_KEY`, which sends your cloud OpenAI key to whatever host `OPENAI_EMBEDDINGS_BASE_URL` names; llmwiki now warns when that happens, except on `localhost`. The warning redacts any credential carried in the endpoint URL itself, and the endpoint is hashed rather than stored verbatim in `.llmwiki/embeddings.json`.\n\n  An index written before llmwiki recorded the endpoint carries only its model name. It is preserved while you run without `LLMWIKI_EMBEDDING_PROVIDER` or an endpoint override, so upgrading does not re-embed an existing project; under either override the model name cannot establish where the vectors came from, so the next compile rebuilds the index once and records the full configuration from then on.\n\n- **`llmwiki rm <source>`** \u2014 Deletes a source and the concept pages derived exclusively from it, leaving pages another source also contributed to untouched. There is no confirmation flag; preview first with `--dry-run`, which takes no lock and changes nothing. `rm` refuses cleanly if another llmwiki process holds the project lock, and journals page deletes so a crash mid-removal recovers on the next `rm` or `compile` (#60).\n\n  The plan is computed before the lock is taken, so `rm` recomputes which pages the source owns from fresh state under the lock and refuses the whole removal if anything moved in between \u2014 a page became shared, became exclusive, moved to another source, or was added. Nothing is deleted on a refusal; re-running plans against current state. `llmwiki watch` recompiles on any change under `sources/`, so this window is an ordinary workflow rather than a rare schedule.\n\n  The source file is deleted before the pages, so a failed page batch leaves the file gone and its state entry behind. Re-running `rm` with the same name recognizes that pairing as an interrupted removal and finishes the job, rather than reporting \"no source matches\" while the pages are still on disk. A name occupied by something that is not a valid source \u2014 a symlink, a directory \u2014 is not treated as an interrupted removal.\n\n  A kept page's body still cites the removed source, which `llmwiki lint` reports as a `broken-citation` error. `rm` warns whenever it keeps a page so the lint failure is not a surprise; it does not edit the citations.\n\n  `rm` is now a reserved core CLI verb, alongside llmwiki's other top-level commands. A profile that declares a workflow keyed `rm` now fails validation at load instead of installing; rename the workflow to use that profile.\n- **Optional `## Sources` section** \u2014 `LLMWIKI_SOURCES_SECTION=off`, or `--no-sources-section` on `llmwiki compile`, stops page generation from asking the model for a trailing `## Sources` section. Unset preserves the prompt byte-for-byte.\n\n  This is for projects that render source attribution themselves. A page already carries its provenance twice \u2014 the `sources:` frontmatter, which the compiler builds from the source files it actually read rather than from anything the model writes, and the inline `^[file.md:1-5]` citation markers \u2014 so a consumer that displays either one shows the same list a third time in the prose. Nothing downstream reads the section: it is a prompt instruction only, and no linter, exporter, or citation rule parses it.\n\n  Suppressing the request avoids matching a localized heading downstream: under `--lang` the model may translate `## Sources` along with the page. This changes the prompt instruction; it does not enforce the absence of a heading in model output.\n\n  Setting or clearing this preference regenerates affected pages through the existing prompt-modifier fingerprint. Page provenance records `sourcesSection=off` when disabled. `PROMPT_VERSION` advances to `v3` to identify the implementation with a conditional Sources instruction; the default prompt text is unchanged.\n\n### Fixed\n\n- **A shared page kept by `llmwiki rm` could never be rebuilt** \u2014 `rm` records each kept slug in `state.frozenSlugs`, the same marker compile sets when it notices a deleted source, and that marker was terminal: `mergeExtractions` skipped a frozen slug outright and nothing removed a slug from the set. The page kept the removed source's prose and its citations permanently, `llmwiki lint` reported `broken-citation` at error severity on a page no command could repair, and deleting the page to force a rebuild lost it for good.\n\n  A slug frozen because the current run's extraction failed is still skipped and preserved. A slug carried in persisted state is now a reconciliation marker instead: the page is rebuilt from whatever owners survive, with the removed source's contribution dropped, and a page no live source owns is orphaned rather than held. Fixes #194.\n\n  Contributed by **@TigerOfCountryYao** (#171).\n\n- **Interlink resolution corrupted prose containing `$` sequences** \u2014 when compile linked a page, it spliced the rewritten body back in with a string replacement, and `String.replace` interprets `$&`, `` $` ``, `$'` and `$$` there. A page reading `The PID is $$` lost a `$`; one containing a backtick-dollar had its own frontmatter spliced into the middle of the sentence; `$&` duplicated the body. Shell, sed, awk and Makefile pages carry those sequences as ordinary prose. The rewritten body is now inserted verbatim.\n\n- **Changing the output language left existing pages untouched** \u2014 `llmwiki compile --lang Japanese` over an already-compiled project reported \"Nothing to compile\" and every page kept its previous language, because change detection classified a source by the SHA-256 of its bytes alone and a prompt modifier is not part of the source. The selected modifiers are now recorded in `.llmwiki/state.json`, and flipping one invalidates the pages it would have changed. Setting `LLMWIKI_OUTPUT_LANG` has the same effect as the flag.\n\n  Pages also carry a `promptModifiers` frontmatter entry naming the modifiers active when they were generated, surfaced per page in the JSON export. `promptVersion` names the prompt implementation and is identical whether or not a modifier was selected, so it could not tell two such pages apart.\n\n  A project that never set a modifier pays nothing on upgrade: its first compile records \"none selected\" and finds no difference. A project already running with `--lang` when it upgrades recompiles once, because a state file predating this cannot establish what its pages were generated under.\n- **Wikilinks naming an existing page too briefly never resolved** \u2014 page generation writes a concept's short canonical name while the page it means carries a longer descriptive title, so `[[Argo CD]]` sat broken next to `argo-cd-image-update-ownership-model`. Extraction chooses page titles and generation chooses link text, independently and in that order, and nothing reconciled the two. Compile now runs a repair pass after interlink resolution that repoints a link when its slug prefixes exactly one page: `[[Argo CD]]` becomes `[[argo-cd-image-update-ownership-model|Argo CD]]`.\n\n  Only the link target is rewritten; visible labels, code examples, frontmatter, and literal dollar sequences are preserved. A slug prefixing two live or pending pages is left alone, as is one prefixing none. Pending-only matches wait for approval, which retries repairs. Reads use compile's confined reader, dropping escaping paths and special files before their bytes can enter a write.\n\n  Measured across five compiles of a mixed corpus (two PDFs plus five prose documents), this repaired 21.3% of broken wikilinks on a GPT-5-class model and 16.7% on `gpt-4o-mini`, with no page's prose changed.\n\n- **Reasoning models could not be used at all** \u2014 the OpenAI provider hard-coded `max_tokens` on all three completion paths, and the o-series and GPT-5 families reject it: `Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.` The failure came back on the first extraction request, before any page was written, so those models were unusable rather than degraded. The field is now selected from the model id, with `LLMWIKI_OPENAI_TOKEN_PARAM` to force it for gateways that serve a reasoning model under a private id. The SDK has carried `max_tokens` as deprecated in favour of `max_completion_tokens` since 6.x.\n\n  GPT-5.6 models default to `reasoning_effort: none` for Chat Completions tool compatibility. Older families keep their server default because they do not all accept `none`. `LLMWIKI_OPENAI_REASONING_EFFORT` overrides the effort with any of `none`, `minimal`, `low`, `medium`, `high`, or `xhigh`; the chosen model must support that value. These options apply to the shared OpenAI-compatible request paths, including completion, streaming, and tool calls.\n\n  The default is deliberately not applied to the o-series: it accepts a tool-carrying request with the field absent, and rejects some of the values above, so guessing on its behalf would turn a working request into a 400. Set the variable to opt it in.\n\n  An unrecognised value for either variable fails on the first request attempt with the accepted values named, before network access and without retry backoff. Models outside the detected reasoning families retain their previous request shape.\n\n- **Windows: profile path validation rejected every declared directory** \u2014 on win32, `llmwiki template init` failed for every template with `entity directory must be under 'wiki/'`, any profile declaring a workflow `projectionFile` failed to load, and an entity directory declared as `wiki/` was wrongly accepted despite containing every reserved subtree \u2014 on win32 it was the only entity directory that loaded at all. Declared directories canonicalize to `/`-joined repo-relative paths, but the containment check built its prefix with the platform separator (`\\` on Windows), so no nested path ever matched. The lexical profile-path checks now compare POSIX paths directly; native path confinement is unchanged. Reported and diagnosed by @squ1ddy (#163).\n\n- **Windows: broken links in the generated wiki index** \u2014 the same separator bug on the output side. Entity-page links in `wiki/index.md` are built from `path.relative`, which emits `\\` on win32, so a NESTED entity directory produced the unusable link `research\\papers/foo.md`. Link targets are now normalized to POSIX. Single-level directories were unaffected, which is why this went unnoticed (#163).\n\n- **Windows: native separators in public problem paths** \u2014 the same separator bug one layer further out, on the reported-problem surface. `EntityProblemView.path` is documented as project-relative portable content, but both producers returned `path.relative` output raw, so on win32 `llmwiki status`, the viewer, context packs, and the JSON export reported `wiki\\notes\\untitled.md` where the contract promises `wiki/notes/untitled.md`. Both now normalize to POSIX. The regression gate was widened to match: instead of naming the two symbols the first fix touched, it now requires every `path.relative` in the lexical profile layer to be routed through `toPosixPath` (#163).\n\n- **`npm test` could not run on Windows at all** \u2014 vitest's global setup shelled out to `npx`, which is `npx.cmd` there and has not been resolvable by `child_process` without `shell: true` since the Node 22 hardening for CVE-2024-27980. The setup threw, collection aborted, and vitest reported the unrelated \"No test files found\". It now invokes the build directly with the running Node binary, needing no shell on any platform.\n\n- **Embedding store dimensions after a full rebuild** \u2014 when the embedding model changed, the rebuilt store carried the previous vector dimension forward, so switching to a provider whose vectors have a different dimension failed validation on every subsequent compile and never recovered. The rebuilt store now takes its dimension from the newly written vectors.\n\n- **A rebuilt-but-empty embedding index broke every query** \u2014 a rebuild with nothing eligible to embed persisted a store declaring `dimensions: 0`, and each later query asserted its query vector against that zero and threw. No compile rewrote the store, so it never recovered. A non-positive stored dimension is now treated as unknown, and a read with no candidates returns before embedding the query at all \u2014 which also drops a provider round-trip that could only be scored against an empty pool.\n\n- **`OPENAI_EMBEDDINGS_API_KEY` was accepted at startup and then ignored** \u2014 the embeddings client was built only when `OPENAI_EMBEDDINGS_BASE_URL` was also set, so a configuration supplying just the dedicated key passed validation and then authenticated with the chat client's placeholder credential, failing later as a 401. The dedicated client is now built whenever either the endpoint or the key is configured.\n\n- **A misconfigured `LLMWIKI_EMBEDDING_PROVIDER` failed late and inconsistently** \u2014 validation ran inside the embedding call, so the same typo made `llmwiki query` exit 1, made context retrieval degrade, and made compile warn, retry, and eventually quarantine the affected pages. An unusable name also fell through to the default model and was reported as \"the index was built with a different model\", which described the wrong problem. The provider guard now checks it at startup, before any work begins, alongside the chat provider's credentials.","mentions_count":13}
