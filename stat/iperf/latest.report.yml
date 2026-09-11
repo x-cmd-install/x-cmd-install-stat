@@ -7,7 +7,7 @@ about:
   latestVersion: "3.21"
   latestRelease: "3.21"
   latestPrerelease: ""
-  collectedAt: 2026-09-10T15:50:09Z
+  collectedAt: 2026-09-11T20:38:44Z
 timeline:
   created: 2014-02-25
   lastCommit: 2026-07-10
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-04-09
   lastPrerelease: 
 popularity:
-  star: 8747
-  watcher: 225
-  fork: 1446
+  star: 8751
+  watcher: 226
+  fork: 1447
   release: 12
   contributor: 151
   pullRequest: 656
-  issue: 1190
+  issue: 1191
 language:
   C: 685788
   Shell: 407443
@@ -34,15 +34,15 @@ language:
 totalBytes: 1307161
 recent:
   last30d:
-    since: 2026-08-11
+    since: 2026-08-12
     release: 0
     mergedPR: 0
     openPR: 6
     closedIssue: 0
-    openIssue: 1
+    openIssue: 2
     commit: 0
   last60d:
-    since: 2026-07-12
+    since: 2026-07-13
     release: 0
     mergedPR: 0
     openPR: 8
@@ -50,47 +50,47 @@ recent:
     openIssue: 4
     commit: 0
   last90d:
-    since: 2026-06-12
+    since: 2026-06-13
     release: 0
-    mergedPR: 1
+    mergedPR: 0
     openPR: 13
     closedIssue: 0
-    openIssue: 7
+    openIssue: 8
     commit: 1
   last180d:
-    since: 2026-03-14
+    since: 2026-03-15
     release: 1
     mergedPR: 17
     openPR: 18
     closedIssue: 5
-    openIssue: 12
+    openIssue: 13
     commit: 26
   last360d:
-    since: 2025-09-15
+    since: 2025-09-16
     release: 2
     mergedPR: 44
     openPR: 24
     closedIssue: 17
-    openIssue: 22
+    openIssue: 23
     commit: 74
   last720d:
-    since: 2024-09-20
+    since: 2024-09-21
     release: 5
     mergedPR: 91
     openPR: 39
     closedIssue: 50
-    openIssue: 53
-    commit: 252
+    openIssue: 54
+    commit: 249
 total:
   release: 12
   mergedPR: 446
   openPR: 78
   closedIssue: 1032
-  openIssue: 158
+  openIssue: 159
   commit: 1756
 ---
 path: /home/runner/.x-repo/github.com/esnet/iperf
-collectedAt: 2026-09-10T15:50:12Z
+collectedAt: 2026-09-11T20:38:46Z
 loc:
   C:
     code: 14099
@@ -258,4 +258,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 27 are checked with a SAST tool'
 ---
-{"id":307230651,"author":{"login":"swlars","id":89053414,"node_id":"MDQ6VXNlcjg5MDUzNDE0","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAQY0f84ST_e7","tag_name":"3.21","target_commitish":"master","name":"iperf-3.21","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-04-09T18:58:54Z","updated_at":"2026-04-13T18:29:34Z","published_at":"2026-04-09T19:22:56Z","assets":[{"id":395596144,"node_id":"RA_kwDOAQY0f84XlFFw","name":"iperf-3.21.tar.gz","label":null,"uploader":{"login":"swlars","id":89053414,"node_id":"MDQ6VXNlcjg5MDUzNDE0","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gzip","state":"uploaded","size":708031,"digest":"sha256:656e4405ebd620121de7ceca3eaf43a88f79ea1b857d041a6a0b1314801acdd8","download_count":13330,"created_at":"2026-04-13T18:29:30Z","updated_at":"2026-04-13T18:29:31Z"},{"id":392618052,"node_id":"RA_kwDOAQY0f84XZuBE","name":"iperf-3.21.tar.gz.sha256","label":null,"uploader":{"login":"swlars","id":89053414,"node_id":"MDQ6VXNlcjg5MDUzNDE0","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":84,"digest":"sha256:ee67f4928ec1a8d4a3b9e17b95ef9559b5a2ef8da7b09b5f3e8711f50215f891","download_count":760,"created_at":"2026-04-09T19:22:26Z","updated_at":"2026-04-09T19:22:27Z"}],"body":"iperf-3.21 2026-04-09\r\n---------------------\r\n\r\n* Notable user-visible changes\r\n\r\n    * Support has been added for Global Segmentation Offload (GSO) and\r\n      Global Receive Offload (GRO) under Linux (PR #1925, PR #2007,\r\n      also note that a number of other pull requests were submitted\r\n      towards this functionality).\r\n\r\n    * The `--bind-dev` option is now supported on macOS (PR #1945).\r\n\r\n    * Support has been added on macOS for the equivalent of the\r\n      `tcp_info` structure (#1411, PR #2008). This change results in\r\n      TCP window information being printed in human-readable output\r\n      and a number of TCP statistics being added to the JSON output.\r\n\r\n    * The iperf3 server provides more information about various error\r\n      conditions to the client (PR #1914, PR #1931, PR #1950).\r\n\r\n    * The maximum value for the `--set-mss` option is now 32K (PR\r\n      #1816). Note that this option still does not work reliably in\r\n      all cases.\r\n\r\n    * The cancellation type of child threads was changed from\r\n      `PTHREAD_CANCEL_ASYNCHRONOUS` to `PTHREAD_CANCEL_DEFERRED`\r\n      (#1991, #2003, PR #2004). This change fixes some hangs that\r\n      could occur at the end of a test.\r\n\r\n    * A race condition leading to a crash when closing sockets at the\r\n      end of a test has been fixed (PR #1990).\r\n\r\n    * iperf3 no longer erroneously prints that zero UDP packets were\r\n      lost during a lossy UDP test (#1984, PR #1988).\r\n\r\n    * A division by zero error has been avoided (PR #2002).\r\n\r\n    * The security posture of the `iperf3.service` file has been\r\n      improved considerably by updating a number of settings (PR\r\n      #1855). Note that this file is neither installed nor activated\r\n      by default.\r\n\r\n* Notable developer-visible changes\r\n\r\n    * iperf3 finally performs `ldconfig` as a part of `make install`\r\n      on platforms that require it (#1995, PR #2005).\r\n\r\n    * Various bug fixes (PR #1960, PR #1981, PR #2001).\r\n\r\n    * Various documentation fixes (PR #1972, PR #1974, PR #1993).","reactions":{"total_count":16,"+1":8,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":1,"rocket":6,"eyes":0}}
+{"id":307230651,"author":{"login":"swlars","id":89053414,"node_id":"MDQ6VXNlcjg5MDUzNDE0","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAQY0f84ST_e7","tag_name":"3.21","target_commitish":"master","name":"iperf-3.21","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-04-09T18:58:54Z","updated_at":"2026-04-13T18:29:34Z","published_at":"2026-04-09T19:22:56Z","assets":[{"id":395596144,"node_id":"RA_kwDOAQY0f84XlFFw","name":"iperf-3.21.tar.gz","label":null,"uploader":{"login":"swlars","id":89053414,"node_id":"MDQ6VXNlcjg5MDUzNDE0","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gzip","state":"uploaded","size":708031,"digest":"sha256:656e4405ebd620121de7ceca3eaf43a88f79ea1b857d041a6a0b1314801acdd8","download_count":13449,"created_at":"2026-04-13T18:29:30Z","updated_at":"2026-04-13T18:29:31Z"},{"id":392618052,"node_id":"RA_kwDOAQY0f84XZuBE","name":"iperf-3.21.tar.gz.sha256","label":null,"uploader":{"login":"swlars","id":89053414,"node_id":"MDQ6VXNlcjg5MDUzNDE0","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":84,"digest":"sha256:ee67f4928ec1a8d4a3b9e17b95ef9559b5a2ef8da7b09b5f3e8711f50215f891","download_count":764,"created_at":"2026-04-09T19:22:26Z","updated_at":"2026-04-09T19:22:27Z"}],"body":"iperf-3.21 2026-04-09\r\n---------------------\r\n\r\n* Notable user-visible changes\r\n\r\n    * Support has been added for Global Segmentation Offload (GSO) and\r\n      Global Receive Offload (GRO) under Linux (PR #1925, PR #2007,\r\n      also note that a number of other pull requests were submitted\r\n      towards this functionality).\r\n\r\n    * The `--bind-dev` option is now supported on macOS (PR #1945).\r\n\r\n    * Support has been added on macOS for the equivalent of the\r\n      `tcp_info` structure (#1411, PR #2008). This change results in\r\n      TCP window information being printed in human-readable output\r\n      and a number of TCP statistics being added to the JSON output.\r\n\r\n    * The iperf3 server provides more information about various error\r\n      conditions to the client (PR #1914, PR #1931, PR #1950).\r\n\r\n    * The maximum value for the `--set-mss` option is now 32K (PR\r\n      #1816). Note that this option still does not work reliably in\r\n      all cases.\r\n\r\n    * The cancellation type of child threads was changed from\r\n      `PTHREAD_CANCEL_ASYNCHRONOUS` to `PTHREAD_CANCEL_DEFERRED`\r\n      (#1991, #2003, PR #2004). This change fixes some hangs that\r\n      could occur at the end of a test.\r\n\r\n    * A race condition leading to a crash when closing sockets at the\r\n      end of a test has been fixed (PR #1990).\r\n\r\n    * iperf3 no longer erroneously prints that zero UDP packets were\r\n      lost during a lossy UDP test (#1984, PR #1988).\r\n\r\n    * A division by zero error has been avoided (PR #2002).\r\n\r\n    * The security posture of the `iperf3.service` file has been\r\n      improved considerably by updating a number of settings (PR\r\n      #1855). Note that this file is neither installed nor activated\r\n      by default.\r\n\r\n* Notable developer-visible changes\r\n\r\n    * iperf3 finally performs `ldconfig` as a part of `make install`\r\n      on platforms that require it (#1995, PR #2005).\r\n\r\n    * Various bug fixes (PR #1960, PR #1981, PR #2001).\r\n\r\n    * Various documentation fixes (PR #1972, PR #1974, PR #1993).","reactions":{"total_count":16,"+1":8,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":1,"rocket":6,"eyes":0}}

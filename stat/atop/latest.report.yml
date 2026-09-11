@@ -2,15 +2,15 @@ about:
   description: "System and process monitor for Linux"
   license: GPL-2.0
   homepage: 
-  head: 903a8b6
+  head: 0ed7e62
   archived: false
   latestVersion: "v2.13.0"
   latestRelease: "v2.13.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-10T16:47:11Z
+  collectedAt: 2026-09-11T20:09:02Z
 timeline:
   created: 2017-03-25
-  lastCommit: 2026-08-15
+  lastCommit: 2026-09-10
   lastVersion: 2026-07-19
   lastRelease: 2026-07-19
   lastPrerelease: 
@@ -23,75 +23,75 @@ popularity:
   pullRequest: 215
   issue: 197
 language:
-  C: 1480667
+  C: 1481745
   Python: 22958
   Makefile: 8333
   Shell: 7532
-totalBytes: 1519490
+totalBytes: 1520568
 recent:
   last30d:
-    since: 2026-08-11
+    since: 2026-08-12
     release: 0
     mergedPR: 0
     openPR: 1
     closedIssue: 0
     openIssue: 2
-    commit: 1
+    commit: 2
   last60d:
-    since: 2026-07-12
+    since: 2026-07-13
     release: 1
     mergedPR: 2
     openPR: 1
     closedIssue: 1
     openIssue: 3
-    commit: 6
+    commit: 7
   last90d:
-    since: 2026-06-12
+    since: 2026-06-13
     release: 1
     mergedPR: 12
     openPR: 11
     closedIssue: 1
     openIssue: 3
-    commit: 21
+    commit: 22
   last180d:
-    since: 2026-03-14
+    since: 2026-03-15
     release: 1
     mergedPR: 14
     openPR: 14
     closedIssue: 5
     openIssue: 4
-    commit: 40
+    commit: 41
   last360d:
-    since: 2025-09-15
+    since: 2025-09-16
     release: 2
     mergedPR: 20
     openPR: 17
     closedIssue: 12
     openIssue: 5
-    commit: 65
+    commit: 66
   last720d:
-    since: 2024-09-20
+    since: 2024-09-21
     release: 4
     mergedPR: 27
     openPR: 18
     closedIssue: 31
     openIssue: 8
-    commit: 151
+    commit: 152
 total:
   release: 6
   mergedPR: 130
   openPR: 31
   closedIssue: 165
   openIssue: 32
-  commit: 938
+  commit: 939
 ---
 path: /home/runner/.x-repo/github.com/Atoptool/atop
-collectedAt: 2026-09-10T16:47:17Z
+collectedAt: 2026-09-11T20:09:04Z
 loc:
   C:
-    code: 30992
+    code: 31033
     comments: 7410
-    blanks: 7142
+    blanks: 7149
     files: 28
   CHeader:
     code: 7020
@@ -114,9 +114,9 @@ loc:
     blanks: 23
     files: 1
 total:
-  code: 38256
+  code: 38297
   comments: 8589
-  blanks: 8527
+  blanks: 8534
   files: 82
 ---
 date: "2026-09-07"
@@ -203,4 +203,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 21 are checked with a SAST tool'
 ---
-{"id":356303315,"author":{"login":"Atoptool","id":26671887,"node_id":"MDQ6VXNlcjI2NjcxODg3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBSKtJc4VPMHT","tag_name":"v2.13.0","target_commitish":"master","name":"v2.13.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-07-18T21:01:37Z","updated_at":"2026-07-19T09:30:42Z","published_at":"2026-07-19T09:29:23Z","assets":[{"id":482267748,"node_id":"RA_kwDOBSKtJc4cvtJk","name":"atop-2.13.0.tar.gz","label":null,"uploader":{"login":"Atoptool","id":26671887,"node_id":"MDQ6VXNlcjI2NjcxODg3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":354561,"digest":"sha256:ea182f84c9f52ca922e5af4f17dff97ff424400a4f2f92393317a6af66e6a874","download_count":77,"created_at":"2026-07-19T09:29:17Z","updated_at":"2026-07-19T09:29:18Z"}],"body":"### Modifications for atop:\r\n\r\n- Allow sorting of process list on any column.\r\nWith the key 'O' a column name can be entered (case insensitive) that is part of the current process view and a choice can be made to sort ascending/descending. The current sort column (if visible) will be highlighted.\r\nThe keys 'C' (CPU sorting), 'M' (memory sorting), 'D' (disk sorting), 'N' (network sorting) and 'E' (GPU sorting) can still be used. However, key 'A' (automatic sort on the most utilized resource) is not supported any more.\r\n- The 'oom_score' and 'oom_score_adj' values are added per process.\r\n- Show system-wide _available memory_ per category in bar graph.\r\nA vertical green line at the left of the memory column shows the available (i.e. reclaimable) memory for the categories 'free', 'pagecache' and 'slab' in bar graph mode. This is a best-effort categorized breakdown of the available memory value that is available on system level.\r\n- Proper handling of offline/online CPUs.\r\nThe detection of offline and online CPUs as well as the detection of hotpluggable CPUs has been improved. A CPU will dissapear from the list or bar graph when disabling the CPU and appears again when enabling the CPU.\r\nThe maximum number of CPUs is raised from 2048 to 4096.\r\n- Show full user names and group names.\r\nWhen using the flag -i it is possible to show full user names and full group names for the columns EUID (effective UID), RUID (real UID), EGID (effective GID) and RGID (real GID) on process level. When this flag is not used, the mentioned columns have a fixed width of 8 characters.\r\n- Support longer pod and container names for parsable/json output\r\n- Solution for race condition in twin mode.\r\n- Various other bug solutions.\r\n\r\n### Modifications for atopgpud:\r\n\r\n- Improved GPU statistics gathering.\r\nThe statistics collector for NVIDIA GPUs atopgpud also gathers statistics for graphical use by processes instead of only for computational use.\r\n- The daemon atopgpud can be executed without root privileges (i.e. special capabilities).\r\n- UNIX domain sockets are used for communication between atop and atopgpud instead of TCP sockets.\r\n\r\n### General:\r\n\r\n- The format of the raw file is incompatible with previous versions. Raw files from previous versions can be converted to the new layout with the atopconvert command.","reactions":{"total_count":3,"+1":0,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":0,"rocket":2,"eyes":0}}
+{"id":356303315,"author":{"login":"Atoptool","id":26671887,"node_id":"MDQ6VXNlcjI2NjcxODg3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBSKtJc4VPMHT","tag_name":"v2.13.0","target_commitish":"master","name":"v2.13.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-07-18T21:01:37Z","updated_at":"2026-07-19T09:30:42Z","published_at":"2026-07-19T09:29:23Z","assets":[{"id":482267748,"node_id":"RA_kwDOBSKtJc4cvtJk","name":"atop-2.13.0.tar.gz","label":null,"uploader":{"login":"Atoptool","id":26671887,"node_id":"MDQ6VXNlcjI2NjcxODg3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":354561,"digest":"sha256:ea182f84c9f52ca922e5af4f17dff97ff424400a4f2f92393317a6af66e6a874","download_count":79,"created_at":"2026-07-19T09:29:17Z","updated_at":"2026-07-19T09:29:18Z"}],"body":"### Modifications for atop:\r\n\r\n- Allow sorting of process list on any column.\r\nWith the key 'O' a column name can be entered (case insensitive) that is part of the current process view and a choice can be made to sort ascending/descending. The current sort column (if visible) will be highlighted.\r\nThe keys 'C' (CPU sorting), 'M' (memory sorting), 'D' (disk sorting), 'N' (network sorting) and 'E' (GPU sorting) can still be used. However, key 'A' (automatic sort on the most utilized resource) is not supported any more.\r\n- The 'oom_score' and 'oom_score_adj' values are added per process.\r\n- Show system-wide _available memory_ per category in bar graph.\r\nA vertical green line at the left of the memory column shows the available (i.e. reclaimable) memory for the categories 'free', 'pagecache' and 'slab' in bar graph mode. This is a best-effort categorized breakdown of the available memory value that is available on system level.\r\n- Proper handling of offline/online CPUs.\r\nThe detection of offline and online CPUs as well as the detection of hotpluggable CPUs has been improved. A CPU will dissapear from the list or bar graph when disabling the CPU and appears again when enabling the CPU.\r\nThe maximum number of CPUs is raised from 2048 to 4096.\r\n- Show full user names and group names.\r\nWhen using the flag -i it is possible to show full user names and full group names for the columns EUID (effective UID), RUID (real UID), EGID (effective GID) and RGID (real GID) on process level. When this flag is not used, the mentioned columns have a fixed width of 8 characters.\r\n- Support longer pod and container names for parsable/json output\r\n- Solution for race condition in twin mode.\r\n- Various other bug solutions.\r\n\r\n### Modifications for atopgpud:\r\n\r\n- Improved GPU statistics gathering.\r\nThe statistics collector for NVIDIA GPUs atopgpud also gathers statistics for graphical use by processes instead of only for computational use.\r\n- The daemon atopgpud can be executed without root privileges (i.e. special capabilities).\r\n- UNIX domain sockets are used for communication between atop and atopgpud instead of TCP sockets.\r\n\r\n### General:\r\n\r\n- The format of the raw file is incompatible with previous versions. Raw files from previous versions can be converted to the new layout with the atopconvert command.","reactions":{"total_count":3,"+1":0,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":0,"rocket":2,"eyes":0}}

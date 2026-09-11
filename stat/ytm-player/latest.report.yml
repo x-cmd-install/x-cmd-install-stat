@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.1.0"
   latestRelease: "v2.1.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-10T16:47:20Z
+  collectedAt: 2026-09-11T05:06:05Z
 timeline:
   created: 2026-02-12
   lastCommit: 2026-09-08
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-08
   lastPrerelease: 
 popularity:
-  star: 499
+  star: 501
   watcher: 3
   fork: 38
   release: 32
@@ -29,23 +29,23 @@ language:
 totalBytes: 2366837
 recent:
   last30d:
-    since: 2026-08-11
+    since: 2026-08-12
     release: 1
     mergedPR: 27
     openPR: 2
-    closedIssue: 6
+    closedIssue: 5
     openIssue: 4
     commit: 62
   last60d:
-    since: 2026-07-12
+    since: 2026-07-13
     release: 1
     mergedPR: 33
     openPR: 5
-    closedIssue: 9
+    closedIssue: 8
     openIssue: 6
     commit: 66
   last90d:
-    since: 2026-06-12
+    since: 2026-06-13
     release: 4
     mergedPR: 37
     openPR: 5
@@ -53,7 +53,7 @@ recent:
     openIssue: 6
     commit: 178
   last180d:
-    since: 2026-03-14
+    since: 2026-03-15
     release: 18
     mergedPR: 59
     openPR: 5
@@ -61,7 +61,7 @@ recent:
     openIssue: 6
     commit: 507
   last360d:
-    since: 2025-09-15
+    since: 2025-09-16
     release: 32
     mergedPR: 67
     openPR: 5
@@ -69,7 +69,7 @@ recent:
     openIssue: 6
     commit: 630
   last720d:
-    since: 2024-09-20
+    since: 2024-09-21
     release: 32
     mergedPR: 67
     openPR: 5
@@ -85,7 +85,7 @@ total:
   commit: 655
 ---
 path: /home/runner/.x-repo/github.com/peternaame-boop/ytm-player
-collectedAt: 2026-09-10T16:47:21Z
+collectedAt: 2026-09-11T05:06:08Z
 loc:
   Python:
     code: 48250
@@ -120,4 +120,4 @@ total:
 ---
 
 ---
-{"id":384495138,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOROUOy84W6u4i","tag_name":"v2.1.0","target_commitish":"master","name":"v2.1.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-08T06:33:53Z","updated_at":"2026-09-08T06:40:12Z","published_at":"2026-09-08T06:40:12Z","assets":[{"id":550007513,"node_id":"RA_kwDOROUOy84gyHLZ","name":"ytm_player-2.1.0-py3-none-any.whl","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":327164,"digest":"sha256:698514ad4a1999f594d6100cd7850ea4f30484ae21b163b96ead2e963377aa39","download_count":1,"created_at":"2026-09-08T06:40:11Z","updated_at":"2026-09-08T06:40:11Z"},{"id":550007514,"node_id":"RA_kwDOROUOy84gyHLa","name":"ytm_player-2.1.0.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2023616,"digest":"sha256:154efb6fc3b332624ff7af116b645290e0b5a9c0b5c6fca3f31f0d36d00e6ccc","download_count":0,"created_at":"2026-09-08T06:40:11Z","updated_at":"2026-09-08T06:40:11Z"}],"body":"### v2.1.0 (2026-09-08)\n\n#### Upgrade notes\n\n- **Existing sign-ins keep working.** When an older session expires, run `ytm setup` once to enable account-checked automatic renewal.\n- **Authenticated streaming is optional.** `[yt_dlp] use_session_cookies` remains off by default. Enabling it requires a working JavaScript solver and runtime; anonymous streaming is unaffected. See [configuration](docs/configuration.md#yt_dlp).\n- **Downloads share the audio cache limit.** Older cache entries may be evicted, oversized downloads are reported as not retained, and interrupted downloads restart from the beginning.\n\n#### New features\n\n- **Multi-select tracks:** click a track, then Shift-click another to select the range; Ctrl-click toggles individual tracks. Keyboard alternatives are `v` to mark and `V` to extend a range. Press `A` to add the selection to a playlist. Marks survive sorting, filtering and background refreshes, including duplicate song occurrences. Mouse modifiers depend on terminal support. See [keybindings](docs/keybindings.md). (#159)\n- **Browse Playlists and Subscriptions:** discover playlists from your home feed and open your subscribed artists. Five tabs fit alongside the sidebar in an 80-column terminal. Thanks @ThePhatLeee. (#125)\n- **Combined listening history:** Recently Played now opens on **All**, showing local history first, followed by additional account history\u2014not one combined timeline. Separate Local and YT Music tabs remain available; the account tab no longer excludes songs played in this app. Thanks @Villoh. (#115)\n\n#### Playback and queue\n\n- Playlist shuffle now includes the first track played and respects saved shuffle preferences. Selecting a specific song still plays that song. For playlists over 300 tracks, the first song is chosen from the first 300; the remaining tracks shuffle in as they load.\n- Double-clicking a sidebar playlist starts playback without leaving its Library view.\n- Failed streams retry once with a fresh resolver after network or VPN changes. Exhausted recovery reports the failure rather than silently stopping or looping in repeat-one. (#135)\n- Stop and newer playback requests supersede stale loads, radio requests and delayed queue updates. Old playback events no longer advance a newer selection.\n- Queue actions target the selected occurrence, including duplicate songs. Removing the playing row lets that song finish before continuing with its surviving successor.\n- Shuffle toggles and background queue changes keep the displayed rows synchronized. Turning shuffle off preserves the current track; reordering clears temporary sorting while retaining filters.\n- Opening and quitting without playback preserves the saved resume point. Failed startup, failed loads and superseded seeks no longer overwrite it.\n\n#### Playlists, Browse and search\n\n- Playlist changes report rejected or unconfirmed results accurately. After a timeout, check the playlist before retrying\u2014the change may already have succeeded.\n- The playlist picker prevents duplicate submissions, retains filter focus, handles duplicate confirmation consistently, and displays newly created playlists even when adding tracks is declined.\n- Recently Played preserves marks and cursor position across repeated account-history rows and background updates.\n- Browse and Charts recover from failed or interrupted loads. Country changes show matching data, and locale values select the correct country.\n- Large playlist libraries and full artist album/single lists are no longer truncated. (#134, #138)\n- Radio, discovery, search and background playlist loading no longer cancel unrelated work. Sidebar double-clicks no longer trigger redundant playlist loads.\n\n#### Sign-in and reliability\n\n- Automatic renewal stays with the recorded account, works for sorted playlists, and backs off for 60 seconds after failure.\n- Sign-in updates protect newer setup sessions from concurrent renewal and bind stream cookies to the corresponding sign-in.\n- Manual setup accepts Chrome\u2019s pasted headers more reliably, preserves the existing session until replacement, and reports when a running app needs restarting. Zen Browser detection is supported. (#119)\n- Unreachable YouTube Music, an unreadable history database, or malformed session/update-cache files no longer prevent the supported startup paths from continuing.\n- Shutdown attempts remaining cleanup even when a service fails. Settings containing multiline or control characters round-trip correctly.\n- Downloads are indexed correctly, publish only completed files, and report directory failures without closing the app.\n\n#### Interface, diagnostics and dependencies\n\n- Custom themes correctly control selection highlights and album-art placeholders; switching themes preserves terminal colours and other base settings. (#122, #158)\n- Fixed punctuation seek keys, missing radio artwork, markup-like titles and duplicate artist-album rows. (#143)\n- `ytm doctor` redacts HTTP(S)/TCP URLs, including embedded stream IP/signature parameters. Review diagnostics before sharing; arbitrary secrets are not guaranteed to be removed.\n- yt-dlp warnings reach the app log, resolver resets handle concurrent work safely, and `pycryptodomex` supports faster browser-cookie extraction. Thanks @wgordon17. (#136)\n- Updated yt-dlp requirements address widespread 403 failures; Spotify scraper compatibility and full-playlist fetching are restored. (#140, #142)\n- Packaging excludes known local-note files and checks for unintended untracked inclusions in locally built distributions.\n","mentions_count":3}
+{"id":384495138,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOROUOy84W6u4i","tag_name":"v2.1.0","target_commitish":"master","name":"v2.1.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-08T06:33:53Z","updated_at":"2026-09-08T06:40:12Z","published_at":"2026-09-08T06:40:12Z","assets":[{"id":550007513,"node_id":"RA_kwDOROUOy84gyHLZ","name":"ytm_player-2.1.0-py3-none-any.whl","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":327164,"digest":"sha256:698514ad4a1999f594d6100cd7850ea4f30484ae21b163b96ead2e963377aa39","download_count":1,"created_at":"2026-09-08T06:40:11Z","updated_at":"2026-09-08T06:40:11Z"},{"id":550007514,"node_id":"RA_kwDOROUOy84gyHLa","name":"ytm_player-2.1.0.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2023616,"digest":"sha256:154efb6fc3b332624ff7af116b645290e0b5a9c0b5c6fca3f31f0d36d00e6ccc","download_count":1,"created_at":"2026-09-08T06:40:11Z","updated_at":"2026-09-08T06:40:11Z"}],"body":"### v2.1.0 (2026-09-08)\n\n#### Upgrade notes\n\n- **Existing sign-ins keep working.** When an older session expires, run `ytm setup` once to enable account-checked automatic renewal.\n- **Authenticated streaming is optional.** `[yt_dlp] use_session_cookies` remains off by default. Enabling it requires a working JavaScript solver and runtime; anonymous streaming is unaffected. See [configuration](docs/configuration.md#yt_dlp).\n- **Downloads share the audio cache limit.** Older cache entries may be evicted, oversized downloads are reported as not retained, and interrupted downloads restart from the beginning.\n\n#### New features\n\n- **Multi-select tracks:** click a track, then Shift-click another to select the range; Ctrl-click toggles individual tracks. Keyboard alternatives are `v` to mark and `V` to extend a range. Press `A` to add the selection to a playlist. Marks survive sorting, filtering and background refreshes, including duplicate song occurrences. Mouse modifiers depend on terminal support. See [keybindings](docs/keybindings.md). (#159)\n- **Browse Playlists and Subscriptions:** discover playlists from your home feed and open your subscribed artists. Five tabs fit alongside the sidebar in an 80-column terminal. Thanks @ThePhatLeee. (#125)\n- **Combined listening history:** Recently Played now opens on **All**, showing local history first, followed by additional account history\u2014not one combined timeline. Separate Local and YT Music tabs remain available; the account tab no longer excludes songs played in this app. Thanks @Villoh. (#115)\n\n#### Playback and queue\n\n- Playlist shuffle now includes the first track played and respects saved shuffle preferences. Selecting a specific song still plays that song. For playlists over 300 tracks, the first song is chosen from the first 300; the remaining tracks shuffle in as they load.\n- Double-clicking a sidebar playlist starts playback without leaving its Library view.\n- Failed streams retry once with a fresh resolver after network or VPN changes. Exhausted recovery reports the failure rather than silently stopping or looping in repeat-one. (#135)\n- Stop and newer playback requests supersede stale loads, radio requests and delayed queue updates. Old playback events no longer advance a newer selection.\n- Queue actions target the selected occurrence, including duplicate songs. Removing the playing row lets that song finish before continuing with its surviving successor.\n- Shuffle toggles and background queue changes keep the displayed rows synchronized. Turning shuffle off preserves the current track; reordering clears temporary sorting while retaining filters.\n- Opening and quitting without playback preserves the saved resume point. Failed startup, failed loads and superseded seeks no longer overwrite it.\n\n#### Playlists, Browse and search\n\n- Playlist changes report rejected or unconfirmed results accurately. After a timeout, check the playlist before retrying\u2014the change may already have succeeded.\n- The playlist picker prevents duplicate submissions, retains filter focus, handles duplicate confirmation consistently, and displays newly created playlists even when adding tracks is declined.\n- Recently Played preserves marks and cursor position across repeated account-history rows and background updates.\n- Browse and Charts recover from failed or interrupted loads. Country changes show matching data, and locale values select the correct country.\n- Large playlist libraries and full artist album/single lists are no longer truncated. (#134, #138)\n- Radio, discovery, search and background playlist loading no longer cancel unrelated work. Sidebar double-clicks no longer trigger redundant playlist loads.\n\n#### Sign-in and reliability\n\n- Automatic renewal stays with the recorded account, works for sorted playlists, and backs off for 60 seconds after failure.\n- Sign-in updates protect newer setup sessions from concurrent renewal and bind stream cookies to the corresponding sign-in.\n- Manual setup accepts Chrome\u2019s pasted headers more reliably, preserves the existing session until replacement, and reports when a running app needs restarting. Zen Browser detection is supported. (#119)\n- Unreachable YouTube Music, an unreadable history database, or malformed session/update-cache files no longer prevent the supported startup paths from continuing.\n- Shutdown attempts remaining cleanup even when a service fails. Settings containing multiline or control characters round-trip correctly.\n- Downloads are indexed correctly, publish only completed files, and report directory failures without closing the app.\n\n#### Interface, diagnostics and dependencies\n\n- Custom themes correctly control selection highlights and album-art placeholders; switching themes preserves terminal colours and other base settings. (#122, #158)\n- Fixed punctuation seek keys, missing radio artwork, markup-like titles and duplicate artist-album rows. (#143)\n- `ytm doctor` redacts HTTP(S)/TCP URLs, including embedded stream IP/signature parameters. Review diagnostics before sharing; arbitrary secrets are not guaranteed to be removed.\n- yt-dlp warnings reach the app log, resolver resets handle concurrent work safely, and `pycryptodomex` supports faster browser-cookie extraction. Thanks @wgordon17. (#136)\n- Updated yt-dlp requirements address widespread 403 failures; Spotify scraper compatibility and full-playlist fetching are restored. (#140, #142)\n- Packaging excludes known local-note files and checks for unintended untracked inclusions in locally built distributions.\n","mentions_count":3}
