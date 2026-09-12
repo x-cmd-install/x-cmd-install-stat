@@ -2,12 +2,12 @@ about:
   description: "Distributed reliable key-value store for the most critical data of a distributed system"
   license: Apache-2.0
   homepage: https://etcd.io
-  head: 066bd94
+  head: 9ba96c8
   archived: false
   latestVersion: "v3.7.1"
   latestRelease: "v3.7.1"
   latestPrerelease: "v3.7.0-rc.0"
-  collectedAt: 2026-09-11T20:17:15Z
+  collectedAt: 2026-09-12T04:43:37Z
 timeline:
   created: 2013-07-06
   lastCommit: 2026-09-11
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-07-23
   lastPrerelease: 2026-06-01
 popularity:
-  star: 52248
+  star: 52250
   watcher: 1268
-  fork: 10495
+  fork: 10497
   release: 292
   contributor: 984
   pullRequest: 14549
@@ -32,63 +32,63 @@ language:
 totalBytes: 6049396
 recent:
   last30d:
-    since: 2026-08-12
+    since: 2026-08-13
     release: 0
-    mergedPR: 50
-    openPR: 36
-    closedIssue: 3
-    openIssue: 21
-    commit: 70
+    mergedPR: 49
+    openPR: 35
+    closedIssue: 4
+    openIssue: 19
+    commit: 72
   last60d:
-    since: 2026-07-13
+    since: 2026-07-14
     release: 3
-    mergedPR: 128
-    openPR: 85
-    closedIssue: 11
-    openIssue: 31
-    commit: 190
+    mergedPR: 129
+    openPR: 82
+    closedIssue: 12
+    openIssue: 30
+    commit: 192
   last90d:
-    since: 2026-06-13
+    since: 2026-06-14
     release: 6
-    mergedPR: 171
-    openPR: 109
-    closedIssue: 19
-    openIssue: 48
-    commit: 271
+    mergedPR: 172
+    openPR: 107
+    closedIssue: 20
+    openIssue: 47
+    commit: 273
   last180d:
-    since: 2026-03-15
+    since: 2026-03-16
     release: 20
-    mergedPR: 402
-    openPR: 165
-    closedIssue: 70
-    openIssue: 68
-    commit: 686
+    mergedPR: 403
+    openPR: 164
+    closedIssue: 72
+    openIssue: 66
+    commit: 688
   last360d:
-    since: 2025-09-16
+    since: 2025-09-17
     release: 33
     mergedPR: 782
-    openPR: 192
-    closedIssue: 151
-    openIssue: 80
-    commit: 1413
+    openPR: 191
+    closedIssue: 153
+    openIssue: 78
+    commit: 1415
   last720d:
-    since: 2024-09-21
+    since: 2024-09-22
     release: 53
-    mergedPR: 1863
-    openPR: 209
-    closedIssue: 497
-    openIssue: 105
-    commit: 3414
+    mergedPR: 1864
+    openPR: 208
+    closedIssue: 499
+    openIssue: 103
+    commit: 3416
 total:
   release: 292
-  mergedPR: 10661
-  openPR: 215
-  closedIssue: 7139
-  openIssue: 126
-  commit: 25219
+  mergedPR: 10662
+  openPR: 214
+  closedIssue: 7141
+  openIssue: 124
+  commit: 25221
 ---
 path: /home/runner/.x-repo/github.com/etcd-io/etcd
-collectedAt: 2026-09-11T20:17:26Z
+collectedAt: 2026-09-12T04:43:49Z
 loc:
   Go:
     code: 166864
@@ -161,23 +161,51 @@ total:
   blanks: 30933
   files: 1284
 ---
-date: "2026-09-11T19:28:48Z"
+date: "2026-09-11T20:50:16Z"
 repo:
   name: github.com/etcd-io/etcd
-  commit: 066bd949cb9e8354d7ca6e5e610b4afd137ce175
+  commit: 9ba96c87c013bb5e6ec1311857565c39a10dcd5d
 scorecard:
   version: v5.5.0
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 6.7
 checks:
-  - name: Code-Review
+  - name: Dependency-Update-Tool
     score: 10
-    reason: all changesets reviewed
-    details: null
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 9 issue activity found in the last 90 days -- score normalized to 10
     details: null
+  - name: Dangerous-Workflow
+    score: 0
+    reason: dangerous workflow patterns detected
+    details:
+      - 'Warn: script injection with untrusted input ''github.event.pull_request.head.ref'': .github/workflows/bump-devcontainer-version.yml:32'
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:29'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:28'
+      - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/gh-workflow-approve.yaml:22'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/antithesis-test.yml:33'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/antithesis-verify.yml:5'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/antithesis.debugger.yml:25'
+      - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/bump-devcontainer-version.yml:6'
+      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/bump-devcontainer-version.yml:5'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/cherrypick-bot-ok-to-test.yaml:3'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/codeql-analysis.yml:22'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/gh-workflow-approve.yaml:3'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/measure-testgrid-flakiness.yaml:8'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecards.yml:12'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/verify-released-assets.yaml:3'
   - name: Security-Policy
     score: 9
     reason: security policy file detected
@@ -186,34 +214,6 @@ checks:
       - 'Info: Found linked content: .github/SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: .github/SECURITY.md:1'
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:28'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:29'
-      - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/gh-workflow-approve.yaml:22'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/antithesis-test.yml:33'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/antithesis-verify.yml:5'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/antithesis.debugger.yml:25'
-      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/bump-devcontainer-version.yml:5'
-      - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/bump-devcontainer-version.yml:6'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/cherrypick-bot-ok-to-test.yaml:3'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/codeql-analysis.yml:22'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/gh-workflow-approve.yaml:3'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/measure-testgrid-flakiness.yaml:8'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecards.yml:12'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/verify-released-assets.yaml:3'
-  - name: Dangerous-Workflow
-    score: 0
-    reason: dangerous workflow patterns detected
-    details:
-      - 'Warn: script injection with untrusted input ''github.event.pull_request.head.ref'': .github/workflows/bump-devcontainer-version.yml:32'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -238,6 +238,20 @@ checks:
       - 'Info:   5 out of   5 third-party GitHubAction dependencies pinned'
       - 'Info:   2 out of   7 containerImage dependencies pinned'
       - 'Info:   5 out of   8 goCommand dependencies pinned'
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v3.7.1 not signed: https://api.github.com/repos/etcd-io/etcd/releases/358911174'
+      - 'Warn: release artifact v3.6.14 not signed: https://api.github.com/repos/etcd-io/etcd/releases/358906325'
+      - 'Warn: release artifact v3.5.33 not signed: https://api.github.com/repos/etcd-io/etcd/releases/358899150'
+      - 'Warn: release artifact v3.7.0 not signed: https://api.github.com/repos/etcd-io/etcd/releases/351109388'
+      - 'Warn: release artifact v3.6.13 not signed: https://api.github.com/repos/etcd-io/etcd/releases/347704554'
+      - 'Warn: release artifact v3.7.1 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/358911174'
+      - 'Warn: release artifact v3.6.14 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/358906325'
+      - 'Warn: release artifact v3.5.33 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/358899150'
+      - 'Warn: release artifact v3.7.0 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/351109388'
+      - 'Warn: release artifact v3.6.13 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/347704554'
   - name: Vulnerabilities
     score: 6
     reason: 4 existing vulnerabilities detected
@@ -256,20 +270,14 @@ checks:
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
     details:
-      - 'Warn: release artifact v3.7.1 not signed: https://api.github.com/repos/etcd-io/etcd/releases/358911174'
-      - 'Warn: release artifact v3.6.14 not signed: https://api.github.com/repos/etcd-io/etcd/releases/358906325'
-      - 'Warn: release artifact v3.5.33 not signed: https://api.github.com/repos/etcd-io/etcd/releases/358899150'
-      - 'Warn: release artifact v3.7.0 not signed: https://api.github.com/repos/etcd-io/etcd/releases/351109388'
-      - 'Warn: release artifact v3.6.13 not signed: https://api.github.com/repos/etcd-io/etcd/releases/347704554'
-      - 'Warn: release artifact v3.7.1 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/358911174'
-      - 'Warn: release artifact v3.6.14 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/358906325'
-      - 'Warn: release artifact v3.5.33 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/358899150'
-      - 'Warn: release artifact v3.7.0 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/351109388'
-      - 'Warn: release artifact v3.6.13 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/347704554'
+      - 'Info: OSSFuzz integration found'
+      - 'Info: GoBuiltInFuzzer integration found: server/etcdserver/api/v3rpc/validationfuzz_test.go:30'
+      - 'Info: GoBuiltInFuzzer integration found: server/etcdserver/api/v3rpc/validationfuzz_test.go:76'
+      - 'Info: GoBuiltInFuzzer integration found: server/etcdserver/api/v3rpc/validationfuzz_test.go:121'
   - name: License
     score: 10
     reason: license file detected
@@ -281,14 +289,6 @@ checks:
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/antithesis-test.yml:40'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: OSSFuzz integration found'
-      - 'Info: GoBuiltInFuzzer integration found: server/etcdserver/api/v3rpc/validationfuzz_test.go:30'
-      - 'Info: GoBuiltInFuzzer integration found: server/etcdserver/api/v3rpc/validationfuzz_test.go:76'
-      - 'Info: GoBuiltInFuzzer integration found: server/etcdserver/api/v3rpc/validationfuzz_test.go:121'
   - name: CI-Tests
     score: 10
     reason: 15 out of 15 merged PRs checked by a CI test -- score normalized to 10

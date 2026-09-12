@@ -2,12 +2,12 @@ about:
   description: "Apache CXF"
   license: Apache-2.0
   homepage: https://cxf.apache.org
-  head: 886c846
+  head: 39d7399
   archived: false
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-09-11T19:00:20Z
+  collectedAt: 2026-09-12T05:28:22Z
 timeline:
   created: 2014-02-19
   lastCommit: 2026-09-11
@@ -40,63 +40,63 @@ language:
 totalBytes: 40958324
 recent:
   last30d:
-    since: 2026-08-12
+    since: 2026-08-13
     release: 0
-    mergedPR: 80
-    openPR: 5
+    mergedPR: 78
+    openPR: 4
     closedIssue: 0
     openIssue: 0
-    commit: 87
+    commit: 88
   last60d:
-    since: 2026-07-13
+    since: 2026-07-14
     release: 0
-    mergedPR: 130
+    mergedPR: 129
+    openPR: 4
+    closedIssue: 0
+    openIssue: 0
+    commit: 159
+  last90d:
+    since: 2026-06-14
+    release: 0
+    mergedPR: 210
     openPR: 5
     closedIssue: 0
     openIssue: 0
-    commit: 158
-  last90d:
-    since: 2026-06-13
-    release: 0
-    mergedPR: 209
-    openPR: 6
-    closedIssue: 0
-    openIssue: 0
-    commit: 244
+    commit: 245
   last180d:
-    since: 2026-03-15
+    since: 2026-03-16
     release: 0
-    mergedPR: 413
-    openPR: 6
+    mergedPR: 412
+    openPR: 5
     closedIssue: 0
     openIssue: 0
-    commit: 522
+    commit: 523
   last360d:
-    since: 2025-09-16
+    since: 2025-09-17
     release: 0
-    mergedPR: 703
-    openPR: 18
+    mergedPR: 701
+    openPR: 17
     closedIssue: 0
     openIssue: 0
-    commit: 949
+    commit: 950
   last720d:
-    since: 2024-09-21
+    since: 2024-09-22
     release: 0
-    mergedPR: 1128
-    openPR: 18
+    mergedPR: 1129
+    openPR: 17
     closedIssue: 0
     openIssue: 0
     commit: 1588
 total:
   release: 0
-  mergedPR: 2601
-  openPR: 20
+  mergedPR: 2602
+  openPR: 19
   closedIssue: 0
   openIssue: 0
-  commit: 19898
+  commit: 19899
 ---
 path: /home/runner/.x-repo/github.com/apache/cxf
-collectedAt: 2026-09-11T19:00:58Z
+collectedAt: 2026-09-12T05:28:58Z
 loc:
   Java:
     code: 717555
@@ -194,15 +194,19 @@ total:
   blanks: 154024
   files: 10196
 ---
-date: "2026-09-11T11:24:49Z"
+date: "2026-09-11T21:07:08Z"
 repo:
   name: github.com/apache/cxf
-  commit: 886c8469ce8883e9ceec1abaa83f7c58c76575bc
+  commit: 39d7399b63f91d73e4c61a27d0e2626ad40dc537
 scorecard:
   version: v5.5.0
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 7.9
 checks:
+  - name: Code-Review
+    score: 8
+    reason: Found 12/15 approved changesets -- score normalized to 8
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
@@ -212,22 +216,6 @@ checks:
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Code-Review
-    score: 8
-    reason: Found 12/15 approved changesets -- score normalized to 8
-    details: null
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: SECURITY.md:1'
-      - 'Info: Found linked content: SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
-      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -247,26 +235,28 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/pull-request-build.yml:8'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecards.yml:11'
       - 'Info: no jobLevel write permissions found'
-  - name: CII-Best-Practices
-    score: 5
-    reason: 'badge detected: Passing'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: SECURITY.md:1'
+      - 'Info: Found linked content: SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
+      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Binary-Artifacts
     score: 8
     reason: binaries present in source code
     details:
       - 'Warn: binary detected: etc/idea/settings.jar:1'
       - 'Warn: binary detected: tck/cxf-tck/lib/jersey-client-3.1.10.jar:1'
-  - name: Pinned-Dependencies
-    score: 4
-    reason: dependency not pinned by hash detected -- score normalized to 4
-    details:
-      - 'Warn: containerImage not pinned by hash: distribution/src/main/release/samples/jax_rs/spring_boot/Dockerfile:1'
-      - 'Warn: containerImage not pinned by hash: distribution/src/main/release/samples/jax_rs/spring_boot_scan/application/Dockerfile:1'
-      - 'Warn: containerImage not pinned by hash: distribution/src/main/release/samples/jax_rs/spring_boot_scan/eureka-registry/Dockerfile:1'
-      - 'Info:  10 out of  10 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   1 out of   1 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   3 containerImage dependencies pinned'
+  - name: CII-Best-Practices
+    score: 5
+    reason: 'badge detected: Passing'
+    details: null
   - name: License
     score: 10
     reason: license file detected
@@ -278,6 +268,20 @@ checks:
     reason: project is fuzzed
     details:
       - 'Info: OSSFuzz integration found'
+  - name: Pinned-Dependencies
+    score: 4
+    reason: dependency not pinned by hash detected -- score normalized to 4
+    details:
+      - 'Warn: containerImage not pinned by hash: distribution/src/main/release/samples/jax_rs/spring_boot/Dockerfile:1'
+      - 'Warn: containerImage not pinned by hash: distribution/src/main/release/samples/jax_rs/spring_boot_scan/application/Dockerfile:1'
+      - 'Warn: containerImage not pinned by hash: distribution/src/main/release/samples/jax_rs/spring_boot_scan/eureka-registry/Dockerfile:1'
+      - 'Info:  10 out of  10 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   1 out of   1 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   3 containerImage dependencies pinned'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Branch-Protection
     score: 3
     reason: branch protection is not maximal on development and all release branches
@@ -288,10 +292,19 @@ checks:
       - 'Warn: could not determine whether codeowners review is allowed'
       - 'Warn: no status checks found to merge onto branch ''main'''
       - 'Warn: PRs are not required to make changes on branch ''main''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
+  - name: Vulnerabilities
+    score: 1
+    reason: 9 existing vulnerabilities detected
+    details:
+      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-3x3v-w654-m28m'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-p5c5-6564-vvr8'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-jc7r-v6fg-2gpf'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-7p3p-8qv8-m2vh'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-8mpp-f3f7-xc28'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-g8m5-722r-8whq'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-p26g-97m4-6q7c'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-qw69-rqj8-6qw8'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-3832-9276-x7gf'
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits
@@ -307,17 +320,4 @@ checks:
     reason: project has 51 contributing companies or organizations
     details:
       - 'Info: found contributions from: IBM, OpenRock, ServiceComb, Talend, Tirasa, WASdev, adobe, alc-beijing, apache, apache / yupiik, arquillian, basis technology corp., cdi-spec, cfibmers, codehaus-plexus, connectpa, contrast security, cukespace, davidkarlsen.com, eclipse-ee4j, forge, fusesource, gliderlabs, hammock-project, helm, https://www.redhat.com/, ibm, jakartaee, java-schema-utilities, jbossws, jline, jmxtrans, kubernetes, mojohaus, open-telemetry, ops4j, qlik, quarkusio, resteasy, savoir technologies, savoirtech, seam, servicenow, sonatype-nexus-community, takari, talend a qlik company, tirasa, tracknalysis, tymiq, wildfly, xLightsSequencer'
-  - name: Vulnerabilities
-    score: 1
-    reason: 9 existing vulnerabilities detected
-    details:
-      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-3x3v-w654-m28m'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-p5c5-6564-vvr8'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-jc7r-v6fg-2gpf'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-7p3p-8qv8-m2vh'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-8mpp-f3f7-xc28'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-g8m5-722r-8whq'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-p26g-97m4-6q7c'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-qw69-rqj8-6qw8'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-3832-9276-x7gf'
 ---

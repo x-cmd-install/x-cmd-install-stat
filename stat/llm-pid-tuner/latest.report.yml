@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.4.7"
   latestRelease: "v2.4.7"
   latestPrerelease: ""
-  collectedAt: 2026-09-11T19:57:46Z
+  collectedAt: 2026-09-12T04:52:12Z
 timeline:
   created: 2026-02-15
   lastCommit: 2026-09-06
@@ -29,7 +29,7 @@ language:
 totalBytes: 721874
 recent:
   last30d:
-    since: 2026-08-12
+    since: 2026-08-13
     release: 0
     mergedPR: 2
     openPR: 1
@@ -37,7 +37,7 @@ recent:
     openIssue: 1
     commit: 1
   last60d:
-    since: 2026-07-13
+    since: 2026-07-14
     release: 0
     mergedPR: 2
     openPR: 1
@@ -45,7 +45,7 @@ recent:
     openIssue: 1
     commit: 2
   last90d:
-    since: 2026-06-13
+    since: 2026-06-14
     release: 1
     mergedPR: 7
     openPR: 1
@@ -53,7 +53,7 @@ recent:
     openIssue: 1
     commit: 8
   last180d:
-    since: 2026-03-15
+    since: 2026-03-16
     release: 14
     mergedPR: 31
     openPR: 1
@@ -61,7 +61,7 @@ recent:
     openIssue: 1
     commit: 72
   last360d:
-    since: 2025-09-16
+    since: 2025-09-17
     release: 17
     mergedPR: 37
     openPR: 1
@@ -69,7 +69,7 @@ recent:
     openIssue: 1
     commit: 135
   last720d:
-    since: 2024-09-21
+    since: 2024-09-22
     release: 17
     mergedPR: 37
     openPR: 1
@@ -85,7 +85,7 @@ total:
   commit: 163
 ---
 path: /home/runner/.x-repo/github.com/KINGSTON-115/llm-pid-tuner
-collectedAt: 2026-09-11T19:57:50Z
+collectedAt: 2026-09-12T04:52:14Z
 loc:
   Python:
     code: 16648
@@ -130,4 +130,4 @@ total:
 ---
 
 ---
-{"id":352153128,"author":{"login":"KINGSTON-115","id":141025356,"node_id":"U_kgDOCGfgTA","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDORQr9ws4U_W4o","tag_name":"v2.4.7","target_commitish":"0e5a584bfeb9e51fae401c55eeb42a6bca00a2c4","name":"v2.4.7 - Runtime Setpoint Control","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-07-10T14:27:56Z","updated_at":"2026-07-10T14:36:33Z","published_at":"2026-07-10T14:36:33Z","assets":[{"id":472571552,"node_id":"RA_kwDORQr9ws4cKt6g","name":"llm-pid-tuner.exe","label":"","uploader":{"login":"KINGSTON-115","id":141025356,"node_id":"U_kgDOCGfgTA","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-msdownload","state":"uploaded","size":19454683,"digest":"sha256:eda2e75c6ef69f41e7b08948b94a81d626d4dff19d034348c3e14c78b0c5351e","download_count":651,"created_at":"2026-07-10T14:36:29Z","updated_at":"2026-07-10T14:36:32Z"}],"body":"## v2.4.7 - Runtime Setpoint Control\n\nThis release publishes the latest `dev` updates after v2.4.6.\n\n### Runtime setpoint control\n- Added a `t` hotkey in the Textual dashboard for changing the target setpoint while tuning is running.\n- Python simulation applies the new target immediately and stops automatic target cycling after a manual override.\n- Simulink updates a configured or auto-detected writable Step/Constant setpoint block.\n- Failed Simulink setpoint updates now report a warning and restore the previous target instead of falsely reporting success.\n- The default `generic_serial_csv` hardware profile sends `SETPOINT:<value>` to compatible firmware; `mspm0_datavision` remains read-only.\n\n### Release review hardening\n- Consolidated duplicated runtime setpoint request handling shared by Python simulation, Simulink, and hardware environments.\n- Removed minor unused imports and redundant f-string prefixes found during release review.\n- Included the English documentation-link corrections added after v2.4.6.\n\n### Validation\n- Built with: `C:\\Users\\Administrator\\conda-envs\\matlab310\\python.exe -m PyInstaller --clean --noconfirm llm-pid-tuner.spec`\n- Build runtime: Python 3.10.20 (conda), PyInstaller 6.19.0\n- Tests: `C:\\Users\\Administrator\\conda-envs\\matlab310\\python.exe -m pytest -q -p no:cacheprovider`\n- Result: `339 passed, 11 subtests passed`\n- Static check: Flake8 `F` / `E9` checks passed for the changed production modules.\n- Source smoke test: `launcher.py --help`\n- Packaged smoke test: `llm-pid-tuner.exe --help`\n- Virtual hardware smoke test: runtime setpoint changed to `225.0` successfully.\n- Commit: `0e5a584`\n- Asset size: `19,454,683` bytes\n- SHA256: `EDA2E75C6EF69F41E7B08948B94A81D626D4DFF19D034348C3E14C78B0C5351E`\n"}
+{"id":352153128,"author":{"login":"KINGSTON-115","id":141025356,"node_id":"U_kgDOCGfgTA","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDORQr9ws4U_W4o","tag_name":"v2.4.7","target_commitish":"0e5a584bfeb9e51fae401c55eeb42a6bca00a2c4","name":"v2.4.7 - Runtime Setpoint Control","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-07-10T14:27:56Z","updated_at":"2026-07-10T14:36:33Z","published_at":"2026-07-10T14:36:33Z","assets":[{"id":472571552,"node_id":"RA_kwDORQr9ws4cKt6g","name":"llm-pid-tuner.exe","label":"","uploader":{"login":"KINGSTON-115","id":141025356,"node_id":"U_kgDOCGfgTA","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-msdownload","state":"uploaded","size":19454683,"digest":"sha256:eda2e75c6ef69f41e7b08948b94a81d626d4dff19d034348c3e14c78b0c5351e","download_count":653,"created_at":"2026-07-10T14:36:29Z","updated_at":"2026-07-10T14:36:32Z"}],"body":"## v2.4.7 - Runtime Setpoint Control\n\nThis release publishes the latest `dev` updates after v2.4.6.\n\n### Runtime setpoint control\n- Added a `t` hotkey in the Textual dashboard for changing the target setpoint while tuning is running.\n- Python simulation applies the new target immediately and stops automatic target cycling after a manual override.\n- Simulink updates a configured or auto-detected writable Step/Constant setpoint block.\n- Failed Simulink setpoint updates now report a warning and restore the previous target instead of falsely reporting success.\n- The default `generic_serial_csv` hardware profile sends `SETPOINT:<value>` to compatible firmware; `mspm0_datavision` remains read-only.\n\n### Release review hardening\n- Consolidated duplicated runtime setpoint request handling shared by Python simulation, Simulink, and hardware environments.\n- Removed minor unused imports and redundant f-string prefixes found during release review.\n- Included the English documentation-link corrections added after v2.4.6.\n\n### Validation\n- Built with: `C:\\Users\\Administrator\\conda-envs\\matlab310\\python.exe -m PyInstaller --clean --noconfirm llm-pid-tuner.spec`\n- Build runtime: Python 3.10.20 (conda), PyInstaller 6.19.0\n- Tests: `C:\\Users\\Administrator\\conda-envs\\matlab310\\python.exe -m pytest -q -p no:cacheprovider`\n- Result: `339 passed, 11 subtests passed`\n- Static check: Flake8 `F` / `E9` checks passed for the changed production modules.\n- Source smoke test: `launcher.py --help`\n- Packaged smoke test: `llm-pid-tuner.exe --help`\n- Virtual hardware smoke test: runtime setpoint changed to `225.0` successfully.\n- Commit: `0e5a584`\n- Asset size: `19,454,683` bytes\n- SHA256: `EDA2E75C6EF69F41E7B08948B94A81D626D4DFF19D034348C3E14C78B0C5351E`\n"}
