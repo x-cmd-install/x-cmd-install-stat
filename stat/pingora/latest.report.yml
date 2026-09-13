@@ -2,102 +2,102 @@ about:
   description: "A library for building fast, reliable and evolvable network services."
   license: Apache-2.0
   homepage: 
-  head: 702f690
+  head: 4487f7b
   archived: false
   latestVersion: "0.9.0"
   latestRelease: "0.9.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-11T20:23:22Z
+  collectedAt: 2026-09-13T04:55:43Z
 timeline:
   created: 2023-05-05
-  lastCommit: 2026-09-09
+  lastCommit: 2026-09-11
   lastVersion: 2026-09-09
   lastRelease: 2026-09-09
   lastPrerelease: 
 popularity:
-  star: 27348
-  watcher: 189
+  star: 27354
+  watcher: 188
   fork: 1744
   release: 10
   contributor: 200
-  pullRequest: 510
+  pullRequest: 512
   issue: 440
 language:
-  Rust: 4085721
+  Rust: 4111787
   Dockerfile: 941
   Shell: 137
   HTML: 13
-totalBytes: 4086812
+totalBytes: 4112878
 recent:
   last30d:
-    since: 2026-08-12
+    since: 2026-08-14
     release: 1
-    mergedPR: 2
-    openPR: 24
-    closedIssue: 2
-    openIssue: 18
-    commit: 23
-  last60d:
-    since: 2026-07-13
-    release: 1
-    mergedPR: 5
-    openPR: 32
+    mergedPR: 3
+    openPR: 22
     closedIssue: 4
-    openIssue: 23
-    commit: 54
-  last90d:
-    since: 2026-06-13
+    openIssue: 13
+    commit: 27
+  last60d:
+    since: 2026-07-15
     release: 1
     mergedPR: 6
+    openPR: 33
+    closedIssue: 8
+    openIssue: 19
+    commit: 58
+  last90d:
+    since: 2026-06-15
+    release: 1
+    mergedPR: 7
     openPR: 39
-    closedIssue: 7
-    openIssue: 32
-    commit: 87
+    closedIssue: 10
+    openIssue: 27
+    commit: 91
   last180d:
-    since: 2026-03-15
+    since: 2026-03-17
     release: 2
-    mergedPR: 15
-    openPR: 55
-    closedIssue: 14
-    openIssue: 42
-    commit: 184
+    mergedPR: 16
+    openPR: 56
+    closedIssue: 20
+    openIssue: 36
+    commit: 188
   last360d:
-    since: 2025-09-16
+    since: 2025-09-18
     release: 4
-    mergedPR: 31
-    openPR: 76
-    closedIssue: 37
-    openIssue: 58
-    commit: 333
+    mergedPR: 32
+    openPR: 77
+    closedIssue: 45
+    openIssue: 50
+    commit: 337
   last720d:
-    since: 2024-09-21
+    since: 2024-09-23
     release: 7
-    mergedPR: 74
-    openPR: 103
-    closedIssue: 121
-    openIssue: 107
-    commit: 553
+    mergedPR: 73
+    openPR: 102
+    closedIssue: 129
+    openIssue: 99
+    commit: 558
 total:
   release: 10
-  mergedPR: 117
-  openPR: 110
-  closedIssue: 263
-  openIssue: 177
-  commit: 764
+  mergedPR: 118
+  openPR: 109
+  closedIssue: 271
+  openIssue: 169
+  commit: 769
 ---
 path: /home/runner/.x-repo/github.com/cloudflare/pingora
-collectedAt: 2026-09-11T20:23:24Z
+collectedAt: 2026-09-13T04:55:45Z
 loc:
   Rust:
-    code: 81728
-    comments: 9293
-    blanks: 11930
-    files: 231
+    code: 82367
+    comments: 9332
+    blanks: 12000
+    files: 234
   Toml:
-    code: 1003
+    code: 1029
     comments: 84
-    blanks: 139
-    files: 25
+    blanks: 142
+    files: 26
   Bitbake:
     code: 571
     comments: 68
@@ -129,11 +129,11 @@ loc:
     blanks: 467
     files: 26
 total:
-  code: 83920
-  comments: 17851
-  blanks: 14042
-  files: 292
+  code: 84585
+  comments: 17929
+  blanks: 14123
+  files: 296
 ---
 
 ---
-{"id":385909008,"author":{"login":"drcaramelsyrup","id":834403,"node_id":"MDQ6VXNlcjgzNDQwMw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOJfWe5M4XAIEQ","tag_name":"0.9.0","target_commitish":"main","name":"Pingora 0.9.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-09T21:58:07Z","updated_at":"2026-09-09T23:34:48Z","published_at":"2026-09-09T23:34:48Z","assets":[],"body":"## [0.9.0](https://github.com/cloudflare/pingora/compare/0.8.0...0.9.0) - 2026-09-04\n\n### \u2728 Highlights\n\n- Reworked connection pooling with sharded storage and a true global LRU, addressing stale entries and race windows.\n- Added an upstream module system that applies before upstream compression.\n- More handling of HTTP parsing and framing edge cases, including non-origin-form request-target preservation, and hop-by-hop header sanitization, obsolete line-fold normalization, stricter request-target validation, and bounded default HTTP/2 limits.\n- Split Prometheus integration into the pingora-prometheus crate and made Prometheus optional.\n- Improved graceful shutdown and upgrade behavior, including responsive load-balancer shutdown, descriptor lifecycle fixes, and lower shutdown-notification contention.\n\n### \u26a0\ufe0f Potential Breaking Changes\n\n- Minimum supported Rust version moves to 1.85 for some crates. pingora-foundations declares an MSRV of 1.88.\n- RequestHeader and ResponseHeader no longer implement DerefMut because unrestricted mutation could violate internal invariants.\n- Removed async_write_vec APIs; consumers should use tokio::io::AsyncWriteExt::write_all_buf.\n- Prometheus integration moved from pingora-core to the separate pingora-prometheus crate; Prometheus is optional.\n- tracing is now optional in pingora-cache.\n- Upgraded to the boring-rs 5.x API.\n- PeerOptions::curve now uses Cow.\n- Upstream requests strip hop-by-hop and Connection-nominated headers by default; legacy behavior requires explicit compatibility settings.\n- Default HTTP/2 server limits are bounded rather than unbounded.\n- Removed the unused LruShard Default implementation and lifted Default bounds on sharded cache structures.\n- Removed the CacheKey namespace parameter.\n- PurgeOutcome enum gains an Expired variant.\n- ForcedFreshness and hit-status reporting gain ForceExpiredServeStale variant.\n\n### \ud83d\ude80 Features \u2014 Proxy & Sessions\n\n- Add abort-on-close session configurability.\n- Support HTTP/1.1 downstream request pipelining.\n- Add cancel-safe body and header writer primitives (proxy tasks) to prevent stalled cache misses from applying backpressure.\n- Add an upstream module system and allow modules to adjust after receiving upstream response headers.\n- Add proxy warning-log suppression hooks.\n- Add keepalive-pool callbacks for tracking connection ages.\n- Expose HTTP/1.x request-body bytes accepted by the upstream writer.\n- Report point-in-time available HTTP/2 stream capacity.\n\n### \ud83d\ude80 Features \u2014 TLS\n\n- Add ability to configure an offload thread pool for downstream TLS handshakes.\n- Add Acceptor::from_server_config for runtime-built rustls ServerConfig values and in-memory key material.\n- Export TLS keying material, including from pingora-s2n.\n- Add per-peer CA configuration.\n- Add a pre-TLS callback for PROXY protocol support.\n- Expose the rustls certificate type.\n- Add curve and second-keyshare settings to HttpPeer hashing.\n- Avoid compiling aws-lc-rs when the ring provider is selected.\n\n### \ud83d\ude80 Features \u2014 Server, Runtime & Load Balancing\n\n- Allow sharing backends across load-balancing selectors.\n- Add graceful-upgrade signalling between old and new processes.\n- Add per-listener L4 buffer configuration and socket send/receive buffer settings.\n- Add Tokio blocking-pool configuration, poll-time histograms, and an alternative timer runtime knob.\n- Allow proxy services to override runtime options.\n- Add a working-directory option for daemon mode.\n- Enable adding user context between sessions on the same connection with HttpPersistentSettings.\n- Add socket-cookie access and TCP/TLS establishment timing fields.\n- Make HTTP/2 stream and connection windows configurable.\n\n### \ud83d\ude80 Features \u2014 Caching (alpha)\n\n- Add deferred cache-admission policy hooks.\n- Implement DCZ dictionary compression and vary on available-dictionary.\n- Add CacheMeta freshness updates and expiration-at-time support.\n- Support optionally flooring fractional delta-seconds for RFC 9111 handling.\n- Preserve Vary provenance across stale refreshes.\n- Make cache-lock retries configurable and bounded.\n- Add an opt-in purge mode that expires an asset while retaining its body for conditional revalidation and stale serving.\n- Use power-of-two selection for eviction balancing.\n- Add peek_lru, update_or_admit, and non-promoting set_weight operations in lru.\n- Allow adjusting LRU weight limits and reserving capacity.\n\n### \ud83d\udd12 Security & Hardening\n\n- HTTP ambiguity hardening: centralize raw request-target classification so path and authority validation share one parser; reject ambiguous request authorities on ingress and egress; reject forbidden CR/LF bytes in HTTP/2 :path; and reject delimiter bytes in request lines as defense in depth.\n- Sanitize hop-by-hop upstream request headers.\n- Preserve non-origin-form request targets without mangling the URI.\n- Normalize forwarded responses with obsolete HTTP/1.1 response-header line folding.\n- Bound default HTTP/2 server limits to reduce memory-exhaustion exposure.\n- Avoid a process abort while appending oversized header maps by returning an InvalidHTTPHeader error.\n- Fix some unchecked integer conversions.\n- Explicitly prevent reuse of HTTP/1 connections after incomplete responses.\n- Update Prometheus for a security advisory.\n- Replaced unmaintained daemonize crate with daemonix and updated nix to 0.31.x.\n\n### \ud83d\udc1b Bug Fixes\n\n- Fix connection-pool and PoolNode race windows and remove empty entries.\n- Fixed a potential stall on HTTP/1 response-header reads upon forwarding request bodies via a cancel safety fix.\n- Stop waiting on HTTP/2 upstream work after the downstream ends and close timed-out HTTP/2 connections.\n- Drain in-flight HTTP/2 streams during shutdown and retry stream creation on a fresh connection when appropriate.\n- Prevent HTTP/1 upstream reuse after failed writes or incomplete responses.\n- Discard retry buffers after truncation and avoid unnecessary HTTP/2 accept allocations.\n- Skip h2c preface detection on TLS streams.\n- Do not initialize a body reader for HEAD informational responses.\n- Correct HTTP/1 session body-byte accounting.\n- Fix listener-fd inheritance and close transfer sockets during graceful upgrade; mark received listener fds close-on-exec.\n- Remove the duplicate graceful-shutdown sleep and improve load-balancer shutdown responsiveness.\n- Shard proxy shutdown notifications to reduce lock contention and close a lost-wakeup race during graceful shutdown.\n\n### \u2699\ufe0f Miscellaneous\n\n- pingora-timeout now uses Tokio timeouts for (configurably) long intervals to avoid memory accumulation.\n- Split pingora-prometheus into a separate crate.\n- Forward WriteBuf::chunks_vectored to the wrapped buffer.\n- Replace custom ASCII-trimming helpers with stabilized standard-library methods.\n- Update the MSRV lane and use cargo check for MSRV validation.\n- Improve documentation examples for connection tracing and basic setup.\n- Preserve bound ports in digests after TLS failures.\n- Return an error for divergent multipart cache progress and remove a panic from maybe_cache_meta.\n- Various flaky test fixes.\n\n","reactions":{"total_count":16,"+1":3,"-1":0,"laugh":0,"hooray":10,"confused":0,"heart":0,"rocket":3,"eyes":0}}
+{"id":385909008,"author":{"login":"drcaramelsyrup","id":834403,"node_id":"MDQ6VXNlcjgzNDQwMw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOJfWe5M4XAIEQ","tag_name":"0.9.0","target_commitish":"main","name":"Pingora 0.9.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-09T21:58:07Z","updated_at":"2026-09-09T23:34:48Z","published_at":"2026-09-09T23:34:48Z","assets":[],"body":"## [0.9.0](https://github.com/cloudflare/pingora/compare/0.8.0...0.9.0) - 2026-09-04\n\n### \u2728 Highlights\n\n- Reworked connection pooling with sharded storage and a true global LRU, addressing stale entries and race windows.\n- Added an upstream module system that applies before upstream compression.\n- More handling of HTTP parsing and framing edge cases, including non-origin-form request-target preservation, and hop-by-hop header sanitization, obsolete line-fold normalization, stricter request-target validation, and bounded default HTTP/2 limits.\n- Split Prometheus integration into the pingora-prometheus crate and made Prometheus optional.\n- Improved graceful shutdown and upgrade behavior, including responsive load-balancer shutdown, descriptor lifecycle fixes, and lower shutdown-notification contention.\n\n### \u26a0\ufe0f Potential Breaking Changes\n\n- Minimum supported Rust version moves to 1.85 for some crates. pingora-foundations declares an MSRV of 1.88.\n- RequestHeader and ResponseHeader no longer implement DerefMut because unrestricted mutation could violate internal invariants.\n- Removed async_write_vec APIs; consumers should use tokio::io::AsyncWriteExt::write_all_buf.\n- Prometheus integration moved from pingora-core to the separate pingora-prometheus crate; Prometheus is optional.\n- tracing is now optional in pingora-cache.\n- Upgraded to the boring-rs 5.x API.\n- PeerOptions::curve now uses Cow.\n- Upstream requests strip hop-by-hop and Connection-nominated headers by default; legacy behavior requires explicit compatibility settings.\n- Default HTTP/2 server limits are bounded rather than unbounded.\n- Removed the unused LruShard Default implementation and lifted Default bounds on sharded cache structures.\n- Removed the CacheKey namespace parameter.\n- PurgeOutcome enum gains an Expired variant.\n- ForcedFreshness and hit-status reporting gain ForceExpiredServeStale variant.\n\n### \ud83d\ude80 Features \u2014 Proxy & Sessions\n\n- Add abort-on-close session configurability.\n- Support HTTP/1.1 downstream request pipelining.\n- Add cancel-safe body and header writer primitives (proxy tasks) to prevent stalled cache misses from applying backpressure.\n- Add an upstream module system and allow modules to adjust after receiving upstream response headers.\n- Add proxy warning-log suppression hooks.\n- Add keepalive-pool callbacks for tracking connection ages.\n- Expose HTTP/1.x request-body bytes accepted by the upstream writer.\n- Report point-in-time available HTTP/2 stream capacity.\n\n### \ud83d\ude80 Features \u2014 TLS\n\n- Add ability to configure an offload thread pool for downstream TLS handshakes.\n- Add Acceptor::from_server_config for runtime-built rustls ServerConfig values and in-memory key material.\n- Export TLS keying material, including from pingora-s2n.\n- Add per-peer CA configuration.\n- Add a pre-TLS callback for PROXY protocol support.\n- Expose the rustls certificate type.\n- Add curve and second-keyshare settings to HttpPeer hashing.\n- Avoid compiling aws-lc-rs when the ring provider is selected.\n\n### \ud83d\ude80 Features \u2014 Server, Runtime & Load Balancing\n\n- Allow sharing backends across load-balancing selectors.\n- Add graceful-upgrade signalling between old and new processes.\n- Add per-listener L4 buffer configuration and socket send/receive buffer settings.\n- Add Tokio blocking-pool configuration, poll-time histograms, and an alternative timer runtime knob.\n- Allow proxy services to override runtime options.\n- Add a working-directory option for daemon mode.\n- Enable adding user context between sessions on the same connection with HttpPersistentSettings.\n- Add socket-cookie access and TCP/TLS establishment timing fields.\n- Make HTTP/2 stream and connection windows configurable.\n\n### \ud83d\ude80 Features \u2014 Caching (alpha)\n\n- Add deferred cache-admission policy hooks.\n- Implement DCZ dictionary compression and vary on available-dictionary.\n- Add CacheMeta freshness updates and expiration-at-time support.\n- Support optionally flooring fractional delta-seconds for RFC 9111 handling.\n- Preserve Vary provenance across stale refreshes.\n- Make cache-lock retries configurable and bounded.\n- Add an opt-in purge mode that expires an asset while retaining its body for conditional revalidation and stale serving.\n- Use power-of-two selection for eviction balancing.\n- Add peek_lru, update_or_admit, and non-promoting set_weight operations in lru.\n- Allow adjusting LRU weight limits and reserving capacity.\n\n### \ud83d\udd12 Security & Hardening\n\n- HTTP ambiguity hardening: centralize raw request-target classification so path and authority validation share one parser; reject ambiguous request authorities on ingress and egress; reject forbidden CR/LF bytes in HTTP/2 :path; and reject delimiter bytes in request lines as defense in depth.\n- Sanitize hop-by-hop upstream request headers.\n- Preserve non-origin-form request targets without mangling the URI.\n- Normalize forwarded responses with obsolete HTTP/1.1 response-header line folding.\n- Bound default HTTP/2 server limits to reduce memory-exhaustion exposure.\n- Avoid a process abort while appending oversized header maps by returning an InvalidHTTPHeader error.\n- Fix some unchecked integer conversions.\n- Explicitly prevent reuse of HTTP/1 connections after incomplete responses.\n- Update Prometheus for a security advisory.\n- Replaced unmaintained daemonize crate with daemonix and updated nix to 0.31.x.\n\n### \ud83d\udc1b Bug Fixes\n\n- Fix connection-pool and PoolNode race windows and remove empty entries.\n- Fixed a potential stall on HTTP/1 response-header reads upon forwarding request bodies via a cancel safety fix.\n- Stop waiting on HTTP/2 upstream work after the downstream ends and close timed-out HTTP/2 connections.\n- Drain in-flight HTTP/2 streams during shutdown and retry stream creation on a fresh connection when appropriate.\n- Prevent HTTP/1 upstream reuse after failed writes or incomplete responses.\n- Discard retry buffers after truncation and avoid unnecessary HTTP/2 accept allocations.\n- Skip h2c preface detection on TLS streams.\n- Do not initialize a body reader for HEAD informational responses.\n- Correct HTTP/1 session body-byte accounting.\n- Fix listener-fd inheritance and close transfer sockets during graceful upgrade; mark received listener fds close-on-exec.\n- Remove the duplicate graceful-shutdown sleep and improve load-balancer shutdown responsiveness.\n- Shard proxy shutdown notifications to reduce lock contention and close a lost-wakeup race during graceful shutdown.\n\n### \u2699\ufe0f Miscellaneous\n\n- pingora-timeout now uses Tokio timeouts for (configurably) long intervals to avoid memory accumulation.\n- Split pingora-prometheus into a separate crate.\n- Forward WriteBuf::chunks_vectored to the wrapped buffer.\n- Replace custom ASCII-trimming helpers with stabilized standard-library methods.\n- Update the MSRV lane and use cargo check for MSRV validation.\n- Improve documentation examples for connection tracing and basic setup.\n- Preserve bound ports in digests after TLS failures.\n- Return an error for divergent multipart cache progress and remove a panic from maybe_cache_meta.\n- Various flaky test fixes.\n\n","reactions":{"total_count":19,"+1":3,"-1":0,"laugh":0,"hooray":12,"confused":0,"heart":0,"rocket":4,"eyes":0}}

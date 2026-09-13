@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.5.0"
   latestRelease: "v0.5.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-11T19:32:58Z
+  collectedAt: 2026-09-13T05:32:51Z
 timeline:
   created: 2025-06-04
   lastCommit: 2026-04-23
@@ -29,7 +29,7 @@ language:
 totalBytes: 62316
 recent:
   last30d:
-    since: 2026-08-12
+    since: 2026-08-14
     release: 0
     mergedPR: 0
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-13
+    since: 2026-07-15
     release: 0
     mergedPR: 0
     openPR: 0
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-13
+    since: 2026-06-15
     release: 0
     mergedPR: 0
     openPR: 4
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-15
+    since: 2026-03-17
     release: 1
     mergedPR: 10
     openPR: 11
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 11
   last360d:
-    since: 2025-09-16
+    since: 2025-09-18
     release: 1
     mergedPR: 36
     openPR: 12
@@ -69,7 +69,7 @@ recent:
     openIssue: 0
     commit: 37
   last720d:
-    since: 2024-09-21
+    since: 2024-09-23
     release: 4
     mergedPR: 63
     openPR: 13
@@ -85,7 +85,7 @@ total:
   commit: 176
 ---
 path: /home/runner/.x-repo/github.com/nlamirault/e2c
-collectedAt: 2026-09-11T19:33:00Z
+collectedAt: 2026-09-13T05:32:51Z
 loc:
   Go:
     code: 1602
@@ -118,7 +118,7 @@ total:
   blanks: 464
   files: 20
 ---
-date: "2026-09-05T05:54:36Z"
+date: "2026-09-12T05:57:59Z"
 repo:
   name: github.com/nlamirault/e2c
   commit: b84620fef34eb9c29e334cd8e12578139c1b93eb
@@ -127,14 +127,12 @@ scorecard:
   commit: ab2f6e92482462fe66246d9e32f642855a691dc1
 score: 6.5
 checks:
-  - name: Code-Review
-    score: 0
-    reason: Found 0/2 approved changesets -- score normalized to 0
-    details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+      - 'Info: detected update tool: RenovateBot: .github/renovate.json5:1'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -143,6 +141,14 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
+  - name: Code-Review
+    score: 0
+    reason: Found 0/2 approved changesets -- score normalized to 0
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -151,25 +157,19 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-      - 'Info: detected update tool: RenovateBot: .github/renovate.json5:1'
   - name: Token-Permissions
     score: 7
     reason: detected GitHub workflow tokens with excessive permissions
     details:
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql.yml:31'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:32'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql.yml:31'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/gemini-dispatch.yml:162'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/gemini-dispatch.yml:176'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/gemini-dispatch.yml:195'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/gemini-dispatch.yml:31'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/gemini-dispatch.yml:63'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/gemini-dispatch.yml:134'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/gemini-dispatch.yml:148'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/gemini-dispatch.yml:162'
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/gemini-dispatch.yml:176'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/gemini-invoke.yml:23'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/gemini-plan-execute.yml:24'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/gemini-review.yml:24'
@@ -177,12 +177,12 @@ checks:
       - 'Info: jobLevel ''issues'' permission set to ''read'': .github/workflows/gemini-scheduled-triage.yml:35'
       - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/gemini-scheduled-triage.yml:36'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/gemini-scheduled-triage.yml:142'
+      - 'Info: jobLevel ''issues'' permission set to ''read'': .github/workflows/gemini-triage.yml:29'
       - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/gemini-triage.yml:30'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/gemini-triage.yml:27'
-      - 'Info: jobLevel ''issues'' permission set to ''read'': .github/workflows/gemini-triage.yml:29'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/gemini-triage.yml:107'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ossf.yml:24'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/ossf.yml:23'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ossf.yml:24'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release.yml:79'
       - 'Info: jobLevel permissions set to ''read-all'': .github/workflows/release.yml:156'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/build.yml:13'
@@ -226,6 +226,17 @@ checks:
     details:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Info: all commits (29) are checked with a SAST tool'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
@@ -239,17 +250,6 @@ checks:
       - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/nlamirault/e2c/releases/tag/v0.4.0'
       - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/nlamirault/e2c/releases/tag/v0.3.0'
       - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/nlamirault/e2c/releases/tag/v0.2.0'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
@@ -265,4 +265,4 @@ checks:
     reason: 20 out of 20 merged PRs checked by a CI test -- score normalized to 10
     details: null
 ---
-{"id":302230898,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOO19KWs4SA61y","tag_name":"v0.5.0","target_commitish":"main","name":"v0.5.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-03-27T07:16:30Z","updated_at":"2026-03-27T07:21:40Z","published_at":"2026-03-27T07:20:51Z","assets":[{"id":382712966,"node_id":"RA_kwDOO19KWs4Wz7yG","name":"checksums.txt","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":1150,"digest":"sha256:fa0d391caf74c0ea638f0b13f8c5c177fc8c6dbb0320a4cd90ed531ab5ce508d","download_count":1,"created_at":"2026-03-27T07:20:50Z","updated_at":"2026-03-27T07:20:50Z"},{"id":382712964,"node_id":"RA_kwDOO19KWs4Wz7yE","name":"e2c.exe_0.5.0_windows_amd64.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":67292,"digest":"sha256:62f66902b40bfc182833894b762feaa0ce1658d9d552a5830296461eb89ce7c0","download_count":2,"created_at":"2026-03-27T07:20:50Z","updated_at":"2026-03-27T07:20:50Z"},{"id":382712961,"node_id":"RA_kwDOO19KWs4Wz7yB","name":"e2c.exe_0.5.0_windows_arm64.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":67292,"digest":"sha256:c2d5fb1caba02fcd2788412249e7a54ea3ab00ead695623ac13546a66c06964b","download_count":2,"created_at":"2026-03-27T07:20:50Z","updated_at":"2026-03-27T07:20:50Z"},{"id":382712956,"node_id":"RA_kwDOO19KWs4Wz7x8","name":"e2c_0.5.0_darwin_amd64.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":64406,"digest":"sha256:962c07723ec0211eed20fbe3a046e2e80360f9e92aabfb393eaa6418d6f7a5d0","download_count":2,"created_at":"2026-03-27T07:20:49Z","updated_at":"2026-03-27T07:20:49Z"},{"id":382712958,"node_id":"RA_kwDOO19KWs4Wz7x-","name":"e2c_0.5.0_darwin_arm64.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":64406,"digest":"sha256:e3b91ff0848b64a3c233f6a6a06bf4262b623db4303aa7a3d31a263a83ae1ece","download_count":2,"created_at":"2026-03-27T07:20:49Z","updated_at":"2026-03-27T07:20:49Z"},{"id":382712960,"node_id":"RA_kwDOO19KWs4Wz7yA","name":"e2c_0.5.0_linux_amd64.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":64406,"digest":"sha256:ccebf458016fd0c7e82e0a26273fa8d26fb8873c77f1d82ab72b8d4d6f85d2d9","download_count":4,"created_at":"2026-03-27T07:20:50Z","updated_at":"2026-03-27T07:20:50Z"},{"id":382712965,"node_id":"RA_kwDOO19KWs4Wz7yF","name":"e2c_0.5.0_linux_arm64.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":64406,"digest":"sha256:6c6de8b2992141b626cc09915b393de1e40edd3caa6f7ccb51cb51284480ab07","download_count":2,"created_at":"2026-03-27T07:20:50Z","updated_at":"2026-03-27T07:20:50Z"},{"id":382712950,"node_id":"RA_kwDOO19KWs4Wz7x2","name":"e2c_darwin_amd64_v0.5.0","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":12046448,"digest":"sha256:fcd5c55586977ad193f583101038e904cb4ff42c0fb5d277cac74b79633aec94","download_count":3,"created_at":"2026-03-27T07:20:48Z","updated_at":"2026-03-27T07:20:49Z"},{"id":382712951,"node_id":"RA_kwDOO19KWs4Wz7x3","name":"e2c_darwin_arm64_v0.5.0","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":11318962,"digest":"sha256:75182e7be30ffb486d298cb8d3e10b5f4ab6b0470580c33f4627aac6ae95f538","download_count":14,"created_at":"2026-03-27T07:20:48Z","updated_at":"2026-03-27T07:20:49Z"},{"id":382712952,"node_id":"RA_kwDOO19KWs4Wz7x4","name":"e2c_linux_amd64_v0.5.0","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":11759800,"digest":"sha256:1d3d37bc20481fa7b41421bce2991f7cb399c5e2e1b1034d257db854cc14c5c0","download_count":21,"created_at":"2026-03-27T07:20:48Z","updated_at":"2026-03-27T07:20:49Z"},{"id":382712957,"node_id":"RA_kwDOO19KWs4Wz7x9","name":"e2c_linux_arm64_v0.5.0","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":11010232,"digest":"sha256:49a731792c2b518c42fa3950bad9c65407416a62a4ad4683492c4e6e09b7f431","download_count":6,"created_at":"2026-03-27T07:20:49Z","updated_at":"2026-03-27T07:20:50Z"},{"id":382712955,"node_id":"RA_kwDOO19KWs4Wz7x7","name":"e2c_windows_amd64_v0.5.0.exe","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":12201984,"digest":"sha256:d517d6c9e4e05c00eeff81819852af09b94ae8ff581de6a458329dbb3ab6cf86","download_count":5,"created_at":"2026-03-27T07:20:49Z","updated_at":"2026-03-27T07:20:50Z"},{"id":382712949,"node_id":"RA_kwDOO19KWs4Wz7x1","name":"e2c_windows_arm64_v0.5.0.exe","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":11243520,"digest":"sha256:eec987581f4405136843b9fcb0441327fe905db053bd48a6becac02f1a20fe08","download_count":6,"created_at":"2026-03-27T07:20:48Z","updated_at":"2026-03-27T07:20:49Z"},{"id":382713322,"node_id":"RA_kwDOO19KWs4Wz73q","name":"multiple.intoto.jsonl","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":22483,"digest":"sha256:4f06e8a89dd4fa7d59b2ef25441e1982ac0faabaf2ab3a35d87c114a2bb37b9b","download_count":3,"created_at":"2026-03-27T07:21:40Z","updated_at":"2026-03-27T07:21:40Z"}],"body":"Released on 2026-03-27T07:17:00Z\n\n## What's Changed\n* build(deps): Bump github/codeql-action from 3.29.11 to 4.31.2 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/152\n* build(deps): Bump actions/upload-artifact from 4.6.2 to 5.0.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/150\n* build(deps): Bump anchore/sbom-action from 0.20.5 to 0.20.9 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/145\n* build(deps): Bump github.com/aws/aws-sdk-go-v2/service/ec2 from 1.237.0 to 1.259.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/151\n* build(deps): Bump github.com/aws/aws-sdk-go-v2 from 1.37.0 to 1.39.4 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/148\n* build(deps): Bump actions/dependency-review-action from 4.7.2 to 4.8.1 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/134\n* build(deps): Bump github.com/spf13/cobra from 1.9.1 to 1.10.1 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/130\n* Project management files by @nlamirault in https://github.com/nlamirault/e2c/pull/160\n* build(deps): Bump github/codeql-action from 4.31.2 to 4.31.4 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/167\n* build(deps): Bump actions/setup-go from 6.0.0 to 6.1.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/173\n* build(deps): Bump actions/checkout from 5.0.0 to 6.0.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/174\n* build(deps): Bump github.com/aws/aws-sdk-go-v2/service/ec2 from 1.259.0 to 1.275.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/181\n* build(deps): Bump anchore/sbom-action from 0.20.9 to 0.20.10 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/164\n* build(deps): Bump actions/dependency-review-action from 4.8.1 to 4.8.2 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/154\n* build(deps): Bump actions/upload-artifact from 5.0.0 to 6.0.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/197\n* build(deps): Bump actions/checkout from 6.0.0 to 6.0.1 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/187\n* build(deps): Bump golang from 1.24-alpine to 1.26-alpine by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/205\n* build(deps): Bump actions/setup-go from 6.1.0 to 6.2.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/204\n* build(deps): Bump github/codeql-action from 4.31.4 to 4.31.10 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/203\n* build(deps): Bump anchore/sbom-action from 0.20.10 to 0.21.1 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/202\n* build(deps): Bump actions/attest-build-provenance from 3.0.0 to 3.1.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/199\n* build(deps): Bump step-security/harden-runner from 2.13.0 to 2.14.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/194\n* build(deps): Bump alpine from 3.19 to 3.23 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/192\n* build(deps): Bump github.com/spf13/cobra from 1.10.1 to 1.10.2 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/191\n* build(deps): Bump github.com/aws/aws-sdk-go-v2/config from 1.30.1 to 1.32.3 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/189\n* build(deps): Bump github.com/gdamore/tcell/v2 from 2.8.1 to 2.13.1 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/184\n* ci(gemini): add gemini cli workflows and commands by @nlamirault in https://github.com/nlamirault/e2c/pull/218\n* build(deps): Bump actions/setup-go from 6.2.0 to 6.3.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/213\n* build(deps): Bump anchore/sbom-action from 0.21.1 to 0.24.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/212\n* build(deps): Bump step-security/harden-runner from 2.14.0 to 2.16.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/211\n* build(deps): Bump actions/checkout from 6.0.1 to 6.0.2 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/207\n* build(deps): Bump goreleaser/goreleaser-action from 6.4.0 to 7.0.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/208\n\n\n**Full Changelog**: https://github.com/nlamirault/e2c/compare/v0.4.0...v0.5.0\n\n","mentions_count":2}
+{"id":302230898,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOO19KWs4SA61y","tag_name":"v0.5.0","target_commitish":"main","name":"v0.5.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-03-27T07:16:30Z","updated_at":"2026-03-27T07:21:40Z","published_at":"2026-03-27T07:20:51Z","assets":[{"id":382712966,"node_id":"RA_kwDOO19KWs4Wz7yG","name":"checksums.txt","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":1150,"digest":"sha256:fa0d391caf74c0ea638f0b13f8c5c177fc8c6dbb0320a4cd90ed531ab5ce508d","download_count":1,"created_at":"2026-03-27T07:20:50Z","updated_at":"2026-03-27T07:20:50Z"},{"id":382712964,"node_id":"RA_kwDOO19KWs4Wz7yE","name":"e2c.exe_0.5.0_windows_amd64.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":67292,"digest":"sha256:62f66902b40bfc182833894b762feaa0ce1658d9d552a5830296461eb89ce7c0","download_count":2,"created_at":"2026-03-27T07:20:50Z","updated_at":"2026-03-27T07:20:50Z"},{"id":382712961,"node_id":"RA_kwDOO19KWs4Wz7yB","name":"e2c.exe_0.5.0_windows_arm64.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":67292,"digest":"sha256:c2d5fb1caba02fcd2788412249e7a54ea3ab00ead695623ac13546a66c06964b","download_count":2,"created_at":"2026-03-27T07:20:50Z","updated_at":"2026-03-27T07:20:50Z"},{"id":382712956,"node_id":"RA_kwDOO19KWs4Wz7x8","name":"e2c_0.5.0_darwin_amd64.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":64406,"digest":"sha256:962c07723ec0211eed20fbe3a046e2e80360f9e92aabfb393eaa6418d6f7a5d0","download_count":2,"created_at":"2026-03-27T07:20:49Z","updated_at":"2026-03-27T07:20:49Z"},{"id":382712958,"node_id":"RA_kwDOO19KWs4Wz7x-","name":"e2c_0.5.0_darwin_arm64.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":64406,"digest":"sha256:e3b91ff0848b64a3c233f6a6a06bf4262b623db4303aa7a3d31a263a83ae1ece","download_count":2,"created_at":"2026-03-27T07:20:49Z","updated_at":"2026-03-27T07:20:49Z"},{"id":382712960,"node_id":"RA_kwDOO19KWs4Wz7yA","name":"e2c_0.5.0_linux_amd64.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":64406,"digest":"sha256:ccebf458016fd0c7e82e0a26273fa8d26fb8873c77f1d82ab72b8d4d6f85d2d9","download_count":4,"created_at":"2026-03-27T07:20:50Z","updated_at":"2026-03-27T07:20:50Z"},{"id":382712965,"node_id":"RA_kwDOO19KWs4Wz7yF","name":"e2c_0.5.0_linux_arm64.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":64406,"digest":"sha256:6c6de8b2992141b626cc09915b393de1e40edd3caa6f7ccb51cb51284480ab07","download_count":2,"created_at":"2026-03-27T07:20:50Z","updated_at":"2026-03-27T07:20:50Z"},{"id":382712950,"node_id":"RA_kwDOO19KWs4Wz7x2","name":"e2c_darwin_amd64_v0.5.0","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":12046448,"digest":"sha256:fcd5c55586977ad193f583101038e904cb4ff42c0fb5d277cac74b79633aec94","download_count":3,"created_at":"2026-03-27T07:20:48Z","updated_at":"2026-03-27T07:20:49Z"},{"id":382712951,"node_id":"RA_kwDOO19KWs4Wz7x3","name":"e2c_darwin_arm64_v0.5.0","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":11318962,"digest":"sha256:75182e7be30ffb486d298cb8d3e10b5f4ab6b0470580c33f4627aac6ae95f538","download_count":14,"created_at":"2026-03-27T07:20:48Z","updated_at":"2026-03-27T07:20:49Z"},{"id":382712952,"node_id":"RA_kwDOO19KWs4Wz7x4","name":"e2c_linux_amd64_v0.5.0","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":11759800,"digest":"sha256:1d3d37bc20481fa7b41421bce2991f7cb399c5e2e1b1034d257db854cc14c5c0","download_count":22,"created_at":"2026-03-27T07:20:48Z","updated_at":"2026-03-27T07:20:49Z"},{"id":382712957,"node_id":"RA_kwDOO19KWs4Wz7x9","name":"e2c_linux_arm64_v0.5.0","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":11010232,"digest":"sha256:49a731792c2b518c42fa3950bad9c65407416a62a4ad4683492c4e6e09b7f431","download_count":6,"created_at":"2026-03-27T07:20:49Z","updated_at":"2026-03-27T07:20:50Z"},{"id":382712955,"node_id":"RA_kwDOO19KWs4Wz7x7","name":"e2c_windows_amd64_v0.5.0.exe","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":12201984,"digest":"sha256:d517d6c9e4e05c00eeff81819852af09b94ae8ff581de6a458329dbb3ab6cf86","download_count":5,"created_at":"2026-03-27T07:20:49Z","updated_at":"2026-03-27T07:20:50Z"},{"id":382712949,"node_id":"RA_kwDOO19KWs4Wz7x1","name":"e2c_windows_arm64_v0.5.0.exe","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":11243520,"digest":"sha256:eec987581f4405136843b9fcb0441327fe905db053bd48a6becac02f1a20fe08","download_count":6,"created_at":"2026-03-27T07:20:48Z","updated_at":"2026-03-27T07:20:49Z"},{"id":382713322,"node_id":"RA_kwDOO19KWs4Wz73q","name":"multiple.intoto.jsonl","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":22483,"digest":"sha256:4f06e8a89dd4fa7d59b2ef25441e1982ac0faabaf2ab3a35d87c114a2bb37b9b","download_count":3,"created_at":"2026-03-27T07:21:40Z","updated_at":"2026-03-27T07:21:40Z"}],"body":"Released on 2026-03-27T07:17:00Z\n\n## What's Changed\n* build(deps): Bump github/codeql-action from 3.29.11 to 4.31.2 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/152\n* build(deps): Bump actions/upload-artifact from 4.6.2 to 5.0.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/150\n* build(deps): Bump anchore/sbom-action from 0.20.5 to 0.20.9 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/145\n* build(deps): Bump github.com/aws/aws-sdk-go-v2/service/ec2 from 1.237.0 to 1.259.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/151\n* build(deps): Bump github.com/aws/aws-sdk-go-v2 from 1.37.0 to 1.39.4 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/148\n* build(deps): Bump actions/dependency-review-action from 4.7.2 to 4.8.1 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/134\n* build(deps): Bump github.com/spf13/cobra from 1.9.1 to 1.10.1 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/130\n* Project management files by @nlamirault in https://github.com/nlamirault/e2c/pull/160\n* build(deps): Bump github/codeql-action from 4.31.2 to 4.31.4 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/167\n* build(deps): Bump actions/setup-go from 6.0.0 to 6.1.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/173\n* build(deps): Bump actions/checkout from 5.0.0 to 6.0.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/174\n* build(deps): Bump github.com/aws/aws-sdk-go-v2/service/ec2 from 1.259.0 to 1.275.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/181\n* build(deps): Bump anchore/sbom-action from 0.20.9 to 0.20.10 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/164\n* build(deps): Bump actions/dependency-review-action from 4.8.1 to 4.8.2 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/154\n* build(deps): Bump actions/upload-artifact from 5.0.0 to 6.0.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/197\n* build(deps): Bump actions/checkout from 6.0.0 to 6.0.1 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/187\n* build(deps): Bump golang from 1.24-alpine to 1.26-alpine by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/205\n* build(deps): Bump actions/setup-go from 6.1.0 to 6.2.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/204\n* build(deps): Bump github/codeql-action from 4.31.4 to 4.31.10 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/203\n* build(deps): Bump anchore/sbom-action from 0.20.10 to 0.21.1 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/202\n* build(deps): Bump actions/attest-build-provenance from 3.0.0 to 3.1.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/199\n* build(deps): Bump step-security/harden-runner from 2.13.0 to 2.14.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/194\n* build(deps): Bump alpine from 3.19 to 3.23 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/192\n* build(deps): Bump github.com/spf13/cobra from 1.10.1 to 1.10.2 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/191\n* build(deps): Bump github.com/aws/aws-sdk-go-v2/config from 1.30.1 to 1.32.3 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/189\n* build(deps): Bump github.com/gdamore/tcell/v2 from 2.8.1 to 2.13.1 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/184\n* ci(gemini): add gemini cli workflows and commands by @nlamirault in https://github.com/nlamirault/e2c/pull/218\n* build(deps): Bump actions/setup-go from 6.2.0 to 6.3.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/213\n* build(deps): Bump anchore/sbom-action from 0.21.1 to 0.24.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/212\n* build(deps): Bump step-security/harden-runner from 2.14.0 to 2.16.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/211\n* build(deps): Bump actions/checkout from 6.0.1 to 6.0.2 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/207\n* build(deps): Bump goreleaser/goreleaser-action from 6.4.0 to 7.0.0 by @dependabot[bot] in https://github.com/nlamirault/e2c/pull/208\n\n\n**Full Changelog**: https://github.com/nlamirault/e2c/compare/v0.4.0...v0.5.0\n\n","mentions_count":2}

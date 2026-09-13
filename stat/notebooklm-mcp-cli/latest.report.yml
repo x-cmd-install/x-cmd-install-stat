@@ -2,56 +2,56 @@ about:
   description: "Programmatic access to Gemini Notebook - via command-line interface (CLI), Model Context Protocol (MCP) server, and AI agent skills."
   license: MIT
   homepage: 
-  head: 03f7812
+  head: adfa44d
   archived: false
-  latestVersion: "v0.11.2"
-  latestRelease: "v0.11.2"
+  latestVersion: "v0.11.3"
+  latestRelease: "v0.11.3"
   latestPrerelease: ""
-  collectedAt: 2026-09-11T05:07:13Z
+  collectedAt: 2026-09-13T05:31:19Z
 timeline:
   created: 2025-12-23
-  lastCommit: 2026-09-08
-  lastVersion: 2026-09-08
-  lastRelease: 2026-09-08
+  lastCommit: 2026-09-12
+  lastVersion: 2026-09-12
+  lastRelease: 2026-09-12
   lastPrerelease: 
 popularity:
-  star: 6059
-  watcher: 41
-  fork: 924
-  release: 145
-  contributor: 56
-  pullRequest: 162
+  star: 6066
+  watcher: 42
+  fork: 926
+  release: 146
+  contributor: 58
+  pullRequest: 164
   issue: 159
 language:
-  Python: 2236140
-totalBytes: 2236140
+  Python: 2254260
+totalBytes: 2254260
 recent:
   last30d:
-    since: 2026-08-12
-    release: 11
+    since: 2026-08-14
+    release: 9
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-13
-    release: 23
+    since: 2026-07-15
+    release: 24
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-13
-    release: 34
+    since: 2026-06-15
+    release: 35
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-15
+    since: 2026-03-17
     release: 83
     mergedPR: 0
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-16
+    since: 2025-09-18
     release: 100
     mergedPR: 0
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-09-21
+    since: 2024-09-23
     release: 100
     mergedPR: 0
     openPR: 0
@@ -75,21 +75,21 @@ recent:
     openIssue: 0
     commit: 0
 total:
-  release: 145
-  mergedPR: 117
-  openPR: 0
-  closedIssue: 158
-  openIssue: 1
-  commit: 799
+  release: 146
+  mergedPR: 118
+  openPR: 1
+  closedIssue: 159
+  openIssue: 0
+  commit: 802
 ---
 path: /home/runner/.x-repo/github.com/jacob-bd/notebooklm-mcp-cli
-collectedAt: 2026-09-11T05:07:15Z
+collectedAt: 2026-09-13T05:31:21Z
 loc:
   Python:
-    code: 49274
-    comments: 2189
-    blanks: 9570
-    files: 217
+    code: 49657
+    comments: 2210
+    blanks: 9658
+    files: 222
   Json:
     code: 79
     comments: 0
@@ -102,15 +102,15 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 7695
-    blanks: 3526
+    comments: 7847
+    blanks: 3577
     files: 35
 total:
-  code: 51519
-  comments: 10432
-  blanks: 13455
-  files: 254
+  code: 51936
+  comments: 10606
+  blanks: 13594
+  files: 259
 ---
 
 ---
-{"id":385076977,"author":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQtfMFM4W887x","tag_name":"v0.11.2","target_commitish":"main","name":"v0.11.2 - Security release","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-08T21:31:40Z","updated_at":"2026-09-08T21:33:30Z","published_at":"2026-09-08T21:32:02Z","assets":[{"id":551354799,"node_id":"RA_kwDOQtfMFM4g3QGv","name":"notebooklm-mcp-0.11.2.mcpb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":2545,"digest":"sha256:352b9f31014474f451645b5725a59e8edd628013ae480a249dd611a399f22867","download_count":97,"created_at":"2026-09-08T21:33:30Z","updated_at":"2026-09-08T21:33:30Z"}],"body":"\nSecurity release. Recommended for anyone who set up WSL login, and for anyone\nwho runs the MCP server with debug logging.\n\n### Security\n\n- **WSL CDP bridge is now scoped to the WSL virtual adapter.** The `netsh portproxy`\n  that bridges WSL to Windows Chrome listens on `0.0.0.0`, so the Windows Firewall\n  rule is the only boundary in front of Chrome DevTools Protocol, which has no\n  authentication. The rule printed by `nlm login --wsl` and built by\n  `create_firewall_rule()` now carries `-InterfaceAlias \"vEthernet (WSL)\"`, so traffic\n  arriving on Wi-Fi or Ethernet cannot match it. Interface scoping is what does the\n  work here: the WSL adapter usually lands on the **Public** network profile, so\n  profile filtering cannot separate it from a real network. `-RemoteAddress LocalSubnet`\n  is kept as a second layer. The privilege-failure fallback command previously printed\n  no `-RemoteAddress` at all, which defaults to `Any`; it is now scoped like the others.\n  Thanks to **@Naor-Peretz** for the report (GHSA-v558-4774-r6wq).\n\n  **Existing WSL users must act.** The firewall rule and the port proxy are created by\n  you, in Windows, so upgrading cannot change them. See\n  [Removing the bridge](./docs/WSL_SETUP.md#removing-the-bridge) to check whether your\n  rule is scoped and to replace it if not.\n\n- **`debug_page.html` is now created private.** The debug dump of the authenticated\n  page was written with the process umask and narrowed with `chmod` afterwards, leaving\n  a window in which it was world-readable, and the `chmod` failure was suppressed\n  silently. It is now created `0o600` atomically with `os.open`, matching the pattern\n  already used for credential writes in `core/auth.py` and `utils/cdp.py`.\n  Thanks to **@Naor-Peretz** for the report (GHSA-747w-q55c-m74m).\n\n- **MCP debug logging now redacts responses, not only requests.** Request parameters\n  were sanitized while responses were serialized whole, with a 1000-character\n  truncation as the only limit. Redaction is now recursive, covers nested dicts and\n  lists in both requests and responses, and matches sensitive key names by substring\n  (`token`, `secret`, `password`, `credential`, `apikey`, `authorization`, `bearer`\n  and others) rather than an exact five-key denylist that failed open for anything\n  added later. Thanks to **@Naor-Peretz** for the report (GHSA-jhrc-qgxv-3c2g).\n\n### Added\n\n- `SECURITY.md` with a private reporting channel, response targets, and scope.\n- `.github/dependabot.yml` for weekly Python and GitHub Actions updates.\n- Regression tests: `tests/test_log_redaction.py`, `tests/test_debug_page_permissions.py`,\n  `tests/test_wsl_firewall_scope.py`.\n\n### Changed\n\n- `docs/WSL_SETUP.md` now documents the teardown commands for the firewall rule and the\n  port proxy, states the exposure honestly instead of claiming external hosts cannot\n  reach the port, and explains how to replace a pre-0.11.2 rule.\n- The `utils/wsl.py` module docstring described the pre-0.5.24 architecture, in which\n  Chrome bound `--remote-debugging-address=0.0.0.0`, and referenced\n  `docs/SECURITY_REMEDIATION_PLAN.md`, which is not in the repository. Rewritten to\n  describe the port proxy and its actual limits.\n\n","mentions_count":1}
+{"id":387665097,"author":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQtfMFM4XG0zJ","tag_name":"v0.11.3","target_commitish":"main","name":"v0.11.3 - Plan usage reporting","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-12T18:28:43Z","updated_at":"2026-09-12T18:32:56Z","published_at":"2026-09-12T18:31:26Z","assets":[{"id":559748765,"node_id":"RA_kwDOQtfMFM4hXRad","name":"notebooklm-mcp-0.11.3.mcpb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":2546,"digest":"sha256:ad90e583d244b02545bacb7c88f5e9ee6aa62c3b12d923a11b45d66c3186c54f","download_count":7,"created_at":"2026-09-12T18:32:56Z","updated_at":"2026-09-12T18:32:56Z"}],"body":"\nPatch release adding visibility into the account's compute-based Gemini\nNotebook allowance.\n\n### Added\n\n- **Plan usage reporting** \u2014 `nlm usage` and the MCP `usage_get` tool now report\n  the measured percentage used, percentage remaining, reset timestamp, and\n  subscription tier for the rolling and weekly usage windows. The report keeps\n  the two windows deterministic even when the backend returns them in a\n  different order. Thanks to **@WAOmaster** for the implementation in\n  [PR #327](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/327).\n\n### Fixed\n\n- **Quota guidance in the bundled skill** \u2014 The skill, AI help output, and\n  linked references now direct assistants to check `nlm usage` or `usage_get`\n  before quota-limited work and distinguish an expired session from an\n  exhausted allowance.\n\n### Changed\n\n- Updated the bundled skill and generated command reference to document the\n  rolling and weekly compute windows, UTC reset timestamps, JSON output shape,\n  and the current 49-tool MCP surface.\n\n### Removed\n\n- No functionality was removed in this patch release.\n\n### Verification\n\n- Release-gate test selection (`not e2e`): 1,590 passed, 38 skipped, 1 deselected.\n- Live CLI and stdio MCP checks returned both usage windows and the active\n  subscription tier successfully.\n\n","mentions_count":1}

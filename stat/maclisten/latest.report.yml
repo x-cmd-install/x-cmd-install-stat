@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.4.0"
   latestRelease: "v0.4.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-12T04:36:18Z
+  collectedAt: 2026-09-13T05:00:32Z
 timeline:
   created: 2026-06-19
   lastCommit: 2026-07-19
@@ -29,7 +29,7 @@ language:
 totalBytes: 60206
 recent:
   last30d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 0
     mergedPR: 0
     openPR: 0
@@ -37,23 +37,23 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 0
     mergedPR: 1
     openPR: 5
     closedIssue: 0
     openIssue: 0
-    commit: 1
+    commit: 0
   last90d:
-    since: 2026-06-14
+    since: 2026-06-15
     release: 4
     mergedPR: 28
     openPR: 5
     closedIssue: 1
     openIssue: 6
-    commit: 39
+    commit: 16
   last180d:
-    since: 2026-03-16
+    since: 2026-03-17
     release: 4
     mergedPR: 28
     openPR: 5
@@ -61,7 +61,7 @@ recent:
     openIssue: 6
     commit: 39
   last360d:
-    since: 2025-09-17
+    since: 2025-09-18
     release: 4
     mergedPR: 28
     openPR: 5
@@ -69,7 +69,7 @@ recent:
     openIssue: 6
     commit: 39
   last720d:
-    since: 2024-09-22
+    since: 2024-09-23
     release: 4
     mergedPR: 28
     openPR: 5
@@ -85,7 +85,7 @@ total:
   commit: 39
 ---
 path: /home/runner/.x-repo/github.com/ljh-sh/maclisten
-collectedAt: 2026-09-12T04:36:19Z
+collectedAt: 2026-09-13T05:00:33Z
 loc:
   Swift:
     code: 1175
@@ -133,7 +133,7 @@ total:
   blanks: 611
   files: 36
 ---
-date: "2026-09-06T02:28:19Z"
+date: "2026-09-13T02:41:34Z"
 repo:
   name: github.com/ljh-sh/maclisten
   commit: 1e265ce91a1496f97cd6b73c2536a6db68783572
@@ -142,11 +142,20 @@ scorecard:
   commit: c22063e786c11f9dd714d777a687ff7c4599b600
 score: 7.7
 checks:
+  - name: Code-Review
+    score: 3
+    reason: Found 7/18 approved changesets -- score normalized to 3
+    details: null
   - name: Dependency-Update-Tool
     score: 10
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+  - name: Maintained
+    score: 0
+    reason: project was created within the last 90 days. Please review its contents carefully
+    details:
+      - 'Warn: Repository was created within the last 90 days.'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -158,27 +167,6 @@ checks:
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
-    details: null
-  - name: Maintained
-    score: 0
-    reason: project was created within the last 90 days. Please review its contents carefully
-    details:
-      - 'Warn: Repository was created within the last 90 days.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Pinned-Dependencies
-    score: 8
-    reason: dependency not pinned by hash detected -- score normalized to 8
-    details:
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:75: update your workflow using https://app.stepsecurity.io/secureworkflow/ljh-sh/maclisten/release.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/retrofit-slsa.yml:50: update your workflow using https://app.stepsecurity.io/secureworkflow/ljh-sh/maclisten/retrofit-slsa.yml/main?enable=pin'
-      - 'Info:  23 out of  23 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   3 out of   5 third-party GitHubAction dependencies pinned'
-  - name: Code-Review
-    score: 3
-    reason: Found 7/18 approved changesets -- score normalized to 3
     details: null
   - name: Token-Permissions
     score: 10
@@ -192,9 +180,9 @@ checks:
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/release.yml:21'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release.yml:70'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release.yml:86'
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/retrofit-slsa.yml:61'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/retrofit-slsa.yml:17'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/retrofit-slsa.yml:45'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/retrofit-slsa.yml:61'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/scorecard.yml:18'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/scorecard.yml:19'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/ci.yml:9'
@@ -205,30 +193,49 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/release.yml:13'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/retrofit-slsa.yml:10'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:11'
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
+  - name: Pinned-Dependencies
+    score: 8
+    reason: dependency not pinned by hash detected -- score normalized to 8
+    details:
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:75: update your workflow using https://app.stepsecurity.io/secureworkflow/ljh-sh/maclisten/release.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/retrofit-slsa.yml:50: update your workflow using https://app.stepsecurity.io/secureworkflow/ljh-sh/maclisten/retrofit-slsa.yml/main?enable=pin'
+      - 'Info:  23 out of  23 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   3 out of   5 third-party GitHubAction dependencies pinned'
   - name: Vulnerabilities
     score: 10
     reason: 0 existing vulnerabilities detected
     details: null
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/npm.yml:15'
-  - name: Fuzzing
+  - name: CII-Best-Practices
     score: 0
-    reason: project is not fuzzed
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
+  - name: Signed-Releases
+    score: 10
+    reason: 4 out of the last 4 releases have a total of 8 signed artifacts.
     details:
-      - 'Warn: no fuzzer integrations found'
+      - 'Info: signed release artifact: BUILD_INFO.txt.sigstore.json: https://github.com/ljh-sh/maclisten/releases/tag/v0.4.0'
+      - 'Info: signed release artifact: BUILD_INFO.txt.sigstore.json: https://github.com/ljh-sh/maclisten/releases/tag/v0.2.2'
+      - 'Info: signed release artifact: BUILD_INFO.txt.sigstore.json: https://github.com/ljh-sh/maclisten/releases/tag/v0.2.1'
+      - 'Info: signed release artifact: BUILD_INFO.txt.sigstore.json: https://github.com/ljh-sh/maclisten/releases/tag/v0.2.0'
+      - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ljh-sh/maclisten/releases/tag/v0.4.0'
+      - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ljh-sh/maclisten/releases/tag/v0.2.2'
+      - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ljh-sh/maclisten/releases/tag/v0.2.1'
+      - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ljh-sh/maclisten/releases/tag/v0.2.0'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE.txt:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE.txt:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits
@@ -249,18 +256,11 @@ checks:
       - 'Info: ''up-to-date branches'' is required to merge on branch ''main'''
       - 'Info: status check found to merge onto on branch ''main'''
       - 'Info: PRs are required in order to make changes on branch ''main'''
-  - name: Signed-Releases
+  - name: Packaging
     score: 10
-    reason: 4 out of the last 4 releases have a total of 8 signed artifacts.
+    reason: packaging workflow detected
     details:
-      - 'Info: signed release artifact: BUILD_INFO.txt.sigstore.json: https://github.com/ljh-sh/maclisten/releases/tag/v0.4.0'
-      - 'Info: signed release artifact: BUILD_INFO.txt.sigstore.json: https://github.com/ljh-sh/maclisten/releases/tag/v0.2.2'
-      - 'Info: signed release artifact: BUILD_INFO.txt.sigstore.json: https://github.com/ljh-sh/maclisten/releases/tag/v0.2.1'
-      - 'Info: signed release artifact: BUILD_INFO.txt.sigstore.json: https://github.com/ljh-sh/maclisten/releases/tag/v0.2.0'
-      - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ljh-sh/maclisten/releases/tag/v0.4.0'
-      - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ljh-sh/maclisten/releases/tag/v0.2.2'
-      - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ljh-sh/maclisten/releases/tag/v0.2.1'
-      - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ljh-sh/maclisten/releases/tag/v0.2.0'
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/npm.yml:15'
   - name: Contributors
     score: 3
     reason: project has 1 contributing companies or organizations -- score normalized to 3

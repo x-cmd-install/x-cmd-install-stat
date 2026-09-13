@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.2.0"
   latestRelease: "v0.2.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-12T03:38:07Z
+  collectedAt: 2026-09-13T03:44:58Z
 timeline:
   created: 2026-06-25
   lastCommit: 2026-07-19
@@ -27,7 +27,7 @@ language:
 totalBytes: 12633
 recent:
   last30d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,15 +35,15 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 0
     mergedPR: 1
     openPR: 5
     closedIssue: 0
     openIssue: 0
-    commit: 1
+    commit: 0
   last90d:
-    since: 2026-06-14
+    since: 2026-06-15
     release: 2
     mergedPR: 15
     openPR: 5
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 20
   last180d:
-    since: 2026-03-16
+    since: 2026-03-17
     release: 2
     mergedPR: 15
     openPR: 5
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 20
   last360d:
-    since: 2025-09-17
+    since: 2025-09-18
     release: 2
     mergedPR: 15
     openPR: 5
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 20
   last720d:
-    since: 2024-09-22
+    since: 2024-09-23
     release: 2
     mergedPR: 15
     openPR: 5
@@ -83,7 +83,7 @@ total:
   commit: 20
 ---
 path: /home/runner/.x-repo/github.com/ljh-sh/chardet
-collectedAt: 2026-09-12T03:38:08Z
+collectedAt: 2026-09-13T03:44:59Z
 loc:
   Rust:
     code: 303
@@ -121,7 +121,7 @@ total:
   blanks: 168
   files: 13
 ---
-date: "2026-09-06T02:42:21Z"
+date: "2026-09-13T02:55:38Z"
 repo:
   name: github.com/ljh-sh/chardet
   commit: 418a70d271f0751b4adf99c51b6b2ed589242917
@@ -130,19 +130,16 @@ scorecard:
   commit: c22063e786c11f9dd714d777a687ff7c4599b600
 score: 6.6
 checks:
-  - name: Code-Review
-    score: 0
-    reason: Found 0/10 approved changesets -- score normalized to 0
-    details: null
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Maintained
     score: 0
     reason: project was created within the last 90 days. Please review its contents carefully
     details:
       - 'Warn: Repository was created within the last 90 days.'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -155,11 +152,14 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Dependency-Update-Tool
+  - name: Binary-Artifacts
     score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+    reason: no binaries found in the repo
+    details: null
+  - name: Code-Review
+    score: 0
+    reason: Found 0/10 approved changesets -- score normalized to 0
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -190,25 +190,14 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/pages.yml:15'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/release.yml:13'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:11'
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
   - name: Vulnerabilities
     score: 10
     reason: 0 existing vulnerabilities detected
     details: null
-  - name: SAST
-    score: 10
-    reason: SAST tool is run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Info: all commits (15) are checked with a SAST tool'
-  - name: Fuzzing
+  - name: CII-Best-Practices
     score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
   - name: Signed-Releases
     score: 8
     reason: 2 out of the last 2 releases have a total of 2 signed artifacts.
@@ -228,6 +217,17 @@ checks:
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''main'''
+  - name: SAST
+    score: 10
+    reason: SAST tool is run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Info: all commits (15) are checked with a SAST tool'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Contributors
     score: 3
     reason: project has 1 contributing companies or organizations -- score normalized to 3

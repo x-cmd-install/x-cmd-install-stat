@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.6.0"
   latestRelease: "v1.6.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-12T04:45:09Z
+  collectedAt: 2026-09-13T05:00:07Z
 timeline:
   created: 2024-04-30
   lastCommit: 2026-06-16
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-06-10
   lastPrerelease: 
 popularity:
-  star: 5070
+  star: 5068
   watcher: 24
   fork: 235
   release: 15
@@ -31,7 +31,7 @@ language:
 totalBytes: 21126006
 recent:
   last30d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 0
     mergedPR: 0
     openPR: 3
@@ -39,7 +39,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 0
     mergedPR: 0
     openPR: 5
@@ -47,7 +47,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-14
+    since: 2026-06-15
     release: 0
     mergedPR: 1
     openPR: 5
@@ -55,7 +55,7 @@ recent:
     openIssue: 0
     commit: 1
   last180d:
-    since: 2026-03-16
+    since: 2026-03-17
     release: 1
     mergedPR: 3
     openPR: 10
@@ -63,7 +63,7 @@ recent:
     openIssue: 0
     commit: 4
   last360d:
-    since: 2025-09-17
+    since: 2025-09-18
     release: 1
     mergedPR: 7
     openPR: 13
@@ -71,13 +71,13 @@ recent:
     openIssue: 4
     commit: 17
   last720d:
-    since: 2024-09-22
+    since: 2024-09-23
     release: 8
     mergedPR: 135
     openPR: 21
     closedIssue: 79
     openIssue: 11
-    commit: 423
+    commit: 421
 total:
   release: 15
   mergedPR: 171
@@ -87,7 +87,7 @@ total:
   commit: 621
 ---
 path: /home/runner/.x-repo/github.com/hengyoush/kyanos
-collectedAt: 2026-09-12T04:45:12Z
+collectedAt: 2026-09-13T05:00:10Z
 loc:
   CHeader:
     code: 857818
@@ -152,4 +152,4 @@ total:
 ---
 
 ---
-{"id":337191666,"author":{"login":"hengyoush","id":32724602,"node_id":"MDQ6VXNlcjMyNzI0NjAy","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOL1NAxc4UGSLy","tag_name":"v1.6.0","target_commitish":"main","name":"v1.6.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-06-10T11:05:50Z","updated_at":"2026-06-10T13:07:39Z","published_at":"2026-06-10T13:07:39Z","assets":[{"id":443659121,"node_id":"RA_kwDOL1NAxc4acbNx","name":"checksums.txt","label":"","uploader":{"login":"hengyoush","id":32724602,"node_id":"MDQ6VXNlcjMyNzI0NjAy","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":196,"digest":"sha256:e3923a005acc30b0f72249a839282d3e6ad69ab387c648389347cf6e04dec78d","download_count":8,"created_at":"2026-06-10T11:45:40Z","updated_at":"2026-06-10T11:45:41Z"},{"id":443659104,"node_id":"RA_kwDOL1NAxc4acbNg","name":"kyanos_1.6.0_linux_amd64.tar.gz","label":"","uploader":{"login":"hengyoush","id":32724602,"node_id":"MDQ6VXNlcjMyNzI0NjAy","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":13854915,"digest":"sha256:66df07b972a0e970bf5365a702a852ad4f78f5dd787d4a33f82c7983fa7daddb","download_count":298,"created_at":"2026-06-10T11:45:38Z","updated_at":"2026-06-10T11:45:39Z"},{"id":443659112,"node_id":"RA_kwDOL1NAxc4acbNo","name":"kyanos_1.6.0_linux_arm64.tar.gz","label":"","uploader":{"login":"hengyoush","id":32724602,"node_id":"MDQ6VXNlcjMyNzI0NjAy","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":11056665,"digest":"sha256:55a68147be183c71f1e734f2482704c315ae0e5a6b8bb8ef31bbf8e0840a2175","download_count":40,"created_at":"2026-06-10T11:45:39Z","updated_at":"2026-06-10T11:45:40Z"}],"body":"## What's Changed\r\n\r\n### New Protocols\r\n* Added MongoDB protocol parsing, command support, protocol inference, and tests in https://github.com/hengyoush/kyanos/pull/275\r\n* Added DNS protocol support, including parsing, filtering, protocol inference, CLI command, docs, and tests in https://github.com/hengyoush/kyanos/pull/309\r\n\r\n### eBPF and Capture Improvements\r\n* Replaced tracepoint-based hooks with fentry where available to improve probe behavior and compatibility in https://github.com/hengyoush/kyanos/pull/311\r\n* Added `security_socket_sendmsg` fentry support and fixed `security_socket_recvmsg/sendmsg` attach handling\r\n* Added architecture-specific syscall tracing support for amd64 and arm64\r\n* Fixed NAT flow direction handling\r\n* Skipped unnecessary protocol inference when the protocol is specified from the command line in https://github.com/hengyoush/kyanos/pull/310\r\n\r\n### SSL/TLS\r\n* Added OpenSSL 3.5.0 SSL decryption support\r\n* Added OpenSSL 3.5.1-3.5.5 version mapping support\r\n* Fixed a concurrency issue in the global map used while tracking SSL events in https://github.com/hengyoush/kyanos/pull/305\r\n\r\n### Stability and Memory\r\n* Added memory monitoring utilities\r\n* Added goroutine management utilities\r\n* Fixed StreamBuffer timestamp cleanup to prevent memory leaks\r\n* Added StreamBuffer memory leak tests in https://github.com/hengyoush/kyanos/pull/333\r\n\r\n### Fixes\r\n* Fixed cgo DNS resolution crash\r\n* Fixed `--json-output` exit behavior after BPF is loaded\r\n* Fixed issue https://github.com/hengyoush/kyanos/issues/300 in https://github.com/hengyoush/kyanos/pull/302\r\n* Updated `golang.org/x/arch` to v0.24.0 in https://github.com/hengyoush/kyanos/pull/104\r\n\r\n### Documentation and CI\r\n* Updated compilation documentation in https://github.com/hengyoush/kyanos/pull/308\r\n* Added AGENTS.md guidance files in https://github.com/hengyoush/kyanos/pull/329 and https://github.com/hengyoush/kyanos/pull/330\r\n* Added MongoDB and DNS test coverage\r\n* Improved RocketMQ docker compose compatibility\r\n* Simplified CI test dependencies and updated workflow actions\r\n* Bumped `cilium/little-vm-helper` to v0.0.28\r\n\r\n**Full Changelog**: https://github.com/hengyoush/kyanos/compare/v1.5.0...v1.6.0\r\n"}
+{"id":337191666,"author":{"login":"hengyoush","id":32724602,"node_id":"MDQ6VXNlcjMyNzI0NjAy","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOL1NAxc4UGSLy","tag_name":"v1.6.0","target_commitish":"main","name":"v1.6.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-06-10T11:05:50Z","updated_at":"2026-06-10T13:07:39Z","published_at":"2026-06-10T13:07:39Z","assets":[{"id":443659121,"node_id":"RA_kwDOL1NAxc4acbNx","name":"checksums.txt","label":"","uploader":{"login":"hengyoush","id":32724602,"node_id":"MDQ6VXNlcjMyNzI0NjAy","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":196,"digest":"sha256:e3923a005acc30b0f72249a839282d3e6ad69ab387c648389347cf6e04dec78d","download_count":8,"created_at":"2026-06-10T11:45:40Z","updated_at":"2026-06-10T11:45:41Z"},{"id":443659104,"node_id":"RA_kwDOL1NAxc4acbNg","name":"kyanos_1.6.0_linux_amd64.tar.gz","label":"","uploader":{"login":"hengyoush","id":32724602,"node_id":"MDQ6VXNlcjMyNzI0NjAy","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":13854915,"digest":"sha256:66df07b972a0e970bf5365a702a852ad4f78f5dd787d4a33f82c7983fa7daddb","download_count":302,"created_at":"2026-06-10T11:45:38Z","updated_at":"2026-06-10T11:45:39Z"},{"id":443659112,"node_id":"RA_kwDOL1NAxc4acbNo","name":"kyanos_1.6.0_linux_arm64.tar.gz","label":"","uploader":{"login":"hengyoush","id":32724602,"node_id":"MDQ6VXNlcjMyNzI0NjAy","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":11056665,"digest":"sha256:55a68147be183c71f1e734f2482704c315ae0e5a6b8bb8ef31bbf8e0840a2175","download_count":41,"created_at":"2026-06-10T11:45:39Z","updated_at":"2026-06-10T11:45:40Z"}],"body":"## What's Changed\r\n\r\n### New Protocols\r\n* Added MongoDB protocol parsing, command support, protocol inference, and tests in https://github.com/hengyoush/kyanos/pull/275\r\n* Added DNS protocol support, including parsing, filtering, protocol inference, CLI command, docs, and tests in https://github.com/hengyoush/kyanos/pull/309\r\n\r\n### eBPF and Capture Improvements\r\n* Replaced tracepoint-based hooks with fentry where available to improve probe behavior and compatibility in https://github.com/hengyoush/kyanos/pull/311\r\n* Added `security_socket_sendmsg` fentry support and fixed `security_socket_recvmsg/sendmsg` attach handling\r\n* Added architecture-specific syscall tracing support for amd64 and arm64\r\n* Fixed NAT flow direction handling\r\n* Skipped unnecessary protocol inference when the protocol is specified from the command line in https://github.com/hengyoush/kyanos/pull/310\r\n\r\n### SSL/TLS\r\n* Added OpenSSL 3.5.0 SSL decryption support\r\n* Added OpenSSL 3.5.1-3.5.5 version mapping support\r\n* Fixed a concurrency issue in the global map used while tracking SSL events in https://github.com/hengyoush/kyanos/pull/305\r\n\r\n### Stability and Memory\r\n* Added memory monitoring utilities\r\n* Added goroutine management utilities\r\n* Fixed StreamBuffer timestamp cleanup to prevent memory leaks\r\n* Added StreamBuffer memory leak tests in https://github.com/hengyoush/kyanos/pull/333\r\n\r\n### Fixes\r\n* Fixed cgo DNS resolution crash\r\n* Fixed `--json-output` exit behavior after BPF is loaded\r\n* Fixed issue https://github.com/hengyoush/kyanos/issues/300 in https://github.com/hengyoush/kyanos/pull/302\r\n* Updated `golang.org/x/arch` to v0.24.0 in https://github.com/hengyoush/kyanos/pull/104\r\n\r\n### Documentation and CI\r\n* Updated compilation documentation in https://github.com/hengyoush/kyanos/pull/308\r\n* Added AGENTS.md guidance files in https://github.com/hengyoush/kyanos/pull/329 and https://github.com/hengyoush/kyanos/pull/330\r\n* Added MongoDB and DNS test coverage\r\n* Improved RocketMQ docker compose compatibility\r\n* Simplified CI test dependencies and updated workflow actions\r\n* Bumped `cilium/little-vm-helper` to v0.0.28\r\n\r\n**Full Changelog**: https://github.com/hengyoush/kyanos/compare/v1.5.0...v1.6.0\r\n"}

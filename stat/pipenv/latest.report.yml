@@ -7,7 +7,7 @@ about:
   latestVersion: "v2026.8.0"
   latestRelease: "v2026.8.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-12T05:38:15Z
+  collectedAt: 2026-09-13T05:59:29Z
 timeline:
   created: 2017-01-20
   lastCommit: 2026-08-21
@@ -34,7 +34,7 @@ language:
 totalBytes: 11234915
 recent:
   last30d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 1
     mergedPR: 5
     openPR: 1
@@ -42,7 +42,7 @@ recent:
     openIssue: 1
     commit: 18
   last60d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 3
     mergedPR: 15
     openPR: 1
@@ -50,7 +50,7 @@ recent:
     openIssue: 1
     commit: 41
   last90d:
-    since: 2026-06-14
+    since: 2026-06-15
     release: 3
     mergedPR: 17
     openPR: 1
@@ -58,7 +58,7 @@ recent:
     openIssue: 1
     commit: 44
   last180d:
-    since: 2026-03-16
+    since: 2026-03-17
     release: 13
     mergedPR: 129
     openPR: 2
@@ -66,7 +66,7 @@ recent:
     openIssue: 3
     commit: 427
   last360d:
-    since: 2025-09-17
+    since: 2025-09-18
     release: 20
     mergedPR: 189
     openPR: 2
@@ -74,13 +74,13 @@ recent:
     openIssue: 3
     commit: 554
   last720d:
-    since: 2024-09-22
+    since: 2024-09-23
     release: 32
-    mergedPR: 265
+    mergedPR: 264
     openPR: 2
     closedIssue: 149
     openIssue: 3
-    commit: 988
+    commit: 983
 total:
   release: 135
   mergedPR: 1812
@@ -90,7 +90,7 @@ total:
   commit: 9858
 ---
 path: /home/runner/.x-repo/github.com/pypa/pipenv
-collectedAt: 2026-09-12T05:38:27Z
+collectedAt: 2026-09-13T05:59:41Z
 loc:
   Python:
     code: 213026
@@ -310,4 +310,4 @@ checks:
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/pypi_upload.yml:13'
 ---
-{"id":373995816,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBL06l84WSrko","tag_name":"v2026.8.0","target_commitish":"main","name":"Release v2026.8.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-20T19:58:32Z","updated_at":"2026-08-20T19:59:33Z","published_at":"2026-08-20T19:58:54Z","assets":[],"body":"## \ud83e\udd16 AI-Generated Changelog\n\n## Added\n\n- **Parallel index manifest prefetching** (`PIPENV_PREFETCH_INDEX_MANIFESTS`): New experimental feature that fetches package index manifests concurrently during lock operations, significantly reducing resolution time for large dependency sets\n- **PEP 691 JSON Simple API support**: Native parsing of PEP 691 JSON responses from package indexes alongside existing PEP 503 HTML parsing\n- **Disk-based manifest cache** (`ParsedManifestCache`): JSON-on-disk cache with TTL and atomic writes to avoid redundant index fetches across lock operations\n- **Pluggable resolver backend scaffolding**: Foundation for swappable resolver backends, enabling future customization of dependency resolution strategies\n- **Per-source `verify_ssl` fan-out for prefetcher**: Each index source now independently respects its SSL verification and certificate settings during parallel prefetch\n- **`peek_etag` stale-cache short-circuit**: Resolver can now skip full manifest fetches when ETags indicate cached data is still fresh\n- **`prefetch_index_manifests` setting**: New boolean configuration option to enable/disable the parallel prefetch feature\n- Reject Pipfile entries with unrecognized keys, providing clearer errors on misconfiguration\n\n## Changed\n\n- **Pipfile subsystem extracted from `Project`**: Internal refactor completing Initiative D; `project.build_script` and related attributes now live on `project.pipfile`\n- **Lockfile subsystem extracted from `Project`**: Lockfile state management is now a dedicated subsystem\n- **`unpack_url` / `get_http_url` moved** to `pipenv/utils/unpack.py`; legacy `requirementslib.py` removed\n- Resolver backend selection is now stamped onto resolver requests for improved traceability\n- Prior `Pipfile.lock` pins are fed as pip constraints on warm relock to speed up re-locking (reverted and re-landed with fixes)\n- Resolver subprocess skipped entirely for empty Pipfile categories, reducing unnecessary process overhead\n- Vendor pip updated to **26.2.1**\n\n## Fixed\n\n- **Corrupt lockfile recovery**: Fixed return path when recovering from a corrupt lockfile\n- **Editable VCS extras** now resolve correctly with pip 26.2\n- **netrc login handling**: Quote-only netrc credentials are now treated as empty on Python 3.10+, preventing auth failures\n- **Manifest cache retry on Windows**: `os.replace` is retried on `ERROR_ACCESS_DENIED` with a wall-clock budget, fixing cache write failures on Windows\n- **Missing Pipfile hashes** are now handled gracefully instead of raising an error\n- Plette Pipfile attribute delegation fixed after subsystem refactor\n- `resolver_backend` is now correctly plumbed through the `venv_resolve_deps` call chain\n- Prerelease versions are now allowed as a fallback at final lower bounds\n- Stale `project.build_script` call sites migrated to `project.pipfile.build_script`\n- Test for Pipfile version warning updated after subsystem extraction\n- `test_lockfile_location_is_pipfile_plus_lock` made OS-portable\n- Fixed latest hash and virtualenv guidance in documentation/output\n- Fixed first-party CodeQL reliability errors\n- Deferred pip-internal imports (`InstallCommand`, `unpack`, `Downloader`, network imports) to improve startup performance\n\n## Security\n\n- CodeQL reliability improvements to reduce false negatives in static analysis\n\n---\n\n\ud83d\udd17 **Full Changelog**: https://github.com/pypa/pipenv/compare/v2026.7.1...v2026.8.0\n"}
+{"id":373995816,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBL06l84WSrko","tag_name":"v2026.8.0","target_commitish":"main","name":"Release v2026.8.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-20T19:58:32Z","updated_at":"2026-08-20T19:59:33Z","published_at":"2026-08-20T19:58:54Z","assets":[],"body":"## \ud83e\udd16 AI-Generated Changelog\n\n## Added\n\n- **Parallel index manifest prefetching** (`PIPENV_PREFETCH_INDEX_MANIFESTS`): New experimental feature that fetches package index manifests concurrently during lock operations, significantly reducing resolution time for large dependency sets\n- **PEP 691 JSON Simple API support**: Native parsing of PEP 691 JSON responses from package indexes alongside existing PEP 503 HTML parsing\n- **Disk-based manifest cache** (`ParsedManifestCache`): JSON-on-disk cache with TTL and atomic writes to avoid redundant index fetches across lock operations\n- **Pluggable resolver backend scaffolding**: Foundation for swappable resolver backends, enabling future customization of dependency resolution strategies\n- **Per-source `verify_ssl` fan-out for prefetcher**: Each index source now independently respects its SSL verification and certificate settings during parallel prefetch\n- **`peek_etag` stale-cache short-circuit**: Resolver can now skip full manifest fetches when ETags indicate cached data is still fresh\n- **`prefetch_index_manifests` setting**: New boolean configuration option to enable/disable the parallel prefetch feature\n- Reject Pipfile entries with unrecognized keys, providing clearer errors on misconfiguration\n\n## Changed\n\n- **Pipfile subsystem extracted from `Project`**: Internal refactor completing Initiative D; `project.build_script` and related attributes now live on `project.pipfile`\n- **Lockfile subsystem extracted from `Project`**: Lockfile state management is now a dedicated subsystem\n- **`unpack_url` / `get_http_url` moved** to `pipenv/utils/unpack.py`; legacy `requirementslib.py` removed\n- Resolver backend selection is now stamped onto resolver requests for improved traceability\n- Prior `Pipfile.lock` pins are fed as pip constraints on warm relock to speed up re-locking (reverted and re-landed with fixes)\n- Resolver subprocess skipped entirely for empty Pipfile categories, reducing unnecessary process overhead\n- Vendor pip updated to **26.2.1**\n\n## Fixed\n\n- **Corrupt lockfile recovery**: Fixed return path when recovering from a corrupt lockfile\n- **Editable VCS extras** now resolve correctly with pip 26.2\n- **netrc login handling**: Quote-only netrc credentials are now treated as empty on Python 3.10+, preventing auth failures\n- **Manifest cache retry on Windows**: `os.replace` is retried on `ERROR_ACCESS_DENIED` with a wall-clock budget, fixing cache write failures on Windows\n- **Missing Pipfile hashes** are now handled gracefully instead of raising an error\n- Plette Pipfile attribute delegation fixed after subsystem refactor\n- `resolver_backend` is now correctly plumbed through the `venv_resolve_deps` call chain\n- Prerelease versions are now allowed as a fallback at final lower bounds\n- Stale `project.build_script` call sites migrated to `project.pipfile.build_script`\n- Test for Pipfile version warning updated after subsystem extraction\n- `test_lockfile_location_is_pipfile_plus_lock` made OS-portable\n- Fixed latest hash and virtualenv guidance in documentation/output\n- Fixed first-party CodeQL reliability errors\n- Deferred pip-internal imports (`InstallCommand`, `unpack`, `Downloader`, network imports) to improve startup performance\n\n## Security\n\n- CodeQL reliability improvements to reduce false negatives in static analysis\n\n---\n\n\ud83d\udd17 **Full Changelog**: https://github.com/pypa/pipenv/compare/v2026.7.1...v2026.8.0\n","reactions":{"total_count":1,"+1":1,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0}}
