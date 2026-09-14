@@ -7,7 +7,7 @@ about:
   latestVersion: "1.0a39"
   latestRelease: "0.65.4"
   latestPrerelease: "1.0a39"
-  collectedAt: 2026-09-13T05:36:54Z
+  collectedAt: 2026-09-14T05:55:17Z
 timeline:
   created: 2017-10-23
   lastCommit: 2026-09-11
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2026-09-11
   lastPrerelease: 2026-09-11
 popularity:
-  star: 11458
+  star: 11460
   watcher: 107
   fork: 902
   release: 173
   contributor: 90
-  pullRequest: 714
+  pullRequest: 716
   issue: 2057
 language:
   Python: 2467899
@@ -34,63 +34,63 @@ language:
 totalBytes: 3079208
 recent:
   last30d:
-    since: 2026-08-14
+    since: 2026-08-15
     release: 2
     mergedPR: 4
-    openPR: 14
+    openPR: 13
     closedIssue: 0
-    openIssue: 6
+    openIssue: 5
     commit: 52
   last60d:
-    since: 2026-07-15
+    since: 2026-07-16
     release: 4
     mergedPR: 7
-    openPR: 26
+    openPR: 25
     closedIssue: 5
     openIssue: 10
     commit: 57
   last90d:
-    since: 2026-06-15
+    since: 2026-06-16
     release: 8
-    mergedPR: 28
-    openPR: 40
-    closedIssue: 25
+    mergedPR: 26
+    openPR: 39
+    closedIssue: 24
     openIssue: 20
-    commit: 230
+    commit: 200
   last180d:
-    since: 2026-03-17
+    since: 2026-03-18
     release: 16
-    mergedPR: 62
-    openPR: 57
-    closedIssue: 72
+    mergedPR: 57
+    openPR: 56
+    closedIssue: 70
     openIssue: 25
-    commit: 513
+    commit: 484
   last360d:
-    since: 2025-09-18
+    since: 2025-09-19
     release: 23
-    mergedPR: 103
-    openPR: 77
+    mergedPR: 102
+    openPR: 75
     closedIssue: 155
     openIssue: 41
     commit: 743
   last720d:
-    since: 2024-09-23
+    since: 2024-09-24
     release: 28
     mergedPR: 111
-    openPR: 83
+    openPR: 81
     closedIssue: 174
     openIssue: 71
     commit: 801
 total:
   release: 173
   mergedPR: 447
-  openPR: 128
+  openPR: 126
   closedIssue: 1465
   openIssue: 592
   commit: 3459
 ---
 path: /home/runner/.x-repo/github.com/simonw/datasette
-collectedAt: 2026-09-13T05:36:58Z
+collectedAt: 2026-09-14T05:55:21Z
 loc:
   Python:
     code: 61529
@@ -349,4 +349,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 13 are checked with a SAST tool'
 ---
-{"id":386701554,"author":{"login":"simonw","id":9599,"node_id":"MDQ6VXNlcjk1OTk=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBm6k_c4XDJjy","tag_name":"0.65.4","target_commitish":"0.65.x","name":"0.65.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-10T23:49:34Z","updated_at":"2026-09-11T00:06:55Z","published_at":"2026-09-11T00:06:55Z","assets":[],"body":"This release includes security fixes for permissions, SQL construction and caching, backported to the stable 0.65.x branch.\r\n\r\nSee [1.0a39](https://docs.datasette.io/en/latest/changelog.html#v1-0-a39) for the full set of security fixes and other improvements in the 1.0 alpha series.\r\n\r\nThe Datasette blog [has more details on these releases](https://datasette.io/blog/2026/september-security-releases/).\r\n\r\nSome of the security fixes include:\r\n\r\n- Table and view permission checks now take SQLite's case-insensitive names into account. See [Controlling access to specific tables and views](https://docs.datasette.io/en/stable/authentication.html#authentication-permissions-table).  \r\n- Table filters using `?_through=` require permission to view the intermediate table.  \r\n- Fixed SQL identifier escaping for primary-key column names from untrusted database schemas, including row lookups and pagination.  \r\n- Full-text search index detection now uses parameterized SQL and treats wildcard characters in table names literally.  \r\n- Private and personalized dynamic responses now use `Cache-Control: private, no-store`. Anonymous dynamic responses vary by `Cookie` and `Authorization`.  \r\n- SQLite extension loading is disabled after extensions supplied using `--load-extension` have been loaded.\r\n\r\n### Other improvements and fixes\r\n\r\n- Backported the non-blocking write task ID fixes from [#2861](https://github.com/simonw/datasette/issues/2861) by [Zain Dana Harper (HarperZ9)](https://github.com/HarperZ9). `execute_write_fn(block=False)` now returns a unique UUID for each call, including when `num_sql_threads=0`."}
+{"id":386701554,"author":{"login":"simonw","id":9599,"node_id":"MDQ6VXNlcjk1OTk=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBm6k_c4XDJjy","tag_name":"0.65.4","target_commitish":"0.65.x","name":"0.65.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-10T23:49:34Z","updated_at":"2026-09-11T00:06:55Z","published_at":"2026-09-11T00:06:55Z","assets":[],"body":"This release includes security fixes for permissions, SQL construction and caching, backported to the stable 0.65.x branch.\r\n\r\nSee [1.0a39](https://docs.datasette.io/en/latest/changelog.html#v1-0-a39) for the full set of security fixes and other improvements in the 1.0 alpha series.\r\n\r\nThe Datasette blog [has more details on these releases](https://datasette.io/blog/2026/september-security-releases/).\r\n\r\nSome of the security fixes include:\r\n\r\n- Table and view permission checks now take SQLite's case-insensitive names into account. See [Controlling access to specific tables and views](https://docs.datasette.io/en/stable/authentication.html#authentication-permissions-table).  \r\n- Table filters using `?_through=` require permission to view the intermediate table.  \r\n- Fixed SQL identifier escaping for primary-key column names from untrusted database schemas, including row lookups and pagination.  \r\n- Full-text search index detection now uses parameterized SQL and treats wildcard characters in table names literally.  \r\n- Private and personalized dynamic responses now use `Cache-Control: private, no-store`. Anonymous dynamic responses vary by `Cookie` and `Authorization`.  \r\n- SQLite extension loading is disabled after extensions supplied using `--load-extension` have been loaded.\r\n\r\n### Other improvements and fixes\r\n\r\n- Backported the non-blocking write task ID fixes from [#2861](https://github.com/simonw/datasette/issues/2861) by [Zain Dana Harper (HarperZ9)](https://github.com/HarperZ9). `execute_write_fn(block=False)` now returns a unique UUID for each call, including when `num_sql_threads=0`.","reactions":{"total_count":1,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":1,"rocket":0,"eyes":0}}

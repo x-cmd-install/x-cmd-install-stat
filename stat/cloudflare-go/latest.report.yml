@@ -7,7 +7,7 @@ about:
   latestVersion: "v7.10.0"
   latestRelease: "v7.10.0"
   latestPrerelease: "v2.0.0-beta.17"
-  collectedAt: 2026-09-13T04:58:47Z
+  collectedAt: 2026-09-14T05:07:29Z
 timeline:
   created: 2015-12-03
   lastCommit: 2026-09-04
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-04
   lastPrerelease: 2024-04-02
 popularity:
-  star: 2084
+  star: 2083
   watcher: 48
   fork: 781
   release: 215
@@ -29,7 +29,7 @@ language:
 totalBytes: 53271932
 recent:
   last30d:
-    since: 2026-08-14
+    since: 2026-08-15
     release: 3
     mergedPR: 4
     openPR: 3
@@ -37,7 +37,7 @@ recent:
     openIssue: 1
     commit: 12
   last60d:
-    since: 2026-07-15
+    since: 2026-07-16
     release: 4
     mergedPR: 5
     openPR: 3
@@ -45,23 +45,23 @@ recent:
     openIssue: 2
     commit: 38
   last90d:
-    since: 2026-06-15
+    since: 2026-06-16
     release: 6
-    mergedPR: 10
+    mergedPR: 8
     openPR: 4
     closedIssue: 0
     openIssue: 3
     commit: 86
   last180d:
-    since: 2026-03-17
+    since: 2026-03-18
     release: 15
-    mergedPR: 66
+    mergedPR: 65
     openPR: 5
     closedIssue: 7
     openIssue: 6
     commit: 394
   last360d:
-    since: 2025-09-18
+    since: 2025-09-19
     release: 23
     mergedPR: 90
     openPR: 6
@@ -69,13 +69,13 @@ recent:
     openIssue: 8
     commit: 1052
   last720d:
-    since: 2024-09-23
-    release: 49
-    mergedPR: 982
+    since: 2024-09-24
+    release: 48
+    mergedPR: 969
     openPR: 6
     closedIssue: 48
     openIssue: 9
-    commit: 3702
+    commit: 3701
 total:
   release: 215
   mergedPR: 3691
@@ -85,7 +85,7 @@ total:
   commit: 6015
 ---
 path: /home/runner/.x-repo/github.com/cloudflare/cloudflare-go
-collectedAt: 2026-09-13T04:59:05Z
+collectedAt: 2026-09-14T05:07:48Z
 loc:
   Go:
     code: 786000
@@ -118,15 +118,23 @@ total:
   blanks: 151409
   files: 2249
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/cloudflare/cloudflare-go
   commit: a45114730bf2f913c5adff8f3ed7bf7534feffb9
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 6
 checks:
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -139,15 +147,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -157,10 +156,11 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/detect-breaking-changes.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/semgrep.yml:13'
       - 'Info: no jobLevel write permissions found'
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -169,17 +169,17 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 7
     reason: dependency not pinned by hash detected -- score normalized to 7

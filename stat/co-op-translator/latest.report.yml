@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.20.1"
   latestRelease: "v0.20.1"
   latestPrerelease: "v0.10.0rc3"
-  collectedAt: 2026-09-13T06:00:10Z
+  collectedAt: 2026-09-14T06:13:13Z
 timeline:
   created: 2024-09-19
   lastCommit: 2026-09-09
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-08-29
   lastPrerelease: 2025-08-25
 popularity:
-  star: 653
+  star: 652
   watcher: 6
   fork: 106
   release: 68
   contributor: 24
   pullRequest: 429
-  issue: 95
+  issue: 96
 language:
   Python: 1101837
   Dockerfile: 2080
@@ -29,63 +29,63 @@ language:
 totalBytes: 1104054
 recent:
   last30d:
-    since: 2026-08-14
+    since: 2026-08-15
     release: 1
     mergedPR: 13
     openPR: 2
     closedIssue: 0
-    openIssue: 1
+    openIssue: 2
     commit: 23
   last60d:
-    since: 2026-07-15
+    since: 2026-07-16
     release: 1
-    mergedPR: 21
+    mergedPR: 20
     openPR: 2
     closedIssue: 1
-    openIssue: 2
+    openIssue: 3
     commit: 26
   last90d:
-    since: 2026-06-15
+    since: 2026-06-16
     release: 5
-    mergedPR: 80
+    mergedPR: 78
     openPR: 2
     closedIssue: 2
-    openIssue: 3
+    openIssue: 4
     commit: 80
   last180d:
-    since: 2026-03-17
-    release: 11
+    since: 2026-03-18
+    release: 10
     mergedPR: 111
     openPR: 2
     closedIssue: 7
-    openIssue: 4
+    openIssue: 5
     commit: 113
   last360d:
-    since: 2025-09-18
+    since: 2025-09-19
     release: 41
     mergedPR: 227
     openPR: 2
     closedIssue: 37
-    openIssue: 7
+    openIssue: 8
     commit: 237
   last720d:
-    since: 2024-09-23
+    since: 2024-09-24
     release: 67
     mergedPR: 396
     openPR: 2
     closedIssue: 75
-    openIssue: 14
-    commit: 441
+    openIssue: 15
+    commit: 437
 total:
   release: 68
   mergedPR: 402
   openPR: 2
   closedIssue: 81
-  openIssue: 14
+  openIssue: 15
   commit: 463
 ---
 path: /home/runner/.x-repo/github.com/Azure/co-op-translator
-collectedAt: 2026-09-13T06:00:22Z
+collectedAt: 2026-09-14T06:13:30Z
 loc:
   Python:
     code: 25508
@@ -138,7 +138,7 @@ total:
   blanks: 46665
   files: 988
 ---
-date: "2026-09-09T12:27:43Z"
+date: "2026-09-14T04:51:52Z"
 repo:
   name: github.com/Azure/co-op-translator
   commit: 49b5110447695d4089816272681590d36bae411f
@@ -150,6 +150,10 @@ checks:
   - name: Code-Review
     score: 1
     reason: Found 2/14 approved changesets -- score normalized to 1
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -171,10 +175,6 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/python-publish.yml:8'
       - 'Info: found token with ''none'' permissions: .github/workflows/scorecard.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
@@ -191,16 +191,15 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: :0'
   - name: Vulnerabilities
     score: 1
     reason: 9 existing vulnerabilities detected
@@ -224,22 +223,28 @@ checks:
       - 'Warn: pipCommand not pinned by hash: Dockerfile:60-61'
       - 'Warn: pipCommand not pinned by hash: .devcontainer/setup.sh:1'
       - 'Warn: pipCommand not pinned by hash: .devcontainer/setup.sh:3'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/ci.yml:30'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/ci.yml:30'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/ci.yml:57'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/ci.yml:30'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/ci.yml:30'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/co-op-review.yml:47'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/docs.yml:42'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/docs.yml:43'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/python-publish.yml:28'
       - 'Info:  21 out of  21 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   7 out of   7 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of  11 pipCommand dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
+      - 'Info:   0 out of  11 pipCommand dependencies pinned'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker-publish.yml:18'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -260,11 +265,6 @@ checks:
     details:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Warn: 29 commits out of 30 are checked with a SAST tool'
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: :0'
   - name: CI-Tests
     score: 10
     reason: 30 out of 30 merged PRs checked by a CI test -- score normalized to 10

@@ -7,7 +7,7 @@ about:
   latestVersion: "1.17.0"
   latestRelease: "1.17.0"
   latestPrerelease: "1.11.0.rc.1"
-  collectedAt: 2026-09-13T06:27:12Z
+  collectedAt: 2026-09-14T06:49:30Z
 timeline:
   created: 2011-08-14
   lastCommit: 2026-07-06
@@ -17,7 +17,7 @@ timeline:
 popularity:
   star: 14830
   watcher: 545
-  fork: 2679
+  fork: 2677
   release: 192
   contributor: 323
   pullRequest: 2209
@@ -31,7 +31,7 @@ language:
 totalBytes: 2505523
 recent:
   last30d:
-    since: 2026-08-14
+    since: 2026-08-15
     release: 0
     mergedPR: 0
     openPR: 0
@@ -39,7 +39,7 @@ recent:
     openIssue: 2
     commit: 0
   last60d:
-    since: 2026-07-15
+    since: 2026-07-16
     release: 0
     mergedPR: 0
     openPR: 0
@@ -47,7 +47,7 @@ recent:
     openIssue: 4
     commit: 0
   last90d:
-    since: 2026-06-15
+    since: 2026-06-16
     release: 1
     mergedPR: 5
     openPR: 0
@@ -55,7 +55,7 @@ recent:
     openIssue: 7
     commit: 25
   last180d:
-    since: 2026-03-17
+    since: 2026-03-18
     release: 1
     mergedPR: 5
     openPR: 2
@@ -63,7 +63,7 @@ recent:
     openIssue: 9
     commit: 25
   last360d:
-    since: 2025-09-18
+    since: 2025-09-19
     release: 1
     mergedPR: 5
     openPR: 3
@@ -71,12 +71,12 @@ recent:
     openIssue: 26
     commit: 25
   last720d:
-    since: 2024-09-23
+    since: 2024-09-24
     release: 4
     mergedPR: 20
     openPR: 9
-    closedIssue: 124
-    openIssue: 153
+    closedIssue: 118
+    openIssue: 152
     commit: 87
 total:
   release: 192
@@ -87,7 +87,7 @@ total:
   commit: 10449
 ---
 path: /home/runner/.x-repo/github.com/CocoaPods/CocoaPods
-collectedAt: 2026-09-13T06:27:21Z
+collectedAt: 2026-09-14T06:49:39Z
 loc:
   Json:
     code: 233894
@@ -160,13 +160,13 @@ total:
   blanks: 36934
   files: 5251
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/CocoaPods/CocoaPods
   commit: b80e113e28a7e23cd6dbc169f0c923f6b48bf7a2
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3
 checks:
   - name: Maintained
@@ -197,6 +197,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -205,11 +210,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 9
     reason: license file detected
@@ -354,6 +354,10 @@ checks:
       - 'Warn: binary detected: spec/fixtures/xcframeworks/StaticLibrary/CoconutLib.xcframework/tvos-arm64_x86_64-simulator/libCoconut.a:1'
       - 'Warn: binary detected: spec/fixtures/xcframeworks/StaticLibrary/CoconutLib.xcframework/watchos-arm64_32_armv7k/libCoconut.a:1'
       - 'Warn: binary detected: spec/fixtures/xcframeworks/StaticLibrary/CoconutLib.xcframework/watchos-arm64_i386_x86_64-simulator/libCoconut.a:1'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Branch-Protection
     score: 3
     reason: branch protection is not maximal on development and all release branches
@@ -363,10 +367,6 @@ checks:
       - 'Warn: branch ''master'' does not require approvers'
       - 'Warn: codeowners review is not required on branch ''master'''
       - 'Warn: no status checks found to merge onto branch ''master'''
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0

@@ -7,7 +7,7 @@ about:
   latestVersion: "2.1.4"
   latestRelease: "2.1.4"
   latestPrerelease: ""
-  collectedAt: 2026-09-13T05:26:14Z
+  collectedAt: 2026-09-14T05:37:12Z
 timeline:
   created: 2015-06-21
   lastCommit: 2026-08-16
@@ -29,7 +29,7 @@ language:
 totalBytes: 7741682
 recent:
   last30d:
-    since: 2026-08-14
+    since: 2026-08-15
     release: 2
     mergedPR: 0
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-15
+    since: 2026-07-16
     release: 2
     mergedPR: 0
     openPR: 0
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 17
   last90d:
-    since: 2026-06-15
+    since: 2026-06-16
     release: 3
     mergedPR: 0
     openPR: 0
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 40
   last180d:
-    since: 2026-03-17
+    since: 2026-03-18
     release: 4
     mergedPR: 2
     openPR: 0
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 132
   last360d:
-    since: 2025-09-18
+    since: 2025-09-19
     release: 6
     mergedPR: 2
     openPR: 0
@@ -69,7 +69,7 @@ recent:
     openIssue: 1
     commit: 189
   last720d:
-    since: 2024-09-23
+    since: 2024-09-24
     release: 17
     mergedPR: 4
     openPR: 0
@@ -85,7 +85,7 @@ total:
   commit: 2823
 ---
 path: /home/runner/.x-repo/github.com/cyring/CoreFreq
-collectedAt: 2026-09-13T05:26:21Z
+collectedAt: 2026-09-14T05:37:19Z
 loc:
   C:
     code: 145076
@@ -133,13 +133,13 @@ total:
   blanks: 25019
   files: 107
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/cyring/CoreFreq
   commit: 4d032cff9ee0ef18d489fb85e38198110564b90d
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.8
 checks:
   - name: Packaging
@@ -147,10 +147,6 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Code-Review
     score: 0
     reason: Found 0/30 approved changesets -- score normalized to 0
@@ -165,15 +161,19 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/build.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: SAST
     score: 0
     reason: no SAST tool detected
     details:
       - 'Warn: no pull requests merged into dev branch'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -207,14 +207,14 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: GNU General Public License v2.0: LICENSE:0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
       - 'Warn: release artifact 2.1.1 not signed: https://api.github.com/repos/cyring/CoreFreq/releases/325760024'
       - 'Warn: release artifact 2.1.1 does not have provenance: https://api.github.com/repos/cyring/CoreFreq/releases/325760024'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
 ---

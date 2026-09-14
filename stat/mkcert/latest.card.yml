@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.4.4"
   latestRelease: "v1.4.4"
   latestPrerelease: ""
-  collectedAt: 2026-09-13T06:19:08Z
+  collectedAt: 2026-09-14T06:47:36Z
 timeline:
   created: 2018-06-25
   lastCommit: 2024-04-18
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2022-04-26
   lastPrerelease: 
 popularity:
-  star: 59583
+  star: 59592
   watcher: 509
-  fork: 3134
+  fork: 3136
   release: 14
   contributor: 40
   pullRequest: 184
@@ -27,7 +27,7 @@ language:
 totalBytes: 41331
 recent:
   last30d:
-    since: 2026-08-14
+    since: 2026-08-15
     release: 0
     mergedPR: 0
     openPR: 1
@@ -35,15 +35,15 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-15
+    since: 2026-07-16
     release: 0
     mergedPR: 0
-    openPR: 3
+    openPR: 2
     closedIssue: 0
     openIssue: 2
     commit: 0
   last90d:
-    since: 2026-06-15
+    since: 2026-06-16
     release: 0
     mergedPR: 0
     openPR: 5
@@ -51,7 +51,7 @@ recent:
     openIssue: 4
     commit: 0
   last180d:
-    since: 2026-03-17
+    since: 2026-03-18
     release: 0
     mergedPR: 0
     openPR: 6
@@ -59,7 +59,7 @@ recent:
     openIssue: 9
     commit: 0
   last360d:
-    since: 2025-09-18
+    since: 2025-09-19
     release: 0
     mergedPR: 0
     openPR: 8
@@ -67,7 +67,7 @@ recent:
     openIssue: 12
     commit: 0
   last720d:
-    since: 2024-09-23
+    since: 2024-09-24
     release: 0
     mergedPR: 0
     openPR: 21
@@ -83,7 +83,7 @@ total:
   commit: 165
 ---
 path: /home/runner/.x-repo/github.com/FiloSottile/mkcert
-collectedAt: 2026-09-13T06:19:08Z
+collectedAt: 2026-09-14T06:47:38Z
 loc:
   Go:
     code: 1136
@@ -101,18 +101,35 @@ total:
   blanks: 240
   files: 8
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/FiloSottile/mkcert
   commit: 1c1dc4ed27ed5936046b6398d39cab4d657a2d8e
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.3
 checks:
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
+  - name: Code-Review
+    score: 3
+    reason: Found 9/30 approved changesets -- score normalized to 3
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -121,19 +138,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 3
-    reason: Found 9/30 approved changesets -- score normalized to 3
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -146,10 +150,6 @@ checks:
       - 'Warn: goCommand not pinned by hash: .github/workflows/test.yml:20'
       - 'Info:   0 out of   5 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 goCommand dependencies pinned'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -165,6 +165,11 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: BSD 3-Clause "New" or "Revised" License: LICENSE:0'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -187,11 +192,6 @@ checks:
       - 'Info: Found linked content: github.com/FiloSottile/.github/SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: github.com/FiloSottile/.github/SECURITY.md:1'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
