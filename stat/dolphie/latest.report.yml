@@ -2,96 +2,96 @@ about:
   description: "Your single pane of glass for real-time analytics into MySQL/MariaDB & ProxySQL"
   license: GPL-3.0
   homepage: https://pypi.org/project/dolphie/
-  head: e5a9c3a
+  head: eafac30
   archived: false
-  latestVersion: "6.16.0"
-  latestRelease: "6.16.0"
+  latestVersion: "6.17.1"
+  latestRelease: "6.17.1"
   latestPrerelease: ""
-  collectedAt: 2026-09-14T05:54:16Z
+  collectedAt: 2026-09-15T05:46:37Z
 timeline:
   created: 2022-09-05
-  lastCommit: 2026-09-11
-  lastVersion: 2026-09-11
-  lastRelease: 2026-09-11
+  lastCommit: 2026-09-15
+  lastVersion: 2026-09-14
+  lastRelease: 2026-09-14
   lastPrerelease: 
 popularity:
   star: 1195
   watcher: 14
   fork: 81
-  release: 79
+  release: 80
   contributor: 11
-  pullRequest: 44
+  pullRequest: 45
   issue: 81
 language:
-  Python: 990205
+  Python: 1059330
   Shell: 13951
   Dockerfile: 240
-totalBytes: 1004396
+totalBytes: 1073521
 recent:
   last30d:
-    since: 2026-08-15
-    release: 1
-    mergedPR: 1
-    openPR: 1
-    closedIssue: 0
-    openIssue: 0
-    commit: 4
-  last60d:
-    since: 2026-07-16
-    release: 1
-    mergedPR: 2
-    openPR: 1
-    closedIssue: 0
-    openIssue: 0
-    commit: 5
-  last90d:
-    since: 2026-06-16
-    release: 1
+    since: 2026-08-16
+    release: 2
     mergedPR: 3
-    openPR: 1
+    openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 5
-  last180d:
-    since: 2026-03-18
+    commit: 7
+  last60d:
+    since: 2026-07-17
+    release: 2
+    mergedPR: 4
+    openPR: 0
+    closedIssue: 0
+    openIssue: 0
+    commit: 8
+  last90d:
+    since: 2026-06-17
     release: 2
     mergedPR: 5
-    openPR: 1
+    openPR: 0
+    closedIssue: 0
+    openIssue: 0
+    commit: 8
+  last180d:
+    since: 2026-03-19
+    release: 3
+    mergedPR: 7
+    openPR: 0
     closedIssue: 1
     openIssue: 0
-    commit: 17
+    commit: 20
   last360d:
-    since: 2025-09-19
-    release: 14
-    mergedPR: 5
-    openPR: 1
+    since: 2025-09-20
+    release: 15
+    mergedPR: 7
+    openPR: 0
     closedIssue: 10
     openIssue: 0
-    commit: 60
+    commit: 63
   last720d:
-    since: 2024-09-24
-    release: 34
-    mergedPR: 19
-    openPR: 1
+    since: 2024-09-25
+    release: 35
+    mergedPR: 21
+    openPR: 0
     closedIssue: 35
     openIssue: 1
-    commit: 138
+    commit: 141
 total:
-  release: 79
-  mergedPR: 40
-  openPR: 1
+  release: 80
+  mergedPR: 42
+  openPR: 0
   closedIssue: 80
   openIssue: 1
-  commit: 386
+  commit: 389
 ---
 path: /home/runner/.x-repo/github.com/charles-001/dolphie
-collectedAt: 2026-09-14T05:54:18Z
+collectedAt: 2026-09-15T05:46:38Z
 loc:
   Python:
-    code: 19917
-    comments: 913
-    blanks: 3601
-    files: 84
+    code: 21145
+    comments: 1010
+    blanks: 3823
+    files: 86
   Yaml:
     code: 943
     comments: 15
@@ -119,15 +119,15 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 302
-    blanks: 91
+    comments: 325
+    blanks: 103
     files: 2
 total:
-  code: 21414
-  comments: 1303
-  blanks: 3846
-  files: 105
+  code: 22642
+  comments: 1423
+  blanks: 4080
+  files: 107
 ---
 
 ---
-{"id":386719365,"author":{"login":"charles-001","id":13244625,"node_id":"MDQ6VXNlcjEzMjQ0NjI1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOH8BJyM4XDN6F","tag_name":"6.16.0","target_commitish":"main","name":"6.16.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-11T01:00:57Z","updated_at":"2026-09-11T01:01:52Z","published_at":"2026-09-11T01:01:52Z","assets":[],"body":"## Breaking Changes\n\n- **Python 3.10 or newer is required**. Python 3.9 reached end of life in October 2025. `pip install dolphie` on 3.9 now resolves to 6.15.0.\n\n## New Features\n\n- **Start with filters applied**: A new `--filters` flag, the `filters` config option, and a `filters` field in credential profiles apply thread filters at startup in the format `name=value`, for example `--filters user=!azure_superuser,time=5`. Supports `user`, `host`, `db`, `hostgroup`, `time`, and `query` (#124, thanks @ben-morin).\n- **Negated filters**: Prefix a filter value with `!` to exclude what it matches, in the filter modal (`f`) and in `--filters`. The modal now shows the filters currently in effect (#124).\n- **Graph dashboard rebuilt**: Graphs come from one validated registry with explicit layouts, availability rules, and per-graph renderers. Series controls show the live value with a color swatch and support keyboard navigation. Series visibility is per host and survives a metrics reset (#123).\n- **Threshold and error annotations on graphs**: The checkpoint graph labels its warning and critical thresholds, the redo log bar shows the hourly rate against the configured log size, and a graph that fails to render shows `Graph unavailable` instead of stopping the dashboard (#123).\n\n## Replay\n\n- **Smaller replay files**: New recordings use a raw-content zstd dictionary and 16 KB SQLite pages. Files are about a third of their previous size. Existing files still play back.\n- **Faster seeking on large files**: The metric window query on seek is bounded by the target frame, 213 ms to 0.23 ms on a 208k-row daemon file.\n- **Hold `[` or `]` to scrub**: While the key is held only the replay position updates. The frame renders when the key rests. The step doubles as the key is held and caps at 1% of the file, so a scrub across a day-long recording takes a few seconds.\n- **Playback is read-only**: Playback opens the file with `mode=ro` and never runs DDL, `VACUUM`, `chmod`, or a retention purge, so a daemon can keep writing the file that is being watched.\n- **Unreadable rows are skipped**: A corrupt or truncated row is skipped with a notification instead of ending playback. A frame that fails to render pauses the replay instead of crashing.\n- **Version warning**: Playing a file recorded by a newer Dolphie shows a warning, and the daemon records its version in the file metadata.\n\n## Bug Fixes\n\n- **`AttributeError: 'list' object has no attribute 'get'` on playback**: Payload fields are coerced to the shapes the panels expect, so a file recorded by a different Dolphie version loads instead of crashing.\n- **`NoMatches` on exit**: A worker finishing during shutdown no longer queries widgets that are already gone.\n- **Replay seek with a stepped-back clock**: The metric window ignores rows written after the system clock moved backwards.\n- **Metrics are thread-safe**: Metric history is snapshotted atomically between the poll worker and the renderer, and a counter reset after a missing sample sets a new baseline instead of emitting a negative rate (#123).\n\n## Packaging\n\n- Dependency management moved from Poetry to uv and Hatchling. `uv sync --locked --all-groups` sets up a development environment (#123).\n- The wheel and sdist ship the `dolphie` package only.\n\n## Testing\n\n- The real app now runs in CI against MySQL 5.7, 8.0, 8.4, 9.7, Percona 8.4, MariaDB 10.11, 11.4, 11.8, 12.3, and ProxySQL 3.0, plus MariaDB replication, Group Replication, Galera, multi-source, and InnoDB ClusterSet topologies, and SVG snapshots of every panel from committed daemon recordings.\n\n## Dependency Updates\n\n| Package | Old | New | Note |\n|-----------|---------|---------|------|\n| textual | 8.2.7 | 8.2.8 | |\n| orjson | 3.11.5 | 3.12.0 | No longer held back, Python 3.10 floor |\n| requests | 2.32.5 | 2.34.2 | No longer held back, Python 3.10 floor |\n| sqlparse | 0.5.5 | 0.6.0 | |\n| packaging | 26.2 | 26.3 | |\n| textual-plotext | | 1.0.1 | New, replaces the vendored plotext widget |","mentions_count":1}
+{"id":388710580,"author":{"login":"charles-001","id":13244625,"node_id":"MDQ6VXNlcjEzMjQ0NjI1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOH8BJyM4XK0C0","tag_name":"6.17.1","target_commitish":"main","name":"6.17.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-15T01:35:05Z","updated_at":"2026-09-15T01:35:33Z","published_at":"2026-09-14T21:01:09Z","assets":[],"body":"## New Features\n\n- **Workload and Throughput graphs**: Dolphie now fetches the connection, slow query, select, sort, InnoDB row, network, InnoDB I/O, row lock, deadlock, and change buffer counters every poll and graphs them in new Workload and Throughput tabs. The Locks tab always shows, with row lock waits, average wait time, and lock failures, and the Disk I/O tab gains an InnoDB operations graph.\n- **Graph titles and controls**: Each graph is titled in a shared tab and its series controls sit in the graph's own cell.\n- **Data directory usage**: System utilization records `Datadir_Total`, `Datadir_Used`, and `Datadir_Mount`, read once per data directory at its mount point. Usage is left out when the data directory is not on the host Dolphie runs on.\n\n## Replay\n\n- **Row summaries** (`--replay-summary`, `replay_summary` in the config): The daemon stores a compact summary next to each row: every metric's latest value, status values, system utilization, lock states, replication state, and the age of the oldest thread. Dolphie rebuilds the graph window from summaries on a backward seek, and other tools draw timelines from `COALESCE(summary, data)` without decoding whole rows. About a kilobyte per row.\n- **Replay file layout documented**: The README now describes the SQLite tables, the compression dictionary, the summary contract, and the rules for reading a live file from another tool. A test keeps the README and the `SUMMARY_*` constants in step.\n- **WAL mode**: The daemon writes its file in WAL mode with `synchronous=NORMAL`: one fsync per checkpoint instead of four per poll, and a reader inside a query never blocks the daemon's commit. The WAL is checkpointed every 4 MB and truncated after each retention purge. Past a 64 MB WAL that a pinned reader keeps from checkpointing, the daemon pauses recording until the reader lets go, so disk use is bounded by retention plus the cap.\n- **Clean stops**: The daemon closes the replay file on SIGTERM and waits for a poll in flight, so `systemctl stop` is a clean stop. A stopped daemon's file is switched back to rollback-journal mode, so it opens read-only with no `-shm` from any directory and any SQLite version, including Jammy's 3.37.2. The daemon warns once when it recovers a `-wal` from an unclean stop and when the filesystem refuses WAL mode.\n- **UTC row timestamps**: Rows are stamped in UTC, so a file reads the same on any host and a DST change never steps the timeline back an hour. Each row also records `replay_polling_interval`, the seconds since the previous poll, so a reader can take its own rates. Files written before 6.17 hold the host's local time.\n- **Smaller rows**: Rows compress at zstd level 9, 7% smaller than before, and summaries join the prefix dictionary, which makes them 15% smaller again.\n- **Schema rotation keeps its sidecars straight**: The old file is closed before a schema change renames it, so its WAL sidecars do not end up under the new file's name.\n\n## Bug Fixes\n\n- **Replay file picker**: Load a Replay File lists only SQLite databases, so the `-wal` and `-shm` a recording daemon keeps beside `daemon.db` stay out of the list. A file the user cannot read is skipped instead of failing on open.\n- **Rate baseline after a failed poll**: The per-second rate baseline moves only after a poll that reached the metrics, so a poll that failed no longer produces a rate spike on the next one.\n- **Quieter daemon log**: The retention purge and the immutable-open fallback no longer log at INFO on every run.\n\n## Testing\n\n- Daemon replay integration tests cover WAL recovery, the pinned-reader cap, the SIGTERM close, and the summary column. Playback tests hold a key in a stalled CI loop without turning it into taps or a mid-scrub render. The snapshot report is uploaded when panel snapshots fail.\n\n## Dependency Updates\n\nNo dependency changes in this release.\n\n"}

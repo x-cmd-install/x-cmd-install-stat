@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.13.0"
   latestRelease: "v1.13.0"
   latestPrerelease: "v1.6.0-beta.1"
-  collectedAt: 2026-09-14T04:58:30Z
+  collectedAt: 2026-09-15T05:02:32Z
 timeline:
   created: 2025-08-05
   lastCommit: 2026-09-09
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-09-09
   lastPrerelease: 2026-07-08
 popularity:
-  star: 68164
+  star: 68295
   watcher: 282
-  fork: 4687
+  fork: 4693
   release: 48
   contributor: 114
   pullRequest: 999
-  issue: 662
+  issue: 665
 language:
   TypeScript: 4305188
   JavaScript: 41329
@@ -31,63 +31,63 @@ language:
 totalBytes: 4355433
 recent:
   last30d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 4
     mergedPR: 42
     openPR: 72
-    closedIssue: 17
-    openIssue: 57
+    closedIssue: 15
+    openIssue: 60
     commit: 48
   last60d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 7
-    mergedPR: 165
+    mergedPR: 164
     openPR: 81
-    closedIssue: 62
-    openIssue: 74
+    closedIssue: 60
+    openIssue: 77
     commit: 178
   last90d:
-    since: 2026-06-16
+    since: 2026-06-17
     release: 10
     mergedPR: 216
     openPR: 96
     closedIssue: 108
-    openIssue: 82
+    openIssue: 84
     commit: 241
   last180d:
-    since: 2026-03-18
+    since: 2026-03-19
     release: 14
     mergedPR: 299
     openPR: 128
-    closedIssue: 233
-    openIssue: 101
+    closedIssue: 229
+    openIssue: 104
     commit: 303
   last360d:
-    since: 2025-09-19
+    since: 2025-09-20
     release: 45
     mergedPR: 564
     openPR: 142
     closedIssue: 521
-    openIssue: 141
+    openIssue: 144
     commit: 561
   last720d:
-    since: 2024-09-24
+    since: 2024-09-25
     release: 48
     mergedPR: 626
     openPR: 142
     closedIssue: 521
-    openIssue: 141
+    openIssue: 144
     commit: 843
 total:
   release: 48
   mergedPR: 626
   openPR: 142
   closedIssue: 521
-  openIssue: 141
+  openIssue: 144
   commit: 843
 ---
 path: /home/runner/.x-repo/github.com/Fission-AI/OpenSpec
-collectedAt: 2026-09-14T04:58:33Z
+collectedAt: 2026-09-15T05:02:34Z
 loc:
   TypeScript:
     code: 90593
@@ -147,4 +147,4 @@ total:
 ---
 
 ---
-{"id":385849012,"author":{"login":"clay-good","id":237345393,"node_id":"U_kgDODiWacQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOPYoUTM4W_5a0","tag_name":"v1.13.0","target_commitish":"main","name":"v1.13.0 - Apply warnings, safer archives","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-09T20:59:22Z","updated_at":"2026-09-09T21:10:23Z","published_at":"2026-09-09T21:10:23Z","assets":[],"body":"## What's New in v1.13.0\n\nArchive and the delta parser stop quietly changing or dropping what you wrote, and apply now tells you when a change has no specs.\n\n### New\n\n- **Apply flags a change with no delta specs** - `openspec instructions apply` used to report a change as ready whenever its tasks existed, even with no spec deltas at all, which is the state `openspec validate` rejects. It now warns in both text and `--json`, and names both ways out: write the specs, or declare `skip_specs: true`.\n\n### Improved\n\n- **Explore finds your existing specs** - Generated guidance never named `openspec list --specs`, so an agent asked to read the current specs enumerated in-flight changes instead and reported the step done against the wrong thing. Explore now lists the spec inventory beside the change list, and reads a capability with the store-aware command.\n- **Init and update name the workflows your profile left out** - A `/opsx:` command that was never installed used to read as a broken setup. Both commands now say which workflows are missing and how to add them.\n- **Propose reads project context before planning** - Context is loaded from the selected project or store root before any planning decision. In a directory with no OpenSpec root, propose stops without writing and offers to initialize rather than creating one silently.\n\n### Fixed\n\n- **Archive no longer edits your fenced code** - A requirement documenting a sample with two or more blank lines in a row had that sample rewritten on every archive. Blank-line tidying is now fence-aware, which matters for YAML, Python, and expected-output fixtures.\n- **Removals and renames written with `*` or `+` now take effect** - CommonMark allows all three bullet markers, but only `-` was read. A removal or rename written the other way matched nothing: validate passed, archive exited 0 reporting success, and the requirement stayed exactly as it was.\n- **Every delta section applies, not just one copy** - A file with two `## ADDED Requirements` sections silently kept one of them, so archive applied less than was written and moved the change to the archive anyway. You do not have to repeat a header deliberately to hit this: a delta documenting OpenSpec's own syntax inside a fenced example produces the duplicate on its own.\n- **Capabilities whose bullets wrap can be retired again** - `retire_capabilities` refused any spec whose scenario bullets ran onto a second line, which is most of them in a repo that wraps prose at a column limit. Specs bulleted with `+` are covered too.\n- **Update repairs damaged command files** - `openspec update` decided a tool was current from its skill files alone, so a hand-edited or truncated command file left it printing \"All 1 tool(s) up to date\" and repairing nothing. It now compares command-file content as well.\n\n## New Contributors\n\n* @dwin-gharibi made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1800\n\n**Full Changelog**: https://github.com/Fission-AI/OpenSpec/compare/v1.12.0...v1.13.0\n","reactions":{"total_count":19,"+1":5,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":9,"rocket":5,"eyes":0},"mentions_count":1}
+{"id":385849012,"author":{"login":"clay-good","id":237345393,"node_id":"U_kgDODiWacQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOPYoUTM4W_5a0","tag_name":"v1.13.0","target_commitish":"main","name":"v1.13.0 - Apply warnings, safer archives","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-09T20:59:22Z","updated_at":"2026-09-09T21:10:23Z","published_at":"2026-09-09T21:10:23Z","assets":[],"body":"## What's New in v1.13.0\n\nArchive and the delta parser stop quietly changing or dropping what you wrote, and apply now tells you when a change has no specs.\n\n### New\n\n- **Apply flags a change with no delta specs** - `openspec instructions apply` used to report a change as ready whenever its tasks existed, even with no spec deltas at all, which is the state `openspec validate` rejects. It now warns in both text and `--json`, and names both ways out: write the specs, or declare `skip_specs: true`.\n\n### Improved\n\n- **Explore finds your existing specs** - Generated guidance never named `openspec list --specs`, so an agent asked to read the current specs enumerated in-flight changes instead and reported the step done against the wrong thing. Explore now lists the spec inventory beside the change list, and reads a capability with the store-aware command.\n- **Init and update name the workflows your profile left out** - A `/opsx:` command that was never installed used to read as a broken setup. Both commands now say which workflows are missing and how to add them.\n- **Propose reads project context before planning** - Context is loaded from the selected project or store root before any planning decision. In a directory with no OpenSpec root, propose stops without writing and offers to initialize rather than creating one silently.\n\n### Fixed\n\n- **Archive no longer edits your fenced code** - A requirement documenting a sample with two or more blank lines in a row had that sample rewritten on every archive. Blank-line tidying is now fence-aware, which matters for YAML, Python, and expected-output fixtures.\n- **Removals and renames written with `*` or `+` now take effect** - CommonMark allows all three bullet markers, but only `-` was read. A removal or rename written the other way matched nothing: validate passed, archive exited 0 reporting success, and the requirement stayed exactly as it was.\n- **Every delta section applies, not just one copy** - A file with two `## ADDED Requirements` sections silently kept one of them, so archive applied less than was written and moved the change to the archive anyway. You do not have to repeat a header deliberately to hit this: a delta documenting OpenSpec's own syntax inside a fenced example produces the duplicate on its own.\n- **Capabilities whose bullets wrap can be retired again** - `retire_capabilities` refused any spec whose scenario bullets ran onto a second line, which is most of them in a repo that wraps prose at a column limit. Specs bulleted with `+` are covered too.\n- **Update repairs damaged command files** - `openspec update` decided a tool was current from its skill files alone, so a hand-edited or truncated command file left it printing \"All 1 tool(s) up to date\" and repairing nothing. It now compares command-file content as well.\n\n## New Contributors\n\n* @dwin-gharibi made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1800\n\n**Full Changelog**: https://github.com/Fission-AI/OpenSpec/compare/v1.12.0...v1.13.0\n","reactions":{"total_count":20,"+1":5,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":10,"rocket":5,"eyes":0},"mentions_count":1}

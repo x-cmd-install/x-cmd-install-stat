@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.0.26"
   latestRelease: "v2.0.26"
   latestPrerelease: "v2.0.0.rc.3"
-  collectedAt: 2026-09-14T04:45:35Z
+  collectedAt: 2026-09-15T04:47:33Z
 timeline:
   created: 2012-06-01
   lastCommit: 2026-09-01
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2025-10-24
   lastPrerelease: 2019-03-23
 popularity:
-  star: 5213
+  star: 5214
   watcher: 114
-  fork: 841
+  fork: 842
   release: 54
   contributor: 220
   pullRequest: 1847
@@ -31,7 +31,7 @@ language:
 totalBytes: 2257950
 recent:
   last30d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 0
     mergedPR: 1
     openPR: 1
@@ -39,7 +39,7 @@ recent:
     openIssue: 0
     commit: 1
   last60d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 0
     mergedPR: 1
     openPR: 2
@@ -47,7 +47,7 @@ recent:
     openIssue: 1
     commit: 2
   last90d:
-    since: 2026-06-16
+    since: 2026-06-17
     release: 0
     mergedPR: 1
     openPR: 6
@@ -55,7 +55,7 @@ recent:
     openIssue: 5
     commit: 2
   last180d:
-    since: 2026-03-18
+    since: 2026-03-19
     release: 0
     mergedPR: 3
     openPR: 11
@@ -63,7 +63,7 @@ recent:
     openIssue: 6
     commit: 10
   last360d:
-    since: 2025-09-19
+    since: 2025-09-20
     release: 3
     mergedPR: 30
     openPR: 22
@@ -71,12 +71,12 @@ recent:
     openIssue: 20
     commit: 107
   last720d:
-    since: 2024-09-24
+    since: 2024-09-25
     release: 3
     mergedPR: 39
     openPR: 28
     closedIssue: 72
-    openIssue: 27
+    openIssue: 26
     commit: 128
 total:
   release: 54
@@ -87,7 +87,7 @@ total:
   commit: 5804
 ---
 path: /home/runner/.x-repo/github.com/asciidoctor/asciidoctor
-collectedAt: 2026-09-14T04:45:41Z
+collectedAt: 2026-09-15T04:47:38Z
 loc:
   Ruby:
     code: 47912
@@ -185,15 +185,19 @@ total:
   blanks: 11692
   files: 322
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/asciidoctor/asciidoctor
   commit: 30fb8cd5f7145c57274b04524ceaa99812f830e0
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.7
 checks:
+  - name: Code-Review
+    score: 1
+    reason: Found 4/30 approved changesets -- score normalized to 1
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -201,10 +205,6 @@ checks:
   - name: Maintained
     score: 7
     reason: 2 commit(s) and 7 issue activity found in the last 90 days -- score normalized to 7
-    details: null
-  - name: Code-Review
-    score: 1
-    reason: Found 4/30 approved changesets -- score normalized to 1
     details: null
   - name: Token-Permissions
     score: 0
@@ -259,10 +259,11 @@ checks:
     score: -1
     reason: no releases found
     details: null
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 10 are checked with a SAST tool'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -271,9 +272,8 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 10 are checked with a SAST tool'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
 ---

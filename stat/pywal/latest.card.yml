@@ -7,7 +7,7 @@ about:
   latestVersion: "3.3.0"
   latestRelease: "3.3.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-14T03:42:32Z
+  collectedAt: 2026-09-15T03:43:11Z
 timeline:
   created: 2017-06-16
   lastCommit: 2021-09-09
@@ -35,7 +35,7 @@ language:
 totalBytes: 72704
 recent:
   last30d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 0
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-16
+    since: 2026-06-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-18
+    since: 2026-03-19
     release: 0
     mergedPR: 0
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-19
+    since: 2025-09-20
     release: 0
     mergedPR: 0
     openPR: 0
@@ -75,7 +75,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-09-24
+    since: 2024-09-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -91,7 +91,7 @@ total:
   commit: 1086
 ---
 path: /home/runner/.x-repo/github.com/dylanaraps/pywal
-collectedAt: 2026-09-14T03:42:33Z
+collectedAt: 2026-09-15T03:43:12Z
 loc:
   Python:
     code: 1599
@@ -169,13 +169,13 @@ total:
   blanks: 793
   files: 309
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/dylanaraps/pywal
   commit: 236aa48e741ff8d65c4c3826db2813bf2ee6f352
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.2
 checks:
   - name: Packaging
@@ -183,22 +183,26 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
+  - name: Token-Permissions
     score: -1
-    reason: no workflows found
-    details: null
-  - name: Code-Review
-    score: 7
-    reason: Found 12/17 approved changesets -- score normalized to 7
+    reason: No tokens found
     details: null
   - name: Maintained
     score: 0
     reason: project is archived
     details:
       - 'Warn: Repository is archived.'
-  - name: Token-Permissions
+  - name: Code-Review
+    score: 7
+    reason: Found 12/17 approved changesets -- score normalized to 7
+    details: null
+  - name: Dangerous-Workflow
     score: -1
-    reason: No tokens found
+    reason: no workflows found
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Pinned-Dependencies
     score: -1
@@ -206,14 +210,15 @@ checks:
     details:
       - 'Info: Possibly incomplete results: error parsing shell code: invalid parameter name: pywal/templates/colors-tty.sh:0'
       - 'Info: Possibly incomplete results: error parsing shell code: invalid parameter name: pywal/templates/colors.sh:0'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -222,27 +227,22 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE.md:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE.md:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 8
     reason: 1 out of the last 1 releases have a total of 1 signed artifacts.
     details:
       - 'Info: signed release artifact: 3.3.0.tar.gz.asc: https://github.com/dylanaraps/pywal/releases/tag/3.3.0'
       - 'Warn: release artifact 3.3.0 does not have provenance: https://api.github.com/repos/dylanaraps/pywal/releases/15081039'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

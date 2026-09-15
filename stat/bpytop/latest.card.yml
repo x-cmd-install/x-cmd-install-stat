@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-09-14T06:44:18Z
+  collectedAt: 2026-09-15T06:40:04Z
 timeline:
   created: 2020-07-01
   lastCommit: 2025-06-01
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 
   lastPrerelease: 
 popularity:
-  star: 10931
+  star: 10930
   watcher: 154
   fork: 423
   release: 0
@@ -28,7 +28,7 @@ language:
 totalBytes: 222624
 recent:
   last30d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-16
+    since: 2026-06-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-18
+    since: 2026-03-19
     release: 0
     mergedPR: 0
     openPR: 1
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-19
+    since: 2025-09-20
     release: 0
     mergedPR: 0
     openPR: 1
@@ -68,7 +68,7 @@ recent:
     openIssue: 2
     commit: 0
   last720d:
-    since: 2024-09-24
+    since: 2024-09-25
     release: 0
     mergedPR: 1
     openPR: 1
@@ -84,7 +84,7 @@ total:
   commit: 409
 ---
 path: /home/runner/.x-repo/github.com/aristocratos/bpytop
-collectedAt: 2026-09-14T06:44:20Z
+collectedAt: 2026-09-15T06:40:05Z
 loc:
   Python:
     code: 5286
@@ -117,18 +117,28 @@ total:
   blanks: 886
   files: 12
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/aristocratos/bpytop
   commit: 2034232931324f7b277b9b970a36277297a9ed43
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.4
 checks:
   - name: Code-Review
     score: 3
     reason: Found 9/24 approved changesets -- score normalized to 3
+    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/testing.yml:1'
+      - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Packaging
     score: -1
@@ -139,16 +149,6 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/testing.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
@@ -167,6 +167,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -175,11 +180,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected

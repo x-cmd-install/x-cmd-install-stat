@@ -2,15 +2,15 @@ about:
   description: "Mirror of Apache Subversion"
   license: Apache-2.0
   homepage: 
-  head: 37ce946
+  head: 41f5692
   archived: false
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-09-14T05:17:04Z
+  collectedAt: 2026-09-15T05:24:39Z
 timeline:
   created: 2009-12-31
-  lastCommit: 2026-09-11
+  lastCommit: 2026-09-14
   lastVersion: 
   lastRelease: 
   lastPrerelease: 
@@ -34,7 +34,7 @@ language:
   M4: 261411
   Shell: 226820
   SWIG: 192905
-  Makefile: 156637
+  Makefile: 159557
   CMake: 75837
   Roff: 54093
   XSLT: 28556
@@ -43,66 +43,66 @@ language:
   Batchfile: 5095
   HolyC: 3705
   CSS: 3297
-totalBytes: 39622013
+totalBytes: 39624933
 recent:
   last30d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 0
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 6
+    commit: 13
   last60d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 0
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 26
+    commit: 33
   last90d:
-    since: 2026-06-16
+    since: 2026-06-17
     release: 0
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 63
+    commit: 70
   last180d:
-    since: 2026-03-18
+    since: 2026-03-19
     release: 0
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 243
+    commit: 250
   last360d:
-    since: 2025-09-19
+    since: 2025-09-20
     release: 0
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 378
+    commit: 385
   last720d:
-    since: 2024-09-24
+    since: 2024-09-25
     release: 0
     mergedPR: 0
     openPR: 3
     closedIssue: 0
     openIssue: 0
-    commit: 906
+    commit: 914
 total:
   release: 0
   mergedPR: 0
   openPR: 3
   closedIssue: 0
   openIssue: 0
-  commit: 61627
+  commit: 61638
 ---
 path: /home/runner/.x-repo/github.com/apache/subversion
-collectedAt: 2026-09-14T05:17:53Z
+collectedAt: 2026-09-15T05:25:32Z
 loc:
   C:
     code: 426664
@@ -265,22 +265,18 @@ total:
   blanks: 148072
   files: 1852
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/apache/subversion
-  commit: 8ab76ba4472b5cef0314f6893376c979b1c75651
+  commit: 41f5692c7148a01cf577ac52f20a790698224bbb
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.5
 checks:
   - name: Code-Review
     score: 0
     reason: Found 0/30 approved changesets -- score normalized to 0
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
     details: null
   - name: Packaging
     score: -1
@@ -290,6 +286,10 @@ checks:
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -312,29 +312,16 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: github.com/apache/.github/.github/SECURITY.md:1'
-      - 'Info: Found linked content: github.com/apache/.github/.github/SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/apache/.github/.github/SECURITY.md:1'
-      - 'Info: Found text in security policy: github.com/apache/.github/.github/SECURITY.md:1'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''trunk'''
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -351,8 +338,21 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cmake.yml:250: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/subversion/cmake.yml/trunk?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cmake.yml:257: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/subversion/cmake.yml/trunk?enable=pin'
       - 'Info:   0 out of   7 GitHub-owned GitHubAction dependencies pinned'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''trunk'''
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: github.com/apache/.github/.github/SECURITY.md:1'
+      - 'Info: Found linked content: github.com/apache/.github/.github/SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/apache/.github/.github/SECURITY.md:1'
+      - 'Info: Found text in security policy: github.com/apache/.github/.github/SECURITY.md:1'

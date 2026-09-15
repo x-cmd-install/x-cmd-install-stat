@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.25.0"
   latestRelease: "v0.25.0"
   latestPrerelease: "v0.5.0"
-  collectedAt: 2026-09-14T05:47:11Z
+  collectedAt: 2026-09-15T05:48:11Z
 timeline:
   created: 2019-08-16
   lastCommit: 2021-11-17
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2021-08-24
   lastPrerelease: 2019-10-11
 popularity:
-  star: 19350
+  star: 19351
   watcher: 76
-  fork: 580
+  fork: 579
   release: 32
   contributor: 90
   pullRequest: 597
@@ -28,7 +28,7 @@ language:
 totalBytes: 363090
 recent:
   last30d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-16
+    since: 2026-06-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-18
+    since: 2026-03-19
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-19
+    since: 2025-09-20
     release: 0
     mergedPR: 0
     openPR: 1
@@ -68,7 +68,7 @@ recent:
     openIssue: 1
     commit: 0
   last720d:
-    since: 2024-09-24
+    since: 2024-09-25
     release: 0
     mergedPR: 0
     openPR: 2
@@ -84,7 +84,7 @@ total:
   commit: 1272
 ---
 path: /home/runner/.x-repo/github.com/Rigellute/spotify-tui
-collectedAt: 2026-09-14T05:47:15Z
+collectedAt: 2026-09-15T05:48:11Z
 loc:
   Rust:
     code: 10828
@@ -117,13 +117,13 @@ total:
   blanks: 1195
   files: 52
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/Rigellute/spotify-tui
   commit: c4dcf6b9fd8318017acbdd7ec005955e26cf2794
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 1.8
 checks:
   - name: Maintained
@@ -143,6 +143,11 @@ checks:
     score: 4
     reason: Found 6/14 approved changesets -- score normalized to 4
     details: null
+  - name: Dangerous-Workflow
+    score: 0
+    reason: dangerous workflow patterns detected
+    details:
+      - 'Warn: script injection with untrusted input '' toJson(github.event) '': .github/workflows/ci.yml:16'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -150,11 +155,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/cd.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 0
-    reason: dangerous workflow patterns detected
-    details:
-      - 'Warn: script injection with untrusted input '' toJson(github.event) '': .github/workflows/ci.yml:16'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -206,6 +206,10 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -220,10 +224,6 @@ checks:
       - 'Warn: release artifact v0.23.0 does not have provenance: https://api.github.com/repos/Rigellute/spotify-tui/releases/36039365'
       - 'Warn: release artifact v0.22.0 does not have provenance: https://api.github.com/repos/Rigellute/spotify-tui/releases/32158582'
       - 'Warn: release artifact v0.21.0 does not have provenance: https://api.github.com/repos/Rigellute/spotify-tui/releases/28905849'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

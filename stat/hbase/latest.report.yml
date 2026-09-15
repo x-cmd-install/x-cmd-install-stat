@@ -2,15 +2,15 @@ about:
   description: "Apache HBase"
   license: Apache-2.0
   homepage: https://hbase.apache.org/
-  head: 90c4d77
+  head: db5e47d
   archived: false
   latestVersion: "rel/3.0.0"
   latestRelease: "rel/3.0.0"
   latestPrerelease: "rel/3.0.0-beta-2"
-  collectedAt: 2026-09-14T05:59:43Z
+  collectedAt: 2026-09-15T05:58:12Z
 timeline:
   created: 2014-05-23
-  lastCommit: 2026-09-12
+  lastCommit: 2026-09-14
   lastVersion: 2026-08-06
   lastRelease: 2026-08-06
   lastPrerelease: 2026-07-17
@@ -20,7 +20,7 @@ popularity:
   fork: 3398
   release: 54
   contributor: 520
-  pullRequest: 8644
+  pullRequest: 8645
   issue: 0
 language:
   Java: 46255482
@@ -47,63 +47,63 @@ language:
 totalBytes: 53397748
 recent:
   last30d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 0
-    mergedPR: 57
-    openPR: 34
+    mergedPR: 59
+    openPR: 33
     closedIssue: 0
     openIssue: 0
-    commit: 33
+    commit: 34
   last60d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 2
     mergedPR: 102
-    openPR: 45
+    openPR: 43
     closedIssue: 0
     openIssue: 0
-    commit: 62
+    commit: 63
   last90d:
-    since: 2026-06-16
+    since: 2026-06-17
     release: 2
-    mergedPR: 196
-    openPR: 53
+    mergedPR: 191
+    openPR: 52
     closedIssue: 0
     openIssue: 0
-    commit: 113
+    commit: 114
   last180d:
-    since: 2026-03-18
+    since: 2026-03-19
     release: 4
-    mergedPR: 564
-    openPR: 77
+    mergedPR: 565
+    openPR: 76
     closedIssue: 0
     openIssue: 0
-    commit: 289
+    commit: 290
   last360d:
-    since: 2025-09-19
+    since: 2025-09-20
     release: 7
     mergedPR: 1091
-    openPR: 117
+    openPR: 116
     closedIssue: 0
     openIssue: 0
-    commit: 564
+    commit: 565
   last720d:
-    since: 2024-09-24
+    since: 2024-09-25
     release: 11
-    mergedPR: 1974
-    openPR: 186
+    mergedPR: 1964
+    openPR: 185
     closedIssue: 0
     openIssue: 0
     commit: 991
 total:
   release: 54
-  mergedPR: 6832
-  openPR: 392
+  mergedPR: 6834
+  openPR: 391
   closedIssue: 0
   openIssue: 0
-  commit: 21277
+  commit: 21278
 ---
 path: /home/runner/.x-repo/github.com/apache/hbase
-collectedAt: 2026-09-14T06:01:03Z
+collectedAt: 2026-09-15T05:59:10Z
 loc:
   Java:
     code: 925171
@@ -271,13 +271,13 @@ total:
   blanks: 169020
   files: 6169
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/apache/hbase
-  commit: 97ba2dfb0dde8213026b751036d1e0eac1905b6d
+  commit: db5e47dae64066b4cdc7d605c1b59ce15491ef3c
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 6.9
 checks:
   - name: Packaging
@@ -285,10 +285,6 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Code-Review
     score: 9
     reason: Found 27/28 approved changesets -- score normalized to 9
@@ -309,14 +305,18 @@ checks:
     score: 9
     reason: detected GitHub workflow tokens with excessive permissions
     details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/yetus-general-check.yml:149'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/yetus-general-check.yml:33'
       - 'Warn: jobLevel ''statuses'' permission set to ''write'': .github/workflows/yetus-general-check.yml:34'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/yetus-general-check.yml:149'
       - 'Info: found token with ''none'' permissions: .github/workflows/yetus-general-check.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/yetus-jdk17-hadoop3-compile-check.yml:27'
       - 'Warn: topLevel ''statuses'' permission set to ''write'': .github/workflows/yetus-jdk17-hadoop3-compile-check.yml:28'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/yetus-jdk17-hadoop3-unit-check.yml:27'
       - 'Warn: topLevel ''statuses'' permission set to ''write'': .github/workflows/yetus-jdk17-hadoop3-unit-check.yml:28'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -331,6 +331,10 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE.txt:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE.txt:0'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -347,17 +351,13 @@ checks:
       - 'Warn: codeowners review is not required on branch ''master'''
       - 'Warn: no status checks found to merge onto branch ''master'''
       - 'Warn: PRs are not required to make changes on branch ''master''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
     details:
-      - 'Warn: containerImage not pinned by hash: dev-support/create-release/hbase-rm/Dockerfile:22: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:2edbbc5dc405e9612ba3584ce95480277e3eb374407b5505fe26f17df77c7dbc'
+      - 'Warn: containerImage not pinned by hash: dev-support/create-release/hbase-rm/Dockerfile:22: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:829f6df217bcbae2b371026e81711d1a787c61b2967ad09d015063663ebafbf7'
       - 'Warn: containerImage not pinned by hash: dev-support/create-release/mac-sshd-gpg-agent/Dockerfile:77: pin your Docker image by updating ubuntu:18.04 to ubuntu:18.04@sha256:152dc042452c496007f07ca9127571cb9c29697f42acbfad72324b2bb2e43c98'
-      - 'Warn: containerImage not pinned by hash: dev-support/docker/Dockerfile:24: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:2edbbc5dc405e9612ba3584ce95480277e3eb374407b5505fe26f17df77c7dbc'
+      - 'Warn: containerImage not pinned by hash: dev-support/docker/Dockerfile:24: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:829f6df217bcbae2b371026e81711d1a787c61b2967ad09d015063663ebafbf7'
       - 'Warn: containerImage not pinned by hash: dev-support/docker/Dockerfile:90'
       - 'Warn: containerImage not pinned by hash: dev-support/docker/Dockerfile:98'
       - 'Warn: containerImage not pinned by hash: dev-support/docker/Dockerfile:106'
@@ -365,12 +365,12 @@ checks:
       - 'Warn: containerImage not pinned by hash: dev-support/docker/Dockerfile:121'
       - 'Warn: containerImage not pinned by hash: dev-support/docker/Dockerfile:128'
       - 'Warn: containerImage not pinned by hash: dev-support/docker/Dockerfile:139'
-      - 'Warn: containerImage not pinned by hash: dev-support/flaky-tests/Dockerfile:23: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:2edbbc5dc405e9612ba3584ce95480277e3eb374407b5505fe26f17df77c7dbc'
-      - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/Dockerfile:17: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:2edbbc5dc405e9612ba3584ce95480277e3eb374407b5505fe26f17df77c7dbc'
+      - 'Warn: containerImage not pinned by hash: dev-support/flaky-tests/Dockerfile:23: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:829f6df217bcbae2b371026e81711d1a787c61b2967ad09d015063663ebafbf7'
+      - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/Dockerfile:17: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:829f6df217bcbae2b371026e81711d1a787c61b2967ad09d015063663ebafbf7'
       - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/Dockerfile:33'
       - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/Dockerfile:41'
       - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/Dockerfile:48'
-      - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/m1/Dockerfile:17: pin your Docker image by updating amd64/ubuntu:22.04 to amd64/ubuntu:22.04@sha256:23865fb66a6a0efaeccdfa8e3c690d958e37ddf38dfdcd3c4fef6283c0c40a8a'
+      - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/m1/Dockerfile:17: pin your Docker image by updating amd64/ubuntu:22.04 to amd64/ubuntu:22.04@sha256:cbe37228092cb545a430aabfe287facc46527ca7679ea89311da48b9f6fc70af'
       - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/m1/Dockerfile:33'
       - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/m1/Dockerfile:41'
       - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/m1/Dockerfile:48'

@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.166.0"
   latestRelease: "v0.166.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-14T03:26:44Z
+  collectedAt: 2026-09-15T03:28:14Z
 timeline:
   created: 2013-07-04
   lastCommit: 2026-09-12
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-09-09
   lastPrerelease: 
 popularity:
-  star: 89816
+  star: 89821
   watcher: 1087
-  fork: 8376
+  fork: 8379
   release: 382
   contributor: 850
-  pullRequest: 6822
-  issue: 8241
+  pullRequest: 6831
+  issue: 8244
 language:
   Go: 6119855
   C: 164984
@@ -35,63 +35,63 @@ language:
 totalBytes: 6519653
 recent:
   last30d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 1
-    mergedPR: 51
-    openPR: 9
-    closedIssue: 28
-    openIssue: 9
+    mergedPR: 50
+    openPR: 17
+    closedIssue: 29
+    openIssue: 8
     commit: 51
   last60d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 2
     mergedPR: 87
-    openPR: 13
-    closedIssue: 42
+    openPR: 20
+    closedIssue: 44
     openIssue: 12
     commit: 104
   last90d:
-    since: 2026-06-16
+    since: 2026-06-17
     release: 4
-    mergedPR: 116
-    openPR: 18
-    closedIssue: 61
-    openIssue: 16
+    mergedPR: 115
+    openPR: 25
+    closedIssue: 62
+    openIssue: 17
     commit: 133
   last180d:
-    since: 2026-03-18
+    since: 2026-03-19
     release: 16
-    mergedPR: 266
-    openPR: 22
-    closedIssue: 162
-    openIssue: 31
+    mergedPR: 264
+    openPR: 30
+    closedIssue: 163
+    openIssue: 32
     commit: 334
   last360d:
-    since: 2025-09-19
+    since: 2025-09-20
     release: 42
-    mergedPR: 545
-    openPR: 25
-    closedIssue: 360
-    openIssue: 57
+    mergedPR: 544
+    openPR: 33
+    closedIssue: 362
+    openIssue: 58
     commit: 756
   last720d:
-    since: 2024-09-24
+    since: 2024-09-25
     release: 93
     mergedPR: 956
-    openPR: 27
-    closedIssue: 810
-    openIssue: 89
+    openPR: 35
+    closedIssue: 811
+    openIssue: 90
     commit: 1381
 total:
   release: 382
   mergedPR: 3533
-  openPR: 29
-  closedIssue: 8044
+  openPR: 37
+  closedIssue: 8047
   openIssue: 197
   commit: 9949
 ---
 path: /home/runner/.x-repo/github.com/gohugoio/hugo
-collectedAt: 2026-09-14T03:27:00Z
+collectedAt: 2026-09-15T03:28:25Z
 loc:
   Go:
     code: 172623
@@ -189,18 +189,26 @@ total:
   blanks: 47186
   files: 2236
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/gohugoio/hugo
-  commit: 6152e22e262e01562eb0d1b7e185b7e148201fee
+  commit: a374b865f7e99cccafcbe443dcdb47552b91af3c
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 5.8
 checks:
+  - name: Code-Review
+    score: 3
+    reason: Found 7/18 approved changesets -- score normalized to 3
+    details: null
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 14 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Security-Policy
     score: 10
@@ -210,14 +218,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Code-Review
-    score: 3
-    reason: Found 5/16 approved changesets -- score normalized to 3
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -252,6 +252,10 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
@@ -269,33 +273,29 @@ checks:
       - 'Warn: goCommand not pinned by hash: .github/workflows/test.yml:111'
       - 'Info:   6 out of   6 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   7 out of   7 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   1 pipCommand dependencies pinned'
       - 'Info:   0 out of   6 containerImage dependencies pinned'
       - 'Info:   2 out of   5 goCommand dependencies pinned'
       - 'Info:   0 out of   1 npmCommand dependencies pinned'
-      - 'Info:   0 out of   1 pipCommand dependencies pinned'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
+      - 'Warn: release artifact v0.166.0 not signed: https://api.github.com/repos/gohugoio/hugo/releases/385620492'
       - 'Warn: release artifact v0.165.0 not signed: https://api.github.com/repos/gohugoio/hugo/releases/369315693'
       - 'Warn: release artifact v0.164.0 not signed: https://api.github.com/repos/gohugoio/hugo/releases/349719587'
       - 'Warn: release artifact v0.163.3 not signed: https://api.github.com/repos/gohugoio/hugo/releases/341526554'
       - 'Warn: release artifact v0.163.2 not signed: https://api.github.com/repos/gohugoio/hugo/releases/339636937'
-      - 'Warn: release artifact v0.163.1 not signed: https://api.github.com/repos/gohugoio/hugo/releases/338076907'
+      - 'Warn: release artifact v0.166.0 does not have provenance: https://api.github.com/repos/gohugoio/hugo/releases/385620492'
       - 'Warn: release artifact v0.165.0 does not have provenance: https://api.github.com/repos/gohugoio/hugo/releases/369315693'
       - 'Warn: release artifact v0.164.0 does not have provenance: https://api.github.com/repos/gohugoio/hugo/releases/349719587'
       - 'Warn: release artifact v0.163.3 does not have provenance: https://api.github.com/repos/gohugoio/hugo/releases/341526554'
       - 'Warn: release artifact v0.163.2 does not have provenance: https://api.github.com/repos/gohugoio/hugo/releases/339636937'
-      - 'Warn: release artifact v0.163.1 does not have provenance: https://api.github.com/repos/gohugoio/hugo/releases/338076907'
   - name: SAST
     score: 4
     reason: SAST tool is not run on all commits -- score normalized to 4
     details:
-      - 'Warn: 12 commits out of 28 are checked with a SAST tool'
+      - 'Warn: 12 commits out of 25 are checked with a SAST tool'
   - name: Packaging
     score: 10
     reason: packaging workflow detected

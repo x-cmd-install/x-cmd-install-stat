@@ -7,7 +7,7 @@ about:
   latestVersion: "v14.0.0"
   latestRelease: "v14.0.0"
   latestPrerelease: "v14.0.rc3"
-  collectedAt: 2026-09-14T05:26:11Z
+  collectedAt: 2026-09-15T05:37:28Z
 timeline:
   created: 2017-05-10
   lastCommit: 2026-09-12
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-06-19
   lastPrerelease: 2026-06-01
 popularity:
-  star: 30841
+  star: 30850
   watcher: 221
-  fork: 2013
+  fork: 2015
   release: 35
   contributor: 352
-  pullRequest: 1481
-  issue: 3179
+  pullRequest: 1482
+  issue: 3181
 language:
   C++: 753038
   CMake: 45926
@@ -33,63 +33,63 @@ language:
 totalBytes: 839096
 recent:
   last30d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 0
     mergedPR: 18
     openPR: 14
-    closedIssue: 12
-    openIssue: 18
+    closedIssue: 13
+    openIssue: 19
     commit: 16
   last60d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 0
-    mergedPR: 31
+    mergedPR: 29
     openPR: 19
-    closedIssue: 26
-    openIssue: 28
+    closedIssue: 27
+    openIssue: 27
     commit: 37
   last90d:
-    since: 2026-06-16
+    since: 2026-06-17
     release: 1
     mergedPR: 51
     openPR: 22
     closedIssue: 51
-    openIssue: 48
+    openIssue: 49
     commit: 55
   last180d:
-    since: 2026-03-18
+    since: 2026-03-19
     release: 3
-    mergedPR: 104
+    mergedPR: 103
     openPR: 32
-    closedIssue: 106
-    openIssue: 74
+    closedIssue: 105
+    openIssue: 75
     commit: 103
   last360d:
-    since: 2025-09-19
+    since: 2025-09-20
     release: 5
-    mergedPR: 174
+    mergedPR: 173
     openPR: 35
-    closedIssue: 275
-    openIssue: 111
+    closedIssue: 276
+    openIssue: 112
     commit: 172
   last720d:
-    since: 2024-09-24
+    since: 2024-09-25
     release: 10
     mergedPR: 317
     openPR: 39
-    closedIssue: 505
-    openIssue: 185
+    closedIssue: 506
+    openIssue: 186
     commit: 417
 total:
   release: 35
   mergedPR: 1153
   openPR: 56
-  closedIssue: 2515
-  openIssue: 664
+  closedIssue: 2516
+  openIssue: 665
   commit: 2369
 ---
 path: /home/runner/.x-repo/github.com/flameshot-org/flameshot
-collectedAt: 2026-09-14T05:26:16Z
+collectedAt: 2026-09-15T05:37:30Z
 loc:
   TypeScript:
     code: 161038
@@ -187,26 +187,27 @@ total:
   blanks: 4672
   files: 434
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/flameshot-org/flameshot
-  commit: b26f76d339151ea31d1b8ae02d0b82faef2e2a53
+  commit: 3458585e323f7893d0391a0fa0ade08467b1fbf6
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 5.3
 checks:
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 12 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Code-Review
     score: 8
-    reason: Found 25/28 approved changesets -- score normalized to 8
+    reason: Found 24/28 approved changesets -- score normalized to 8
     details: null
-  - name: Dangerous-Workflow
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Binary-Artifacts
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: no binaries found in the repo
     details: null
   - name: Security-Policy
     score: 10
@@ -216,15 +217,14 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Binary-Artifacts
+  - name: Maintained
     score: 10
-    reason: no binaries found in the repo
+    reason: 30 commit(s) and 13 issue activity found in the last 90 days -- score normalized to 10
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -294,17 +294,17 @@ checks:
       - 'Info:   0 out of  40 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   6 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 pipCommand dependencies pinned'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: GNU General Public License v3.0: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'

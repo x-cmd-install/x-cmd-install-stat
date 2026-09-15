@@ -2,15 +2,15 @@ about:
   description: "A fast, keyboard-driven TUI that makes your existing ~/.ssh/config delightful to use at fleet scale."
   license: MIT
   homepage: 
-  head: dd7c724
+  head: f8f1bb6
   archived: false
   latestVersion: "2.6.0"
   latestRelease: "2.6.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-14T04:44:45Z
+  collectedAt: 2026-09-15T04:44:25Z
 timeline:
   created: 2025-04-12
-  lastCommit: 2026-09-07
+  lastCommit: 2026-09-14
   lastVersion: 2026-06-05
   lastRelease: 2026-06-05
   lastPrerelease: 
@@ -20,7 +20,7 @@ popularity:
   fork: 7
   release: 31
   contributor: 3
-  pullRequest: 130
+  pullRequest: 139
   issue: 19
 language:
   Go: 195065
@@ -30,63 +30,63 @@ language:
 totalBytes: 212127
 recent:
   last30d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 0
-    mergedPR: 19
+    mergedPR: 25
     openPR: 3
     closedIssue: 0
     openIssue: 0
-    commit: 14
+    commit: 20
   last60d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 0
-    mergedPR: 36
+    mergedPR: 42
     openPR: 3
     closedIssue: 0
     openIssue: 0
-    commit: 33
+    commit: 39
   last90d:
-    since: 2026-06-16
+    since: 2026-06-17
     release: 0
-    mergedPR: 53
+    mergedPR: 59
     openPR: 3
     closedIssue: 0
     openIssue: 0
-    commit: 51
+    commit: 57
   last180d:
-    since: 2026-03-18
+    since: 2026-03-19
     release: 17
-    mergedPR: 83
+    mergedPR: 89
     openPR: 3
     closedIssue: 2
     openIssue: 2
-    commit: 276
+    commit: 282
   last360d:
-    since: 2025-09-19
+    since: 2025-09-20
     release: 17
-    mergedPR: 83
+    mergedPR: 89
     openPR: 3
     closedIssue: 2
     openIssue: 2
-    commit: 276
+    commit: 282
   last720d:
-    since: 2024-09-24
+    since: 2024-09-25
     release: 31
-    mergedPR: 90
+    mergedPR: 96
     openPR: 3
     closedIssue: 12
     openIssue: 7
-    commit: 490
+    commit: 496
 total:
   release: 31
-  mergedPR: 90
+  mergedPR: 96
   openPR: 3
   closedIssue: 12
   openIssue: 7
-  commit: 490
+  commit: 496
 ---
 path: /home/runner/.x-repo/github.com/lfaoro/ssm
-collectedAt: 2026-09-14T04:44:45Z
+collectedAt: 2026-09-15T04:44:26Z
 loc:
   Go:
     code: 6667
@@ -119,18 +119,30 @@ total:
   blanks: 1401
   files: 44
 ---
-date: "2026-09-07T13:43:36Z"
+date: "2026-09-14T14:28:41Z"
 repo:
   name: github.com/lfaoro/ssm
-  commit: 7806c612369ac9d6508d996334ca96d0e0461d9e
+  commit: dd7c72441b5bd594161b28385959a923770b2f85
 scorecard:
   version: v5.5.0
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
-score: 7.9
+score: 7.8
 checks:
   - name: Code-Review
     score: 0
     reason: Found 0/1 approved changesets -- score normalized to 0
+    details: null
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: SECURITY.md:1'
+      - 'Info: Found linked content: SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
+      - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -145,18 +157,6 @@ checks:
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: SECURITY.md:1'
-      - 'Info: Found linked content: SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
-      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -194,32 +194,6 @@ checks:
     score: 5
     reason: 'badge detected: Passing'
     details: null
-  - name: Vulnerabilities
-    score: 9
-    reason: 1 existing vulnerabilities detected
-    details:
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5932'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: SAST
-    score: 10
-    reason: SAST tool is run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Info: all commits (29) are checked with a SAST tool'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -234,13 +208,37 @@ checks:
       - 'Warn: release artifact 2.5.0 does not have provenance: https://api.github.com/repos/lfaoro/ssm/releases/330455474'
       - 'Warn: release artifact 2.4.1 does not have provenance: https://api.github.com/repos/lfaoro/ssm/releases/330393482'
       - 'Warn: release artifact 2.4.0 does not have provenance: https://api.github.com/repos/lfaoro/ssm/releases/329795081'
+  - name: Vulnerabilities
+    score: 9
+    reason: 1 existing vulnerabilities detected
+    details:
+      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5932'
+  - name: SAST
+    score: -1
+    reason: 'internal error: internal error: Client.Checks.ListCheckRunsForRef: error during graphqlHandler.setupCheckRuns: Something went wrong while executing your query on 2026-09-14T14:28:46Z. Please include `E858:19CE2B:9DCA91:2071201:6AA8049C` when reporting this issue.'
+    details: null
+  - name: CI-Tests
+    score: -1
+    reason: 'internal error: internal error: Client.Repositories.ListCheckRunsForRef: error during graphqlHandler.setupCheckRuns: Something went wrong while executing your query on 2026-09-14T14:28:46Z. Please include `E858:19CE2B:9DCA91:2071201:6AA8049C` when reporting this issue.'
+    details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Contributors
     score: 10
     reason: project has 3 contributing companies or organizations -- score normalized to 10
     details:
       - 'Info: found contributions from: arisinghackers, planet earth, room-organization'
-  - name: CI-Tests
-    score: 10
-    reason: 29 out of 29 merged PRs checked by a CI test -- score normalized to 10
-    details: null
 ---

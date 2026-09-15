@@ -2,15 +2,15 @@ about:
   description: "/ˈdʏf/ - diff tool for YAML files, and sometimes JSON"
   license: MIT
   homepage: 
-  head: 6a37e9b
+  head: f99e115
   archived: false
   latestVersion: "v1.12.0"
   latestRelease: "v1.12.0"
   latestPrerelease: "v0.4-alpha"
-  collectedAt: 2026-09-14T05:49:56Z
+  collectedAt: 2026-09-15T05:52:27Z
 timeline:
   created: 2018-03-09
-  lastCommit: 2026-09-11
+  lastCommit: 2026-09-14
   lastVersion: 2026-04-26
   lastRelease: 2026-04-26
   lastPrerelease: 2018-04-20
@@ -20,7 +20,7 @@ popularity:
   fork: 100
   release: 86
   contributor: 31
-  pullRequest: 573
+  pullRequest: 575
   issue: 132
 language:
   Go: 215332
@@ -29,63 +29,63 @@ language:
 totalBytes: 220254
 recent:
   last30d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 0
-    mergedPR: 10
+    mergedPR: 12
     openPR: 1
     closedIssue: 0
     openIssue: 0
-    commit: 7
+    commit: 9
   last60d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 0
-    mergedPR: 18
+    mergedPR: 20
     openPR: 1
     closedIssue: 0
     openIssue: 0
-    commit: 16
+    commit: 18
   last90d:
-    since: 2026-06-16
+    since: 2026-06-17
     release: 0
-    mergedPR: 31
+    mergedPR: 33
     openPR: 2
     closedIssue: 0
     openIssue: 2
-    commit: 31
+    commit: 33
   last180d:
-    since: 2026-03-18
+    since: 2026-03-19
     release: 2
-    mergedPR: 71
+    mergedPR: 73
     openPR: 5
     closedIssue: 2
     openIssue: 3
-    commit: 71
+    commit: 73
   last360d:
-    since: 2025-09-19
+    since: 2025-09-20
     release: 9
-    mergedPR: 117
+    mergedPR: 119
     openPR: 6
     closedIssue: 4
     openIssue: 4
-    commit: 118
+    commit: 120
   last720d:
-    since: 2024-09-24
+    since: 2024-09-25
     release: 15
-    mergedPR: 209
+    mergedPR: 211
     openPR: 13
     closedIssue: 10
     openIssue: 16
-    commit: 416
+    commit: 420
 total:
   release: 86
-  mergedPR: 442
+  mergedPR: 444
   openPR: 15
   closedIssue: 77
   openIssue: 55
-  commit: 1073
+  commit: 1077
 ---
 path: /home/runner/.x-repo/github.com/homeport/dyff
-collectedAt: 2026-09-14T05:49:58Z
+collectedAt: 2026-09-15T05:52:28Z
 loc:
   Yaml:
     code: 5803
@@ -133,13 +133,13 @@ total:
   blanks: 1396
   files: 109
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/homeport/dyff
-  commit: 791ac6f282ce09f6d36ddac0d8f549389d602766
+  commit: 6a37e9bc921bf2d1bd63ce7c74e11ad1f4e7fc16
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 5.4
 checks:
   - name: Code-Review
@@ -154,10 +154,6 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -168,6 +164,10 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/tests.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Pinned-Dependencies
     score: 1
     reason: dependency not pinned by hash detected -- score normalized to 1
@@ -197,12 +197,6 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -211,6 +205,12 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'

@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.1.0"
   latestRelease: "v2.1.0"
   latestPrerelease: "v1.1.0-0"
-  collectedAt: 2026-09-14T06:43:49Z
+  collectedAt: 2026-09-15T06:53:19Z
 timeline:
   created: 2018-07-02
   lastCommit: 2025-11-13
@@ -30,7 +30,7 @@ language:
 totalBytes: 69568
 recent:
   last30d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 0
     mergedPR: 0
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-16
+    since: 2026-06-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-18
+    since: 2026-03-19
     release: 0
     mergedPR: 0
     openPR: 0
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-19
+    since: 2025-09-20
     release: 0
     mergedPR: 1
     openPR: 5
@@ -70,7 +70,7 @@ recent:
     openIssue: 1
     commit: 1
   last720d:
-    since: 2024-09-24
+    since: 2024-09-25
     release: 1
     mergedPR: 60
     openPR: 5
@@ -86,7 +86,7 @@ total:
   commit: 640
 ---
 path: /home/runner/.x-repo/github.com/mixn/carbon-now-cli
-collectedAt: 2026-09-14T06:43:53Z
+collectedAt: 2026-09-15T06:53:26Z
 loc:
   Json:
     code: 14806
@@ -124,18 +124,22 @@ total:
   blanks: 275
   files: 51
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/mixn/carbon-now-cli
   commit: 2415b61cbda797c6efe4c22065dff4b8151cad58
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.1
 checks:
   - name: Code-Review
     score: -1
     reason: Found no human activity in the last 15 changesets
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Maintained
     score: 0
@@ -146,20 +150,16 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/tests.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -173,14 +173,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -192,6 +184,14 @@ checks:
     details:
       - 'Info: project has a license file: license:0'
       - 'Info: FSF or OSI recognized license: MIT License: license:0'
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Signed-Releases
     score: -1
     reason: no releases found

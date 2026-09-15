@@ -7,7 +7,7 @@ about:
   latestVersion: "9.0.1"
   latestRelease: "9.0.1"
   latestPrerelease: "9.0.0b4"
-  collectedAt: 2026-09-14T05:04:44Z
+  collectedAt: 2026-09-15T05:06:17Z
 timeline:
   created: 2013-09-02
   lastCommit: 2026-08-27
@@ -30,15 +30,15 @@ language:
 totalBytes: 882571
 recent:
   last30d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 5
-    mergedPR: 11
+    mergedPR: 6
     openPR: 9
     closedIssue: 3
-    openIssue: 4
+    openIssue: 3
     commit: 5
   last60d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 6
     mergedPR: 33
     openPR: 13
@@ -46,7 +46,7 @@ recent:
     openIssue: 5
     commit: 60
   last90d:
-    since: 2026-06-16
+    since: 2026-06-17
     release: 7
     mergedPR: 48
     openPR: 14
@@ -54,7 +54,7 @@ recent:
     openIssue: 6
     commit: 81
   last180d:
-    since: 2026-03-18
+    since: 2026-03-19
     release: 10
     mergedPR: 85
     openPR: 14
@@ -62,7 +62,7 @@ recent:
     openIssue: 6
     commit: 142
   last360d:
-    since: 2025-09-19
+    since: 2025-09-20
     release: 14
     mergedPR: 145
     openPR: 14
@@ -70,7 +70,7 @@ recent:
     openIssue: 10
     commit: 279
   last720d:
-    since: 2024-09-24
+    since: 2024-09-25
     release: 16
     mergedPR: 192
     openPR: 14
@@ -86,7 +86,7 @@ total:
   commit: 4771
 ---
 path: /home/runner/.x-repo/github.com/PyCQA/isort
-collectedAt: 2026-09-14T05:04:53Z
+collectedAt: 2026-09-15T05:06:25Z
 loc:
   Python:
     code: 25856
@@ -134,15 +134,19 @@ total:
   blanks: 4364
   files: 152
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/PyCQA/isort
   commit: 131f4adcd5582bfc53928ab0d740eceb8b506b6c
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.9
 checks:
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 13 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Code-Review
     score: 1
     reason: Found 2/18 approved changesets -- score normalized to 1
@@ -154,10 +158,6 @@ checks:
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 13 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Token-Permissions
     score: 0
@@ -206,7 +206,7 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:33: update your workflow using https://app.stepsecurity.io/secureworkflow/PyCQA/isort/release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/PyCQA/isort/release.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:46: update your workflow using https://app.stepsecurity.io/secureworkflow/PyCQA/isort/release.yml/main?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating python:3.13 to python:3.13@sha256:a05a0a9cfe9db7d6af4daf0c31de1aca499d067eb2da574d6afad8a92615f267'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating python:3.13 to python:3.13@sha256:6faba2c56370992b0456e11f781f00a09b7ecc3c4e97ef3e39163d01a94aea8d'
       - 'Info:   0 out of  14 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   9 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
@@ -221,6 +221,11 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:13'
   - name: Signed-Releases
     score: 8
     reason: 3 out of the last 3 releases have a total of 3 signed artifacts.
@@ -231,11 +236,6 @@ checks:
       - 'Warn: release artifact 9.0.1 does not have provenance: https://api.github.com/repos/PyCQA/isort/releases/378107035'
       - 'Warn: release artifact 9.0.0 does not have provenance: https://api.github.com/repos/PyCQA/isort/releases/377432889'
       - 'Warn: release artifact 9.0.0b5 does not have provenance: https://api.github.com/repos/PyCQA/isort/releases/371455588'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:13'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
