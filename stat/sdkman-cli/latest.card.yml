@@ -7,7 +7,7 @@ about:
   latestVersion: "latest"
   latestRelease: "5.23.0"
   latestPrerelease: "latest"
-  collectedAt: 2026-09-15T06:28:07Z
+  collectedAt: 2026-09-16T06:27:50Z
 timeline:
   created: 2012-08-27
   lastCommit: 2026-09-11
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-05-04
   lastPrerelease: 2026-09-11
 popularity:
-  star: 6848
+  star: 6849
   watcher: 114
   fork: 645
   release: 44
@@ -31,7 +31,7 @@ language:
 totalBytes: 176571
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 1
     mergedPR: 4
     openPR: 0
@@ -39,7 +39,7 @@ recent:
     openIssue: 1
     commit: 4
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 1
     mergedPR: 4
     openPR: 1
@@ -47,7 +47,7 @@ recent:
     openIssue: 2
     commit: 5
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 1
     mergedPR: 7
     openPR: 1
@@ -55,7 +55,7 @@ recent:
     openIssue: 2
     commit: 10
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 8
     mergedPR: 20
     openPR: 1
@@ -63,7 +63,7 @@ recent:
     openIssue: 2
     commit: 32
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 9
     mergedPR: 34
     openPR: 2
@@ -71,7 +71,7 @@ recent:
     openIssue: 3
     commit: 61
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 11
     mergedPR: 37
     openPR: 4
@@ -87,7 +87,7 @@ total:
   commit: 1723
 ---
 path: /home/runner/.x-repo/github.com/sdkman/sdkman-cli
-collectedAt: 2026-09-15T06:28:11Z
+collectedAt: 2026-09-16T06:27:51Z
 loc:
   Groovy:
     code: 1803
@@ -130,33 +130,32 @@ total:
   blanks: 1102
   files: 89
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/sdkman/sdkman-cli
-  commit: 1ceb412f5ef98a4ff7c166cf4276243e8d86c1f8
+  commit: cecace4ea8e58031eb3a942dfd7107677a1aab2a
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.6
 checks:
   - name: Code-Review
     score: 2
-    reason: Found 2/10 approved changesets -- score normalized to 2
+    reason: Found 3/11 approved changesets -- score normalized to 2
     details: null
-  - name: Maintained
+  - name: Dangerous-Workflow
     score: 10
-    reason: 12 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
+    reason: no dangerous workflow patterns detected
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Binary-Artifacts
     score: 9
     reason: binaries present in source code
     details:
       - 'Warn: binary detected: gradle/wrapper/gradle-wrapper.jar:1'
+  - name: Maintained
+    score: 10
+    reason: 10 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -165,18 +164,19 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/claude.yml:22'
       - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/claude.yml:23'
       - 'Info: jobLevel ''issues'' permission set to ''read'': .github/workflows/claude.yml:24'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/claude.yml:26'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/claude.yml:22'
       - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/dependabot-digest.yml:11'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/dependabot-digest.yml:12'
       - 'Warn: no topLevel permission defined: .github/workflows/beta.yml:1'
@@ -227,24 +227,24 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
-      - 'Warn: release artifact latest not signed: https://api.github.com/repos/sdkman/sdkman-cli/releases/375979423'
+      - 'Warn: release artifact latest not signed: https://api.github.com/repos/sdkman/sdkman-cli/releases/387266250'
       - 'Warn: release artifact 5.23.0 not signed: https://api.github.com/repos/sdkman/sdkman-cli/releases/317319408'
       - 'Warn: release artifact 5.22.5 not signed: https://api.github.com/repos/sdkman/sdkman-cli/releases/314539678'
       - 'Warn: release artifact 5.22.4 not signed: https://api.github.com/repos/sdkman/sdkman-cli/releases/302844795'
       - 'Warn: release artifact 5.22.3 not signed: https://api.github.com/repos/sdkman/sdkman-cli/releases/302480928'
-      - 'Warn: release artifact latest does not have provenance: https://api.github.com/repos/sdkman/sdkman-cli/releases/375979423'
+      - 'Warn: release artifact latest does not have provenance: https://api.github.com/repos/sdkman/sdkman-cli/releases/387266250'
       - 'Warn: release artifact 5.23.0 does not have provenance: https://api.github.com/repos/sdkman/sdkman-cli/releases/317319408'
       - 'Warn: release artifact 5.22.5 does not have provenance: https://api.github.com/repos/sdkman/sdkman-cli/releases/314539678'
       - 'Warn: release artifact 5.22.4 does not have provenance: https://api.github.com/repos/sdkman/sdkman-cli/releases/302844795'
       - 'Warn: release artifact 5.22.3 does not have provenance: https://api.github.com/repos/sdkman/sdkman-cli/releases/302480928'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

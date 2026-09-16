@@ -7,7 +7,7 @@ about:
   latestVersion: "2.3.3"
   latestRelease: "2.3.3"
   latestPrerelease: "2.0.0-rc1"
-  collectedAt: 2026-09-15T06:09:58Z
+  collectedAt: 2026-09-16T06:05:40Z
 timeline:
   created: 2017-11-20
   lastCommit: 2026-09-12
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-07-24
   lastPrerelease: 2018-01-05
 popularity:
-  star: 9693
+  star: 9700
   watcher: 67
   fork: 930
   release: 82
   contributor: 298
   pullRequest: 2665
-  issue: 1545
+  issue: 1546
 language:
   Go: 2416359
   HTML: 193921
@@ -36,63 +36,63 @@ language:
 totalBytes: 2754092
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 0
     mergedPR: 7
-    openPR: 7
+    openPR: 6
     closedIssue: 0
-    openIssue: 4
+    openIssue: 3
     commit: 6
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 1
     mergedPR: 34
     openPR: 9
     closedIssue: 4
-    openIssue: 13
+    openIssue: 14
     commit: 20
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 2
     mergedPR: 65
     openPR: 14
     closedIssue: 8
-    openIssue: 19
+    openIssue: 20
     commit: 68
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 5
-    mergedPR: 246
+    mergedPR: 245
     openPR: 18
     closedIssue: 27
-    openIssue: 30
+    openIssue: 31
     commit: 243
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 10
     mergedPR: 476
     openPR: 18
     closedIssue: 66
-    openIssue: 54
+    openIssue: 55
     commit: 507
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 23
     mergedPR: 1063
     openPR: 18
     closedIssue: 208
-    openIssue: 109
+    openIssue: 110
     commit: 1196
 total:
   release: 82
   mergedPR: 2348
   openPR: 18
   closedIssue: 1280
-  openIssue: 265
+  openIssue: 266
   commit: 3055
 ---
 path: /home/runner/.x-repo/github.com/miniflux/v2
-collectedAt: 2026-09-15T06:10:02Z
+collectedAt: 2026-09-16T06:05:45Z
 loc:
   Go:
     code: 66425
@@ -170,18 +170,18 @@ total:
   blanks: 13543
   files: 555
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/miniflux/v2
-  commit: a84533db6ca0a2ff9a47800fbf0326be6d9b3170
+  commit: 76889f08b12c2577b37e524e645afa5dd46ff050
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 6.6
 checks:
   - name: Code-Review
     score: 2
-    reason: Found 7/26 approved changesets -- score normalized to 2
+    reason: Found 7/24 approved changesets -- score normalized to 2
     details: null
   - name: Maintained
     score: 10
@@ -255,6 +255,11 @@ checks:
       - 'Warn: release artifact 2.3.1 does not have provenance: https://api.github.com/repos/miniflux/v2/releases/331776084'
       - 'Warn: release artifact 2.3.0 does not have provenance: https://api.github.com/repos/miniflux/v2/releases/323549380'
       - 'Warn: release artifact 2.2.19 does not have provenance: https://api.github.com/repos/miniflux/v2/releases/305352154'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker.yml:14'
   - name: Pinned-Dependencies
     score: 6
     reason: dependency not pinned by hash detected -- score normalized to 6
@@ -263,23 +268,18 @@ checks:
       - 'Warn: containerImage not pinned by hash: packaging/docker/alpine/Dockerfile:1: pin your Docker image by updating docker.io/library/golang:alpine3.23 to docker.io/library/golang:alpine3.23@sha256:d9e2f2f07b10cc922da3e80e035c3058810b328d5aef82d2c63680967c5e2ec9'
       - 'Warn: containerImage not pinned by hash: packaging/docker/alpine/Dockerfile:7: pin your Docker image by updating docker.io/library/alpine:3.24 to docker.io/library/alpine:3.24@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
       - 'Warn: containerImage not pinned by hash: packaging/docker/distroless/Dockerfile:1: pin your Docker image by updating docker.io/library/golang:trixie to docker.io/library/golang:trixie@sha256:9baa6b4187bbb98d240372a8a235ac0bb6b5ddd52bba1431dc2f7c0705862728'
-      - 'Warn: containerImage not pinned by hash: packaging/docker/distroless/Dockerfile:6: pin your Docker image by updating gcr.io/distroless/base-debian13:nonroot to gcr.io/distroless/base-debian13:nonroot@sha256:d199d20fb09c898d8822ae5cbd5cf3c6d424e9b5e1fc2eb9a719a7752cd9d861'
-      - 'Warn: containerImage not pinned by hash: packaging/rpm/Dockerfile:1: pin your Docker image by updating golang:1 to golang:1@sha256:512690a5660563b57d37ecc31129e7f136e831db2aed24a1dbeb8ad7380dc0fa'
+      - 'Warn: containerImage not pinned by hash: packaging/docker/distroless/Dockerfile:6: pin your Docker image by updating gcr.io/distroless/base-debian13:nonroot to gcr.io/distroless/base-debian13:nonroot@sha256:0896741ba5bafd3ac87ea025a5f578952f2d238ddc3614cb368acc983a687aa2'
+      - 'Warn: containerImage not pinned by hash: packaging/rpm/Dockerfile:1: pin your Docker image by updating golang:1 to golang:1@sha256:f44f6e88636cfb311f9ebace870ded69d943f227bb3cb27d32ffd84ea18c43ea'
       - 'Warn: containerImage not pinned by hash: packaging/rpm/Dockerfile:7: pin your Docker image by updating rockylinux:9 to rockylinux:9@sha256:d7be1c094cc5845ee815d4632fe377514ee6ebcf8efaed6892889657e5ddaaa6'
       - 'Warn: npmCommand not pinned by hash: .github/workflows/linters.yml:18'
       - 'Info:  28 out of  28 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  16 out of  16 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   7 containerImage dependencies pinned'
       - 'Info:   0 out of   1 npmCommand dependencies pinned'
+      - 'Info:   0 out of   7 containerImage dependencies pinned'
   - name: SAST
     score: 9
     reason: SAST tool detected but not run on all commits
     details:
       - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 26 commits out of 30 are checked with a SAST tool'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker.yml:14'
+      - 'Warn: 25 commits out of 30 are checked with a SAST tool'
 ---

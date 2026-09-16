@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.1.16"
   latestRelease: "v0.1.16"
   latestPrerelease: ""
-  collectedAt: 2026-09-15T04:52:39Z
+  collectedAt: 2026-09-16T04:47:23Z
 timeline:
   created: 2019-05-22
   lastCommit: 2026-08-20
@@ -32,7 +32,7 @@ language:
 totalBytes: 396313
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 0
     mergedPR: 2
     openPR: 0
@@ -40,7 +40,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 0
     mergedPR: 2
     openPR: 0
@@ -48,7 +48,7 @@ recent:
     openIssue: 0
     commit: 2
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 0
     mergedPR: 2
     openPR: 0
@@ -56,15 +56,15 @@ recent:
     openIssue: 0
     commit: 2
   last180d:
-    since: 2026-03-19
-    release: 1
+    since: 2026-03-20
+    release: 0
     mergedPR: 2
     openPR: 0
     closedIssue: 1
     openIssue: 1
     commit: 2
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 2
     mergedPR: 11
     openPR: 0
@@ -72,7 +72,7 @@ recent:
     openIssue: 2
     commit: 11
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 2
     mergedPR: 15
     openPR: 0
@@ -88,7 +88,7 @@ total:
   commit: 297
 ---
 path: /home/runner/.x-repo/github.com/casey/intermodal
-collectedAt: 2026-09-15T04:52:40Z
+collectedAt: 2026-09-16T04:47:25Z
 loc:
   Rust:
     code: 13854
@@ -141,24 +141,22 @@ total:
   blanks: 2616
   files: 163
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/casey/intermodal
   commit: f2dc19537fe389ddf5485fa7a6b7fe14858846fa
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.1
 checks:
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/build.yaml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: Code-Review
     score: 1
     reason: Found 5/30 approved changesets -- score normalized to 1
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Maintained
     score: 2
@@ -169,10 +167,12 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/build.yaml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -181,11 +181,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -194,16 +189,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Creative Commons Zero v1.0 Universal: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -235,6 +231,10 @@ checks:
       - 'Warn: release artifact v0.1.14 does not have provenance: https://api.github.com/repos/casey/intermodal/releases/173326586'
       - 'Warn: release artifact v0.1.13 does not have provenance: https://api.github.com/repos/casey/intermodal/releases/116005536'
       - 'Warn: release artifact v0.1.12 does not have provenance: https://api.github.com/repos/casey/intermodal/releases/32118242'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

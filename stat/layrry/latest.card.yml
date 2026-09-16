@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.0.0.Final"
   latestRelease: "v1.0.0.Final"
   latestPrerelease: "early-access"
-  collectedAt: 2026-09-15T06:29:19Z
+  collectedAt: 2026-09-16T06:27:38Z
 timeline:
   created: 2020-03-07
   lastCommit: 2023-05-03
@@ -27,7 +27,7 @@ language:
 totalBytes: 196231
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 0
     mergedPR: 0
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 0
     mergedPR: 0
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 0
     mergedPR: 0
     openPR: 0
@@ -83,7 +83,7 @@ total:
   commit: 229
 ---
 path: /home/runner/.x-repo/github.com/moditect/layrry
-collectedAt: 2026-09-15T06:29:20Z
+collectedAt: 2026-09-16T06:27:39Z
 loc:
   Java:
     code: 3954
@@ -136,19 +136,32 @@ total:
   blanks: 1388
   files: 168
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/moditect/layrry
   commit: 5d2e8294f2f9d0b1f74f53ed1057453b5d909ee5
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.1
 checks:
   - name: Code-Review
     score: 0
     reason: Found 1/24 approved changesets -- score normalized to 0
     details: null
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 9
+    reason: binaries present in source code
+    details:
+      - 'Warn: binary detected: .mvn/wrapper/maven-wrapper.jar:1'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -157,19 +170,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/early-access.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 9
-    reason: binaries present in source code
-    details:
-      - 'Warn: binary detected: .mvn/wrapper/maven-wrapper.jar:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -209,6 +209,10 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: License
     score: 10
     reason: license file detected
@@ -227,10 +231,6 @@ checks:
       - 'Warn: release artifact early-access does not have provenance: https://api.github.com/repos/moditect/layrry/releases/101694984'
       - 'Warn: release artifact v1.0.0.Alpha2 does not have provenance: https://api.github.com/repos/moditect/layrry/releases/81598003'
       - 'Warn: release artifact v1.0.0.Alpha1 does not have provenance: https://api.github.com/repos/moditect/layrry/releases/37111016'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

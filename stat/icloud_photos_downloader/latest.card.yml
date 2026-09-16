@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.32.3"
   latestRelease: "v1.32.3"
   latestPrerelease: ""
-  collectedAt: 2026-09-15T06:35:41Z
+  collectedAt: 2026-09-16T06:30:54Z
 timeline:
   created: 2016-05-13
   lastCommit: 2026-05-30
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-05-30
   lastPrerelease: 
 popularity:
-  star: 12237
+  star: 12243
   watcher: 115
   fork: 832
   release: 81
@@ -33,7 +33,7 @@ language:
 totalBytes: 718689
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 0
     mergedPR: 0
     openPR: 4
@@ -41,7 +41,7 @@ recent:
     openIssue: 2
     commit: 0
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 0
     mergedPR: 0
     openPR: 5
@@ -49,7 +49,7 @@ recent:
     openIssue: 10
     commit: 0
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 0
     mergedPR: 0
     openPR: 6
@@ -57,7 +57,7 @@ recent:
     openIssue: 13
     commit: 0
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 1
     mergedPR: 3
     openPR: 13
@@ -65,7 +65,7 @@ recent:
     openIssue: 21
     commit: 13
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 1
     mergedPR: 4
     openPR: 24
@@ -73,7 +73,7 @@ recent:
     openIssue: 53
     commit: 14
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 29
     mergedPR: 104
     openPR: 37
@@ -89,7 +89,7 @@ total:
   commit: 994
 ---
 path: /home/runner/.x-repo/github.com/icloud-photos-downloader/icloud_photos_downloader
-collectedAt: 2026-09-15T06:35:49Z
+collectedAt: 2026-09-16T06:31:03Z
 loc:
   Yaml:
     code: 604550
@@ -157,30 +157,26 @@ total:
   blanks: 3233
   files: 203
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/icloud-photos-downloader/icloud_photos_downloader
   commit: 879c561240d993d748ddb4546f935090502b16d3
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.3
 checks:
   - name: Code-Review
     score: 0
     reason: Found 1/11 approved changesets -- score normalized to 0
     details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Dangerous-Workflow
+  - name: Binary-Artifacts
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -199,10 +195,19 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/quality-checks.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/refresh-docs.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -211,22 +216,12 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE.md:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE.md:0'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: SAST
     score: 9
     reason: SAST tool detected but not run on all commits
@@ -243,6 +238,11 @@ checks:
       - 'Warn: could not determine whether codeowners review is allowed'
       - 'Warn: no status checks found to merge onto branch ''master'''
       - 'Warn: PRs are not required to make changes on branch ''master''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -268,61 +268,11 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-docs.yml:45: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-docs.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-docs.yml:57: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-docs.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-docs.yml:60: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-docs.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3495: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3532: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3539: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3571: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3592: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:648: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:651: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:659: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:662: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:667: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:681: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:351: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:354: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:362: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:376: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3323: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3336: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3366: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3403: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3410: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3443: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3465: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3616: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3649: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3656: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3690: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:138: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:141: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:148: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:840: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:848: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:864: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:895: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:905: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:934: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1263: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1270: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1297: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1782: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:1799: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1823: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:1833: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1859: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2163: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2186: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2442: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2485: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2493: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:2518: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2539: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:2549: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2571: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:99: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:102: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:109: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1968: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:1985: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2009: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:2019: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2045: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:232: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:235: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:243: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
@@ -330,43 +280,97 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:265: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:277: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:294: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:310: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:313: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:320: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:334: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:433: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:436: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:444: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:458: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:351: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:354: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:362: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:376: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1782: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:1799: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1823: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:1833: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1859: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2081: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2106: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2131: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2887: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2930: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2938: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:2963: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2984: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:2994: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3017: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:30: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:44: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:58: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:61: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:68: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:85: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:486: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:489: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:497: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:501: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:516: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:525: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:542: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:433: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:436: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:444: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:458: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:648: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:651: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:659: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:662: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:667: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:681: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1046: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1054: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:1069: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1099: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:1109: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1137: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2163: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2186: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3495: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3532: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3539: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3571: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3592: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3830: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3833: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3842: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3850: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3858: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3871: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3884: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:603: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:606: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:613: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:634: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1174: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1181: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1209: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1238: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:697: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:700: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:706: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:718: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:840: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:848: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:864: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:895: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:905: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:934: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1409: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:1426: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1450: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:1460: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1485: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2442: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2485: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2493: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:2518: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2539: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:2549: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2571: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:138: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:141: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:148: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:310: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:313: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:320: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:334: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2257: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:2275: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2310: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2337: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:557: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:560: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:567: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:588: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2675: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2679: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2722: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
@@ -375,61 +379,24 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2773: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:2783: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2801: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:181: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:184: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:191: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:392: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:395: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:403: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:417: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:557: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:560: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:567: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:588: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2257: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:2275: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2310: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2337: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1046: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1054: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:1069: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1099: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:1109: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1137: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1409: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:1426: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1450: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:1460: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1485: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1968: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:1985: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2009: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:2019: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2045: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1597: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:1614: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1638: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:1648: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1673: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2887: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2930: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2938: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:2963: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:2984: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:2994: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3017: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3616: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3649: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3656: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3690: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3714: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3747: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3754: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3787: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3830: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3833: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3842: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3850: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3858: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3871: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3884: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:30: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:44: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:697: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:700: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:706: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:718: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:181: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:184: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:191: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3102: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3145: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3153: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
@@ -437,6 +404,39 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3198: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:3208: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3230: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3366: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3403: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3410: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3443: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3465: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:99: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:102: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:109: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:392: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:395: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:403: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:417: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1174: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1181: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1209: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1238: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3323: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:3336: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:486: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:489: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:497: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:501: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:516: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:525: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:542: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1263: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1270: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1297: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1597: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:1614: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1638: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-package.yml:1648: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-package.yml:1673: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/build-package.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql-analysis.yml:39: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/codeql-analysis.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql-analysis.yml:43: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/codeql-analysis.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql-analysis.yml:54: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/codeql-analysis.yml/master?enable=pin'
@@ -449,8 +449,8 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/extract-changelog.yml:32: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/extract-changelog.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/patch-version.yml:13: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/patch-version.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/patch-version.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/patch-version.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/produce-artifacts.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/produce-artifacts.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/produce-artifacts.yml:35: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/produce-artifacts.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/produce-artifacts.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/produce-artifacts.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish-docs.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/publish-docs.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish.yml:31: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/publish.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish.yml:34: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/publish.yml/master?enable=pin'
@@ -469,9 +469,6 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish.yml:159: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/publish.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish.yml:166: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/publish.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/publish.yml:173: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/publish.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/quality-checks.yml:91: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/quality-checks.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/quality-checks.yml:94: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/quality-checks.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/quality-checks.yml:101: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/quality-checks.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/quality-checks.yml:132: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/quality-checks.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/quality-checks.yml:135: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/quality-checks.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/quality-checks.yml:142: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/quality-checks.yml/master?enable=pin'
@@ -481,16 +478,19 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/quality-checks.yml:40: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/quality-checks.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/quality-checks.yml:60: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/quality-checks.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/quality-checks.yml:62: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/quality-checks.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/quality-checks.yml:91: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/quality-checks.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/quality-checks.yml:94: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/quality-checks.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/quality-checks.yml:101: update your workflow using https://app.stepsecurity.io/secureworkflow/icloud-photos-downloader/icloud_photos_downloader/quality-checks.yml/master?enable=pin'
       - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating alpine:3.23 to alpine:3.23@sha256:fd791d74b68913cbb027c6546007b3f0d3bc45125f797758156952bc2d6daf40'
       - 'Warn: containerImage not pinned by hash: Dockerfile:8: pin your Docker image by updating alpine:3.23 to alpine:3.23@sha256:fd791d74b68913cbb027c6546007b3f0d3bc45125f797758156952bc2d6daf40'
       - 'Warn: containerImage not pinned by hash: Dockerfile:15: pin your Docker image by updating alpine:3.23 to alpine:3.23@sha256:fd791d74b68913cbb027c6546007b3f0d3bc45125f797758156952bc2d6daf40'
       - 'Warn: containerImage not pinned by hash: Dockerfile:22'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.build:9: pin your Docker image by updating python:3.13 to python:3.13@sha256:a05a0a9cfe9db7d6af4daf0c31de1aca499d067eb2da574d6afad8a92615f267'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.build:9: pin your Docker image by updating python:3.13 to python:3.13@sha256:6faba2c56370992b0456e11f781f00a09b7ecc3c4e97ef3e39163d01a94aea8d'
       - 'Warn: containerImage not pinned by hash: Dockerfile.build:22'
       - 'Warn: containerImage not pinned by hash: Dockerfile.build:25'
       - 'Warn: containerImage not pinned by hash: Dockerfile.build:28'
       - 'Warn: containerImage not pinned by hash: Dockerfile.build:41'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.build-doc:5: pin your Docker image by updating python:3.13 to python:3.13@sha256:a05a0a9cfe9db7d6af4daf0c31de1aca499d067eb2da574d6afad8a92615f267'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.build-doc:5: pin your Docker image by updating python:3.13 to python:3.13@sha256:6faba2c56370992b0456e11f781f00a09b7ecc3c4e97ef3e39163d01a94aea8d'
       - 'Warn: containerImage not pinned by hash: Dockerfile.build-musl:8: pin your Docker image by updating python:3.13-alpine3.23 to python:3.13-alpine3.23@sha256:75f27d686432419c9d42420b2b9ef605868c7a0682a6be10a6601fad46c2df01'
       - 'Warn: containerImage not pinned by hash: Dockerfile.build-musl:20'
       - 'Warn: containerImage not pinned by hash: Dockerfile.build-musl:23'
@@ -506,38 +506,38 @@ checks:
       - 'Warn: pipCommand not pinned by hash: Dockerfile.build-musl:43-48'
       - 'Warn: pipCommand not pinned by hash: scripts/install_deps:4'
       - 'Warn: pipCommand not pinned by hash: scripts/install_deps:5'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:326'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:326'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:74'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:74'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:115'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:115'
       - 'Warn: npmCommand not pinned by hash: .github/workflows/build-package.yml:3639'
       - 'Warn: npmCommand not pinned by hash: .github/workflows/build-package.yml:3680'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:619'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:619'
-      - 'Warn: npmCommand not pinned by hash: .github/workflows/build-package.yml:2467'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:197'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:573'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:573'
-      - 'Warn: npmCommand not pinned by hash: .github/workflows/build-package.yml:2704'
-      - 'Warn: npmCommand not pinned by hash: .github/workflows/build-package.yml:2912'
-      - 'Warn: npmCommand not pinned by hash: .github/workflows/build-package.yml:3127'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:36'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:36'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:450'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:450'
-      - 'Warn: npmCommand not pinned by hash: .github/workflows/build-package.yml:3518'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:1191'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:1220'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:74'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:74'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:115'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:115'
+      - 'Warn: npmCommand not pinned by hash: .github/workflows/build-package.yml:3518'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:326'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:326'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:368'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:368'
-      - 'Warn: npmCommand not pinned by hash: .github/workflows/build-package.yml:3737'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:409'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:409'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:450'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:450'
+      - 'Warn: npmCommand not pinned by hash: .github/workflows/build-package.yml:2467'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:36'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:36'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:573'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:573'
       - 'Warn: npmCommand not pinned by hash: .github/workflows/build-package.yml:3389'
       - 'Warn: npmCommand not pinned by hash: .github/workflows/build-package.yml:3433'
       - 'Warn: npmCommand not pinned by hash: .github/workflows/build-package.yml:3454'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:197'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:409'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/build-package.yml:409'
+      - 'Warn: npmCommand not pinned by hash: .github/workflows/build-package.yml:2912'
+      - 'Warn: npmCommand not pinned by hash: .github/workflows/build-package.yml:2704'
+      - 'Warn: npmCommand not pinned by hash: .github/workflows/build-package.yml:3737'
+      - 'Warn: npmCommand not pinned by hash: .github/workflows/build-package.yml:3127'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/publish.yml:100'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/quality-checks.yml:45'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/quality-checks.yml:45'
@@ -549,7 +549,7 @@ checks:
       - 'Warn: pipCommand not pinned by hash: .github/workflows/quality-checks.yml:149'
       - 'Info:   0 out of 181 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of  39 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of  11 npmCommand dependencies pinned'
       - 'Info:   0 out of  15 containerImage dependencies pinned'
       - 'Info:   0 out of  40 pipCommand dependencies pinned'
+      - 'Info:   0 out of  11 npmCommand dependencies pinned'
 ---

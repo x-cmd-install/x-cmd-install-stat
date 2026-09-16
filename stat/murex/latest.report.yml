@@ -7,7 +7,7 @@ about:
   latestVersion: "v7.2.1001"
   latestRelease: "v7.2.1001"
   latestPrerelease: ""
-  collectedAt: 2026-09-15T06:23:37Z
+  collectedAt: 2026-09-16T06:21:16Z
 timeline:
   created: 2017-03-26
   lastCommit: 2026-02-02
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-02-02
   lastPrerelease: 
 popularity:
-  star: 1913
+  star: 1914
   watcher: 18
   fork: 40
   release: 53
@@ -34,7 +34,7 @@ language:
 totalBytes: 2303565
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 0
     mergedPR: 4
     openPR: 0
@@ -42,7 +42,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 0
     mergedPR: 4
     openPR: 0
@@ -50,7 +50,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 0
     mergedPR: 4
     openPR: 0
@@ -58,7 +58,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 0
     mergedPR: 8
     openPR: 1
@@ -66,21 +66,21 @@ recent:
     openIssue: 5
     commit: 0
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 2
-    mergedPR: 22
+    mergedPR: 21
     openPR: 1
     closedIssue: 6
     openIssue: 16
-    commit: 0
+    commit: 150
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 6
     mergedPR: 41
     openPR: 1
     closedIssue: 21
     openIssue: 18
-    commit: 412
+    commit: 406
 total:
   release: 53
   mergedPR: 443
@@ -90,7 +90,7 @@ total:
   commit: 4620
 ---
 path: /home/runner/.x-repo/github.com/lmorg/murex
-collectedAt: 2026-09-15T06:23:48Z
+collectedAt: 2026-09-16T06:21:24Z
 loc:
   Go:
     code: 83210
@@ -158,13 +158,13 @@ total:
   blanks: 29035
   files: 1815
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/lmorg/murex
   commit: 8678ad89405c2bdd2a92b203f026bc3d46abc88f
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.8
 checks:
   - name: Code-Review
@@ -174,6 +174,15 @@ checks:
   - name: Maintained
     score: 1
     reason: 0 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 1
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -186,15 +195,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/murex-downloads.yaml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/murex-tests.yaml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -203,14 +203,6 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: Pinned-Dependencies
     score: 1
     reason: dependency not pinned by hash detected -- score normalized to 1
@@ -257,15 +249,23 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: GNU General Public License v2.0: LICENSE:0'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''master'''
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits

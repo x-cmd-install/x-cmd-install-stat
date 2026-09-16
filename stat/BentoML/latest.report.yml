@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.4.39"
   latestRelease: "v1.4.39"
   latestPrerelease: "v1.4.0a2"
-  collectedAt: 2026-09-15T05:36:06Z
+  collectedAt: 2026-09-16T05:47:07Z
 timeline:
   created: 2019-04-02
   lastCommit: 2026-09-07
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-05-07
   lastPrerelease: 2025-02-14
 popularity:
-  star: 8841
+  star: 8843
   watcher: 85
-  fork: 1033
+  fork: 1032
   release: 194
   contributor: 240
   pullRequest: 4253
-  issue: 1173
+  issue: 1171
 language:
   Python: 2943336
   Shell: 48432
@@ -35,63 +35,63 @@ language:
 totalBytes: 3034420
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 0
     mergedPR: 4
     openPR: 22
     closedIssue: 0
-    openIssue: 4
+    openIssue: 2
     commit: 6
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 0
     mergedPR: 6
     openPR: 37
     closedIssue: 0
-    openIssue: 7
+    openIssue: 5
     commit: 6
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 0
     mergedPR: 6
     openPR: 48
     closedIssue: 0
-    openIssue: 12
+    openIssue: 10
     commit: 6
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 3
     mergedPR: 17
     openPR: 70
     closedIssue: 3
-    openIssue: 16
+    openIssue: 14
     commit: 26
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 15
     mergedPR: 84
     openPR: 71
-    closedIssue: 20
-    openIssue: 20
+    closedIssue: 19
+    openIssue: 18
     commit: 89
   last720d:
-    since: 2024-09-25
-    release: 57
-    mergedPR: 461
+    since: 2024-09-26
+    release: 55
+    mergedPR: 459
     openPR: 71
     closedIssue: 71
-    openIssue: 34
-    commit: 475
+    openIssue: 32
+    commit: 473
 total:
   release: 194
   mergedPR: 3636
   openPR: 71
   closedIssue: 1023
-  openIssue: 150
+  openIssue: 148
   commit: 3762
 ---
 path: /home/runner/.x-repo/github.com/bentoml/BentoML
-collectedAt: 2026-09-15T05:36:19Z
+collectedAt: 2026-09-16T05:47:21Z
 loc:
   Python:
     code: 71674
@@ -209,26 +209,22 @@ total:
   blanks: 18160
   files: 675
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/bentoml/BentoML
   commit: 517b343b81aeb0b01bbd908e58e53ad9c12ef7eb
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 6
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
+  - name: Code-Review
+    score: 5
+    reason: Found 13/25 approved changesets -- score normalized to 5
     details: null
   - name: Maintained
     score: 5
     reason: 6 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5
-    details: null
-  - name: Code-Review
-    score: 5
-    reason: Found 13/25 approved changesets -- score normalized to 5
     details: null
   - name: Security-Policy
     score: 10
@@ -238,6 +234,10 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -258,17 +258,17 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: -1
     reason: no releases found
@@ -287,6 +287,12 @@ checks:
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
       - 'Info: Possibly incomplete results: error parsing shell code: array element values must be words: src/bentoml/_internal/bento/install.sh.j2:0'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:169: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/ci.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:173: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/ci.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:178: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/ci.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:180: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/ci.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:182: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/ci.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:193: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:208: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:212: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:217: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/ci.yml/main?enable=pin'
@@ -310,12 +316,6 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:131: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:133: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:144: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/ci.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:169: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/ci.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:173: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/ci.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:178: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/ci.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:180: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/ci.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:182: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/ci.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:193: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cleanup.yml:11: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/cleanup.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql-analysis.yml:28: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/codeql-analysis.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql-analysis.yml:32: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/codeql-analysis.yml/main?enable=pin'
@@ -344,9 +344,9 @@ checks:
       - 'Warn: downloadThenRun not pinned by hash: .devcontainer/lifecycle/post-start:9'
       - 'Info:   0 out of  29 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of  12 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   9 containerImage dependencies pinned'
       - 'Info:   0 out of   4 pipCommand dependencies pinned'
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
+      - 'Info:   0 out of   9 containerImage dependencies pinned'
   - name: SAST
     score: 9
     reason: SAST tool detected but not run on all commits

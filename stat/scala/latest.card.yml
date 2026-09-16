@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.12.21"
   latestRelease: "v2.12.21"
   latestPrerelease: "v2.13.0-RC3"
-  collectedAt: 2026-09-15T06:35:29Z
+  collectedAt: 2026-09-16T06:31:49Z
 timeline:
   created: 2011-12-01
   lastCommit: 2026-08-24
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2025-12-08
   lastPrerelease: 2019-05-29
 popularity:
-  star: 14561
+  star: 14562
   watcher: 748
-  fork: 3220
+  fork: 3219
   release: 80
   contributor: 600
   pullRequest: 11214
@@ -38,15 +38,15 @@ language:
 totalBytes: 21277816
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 0
-    mergedPR: 8
+    mergedPR: 7
     openPR: 3
     closedIssue: 0
     openIssue: 0
     commit: 4
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 0
     mergedPR: 16
     openPR: 3
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 32
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 0
     mergedPR: 21
     openPR: 3
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 43
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 0
     mergedPR: 44
     openPR: 4
@@ -70,21 +70,21 @@ recent:
     openIssue: 0
     commit: 98
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 3
-    mergedPR: 120
+    mergedPR: 119
     openPR: 8
     closedIssue: 0
     openIssue: 0
     commit: 263
   last720d:
-    since: 2024-09-25
-    release: 5
-    mergedPR: 340
+    since: 2024-09-26
+    release: 4
+    mergedPR: 339
     openPR: 13
     closedIssue: 0
     openIssue: 0
-    commit: 832
+    commit: 830
 total:
   release: 80
   mergedPR: 8733
@@ -94,7 +94,7 @@ total:
   commit: 40718
 ---
 path: /home/runner/.x-repo/github.com/scala/scala
-collectedAt: 2026-09-15T06:36:00Z
+collectedAt: 2026-09-16T06:32:27Z
 loc:
   Scala:
     code: 391946
@@ -192,19 +192,35 @@ total:
   blanks: 78383
   files: 10166
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/scala/scala
   commit: 71440b9225be58c9183a4028af9036dd0fd49673
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.4
 checks:
-  - name: Dangerous-Workflow
+  - name: Maintained
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 8
+    reason: Found 8/9 approved changesets -- score normalized to 8
+    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:13'
+      - 'Warn: no topLevel permission defined: .github/workflows/validate.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Security-Policy
     score: 9
     reason: security policy file detected
@@ -213,41 +229,25 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:13'
-      - 'Warn: no topLevel permission defined: .github/workflows/validate.yml:1'
-      - 'Info: no jobLevel write permissions found'
-  - name: Maintained
+  - name: Dangerous-Workflow
     score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Code-Review
-    score: 8
-    reason: Found 8/9 approved changesets -- score normalized to 8
+    reason: no dangerous workflow patterns detected
     details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -275,10 +275,6 @@ checks:
       - 'Warn: binary detected: test/files/jvm/natives-64.dll:1'
       - 'Warn: binary detected: test/sbt-test/source-dependencies/canon/actual/a.jar:1'
       - 'Warn: binary detected: test/sbt-test/source-dependencies/canon/lib/a.jar:1'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -293,6 +289,10 @@ checks:
       - 'Warn: release artifact v2.13.17 does not have provenance: https://api.github.com/repos/scala/scala/releases/251059820'
       - 'Warn: release artifact v2.13.16 does not have provenance: https://api.github.com/repos/scala/scala/releases/195021856'
       - 'Warn: release artifact v2.13.15 does not have provenance: https://api.github.com/repos/scala/scala/releases/176897281'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

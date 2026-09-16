@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-09-15T04:43:20Z
+  collectedAt: 2026-09-16T04:38:43Z
 timeline:
   created: 2017-03-03
   lastCommit: 2026-09-06
@@ -44,7 +44,7 @@ language:
 totalBytes: 2740851
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 0
     mergedPR: 0
     openPR: 1
@@ -52,7 +52,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 0
     mergedPR: 0
     openPR: 2
@@ -60,7 +60,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 0
     mergedPR: 0
     openPR: 2
@@ -68,7 +68,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 0
     mergedPR: 2
     openPR: 2
@@ -76,7 +76,7 @@ recent:
     openIssue: 3
     commit: 11
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 0
     mergedPR: 2
     openPR: 2
@@ -84,7 +84,7 @@ recent:
     openIssue: 4
     commit: 11
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 0
     mergedPR: 4
     openPR: 3
@@ -100,7 +100,7 @@ total:
   commit: 1046
 ---
 path: /home/runner/.x-repo/github.com/beyondgrep/ack3
-collectedAt: 2026-09-15T04:43:21Z
+collectedAt: 2026-09-16T04:38:45Z
 loc:
   Perl:
     code: 8284
@@ -203,18 +203,22 @@ total:
   blanks: 2852
   files: 126
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/beyondgrep/ack3
   commit: 11d698f9407c6bd5dfcff1c264bf0aa60abacc5d
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
-score: 3.1
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+score: 2.9
 checks:
   - name: Code-Review
     score: 1
     reason: Found 4/21 approved changesets -- score normalized to 1
+    details: null
+  - name: Maintained
+    score: 1
+    reason: 1 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 1
     details: null
   - name: Packaging
     score: -1
@@ -224,10 +228,6 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 3
-    reason: 2 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 3
     details: null
   - name: Token-Permissions
     score: 0
@@ -243,21 +243,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Pinned-Dependencies
-    score: 0
-    reason: dependency not pinned by hash detected -- score normalized to 0
-    details:
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/testsuite.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/beyondgrep/ack3/testsuite.yml/dev?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/testsuite.yml:45: update your workflow using https://app.stepsecurity.io/secureworkflow/beyondgrep/ack3/testsuite.yml/dev?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/testsuite.yml:48: update your workflow using https://app.stepsecurity.io/secureworkflow/beyondgrep/ack3/testsuite.yml/dev?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/testsuite.yml:69: update your workflow using https://app.stepsecurity.io/secureworkflow/beyondgrep/ack3/testsuite.yml/dev?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/testsuite.yml:73: update your workflow using https://app.stepsecurity.io/secureworkflow/beyondgrep/ack3/testsuite.yml/dev?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/testsuite.yml:94: update your workflow using https://app.stepsecurity.io/secureworkflow/beyondgrep/ack3/testsuite.yml/dev?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/testsuite.yml:97: update your workflow using https://app.stepsecurity.io/secureworkflow/beyondgrep/ack3/testsuite.yml/dev?enable=pin'
-      - 'Warn: containerImage not pinned by hash: dev/docker/Dockerfile:1: pin your Docker image by updating perl:5.30 to perl:5.30@sha256:757ea29cf8cccb69b696c5d5e88d93e440b5c0bb8edd4de8dd6f31921fab796b'
-      - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   0 out of   4 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   1 containerImage dependencies pinned'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -266,6 +251,21 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Pinned-Dependencies
+    score: 0
+    reason: dependency not pinned by hash detected -- score normalized to 0
+    details:
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/testsuite.yml:69: update your workflow using https://app.stepsecurity.io/secureworkflow/beyondgrep/ack3/testsuite.yml/dev?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/testsuite.yml:73: update your workflow using https://app.stepsecurity.io/secureworkflow/beyondgrep/ack3/testsuite.yml/dev?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/testsuite.yml:94: update your workflow using https://app.stepsecurity.io/secureworkflow/beyondgrep/ack3/testsuite.yml/dev?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/testsuite.yml:97: update your workflow using https://app.stepsecurity.io/secureworkflow/beyondgrep/ack3/testsuite.yml/dev?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/testsuite.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/beyondgrep/ack3/testsuite.yml/dev?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/testsuite.yml:45: update your workflow using https://app.stepsecurity.io/secureworkflow/beyondgrep/ack3/testsuite.yml/dev?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/testsuite.yml:48: update your workflow using https://app.stepsecurity.io/secureworkflow/beyondgrep/ack3/testsuite.yml/dev?enable=pin'
+      - 'Warn: containerImage not pinned by hash: dev/docker/Dockerfile:1: pin your Docker image by updating perl:5.30 to perl:5.30@sha256:757ea29cf8cccb69b696c5d5e88d93e440b5c0bb8edd4de8dd6f31921fab796b'
+      - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   0 out of   4 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   1 containerImage dependencies pinned'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed

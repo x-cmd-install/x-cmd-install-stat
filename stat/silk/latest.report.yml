@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.3.0"
   latestRelease: "v0.3.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-15T05:50:17Z
+  collectedAt: 2026-09-16T05:46:53Z
 timeline:
   created: 2026-06-25
   lastCommit: 2026-07-19
@@ -27,7 +27,7 @@ language:
 totalBytes: 17260
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 0
     mergedPR: 0
     openPR: 1
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 0
     mergedPR: 1
     openPR: 3
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 2
     mergedPR: 24
     openPR: 8
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 34
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 2
     mergedPR: 24
     openPR: 8
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 34
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 2
     mergedPR: 24
     openPR: 8
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 34
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 2
     mergedPR: 24
     openPR: 8
@@ -83,7 +83,7 @@ total:
   commit: 34
 ---
 path: /home/runner/.x-repo/github.com/ljh-sh/silk
-collectedAt: 2026-09-15T05:50:18Z
+collectedAt: 2026-09-16T05:46:56Z
 loc:
   Rust:
     code: 417
@@ -116,7 +116,7 @@ total:
   blanks: 266
   files: 23
 ---
-date: "2026-09-08T12:14:46Z"
+date: "2026-09-15T12:49:23Z"
 repo:
   name: github.com/ljh-sh/silk
   commit: 049e1871dc260999f5415ea1053b176354f2b9d2
@@ -130,9 +130,9 @@ checks:
     reason: project was created within the last 90 days. Please review its contents carefully
     details:
       - 'Warn: Repository was created within the last 90 days.'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
+  - name: Code-Review
+    score: 1
+    reason: Found 4/23 approved changesets -- score normalized to 1
     details: null
   - name: Security-Policy
     score: 10
@@ -147,10 +147,6 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 1
-    reason: Found 4/23 approved changesets -- score normalized to 1
-    details: null
   - name: Dependency-Update-Tool
     score: 10
     reason: update tool detected
@@ -172,6 +168,10 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/pages.yml:15'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/release.yml:9'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:10'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Pinned-Dependencies
     score: 8
     reason: dependency not pinned by hash detected -- score normalized to 8
@@ -184,10 +184,21 @@ checks:
     score: 10
     reason: 0 existing vulnerabilities detected
     details: null
+  - name: License
+    score: 9
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Warn: project license file does not contain an FSF or OSI license.'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 8
     reason: 2 out of the last 2 releases have a total of 2 signed artifacts.
@@ -202,17 +213,6 @@ checks:
     details:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Warn: 19 commits out of 24 are checked with a SAST tool'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: License
-    score: 9
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Warn: project license file does not contain an FSF or OSI license.'
   - name: Branch-Protection
     score: 8
     reason: branch protection is not maximal on development and all release branches

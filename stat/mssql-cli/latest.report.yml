@@ -7,7 +7,7 @@ about:
   latestVersion: "1.0"
   latestRelease: "1.0"
   latestPrerelease: "0.18.1"
-  collectedAt: 2026-09-15T04:57:19Z
+  collectedAt: 2026-09-16T05:08:17Z
 timeline:
   created: 2017-10-13
   lastCommit: 2023-04-11
@@ -31,7 +31,7 @@ language:
 totalBytes: 535803
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -39,7 +39,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -47,7 +47,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -55,7 +55,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 0
     mergedPR: 0
     openPR: 0
@@ -63,7 +63,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 0
     mergedPR: 0
     openPR: 0
@@ -71,7 +71,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 0
     mergedPR: 0
     openPR: 0
@@ -87,7 +87,7 @@ total:
   commit: 402
 ---
 path: /home/runner/.x-repo/github.com/dbcli/mssql-cli
-collectedAt: 2026-09-15T04:57:36Z
+collectedAt: 2026-09-16T05:08:36Z
 loc:
   Python:
     code: 11170
@@ -160,24 +160,15 @@ total:
   blanks: 3227
   files: 154
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/dbcli/mssql-cli
   commit: 67a3a4364383d11776bb0a397ceae7bc19200e41
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 2.1
 checks:
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Token-Permissions
-    score: -1
-    reason: No tokens found
-    details: null
   - name: Code-Review
     score: 4
     reason: Found 7/17 approved changesets -- score normalized to 4
@@ -190,6 +181,15 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Token-Permissions
+    score: -1
+    reason: No tokens found
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -198,6 +198,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -206,17 +211,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact 0.18.0 not signed: https://api.github.com/repos/dbcli/mssql-cli/releases/22837618'
-      - 'Warn: release artifact 0.18.0 does not have provenance: https://api.github.com/repos/dbcli/mssql-cli/releases/22837618'
   - name: License
     score: 10
     reason: license file detected
@@ -234,6 +228,12 @@ checks:
       - 'Warn: pipCommand not pinned by hash: build_scripts/rpm/Dockerfile:16'
       - 'Info:   0 out of   2 pipCommand dependencies pinned'
       - 'Info:   0 out of   3 containerImage dependencies pinned'
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact 0.18.0 not signed: https://api.github.com/repos/dbcli/mssql-cli/releases/22837618'
+      - 'Warn: release artifact 0.18.0 does not have provenance: https://api.github.com/repos/dbcli/mssql-cli/releases/22837618'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches

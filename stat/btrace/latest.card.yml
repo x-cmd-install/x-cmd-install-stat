@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.2.6"
   latestRelease: "v2.2.6"
   latestPrerelease: ""
-  collectedAt: 2026-09-15T06:07:03Z
+  collectedAt: 2026-09-16T06:01:29Z
 timeline:
   created: 2014-08-28
   lastCommit: 2026-09-14
@@ -34,23 +34,23 @@ language:
 totalBytes: 4592822
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 0
-    mergedPR: 9
+    mergedPR: 8
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 8
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 0
-    mergedPR: 40
+    mergedPR: 37
     openPR: 2
     closedIssue: 4
     openIssue: 1
     commit: 35
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 0
     mergedPR: 68
     openPR: 3
@@ -58,7 +58,7 @@ recent:
     openIssue: 1
     commit: 91
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 0
     mergedPR: 98
     openPR: 4
@@ -66,7 +66,7 @@ recent:
     openIssue: 1
     commit: 207
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 0
     mergedPR: 154
     openPR: 4
@@ -74,7 +74,7 @@ recent:
     openIssue: 1
     commit: 364
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 1
     mergedPR: 177
     openPR: 4
@@ -90,7 +90,7 @@ total:
   commit: 1942
 ---
 path: /home/runner/.x-repo/github.com/btraceio/btrace
-collectedAt: 2026-09-15T06:07:06Z
+collectedAt: 2026-09-16T06:01:34Z
 loc:
   Java:
     code: 85094
@@ -168,13 +168,13 @@ total:
   blanks: 23138
   files: 1035
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/btraceio/btrace
-  commit: 9f3c9c7f24dd526a869f7d20707b8e5534038e8e
+  commit: 2a1346f0a3a2705bfcfe3ebcb1861f483fd14520
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 5.5
 checks:
   - name: Security-Policy
@@ -185,13 +185,17 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Code-Review
-    score: 0
-    reason: Found 1/17 approved changesets -- score normalized to 0
-    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 29 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Code-Review
+    score: 0
+    reason: Found 0/14 approved changesets -- score normalized to 0
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Binary-Artifacts
     score: 8
@@ -199,10 +203,6 @@ checks:
     details:
       - 'Warn: binary detected: btrace-dist/src/main/resources/libs/amd64/libbtrace.so:1'
       - 'Warn: binary detected: gradle/wrapper/gradle-wrapper.jar:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -211,10 +211,10 @@ checks:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:29'
       - 'Warn: no topLevel permission defined: .github/workflows/codeql-analysis.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/continuous.yml:1'
-      - 'Info: topLevel ''statuses'' permission set to ''read'': .github/workflows/dependency-auto-merge.yml:17'
       - 'Info: topLevel ''actions'' permission set to ''read'': .github/workflows/dependency-auto-merge.yml:13'
       - 'Info: topLevel ''checks'' permission set to ''read'': .github/workflows/dependency-auto-merge.yml:14'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/dependency-auto-merge.yml:15'
+      - 'Info: topLevel ''statuses'' permission set to ''read'': .github/workflows/dependency-auto-merge.yml:17'
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/sdkman-set-default.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/stale.yml:1'
@@ -255,11 +255,11 @@ checks:
     score: 8
     reason: dependency not pinned by hash detected -- score normalized to 8
     details:
-      - 'Warn: containerImage not pinned by hash: docker/Dockerfile:3: pin your Docker image by updating bellsoft/liberica-openjdk-debian:11.0.30-cds to bellsoft/liberica-openjdk-debian:11.0.30-cds@sha256:6f5eabfdeb03e6d13434f755cb3ac37d372e7248f83156e038cc997c3e33f6e9'
-      - 'Warn: containerImage not pinned by hash: docker/Dockerfile.alpine:3: pin your Docker image by updating alpine:3.23 to alpine:3.23@sha256:fd791d74b68913cbb027c6546007b3f0d3bc45125f797758156952bc2d6daf40'
+      - 'Warn: containerImage not pinned by hash: docker/Dockerfile:3: pin your Docker image by updating bellsoft/liberica-openjdk-debian:11.0.32.1-cds to bellsoft/liberica-openjdk-debian:11.0.32.1-cds@sha256:fde5f53b3688d1765206d90dbdb1a960fa97cc80a4e736a5a20a06d2167fe170'
+      - 'Warn: containerImage not pinned by hash: docker/Dockerfile.alpine:3: pin your Docker image by updating alpine:3.24 to alpine:3.24@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
       - 'Warn: containerImage not pinned by hash: docker/Dockerfile.distroless:4: pin your Docker image by updating gcr.io/distroless/java11-debian11 to gcr.io/distroless/java11-debian11@sha256:56ffee16297ae1d3484bd47575cacd8102e5ba2be425a7772b3f8ad0d48def3b'
       - 'Warn: containerImage not pinned by hash: docs/tutorials/demo/Dockerfile.k8s-sidecar-demo:10'
-      - 'Warn: containerImage not pinned by hash: docs/tutorials/demo/Dockerfile.k8s-sidecar-demo:15: pin your Docker image by updating bellsoft/liberica-openjdk-debian:11.0.30-cds to bellsoft/liberica-openjdk-debian:11.0.30-cds@sha256:6f5eabfdeb03e6d13434f755cb3ac37d372e7248f83156e038cc997c3e33f6e9'
+      - 'Warn: containerImage not pinned by hash: docs/tutorials/demo/Dockerfile.k8s-sidecar-demo:15: pin your Docker image by updating bellsoft/liberica-openjdk-debian:11.0.32.1-cds to bellsoft/liberica-openjdk-debian:11.0.32.1-cds@sha256:fde5f53b3688d1765206d90dbdb1a960fa97cc80a4e736a5a20a06d2167fe170'
       - 'Warn: downloadThenRun not pinned by hash: .github/workflows/continuous.yml:122'
       - 'Warn: downloadThenRun not pinned by hash: .github/workflows/release.yml:868'
       - 'Warn: downloadThenRun not pinned by hash: .github/workflows/release.yml:306'
@@ -296,15 +296,15 @@ checks:
       - 'Info: PRs are required in order to make changes on branch ''develop'''
       - 'Warn: PRs are not required to make changes on branch ''release/2.2.4''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
       - 'Warn: PRs are not required to make changes on branch ''release/2.0.3''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/continuous.yml:180'
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits
     details:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Info: all commits (30) are checked with a SAST tool'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/continuous.yml:180'
 ---

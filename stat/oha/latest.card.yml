@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.16.0"
   latestRelease: "v1.16.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-15T04:52:54Z
+  collectedAt: 2026-09-16T04:47:50Z
 timeline:
   created: 2020-03-02
   lastCommit: 2026-09-10
@@ -29,7 +29,7 @@ language:
 totalBytes: 330303
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 1
     mergedPR: 5
     openPR: 1
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 12
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 1
     mergedPR: 7
     openPR: 1
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 17
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 2
     mergedPR: 11
     openPR: 1
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 26
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 2
     mergedPR: 14
     openPR: 2
@@ -61,15 +61,15 @@ recent:
     openIssue: 1
     commit: 41
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 7
     mergedPR: 49
     openPR: 16
-    closedIssue: 12
+    closedIssue: 11
     openIssue: 7
     commit: 110
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 14
     mergedPR: 143
     openPR: 17
@@ -85,7 +85,7 @@ total:
   commit: 1652
 ---
 path: /home/runner/.x-repo/github.com/hatoo/oha
-collectedAt: 2026-09-15T04:52:56Z
+collectedAt: 2026-09-16T04:47:52Z
 loc:
   Rust:
     code: 8148
@@ -123,26 +123,26 @@ total:
   blanks: 1088
   files: 27
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/hatoo/oha
-  commit: 4efba2d113d165aaaf7533f5d2893e7cc57ebfc1
+  commit: 0d6d370ed37108385d79a4ce34c0b8a8d7c9b6fe
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.3
 checks:
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Code-Review
     score: 1
-    reason: Found 1/9 approved changesets -- score normalized to 1
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
+    reason: Found 1/10 approved changesets -- score normalized to 1
     details: null
   - name: Dangerous-Workflow
     score: 10
@@ -180,19 +180,37 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v1.16.0 not signed: https://api.github.com/repos/hatoo/oha/releases/375163479'
+      - 'Warn: release artifact v1.15.0 not signed: https://api.github.com/repos/hatoo/oha/releases/352453034'
+      - 'Warn: release artifact v1.14.0 not signed: https://api.github.com/repos/hatoo/oha/releases/291599253'
+      - 'Warn: release artifact v1.13.0 not signed: https://api.github.com/repos/hatoo/oha/releases/283999888'
+      - 'Warn: release artifact v1.12.1 not signed: https://api.github.com/repos/hatoo/oha/releases/270629551'
+      - 'Warn: release artifact v1.16.0 does not have provenance: https://api.github.com/repos/hatoo/oha/releases/375163479'
+      - 'Warn: release artifact v1.15.0 does not have provenance: https://api.github.com/repos/hatoo/oha/releases/352453034'
+      - 'Warn: release artifact v1.14.0 does not have provenance: https://api.github.com/repos/hatoo/oha/releases/291599253'
+      - 'Warn: release artifact v1.13.0 does not have provenance: https://api.github.com/repos/hatoo/oha/releases/283999888'
+      - 'Warn: release artifact v1.12.1 does not have provenance: https://api.github.com/repos/hatoo/oha/releases/270629551'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/CI.yml:44: update your workflow using https://app.stepsecurity.io/secureworkflow/hatoo/oha/CI.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/CI.yml:45: update your workflow using https://app.stepsecurity.io/secureworkflow/hatoo/oha/CI.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/CI.yml:48: update your workflow using https://app.stepsecurity.io/secureworkflow/hatoo/oha/CI.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/CI.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/hatoo/oha/CI.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/CI.yml:24: update your workflow using https://app.stepsecurity.io/secureworkflow/hatoo/oha/CI.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/CI.yml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/hatoo/oha/CI.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/CI.yml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/hatoo/oha/CI.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/CI.yml:33: update your workflow using https://app.stepsecurity.io/secureworkflow/hatoo/oha/CI.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/CI.yml:34: update your workflow using https://app.stepsecurity.io/secureworkflow/hatoo/oha/CI.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/CI.yml:44: update your workflow using https://app.stepsecurity.io/secureworkflow/hatoo/oha/CI.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/CI.yml:45: update your workflow using https://app.stepsecurity.io/secureworkflow/hatoo/oha/CI.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/CI.yml:48: update your workflow using https://app.stepsecurity.io/secureworkflow/hatoo/oha/CI.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release-pgo.yml:46: update your workflow using https://app.stepsecurity.io/secureworkflow/hatoo/oha/release-pgo.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-pgo.yml:47: update your workflow using https://app.stepsecurity.io/secureworkflow/hatoo/oha/release-pgo.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release-pgo.yml:51: update your workflow using https://app.stepsecurity.io/secureworkflow/hatoo/oha/release-pgo.yml/master?enable=pin'
@@ -213,31 +231,13 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:106: update your workflow using https://app.stepsecurity.io/secureworkflow/hatoo/oha/release.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:114: update your workflow using https://app.stepsecurity.io/secureworkflow/hatoo/oha/release.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:124: update your workflow using https://app.stepsecurity.io/secureworkflow/hatoo/oha/release.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:2: pin your Docker image by updating docker.io/library/rust:slim to docker.io/library/rust:slim@sha256:17d1ba895198f9934c6314ec5346a0d5115372f3243390c3d731e242f35c2f27'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:2: pin your Docker image by updating docker.io/library/rust:slim to docker.io/library/rust:slim@sha256:bce1476d4be4d78b83705bc5f428b86d640eeeea33e9dadafbc037b5703a53bf'
       - 'Warn: containerImage not pinned by hash: Dockerfile:12'
       - 'Warn: containerImage not pinned by hash: Dockerfile:16'
       - 'Warn: containerImage not pinned by hash: Dockerfile:25'
       - 'Info:   0 out of   8 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of  21 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 containerImage dependencies pinned'
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v1.16.0 not signed: https://api.github.com/repos/hatoo/oha/releases/375163479'
-      - 'Warn: release artifact v1.15.0 not signed: https://api.github.com/repos/hatoo/oha/releases/352453034'
-      - 'Warn: release artifact v1.14.0 not signed: https://api.github.com/repos/hatoo/oha/releases/291599253'
-      - 'Warn: release artifact v1.13.0 not signed: https://api.github.com/repos/hatoo/oha/releases/283999888'
-      - 'Warn: release artifact v1.12.1 not signed: https://api.github.com/repos/hatoo/oha/releases/270629551'
-      - 'Warn: release artifact v1.16.0 does not have provenance: https://api.github.com/repos/hatoo/oha/releases/375163479'
-      - 'Warn: release artifact v1.15.0 does not have provenance: https://api.github.com/repos/hatoo/oha/releases/352453034'
-      - 'Warn: release artifact v1.14.0 does not have provenance: https://api.github.com/repos/hatoo/oha/releases/291599253'
-      - 'Warn: release artifact v1.13.0 does not have provenance: https://api.github.com/repos/hatoo/oha/releases/283999888'
-      - 'Warn: release artifact v1.12.1 does not have provenance: https://api.github.com/repos/hatoo/oha/releases/270629551'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

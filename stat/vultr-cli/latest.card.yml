@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.11.0"
   latestRelease: "v3.11.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-15T05:58:38Z
+  collectedAt: 2026-09-16T06:00:17Z
 timeline:
   created: 2019-05-31
   lastCommit: 2026-08-18
@@ -30,7 +30,7 @@ language:
 totalBytes: 793682
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 0
     mergedPR: 0
     openPR: 2
@@ -38,7 +38,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 1
     mergedPR: 5
     openPR: 2
@@ -46,7 +46,7 @@ recent:
     openIssue: 1
     commit: 4
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 1
     mergedPR: 5
     openPR: 2
@@ -54,7 +54,7 @@ recent:
     openIssue: 1
     commit: 5
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 3
     mergedPR: 21
     openPR: 2
@@ -62,7 +62,7 @@ recent:
     openIssue: 1
     commit: 21
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 3
     mergedPR: 34
     openPR: 2
@@ -70,7 +70,7 @@ recent:
     openIssue: 1
     commit: 34
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 8
     mergedPR: 99
     openPR: 2
@@ -86,7 +86,7 @@ total:
   commit: 718
 ---
 path: /home/runner/.x-repo/github.com/vultr/vultr-cli
-collectedAt: 2026-09-15T05:58:40Z
+collectedAt: 2026-09-16T06:00:19Z
 loc:
   Go:
     code: 23463
@@ -119,22 +119,18 @@ total:
   blanks: 4413
   files: 79
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/vultr/vultr-cli
   commit: e996e096242b366daa228a2fa2f7e295cfdfbb79
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 2.6
 checks:
   - name: Code-Review
     score: 3
     reason: Found 9/27 approved changesets -- score normalized to 3
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
     details: null
   - name: Maintained
     score: 4
@@ -145,6 +141,10 @@ checks:
     reason: dangerous workflow patterns detected
     details:
       - 'Warn: script injection with untrusted input '' github.event.head_commit.message '': .github/workflows/releaser.yml:19'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -170,32 +170,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v3.11.0 not signed: https://api.github.com/repos/vultr/vultr-cli/releases/366867166'
-      - 'Warn: release artifact v3.10.0 not signed: https://api.github.com/repos/vultr/vultr-cli/releases/310070498'
-      - 'Warn: release artifact v3.9.2 not signed: https://api.github.com/repos/vultr/vultr-cli/releases/302040347'
-      - 'Warn: release artifact v3.8.0 not signed: https://api.github.com/repos/vultr/vultr-cli/releases/248725926'
-      - 'Warn: release artifact v3.7.0 not signed: https://api.github.com/repos/vultr/vultr-cli/releases/244530855'
-      - 'Warn: release artifact v3.11.0 does not have provenance: https://api.github.com/repos/vultr/vultr-cli/releases/366867166'
-      - 'Warn: release artifact v3.10.0 does not have provenance: https://api.github.com/repos/vultr/vultr-cli/releases/310070498'
-      - 'Warn: release artifact v3.9.2 does not have provenance: https://api.github.com/repos/vultr/vultr-cli/releases/302040347'
-      - 'Warn: release artifact v3.8.0 does not have provenance: https://api.github.com/repos/vultr/vultr-cli/releases/248725926'
-      - 'Warn: release artifact v3.7.0 does not have provenance: https://api.github.com/repos/vultr/vultr-cli/releases/244530855'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -220,6 +194,32 @@ checks:
       - 'Info:   0 out of   7 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   7 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 containerImage dependencies pinned'
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v3.11.0 not signed: https://api.github.com/repos/vultr/vultr-cli/releases/366867166'
+      - 'Warn: release artifact v3.10.0 not signed: https://api.github.com/repos/vultr/vultr-cli/releases/310070498'
+      - 'Warn: release artifact v3.9.2 not signed: https://api.github.com/repos/vultr/vultr-cli/releases/302040347'
+      - 'Warn: release artifact v3.8.0 not signed: https://api.github.com/repos/vultr/vultr-cli/releases/248725926'
+      - 'Warn: release artifact v3.7.0 not signed: https://api.github.com/repos/vultr/vultr-cli/releases/244530855'
+      - 'Warn: release artifact v3.11.0 does not have provenance: https://api.github.com/repos/vultr/vultr-cli/releases/366867166'
+      - 'Warn: release artifact v3.10.0 does not have provenance: https://api.github.com/repos/vultr/vultr-cli/releases/310070498'
+      - 'Warn: release artifact v3.9.2 does not have provenance: https://api.github.com/repos/vultr/vultr-cli/releases/302040347'
+      - 'Warn: release artifact v3.8.0 does not have provenance: https://api.github.com/repos/vultr/vultr-cli/releases/248725926'
+      - 'Warn: release artifact v3.7.0 does not have provenance: https://api.github.com/repos/vultr/vultr-cli/releases/244530855'
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Packaging
     score: 10
     reason: packaging workflow detected

@@ -7,7 +7,7 @@ about:
   latestVersion: "v4.5.1"
   latestRelease: "v4.5.1"
   latestPrerelease: "v2.1.3"
-  collectedAt: 2026-09-15T05:36:29Z
+  collectedAt: 2026-09-16T05:12:50Z
 timeline:
   created: 2018-08-09
   lastCommit: 2026-09-08
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-06
   lastPrerelease: 2022-08-17
 popularity:
-  star: 3820
+  star: 3821
   watcher: 15
   fork: 194
   release: 131
@@ -33,7 +33,7 @@ language:
 totalBytes: 677489
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 1
     mergedPR: 3
     openPR: 0
@@ -41,15 +41,15 @@ recent:
     openIssue: 0
     commit: 14
   last60d:
-    since: 2026-07-17
-    release: 2
+    since: 2026-07-18
+    release: 1
     mergedPR: 4
     openPR: 0
     closedIssue: 1
     openIssue: 0
     commit: 14
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 3
     mergedPR: 11
     openPR: 0
@@ -57,7 +57,7 @@ recent:
     openIssue: 0
     commit: 42
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 4
     mergedPR: 14
     openPR: 0
@@ -65,7 +65,7 @@ recent:
     openIssue: 1
     commit: 49
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 6
     mergedPR: 22
     openPR: 0
@@ -73,13 +73,13 @@ recent:
     openIssue: 2
     commit: 90
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 18
     mergedPR: 73
     openPR: 1
     closedIssue: 51
     openIssue: 6
-    commit: 432
+    commit: 423
 total:
   release: 131
   mergedPR: 432
@@ -89,7 +89,7 @@ total:
   commit: 2535
 ---
 path: /home/runner/.x-repo/github.com/marp-team/marp-cli
-collectedAt: 2026-09-15T05:36:32Z
+collectedAt: 2026-09-16T05:12:55Z
 loc:
   Json:
     code: 19787
@@ -157,13 +157,13 @@ total:
   blanks: 5021
   files: 238
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/marp-team/marp-cli
   commit: ffc4128626cbc64965fe1cc805717c6d4438c384
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.3
 checks:
   - name: Code-Review
@@ -172,15 +172,11 @@ checks:
     details: null
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 4 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -190,21 +186,25 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/github-release.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/test-win.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 1
     reason: dependency not pinned by hash detected -- score normalized to 1
@@ -241,10 +241,6 @@ checks:
       - 'Info:   0 out of  15 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
       - 'Info:   3 out of   4 npmCommand dependencies pinned'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -259,6 +255,10 @@ checks:
       - 'Warn: release artifact v4.4.1 does not have provenance: https://api.github.com/repos/marp-team/marp-cli/releases/349001653'
       - 'Warn: release artifact v4.4.0 does not have provenance: https://api.github.com/repos/marp-team/marp-cli/releases/318528035'
       - 'Warn: release artifact v4.3.1 does not have provenance: https://api.github.com/repos/marp-team/marp-cli/releases/297578147'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -267,15 +267,15 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 24 are checked with a SAST tool'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/build-image.yml:15'
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 24 are checked with a SAST tool'
 ---
-{"id":383416297,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCJdAbc4W2nfp","tag_name":"v4.5.1","target_commitish":"main","name":"v4.5.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-06T00:28:16Z","updated_at":"2026-09-06T00:37:30Z","published_at":"2026-09-06T00:33:58Z","assets":[{"id":546511392,"node_id":"RA_kwDOCJdAbc4gkxog","name":"marp-cli-v4.5.1-linux-arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":48644453,"digest":"sha256:a360f1e37fce442ee7aa0d0e0a2f86cc239d9f431861c7f5469ccdc78ffe5fc7","download_count":109,"created_at":"2026-09-06T00:35:58Z","updated_at":"2026-09-06T00:35:59Z"},{"id":546511887,"node_id":"RA_kwDOCJdAbc4gkxwP","name":"marp-cli-v4.5.1-linux.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":49064724,"digest":"sha256:2fc36a8799450d28fe0c91194c1bc690d487051eae4b81b239b741a7a9a4b7da","download_count":618,"created_at":"2026-09-06T00:36:18Z","updated_at":"2026-09-06T00:36:20Z"},{"id":546511603,"node_id":"RA_kwDOCJdAbc4gkxrz","name":"marp-cli-v4.5.1-mac.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":46785375,"digest":"sha256:c012c91e2e6b130c8352522631b1597f156547a1dc961f5ce121839cf003f4b7","download_count":157,"created_at":"2026-09-06T00:36:06Z","updated_at":"2026-09-06T00:36:08Z"},{"id":546513453,"node_id":"RA_kwDOCJdAbc4gkyIt","name":"marp-cli-v4.5.1-win.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":47070928,"digest":"sha256:34f3eac66899c5d715bcd82248c6ceb063fa60c523931f15c4aa1e03e909cafa","download_count":459,"created_at":"2026-09-06T00:37:28Z","updated_at":"2026-09-06T00:37:30Z"}],"body":"### Changed\n\n- Optimize the size of standalone binaries ([#736](https://github.com/marp-team/marp-cli/pull/736))\n- Use Node.js native TypeScript support in the standalone binary ([#736](https://github.com/marp-team/marp-cli/pull/736))\n- Prefer the full build [`@marp-team/marp-core/full`](https://github.com/marp-team/marp-core#entrypoints) if the user has installed [Marp Core v5](https://github.com/marp-team/marp-core/releases/tag/v5.0.0) ([#739](https://github.com/marp-team/marp-cli/pull/739))\n- Upgrade Node.js and dependent packages ([#738](https://github.com/marp-team/marp-cli/pull/738))"}
+{"id":383416297,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCJdAbc4W2nfp","tag_name":"v4.5.1","target_commitish":"main","name":"v4.5.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-06T00:28:16Z","updated_at":"2026-09-06T00:37:30Z","published_at":"2026-09-06T00:33:58Z","assets":[{"id":546511392,"node_id":"RA_kwDOCJdAbc4gkxog","name":"marp-cli-v4.5.1-linux-arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":48644453,"digest":"sha256:a360f1e37fce442ee7aa0d0e0a2f86cc239d9f431861c7f5469ccdc78ffe5fc7","download_count":116,"created_at":"2026-09-06T00:35:58Z","updated_at":"2026-09-06T00:35:59Z"},{"id":546511887,"node_id":"RA_kwDOCJdAbc4gkxwP","name":"marp-cli-v4.5.1-linux.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":49064724,"digest":"sha256:2fc36a8799450d28fe0c91194c1bc690d487051eae4b81b239b741a7a9a4b7da","download_count":664,"created_at":"2026-09-06T00:36:18Z","updated_at":"2026-09-06T00:36:20Z"},{"id":546511603,"node_id":"RA_kwDOCJdAbc4gkxrz","name":"marp-cli-v4.5.1-mac.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":46785375,"digest":"sha256:c012c91e2e6b130c8352522631b1597f156547a1dc961f5ce121839cf003f4b7","download_count":163,"created_at":"2026-09-06T00:36:06Z","updated_at":"2026-09-06T00:36:08Z"},{"id":546513453,"node_id":"RA_kwDOCJdAbc4gkyIt","name":"marp-cli-v4.5.1-win.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":47070928,"digest":"sha256:34f3eac66899c5d715bcd82248c6ceb063fa60c523931f15c4aa1e03e909cafa","download_count":490,"created_at":"2026-09-06T00:37:28Z","updated_at":"2026-09-06T00:37:30Z"}],"body":"### Changed\n\n- Optimize the size of standalone binaries ([#736](https://github.com/marp-team/marp-cli/pull/736))\n- Use Node.js native TypeScript support in the standalone binary ([#736](https://github.com/marp-team/marp-cli/pull/736))\n- Prefer the full build [`@marp-team/marp-core/full`](https://github.com/marp-team/marp-core#entrypoints) if the user has installed [Marp Core v5](https://github.com/marp-team/marp-core/releases/tag/v5.0.0) ([#739](https://github.com/marp-team/marp-cli/pull/739))\n- Upgrade Node.js and dependent packages ([#738](https://github.com/marp-team/marp-cli/pull/738))"}

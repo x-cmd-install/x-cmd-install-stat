@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.3.4"
   latestRelease: "v1.3.4"
   latestPrerelease: ""
-  collectedAt: 2026-09-15T05:19:08Z
+  collectedAt: 2026-09-16T05:19:08Z
 timeline:
   created: 2020-09-15
   lastCommit: 2026-09-13
@@ -20,70 +20,70 @@ popularity:
   fork: 22
   release: 27
   contributor: 7
-  pullRequest: 285
+  pullRequest: 289
   issue: 26
 language:
   Rust: 26344
 totalBytes: 26344
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 0
     mergedPR: 0
-    openPR: 0
+    openPR: 4
     closedIssue: 1
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 0
     mergedPR: 4
-    openPR: 0
+    openPR: 4
     closedIssue: 1
     openIssue: 0
     commit: 3
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 0
     mergedPR: 6
-    openPR: 0
+    openPR: 4
     closedIssue: 1
     openIssue: 0
     commit: 6
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 0
     mergedPR: 10
-    openPR: 0
+    openPR: 4
     closedIssue: 1
     openIssue: 0
     commit: 11
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 0
     mergedPR: 20
-    openPR: 0
+    openPR: 4
     closedIssue: 1
     openIssue: 1
     commit: 23
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 1
     mergedPR: 30
-    openPR: 0
+    openPR: 4
     closedIssue: 1
     openIssue: 1
     commit: 37
 total:
   release: 27
   mergedPR: 144
-  openPR: 0
+  openPR: 4
   closedIssue: 18
   openIssue: 8
   commit: 302
 ---
 path: /home/runner/.x-repo/github.com/wfxr/csview
-collectedAt: 2026-09-15T05:19:09Z
+collectedAt: 2026-09-16T05:19:09Z
 loc:
   Rust:
     code: 734
@@ -131,36 +131,44 @@ total:
   blanks: 337
   files: 21
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/wfxr/csview
-  commit: d674cab791bcd545b96ad2f5526cfe0e51d50a3a
+  commit: cb2178a62d8532ed8ef390a655111b85db03a040
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
-score: 2.6
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+score: 3.1
 checks:
   - name: Code-Review
     score: 1
-    reason: Found 1/8 approved changesets -- score normalized to 1
+    reason: Found 1/6 approved changesets -- score normalized to 1
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Maintained
+    score: 5
+    reason: 6 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 5
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/CICD.yml:72'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:13'
+      - 'Warn: no topLevel permission defined: .github/workflows/CICD.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -179,18 +187,18 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:35: update your workflow using https://app.stepsecurity.io/secureworkflow/wfxr/csview/release.yml/master?enable=pin'
       - 'Info:   0 out of   6 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   6 third-party GitHubAction dependencies pinned'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/CICD.yml:72'
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:13'
-      - 'Warn: no topLevel permission defined: .github/workflows/CICD.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -202,14 +210,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE-APACHE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE-APACHE:0'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
@@ -233,6 +233,6 @@ checks:
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
-      - 'Warn: 0 commits out of 25 are checked with a SAST tool'
+      - 'Warn: 0 commits out of 27 are checked with a SAST tool'
 ---
-{"id":192568325,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOEZ7Hns4LelwF","tag_name":"v1.3.4","target_commitish":"master","name":"v1.3.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2024-12-28T13:30:22Z","updated_at":"2024-12-28T13:33:50Z","published_at":"2024-12-28T13:31:01Z","assets":[{"id":216375064,"node_id":"RA_kwDOEZ7Hns4M5Z8Y","name":"csview-musl_1.3.4_amd64.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":380148,"digest":null,"download_count":83,"created_at":"2024-12-28T13:32:34Z","updated_at":"2024-12-28T13:32:34Z"},{"id":216375037,"node_id":"RA_kwDOEZ7Hns4M5Z79","name":"csview-musl_1.3.4_arm64.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":371932,"digest":null,"download_count":10,"created_at":"2024-12-28T13:32:08Z","updated_at":"2024-12-28T13:32:09Z"},{"id":216375066,"node_id":"RA_kwDOEZ7Hns4M5Z8a","name":"csview-musl_1.3.4_armhf.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":380260,"digest":null,"download_count":10,"created_at":"2024-12-28T13:32:35Z","updated_at":"2024-12-28T13:32:35Z"},{"id":216375041,"node_id":"RA_kwDOEZ7Hns4M5Z8B","name":"csview-musl_1.3.4_i686.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":393976,"digest":null,"download_count":11,"created_at":"2024-12-28T13:32:11Z","updated_at":"2024-12-28T13:32:12Z"},{"id":216374994,"node_id":"RA_kwDOEZ7Hns4M5Z7S","name":"csview-v1.3.4-aarch64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":392540,"digest":null,"download_count":518,"created_at":"2024-12-28T13:31:41Z","updated_at":"2024-12-28T13:31:41Z"},{"id":216375052,"node_id":"RA_kwDOEZ7Hns4M5Z8M","name":"csview-v1.3.4-aarch64-unknown-linux-gnu.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":457451,"digest":null,"download_count":164,"created_at":"2024-12-28T13:32:23Z","updated_at":"2024-12-28T13:32:23Z"},{"id":216375038,"node_id":"RA_kwDOEZ7Hns4M5Z7-","name":"csview-v1.3.4-aarch64-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":507506,"digest":null,"download_count":44,"created_at":"2024-12-28T13:32:08Z","updated_at":"2024-12-28T13:32:09Z"},{"id":216375069,"node_id":"RA_kwDOEZ7Hns4M5Z8d","name":"csview-v1.3.4-arm-unknown-linux-gnueabihf.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":487621,"digest":null,"download_count":5,"created_at":"2024-12-28T13:32:37Z","updated_at":"2024-12-28T13:32:37Z"},{"id":216375065,"node_id":"RA_kwDOEZ7Hns4M5Z8Z","name":"csview-v1.3.4-arm-unknown-linux-musleabihf.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":521128,"digest":null,"download_count":8,"created_at":"2024-12-28T13:32:35Z","updated_at":"2024-12-28T13:32:35Z"},{"id":216375151,"node_id":"RA_kwDOEZ7Hns4M5Z9v","name":"csview-v1.3.4-i686-pc-windows-msvc.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":329904,"digest":null,"download_count":115,"created_at":"2024-12-28T13:33:50Z","updated_at":"2024-12-28T13:33:50Z"},{"id":216375049,"node_id":"RA_kwDOEZ7Hns4M5Z8J","name":"csview-v1.3.4-i686-unknown-linux-gnu.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":453807,"digest":null,"download_count":17,"created_at":"2024-12-28T13:32:17Z","updated_at":"2024-12-28T13:32:17Z"},{"id":216375040,"node_id":"RA_kwDOEZ7Hns4M5Z8A","name":"csview-v1.3.4-i686-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":492989,"digest":null,"download_count":27,"created_at":"2024-12-28T13:32:11Z","updated_at":"2024-12-28T13:32:11Z"},{"id":216375067,"node_id":"RA_kwDOEZ7Hns4M5Z8b","name":"csview-v1.3.4-x86_64-pc-windows-msvc.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":351139,"digest":null,"download_count":758,"created_at":"2024-12-28T13:32:37Z","updated_at":"2024-12-28T13:32:37Z"},{"id":216375060,"node_id":"RA_kwDOEZ7Hns4M5Z8U","name":"csview-v1.3.4-x86_64-unknown-linux-gnu.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":433391,"digest":null,"download_count":1468,"created_at":"2024-12-28T13:32:29Z","updated_at":"2024-12-28T13:32:30Z"},{"id":216375063,"node_id":"RA_kwDOEZ7Hns4M5Z8X","name":"csview-v1.3.4-x86_64-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":482975,"digest":null,"download_count":163,"created_at":"2024-12-28T13:32:34Z","updated_at":"2024-12-28T13:32:34Z"},{"id":216375059,"node_id":"RA_kwDOEZ7Hns4M5Z8T","name":"csview_1.3.4_amd64.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":340608,"digest":null,"download_count":1529,"created_at":"2024-12-28T13:32:29Z","updated_at":"2024-12-28T13:32:30Z"},{"id":216375053,"node_id":"RA_kwDOEZ7Hns4M5Z8N","name":"csview_1.3.4_arm64.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":332232,"digest":null,"download_count":10,"created_at":"2024-12-28T13:32:23Z","updated_at":"2024-12-28T13:32:23Z"},{"id":216375070,"node_id":"RA_kwDOEZ7Hns4M5Z8e","name":"csview_1.3.4_armhf.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":352712,"digest":null,"download_count":4,"created_at":"2024-12-28T13:32:37Z","updated_at":"2024-12-28T13:32:37Z"},{"id":216375048,"node_id":"RA_kwDOEZ7Hns4M5Z8I","name":"csview_1.3.4_i686.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":363280,"digest":null,"download_count":5,"created_at":"2024-12-28T13:32:17Z","updated_at":"2024-12-28T13:32:18Z"}],"body":"### \ud83d\ude80 Features\n\n- Colored help message - ([d08efb0](https://github.com/wfxr/csview/commit/d08efb0b044bce4df81960ac1e877e2ca209c993))\n\n### \u2699\ufe0f Miscellaneous Tasks\n\n- Ignore release commit message for cliff - ([70d956e](https://github.com/wfxr/csview/commit/70d956ea6de85909b7d935ca8febca9897d0d844))\n\n<!-- generated by git-cliff -->\n","reactions":{"total_count":1,"+1":1,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0}}
+{"id":192568325,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOEZ7Hns4LelwF","tag_name":"v1.3.4","target_commitish":"master","name":"v1.3.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2024-12-28T13:30:22Z","updated_at":"2024-12-28T13:33:50Z","published_at":"2024-12-28T13:31:01Z","assets":[{"id":216375064,"node_id":"RA_kwDOEZ7Hns4M5Z8Y","name":"csview-musl_1.3.4_amd64.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":380148,"digest":null,"download_count":83,"created_at":"2024-12-28T13:32:34Z","updated_at":"2024-12-28T13:32:34Z"},{"id":216375037,"node_id":"RA_kwDOEZ7Hns4M5Z79","name":"csview-musl_1.3.4_arm64.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":371932,"digest":null,"download_count":10,"created_at":"2024-12-28T13:32:08Z","updated_at":"2024-12-28T13:32:09Z"},{"id":216375066,"node_id":"RA_kwDOEZ7Hns4M5Z8a","name":"csview-musl_1.3.4_armhf.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":380260,"digest":null,"download_count":10,"created_at":"2024-12-28T13:32:35Z","updated_at":"2024-12-28T13:32:35Z"},{"id":216375041,"node_id":"RA_kwDOEZ7Hns4M5Z8B","name":"csview-musl_1.3.4_i686.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":393976,"digest":null,"download_count":11,"created_at":"2024-12-28T13:32:11Z","updated_at":"2024-12-28T13:32:12Z"},{"id":216374994,"node_id":"RA_kwDOEZ7Hns4M5Z7S","name":"csview-v1.3.4-aarch64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":392540,"digest":null,"download_count":520,"created_at":"2024-12-28T13:31:41Z","updated_at":"2024-12-28T13:31:41Z"},{"id":216375052,"node_id":"RA_kwDOEZ7Hns4M5Z8M","name":"csview-v1.3.4-aarch64-unknown-linux-gnu.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":457451,"digest":null,"download_count":165,"created_at":"2024-12-28T13:32:23Z","updated_at":"2024-12-28T13:32:23Z"},{"id":216375038,"node_id":"RA_kwDOEZ7Hns4M5Z7-","name":"csview-v1.3.4-aarch64-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":507506,"digest":null,"download_count":45,"created_at":"2024-12-28T13:32:08Z","updated_at":"2024-12-28T13:32:09Z"},{"id":216375069,"node_id":"RA_kwDOEZ7Hns4M5Z8d","name":"csview-v1.3.4-arm-unknown-linux-gnueabihf.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":487621,"digest":null,"download_count":5,"created_at":"2024-12-28T13:32:37Z","updated_at":"2024-12-28T13:32:37Z"},{"id":216375065,"node_id":"RA_kwDOEZ7Hns4M5Z8Z","name":"csview-v1.3.4-arm-unknown-linux-musleabihf.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":521128,"digest":null,"download_count":8,"created_at":"2024-12-28T13:32:35Z","updated_at":"2024-12-28T13:32:35Z"},{"id":216375151,"node_id":"RA_kwDOEZ7Hns4M5Z9v","name":"csview-v1.3.4-i686-pc-windows-msvc.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":329904,"digest":null,"download_count":115,"created_at":"2024-12-28T13:33:50Z","updated_at":"2024-12-28T13:33:50Z"},{"id":216375049,"node_id":"RA_kwDOEZ7Hns4M5Z8J","name":"csview-v1.3.4-i686-unknown-linux-gnu.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":453807,"digest":null,"download_count":17,"created_at":"2024-12-28T13:32:17Z","updated_at":"2024-12-28T13:32:17Z"},{"id":216375040,"node_id":"RA_kwDOEZ7Hns4M5Z8A","name":"csview-v1.3.4-i686-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":492989,"digest":null,"download_count":27,"created_at":"2024-12-28T13:32:11Z","updated_at":"2024-12-28T13:32:11Z"},{"id":216375067,"node_id":"RA_kwDOEZ7Hns4M5Z8b","name":"csview-v1.3.4-x86_64-pc-windows-msvc.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":351139,"digest":null,"download_count":761,"created_at":"2024-12-28T13:32:37Z","updated_at":"2024-12-28T13:32:37Z"},{"id":216375060,"node_id":"RA_kwDOEZ7Hns4M5Z8U","name":"csview-v1.3.4-x86_64-unknown-linux-gnu.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":433391,"digest":null,"download_count":1471,"created_at":"2024-12-28T13:32:29Z","updated_at":"2024-12-28T13:32:30Z"},{"id":216375063,"node_id":"RA_kwDOEZ7Hns4M5Z8X","name":"csview-v1.3.4-x86_64-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":482975,"digest":null,"download_count":164,"created_at":"2024-12-28T13:32:34Z","updated_at":"2024-12-28T13:32:34Z"},{"id":216375059,"node_id":"RA_kwDOEZ7Hns4M5Z8T","name":"csview_1.3.4_amd64.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":340608,"digest":null,"download_count":1534,"created_at":"2024-12-28T13:32:29Z","updated_at":"2024-12-28T13:32:30Z"},{"id":216375053,"node_id":"RA_kwDOEZ7Hns4M5Z8N","name":"csview_1.3.4_arm64.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":332232,"digest":null,"download_count":10,"created_at":"2024-12-28T13:32:23Z","updated_at":"2024-12-28T13:32:23Z"},{"id":216375070,"node_id":"RA_kwDOEZ7Hns4M5Z8e","name":"csview_1.3.4_armhf.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":352712,"digest":null,"download_count":4,"created_at":"2024-12-28T13:32:37Z","updated_at":"2024-12-28T13:32:37Z"},{"id":216375048,"node_id":"RA_kwDOEZ7Hns4M5Z8I","name":"csview_1.3.4_i686.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":363280,"digest":null,"download_count":5,"created_at":"2024-12-28T13:32:17Z","updated_at":"2024-12-28T13:32:18Z"}],"body":"### \ud83d\ude80 Features\n\n- Colored help message - ([d08efb0](https://github.com/wfxr/csview/commit/d08efb0b044bce4df81960ac1e877e2ca209c993))\n\n### \u2699\ufe0f Miscellaneous Tasks\n\n- Ignore release commit message for cliff - ([70d956e](https://github.com/wfxr/csview/commit/70d956ea6de85909b7d935ca8febca9897d0d844))\n\n<!-- generated by git-cliff -->\n","reactions":{"total_count":1,"+1":1,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0}}

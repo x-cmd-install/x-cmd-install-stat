@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.1.14"
   latestRelease: "v3.1.14"
   latestPrerelease: ""
-  collectedAt: 2026-09-15T05:29:10Z
+  collectedAt: 2026-09-16T05:11:51Z
 timeline:
   created: 2010-10-03
   lastCommit: 2026-09-12
@@ -17,7 +17,7 @@ timeline:
 popularity:
   star: 26665
   watcher: 255
-  fork: 1740
+  fork: 1739
   release: 107
   contributor: 168
   pullRequest: 551
@@ -32,7 +32,7 @@ language:
 totalBytes: 234763
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 0
     mergedPR: 0
     openPR: 2
@@ -40,7 +40,7 @@ recent:
     openIssue: 0
     commit: 3
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 0
     mergedPR: 0
     openPR: 2
@@ -48,7 +48,7 @@ recent:
     openIssue: 0
     commit: 6
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 0
     mergedPR: 0
     openPR: 2
@@ -56,7 +56,7 @@ recent:
     openIssue: 0
     commit: 10
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 0
     mergedPR: 1
     openPR: 4
@@ -64,7 +64,7 @@ recent:
     openIssue: 0
     commit: 24
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 4
     mergedPR: 4
     openPR: 5
@@ -72,7 +72,7 @@ recent:
     openIssue: 0
     commit: 54
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 7
     mergedPR: 5
     openPR: 9
@@ -88,7 +88,7 @@ total:
   commit: 1486
 ---
 path: /home/runner/.x-repo/github.com/remy/nodemon
-collectedAt: 2026-09-15T05:29:11Z
+collectedAt: 2026-09-16T05:11:53Z
 loc:
   Json:
     code: 10076
@@ -161,22 +161,22 @@ total:
   blanks: 1457
   files: 132
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/remy/nodemon
-  commit: 8c36541e56b69c30c53f6a1bf09e2b4c671b1e99
+  commit: bc5990cc615253adbf13544da73fce4ff8d2220b
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
-score: 4.1
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+score: 4.2
 checks:
+  - name: Maintained
+    score: 9
+    reason: 11 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 9
+    details: null
   - name: Code-Review
     score: 0
     reason: Found 0/28 approved changesets -- score normalized to 0
-    details: null
-  - name: Maintained
-    score: 8
-    reason: 10 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 8
     details: null
   - name: Dangerous-Workflow
     score: 10
@@ -201,6 +201,25 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Pinned-Dependencies
     score: 3
     reason: dependency not pinned by hash detected -- score normalized to 3
@@ -221,43 +240,24 @@ checks:
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
       - 'Info:   3 out of   4 npmCommand dependencies pinned'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''main'''
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:10'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 4 are checked with a SAST tool'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:10'
 ---
 {"id":288914107,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAA6fas4ROHq7","tag_name":"v3.1.14","target_commitish":"main","name":"v3.1.14","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-02-20T23:02:45Z","updated_at":"2026-02-20T23:05:20Z","published_at":"2026-02-20T23:05:20Z","assets":[],"body":"## [3.1.14](https://github.com/remy/nodemon/compare/v3.1.13...v3.1.14) (2026-02-20)\n\n\n### Bug Fixes\n\n* get watch working on windows ([cfebe2f](https://github.com/remy/nodemon/commit/cfebe2feb2054a13fa6b9c493c1cd826ffccf167)), closes [#2270](https://github.com/remy/nodemon/issues/2270)\n\n\n\n"}

@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.6.0"
   latestRelease: "v0.6.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-15T05:57:03Z
+  collectedAt: 2026-09-16T05:48:44Z
 timeline:
   created: 2018-04-24
   lastCommit: 2025-10-02
@@ -30,7 +30,7 @@ language:
 totalBytes: 99885
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 0
     mergedPR: 0
     openPR: 2
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 0
     mergedPR: 1
     openPR: 2
@@ -70,7 +70,7 @@ recent:
     openIssue: 1
     commit: 1
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 0
     mergedPR: 1
     openPR: 6
@@ -86,7 +86,7 @@ total:
   commit: 211
 ---
 path: /home/runner/.x-repo/github.com/jsonnet-bundler/jsonnet-bundler
-collectedAt: 2026-09-15T05:57:04Z
+collectedAt: 2026-09-16T05:48:45Z
 loc:
   Go:
     code: 162733
@@ -144,13 +144,13 @@ total:
   blanks: 19513
   files: 427
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/jsonnet-bundler/jsonnet-bundler
   commit: 1ed9abf9464091454c4a4248e7cb2380b60fb074
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.2
 checks:
   - name: Code-Review
@@ -162,10 +162,6 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
@@ -176,6 +172,10 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/01-default.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -184,6 +184,16 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Pinned-Dependencies
+    score: 0
+    reason: dependency not pinned by hash detected -- score normalized to 0
+    details:
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/01-default.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/jsonnet-bundler/jsonnet-bundler/01-default.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/01-default.yml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/jsonnet-bundler/jsonnet-bundler/01-default.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/01-default.yml:32: update your workflow using https://app.stepsecurity.io/secureworkflow/jsonnet-bundler/jsonnet-bundler/01-default.yml/master?enable=pin'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating busybox:1.35.0 to busybox:1.35.0@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a'
+      - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   0 out of   1 containerImage dependencies pinned'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -197,27 +207,12 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Pinned-Dependencies
-    score: 0
-    reason: dependency not pinned by hash detected -- score normalized to 0
-    details:
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/01-default.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/jsonnet-bundler/jsonnet-bundler/01-default.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/01-default.yml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/jsonnet-bundler/jsonnet-bundler/01-default.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/01-default.yml:32: update your workflow using https://app.stepsecurity.io/secureworkflow/jsonnet-bundler/jsonnet-bundler/01-default.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating busybox:1.35.0 to busybox:1.35.0@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a'
-      - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   0 out of   1 containerImage dependencies pinned'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -232,6 +227,11 @@ checks:
       - 'Warn: release artifact v0.4.0 does not have provenance: https://api.github.com/repos/jsonnet-bundler/jsonnet-bundler/releases/26552812'
       - 'Warn: release artifact v0.3.1 does not have provenance: https://api.github.com/repos/jsonnet-bundler/jsonnet-bundler/releases/24109329'
       - 'Warn: release artifact v0.2.0 does not have provenance: https://api.github.com/repos/jsonnet-bundler/jsonnet-bundler/releases/22677491'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

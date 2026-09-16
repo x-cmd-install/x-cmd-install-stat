@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.9.13"
   latestRelease: "v3.9.13"
   latestPrerelease: "v1.8.5rc1"
-  collectedAt: 2026-09-15T05:49:03Z
+  collectedAt: 2026-09-16T05:52:23Z
 timeline:
   created: 2013-09-26
   lastCommit: 2026-08-17
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-09-08
   lastPrerelease: 2021-03-25
 popularity:
-  star: 31740
+  star: 31744
   watcher: 703
   fork: 3718
   release: 107
   contributor: 533
-  pullRequest: 12831
-  issue: 14257
+  pullRequest: 12832
+  issue: 14256
 language:
   Rust: 13827703
   Answer Set Programming: 229650
@@ -33,63 +33,63 @@ language:
 totalBytes: 14369589
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 6
     mergedPR: 7
-    openPR: 10
-    closedIssue: 4
-    openIssue: 15
+    openPR: 11
+    closedIssue: 3
+    openIssue: 14
     commit: 0
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 6
     mergedPR: 33
-    openPR: 15
+    openPR: 16
     closedIssue: 6
-    openIssue: 19
+    openIssue: 18
     commit: 5
   last90d:
-    since: 2026-06-17
-    release: 7
+    since: 2026-06-18
+    release: 6
     mergedPR: 53
-    openPR: 17
+    openPR: 18
     closedIssue: 13
-    openIssue: 25
+    openIssue: 23
     commit: 22
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 11
-    mergedPR: 144
-    openPR: 29
+    mergedPR: 143
+    openPR: 30
     closedIssue: 41
-    openIssue: 40
+    openIssue: 39
     commit: 94
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 13
     mergedPR: 433
-    openPR: 40
+    openPR: 41
     closedIssue: 135
-    openIssue: 75
+    openIssue: 74
     commit: 200
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 21
     mergedPR: 1118
-    openPR: 60
-    closedIssue: 594
-    openIssue: 222
-    commit: 603
+    openPR: 61
+    closedIssue: 590
+    openIssue: 221
+    commit: 602
 total:
   release: 107
   mergedPR: 11091
-  openPR: 97
+  openPR: 98
   closedIssue: 12188
-  openIssue: 2069
+  openIssue: 2068
   commit: 49926
 ---
 path: /home/runner/.x-repo/github.com/influxdata/influxdb
-collectedAt: 2026-09-15T05:49:43Z
+collectedAt: 2026-09-16T05:52:56Z
 loc:
   Rust:
     code: 307002
@@ -152,23 +152,34 @@ total:
   blanks: 47170
   files: 1183
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/influxdata/influxdb
   commit: 693b1fd1b96cdcb980cf76a1004c0b3f1b46db48
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 6.9
 checks:
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/semantic.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -179,26 +190,15 @@ checks:
       - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Maintained
     score: 10
-    reason: 11 commit(s) and 13 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/semantic.yml:1'
-      - 'Info: no jobLevel write permissions found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
+    reason: 6 commit(s) and 12 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
+    details: null
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
     details: null
   - name: License
     score: 10
@@ -223,13 +223,13 @@ checks:
       - 'Warn: containerImage not pinned by hash: docker/Dockerfile.ci:14'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 containerImage dependencies pinned'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: -1
     reason: no releases found
+    details: null
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
   - name: SAST
     score: 0
@@ -237,4 +237,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---
-{"id":382947145,"author":{"login":"cannonpalms","id":2457559,"node_id":"MDQ6VXNlcjI0NTc1NTk=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAMhEws4W009J","tag_name":"v3.11.4","target_commitish":"main","name":"v3.11.4 | 09-04-26","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-04T16:52:20Z","updated_at":"2026-09-08T18:55:40Z","published_at":"2026-09-08T18:55:40Z","assets":[],"body":"The following are some highlighted updates with the newest release for InfluxDB 3. Learn more via our full [Release Notes](https://docs.influxdata.com/influxdb3/core/release-notes/). \r\n\r\n## Updates\r\n\r\n### Core\r\n\r\n#### Bug fixes\r\n\r\n- **Overwrites in the write buffer resolved arbitrarily**: Writes that repeat a series key and timestamp within one write buffer chunk now resolve to the last acknowledged write, in query results and in the persisted Parquet file. Previously the duplicate rows tied on both deduplication sort keys and an unstable sort picked an arbitrary survivor, so a superseded version could win. An overwrite that arrives while a snapshot is persisting also now wins over the frozen rows it replaces.\r\n- **Snapshot manifest skipped for an empty snapshot**: Every snapshot sequence number now lands a manifest, including a snapshot with nothing to persist. Previously the manifest was skipped, leaving a permanent hole in the sequence. Consumers that walk the sequence by exact key cannot tell a skipped snapshot from a manifest that failed to persist, so a single hole stalled Enterprise compaction on that node and blocked its read replicas.\r\n- **Stale plugin source after re-enabling a trigger**: Stopping a trigger now drops its plugin from the worker's in-memory cache, so re-enabling it re-reads the code. Since v3.11.0 the cache was insert-only, so disabling and re-enabling a trigger resumed the cached copy and never contacted the plugin repository again, which is the documented way to pick up a new version of a `gh:` plugin.\r\n- **Plugin source retained after a database was deleted**: Deleting a database now evicts its triggers' cached plugin source. Previously it stayed resident until the server restarted.\r\n- **Processing engine Python updated to 3.13.15**: Picks up the security fixes in that release.\r\n- Other bug fixes and performance improvements\r\n\r\n### Enterprise\r\n\r\nAll Core updates are included in Enterprise.\r\nAdditional Enterprise-specific updates:\r\n\r\n#### Features\r\n\r\n- **Startup phase logging**: The server logs the start and completion of each startup phase, so a node killed during startup shows which phase it was in.\r\n\r\n#### Bug fixes\r\n\r\n- **Privilege escalation through role assignment**: Creating, updating, and deleting a role, and assigning roles to a user, now require admin authorization. Previously a non-admin subject holding `User:Update`, or `User:Create` with roles in the request, could grant permissions beyond its own. This affects the [user authentication preview](/influxdb3/enterprise/admin/security/manage-users/), which is off by default (`--user-auth-type none`); deployments that have not enabled it are unaffected.\r\n- **Out-of-memory clearing the WAL backlog during a storage engine upgrade**: The upgrade now snapshots during WAL replay whenever the buffer reaches a quarter of the query executor's memory pool, instead of buffering the whole backlog and persisting it in one pass. Each snapshot removes the WAL files it covers, so a restart resumes from the last one rather than replaying from the beginning.\r\n- **Out-of-memory importing a large source during a storage engine upgrade**: Bulk import now admits a job by its estimated working set rather than its compressed size, runs a job larger than the compactor's input-size budget on its own, and refuses a source that cannot fit at all with an error naming the budget it would need. Previously an oversized source was retried until the node ran out of memory, with no attempt recorded.\r\n- **File index left behind when a generation expires**: Retention now deletes a generation's detail object along with its Parquet files. Previously the detail, which holds the file index describing those files, was left unreferenced in object storage. On a table with high-cardinality index columns the detail is the larger of the two, so retention shrank the data and accumulated the indexes for the life of the cluster.\r\n- **Compactor replans forever against a missing index file (upgraded storage engine)**: A run set whose index object is confirmed gone from object storage is now skipped after three failed reads on separate scheduler passes, so planning moves on to other work. Previously every planner that read the index failed, abandoned the plan, and recreated it on the next tick indefinitely. The skip list is in memory only: a restart clears it, and a repaired index is picked up again.\r\n- **Empty snapshot manifests were never deleted**: Gen1 cleanup now deletes a consumed manifest that references no files. Previously it returned early on such a manifest without deleting it, and because cleanup retains the oldest entries in each batch, undeletable manifests could eventually fill every batch and starve cleanup.\r\n- **Stale plugin source after a catalog restore**: Restoring a catalog now evicts the worker's cached plugin source, so restarted triggers re-read their code. Previously a trigger whose restored definition matched the cached one resumed the pre-restore source without contacting the plugin repository.\r\n- **Spurious memory reservation warning at startup**: The warning threshold is now above the sum of the shipped percentage defaults, which come to 90 percent of detected memory. Previously a server running the default configuration warned about itself.\r\n- Other bug fixes and performance improvements\r\n","reactions":{"total_count":1,"+1":0,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":0,"rocket":0,"eyes":0}}
+{"id":382947145,"author":{"login":"cannonpalms","id":2457559,"node_id":"MDQ6VXNlcjI0NTc1NTk=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAMhEws4W009J","tag_name":"v3.11.4","target_commitish":"main","name":"v3.11.4 | 09-04-26","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-04T16:52:20Z","updated_at":"2026-09-08T18:55:40Z","published_at":"2026-09-08T18:55:40Z","assets":[],"body":"The following are some highlighted updates with the newest release for InfluxDB 3. Learn more via our full [Release Notes](https://docs.influxdata.com/influxdb3/core/release-notes/). \r\n\r\n## Updates\r\n\r\n### Core\r\n\r\n#### Bug fixes\r\n\r\n- **Overwrites in the write buffer resolved arbitrarily**: Writes that repeat a series key and timestamp within one write buffer chunk now resolve to the last acknowledged write, in query results and in the persisted Parquet file. Previously the duplicate rows tied on both deduplication sort keys and an unstable sort picked an arbitrary survivor, so a superseded version could win. An overwrite that arrives while a snapshot is persisting also now wins over the frozen rows it replaces.\r\n- **Snapshot manifest skipped for an empty snapshot**: Every snapshot sequence number now lands a manifest, including a snapshot with nothing to persist. Previously the manifest was skipped, leaving a permanent hole in the sequence. Consumers that walk the sequence by exact key cannot tell a skipped snapshot from a manifest that failed to persist, so a single hole stalled Enterprise compaction on that node and blocked its read replicas.\r\n- **Stale plugin source after re-enabling a trigger**: Stopping a trigger now drops its plugin from the worker's in-memory cache, so re-enabling it re-reads the code. Since v3.11.0 the cache was insert-only, so disabling and re-enabling a trigger resumed the cached copy and never contacted the plugin repository again, which is the documented way to pick up a new version of a `gh:` plugin.\r\n- **Plugin source retained after a database was deleted**: Deleting a database now evicts its triggers' cached plugin source. Previously it stayed resident until the server restarted.\r\n- **Processing engine Python updated to 3.13.15**: Picks up the security fixes in that release.\r\n- Other bug fixes and performance improvements\r\n\r\n### Enterprise\r\n\r\nAll Core updates are included in Enterprise.\r\nAdditional Enterprise-specific updates:\r\n\r\n#### Features\r\n\r\n- **Startup phase logging**: The server logs the start and completion of each startup phase, so a node killed during startup shows which phase it was in.\r\n\r\n#### Bug fixes\r\n\r\n- **Privilege escalation through role assignment**: Creating, updating, and deleting a role, and assigning roles to a user, now require admin authorization. Previously a non-admin subject holding `User:Update`, or `User:Create` with roles in the request, could grant permissions beyond its own. This affects the [user authentication preview](/influxdb3/enterprise/admin/security/manage-users/), which is off by default (`--user-auth-type none`); deployments that have not enabled it are unaffected.\r\n- **Out-of-memory clearing the WAL backlog during a storage engine upgrade**: The upgrade now snapshots during WAL replay whenever the buffer reaches a quarter of the query executor's memory pool, instead of buffering the whole backlog and persisting it in one pass. Each snapshot removes the WAL files it covers, so a restart resumes from the last one rather than replaying from the beginning.\r\n- **Out-of-memory importing a large source during a storage engine upgrade**: Bulk import now admits a job by its estimated working set rather than its compressed size, runs a job larger than the compactor's input-size budget on its own, and refuses a source that cannot fit at all with an error naming the budget it would need. Previously an oversized source was retried until the node ran out of memory, with no attempt recorded.\r\n- **File index left behind when a generation expires**: Retention now deletes a generation's detail object along with its Parquet files. Previously the detail, which holds the file index describing those files, was left unreferenced in object storage. On a table with high-cardinality index columns the detail is the larger of the two, so retention shrank the data and accumulated the indexes for the life of the cluster.\r\n- **Compactor replans forever against a missing index file (upgraded storage engine)**: A run set whose index object is confirmed gone from object storage is now skipped after three failed reads on separate scheduler passes, so planning moves on to other work. Previously every planner that read the index failed, abandoned the plan, and recreated it on the next tick indefinitely. The skip list is in memory only: a restart clears it, and a repaired index is picked up again.\r\n- **Empty snapshot manifests were never deleted**: Gen1 cleanup now deletes a consumed manifest that references no files. Previously it returned early on such a manifest without deleting it, and because cleanup retains the oldest entries in each batch, undeletable manifests could eventually fill every batch and starve cleanup.\r\n- **Stale plugin source after a catalog restore**: Restoring a catalog now evicts the worker's cached plugin source, so restarted triggers re-read their code. Previously a trigger whose restored definition matched the cached one resumed the pre-restore source without contacting the plugin repository.\r\n- **Spurious memory reservation warning at startup**: The warning threshold is now above the sum of the shipped percentage defaults, which come to 90 percent of detected memory. Previously a server running the default configuration warned about itself.\r\n- Other bug fixes and performance improvements\r\n","reactions":{"total_count":2,"+1":0,"-1":0,"laugh":0,"hooray":2,"confused":0,"heart":0,"rocket":0,"eyes":0}}

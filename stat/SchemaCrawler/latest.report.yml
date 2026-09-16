@@ -7,7 +7,7 @@ about:
   latestVersion: "v17.15.2"
   latestRelease: "v17.15.2"
   latestPrerelease: "v17.1.6-A"
-  collectedAt: 2026-09-15T04:55:56Z
+  collectedAt: 2026-09-16T04:43:12Z
 timeline:
   created: 2015-07-18
   lastCommit: 2026-09-14
@@ -40,47 +40,47 @@ language:
 totalBytes: 3645640
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 5
-    mergedPR: 39
+    mergedPR: 38
     openPR: 2
     closedIssue: 0
     openIssue: 0
     commit: 129
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 6
-    mergedPR: 75
+    mergedPR: 71
     openPR: 2
     closedIssue: 0
     openIssue: 0
     commit: 266
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 8
     mergedPR: 102
     openPR: 2
-    closedIssue: 2
+    closedIssue: 1
     openIssue: 0
     commit: 364
   last180d:
-    since: 2026-03-19
-    release: 17
+    since: 2026-03-20
+    release: 16
     mergedPR: 171
     openPR: 2
     closedIssue: 2
     openIssue: 0
     commit: 504
   last360d:
-    since: 2025-09-20
-    release: 40
+    since: 2025-09-21
+    release: 39
     mergedPR: 370
     openPR: 2
     closedIssue: 15
     openIssue: 0
     commit: 1182
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 58
     mergedPR: 590
     openPR: 2
@@ -96,7 +96,7 @@ total:
   commit: 11998
 ---
 path: /home/runner/.x-repo/github.com/schemacrawler/SchemaCrawler
-collectedAt: 2026-09-15T04:56:13Z
+collectedAt: 2026-09-16T04:43:25Z
 loc:
   Html:
     code: 58052
@@ -199,19 +199,15 @@ total:
   blanks: 42101
   files: 1175
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/schemacrawler/SchemaCrawler
-  commit: 831139e8ba806004cee939324d4ed90067af3587
+  commit: d6dbc028d66198ef3c6a5970862a70952c5a93fb
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 5.4
 checks:
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Security-Policy
     score: 9
     reason: security policy file detected
@@ -222,7 +218,15 @@ checks:
       - 'Info: Found text in security policy: .github/SECURITY.md:1'
   - name: Code-Review
     score: 0
-    reason: Found 0/5 approved changesets -- score normalized to 0
+    reason: Found 0/13 approved changesets -- score normalized to 0
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -232,8 +236,8 @@ checks:
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:20'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:21'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:20'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/early-release.yml:30'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:25'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/build-with-dependencies.yml:11'
@@ -245,10 +249,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/single-threaded-tests.yml:14'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/test-coverage.yml:11'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -258,6 +258,12 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 9
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE.md:0'
+      - 'Warn: project license file does not contain an FSF or OSI license.'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -282,28 +288,28 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/early-release.yml:36: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/early-release.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/early-release.yml:42: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/early-release.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/early-release.yml:47: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/early-release.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/early-release.yml:113: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/early-release.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/early-release.yml:117: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/early-release.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/early-release.yml:121: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/early-release.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/early-release.yml:128: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/early-release.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/early-release.yml:138: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/early-release.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/early-release.yml:154: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/early-release.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/early-release.yml:183: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/early-release.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/early-release.yml:114: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/early-release.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/early-release.yml:118: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/early-release.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/early-release.yml:122: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/early-release.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/early-release.yml:129: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/early-release.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/early-release.yml:139: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/early-release.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/early-release.yml:155: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/early-release.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/early-release.yml:184: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/early-release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/lint.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/lint.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/lint.yml:38: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/lint.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/lint.yml:46: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/lint.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/lint.yml:56: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/lint.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:44: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:51: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:77: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:86: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:105: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:109: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:113: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:120: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:130: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:151: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:180: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:50: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:76: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:85: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:104: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:108: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:112: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:119: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:129: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:150: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:179: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/release.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/single-threaded-tests.yml:31: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/single-threaded-tests.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/single-threaded-tests.yml:36: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/single-threaded-tests.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/single-threaded-tests.yml:41: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/single-threaded-tests.yml/main?enable=pin'
@@ -316,48 +322,42 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test-coverage.yml:88: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/test-coverage.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test-coverage.yml:94: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/test-coverage.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test-coverage.yml:107: update your workflow using https://app.stepsecurity.io/secureworkflow/schemacrawler/SchemaCrawler/test-coverage.yml/main?enable=pin'
-      - 'Warn: containerImage not pinned by hash: .devcontainer/Dockerfile:1: pin your Docker image by updating mcr.microsoft.com/devcontainers/java:21 to mcr.microsoft.com/devcontainers/java:21@sha256:e3bcb6ed5d3678e30026cb228f33562cf5f39843ded2024bfa64e36a9050ea40'
+      - 'Warn: containerImage not pinned by hash: .devcontainer/Dockerfile:1: pin your Docker image by updating mcr.microsoft.com/devcontainers/java:21 to mcr.microsoft.com/devcontainers/java:21@sha256:f1560251b8f68cdd8b108cf0433d5fa7f9e76b4994f27bdfd23279ecf8840d7c'
       - 'Warn: containerImage not pinned by hash: schemacrawler-distrib/Dockerfile:9: pin your Docker image by updating eclipse-temurin:21-jdk-alpine to eclipse-temurin:21-jdk-alpine@sha256:6ea5548706b60ac0a602eaf48af74792cbab012d90e811ca8db6184b16b5c3d6'
       - 'Warn: npmCommand not pinned by hash: .github/workflows/diff-output.yml:28'
       - 'Info:   0 out of  16 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   1 out of  39 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
       - 'Info:   0 out of   1 npmCommand dependencies pinned'
-  - name: License
-    score: 9
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE.md:0'
-      - 'Warn: project license file does not contain an FSF or OSI license.'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v17.15.1 not signed: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/384307507'
-      - 'Warn: release artifact early-access-release not signed: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/384303912'
-      - 'Warn: release artifact v17.15.0 not signed: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/383690378'
-      - 'Warn: release artifact v17.14.1 not signed: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/375365634'
-      - 'Warn: release artifact v17.14.0 not signed: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/374626345'
-      - 'Warn: release artifact v17.15.1 does not have provenance: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/384307507'
-      - 'Warn: release artifact early-access-release does not have provenance: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/384303912'
-      - 'Warn: release artifact v17.15.0 does not have provenance: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/383690378'
-      - 'Warn: release artifact v17.14.1 does not have provenance: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/375365634'
-      - 'Warn: release artifact v17.14.0 does not have provenance: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/374626345'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:20'
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/early-release.yml:20'
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v17.15.2 not signed: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/386732215'
+      - 'Warn: release artifact v17.15.1 not signed: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/384307507'
+      - 'Warn: release artifact v17.15.0 not signed: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/383690378'
+      - 'Warn: release artifact v17.14.1 not signed: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/375365634'
+      - 'Warn: release artifact v17.14.0 not signed: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/374626345'
+      - 'Warn: release artifact v17.15.2 does not have provenance: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/386732215'
+      - 'Warn: release artifact v17.15.1 does not have provenance: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/384307507'
+      - 'Warn: release artifact v17.15.0 does not have provenance: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/383690378'
+      - 'Warn: release artifact v17.14.1 does not have provenance: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/375365634'
+      - 'Warn: release artifact v17.14.0 does not have provenance: https://api.github.com/repos/schemacrawler/SchemaCrawler/releases/374626345'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 10
     reason: SAST tool detected
     details:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Info: SAST configuration detected: Qodana'
-      - 'Warn: 21 commits out of 29 are checked with a SAST tool'
+      - 'Warn: 12 commits out of 24 are checked with a SAST tool'
 ---
-{"id":386732215,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAld0CM4XDRC3","tag_name":"v17.15.2","target_commitish":"main","name":"v17.15.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-11T01:34:37Z","updated_at":"2026-09-11T01:42:10Z","published_at":"2026-09-11T01:42:10Z","assets":[{"id":556235353,"node_id":"RA_kwDOAld0CM4hJ3pZ","name":"schemacrawler-17.15.2-bin.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":308360200,"digest":"sha256:09e058b32a47b3c570cebdf8008a73a08706ca0ca2cda24d9abaa4d03008d64a","download_count":37,"created_at":"2026-09-11T01:41:59Z","updated_at":"2026-09-11T01:42:09Z"},{"id":556235351,"node_id":"RA_kwDOAld0CM4hJ3pX","name":"schemacrawler-17.15.2-bin.zip.SHA-512","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":129,"digest":"sha256:9ab2172019c90763504398a51d30a6f432e344b326b012f6ded7de63d1ec5089","download_count":3,"created_at":"2026-09-11T01:41:59Z","updated_at":"2026-09-11T01:41:59Z"}],"body":"SchemaCrawler  release at last commit d034efffaffdf6e8729fe9484f4ea60d3f4ea3c7\nSee the change history at https://www.schemacrawler.com/changes-report.html\n\n\n## What's Changed\n* Prepare for the next release by @sualeh in https://github.com/schemacrawler/SchemaCrawler/pull/2488\n\n\n**Full Changelog**: https://github.com/schemacrawler/SchemaCrawler/compare/v17.15.1...v17.15.2","mentions_count":1}
+{"id":386732215,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAld0CM4XDRC3","tag_name":"v17.15.2","target_commitish":"main","name":"v17.15.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-11T01:34:37Z","updated_at":"2026-09-11T01:42:10Z","published_at":"2026-09-11T01:42:10Z","assets":[{"id":556235353,"node_id":"RA_kwDOAld0CM4hJ3pZ","name":"schemacrawler-17.15.2-bin.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":308360200,"digest":"sha256:09e058b32a47b3c570cebdf8008a73a08706ca0ca2cda24d9abaa4d03008d64a","download_count":49,"created_at":"2026-09-11T01:41:59Z","updated_at":"2026-09-11T01:42:09Z"},{"id":556235351,"node_id":"RA_kwDOAld0CM4hJ3pX","name":"schemacrawler-17.15.2-bin.zip.SHA-512","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":129,"digest":"sha256:9ab2172019c90763504398a51d30a6f432e344b326b012f6ded7de63d1ec5089","download_count":3,"created_at":"2026-09-11T01:41:59Z","updated_at":"2026-09-11T01:41:59Z"}],"body":"SchemaCrawler  release at last commit d034efffaffdf6e8729fe9484f4ea60d3f4ea3c7\nSee the change history at https://www.schemacrawler.com/changes-report.html\n\n\n## What's Changed\n* Prepare for the next release by @sualeh in https://github.com/schemacrawler/SchemaCrawler/pull/2488\n\n\n**Full Changelog**: https://github.com/schemacrawler/SchemaCrawler/compare/v17.15.1...v17.15.2","mentions_count":1}

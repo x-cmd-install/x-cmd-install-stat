@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.22.1"
   latestRelease: "v0.22.1"
   latestPrerelease: "v0.6.2"
-  collectedAt: 2026-09-15T06:38:45Z
+  collectedAt: 2026-09-16T06:39:43Z
 timeline:
   created: 2019-03-18
   lastCommit: 2025-04-14
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2025-01-28
   lastPrerelease: 2020-01-25
 popularity:
-  star: 6363
+  star: 6366
   watcher: 48
   fork: 346
   release: 70
   contributor: 59
   pullRequest: 345
-  issue: 236
+  issue: 235
 language:
   Go: 512734
   HTML: 5423
@@ -30,63 +30,63 @@ language:
 totalBytes: 520447
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 0
     mergedPR: 0
     openPR: 0
-    closedIssue: 1
+    closedIssue: 0
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 0
     mergedPR: 0
     openPR: 1
-    closedIssue: 1
+    closedIssue: 0
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 0
     mergedPR: 0
-    openPR: 2
-    closedIssue: 1
+    openPR: 1
+    closedIssue: 0
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 0
     mergedPR: 0
     openPR: 2
-    closedIssue: 1
+    closedIssue: 0
     openIssue: 1
     commit: 0
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 0
     mergedPR: 0
     openPR: 14
-    closedIssue: 2
+    closedIssue: 1
     openIssue: 12
     commit: 0
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 4
     mergedPR: 43
     openPR: 22
-    closedIssue: 16
+    closedIssue: 15
     openIssue: 23
     commit: 108
 total:
   release: 70
   mergedPR: 160
   openPR: 23
-  closedIssue: 191
+  closedIssue: 190
   openIssue: 45
   commit: 709
 ---
 path: /home/runner/.x-repo/github.com/derailed/popeye
-collectedAt: 2026-09-15T06:38:48Z
+collectedAt: 2026-09-16T06:39:47Z
 loc:
   Go:
     code: 17831
@@ -129,15 +129,19 @@ total:
   blanks: 4513
   files: 393
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/derailed/popeye
   commit: 5d07838165bb64fa70c594f2b46ef14a9080782f
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 2.6
 checks:
+  - name: Code-Review
+    score: 1
+    reason: Found 1/6 approved changesets -- score normalized to 1
+    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
@@ -145,10 +149,6 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Code-Review
-    score: 1
-    reason: Found 1/6 approved changesets -- score normalized to 1
     details: null
   - name: Packaging
     score: -1
@@ -171,11 +171,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -184,6 +179,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 9
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Warn: project license file does not contain an FSF or OSI license.'
   - name: Pinned-Dependencies
     score: 1
     reason: dependency not pinned by hash detected -- score normalized to 1
@@ -199,17 +205,6 @@ checks:
       - 'Info:   0 out of   5 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   1 out of   2 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
-  - name: License
-    score: 9
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Warn: project license file does not contain an FSF or OSI license.'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -224,6 +219,11 @@ checks:
       - 'Warn: release artifact v0.21.7 does not have provenance: https://api.github.com/repos/derailed/popeye/releases/196790550'
       - 'Warn: release artifact v0.21.6 does not have provenance: https://api.github.com/repos/derailed/popeye/releases/192730503'
       - 'Warn: release artifact v0.21.5 does not have provenance: https://api.github.com/repos/derailed/popeye/releases/175088674'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

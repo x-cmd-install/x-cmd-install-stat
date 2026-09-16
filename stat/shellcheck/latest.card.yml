@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.11.0"
   latestRelease: "v0.11.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-15T06:06:26Z
+  collectedAt: 2026-09-16T06:00:20Z
 timeline:
   created: 2012-11-17
   lastCommit: 2026-06-11
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2025-08-04
   lastPrerelease: 
 popularity:
-  star: 40037
+  star: 40041
   watcher: 408
-  fork: 1946
+  fork: 1944
   release: 30
   contributor: 167
   pullRequest: 460
@@ -29,7 +29,7 @@ language:
 totalBytes: 861640
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 0
     mergedPR: 0
     openPR: 2
@@ -37,7 +37,7 @@ recent:
     openIssue: 4
     commit: 0
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 0
     mergedPR: 0
     openPR: 11
@@ -45,7 +45,7 @@ recent:
     openIssue: 13
     commit: 0
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 0
     mergedPR: 0
     openPR: 12
@@ -53,15 +53,15 @@ recent:
     openIssue: 14
     commit: 0
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 0
     mergedPR: 9
     openPR: 15
     closedIssue: 31
-    openIssue: 44
+    openIssue: 43
     commit: 12
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 0
     mergedPR: 31
     openPR: 16
@@ -69,12 +69,12 @@ recent:
     openIssue: 87
     commit: 41
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 1
     mergedPR: 60
     openPR: 17
     closedIssue: 150
-    openIssue: 214
+    openIssue: 213
     commit: 191
 total:
   release: 30
@@ -85,7 +85,7 @@ total:
   commit: 2234
 ---
 path: /home/runner/.x-repo/github.com/koalaman/shellcheck
-collectedAt: 2026-09-15T06:06:28Z
+collectedAt: 2026-09-16T06:00:23Z
 loc:
   Haskell:
     code: 16068
@@ -133,35 +133,31 @@ total:
   blanks: 2915
   files: 64
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/koalaman/shellcheck
   commit: 9af7ee28ce587baadd950b85dd6826a16b9c068d
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
-score: 4.8
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+score: 4.1
 checks:
   - name: Code-Review
     score: 7
     reason: Found 12/17 approved changesets -- score normalized to 7
     details: null
-  - name: Maintained
+  - name: Dangerous-Workflow
     score: 10
-    reason: 9 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
+  - name: Maintained
+    score: 3
+    reason: 0 commit(s) and 4 issue activity found in the last 90 days -- score normalized to 3
     details: null
   - name: Token-Permissions
     score: 0
@@ -169,6 +165,10 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/build.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -229,6 +229,11 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: GNU General Public License v3.0: LICENSE:0'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -243,20 +248,10 @@ checks:
       - 'Warn: release artifact v0.9.0 does not have provenance: https://api.github.com/repos/koalaman/shellcheck/releases/85822156'
       - 'Warn: release artifact v0.8.0 does not have provenance: https://api.github.com/repos/koalaman/shellcheck/releases/52860623'
       - 'Warn: release artifact v0.7.2 does not have provenance: https://api.github.com/repos/koalaman/shellcheck/releases/41675109'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Pinned-Dependencies
     score: 1
     reason: dependency not pinned by hash detected -- score normalized to 1
     details:
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:153: update your workflow using https://app.stepsecurity.io/secureworkflow/koalaman/shellcheck/build.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:156: update your workflow using https://app.stepsecurity.io/secureworkflow/koalaman/shellcheck/build.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:162: update your workflow using https://app.stepsecurity.io/secureworkflow/koalaman/shellcheck/build.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/koalaman/shellcheck/build.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:40: update your workflow using https://app.stepsecurity.io/secureworkflow/koalaman/shellcheck/build.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:59: update your workflow using https://app.stepsecurity.io/secureworkflow/koalaman/shellcheck/build.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build.yml:65: update your workflow using https://app.stepsecurity.io/secureworkflow/koalaman/shellcheck/build.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:88: update your workflow using https://app.stepsecurity.io/secureworkflow/koalaman/shellcheck/build.yml/master?enable=pin'
@@ -265,6 +260,11 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:114: update your workflow using https://app.stepsecurity.io/secureworkflow/koalaman/shellcheck/build.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:117: update your workflow using https://app.stepsecurity.io/secureworkflow/koalaman/shellcheck/build.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:135: update your workflow using https://app.stepsecurity.io/secureworkflow/koalaman/shellcheck/build.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:153: update your workflow using https://app.stepsecurity.io/secureworkflow/koalaman/shellcheck/build.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:156: update your workflow using https://app.stepsecurity.io/secureworkflow/koalaman/shellcheck/build.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:162: update your workflow using https://app.stepsecurity.io/secureworkflow/koalaman/shellcheck/build.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/koalaman/shellcheck/build.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:40: update your workflow using https://app.stepsecurity.io/secureworkflow/koalaman/shellcheck/build.yml/master?enable=pin'
       - 'Warn: containerImage not pinned by hash: Dockerfile.multi-arch:2: pin your Docker image by updating alpine:latest to alpine:latest@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
       - 'Warn: containerImage not pinned by hash: builders/linux.aarch64/Dockerfile:1: pin your Docker image by updating ubuntu:25.04 to ubuntu:25.04@sha256:27771fb7b40a58237c98e8d3e6b9ecdd9289cec69a857fccfb85ff36294dac20'
       - 'Warn: containerImage not pinned by hash: builders/linux.armv6hf/Dockerfile:4: pin your Docker image by updating ubuntu:25.04 to ubuntu:25.04@sha256:27771fb7b40a58237c98e8d3e6b9ecdd9289cec69a857fccfb85ff36294dac20'

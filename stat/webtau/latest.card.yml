@@ -7,7 +7,7 @@ about:
   latestVersion: "2.6.3"
   latestRelease: "2.6.3"
   latestPrerelease: ""
-  collectedAt: 2026-09-15T06:16:05Z
+  collectedAt: 2026-09-16T06:06:54Z
 timeline:
   created: 2018-05-02
   lastCommit: 2026-03-15
@@ -35,7 +35,7 @@ language:
 totalBytes: 3777940
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 0
     mergedPR: 0
     openPR: 4
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 1
     mergedPR: 4
     openPR: 7
@@ -75,7 +75,7 @@ recent:
     openIssue: 0
     commit: 20
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 1
     mergedPR: 12
     openPR: 7
@@ -91,7 +91,7 @@ total:
   commit: 1567
 ---
 path: /home/runner/.x-repo/github.com/testingisdocumenting/webtau
-collectedAt: 2026-09-15T06:16:12Z
+collectedAt: 2026-09-16T06:07:00Z
 loc:
   Java:
     code: 36506
@@ -189,22 +189,31 @@ total:
   blanks: 20816
   files: 2392
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/testingisdocumenting/webtau
   commit: 0ada9ef0dfd6e4d54c5eb377fb628f52aa552d26
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.1
 checks:
   - name: Code-Review
     score: 0
     reason: Found 0/22 approved changesets -- score normalized to 0
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -213,22 +222,13 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/ci-build.yaml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/documentation-deploy.yaml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
     details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
-    details: null
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
     details: null
   - name: Pinned-Dependencies
     score: 0
@@ -267,13 +267,13 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
     details: null
   - name: SAST
     score: 0

@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.79.0"
   latestRelease: "v0.79.0"
   latestPrerelease: "nightly"
-  collectedAt: 2026-09-15T04:44:48Z
+  collectedAt: 2026-09-16T04:38:48Z
 timeline:
   created: 2018-10-30
   lastCommit: 2023-10-24
@@ -34,7 +34,7 @@ language:
 totalBytes: 5801445
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -42,7 +42,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-17
+    since: 2026-07-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -50,7 +50,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-17
+    since: 2026-06-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -58,7 +58,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-19
+    since: 2026-03-20
     release: 0
     mergedPR: 0
     openPR: 0
@@ -66,7 +66,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-20
+    since: 2025-09-21
     release: 0
     mergedPR: 0
     openPR: 0
@@ -74,7 +74,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-09-25
+    since: 2024-09-26
     release: 0
     mergedPR: 0
     openPR: 0
@@ -90,7 +90,7 @@ total:
   commit: 5523
 ---
 path: /home/runner/.x-repo/github.com/Azure/aks-engine
-collectedAt: 2026-09-15T04:45:07Z
+collectedAt: 2026-09-16T04:39:05Z
 loc:
   Go:
     code: 1334577
@@ -208,23 +208,15 @@ total:
   blanks: 146785
   files: 4796
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/Azure/aks-engine
   commit: f634f52ff4f6295876b2d5391fc3af1f5bb3ad3e
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.9
 checks:
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: SECURITY.md:1'
-      - 'Info: Found linked content: SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
-      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Maintained
     score: 0
     reason: project is archived
@@ -234,15 +226,23 @@ checks:
     score: 9
     reason: Found 25/26 approved changesets -- score normalized to 9
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: SECURITY.md:1'
+      - 'Info: Found linked content: SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
+      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -287,20 +287,6 @@ checks:
       - 'Info: ''last push approval'' is required to merge on branch ''master'''
       - 'Info: status check found to merge onto on branch ''master'''
       - 'Info: PRs are required in order to make changes on branch ''master'''
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v0.79.0 not signed: https://api.github.com/repos/Azure/aks-engine/releases/119493015'
-      - 'Warn: release artifact v0.78.0 not signed: https://api.github.com/repos/Azure/aks-engine/releases/100885602'
-      - 'Warn: release artifact v0.77.0 not signed: https://api.github.com/repos/Azure/aks-engine/releases/94991358'
-      - 'Warn: release artifact nightly not signed: https://api.github.com/repos/Azure/aks-engine/releases/32291143'
-      - 'Warn: release artifact v0.76.0 not signed: https://api.github.com/repos/Azure/aks-engine/releases/92096623'
-      - 'Warn: release artifact v0.79.0 does not have provenance: https://api.github.com/repos/Azure/aks-engine/releases/119493015'
-      - 'Warn: release artifact v0.78.0 does not have provenance: https://api.github.com/repos/Azure/aks-engine/releases/100885602'
-      - 'Warn: release artifact v0.77.0 does not have provenance: https://api.github.com/repos/Azure/aks-engine/releases/94991358'
-      - 'Warn: release artifact nightly does not have provenance: https://api.github.com/repos/Azure/aks-engine/releases/32291143'
-      - 'Warn: release artifact v0.76.0 does not have provenance: https://api.github.com/repos/Azure/aks-engine/releases/92096623'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -338,6 +324,20 @@ checks:
       - 'Info:   0 out of   3 containerImage dependencies pinned'
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
       - 'Info:   1 out of   2 goCommand dependencies pinned'
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v0.79.0 not signed: https://api.github.com/repos/Azure/aks-engine/releases/119493015'
+      - 'Warn: release artifact v0.78.0 not signed: https://api.github.com/repos/Azure/aks-engine/releases/100885602'
+      - 'Warn: release artifact v0.77.0 not signed: https://api.github.com/repos/Azure/aks-engine/releases/94991358'
+      - 'Warn: release artifact nightly not signed: https://api.github.com/repos/Azure/aks-engine/releases/32291143'
+      - 'Warn: release artifact v0.76.0 not signed: https://api.github.com/repos/Azure/aks-engine/releases/92096623'
+      - 'Warn: release artifact v0.79.0 does not have provenance: https://api.github.com/repos/Azure/aks-engine/releases/119493015'
+      - 'Warn: release artifact v0.78.0 does not have provenance: https://api.github.com/repos/Azure/aks-engine/releases/100885602'
+      - 'Warn: release artifact v0.77.0 does not have provenance: https://api.github.com/repos/Azure/aks-engine/releases/94991358'
+      - 'Warn: release artifact nightly does not have provenance: https://api.github.com/repos/Azure/aks-engine/releases/32291143'
+      - 'Warn: release artifact v0.76.0 does not have provenance: https://api.github.com/repos/Azure/aks-engine/releases/92096623'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
