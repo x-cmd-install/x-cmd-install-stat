@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.16.4"
   latestRelease: "v2.16.4"
   latestPrerelease: "v2.0.0-rc.0"
-  collectedAt: 2026-09-16T06:36:44Z
+  collectedAt: 2026-09-17T06:42:04Z
 timeline:
   created: 2017-08-07
   lastCommit: 2026-02-02
@@ -47,23 +47,23 @@ language:
 totalBytes: 5295448
 recent:
   last30d:
-    since: 2026-08-17
+    since: 2026-08-18
     release: 0
     mergedPR: 0
-    openPR: 7
+    openPR: 6
     closedIssue: 0
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-18
+    since: 2026-07-19
     release: 0
     mergedPR: 0
-    openPR: 14
+    openPR: 13
     closedIssue: 0
     openIssue: 2
     commit: 0
   last90d:
-    since: 2026-06-18
+    since: 2026-06-19
     release: 0
     mergedPR: 0
     openPR: 17
@@ -71,7 +71,7 @@ recent:
     openIssue: 6
     commit: 0
   last180d:
-    since: 2026-03-20
+    since: 2026-03-21
     release: 0
     mergedPR: 0
     openPR: 27
@@ -79,7 +79,7 @@ recent:
     openIssue: 14
     commit: 0
   last360d:
-    since: 2025-09-21
+    since: 2025-09-22
     release: 3
     mergedPR: 7
     openPR: 45
@@ -87,11 +87,11 @@ recent:
     openIssue: 24
     commit: 12
   last720d:
-    since: 2024-09-26
+    since: 2024-09-27
     release: 17
     mergedPR: 47
     openPR: 58
-    closedIssue: 146
+    closedIssue: 145
     openIssue: 38
     commit: 152
 total:
@@ -103,7 +103,7 @@ total:
   commit: 3499
 ---
 path: /home/runner/.x-repo/github.com/parcel-bundler/parcel
-collectedAt: 2026-09-16T06:36:58Z
+collectedAt: 2026-09-17T06:42:14Z
 loc:
   JavaScript:
     code: 143783
@@ -261,18 +261,18 @@ total:
   blanks: 21998
   files: 4692
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/parcel-bundler/parcel
   commit: 59484858a1a0bcbb71f74088956bb437a2db6505
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 2.6
 checks:
   - name: Maintained
     score: 0
-    reason: 0 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Code-Review
     score: 1
@@ -292,8 +292,8 @@ checks:
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Warn: jobLevel ''deployments'' permission set to ''write'': .github/workflows/ci.yml:131'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/tag-release.yml:22'
       - 'Warn: jobLevel ''deployments'' permission set to ''write'': .github/workflows/tag-release.yml:23'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/tag-release.yml:22'
       - 'Warn: no topLevel permission defined: .github/workflows/canary-release.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:11'
       - 'Warn: no topLevel permission defined: .github/workflows/dev-release.yml:1'
@@ -304,6 +304,15 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Binary-Artifacts
+    score: 5
+    reason: binaries present in source code
+    details:
+      - 'Warn: binary detected: packages/core/integration-tests/test/integration/wasm-async/add.wasm:1'
+      - 'Warn: binary detected: packages/core/integration-tests/test/integration/wasm-dynamic/add.wasm:1'
+      - 'Warn: binary detected: packages/core/integration-tests/test/integration/wasm-sourcemap-transformer/index.wasm:1'
+      - 'Warn: binary detected: packages/core/integration-tests/test/integration/wasm-sync/add.wasm:1'
+      - 'Warn: binary detected: packages/core/integration-tests/test/integration/workers-with-other-loaders/add.wasm:1'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -340,6 +349,11 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:164: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/ci.yml/v2?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:173: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/ci.yml/v2?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:186: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/ci.yml/v2?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:47: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:49: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:53: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:54: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:66: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:115: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:117: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:122: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
@@ -352,11 +366,6 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:171: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:174: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:176: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:47: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:49: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:53: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:54: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:66: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/stale.yml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/stale.yml/v2?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/tag-release.yml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/tag-release.yml/v2?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/tag-release.yml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/tag-release.yml/v2?enable=pin'
@@ -367,28 +376,19 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/tag-release.yml:76: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/tag-release.yml/v2?enable=pin'
       - 'Info:   0 out of  21 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of  28 third-party GitHubAction dependencies pinned'
-  - name: Binary-Artifacts
-    score: 5
-    reason: binaries present in source code
-    details:
-      - 'Warn: binary detected: packages/core/integration-tests/test/integration/wasm-async/add.wasm:1'
-      - 'Warn: binary detected: packages/core/integration-tests/test/integration/wasm-dynamic/add.wasm:1'
-      - 'Warn: binary detected: packages/core/integration-tests/test/integration/wasm-sourcemap-transformer/index.wasm:1'
-      - 'Warn: binary detected: packages/core/integration-tests/test/integration/wasm-sync/add.wasm:1'
-      - 'Warn: binary detected: packages/core/integration-tests/test/integration/workers-with-other-loaders/add.wasm:1'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
     details: null
   - name: Fuzzing
     score: 0

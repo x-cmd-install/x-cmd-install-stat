@@ -2,12 +2,12 @@ about:
   description: "Portable OpenSSH"
   license: NOASSERTION
   homepage: 
-  head: e3cb2b2
+  head: fb6d39e
   archived: false
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-09-16T04:48:19Z
+  collectedAt: 2026-09-17T04:57:12Z
 timeline:
   created: 2014-01-17
   lastCommit: 2026-09-16
@@ -17,89 +17,89 @@ timeline:
 popularity:
   star: 4006
   watcher: 135
-  fork: 2162
+  fork: 2163
   release: 0
   contributor: 108
-  pullRequest: 684
+  pullRequest: 685
   issue: 0
 language:
-  C: 4818960
+  C: 4821069
   C++: 878986
   Shell: 519041
-  Roff: 348187
-  M4: 171603
+  Roff: 348438
+  M4: 171613
   Makefile: 69867
   HTML: 22582
   Awk: 8740
   KRL: 7037
-totalBytes: 6845003
+totalBytes: 6847373
 recent:
   last30d:
-    since: 2026-08-17
+    since: 2026-08-18
     release: 0
     mergedPR: 0
-    openPR: 4
+    openPR: 5
     closedIssue: 0
     openIssue: 0
-    commit: 47
+    commit: 60
   last60d:
-    since: 2026-07-18
+    since: 2026-07-19
     release: 0
     mergedPR: 0
-    openPR: 7
+    openPR: 8
     closedIssue: 0
     openIssue: 0
-    commit: 104
+    commit: 117
   last90d:
-    since: 2026-06-18
+    since: 2026-06-19
     release: 0
     mergedPR: 0
-    openPR: 10
+    openPR: 11
     closedIssue: 0
     openIssue: 0
-    commit: 196
+    commit: 209
   last180d:
-    since: 2026-03-20
+    since: 2026-03-21
     release: 0
     mergedPR: 0
-    openPR: 31
+    openPR: 32
     closedIssue: 0
     openIssue: 0
-    commit: 340
+    commit: 353
   last360d:
-    since: 2025-09-21
+    since: 2025-09-22
     release: 0
     mergedPR: 0
-    openPR: 42
+    openPR: 43
     closedIssue: 0
     openIssue: 0
-    commit: 649
+    commit: 662
   last720d:
-    since: 2024-09-26
+    since: 2024-09-27
     release: 0
     mergedPR: 0
-    openPR: 61
+    openPR: 62
     closedIssue: 0
     openIssue: 0
-    commit: 1166
+    commit: 1179
 total:
   release: 0
   mergedPR: 2
-  openPR: 144
+  openPR: 145
   closedIssue: 0
   openIssue: 0
-  commit: 13909
+  commit: 13922
 ---
 path: /home/runner/.x-repo/github.com/openssh/openssh-portable
-collectedAt: 2026-09-16T04:48:30Z
+collectedAt: 2026-09-17T04:57:22Z
 loc:
   C:
-    code: 121315
-    comments: 18091
-    blanks: 15594
+    code: 121372
+    comments: 18100
+    blanks: 15601
     files: 304
   CHeader:
-    code: 28212
+    code: 28214
     comments: 11284
     blanks: 3637
     files: 116
@@ -179,18 +179,18 @@ loc:
     blanks: 32
     files: 2
 total:
-  code: 167805
-  comments: 31675
-  blanks: 22114
+  code: 167864
+  comments: 31684
+  blanks: 22121
   files: 623
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/openssh/openssh-portable
-  commit: 7fe3b24c922b7af2d743737f7cf37df61ea06426
+  commit: a30bafcbbd44dc4dc91916240c32ecabff899338
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 6.4
 checks:
   - name: Code-Review
@@ -209,10 +209,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -232,15 +228,19 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/upstream.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/vm.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: SAST
     score: 0
     reason: no SAST tool detected
     details:
       - 'Warn: no pull requests merged into dev branch'
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -268,6 +268,12 @@ checks:
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sntrup761_enc_fuzz.cc:38'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sshsig_fuzz.cc:18'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sshsigopt_fuzz.cc:11'
+  - name: License
+    score: 9
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENCE:0'
+      - 'Warn: project license file does not contain an FSF or OSI license.'
   - name: Pinned-Dependencies
     score: 10
     reason: all dependencies are pinned
@@ -278,12 +284,6 @@ checks:
     score: -1
     reason: no releases found
     details: null
-  - name: License
-    score: 9
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENCE:0'
-      - 'Warn: project license file does not contain an FSF or OSI license.'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'

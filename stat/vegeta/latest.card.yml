@@ -7,7 +7,7 @@ about:
   latestVersion: "v12.13.0"
   latestRelease: "v12.13.0"
   latestPrerelease: "v6.0.0-pre"
-  collectedAt: 2026-09-16T06:10:38Z
+  collectedAt: 2026-09-17T06:10:35Z
 timeline:
   created: 2013-08-13
   lastCommit: 2026-02-16
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2025-10-31
   lastPrerelease: 2015-11-17
 popularity:
-  star: 25189
+  star: 25191
   watcher: 307
   fork: 1422
   release: 71
@@ -33,7 +33,7 @@ language:
 totalBytes: 584089
 recent:
   last30d:
-    since: 2026-08-17
+    since: 2026-08-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -41,7 +41,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-18
+    since: 2026-07-19
     release: 0
     mergedPR: 0
     openPR: 2
@@ -49,7 +49,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-18
+    since: 2026-06-19
     release: 0
     mergedPR: 0
     openPR: 2
@@ -57,7 +57,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-20
+    since: 2026-03-21
     release: 0
     mergedPR: 0
     openPR: 4
@@ -65,7 +65,7 @@ recent:
     openIssue: 5
     commit: 0
   last360d:
-    since: 2025-09-21
+    since: 2025-09-22
     release: 1
     mergedPR: 0
     openPR: 13
@@ -73,7 +73,7 @@ recent:
     openIssue: 13
     commit: 4
   last720d:
-    since: 2024-09-26
+    since: 2024-09-27
     release: 1
     mergedPR: 0
     openPR: 21
@@ -89,7 +89,7 @@ total:
   commit: 741
 ---
 path: /home/runner/.x-repo/github.com/tsenart/vegeta
-collectedAt: 2026-09-16T06:10:40Z
+collectedAt: 2026-09-17T06:10:36Z
 loc:
   Go:
     code: 20110
@@ -147,13 +147,13 @@ total:
   blanks: 1384
   files: 57
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/tsenart/vegeta
   commit: cf5811269046c672a604b1eb352204d30f16ae4a
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.6
 checks:
   - name: Packaging
@@ -161,21 +161,17 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 0
-    reason: Found 0/22 approved changesets -- score normalized to 0
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
+  - name: Code-Review
+    score: 0
+    reason: Found 0/22 approved changesets -- score normalized to 0
     details: null
   - name: Token-Permissions
     score: 0
@@ -183,6 +179,10 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -195,11 +195,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
@@ -225,6 +220,15 @@ checks:
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
       - 'Info:   0 out of   1 goCommand dependencies pinned'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -239,10 +243,6 @@ checks:
       - 'Warn: release artifact v12.11.3 does not have provenance: https://api.github.com/repos/tsenart/vegeta/releases/167486495'
       - 'Warn: release artifact v12.11.2 does not have provenance: https://api.github.com/repos/tsenart/vegeta/releases/167475303'
       - 'Warn: release artifact v12.11.1 does not have provenance: https://api.github.com/repos/tsenart/vegeta/releases/123300611'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

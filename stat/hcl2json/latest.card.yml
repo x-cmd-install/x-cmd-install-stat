@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.6.9"
   latestRelease: "v0.6.9"
   latestPrerelease: "v0.0.2"
-  collectedAt: 2026-09-16T06:47:42Z
+  collectedAt: 2026-09-17T06:49:40Z
 timeline:
   created: 2019-07-22
   lastCommit: 2026-07-21
@@ -28,7 +28,7 @@ language:
 totalBytes: 18775
 recent:
   last30d:
-    since: 2026-08-17
+    since: 2026-08-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-18
+    since: 2026-07-19
     release: 0
     mergedPR: 1
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-18
+    since: 2026-06-19
     release: 0
     mergedPR: 3
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 3
   last180d:
-    since: 2026-03-20
+    since: 2026-03-21
     release: 1
     mergedPR: 4
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 4
   last360d:
-    since: 2025-09-21
+    since: 2025-09-22
     release: 1
     mergedPR: 9
     openPR: 1
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 10
   last720d:
-    since: 2024-09-26
+    since: 2024-09-27
     release: 5
     mergedPR: 26
     openPR: 1
@@ -84,7 +84,7 @@ total:
   commit: 252
 ---
 path: /home/runner/.x-repo/github.com/tmccombs/hcl2json
-collectedAt: 2026-09-16T06:47:47Z
+collectedAt: 2026-09-17T06:49:40Z
 loc:
   Go:
     code: 684
@@ -107,13 +107,13 @@ total:
   blanks: 154
   files: 7
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/tmccombs/hcl2json
   commit: 3bc0e3118066707a891a92a45e364a46253826a4
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.2
 checks:
   - name: Maintained
@@ -124,21 +124,14 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Code-Review
-    score: 6
-    reason: Found 2/3 approved changesets -- score normalized to 6
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
-      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/deploy.yml:9'
-      - 'Info: no jobLevel write permissions found'
+  - name: Code-Review
+    score: 6
+    reason: Found 2/3 approved changesets -- score normalized to 6
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -151,6 +144,13 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/deploy.yml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/tmccombs/hcl2json/deploy.yml/main?enable=pin'
       - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
+      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/deploy.yml:9'
+      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -163,17 +163,22 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/deploy.yml:12'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -188,11 +193,6 @@ checks:
       - 'Warn: release artifact v0.6.7 does not have provenance: https://api.github.com/repos/tmccombs/hcl2json/releases/209174174'
       - 'Warn: release artifact v0.6.6 does not have provenance: https://api.github.com/repos/tmccombs/hcl2json/releases/206764276'
       - 'Warn: release artifact v0.6.5 does not have provenance: https://api.github.com/repos/tmccombs/hcl2json/releases/191960604'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/deploy.yml:12'
   - name: Branch-Protection
     score: 3
     reason: branch protection is not maximal on development and all release branches

@@ -7,7 +7,7 @@ about:
   latestVersion: "v20240923"
   latestRelease: "v20240923"
   latestPrerelease: ""
-  collectedAt: 2026-09-16T05:32:13Z
+  collectedAt: 2026-09-17T05:41:15Z
 timeline:
   created: 2021-03-25
   lastCommit: 2024-09-23
@@ -28,7 +28,7 @@ language:
 totalBytes: 13676
 recent:
   last30d:
-    since: 2026-08-17
+    since: 2026-08-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-18
+    since: 2026-07-19
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-18
+    since: 2026-06-19
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-20
+    since: 2026-03-21
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-21
+    since: 2025-09-22
     release: 0
     mergedPR: 0
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-09-26
+    since: 2024-09-27
     release: 0
     mergedPR: 0
     openPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 29
 ---
 path: /home/runner/.x-repo/github.com/txthinking/mad
-collectedAt: 2026-09-16T05:32:14Z
+collectedAt: 2026-09-17T05:41:16Z
 loc:
   Go:
     code: 501
@@ -107,19 +107,20 @@ total:
   blanks: 60
   files: 8
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/txthinking/mad
   commit: e458986653f0514d3d6dfd813ed0ea970df14f80
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 1.7
 checks:
-  - name: Code-Review
-    score: 0
-    reason: Found 0/29 approved changesets -- score normalized to 0
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Dangerous-Workflow
     score: -1
     reason: no workflows found
@@ -128,24 +129,23 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: -1
     reason: No tokens found
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: SAST
     score: 0
     reason: no SAST tool detected
     details:
       - 'Warn: no pull requests merged into dev branch'
+  - name: Code-Review
+    score: 0
+    reason: Found 0/29 approved changesets -- score normalized to 0
+    details: null
   - name: Pinned-Dependencies
     score: -1
     reason: no dependencies found
@@ -154,6 +154,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -162,11 +167,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected

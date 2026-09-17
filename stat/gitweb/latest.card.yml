@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.3.5"
   latestRelease: "v0.3.5"
   latestPrerelease: ""
-  collectedAt: 2026-09-16T04:46:51Z
+  collectedAt: 2026-09-17T04:46:52Z
 timeline:
   created: 2019-01-21
   lastCommit: 2023-01-25
@@ -27,7 +27,7 @@ language:
 totalBytes: 13921
 recent:
   last30d:
-    since: 2026-08-17
+    since: 2026-08-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-18
+    since: 2026-07-19
     release: 0
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-18
+    since: 2026-06-19
     release: 0
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-20
+    since: 2026-03-21
     release: 0
     mergedPR: 0
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-21
+    since: 2025-09-22
     release: 0
     mergedPR: 0
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-09-26
+    since: 2024-09-27
     release: 0
     mergedPR: 0
     openPR: 0
@@ -83,7 +83,7 @@ total:
   commit: 164
 ---
 path: /home/runner/.x-repo/github.com/yoannfleurydev/gitweb
-collectedAt: 2026-09-16T04:46:53Z
+collectedAt: 2026-09-17T04:46:53Z
 loc:
   Rust:
     code: 336
@@ -106,26 +106,29 @@ total:
   blanks: 225
   files: 9
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/yoannfleurydev/gitweb
   commit: ac90af42d03a1e5de8f803307dbf1d4868f8baf6
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 2.8
 checks:
-  - name: Code-Review
+  - name: Token-Permissions
     score: 0
-    reason: Found 0/5 approved changesets -- score normalized to 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/publish.yaml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/pull_request.yaml:1'
+      - 'Info: no jobLevel write permissions found'
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
-    details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Packaging
     score: -1
@@ -136,13 +139,10 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Token-Permissions
+  - name: Code-Review
     score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/publish.yaml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/pull_request.yaml:1'
-      - 'Info: no jobLevel write permissions found'
+    reason: Found 0/5 approved changesets -- score normalized to 0
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -188,6 +188,10 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -202,10 +206,6 @@ checks:
       - 'Warn: release artifact v0.3.3 does not have provenance: https://api.github.com/repos/yoannfleurydev/gitweb/releases/50646462'
       - 'Warn: release artifact v0.3.2 does not have provenance: https://api.github.com/repos/yoannfleurydev/gitweb/releases/45151753'
       - 'Warn: release artifact v0.3.1 does not have provenance: https://api.github.com/repos/yoannfleurydev/gitweb/releases/41589675'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.17.3"
   latestRelease: "v2.17.3"
   latestPrerelease: ""
-  collectedAt: 2026-09-16T04:59:07Z
+  collectedAt: 2026-09-17T04:52:45Z
 timeline:
   created: 2011-12-25
   lastCommit: 2026-07-24
@@ -32,7 +32,7 @@ language:
 totalBytes: 233078
 recent:
   last30d:
-    since: 2026-08-17
+    since: 2026-08-18
     release: 0
     mergedPR: 0
     openPR: 1
@@ -40,7 +40,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-18
+    since: 2026-07-19
     release: 1
     mergedPR: 5
     openPR: 1
@@ -48,7 +48,7 @@ recent:
     openIssue: 0
     commit: 12
   last90d:
-    since: 2026-06-18
+    since: 2026-06-19
     release: 1
     mergedPR: 5
     openPR: 1
@@ -56,7 +56,7 @@ recent:
     openIssue: 0
     commit: 12
   last180d:
-    since: 2026-03-20
+    since: 2026-03-21
     release: 2
     mergedPR: 8
     openPR: 3
@@ -64,15 +64,15 @@ recent:
     openIssue: 1
     commit: 18
   last360d:
-    since: 2025-09-21
+    since: 2025-09-22
     release: 5
     mergedPR: 10
     openPR: 4
-    closedIssue: 2
+    closedIssue: 1
     openIssue: 2
     commit: 22
   last720d:
-    since: 2024-09-26
+    since: 2024-09-27
     release: 5
     mergedPR: 12
     openPR: 4
@@ -88,7 +88,7 @@ total:
   commit: 857
 ---
 path: /home/runner/.x-repo/github.com/moul/assh
-collectedAt: 2026-09-16T04:59:10Z
+collectedAt: 2026-09-17T04:52:48Z
 loc:
   Go:
     code: 4966
@@ -131,15 +131,19 @@ total:
   blanks: 1199
   files: 89
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/moul/assh
   commit: 7dc505e79cc2564866760b53c2a247fa3a167198
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.4
 checks:
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Code-Review
     score: 0
     reason: Found 1/17 approved changesets -- score normalized to 0
@@ -147,14 +151,6 @@ checks:
   - name: Maintained
     score: 10
     reason: 19 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -164,6 +160,10 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/semgrep.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -173,12 +173,6 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -207,6 +201,17 @@ checks:
       - 'Info:   0 out of  15 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Security-Policy
     score: 9
     reason: security policy file detected
@@ -227,11 +232,6 @@ checks:
       - 'Warn: release artifact v2.17.2 does not have provenance: https://api.github.com/repos/moul/assh/releases/321137918'
       - 'Warn: release artifact v2.17.1 does not have provenance: https://api.github.com/repos/moul/assh/releases/294106459'
       - 'Warn: release artifact v2.16.1 does not have provenance: https://api.github.com/repos/moul/assh/releases/281645572'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Packaging
     score: 10
     reason: packaging workflow detected

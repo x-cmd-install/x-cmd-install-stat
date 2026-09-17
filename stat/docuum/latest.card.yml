@@ -2,15 +2,15 @@ about:
   description: "Docuum performs least recently used (LRU) eviction of Docker images. 🗑️"
   license: NOASSERTION
   homepage: 
-  head: 4730312
+  head: 1ec0c7e
   archived: false
   latestVersion: "v0.27.1"
   latestRelease: "v0.27.1"
   latestPrerelease: ""
-  collectedAt: 2026-09-16T06:25:09Z
+  collectedAt: 2026-09-17T06:33:40Z
 timeline:
   created: 2020-01-04
-  lastCommit: 2026-09-02
+  lastCommit: 2026-09-16
   lastVersion: 2026-09-02
   lastRelease: 2026-09-02
   lastPrerelease: 
@@ -20,7 +20,7 @@ popularity:
   fork: 43
   release: 51
   contributor: 21
-  pullRequest: 354
+  pullRequest: 355
   issue: 55
 language:
   Rust: 64989
@@ -29,63 +29,63 @@ language:
 totalBytes: 75352
 recent:
   last30d:
-    since: 2026-08-17
+    since: 2026-08-18
     release: 1
-    mergedPR: 6
+    mergedPR: 7
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 6
+    commit: 7
   last60d:
-    since: 2026-07-18
+    since: 2026-07-19
     release: 1
-    mergedPR: 16
+    mergedPR: 17
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 15
+    commit: 16
   last90d:
-    since: 2026-06-18
+    since: 2026-06-19
     release: 1
-    mergedPR: 36
+    mergedPR: 34
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 31
+    commit: 32
   last180d:
-    since: 2026-03-20
+    since: 2026-03-21
     release: 2
-    mergedPR: 49
+    mergedPR: 50
     openPR: 0
     closedIssue: 1
     openIssue: 0
-    commit: 56
+    commit: 57
   last360d:
-    since: 2025-09-21
+    since: 2025-09-22
     release: 5
-    mergedPR: 61
+    mergedPR: 62
     openPR: 0
     closedIssue: 3
     openIssue: 1
-    commit: 69
+    commit: 70
   last720d:
-    since: 2024-09-26
+    since: 2024-09-27
     release: 5
-    mergedPR: 79
+    mergedPR: 80
     openPR: 0
     closedIssue: 5
     openIssue: 3
-    commit: 131
+    commit: 132
 total:
   release: 51
-  mergedPR: 343
+  mergedPR: 344
   openPR: 0
   closedIssue: 43
   openIssue: 12
-  commit: 754
+  commit: 755
 ---
 path: /home/runner/.x-repo/github.com/stepchowfun/docuum
-collectedAt: 2026-09-16T06:25:10Z
+collectedAt: 2026-09-17T06:33:41Z
 loc:
   Rust:
     code: 1514
@@ -123,13 +123,13 @@ total:
   blanks: 536
   files: 17
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/stepchowfun/docuum
-  commit: 473031257cb047f4763071ac0d941ac8e8a1b23f
+  commit: 1ec0c7ea35162ddadca55f8736981f4d78c9d59f
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.1
 checks:
   - name: Code-Review
@@ -140,13 +140,13 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Token-Permissions
     score: 0
@@ -171,12 +171,6 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: License
-    score: 9
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE.md:0'
-      - 'Warn: project license file does not contain an FSF or OSI license.'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -208,6 +202,23 @@ checks:
       - 'Info:   0 out of  15 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   7 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
+  - name: License
+    score: 9
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE.md:0'
+      - 'Warn: project license file does not contain an FSF or OSI license.'
+  - name: Branch-Protection
+    score: 3
+    reason: branch protection is not maximal on development and all release branches
+    details:
+      - 'Info: ''allow deletion'' disabled on branch ''main'''
+      - 'Info: ''force pushes'' disabled on branch ''main'''
+      - 'Info: ''branch protection settings apply to administrators'' is required to merge on branch ''main'''
+      - 'Warn: could not determine whether codeowners review is allowed'
+      - 'Info: ''up-to-date branches'' is required to merge on branch ''main'''
+      - 'Info: status check found to merge onto on branch ''main'''
+      - 'Warn: PRs are not required to make changes on branch ''main''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -222,25 +233,14 @@ checks:
       - 'Warn: release artifact v0.26.1 does not have provenance: https://api.github.com/repos/stepchowfun/docuum/releases/294311452'
       - 'Warn: release artifact v0.26.0 does not have provenance: https://api.github.com/repos/stepchowfun/docuum/releases/265056175'
       - 'Warn: release artifact v0.25.1 does not have provenance: https://api.github.com/repos/stepchowfun/docuum/releases/255671008'
-  - name: Branch-Protection
-    score: 3
-    reason: branch protection is not maximal on development and all release branches
-    details:
-      - 'Info: ''allow deletion'' disabled on branch ''main'''
-      - 'Info: ''force pushes'' disabled on branch ''main'''
-      - 'Info: ''branch protection settings apply to administrators'' is required to merge on branch ''main'''
-      - 'Warn: could not determine whether codeowners review is allowed'
-      - 'Info: ''up-to-date branches'' is required to merge on branch ''main'''
-      - 'Info: status check found to merge onto on branch ''main'''
-      - 'Warn: PRs are not required to make changes on branch ''main''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/ci.yml:191'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/ci.yml:191'
 ---

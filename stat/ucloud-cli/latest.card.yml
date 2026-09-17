@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.3.10"
   latestRelease: "v0.3.10"
   latestPrerelease: ""
-  collectedAt: 2026-09-16T04:46:01Z
+  collectedAt: 2026-09-17T04:48:35Z
 timeline:
   created: 2018-08-30
   lastCommit: 2026-07-22
@@ -31,7 +31,7 @@ language:
 totalBytes: 1934361
 recent:
   last30d:
-    since: 2026-08-17
+    since: 2026-08-18
     release: 0
     mergedPR: 0
     openPR: 1
@@ -39,7 +39,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-18
+    since: 2026-07-19
     release: 2
     mergedPR: 2
     openPR: 1
@@ -47,15 +47,15 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-18
-    release: 10
+    since: 2026-06-19
+    release: 7
     mergedPR: 42
     openPR: 1
     closedIssue: 1
     openIssue: 0
     commit: 210
   last180d:
-    since: 2026-03-20
+    since: 2026-03-21
     release: 10
     mergedPR: 48
     openPR: 1
@@ -63,7 +63,7 @@ recent:
     openIssue: 1
     commit: 229
   last360d:
-    since: 2025-09-21
+    since: 2025-09-22
     release: 10
     mergedPR: 48
     openPR: 1
@@ -71,7 +71,7 @@ recent:
     openIssue: 1
     commit: 229
   last720d:
-    since: 2024-09-26
+    since: 2024-09-27
     release: 10
     mergedPR: 50
     openPR: 1
@@ -87,7 +87,7 @@ total:
   commit: 509
 ---
 path: /home/runner/.x-repo/github.com/ucloud/ucloud-cli
-collectedAt: 2026-09-16T04:46:04Z
+collectedAt: 2026-09-17T04:48:42Z
 loc:
   Go:
     code: 50618
@@ -135,28 +135,28 @@ total:
   blanks: 7158
   files: 850
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/ucloud/ucloud-cli
   commit: 713ed4871a3ae4187f42487e5fcc6ed51e79331c
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.5
 checks:
   - name: Code-Review
     score: 6
     reason: Found 9/13 approved changesets -- score normalized to 6
     details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Dangerous-Workflow
     score: 0
     reason: dangerous workflow patterns detected
     details:
       - 'Warn: untrusted code checkout ''${{ github.event.pull_request.base.sha }}'': .github/workflows/auto-merge.yml:46'
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -176,6 +176,19 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -197,34 +210,21 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:46: update your workflow using https://app.stepsecurity.io/secureworkflow/ucloud/ucloud-cli/release.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:50: update your workflow using https://app.stepsecurity.io/secureworkflow/ucloud/ucloud-cli/release.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:99: update your workflow using https://app.stepsecurity.io/secureworkflow/ucloud/ucloud-cli/release.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating golang:latest to golang:latest@sha256:512690a5660563b57d37ecc31129e7f136e831db2aed24a1dbeb8ad7380dc0fa'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating golang:latest to golang:latest@sha256:f44f6e88636cfb311f9ebace870ded69d943f227bb3cb27d32ffd84ea18c43ea'
       - 'Warn: downloadThenRun not pinned by hash: Dockerfile:5-8'
       - 'Warn: goCommand not pinned by hash: .github/workflows/release-drift.yml:36'
       - 'Warn: goCommand not pinned by hash: .github/workflows/release.yml:56'
       - 'Info:   0 out of  16 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
       - 'Info:   0 out of   2 goCommand dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
-      - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'

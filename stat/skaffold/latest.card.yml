@@ -2,25 +2,25 @@ about:
   description: "Easy and Repeatable Kubernetes Development"
   license: Apache-2.0
   homepage: https://skaffold.dev/
-  head: 967d4a7
+  head: d915e11
   archived: false
-  latestVersion: "v2.24.0"
-  latestRelease: "v2.24.0"
+  latestVersion: "v2.25.0"
+  latestRelease: "v2.25.0"
   latestPrerelease: "v2.0.0-beta3"
-  collectedAt: 2026-09-16T05:16:36Z
+  collectedAt: 2026-09-17T05:20:27Z
 timeline:
   created: 2018-01-23
-  lastCommit: 2026-09-15
-  lastVersion: 2026-07-23
-  lastRelease: 2026-07-23
+  lastCommit: 2026-09-16
+  lastVersion: 2026-09-16
+  lastRelease: 2026-09-16
   lastPrerelease: 2022-09-21
 popularity:
-  star: 15891
+  star: 15890
   watcher: 186
-  fork: 1701
-  release: 200
+  fork: 1700
+  release: 201
   contributor: 443
-  pullRequest: 5879
+  pullRequest: 5882
   issue: 4281
 language:
   Go: 9607480
@@ -45,63 +45,63 @@ language:
 totalBytes: 9967308
 recent:
   last30d:
-    since: 2026-08-17
-    release: 0
-    mergedPR: 8
+    since: 2026-08-18
+    release: 1
+    mergedPR: 10
     openPR: 10
     closedIssue: 3
     openIssue: 2
     commit: 0
   last60d:
-    since: 2026-07-18
-    release: 1
-    mergedPR: 13
-    openPR: 12
+    since: 2026-07-19
+    release: 2
+    mergedPR: 15
+    openPR: 13
     closedIssue: 3
     openIssue: 4
     commit: 0
   last90d:
-    since: 2026-06-18
-    release: 2
-    mergedPR: 28
-    openPR: 17
+    since: 2026-06-19
+    release: 3
+    mergedPR: 30
+    openPR: 18
     closedIssue: 3
     openIssue: 11
     commit: 0
   last180d:
-    since: 2026-03-20
-    release: 8
-    mergedPR: 68
-    openPR: 29
+    since: 2026-03-21
+    release: 9
+    mergedPR: 70
+    openPR: 30
     closedIssue: 9
     openIssue: 18
     commit: 0
   last360d:
-    since: 2025-09-21
-    release: 14
-    mergedPR: 131
-    openPR: 49
+    since: 2025-09-22
+    release: 15
+    mergedPR: 133
+    openPR: 50
     closedIssue: 15
     openIssue: 36
     commit: 0
   last720d:
-    since: 2024-09-26
-    release: 20
-    mergedPR: 304
-    openPR: 62
-    closedIssue: 51
+    since: 2024-09-27
+    release: 21
+    mergedPR: 306
+    openPR: 63
+    closedIssue: 50
     openIssue: 90
-    commit: 312
+    commit: 314
 total:
-  release: 200
-  mergedPR: 4877
-  openPR: 75
+  release: 201
+  mergedPR: 4879
+  openPR: 76
   closedIssue: 3447
   openIssue: 834
-  commit: 9246
+  commit: 9248
 ---
 path: /home/runner/.x-repo/github.com/GoogleContainerTools/skaffold
-collectedAt: 2026-09-16T05:17:17Z
+collectedAt: 2026-09-17T05:21:10Z
 loc:
   Go:
     code: 2249384
@@ -265,8 +265,8 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 62828
-    blanks: 28296
+    comments: 62864
+    blanks: 28309
     files: 789
   Text:
     code: 0
@@ -275,14 +275,14 @@ loc:
     files: 105
 total:
   code: 2725665
-  comments: 650786
-  blanks: 355574
+  comments: 650822
+  blanks: 355587
   files: 13937
 ---
-date: "2026-09-15T16:33:49Z"
+date: "2026-09-16T17:26:13Z"
 repo:
   name: github.com/GoogleContainerTools/skaffold
-  commit: 967d4a702a83d7da74eb3dc38a070e2cd75ad71a
+  commit: d915e113210eb7590ccbc8363aeab38053172ab3
 scorecard:
   version: v5.3.0
   commit: c22063e786c11f9dd714d777a687ff7c4599b600
@@ -297,6 +297,14 @@ checks:
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: SECURITY.md:1'
+      - 'Info: Found linked content: SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
+      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
@@ -306,22 +314,18 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Security-Policy
+  - name: Dangerous-Workflow
     score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: SECURITY.md:1'
-      - 'Info: Found linked content: SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
-      - 'Info: Found text in security policy: SECURITY.md:1'
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
     details:
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:22'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:23'
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/scorecards.yml:21'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:22'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/scorecards.yml:22'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/scorecards.yml:21'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/codeql-analysis.yml:11'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/integration-linux.yml:6'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/linters-checks.yml:6'
@@ -331,20 +335,10 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/unit-tests-windows.yml:6'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/verify-examples.yml:10'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: CII-Best-Practices
     score: 2
     reason: 'badge detected: InProgress'
     details: null
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Binary-Artifacts
     score: 6
     reason: binaries present in source code
@@ -353,6 +347,32 @@ checks:
       - 'Warn: binary detected: examples/jib-sync/gradle/wrapper/gradle-wrapper.jar:1'
       - 'Warn: binary detected: integration/examples/jib-gradle/gradle/wrapper/gradle-wrapper.jar:1'
       - 'Warn: binary detected: integration/examples/jib-sync/gradle/wrapper/gradle-wrapper.jar:1'
+  - name: SAST
+    score: 7
+    reason: SAST tool detected but not run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Branch-Protection
+    score: 6
+    reason: branch protection is not maximal on development and all release branches
+    details:
+      - 'Info: ''allow deletion'' disabled on branch ''main'''
+      - 'Info: ''force pushes'' disabled on branch ''main'''
+      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''main'''
+      - 'Info: ''stale review dismissal'' is required to merge on branch ''main'''
+      - 'Warn: required approving review count is 1 on branch ''main'''
+      - 'Info: codeowner review is required on branch ''main'''
+      - 'Info: ''last push approval'' is required to merge on branch ''main'''
+      - 'Info: ''up-to-date branches'' is required to merge on branch ''main'''
+      - 'Warn: no status checks found to merge onto branch ''main'''
+      - 'Info: PRs are required in order to make changes on branch ''main'''
   - name: Signed-Releases
     score: 8
     reason: 4 out of the last 4 releases have a total of 4 signed artifacts.
@@ -370,33 +390,9 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: SAST
-    score: 7
-    reason: SAST tool detected but not run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
-  - name: Branch-Protection
-    score: 6
-    reason: branch protection is not maximal on development and all release branches
-    details:
-      - 'Info: ''allow deletion'' disabled on branch ''main'''
-      - 'Info: ''force pushes'' disabled on branch ''main'''
-      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''main'''
-      - 'Info: ''stale review dismissal'' is required to merge on branch ''main'''
-      - 'Warn: required approving review count is 1 on branch ''main'''
-      - 'Info: codeowner review is required on branch ''main'''
-      - 'Info: ''last push approval'' is required to merge on branch ''main'''
-      - 'Info: ''up-to-date branches'' is required to merge on branch ''main'''
-      - 'Warn: no status checks found to merge onto branch ''main'''
-      - 'Info: PRs are required in order to make changes on branch ''main'''
-  - name: CI-Tests
-    score: 10
-    reason: 30 out of 30 merged PRs checked by a CI test -- score normalized to 10
-    details: null
   - name: Vulnerabilities
     score: 0
-    reason: 148 existing vulnerabilities detected
+    reason: 149 existing vulnerabilities detected
     details:
       - 'Warn: Project is vulnerable to: GHSA-vmq6-5m68-f53m'
       - 'Warn: Project is vulnerable to: GHSA-25qh-j22f-pwp8'
@@ -494,37 +490,35 @@ checks:
       - 'Warn: Project is vulnerable to: GHSA-x23c-287f-qqv5'
       - 'Warn: Project is vulnerable to: PYSEC-2026-1377 / GHSA-4grg-w6v8-c28g'
       - 'Warn: Project is vulnerable to: PYSEC-2026-2151 / GHSA-68rp-wp8r-4726'
-      - 'Warn: Project is vulnerable to: GO-2026-5932'
-      - 'Warn: Project is vulnerable to: GO-2026-6354'
-      - 'Warn: Project is vulnerable to: GO-2026-6355'
-      - 'Warn: Project is vulnerable to: GO-2026-5942'
-      - 'Warn: Project is vulnerable to: GO-2026-5970'
-      - 'Warn: Project is vulnerable to: GHSA-2v4p-qf9q-27wj'
-      - 'Warn: Project is vulnerable to: GHSA-qc2q-p7wx-3px3'
-      - 'Warn: Project is vulnerable to: GHSA-vp52-pcj8-j9qc'
-      - 'Warn: Project is vulnerable to: GO-2023-1988 / GHSA-2wrh-6pvc-2jm9'
-      - 'Warn: Project is vulnerable to: GO-2023-2102 / GHSA-4374-p667-p6c8'
-      - 'Warn: Project is vulnerable to: GO-2024-2687 / GHSA-4v7x-pqxf-cx7m'
       - 'Warn: Project is vulnerable to: GO-2026-5028 / GHSA-5cv4-jp36-h3mw'
-      - 'Warn: Project is vulnerable to: GO-2023-1495 / GHSA-fxg5-wq6x-vr4w'
-      - 'Warn: Project is vulnerable to: GO-2025-3503 / GHSA-qxp5-gwg8-xv66'
-      - 'Warn: Project is vulnerable to: GO-2025-3595 / GHSA-vvgc-356p-c3xw'
-      - 'Warn: Project is vulnerable to: GO-2023-1571 / GHSA-vvpx-j8f3-3w6h'
-      - 'Warn: Project is vulnerable to: GO-2022-1144 / GHSA-xrjj-mj9h-534m'
-      - 'Warn: Project is vulnerable to: GO-2024-3333'
-      - 'Warn: Project is vulnerable to: GO-2026-4440'
-      - 'Warn: Project is vulnerable to: GO-2026-4441'
       - 'Warn: Project is vulnerable to: GO-2026-4918'
       - 'Warn: Project is vulnerable to: GO-2026-5025'
       - 'Warn: Project is vulnerable to: GO-2026-5026'
       - 'Warn: Project is vulnerable to: GO-2026-5027'
       - 'Warn: Project is vulnerable to: GO-2026-5029'
       - 'Warn: Project is vulnerable to: GO-2026-5030'
+      - 'Warn: Project is vulnerable to: GO-2026-5942'
       - 'Warn: Project is vulnerable to: GO-2026-5024'
-      - 'Warn: Project is vulnerable to: GO-2022-1059 / GHSA-69ch-w2m2-3vjp'
+      - 'Warn: Project is vulnerable to: GO-2026-5970'
+      - 'Warn: Project is vulnerable to: GO-2026-6443 / GHSA-2v4p-qf9q-27wj'
       - 'Warn: Project is vulnerable to: GO-2026-6061 / GHSA-hrxh-6v49-42gf'
-      - 'Warn: Project is vulnerable to: GO-2023-2153 / GHSA-m425-mq94-257g'
+      - 'Warn: Project is vulnerable to: GO-2026-6441 / GHSA-qc2q-p7wx-3px3'
+      - 'Warn: Project is vulnerable to: GO-2026-6348 / GHSA-vp52-pcj8-j9qc'
+      - 'Warn: Project is vulnerable to: GO-2026-4440'
+      - 'Warn: Project is vulnerable to: GO-2026-4441'
+      - 'Warn: Project is vulnerable to: GO-2025-3488 / GHSA-6v2p-p543-phr9'
       - 'Warn: Project is vulnerable to: GO-2026-4762 / GHSA-p77j-4mvh-x3m3'
+      - 'Warn: Project is vulnerable to: GO-2023-1988 / GHSA-2wrh-6pvc-2jm9'
+      - 'Warn: Project is vulnerable to: GO-2023-2102 / GHSA-4374-p667-p6c8'
+      - 'Warn: Project is vulnerable to: GO-2024-2687 / GHSA-4v7x-pqxf-cx7m'
+      - 'Warn: Project is vulnerable to: GO-2023-1495 / GHSA-fxg5-wq6x-vr4w'
+      - 'Warn: Project is vulnerable to: GO-2025-3503 / GHSA-qxp5-gwg8-xv66'
+      - 'Warn: Project is vulnerable to: GO-2025-3595 / GHSA-vvgc-356p-c3xw'
+      - 'Warn: Project is vulnerable to: GO-2023-1571 / GHSA-vvpx-j8f3-3w6h'
+      - 'Warn: Project is vulnerable to: GO-2022-1144 / GHSA-xrjj-mj9h-534m'
+      - 'Warn: Project is vulnerable to: GO-2024-3333'
+      - 'Warn: Project is vulnerable to: GO-2022-1059 / GHSA-69ch-w2m2-3vjp'
+      - 'Warn: Project is vulnerable to: GO-2023-2153 / GHSA-m425-mq94-257g'
       - 'Warn: Project is vulnerable to: GO-2024-2611 / GHSA-8r3f-844c-mc37'
       - 'Warn: Project is vulnerable to: GO-2026-5327 / GHSA-cp6g-7hqx-qxhp'
       - 'Warn: Project is vulnerable to: GHSA-2vqw-3mp8-cgmx'
@@ -539,13 +533,20 @@ checks:
       - 'Warn: Project is vulnerable to: GO-2026-5746 / GHSA-x86f-5xw2-fm2r'
       - 'Warn: Project is vulnerable to: GO-2026-4887'
       - 'Warn: Project is vulnerable to: GO-2026-4529'
+      - 'Warn: Project is vulnerable to: GO-2026-5932'
       - 'Warn: Project is vulnerable to: GO-2026-6303'
+      - 'Warn: Project is vulnerable to: GO-2026-6354'
+      - 'Warn: Project is vulnerable to: GO-2026-6355'
       - 'Warn: Project is vulnerable to: GO-2026-6179'
       - 'Warn: Project is vulnerable to: GO-2026-6180'
-      - 'Warn: Project is vulnerable to: GO-2025-3488 / GHSA-6v2p-p543-phr9'
       - 'Warn: Project is vulnerable to: PYSEC-2018-66 / GHSA-562c-5r94-xh97'
       - 'Warn: Project is vulnerable to: PYSEC-2019-179 / GHSA-5wv5-4vpf-pj6m'
       - 'Warn: Project is vulnerable to: PYSEC-2023-62 / GHSA-m2qf-hxjv-5gpq'
+      - 'Warn: Project is vulnerable to: CVE-2025-8556'
+  - name: CI-Tests
+    score: 10
+    reason: 30 out of 30 merged PRs checked by a CI test -- score normalized to 10
+    details: null
   - name: Contributors
     score: 10
     reason: project has 31 contributing companies or organizations
@@ -576,7 +577,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: deploy/docs-v2/Dockerfile:31: pin your Docker image by updating alpine:3.10 to alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
       - 'Warn: containerImage not pinned by hash: deploy/docs-v2/Dockerfile:37: pin your Docker image by updating alpine:3.10 to alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
       - 'Warn: containerImage not pinned by hash: deploy/docs-v2/Dockerfile:43: pin your Docker image by updating node:20-bookworm to node:20-bookworm@sha256:8f693eaa7e0a8e71560c9a82b55fd54c2ae920a2ba5d2cde28bac7d1c01c9ba5'
-      - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:16: pin your Docker image by updating gcr.io/k8s-skaffold/build_deps:latest to gcr.io/k8s-skaffold/build_deps:latest@sha256:8751cf7c024f8ea57376231eaa16cbc86ef9a7e9a2de4483a91dcb5f03ec0554'
+      - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:16: pin your Docker image by updating gcr.io/k8s-skaffold/build_deps:latest to gcr.io/k8s-skaffold/build_deps:latest@sha256:70f2afa84faba2b157abd152d159cb6aac72117566cec5a6f863af995b613254'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:19'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:24'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:18: pin your Docker image by updating mirror.gcr.io/library/docker:28.1.1 to mirror.gcr.io/library/docker:28.1.1@sha256:eceba5b0fc2fcf83a74c298391c2ed9e1adbdaf04ee173611bd6282ec973e7ba'
@@ -592,7 +593,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:88: pin your Docker image by updating mirror.gcr.io/library/alpine:3.21.2 to mirror.gcr.io/library/alpine:3.21.2@sha256:56fa17d2a7e7f168a043a2712e63aed1f8543aeafdcee47c58dcffe38ed51099'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:97: pin your Docker image by updating mirror.gcr.io/library/alpine:3.21.2 to mirror.gcr.io/library/alpine:3.21.2@sha256:56fa17d2a7e7f168a043a2712e63aed1f8543aeafdcee47c58dcffe38ed51099'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:110: pin your Docker image by updating mirror.gcr.io/library/alpine:3.21.2 to mirror.gcr.io/library/alpine:3.21.2@sha256:56fa17d2a7e7f168a043a2712e63aed1f8543aeafdcee47c58dcffe38ed51099'
-      - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:121: pin your Docker image by updating mirror.gcr.io/library/ubuntu:24.04 to mirror.gcr.io/library/ubuntu:24.04@sha256:224a1869083a311ef3f13648a154ba79832fbef6364d31493642ca03082da254'
+      - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:121: pin your Docker image by updating mirror.gcr.io/library/ubuntu:24.04 to mirror.gcr.io/library/ubuntu:24.04@sha256:69cecf4bbf72d2d44a9eef1b71fb98c7fb973d78af11399deccef19beb008ad9'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:160'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.lts:19: pin your Docker image by updating alpine:3.10 to alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.lts:27: pin your Docker image by updating alpine:3.10 to alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
@@ -637,7 +638,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: examples/grpc-e2e-tests/cloud-spanner/Dockerfile:2: pin your Docker image by updating google/cloud-sdk to google/cloud-sdk@sha256:e67e4253b8c1dfc18611339f7581685636897d744614a4ac30ac593a473d006d'
       - 'Warn: containerImage not pinned by hash: examples/grpc-e2e-tests/service/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.23 to mirror.gcr.io/library/golang:1.23@sha256:60deed95d3888cc5e4d9ff8a10c54e5edc008c6ae3fba6187be6fb592e19e8c0'
       - 'Warn: containerImage not pinned by hash: examples/grpc-e2e-tests/service/Dockerfile:10: pin your Docker image by updating gcr.io/distroless/base:latest to gcr.io/distroless/base:latest@sha256:0ebad3510af52aefe45045cc01b07564570be4feecf8d9f93d3a05d1b5f2f93b'
-      - 'Warn: containerImage not pinned by hash: examples/helm-deployment-dependencies/Dockerfile:2: pin your Docker image by updating nginx:stable to nginx:stable@sha256:d5792f71a9496b833bc08ea834a758c46e2b6a6306c10f4be926f38a656cdc1c'
+      - 'Warn: containerImage not pinned by hash: examples/helm-deployment-dependencies/Dockerfile:2: pin your Docker image by updating nginx:stable to nginx:stable@sha256:849684ad80a459636f93a96589cdfe217dea114173aac70154b81b13422e012f'
       - 'Warn: containerImage not pinned by hash: examples/helm-deployment/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.18 to mirror.gcr.io/library/golang:1.18@sha256:50c889275d26f816b5314fc99f55425fa76b18fcaf16af255f5d57f09e1f48da'
       - 'Warn: containerImage not pinned by hash: examples/helm-deployment/Dockerfile:10: pin your Docker image by updating mirror.gcr.io/library/alpine:3.10 to mirror.gcr.io/library/alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
       - 'Warn: containerImage not pinned by hash: examples/helm-render/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.18 to mirror.gcr.io/library/golang:1.18@sha256:50c889275d26f816b5314fc99f55425fa76b18fcaf16af255f5d57f09e1f48da'
@@ -715,7 +716,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: integration/examples/grpc-e2e-tests/cloud-spanner/Dockerfile:2: pin your Docker image by updating google/cloud-sdk to google/cloud-sdk@sha256:e67e4253b8c1dfc18611339f7581685636897d744614a4ac30ac593a473d006d'
       - 'Warn: containerImage not pinned by hash: integration/examples/grpc-e2e-tests/service/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.23 to mirror.gcr.io/library/golang:1.23@sha256:60deed95d3888cc5e4d9ff8a10c54e5edc008c6ae3fba6187be6fb592e19e8c0'
       - 'Warn: containerImage not pinned by hash: integration/examples/grpc-e2e-tests/service/Dockerfile:10: pin your Docker image by updating gcr.io/distroless/base:latest to gcr.io/distroless/base:latest@sha256:0ebad3510af52aefe45045cc01b07564570be4feecf8d9f93d3a05d1b5f2f93b'
-      - 'Warn: containerImage not pinned by hash: integration/examples/helm-deployment-dependencies/Dockerfile:2: pin your Docker image by updating nginx:stable to nginx:stable@sha256:d5792f71a9496b833bc08ea834a758c46e2b6a6306c10f4be926f38a656cdc1c'
+      - 'Warn: containerImage not pinned by hash: integration/examples/helm-deployment-dependencies/Dockerfile:2: pin your Docker image by updating nginx:stable to nginx:stable@sha256:849684ad80a459636f93a96589cdfe217dea114173aac70154b81b13422e012f'
       - 'Warn: containerImage not pinned by hash: integration/examples/helm-deployment/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.18 to mirror.gcr.io/library/golang:1.18@sha256:50c889275d26f816b5314fc99f55425fa76b18fcaf16af255f5d57f09e1f48da'
       - 'Warn: containerImage not pinned by hash: integration/examples/helm-deployment/Dockerfile:10: pin your Docker image by updating mirror.gcr.io/library/alpine:3.10 to mirror.gcr.io/library/alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
       - 'Warn: containerImage not pinned by hash: integration/examples/helm-render/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.18 to mirror.gcr.io/library/golang:1.18@sha256:50c889275d26f816b5314fc99f55425fa76b18fcaf16af255f5d57f09e1f48da'
@@ -790,9 +791,9 @@ checks:
       - 'Warn: goCommand not pinned by hash: vendor/github.com/pelletier/go-toml/benchmark.sh:10'
       - 'Info:  16 out of  23 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of 201 containerImage dependencies pinned'
-      - 'Info:   0 out of  15 npmCommand dependencies pinned'
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
       - 'Info:   0 out of   4 pipCommand dependencies pinned'
       - 'Info:  10 out of  14 goCommand dependencies pinned'
+      - 'Info:   0 out of 201 containerImage dependencies pinned'
+      - 'Info:   0 out of  15 npmCommand dependencies pinned'
 ---

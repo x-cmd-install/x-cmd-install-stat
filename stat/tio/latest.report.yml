@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.9"
   latestRelease: "v3.9"
   latestPrerelease: ""
-  collectedAt: 2026-09-16T05:42:34Z
+  collectedAt: 2026-09-17T05:51:52Z
 timeline:
   created: 2014-09-27
   lastCommit: 2026-01-22
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2025-04-13
   lastPrerelease: 
 popularity:
-  star: 3166
+  star: 3167
   watcher: 40
   fork: 214
   release: 76
@@ -28,7 +28,7 @@ language:
 totalBytes: 263863
 recent:
   last30d:
-    since: 2026-08-17
+    since: 2026-08-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-18
+    since: 2026-07-19
     release: 0
     mergedPR: 0
     openPR: 1
@@ -44,7 +44,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-06-18
+    since: 2026-06-19
     release: 0
     mergedPR: 0
     openPR: 4
@@ -52,7 +52,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-03-20
+    since: 2026-03-21
     release: 0
     mergedPR: 0
     openPR: 5
@@ -60,7 +60,7 @@ recent:
     openIssue: 3
     commit: 0
   last360d:
-    since: 2025-09-21
+    since: 2025-09-22
     release: 0
     mergedPR: 1
     openPR: 13
@@ -68,7 +68,7 @@ recent:
     openIssue: 15
     commit: 1
   last720d:
-    since: 2024-09-26
+    since: 2024-09-27
     release: 2
     mergedPR: 18
     openPR: 13
@@ -84,7 +84,7 @@ total:
   commit: 1258
 ---
 path: /home/runner/.x-repo/github.com/tio/tio
-collectedAt: 2026-09-16T05:42:38Z
+collectedAt: 2026-09-17T05:51:54Z
 loc:
   C:
     code: 6598
@@ -127,20 +127,36 @@ total:
   blanks: 1787
   files: 50
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/tio/tio
   commit: 6fb3a64ba234cc255f9637ba938cf0c01e132e4a
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4
 checks:
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 4
+    reason: Found 12/29 approved changesets -- score normalized to 4
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -151,22 +167,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/macos.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/ubuntu.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Code-Review
-    score: 4
-    reason: Found 12/29 approved changesets -- score normalized to 4
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -209,11 +209,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -228,6 +223,11 @@ checks:
       - 'Warn: release artifact v3.7 does not have provenance: https://api.github.com/repos/tio/tio/releases/172881048'
       - 'Warn: release artifact v3.6 does not have provenance: https://api.github.com/repos/tio/tio/releases/166189991'
       - 'Warn: release artifact v3.5 does not have provenance: https://api.github.com/repos/tio/tio/releases/163120377'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 7
     reason: SAST tool detected but not run on all commits
@@ -235,4 +235,4 @@ checks:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Warn: 2 commits out of 13 are checked with a SAST tool'
 ---
-{"id":212058061,"author":{"login":"lundmar","id":353407,"node_id":"MDQ6VXNlcjM1MzQwNw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAXZFvc4Mo7_N","tag_name":"v3.9","target_commitish":"master","name":"tio v3.9","draft":false,"immutable":false,"prerelease":false,"created_at":"2025-04-13T11:31:22Z","updated_at":"2025-04-13T11:33:52Z","published_at":"2025-04-13T11:33:52Z","assets":[{"id":246001379,"node_id":"RA_kwDOAXZFvc4Oqa7j","name":"tio-3.9.tar.xz","label":null,"uploader":{"login":"lundmar","id":353407,"node_id":"MDQ6VXNlcjM1MzQwNw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-xz","state":"uploaded","size":3460500,"digest":null,"download_count":17311,"created_at":"2025-04-13T11:33:29Z","updated_at":"2025-04-13T11:33:31Z"},{"id":246001374,"node_id":"RA_kwDOAXZFvc4Oqa7e","name":"tio-3.9.tar.xz.asc","label":null,"uploader":{"login":"lundmar","id":353407,"node_id":"MDQ6VXNlcjM1MzQwNw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"text/plain","state":"uploaded","size":833,"digest":null,"download_count":73,"created_at":"2025-04-13T11:33:28Z","updated_at":"2025-04-13T11:33:29Z"},{"id":246001377,"node_id":"RA_kwDOAXZFvc4Oqa7h","name":"tio-3.9.tar.xz.sha256sum","label":null,"uploader":{"login":"lundmar","id":353407,"node_id":"MDQ6VXNlcjM1MzQwNw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":81,"digest":null,"download_count":105,"created_at":"2025-04-13T11:33:29Z","updated_at":"2025-04-13T11:33:29Z"}],"body":"Changes since tio v3.8 (2024-11-30):\r\n\r\n * Fix parsing of timestamp options\r\n\r\n * codeql: Upgrade to upload-artifact@v4\r\n\r\n * Update plaintext man page\r\n\r\n * Add character mapping examples\r\n\r\n * Fix pattern matching memory corruption\r\n\r\nSamuel Holland:\r\n\r\n * Don't add null characters to the expect buffer\r\n\r\n   They prevent regexec() from seeing the remainder of the buffer.\r\n\r\nV:\r\n\r\n * Disable stdout buffering globally\r\n\r\n   This makes it possible to pipe output to other programs cleanly.\r\n\r\nLubov66:\r\n\r\n * docs: edited the license date\r\n\r\nJakob Haufe:\r\n\r\n * Manpage: Fix backslash encoding\r\n\r\n   Literal backslash needs to be written as \\e.\r\n","reactions":{"total_count":4,"+1":0,"-1":0,"laugh":0,"hooray":3,"confused":0,"heart":0,"rocket":1,"eyes":0}}
+{"id":212058061,"author":{"login":"lundmar","id":353407,"node_id":"MDQ6VXNlcjM1MzQwNw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAXZFvc4Mo7_N","tag_name":"v3.9","target_commitish":"master","name":"tio v3.9","draft":false,"immutable":false,"prerelease":false,"created_at":"2025-04-13T11:31:22Z","updated_at":"2025-04-13T11:33:52Z","published_at":"2025-04-13T11:33:52Z","assets":[{"id":246001379,"node_id":"RA_kwDOAXZFvc4Oqa7j","name":"tio-3.9.tar.xz","label":null,"uploader":{"login":"lundmar","id":353407,"node_id":"MDQ6VXNlcjM1MzQwNw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-xz","state":"uploaded","size":3460500,"digest":null,"download_count":17416,"created_at":"2025-04-13T11:33:29Z","updated_at":"2025-04-13T11:33:31Z"},{"id":246001374,"node_id":"RA_kwDOAXZFvc4Oqa7e","name":"tio-3.9.tar.xz.asc","label":null,"uploader":{"login":"lundmar","id":353407,"node_id":"MDQ6VXNlcjM1MzQwNw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"text/plain","state":"uploaded","size":833,"digest":null,"download_count":73,"created_at":"2025-04-13T11:33:28Z","updated_at":"2025-04-13T11:33:29Z"},{"id":246001377,"node_id":"RA_kwDOAXZFvc4Oqa7h","name":"tio-3.9.tar.xz.sha256sum","label":null,"uploader":{"login":"lundmar","id":353407,"node_id":"MDQ6VXNlcjM1MzQwNw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":81,"digest":null,"download_count":105,"created_at":"2025-04-13T11:33:29Z","updated_at":"2025-04-13T11:33:29Z"}],"body":"Changes since tio v3.8 (2024-11-30):\r\n\r\n * Fix parsing of timestamp options\r\n\r\n * codeql: Upgrade to upload-artifact@v4\r\n\r\n * Update plaintext man page\r\n\r\n * Add character mapping examples\r\n\r\n * Fix pattern matching memory corruption\r\n\r\nSamuel Holland:\r\n\r\n * Don't add null characters to the expect buffer\r\n\r\n   They prevent regexec() from seeing the remainder of the buffer.\r\n\r\nV:\r\n\r\n * Disable stdout buffering globally\r\n\r\n   This makes it possible to pipe output to other programs cleanly.\r\n\r\nLubov66:\r\n\r\n * docs: edited the license date\r\n\r\nJakob Haufe:\r\n\r\n * Manpage: Fix backslash encoding\r\n\r\n   Literal backslash needs to be written as \\e.\r\n","reactions":{"total_count":4,"+1":0,"-1":0,"laugh":0,"hooray":3,"confused":0,"heart":0,"rocket":1,"eyes":0}}

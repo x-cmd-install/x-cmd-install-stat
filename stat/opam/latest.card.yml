@@ -2,15 +2,15 @@ about:
   description: "opam is a source-based package manager. It supports multiple simultaneous compiler installations, flexible package constraints, and a Git-friendly development workflow."
   license: NOASSERTION
   homepage: https://opam.ocaml.org
-  head: e592ac5
+  head: 238a04d
   archived: false
   latestVersion: "2.6.0-rc1"
   latestRelease: "2.5.2"
   latestPrerelease: "2.6.0-rc1"
-  collectedAt: 2026-09-16T06:47:00Z
+  collectedAt: 2026-09-17T06:47:38Z
 timeline:
   created: 2012-02-17
-  lastCommit: 2026-09-14
+  lastCommit: 2026-09-16
   lastVersion: 2026-09-08
   lastRelease: 2026-07-09
   lastPrerelease: 2026-09-08
@@ -20,7 +20,7 @@ popularity:
   fork: 410
   release: 94
   contributor: 174
-  pullRequest: 3425
+  pullRequest: 3427
   issue: 3642
 language:
   OCaml: 2981318
@@ -37,63 +37,63 @@ language:
 totalBytes: 3386224
 recent:
   last30d:
-    since: 2026-08-17
+    since: 2026-08-18
     release: 3
-    mergedPR: 18
-    openPR: 20
+    mergedPR: 20
+    openPR: 19
     closedIssue: 3
     openIssue: 19
-    commit: 46
+    commit: 48
   last60d:
-    since: 2026-07-18
+    since: 2026-07-19
     release: 4
-    mergedPR: 29
+    mergedPR: 31
     openPR: 25
     closedIssue: 9
     openIssue: 32
-    commit: 75
+    commit: 77
   last90d:
-    since: 2026-06-18
+    since: 2026-06-19
     release: 5
-    mergedPR: 66
+    mergedPR: 68
     openPR: 34
     closedIssue: 18
-    openIssue: 56
-    commit: 197
+    openIssue: 55
+    commit: 199
   last180d:
-    since: 2026-03-20
+    since: 2026-03-21
     release: 6
-    mergedPR: 112
+    mergedPR: 114
     openPR: 45
     closedIssue: 32
     openIssue: 79
-    commit: 336
+    commit: 338
   last360d:
-    since: 2025-09-21
+    since: 2025-09-22
     release: 10
-    mergedPR: 181
+    mergedPR: 183
     openPR: 68
     closedIssue: 51
     openIssue: 122
-    commit: 511
+    commit: 513
   last720d:
-    since: 2024-09-26
+    since: 2024-09-27
     release: 20
-    mergedPR: 397
+    mergedPR: 399
     openPR: 102
     closedIssue: 131
     openIssue: 246
-    commit: 1125
+    commit: 1127
 total:
   release: 94
-  mergedPR: 2981
+  mergedPR: 2983
   openPR: 156
   closedIssue: 2940
   openIssue: 702
-  commit: 12443
+  commit: 12445
 ---
 path: /home/runner/.x-repo/github.com/ocaml/opam
-collectedAt: 2026-09-16T06:47:07Z
+collectedAt: 2026-09-17T06:47:44Z
 loc:
   OCaml:
     code: 64811
@@ -167,45 +167,41 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 3311
+    comments: 3312
     blanks: 898
     files: 20
 total:
   code: 73845
-  comments: 13447
+  comments: 13448
   blanks: 9749
   files: 347
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/ocaml/opam
-  commit: f8e38f4c5f08a03ae273b281a439af94b547b782
+  commit: e592ac55389e6ef84219f79e564ac64b9c7c8fcd
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
-score: 5.4
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+score: 5.5
 checks:
   - name: Code-Review
-    score: 8
-    reason: Found 10/12 approved changesets -- score normalized to 8
+    score: 9
+    reason: Found 11/12 approved changesets -- score normalized to 9
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 24 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 26 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -215,10 +211,19 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/scripts.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -227,65 +232,35 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: License
-    score: 9
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Warn: project license file does not contain an FSF or OSI license.'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
       - 'Info: Possibly incomplete results: error parsing shell code: * must be followed by an expression: shell/msvs-detect:0'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/changelog_check.yml:11: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/changelog_check.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:228: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:230: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:84: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:86: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:102: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:104: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:138: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:140: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:120: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:122: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:156: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:158: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:192: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:194: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:228: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:230: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:31: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:138: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:140: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:174: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:176: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:210: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:212: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:31: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:48: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:50: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:66: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:68: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:120: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:122: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:174: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:176: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:192: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:194: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:590: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/main.yml:594: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:607: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:632: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/main.yml:636: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:642: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:658: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:668: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:188: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:192: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:199: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:208: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:363: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:366: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:375: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:384: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:395: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:418: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:421: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:84: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:86: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:102: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/depexts.yml:104: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/depexts.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:455: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:458: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:467: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
@@ -294,16 +269,6 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:514: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:523: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:532: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:560: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:562: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:568: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:56: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:70: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:88: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:96: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:118: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:121: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:130: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:261: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:264: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:273: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
@@ -312,33 +277,68 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:320: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:329: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:340: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:363: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:366: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:375: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:384: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:395: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:418: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:421: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:560: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:562: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:568: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:590: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/main.yml:594: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:607: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:632: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/main.yml:636: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:642: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:658: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:668: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:56: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:70: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:88: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:96: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:118: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:121: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:130: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:188: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:192: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:199: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:208: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/main.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/scripts.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/ocaml/opam/scripts.yml/master?enable=pin'
       - 'Warn: containerImage not pinned by hash: bench.Dockerfile:1: pin your Docker image by updating debian:12 to debian:12@sha256:6ebd97fa83deb272194a2cf015b3d26a4d538e9ad3a7a79d544c8af5b0a01443'
       - 'Warn: containerImage not pinned by hash: release/Dockerfile.in:1'
       - 'Info:   0 out of  68 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
+  - name: License
+    score: 9
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Warn: project license file does not contain an FSF or OSI license.'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
+  - name: Signed-Releases
+    score: 8
+    reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
+    details:
+      - 'Info: signed release artifact: opam-2.6.0-rc1-arm64-linux.sig: https://github.com/ocaml/opam/releases/tag/2.6.0-rc1'
+      - 'Info: signed release artifact: opam-2.6.0-beta2-arm64-linux.sig: https://github.com/ocaml/opam/releases/tag/2.6.0-beta2'
+      - 'Info: signed release artifact: opam-2.6.0-beta1-arm64-linux.sig: https://github.com/ocaml/opam/releases/tag/2.6.0-beta1'
+      - 'Info: signed release artifact: opam-2.6.0-alpha1-arm64-linux.sig: https://github.com/ocaml/opam/releases/tag/2.6.0-alpha1'
+      - 'Info: signed release artifact: opam-2.5.2-arm64-linux.sig: https://github.com/ocaml/opam/releases/tag/2.5.2'
+      - 'Warn: release artifact 2.6.0-rc1 does not have provenance: https://api.github.com/repos/ocaml/opam/releases/384891509'
+      - 'Warn: release artifact 2.6.0-beta2 does not have provenance: https://api.github.com/repos/ocaml/opam/releases/379795151'
+      - 'Warn: release artifact 2.6.0-beta1 does not have provenance: https://api.github.com/repos/ocaml/opam/releases/374394238'
+      - 'Warn: release artifact 2.6.0-alpha1 does not have provenance: https://api.github.com/repos/ocaml/opam/releases/355832545'
+      - 'Warn: release artifact 2.5.2 does not have provenance: https://api.github.com/repos/ocaml/opam/releases/350987707'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
-  - name: Signed-Releases
-    score: 8
-    reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
-    details:
-      - 'Info: signed release artifact: opam-2.6.0-beta2-arm64-linux.sig: https://github.com/ocaml/opam/releases/tag/2.6.0-beta2'
-      - 'Info: signed release artifact: opam-2.6.0-beta1-arm64-linux.sig: https://github.com/ocaml/opam/releases/tag/2.6.0-beta1'
-      - 'Info: signed release artifact: opam-2.6.0-alpha1-arm64-linux.sig: https://github.com/ocaml/opam/releases/tag/2.6.0-alpha1'
-      - 'Info: signed release artifact: opam-2.5.2-arm64-linux.sig: https://github.com/ocaml/opam/releases/tag/2.5.2'
-      - 'Info: signed release artifact: opam-2.5.1-arm64-linux.sig: https://github.com/ocaml/opam/releases/tag/2.5.1'
-      - 'Warn: release artifact 2.6.0-beta2 does not have provenance: https://api.github.com/repos/ocaml/opam/releases/379795151'
-      - 'Warn: release artifact 2.6.0-beta1 does not have provenance: https://api.github.com/repos/ocaml/opam/releases/374394238'
-      - 'Warn: release artifact 2.6.0-alpha1 does not have provenance: https://api.github.com/repos/ocaml/opam/releases/355832545'
-      - 'Warn: release artifact 2.5.2 does not have provenance: https://api.github.com/repos/ocaml/opam/releases/350987707'
-      - 'Warn: release artifact 2.5.1 does not have provenance: https://api.github.com/repos/ocaml/opam/releases/309524321'
 ---

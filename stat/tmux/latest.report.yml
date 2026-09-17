@@ -7,7 +7,7 @@ about:
   latestVersion: "3.8-rc"
   latestRelease: "3.7c"
   latestPrerelease: "3.8-rc"
-  collectedAt: 2026-09-16T06:26:09Z
+  collectedAt: 2026-09-17T06:22:27Z
 timeline:
   created: 2015-06-03
   lastCommit: 2026-09-11
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-08-17
   lastPrerelease: 2026-09-09
 popularity:
-  star: 49284
+  star: 49300
   watcher: 487
-  fork: 2891
+  fork: 2892
   release: 45
   contributor: 16
-  pullRequest: 1196
-  issue: 4191
+  pullRequest: 1197
+  issue: 4193
 language:
   C: 2943236
   Shell: 744111
@@ -35,63 +35,63 @@ language:
 totalBytes: 3999261
 recent:
   last30d:
-    since: 2026-08-17
-    release: 2
+    since: 2026-08-18
+    release: 1
     mergedPR: 0
-    openPR: 9
-    closedIssue: 40
-    openIssue: 11
+    openPR: 10
+    closedIssue: 39
+    openIssue: 13
     commit: 115
   last60d:
-    since: 2026-07-18
+    since: 2026-07-19
     release: 2
     mergedPR: 3
-    openPR: 16
-    closedIssue: 79
-    openIssue: 13
+    openPR: 17
+    closedIssue: 77
+    openIssue: 15
     commit: 249
   last90d:
-    since: 2026-06-18
+    since: 2026-06-19
     release: 5
     mergedPR: 9
-    openPR: 18
-    closedIssue: 149
-    openIssue: 14
+    openPR: 19
+    closedIssue: 147
+    openIssue: 16
     commit: 584
   last180d:
-    since: 2026-03-20
+    since: 2026-03-21
     release: 6
     mergedPR: 33
-    openPR: 18
+    openPR: 19
     closedIssue: 266
-    openIssue: 19
+    openIssue: 21
     commit: 793
   last360d:
-    since: 2025-09-21
+    since: 2025-09-22
     release: 8
     mergedPR: 36
-    openPR: 19
+    openPR: 20
     closedIssue: 437
-    openIssue: 20
+    openIssue: 22
     commit: 914
   last720d:
-    since: 2024-09-26
+    since: 2024-09-27
     release: 10
     mergedPR: 36
-    openPR: 19
-    closedIssue: 752
-    openIssue: 21
+    openPR: 20
+    closedIssue: 750
+    openIssue: 23
     commit: 1858
 total:
   release: 45
   mergedPR: 37
-  openPR: 19
+  openPR: 20
   closedIssue: 4170
-  openIssue: 21
+  openIssue: 23
   commit: 12135
 ---
 path: /home/runner/.x-repo/github.com/tmux/tmux
-collectedAt: 2026-09-16T06:26:17Z
+collectedAt: 2026-09-17T06:22:33Z
 loc:
   C:
     code: 85431
@@ -154,23 +154,37 @@ total:
   blanks: 17808
   files: 400
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/tmux/tmux
-  commit: 1b87cb752e0cfa5be66235c4c9228aadbe3487d7
+  commit: e880cf63e0a9fe095d7c5d313761520fb1a8653c
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 6.2
 checks:
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 21 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Code-Review
     score: 0
     reason: Found 0/30 approved changesets -- score normalized to 0
     details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 29 issue activity found in the last 90 days -- score normalized to 10
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: SAST
+    score: 0
+    reason: no SAST tool detected
+    details:
+      - 'Warn: no pull requests merged into dev branch'
   - name: Security-Policy
     score: 9
     reason: security policy file detected
@@ -179,26 +193,12 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
     details:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/regress.yml:9'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: SAST
-    score: 0
-    reason: no SAST tool detected
-    details:
-      - 'Warn: no pull requests merged into dev branch'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -207,6 +207,12 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: COPYING:0'
+      - 'Info: FSF or OSI recognized license: ISC License: COPYING:0'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -216,12 +222,6 @@ checks:
       - 'Info: CLibFuzzer integration found: fuzz/format-fuzzer.c:34'
       - 'Info: CLibFuzzer integration found: fuzz/input-fuzzer.c:30'
       - 'Info: CLibFuzzer integration found: fuzz/style-fuzzer.c:33'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: COPYING:0'
-      - 'Info: FSF or OSI recognized license: ISC License: COPYING:0'
   - name: Pinned-Dependencies
     score: 10
     reason: all dependencies are pinned
@@ -232,20 +232,20 @@ checks:
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
+      - 'Warn: release artifact 3.8-rc not signed: https://api.github.com/repos/tmux/tmux/releases/385514904'
       - 'Warn: release artifact 3.7c not signed: https://api.github.com/repos/tmux/tmux/releases/371754381'
       - 'Warn: release artifact 3.7b not signed: https://api.github.com/repos/tmux/tmux/releases/347659823'
       - 'Warn: release artifact 3.7a not signed: https://api.github.com/repos/tmux/tmux/releases/347264860'
       - 'Warn: release artifact 3.7 not signed: https://api.github.com/repos/tmux/tmux/releases/336222938'
-      - 'Warn: release artifact 3.6b not signed: https://api.github.com/repos/tmux/tmux/releases/325897314'
+      - 'Warn: release artifact 3.8-rc does not have provenance: https://api.github.com/repos/tmux/tmux/releases/385514904'
       - 'Warn: release artifact 3.7c does not have provenance: https://api.github.com/repos/tmux/tmux/releases/371754381'
       - 'Warn: release artifact 3.7b does not have provenance: https://api.github.com/repos/tmux/tmux/releases/347659823'
       - 'Warn: release artifact 3.7a does not have provenance: https://api.github.com/repos/tmux/tmux/releases/347264860'
       - 'Warn: release artifact 3.7 does not have provenance: https://api.github.com/repos/tmux/tmux/releases/336222938'
-      - 'Warn: release artifact 3.6b does not have provenance: https://api.github.com/repos/tmux/tmux/releases/325897314'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''master'''
 ---
-{"id":371754381,"author":{"login":"nicm","id":304243,"node_id":"MDQ6VXNlcjMwNDI0Mw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAjIUe84WKIWN","tag_name":"3.7c","target_commitish":"master","name":"tmux 3.7c","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-17T12:52:12Z","updated_at":"2026-08-17T12:53:48Z","published_at":"2026-08-17T12:53:48Z","assets":[{"id":518107178,"node_id":"RA_kwDOAjIUe84e4bAq","name":"tmux-3.7c.tar.gz","label":null,"uploader":{"login":"nicm","id":304243,"node_id":"MDQ6VXNlcjMwNDI0Mw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":789431,"digest":"sha256:7c60cae9a0e25288e2e24750aafc9e8800fc7fd4555e447e1b29ee4201cfb3bf","download_count":30972,"created_at":"2026-08-17T12:53:45Z","updated_at":"2026-08-17T12:53:46Z"}],"body":"This is a bug fix release of tmux 3.7\r\n\r\nFor a list of changes [please read the CHANGES file](https://raw.githubusercontent.com/tmux/tmux/3.7c/CHANGES); for release notes [please see this issue](https://github.com/tmux/tmux/issues/5179)","reactions":{"total_count":62,"+1":21,"-1":0,"laugh":3,"hooray":13,"confused":0,"heart":14,"rocket":11,"eyes":0}}
+{"id":371754381,"author":{"login":"nicm","id":304243,"node_id":"MDQ6VXNlcjMwNDI0Mw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAjIUe84WKIWN","tag_name":"3.7c","target_commitish":"master","name":"tmux 3.7c","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-17T12:52:12Z","updated_at":"2026-08-17T12:53:48Z","published_at":"2026-08-17T12:53:48Z","assets":[{"id":518107178,"node_id":"RA_kwDOAjIUe84e4bAq","name":"tmux-3.7c.tar.gz","label":null,"uploader":{"login":"nicm","id":304243,"node_id":"MDQ6VXNlcjMwNDI0Mw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":789431,"digest":"sha256:7c60cae9a0e25288e2e24750aafc9e8800fc7fd4555e447e1b29ee4201cfb3bf","download_count":32054,"created_at":"2026-08-17T12:53:45Z","updated_at":"2026-08-17T12:53:46Z"}],"body":"This is a bug fix release of tmux 3.7\r\n\r\nFor a list of changes [please read the CHANGES file](https://raw.githubusercontent.com/tmux/tmux/3.7c/CHANGES); for release notes [please see this issue](https://github.com/tmux/tmux/issues/5179)","reactions":{"total_count":62,"+1":21,"-1":0,"laugh":3,"hooray":13,"confused":0,"heart":14,"rocket":11,"eyes":0}}
