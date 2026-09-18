@@ -2,26 +2,26 @@ about:
   description: "The Kubernetes Package Manager"
   license: Apache-2.0
   homepage: https://helm.sh
-  head: 31050af
+  head: 7fd3c5e
   archived: false
   latestVersion: "v3.22.0"
   latestRelease: "v3.22.0"
   latestPrerelease: "v3.22.0-rc.1"
-  collectedAt: 2026-09-17T06:36:56Z
+  collectedAt: 2026-09-18T06:22:07Z
 timeline:
   created: 2015-10-06
-  lastCommit: 2026-09-16
+  lastCommit: 2026-09-17
   lastVersion: 2026-09-10
   lastRelease: 2026-09-10
   lastPrerelease: 2026-08-31
 popularity:
-  star: 30250
+  star: 30251
   watcher: 499
-  fork: 7786
+  fork: 7789
   release: 255
   contributor: 853
-  pullRequest: 7145
-  issue: 8499
+  pullRequest: 7156
+  issue: 8500
 language:
   Go: 3178604
   Shell: 41812
@@ -29,63 +29,63 @@ language:
 totalBytes: 3229032
 recent:
   last30d:
-    since: 2026-08-18
+    since: 2026-08-19
     release: 4
-    mergedPR: 36
-    openPR: 40
+    mergedPR: 41
+    openPR: 44
     closedIssue: 3
-    openIssue: 9
-    commit: 29
+    openIssue: 10
+    commit: 34
   last60d:
-    since: 2026-07-19
+    since: 2026-07-20
     release: 6
-    mergedPR: 116
-    openPR: 81
-    closedIssue: 7
-    openIssue: 35
-    commit: 65
+    mergedPR: 112
+    openPR: 85
+    closedIssue: 6
+    openIssue: 34
+    commit: 70
   last90d:
-    since: 2026-06-19
+    since: 2026-06-20
     release: 9
-    mergedPR: 189
-    openPR: 114
-    closedIssue: 15
+    mergedPR: 194
+    openPR: 118
+    closedIssue: 16
     openIssue: 53
-    commit: 163
+    commit: 168
   last180d:
-    since: 2026-03-21
+    since: 2026-03-22
     release: 16
-    mergedPR: 299
-    openPR: 168
-    closedIssue: 50
+    mergedPR: 303
+    openPR: 173
+    closedIssue: 51
     openIssue: 74
-    commit: 288
+    commit: 293
   last360d:
-    since: 2025-09-22
+    since: 2025-09-23
     release: 36
-    mergedPR: 573
-    openPR: 191
+    mergedPR: 574
+    openPR: 196
     closedIssue: 208
     openIssue: 108
-    commit: 638
+    commit: 643
   last720d:
-    since: 2024-09-27
+    since: 2024-09-28
     release: 57
-    mergedPR: 1066
-    openPR: 194
-    closedIssue: 559
+    mergedPR: 1071
+    openPR: 199
+    closedIssue: 560
     openIssue: 131
-    commit: 2364
+    commit: 2366
 total:
   release: 255
-  mergedPR: 4781
-  openPR: 204
-  closedIssue: 8243
+  mergedPR: 4786
+  openPR: 209
+  closedIssue: 8244
   openIssue: 256
-  commit: 9984
+  commit: 9989
 ---
 path: /home/runner/.x-repo/github.com/helm/helm
-collectedAt: 2026-09-17T06:37:03Z
+collectedAt: 2026-09-18T06:22:14Z
 loc:
   Go:
     code: 78058
@@ -153,24 +153,29 @@ total:
   blanks: 14347
   files: 1726
 ---
-date: "2026-09-16T12:15:49Z"
+date: "2026-09-17T22:13:08Z"
 repo:
   name: github.com/helm/helm
-  commit: 31050af08853b4e00503a3b732bc964030ed7d81
+  commit: 7fd3c5e8f2f096573b86a76fa5682ef905778c5a
 scorecard:
   version: v5.5.0
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 9.2
 checks:
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
   - name: Dependency-Update-Tool
     score: 10
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Security-Policy
     score: 9
     reason: security policy file detected
@@ -187,11 +192,6 @@ checks:
     score: 10
     reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -221,16 +221,6 @@ checks:
     score: 5
     reason: 'badge detected: Passing'
     details: null
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: OSSFuzz integration found'
-      - 'Info: GoBuiltInFuzzer integration found: internal/chart/v3/fuzz_test.go:24'
-      - 'Info: GoBuiltInFuzzer integration found: internal/chart/v3/fuzz_test.go:37'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/chart/v2/fuzz_test.go:24'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/chart/v2/fuzz_test.go:37'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/strvals/fuzz_test.go:22'
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -246,22 +236,33 @@ checks:
       - 'Warn: release artifact v3.22.0-rc.1 does not have provenance: https://api.github.com/repos/helm/helm/releases/380103394'
       - 'Warn: release artifact v4.2.4 does not have provenance: https://api.github.com/repos/helm/helm/releases/370020950'
   - name: Vulnerabilities
-    score: 9
-    reason: 1 existing vulnerabilities detected
+    score: 8
+    reason: 2 existing vulnerabilities detected
     details:
+      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-w34q-cm8f-9c5x'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5932'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits
     details:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Info: all commits (30) are checked with a SAST tool'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: OSSFuzz integration found'
+      - 'Info: GoBuiltInFuzzer integration found: internal/chart/v3/fuzz_test.go:24'
+      - 'Info: GoBuiltInFuzzer integration found: internal/chart/v3/fuzz_test.go:37'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/chart/v2/fuzz_test.go:24'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/chart/v2/fuzz_test.go:37'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/strvals/fuzz_test.go:22'
   - name: Branch-Protection
     score: 5
     reason: branch protection is not maximal on development and all release branches

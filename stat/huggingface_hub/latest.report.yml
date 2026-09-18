@@ -2,97 +2,97 @@ about:
   description: "The official CLI and Python client for the Hugging Face Hub."
   license: Apache-2.0
   homepage: https://huggingface.co/docs/huggingface_hub
-  head: 5a9cdda
+  head: 77b6b2b
   archived: false
-  latestVersion: "v1.31.0"
-  latestRelease: "v1.31.0"
+  latestVersion: "v1.32.0"
+  latestRelease: "v1.32.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-17T04:41:29Z
+  collectedAt: 2026-09-18T04:26:46Z
 timeline:
   created: 2020-12-22
-  lastCommit: 2026-09-15
-  lastVersion: 2026-09-10
-  lastRelease: 2026-09-10
+  lastCommit: 2026-09-17
+  lastVersion: 2026-09-17
+  lastRelease: 2026-09-17
   lastPrerelease: 
 popularity:
-  star: 3905
+  star: 3908
   watcher: 75
-  fork: 1205
-  release: 191
-  contributor: 400
-  pullRequest: 3092
-  issue: 1677
+  fork: 1207
+  release: 192
+  contributor: 401
+  pullRequest: 3101
+  issue: 1678
 language:
-  Python: 4964161
+  Python: 5033214
   Shell: 18373
   PowerShell: 16433
   Makefile: 967
-totalBytes: 4999934
+totalBytes: 5068987
 recent:
   last30d:
-    since: 2026-08-18
+    since: 2026-08-19
     release: 6
-    mergedPR: 81
-    openPR: 18
-    closedIssue: 42
+    mergedPR: 86
+    openPR: 19
+    closedIssue: 43
     openIssue: 11
-    commit: 81
+    commit: 89
   last60d:
-    since: 2026-07-19
-    release: 9
-    mergedPR: 143
+    since: 2026-07-20
+    release: 10
+    mergedPR: 148
     openPR: 30
-    closedIssue: 76
+    closedIssue: 77
     openIssue: 18
-    commit: 145
+    commit: 153
   last90d:
-    since: 2026-06-19
-    release: 14
-    mergedPR: 226
-    openPR: 35
+    since: 2026-06-20
+    release: 15
+    mergedPR: 234
+    openPR: 34
     closedIssue: 115
     openIssue: 19
-    commit: 232
+    commit: 240
   last180d:
-    since: 2026-03-21
-    release: 34
-    mergedPR: 489
-    openPR: 39
+    since: 2026-03-22
+    release: 35
+    mergedPR: 497
+    openPR: 38
     closedIssue: 195
     openIssue: 35
-    commit: 505
+    commit: 513
   last360d:
-    since: 2025-09-22
-    release: 64
-    mergedPR: 816
-    openPR: 46
+    since: 2025-09-23
+    release: 65
+    mergedPR: 821
+    openPR: 45
     closedIssue: 339
     openIssue: 55
-    commit: 807
+    commit: 815
   last720d:
-    since: 2024-09-27
+    since: 2024-09-28
     release: 100
-    mergedPR: 1199
-    openPR: 51
+    mergedPR: 1207
+    openPR: 50
     closedIssue: 661
     openIssue: 78
-    commit: 1189
+    commit: 1195
 total:
-  release: 191
-  mergedPR: 2537
-  openPR: 51
-  closedIssue: 1554
+  release: 192
+  mergedPR: 2545
+  openPR: 50
+  closedIssue: 1555
   openIssue: 123
-  commit: 2755
+  commit: 2763
 ---
 path: /home/runner/.x-repo/github.com/huggingface/huggingface_hub
-collectedAt: 2026-09-17T04:41:37Z
+collectedAt: 2026-09-18T04:26:52Z
 loc:
   Python:
-    code: 100468
-    comments: 6890
-    blanks: 14722
-    files: 287
+    code: 101835
+    comments: 6936
+    blanks: 14966
+    files: 289
   Yaml:
     code: 3833
     comments: 7
@@ -125,8 +125,8 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 20001
-    blanks: 9643
+    comments: 20007
+    blanks: 9650
     files: 160
   Text:
     code: 0
@@ -134,10 +134,10 @@ loc:
     blanks: 0
     files: 1
 total:
-  code: 108663
-  comments: 27694
-  blanks: 25117
-  files: 474
+  code: 110029
+  comments: 27746
+  blanks: 25368
+  files: 476
 ---
 date: "2026-09-14"
 repo:
@@ -267,4 +267,4 @@ checks:
     details:
       - 'Warn: 20 commits out of 30 are checked with a SAST tool'
 ---
-{"id":386149531,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOE0mels4XBCyb","tag_name":"v1.31.0","target_commitish":"main","name":"[v1.31.0] Custom labels for Sandboxes, More resilient downloads and more","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-10T10:23:41Z","updated_at":"2026-09-10T10:23:56Z","published_at":"2026-09-10T09:36:59Z","assets":[],"body":"## \ud83c\udff7\ufe0f Custom labels for Sandboxes\r\n\r\nDedicated sandboxes now accept custom labels, attached to the underlying Job. This is useful for cost attribution, bookkeeping, or finding and reconnecting to the sandboxes created by a given controller run. Labels use the same `-l` / `--label KEY=VALUE` syntax as `hf jobs run`. They are merged with the labels the SDK uses internally, and invalid or reserved labels are rejected before a billable Job is started. Pool-based sandboxes are unchanged: custom labels are only accepted for dedicated sandboxes.\r\n\r\n```python\r\n>>> from huggingface_hub import Sandbox\r\n>>> sandbox = Sandbox.create(image=\"python:3.12\", labels={\"controller-run\": \"run-42\"})\r\n```\r\n\r\n```bash\r\nhf sandbox create --label controller-run=run-42 --label team=data-infra\r\n```\r\n\r\n- [Sandbox] Support custom Job labels by @Wauplin in #4824\r\n\r\n## \ud83d\udce5 More resilient downloads\r\n\r\nA batch of fixes makes downloads more robust to unusual server responses, network hiccups and concurrent usage:\r\n\r\n- A timeout while waiting for the response headers of a streamed download is now retried and resumed like a body read failure, instead of escaping `http_get()` while retries remain.\r\n- Regular HTTP downloads no longer fail when the HEAD response has no `Content-Length`. The file size is validated against the GET response when available.\r\n- `snapshot_download` now writes the `refs/` cache file atomically, reusing the logic already used by `hf_hub_download`. This fixes a long-standing race when many concurrent `snapshot_download` calls target the same repo (seen in vLLM / `llm-compressor`).\r\n- `hf download --dry-run --local-dir ...` no longer copies files from the Hub cache into the destination. On large files and slow disks this looked like a hang and could leave an incomplete file behind.\r\n\r\n- [Download] Share retry handling for stream entry and body failures by @Wauplin in #4826\r\n- [Download] Tolerate missing HEAD Content-Length by @Wauplin in #4805\r\n- [Download] Write cache ref file atomically in `snapshot_download` by @Wauplin in #4829\r\n- [Download] Prevent cached file copies during local-dir dry runs by @wakamex in #4817\r\n\r\n## \ud83d\udd0c `httpx` re-exported for library integrators\r\n\r\n`huggingface_hub` now re-exports the HTTP library it uses as `huggingface_hub.utils.httpx`. Libraries built on top of `huggingface_hub` that need `httpx` types or exceptions (typically to catch errors) should import it from there rather than importing `httpx` directly. v1.x is built on `httpx`, and v2.x will move to its successor `httpx2`, so importing through `huggingface_hub.utils` keeps your code compatible with both. This is only for types and exceptions: to make requests to the Hub, keep using `get_session()`.\r\n\r\n```python\r\nfrom huggingface_hub.utils import httpx\r\n\r\ntry:\r\n    ...\r\nexcept httpx.HTTPError:\r\n    ...\r\n```\r\n\r\n\ud83d\udcda **Documentation:** [Utilities \u2014 The `httpx` module](https://huggingface.co/docs/huggingface_hub/main/en/package_reference/utilities)\r\n\r\n- [httpx migration] Expose `httpx` as a `huggingface_hub` submodule by @Wauplin in #4803\r\n\r\n## \ud83d\udd12 Security\r\n\r\n`HfFileSystem.get()` now validates remote filenames before writing anything locally. A server-side filename such as `folder/..\\..\\outside.txt` could previously escape the destination directory on Windows during a recursive download. The same check already protected `hf_hub_download`, `snapshot_download` and bucket sync. Unsafe filenames now raise `ValueError` on all platforms, including when downloading to an explicitly named file or a file object.\r\n\r\n- [HfFileSystem] Reject unsafe paths before local downloads by @Wauplin in #4828\r\n\r\n## \ud83d\udda5\ufe0f CLI\r\n\r\n- [CLI] Fix `hf buckets rm --recursive` deleting lexical siblings of the prefix: removing `logs/` no longer touches `logs_root.txt` by @Wauplin in #4804\r\n- [CLI] Don't let `hf update` self-upgrade a pip install on Windows: it now prints the `pip install -U` command to run instead of leaving a broken install by @Wauplin in #4823\r\n- [CLI] Raise explicit error for shell-script extensions on Windows by @hanouticelina in #4846\r\n- [CLI] Fix truncated command descriptions in the CLI reference by @hanouticelina in #4849\r\n\r\n## \ud83d\udc1b Bug and typo fixes\r\n\r\n- [hf_api] Make `CommitInfo` copy-able and pickle-able by @Wauplin in #4822\r\n- [LFS] Fix `SliceFileObj.__iter__` yielding only the first 4MB chunk by @BenYang12 in #4844\r\n- Fix dotenv parser truncating unquoted values containing `#` (used by `hf jobs --env-file`) by @BenYang12 in #4842\r\n- Keep single-quoted values verbatim in `load_dotenv` by @AnishPatel526 in #4827\r\n\r\n## \ud83d\udcd6 Documentation\r\n\r\n- [Docs] Clarify Jobs argument forwarding with `--` and align examples by @davanstrien in #4809\r\n\r\n## \ud83c\udfd7\ufe0f Internal\r\n\r\n- Bump the actions group across 1 directory with 5 updates by @dependabot[bot] in #4798\r\n- Post-release: bump version to 1.31.0.dev0 by @huggingface-hub-bot[bot] in #4806","mentions_count":7}
+{"id":390604557,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOE0mels4XSCcN","tag_name":"v1.32.0","target_commitish":"main","name":"[v1.32.0] Shared blob store, sandbox security hardening and faster imports","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-17T10:25:56Z","updated_at":"2026-09-17T10:26:12Z","published_at":"2026-09-17T10:21:24Z","assets":[],"body":"## :open_file_folder: [Cache] Shared blob store: deduplicate Xet files across repos\r\n\r\nThe cache now deduplicates Xet files across repos. A Xet file downloaded through `hf_xet` is stored once at `<CACHE_DIR>/blobs/<prefix>/<xet_hash>` and every repo that needs it gets a relative symlink instead of a download: no bytes are transferred and no extra space is used, even across different repos \u2014 or after the repo that first downloaded the file was deleted. The per-repo snapshot layout is unchanged, older clients keep reading and downloading normally, and any failure to share silently falls back to regular repo-local storage. Set `HF_HUB_DISABLE_SHARED_BLOBS=1` to opt out entirely. Shared files carry a `<xet_hash>.refs` manifest listing the repo blobs referencing them, which `hf cache rm` consults on deletion and `hf cache prune` sweeps to reclaim payloads that no cached repo uses anymore.\r\n\r\n\ud83d\udcda **Documentation:** [Manage your cache](https://huggingface.co/docs/huggingface_hub/main/en/guides/manage-cache)\r\n\r\n- [Cache] Add cross-repo shared blob store by @hanouticelina in #4498\r\n\r\n## :computer: [Jobs] Ship config inside UV scripts\r\n\r\nA UV script that only runs correctly on a specific runtime can now carry that runtime with it. An optional `[tool.hf-jobs]` table in the script's PEP 723 header accepts `image`, `flavor`, `python`, `timeout`, `name`, `namespace`, `env`, `secrets`, `labels`, `volumes`, `network_group` and `network_aliases`, and `hf jobs uv run` reads it at submit time. CLI flags always win, and `env`/`secrets`/`labels`/`volumes` merge entry by entry instead of being replaced, so `-e`/`-v` add to what the script declares. Typos and unknown keys are rejected with the list of valid options, secrets are passed by name only (values come from your environment), and every run prints a config summary with script-sourced values marked and secrets redacted. Note that the table is read by the CLI only: `run_uv_job()` and `create_scheduled_uv_job()` ignore it.\r\n\r\n```python\r\n# /// script\r\n# requires-python = \">=3.11\"\r\n# dependencies = [\"vllm\", \"datasets\"]\r\n#\r\n# [tool.hf-jobs]\r\n# image   = \"vllm/vllm-openai:unlimited-ocr\"\r\n# flavor  = \"l4x1\"\r\n# python  = \"/usr/bin/python3\"\r\n# secrets = [\"HF_TOKEN\"]\r\n# ///\r\n```\r\n\r\n\ud83d\udcda **Documentation:** [Run and manage Jobs](https://huggingface.co/docs/huggingface_hub/main/en/guides/jobs)\r\n\r\n- [CLI] Read a UV script's `[tool.hf-jobs]` launch config (opus-generated) by @Wauplin in #4598\r\n\r\n## \ud83d\udee1\ufe0f [Sandbox] security hardening\r\n\r\nAn internal security review of the Sandbox API resulted in a 9-PR hardening series. Pooled sandboxes now use their own per-sandbox capability token instead of the host-wide credential, pool hosts are fully validated (initiator, namespace, image, flavor, command, URL) before any credential is sent to them, the `sbx-server` binary is pinned by digest and verified before being run as PID 1, and the local pool cache is bound to the endpoint, credential and namespace that wrote it. Secret values no longer end up in `argv` when using `hf sandbox exec --secrets`, background processes are addressed by their server-assigned id (so `kill()` actually stops them and reports honestly), transfers and command output are bounded to avoid unbounded memory usage in the client, and pool ownership is decided per host so a `with SandboxPool(...)` block never again tears down a colleague's discovered host. The security documentation was also rewritten to state precisely what the sandbox contract is \u2014 and what it is not \u2014 including a new \"Known limitations\" section.\r\n\r\n\ud83d\udcda **Documentation:** [Sandboxes](https://huggingface.co/docs/huggingface_hub/main/en/guides/sandbox)\r\n\r\n- [sandbox audit] Make the sandbox security contract match the implementation by @Wauplin in #4831\r\n- [sandbox audit] Use each pooled sandbox's own capability token by @Wauplin in #4832\r\n- [sandbox audit] Validate a pool host before sending it a credential by @Wauplin in #4834\r\n- [sandbox audit] Bind the sandbox pool cache to the endpoint, credential and namespace that wrote it by @Wauplin in #4838\r\n- [sandbox audit] Bound what a transfer or a command's output costs the client by @Wauplin in #4839\r\n- [sandbox audit] Decide host teardown per host, and report it honestly by @Wauplin in #4840\r\n- [sandbox audit] Address background processes by their server-assigned id by @Wauplin in #4836\r\n- [sandbox audit] Pin the sandbox server binary by digest and verify it before running it by @Wauplin in #4837\r\n- [sandbox audit] Keep secret values out of argv in the CLI and fix the env/secrets docs by @Wauplin in #4835\r\n\r\n## \ud83d\udd12 Security hardening for serialization and validation\r\n\r\nThree changes make the library safer against malicious or malformed inputs, with a stricter behavior worth noting. Torch checkpoint deserialization was hardened across 11 reported vulnerabilities: `load_state_dict_from_file` now defaults to `safe=True` (always using the safetensors loader), the pickle path defaults to `weights_only=True`, and unsafe combinations raise explicit errors instead of silently falling through. Path validation now rejects `..` segments anywhere in `path_in_repo` (previously only a leading one was caught), so uploads like `\"a/../../etc/passwd\"` are refused. Finally, `repo_id` validation is restricted to ASCII word characters as documented, so non-ASCII ids like `caf\u00e9` are rejected client-side instead of failing later on the Hub.\r\n\r\n- [Serialization] Harden torch checkpoint deserialization by @Wauplin in #4877\r\n- [Core] Reject path traversal via embedded \"..\" segments in path_in_repo by @bodapatisaikrishna in #4884\r\n- [Core] Restrict repo_id validation regex to ASCII word characters by @bodapatisaikrishna in #4892\r\n\r\n## \ud83e\uddf0 Smarter cache management\r\n\r\n`hf cache rm` accepts `hf://` file URIs, so you can remove a single cached file \u2014 typically one GGUF quantization \u2014 without deleting the whole repo. The file is removed from every cached revision, and its blob is deleted only if no other cached file still references it. `hf cache` commands also support kernel repos: `scan_cache_dir()` used to treat `kernels--*` folders as corrupted and skip them, but kernel repos now show up in `hf cache ls`, `rm` and `prune`, and `--repo-type kernel` works for `hf download` and `hf cache verify`.\r\n\r\n```bash\r\nhf cache rm hf://models/unsloth/gemma-3-27b-it-GGUF/gemma-3-27b-it-Q4_K_M.gguf --dry-run\r\nhf download kernels-community/activation README.md --repo-type kernel\r\n```\r\n\r\n\ud83d\udcda **Documentation:** [Manage your cache](https://huggingface.co/docs/huggingface_hub/main/en/guides/manage-cache)\r\n\r\n- [CLI] Support file URIs in hf cache rm by @hanouticelina in #4847\r\n- [Cache] Support kernel repos in `hf cache` commands by @hanouticelina in #4905\r\n\r\n## \ud83d\ude80 Faster imports\r\n\r\n`huggingface_hub` now imports much faster: `huggingface_hub.utils` is lazy like the root package, heavy `HfApi` implementation imports and optional Torch/TensorBoard/NumPy/FastAPI/Starlette dependencies are deferred until used, and CLI commands are registered lazily while `hf --help` still renders the same complete output. Benchmark medians on Python 3.10: `from huggingface_hub import *` drops from 2.36s to 0.39s (626.8 \u2192 49.6 MiB peak RSS), `hf version` from 0.37s to 0.17s, and `hf env` from 0.40s to 0.24s.\r\n\r\n- [Core] Speed up package imports by @Wauplin in #4914\r\n\r\n## \ud83d\udda5\ufe0f CLI\r\n\r\n- [CLI] Make --format human override agent auto-detection by @hanouticelina in #4878\r\n- [CLI] Add `hf --skills` as an alias for `hf skills preview` by @Wauplin in #4906\r\n\r\n## \ud83e\udd16 Inference\r\n\r\n- Add `--container-registry-{username,password}` by @alvarobartt in #4854 \u2014 [docs](https://huggingface.co/docs/huggingface_hub/main/en/guides/inference_endpoints)\r\n\r\n## \ud83d\udcca Jobs\r\n\r\n- [Jobs] Scope network groups to the namespace and resource group by @co42 in #4855\r\n- [Jobs] Expose the network group on JobInfo by @co42 in #4862\r\n\r\n## \ud83d\udd27 Other QoL Improvements\r\n\r\n- [Download] Send X-HF-Download-Counter header on download calls by @Wauplin in #4613\r\n- [Buckets] Send mtime when copying files by @Wauplin in #4920\r\n\r\n## \ud83d\udc1b Bug and typo fixes\r\n\r\n- fix(serialization): save_torch_state_dict cleanup regex silently matches/deletes unrelated files by @g0rdonL in #4857\r\n- [Sandbox] Preserve terminal command results by @evalstate in #4851\r\n- [Http] Fix race in `get_session()` creating multiple clients by @hanouticelina in #4868\r\n- [RepoCard] Fix AttributeError when model-index has source: null by @Saniyagupte in #4870\r\n- [Spaces] Fix AttributeError in SpaceRuntime when hardware is null by @Saniyagupte in #4873\r\n- [Buckets] Fix file metadata size on redirects by @davanstrien in #4874\r\n- [CLI] Fix card data serialization by @davanstrien in #4882\r\n- Fix doubled colon in snapshot download transfer bar description by @sandeepb2013 in #4890\r\n- [Download] Fix silently disabled tree cache on long Windows paths by @askalf in #4896\r\n- [Safetensors] Recognize proposed U3 metadata by @7dsolv in #4898\r\n- [Serialization] Sync `_get_dtype_size` with safetensors by @Wauplin in #4902\r\n\r\n## \ud83d\udcd6 Documentation\r\n\r\n- [Community] Fix docstring for DiscussionComment.last_edited_by by @Saniyagupte in #4864\r\n- [Docs] Fix hf discussions info options that do not exist by @rishabhsai in #4886\r\n\r\n## \ud83c\udfd7\ufe0f Internal\r\n\r\n- [CI] Make CI less flaky and stop 6h hung jobs by @Wauplin in #4830\r\n- Bump the actions group with 4 updates by @dependabot[bot] in #4848\r\n- Post-release: bump version to 1.32.0.dev0 by @huggingface-hub-bot[bot] in #4856\r\n- Key the doc build concurrency group on the pull request number by @albertvillanova in #4876\r\n","mentions_count":15}

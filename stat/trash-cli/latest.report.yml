@@ -7,7 +7,7 @@ about:
   latestVersion: "0.26.9.14"
   latestRelease: "0.26.9.14"
   latestPrerelease: ""
-  collectedAt: 2026-09-17T03:15:55Z
+  collectedAt: 2026-09-18T03:02:46Z
 timeline:
   created: 2011-11-09
   lastCommit: 2026-09-15
@@ -28,7 +28,7 @@ language:
 totalBytes: 495111
 recent:
   last30d:
-    since: 2026-08-18
+    since: 2026-08-19
     release: 1
     mergedPR: 0
     openPR: 2
@@ -36,7 +36,7 @@ recent:
     openIssue: 1
     commit: 11
   last60d:
-    since: 2026-07-19
+    since: 2026-07-20
     release: 1
     mergedPR: 0
     openPR: 2
@@ -44,47 +44,47 @@ recent:
     openIssue: 2
     commit: 11
   last90d:
-    since: 2026-06-19
+    since: 2026-06-20
     release: 1
     mergedPR: 9
-    openPR: 8
+    openPR: 7
     closedIssue: 1
     openIssue: 2
     commit: 71
   last180d:
-    since: 2026-03-21
+    since: 2026-03-22
     release: 1
     mergedPR: 11
-    openPR: 9
+    openPR: 8
     closedIssue: 2
-    openIssue: 5
+    openIssue: 4
     commit: 74
   last360d:
-    since: 2025-09-22
+    since: 2025-09-23
     release: 1
     mergedPR: 12
-    openPR: 10
+    openPR: 9
     closedIssue: 3
     openIssue: 8
     commit: 76
   last720d:
-    since: 2024-09-27
+    since: 2024-09-28
     release: 1
     mergedPR: 16
-    openPR: 12
+    openPR: 11
     closedIssue: 9
     openIssue: 14
     commit: 81
 total:
   release: 1
   mergedPR: 73
-  openPR: 12
+  openPR: 11
   closedIssue: 195
   openIssue: 72
   commit: 2061
 ---
 path: /home/runner/.x-repo/github.com/andreafrancia/trash-cli
-collectedAt: 2026-09-17T03:15:56Z
+collectedAt: 2026-09-18T03:02:47Z
 loc:
   Python:
     code: 11074
@@ -239,4 +239,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 21 are checked with a SAST tool'
 ---
-{"id":388563891,"author":{"login":"andreafrancia","id":260852,"node_id":"MDQ6VXNlcjI2MDg1Mg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOACnayc4XKQOz","tag_name":"0.26.9.14","target_commitish":"master","name":"Relase of Sep 14, 2026","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-14T16:33:19Z","updated_at":"2026-09-14T16:56:24Z","published_at":"2026-09-14T16:56:24Z","assets":[],"body":"User visible changes:\r\n- trash-restore now trusts a shared trash directory (.Trash/$uid) with the\r\n  same rule as trash-put/trash-list (sticky bit, non-symlink), instead of an\r\n  unreliable uid comparison (curious-rabbit)\r\n  [693f568, cee9ab1, e47ac5b, b1cf321]\r\n- Prevented trash-restore from restoring a file outside the trash volume when\r\n  a .trashinfo's Path= contains a path-traversal sequence (curious-rabbit)\r\n  [6cd261c, d9e1a38]\r\n- Sanitized control characters in filenames before printing them to a\r\n  terminal, blocking ANSI escape injection via trash-list (curious-rabbit,\r\n  Andrea Francia) [c6f260c, f2f3a17, 183b2cc, ba41913, a437d64]\r\n- Hardened trash-put against unwritable trash directories: no more infinite\r\n  retry loop on EACCES/ENOSPC/EROFS, refuses option-shaped filenames, refuses\r\n  a symlinked info/files (curious-rabbit, Andrea Francia)\r\n  [e62b15d, 6f8e489, b5119db, f03e96c]\r\n- Homebrew install instructions (zai1208) [b696d31]\r\n- Added arguments to the trash-restore man page (Andrew Davis) [dba2afa]\r\n- Fixed a typo in the README (Tim Stewart) [e5732ba]\r\n- Fixed syntax errors in the README, synced the Chinese README with the\r\n  English one (Andy Wade) [673552d]\r\n- Documented that trash-cli does not support BTRFS [abec42a]\r\nWork on the tools:\r\n- Split trashcli/fs.py into trashcli/fslib/ (abstract interfaces + real\r\n  implementations) [bba948d]\r\n- Refactored janitor.py and either.py, removed fs_func in favor of fakeable\r\n  classes in tests [5ca895f, 98d9405, b032e47]\r\n- Refactored the restore filesystem classes\r\n  [2751f55, 5138296, 583eae4, 06089bd, 32b4e9f]\r\n- Moved Python 2.7 testing out of tox into scripts/py27/, assorted Python 2.7\r\n  / mypy compatibility fixes\r\n  [921a074, 89835b1, 7c7e64f, 2b86d02, 40e21b7, 959cd7f, and ~10 more]\r\n- Replaced parameterized with built-in pytest functionality\r\n  (Benjamin A. Beasley) [6a0884e]\r\n- Used unittest.mock from the stdlib instead of an external dependency\r\n  (Eli Schwartz) [73e5892]\r\n- Relaxed the virtualenv version requirement (David Auer) [864b13e]\r\n- Made tests independent of filesystem directory-listing order\r\n  [d2416d5, e0165ee]\r\n- Cache the built Python 2.7 interpreter in CI [60d7fdf]\r\n- Cleaned up dependencies in setup.cfg [05a8298, 2506628, bd83d57]\r\n\r\nNote: a fix to preserve raw bytes of non-UTF-8 filenames in a .trashinfo's\r\nPath= (SOV710) was merged [e361439, 0ded2af] and then reverted the same day\r\n[2c69ac4, 4b1b3a7] with no reason given -- not included in this release, the\r\nunderlying bug is still present.\r\n","reactions":{"total_count":6,"+1":4,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":1,"rocket":0,"eyes":1}}
+{"id":388563891,"author":{"login":"andreafrancia","id":260852,"node_id":"MDQ6VXNlcjI2MDg1Mg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOACnayc4XKQOz","tag_name":"0.26.9.14","target_commitish":"master","name":"Relase of Sep 14, 2026","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-14T16:33:19Z","updated_at":"2026-09-14T16:56:24Z","published_at":"2026-09-14T16:56:24Z","assets":[],"body":"User visible changes:\r\n- trash-restore now trusts a shared trash directory (.Trash/$uid) with the\r\n  same rule as trash-put/trash-list (sticky bit, non-symlink), instead of an\r\n  unreliable uid comparison (curious-rabbit)\r\n  [693f568, cee9ab1, e47ac5b, b1cf321]\r\n- Prevented trash-restore from restoring a file outside the trash volume when\r\n  a .trashinfo's Path= contains a path-traversal sequence (curious-rabbit)\r\n  [6cd261c, d9e1a38]\r\n- Sanitized control characters in filenames before printing them to a\r\n  terminal, blocking ANSI escape injection via trash-list (curious-rabbit,\r\n  Andrea Francia) [c6f260c, f2f3a17, 183b2cc, ba41913, a437d64]\r\n- Hardened trash-put against unwritable trash directories: no more infinite\r\n  retry loop on EACCES/ENOSPC/EROFS, refuses option-shaped filenames, refuses\r\n  a symlinked info/files (curious-rabbit, Andrea Francia)\r\n  [e62b15d, 6f8e489, b5119db, f03e96c]\r\n- Homebrew install instructions (zai1208) [b696d31]\r\n- Added arguments to the trash-restore man page (Andrew Davis) [dba2afa]\r\n- Fixed a typo in the README (Tim Stewart) [e5732ba]\r\n- Fixed syntax errors in the README, synced the Chinese README with the\r\n  English one (Andy Wade) [673552d]\r\n- Documented that trash-cli does not support BTRFS [abec42a]\r\nWork on the tools:\r\n- Split trashcli/fs.py into trashcli/fslib/ (abstract interfaces + real\r\n  implementations) [bba948d]\r\n- Refactored janitor.py and either.py, removed fs_func in favor of fakeable\r\n  classes in tests [5ca895f, 98d9405, b032e47]\r\n- Refactored the restore filesystem classes\r\n  [2751f55, 5138296, 583eae4, 06089bd, 32b4e9f]\r\n- Moved Python 2.7 testing out of tox into scripts/py27/, assorted Python 2.7\r\n  / mypy compatibility fixes\r\n  [921a074, 89835b1, 7c7e64f, 2b86d02, 40e21b7, 959cd7f, and ~10 more]\r\n- Replaced parameterized with built-in pytest functionality\r\n  (Benjamin A. Beasley) [6a0884e]\r\n- Used unittest.mock from the stdlib instead of an external dependency\r\n  (Eli Schwartz) [73e5892]\r\n- Relaxed the virtualenv version requirement (David Auer) [864b13e]\r\n- Made tests independent of filesystem directory-listing order\r\n  [d2416d5, e0165ee]\r\n- Cache the built Python 2.7 interpreter in CI [60d7fdf]\r\n- Cleaned up dependencies in setup.cfg [05a8298, 2506628, bd83d57]\r\n\r\nNote: a fix to preserve raw bytes of non-UTF-8 filenames in a .trashinfo's\r\nPath= (SOV710) was merged [e361439, 0ded2af] and then reverted the same day\r\n[2c69ac4, 4b1b3a7] with no reason given -- not included in this release, the\r\nunderlying bug is still present.\r\n","reactions":{"total_count":8,"+1":5,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":2,"rocket":0,"eyes":1}}

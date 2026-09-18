@@ -2,15 +2,15 @@ about:
   description: "Easy and Repeatable Kubernetes Development"
   license: Apache-2.0
   homepage: https://skaffold.dev/
-  head: d915e11
+  head: b8611e4
   archived: false
   latestVersion: "v2.25.0"
   latestRelease: "v2.25.0"
   latestPrerelease: "v2.0.0-beta3"
-  collectedAt: 2026-09-17T05:20:27Z
+  collectedAt: 2026-09-18T05:04:00Z
 timeline:
   created: 2018-01-23
-  lastCommit: 2026-09-16
+  lastCommit: 2026-09-17
   lastVersion: 2026-09-16
   lastRelease: 2026-09-16
   lastPrerelease: 2022-09-21
@@ -20,7 +20,7 @@ popularity:
   fork: 1700
   release: 201
   contributor: 443
-  pullRequest: 5882
+  pullRequest: 5883
   issue: 4281
 language:
   Go: 9607480
@@ -45,63 +45,63 @@ language:
 totalBytes: 9967308
 recent:
   last30d:
-    since: 2026-08-18
+    since: 2026-08-19
     release: 1
-    mergedPR: 10
+    mergedPR: 9
     openPR: 10
     closedIssue: 3
     openIssue: 2
-    commit: 0
+    commit: 13
   last60d:
-    since: 2026-07-19
+    since: 2026-07-20
     release: 2
-    mergedPR: 15
+    mergedPR: 16
     openPR: 13
     closedIssue: 3
     openIssue: 4
-    commit: 0
+    commit: 16
   last90d:
-    since: 2026-06-19
+    since: 2026-06-20
     release: 3
-    mergedPR: 30
-    openPR: 18
+    mergedPR: 29
+    openPR: 17
     closedIssue: 3
     openIssue: 11
-    commit: 0
+    commit: 33
   last180d:
-    since: 2026-03-21
+    since: 2026-03-22
     release: 9
-    mergedPR: 70
+    mergedPR: 71
     openPR: 30
     closedIssue: 9
     openIssue: 18
-    commit: 0
+    commit: 71
   last360d:
-    since: 2025-09-22
+    since: 2025-09-23
     release: 15
-    mergedPR: 133
+    mergedPR: 134
     openPR: 50
     closedIssue: 15
     openIssue: 36
-    commit: 0
+    commit: 131
   last720d:
-    since: 2024-09-27
+    since: 2024-09-28
     release: 21
-    mergedPR: 306
+    mergedPR: 307
     openPR: 63
     closedIssue: 50
     openIssue: 90
-    commit: 314
+    commit: 315
 total:
   release: 201
-  mergedPR: 4879
+  mergedPR: 4880
   openPR: 76
   closedIssue: 3447
   openIssue: 834
-  commit: 9248
+  commit: 9249
 ---
 path: /home/runner/.x-repo/github.com/GoogleContainerTools/skaffold
-collectedAt: 2026-09-17T05:21:10Z
+collectedAt: 2026-09-18T05:04:27Z
 loc:
   Go:
     code: 2249384
@@ -279,24 +279,23 @@ total:
   blanks: 355587
   files: 13937
 ---
-date: "2026-09-16T17:26:13Z"
+date: "2026-09-17T15:26:52Z"
 repo:
   name: github.com/GoogleContainerTools/skaffold
-  commit: d915e113210eb7590ccbc8363aeab38053172ab3
+  commit: b8611e408bf21a9db3814b71124b930d71ed498b
 scorecard:
   version: v5.3.0
   commit: c22063e786c11f9dd714d777a687ff7c4599b600
 score: 7.2
 checks:
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
     details: null
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -309,23 +308,24 @@ checks:
     score: 10
     reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
     details: null
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
     details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:23'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:22'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/scorecards.yml:22'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:23'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/scorecards.yml:21'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/scorecards.yml:22'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/codeql-analysis.yml:11'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/integration-linux.yml:6'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/linters-checks.yml:6'
@@ -339,6 +339,20 @@ checks:
     score: 2
     reason: 'badge detected: InProgress'
     details: null
+  - name: Signed-Releases
+    score: 8
+    reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
+    details:
+      - 'Info: signed release artifact: skaffold-darwin-amd64.sha256.sig: https://github.com/GoogleContainerTools/skaffold/releases/tag/v2.25.0'
+      - 'Info: signed release artifact: skaffold-darwin-amd64.sha256.sig: https://github.com/GoogleContainerTools/skaffold/releases/tag/v2.24.0'
+      - 'Info: signed release artifact: skaffold-darwin-amd64.sha256.sig: https://github.com/GoogleContainerTools/skaffold/releases/tag/v2.23.0'
+      - 'Info: signed release artifact: skaffold-darwin-amd64.sha256.sig: https://github.com/GoogleContainerTools/skaffold/releases/tag/v2.22.0'
+      - 'Info: signed release artifact: skaffold-darwin-amd64.sha256.sig: https://github.com/GoogleContainerTools/skaffold/releases/tag/v2.21.0'
+      - 'Warn: release artifact v2.25.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/390240500'
+      - 'Warn: release artifact v2.24.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/358950205'
+      - 'Warn: release artifact v2.23.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/345534770'
+      - 'Warn: release artifact v2.22.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/336055187'
+      - 'Warn: release artifact v2.21.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/326280646'
   - name: Binary-Artifacts
     score: 6
     reason: binaries present in source code
@@ -347,18 +361,11 @@ checks:
       - 'Warn: binary detected: examples/jib-sync/gradle/wrapper/gradle-wrapper.jar:1'
       - 'Warn: binary detected: integration/examples/jib-gradle/gradle/wrapper/gradle-wrapper.jar:1'
       - 'Warn: binary detected: integration/examples/jib-sync/gradle/wrapper/gradle-wrapper.jar:1'
-  - name: SAST
-    score: 7
-    reason: SAST tool detected but not run on all commits
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
     details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: 6
     reason: branch protection is not maximal on development and all release branches
@@ -373,26 +380,21 @@ checks:
       - 'Info: ''up-to-date branches'' is required to merge on branch ''main'''
       - 'Warn: no status checks found to merge onto branch ''main'''
       - 'Info: PRs are required in order to make changes on branch ''main'''
-  - name: Signed-Releases
-    score: 8
-    reason: 4 out of the last 4 releases have a total of 4 signed artifacts.
+  - name: SAST
+    score: 7
+    reason: SAST tool detected but not run on all commits
     details:
-      - 'Info: signed release artifact: skaffold-darwin-amd64.sha256.sig: https://github.com/GoogleContainerTools/skaffold/releases/tag/v2.24.0'
-      - 'Info: signed release artifact: skaffold-darwin-amd64.sha256.sig: https://github.com/GoogleContainerTools/skaffold/releases/tag/v2.23.0'
-      - 'Info: signed release artifact: skaffold-darwin-amd64.sha256.sig: https://github.com/GoogleContainerTools/skaffold/releases/tag/v2.22.0'
-      - 'Info: signed release artifact: skaffold-darwin-amd64.sha256.sig: https://github.com/GoogleContainerTools/skaffold/releases/tag/v2.21.0'
-      - 'Warn: release artifact v2.24.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/358950205'
-      - 'Warn: release artifact v2.23.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/345534770'
-      - 'Warn: release artifact v2.22.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/336055187'
-      - 'Warn: release artifact v2.21.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/326280646'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
+  - name: License
+    score: 10
+    reason: license file detected
     details:
-      - 'Warn: no fuzzer integrations found'
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Vulnerabilities
     score: 0
-    reason: 149 existing vulnerabilities detected
+    reason: 148 existing vulnerabilities detected
     details:
       - 'Warn: Project is vulnerable to: GHSA-vmq6-5m68-f53m'
       - 'Warn: Project is vulnerable to: GHSA-25qh-j22f-pwp8'
@@ -542,7 +544,6 @@ checks:
       - 'Warn: Project is vulnerable to: PYSEC-2018-66 / GHSA-562c-5r94-xh97'
       - 'Warn: Project is vulnerable to: PYSEC-2019-179 / GHSA-5wv5-4vpf-pj6m'
       - 'Warn: Project is vulnerable to: PYSEC-2023-62 / GHSA-m2qf-hxjv-5gpq'
-      - 'Warn: Project is vulnerable to: CVE-2025-8556'
   - name: CI-Tests
     score: 10
     reason: 30 out of 30 merged PRs checked by a CI test -- score normalized to 10
@@ -577,7 +578,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: deploy/docs-v2/Dockerfile:31: pin your Docker image by updating alpine:3.10 to alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
       - 'Warn: containerImage not pinned by hash: deploy/docs-v2/Dockerfile:37: pin your Docker image by updating alpine:3.10 to alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
       - 'Warn: containerImage not pinned by hash: deploy/docs-v2/Dockerfile:43: pin your Docker image by updating node:20-bookworm to node:20-bookworm@sha256:8f693eaa7e0a8e71560c9a82b55fd54c2ae920a2ba5d2cde28bac7d1c01c9ba5'
-      - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:16: pin your Docker image by updating gcr.io/k8s-skaffold/build_deps:latest to gcr.io/k8s-skaffold/build_deps:latest@sha256:70f2afa84faba2b157abd152d159cb6aac72117566cec5a6f863af995b613254'
+      - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:16: pin your Docker image by updating gcr.io/k8s-skaffold/build_deps:latest to gcr.io/k8s-skaffold/build_deps:latest@sha256:49f8f90f5276bb31c8693710cc917613889de674c2b355470ff2e7c22a812dd4'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:19'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:24'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:18: pin your Docker image by updating mirror.gcr.io/library/docker:28.1.1 to mirror.gcr.io/library/docker:28.1.1@sha256:eceba5b0fc2fcf83a74c298391c2ed9e1adbdaf04ee173611bd6282ec973e7ba'
@@ -797,4 +798,4 @@ checks:
       - 'Info:   0 out of 201 containerImage dependencies pinned'
       - 'Info:   0 out of  15 npmCommand dependencies pinned'
 ---
-{"id":390240500,"author":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBxKEqc4XQpj0","tag_name":"v2.25.0","target_commitish":"main","name":"v2.25.0 Release","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-16T17:33:43Z","updated_at":"2026-09-16T20:24:33Z","published_at":"2026-09-16T20:24:33Z","assets":[{"id":568723697,"node_id":"RA_kwDOBxKEqc4h5gjx","name":"skaffold-darwin-amd64","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":136000752,"digest":"sha256:91facde91ba713328adb408be1949f538a5a5dcaee6a3b93725a2c5703bbbb5d","download_count":2,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:28Z"},{"id":568723696,"node_id":"RA_kwDOBxKEqc4h5gjw","name":"skaffold-darwin-amd64.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":88,"digest":"sha256:588765d9485dc75ccc49f65d5c9e41833680b4a7c88afab1d110b484932d1202","download_count":4,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:24Z"},{"id":568723699,"node_id":"RA_kwDOBxKEqc4h5gjz","name":"skaffold-darwin-amd64.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":71,"digest":"sha256:550c939625a80a896c073db2b514a9cade18762576daac781513072aa4b6940d","download_count":3,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:24Z"},{"id":568723702,"node_id":"RA_kwDOBxKEqc4h5gj2","name":"skaffold-darwin-amd64.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":71,"digest":"sha256:c678dfd0a2c07e80d6201cebf850e60029f9e86c38d1a9bc65d2486908f7d033","download_count":2,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:24Z"},{"id":568723698,"node_id":"RA_kwDOBxKEqc4h5gjy","name":"skaffold-darwin-arm64","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":127633744,"digest":"sha256:9adda767c94806827bcb22f2f7a9077bbde6b481331e891f9a7191e2f225dd27","download_count":7,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:28Z"},{"id":568723716,"node_id":"RA_kwDOBxKEqc4h5gkE","name":"skaffold-darwin-arm64.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":88,"digest":"sha256:3d924d0c78e8e4596da0c4bd9abe9b7e432000bb5a597d969af9aeaca9e69ee3","download_count":19,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723722,"node_id":"RA_kwDOBxKEqc4h5gkK","name":"skaffold-darwin-arm64.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":71,"digest":"sha256:0fae5b907bdc6bc2a0e10d65ff072a39608c10d96c2d30c70fbfc899779f1fd9","download_count":3,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723723,"node_id":"RA_kwDOBxKEqc4h5gkL","name":"skaffold-darwin-arm64.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":72,"digest":"sha256:23c8840a0371ed7d1b5b34d937e3ea3563fcf14663f4afdf0e99444a28885b9d","download_count":2,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723736,"node_id":"RA_kwDOBxKEqc4h5gkY","name":"skaffold-linux-amd64","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":127728552,"digest":"sha256:42b9e2e3246c19b78fcc53dd60cc7ded1da8704293886b909a2a02b9bef34d20","download_count":13,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:29Z"},{"id":568723737,"node_id":"RA_kwDOBxKEqc4h5gkZ","name":"skaffold-linux-amd64.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":87,"digest":"sha256:20a0516af3c2da4362d12b1f4ec2099eb802a48d25032a93b0a813edbacc47fc","download_count":6,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723750,"node_id":"RA_kwDOBxKEqc4h5gkm","name":"skaffold-linux-amd64.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":72,"digest":"sha256:34691eed839c930c170160aba620f54c6eae923421aa4ca6518a61a2a6725bd4","download_count":3,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723755,"node_id":"RA_kwDOBxKEqc4h5gkr","name":"skaffold-linux-amd64.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":72,"digest":"sha256:b14bba44655f029ef83ace78f1ffe0b09767f45729a18ab907d515eec12d8527","download_count":2,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:26Z"},{"id":568723763,"node_id":"RA_kwDOBxKEqc4h5gkz","name":"skaffold-linux-arm64","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":119000832,"digest":"sha256:416f5fed2009c2b4adc62ae887ee5fc19ff08cc8a0250b81d8682d55626a75fd","download_count":10,"created_at":"2026-09-16T20:20:26Z","updated_at":"2026-09-16T20:20:29Z"},{"id":568723773,"node_id":"RA_kwDOBxKEqc4h5gk9","name":"skaffold-linux-arm64.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":87,"digest":"sha256:9bb922951bebd87b1f99cfd982f0fd0dc44aeb16499099f07737c537319cc798","download_count":18,"created_at":"2026-09-16T20:20:26Z","updated_at":"2026-09-16T20:20:26Z"},{"id":568723781,"node_id":"RA_kwDOBxKEqc4h5glF","name":"skaffold-linux-arm64.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":70,"digest":"sha256:99841360297254eaf02445cba799ec7fd8ab9c040bd7b67721d2dc6ce4db74f3","download_count":3,"created_at":"2026-09-16T20:20:26Z","updated_at":"2026-09-16T20:20:27Z"},{"id":568723800,"node_id":"RA_kwDOBxKEqc4h5glY","name":"skaffold-linux-arm64.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":71,"digest":"sha256:cd9f6216d212e6a32740cb1f277dd95002514c76ad0bf524793724b70f6be5dc","download_count":2,"created_at":"2026-09-16T20:20:27Z","updated_at":"2026-09-16T20:20:27Z"},{"id":568723811,"node_id":"RA_kwDOBxKEqc4h5glj","name":"skaffold-windows-amd64.exe","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-msdownload","state":"uploaded","size":119910040,"digest":"sha256:4ca20b716f4756b0f5e2a06b13bf9cb189ebc8e6978665f274f8fd23fbcf47d6","download_count":11,"created_at":"2026-09-16T20:20:27Z","updated_at":"2026-09-16T20:20:31Z"},{"id":568723835,"node_id":"RA_kwDOBxKEqc4h5gl7","name":"skaffold-windows-amd64.exe.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":93,"digest":"sha256:b7d86f1af3ca23a98ed5a78bbcde2dd5c9904fef508f703d6885403d2ed9440a","download_count":54,"created_at":"2026-09-16T20:20:28Z","updated_at":"2026-09-16T20:20:28Z"},{"id":568723838,"node_id":"RA_kwDOBxKEqc4h5gl-","name":"skaffold-windows-amd64.exe.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":70,"digest":"sha256:d30fe725680584adba05e448cbc4de18d721e783ea0870f066b393b155a77a5a","download_count":3,"created_at":"2026-09-16T20:20:28Z","updated_at":"2026-09-16T20:20:28Z"},{"id":568723856,"node_id":"RA_kwDOBxKEqc4h5gmQ","name":"skaffold-windows-amd64.exe.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":72,"digest":"sha256:fb10bae1d1e2c8074f02908611a32966f8e76c1557af277a6e34adfb12766b49","download_count":2,"created_at":"2026-09-16T20:20:29Z","updated_at":"2026-09-16T20:20:29Z"},{"id":568723862,"node_id":"RA_kwDOBxKEqc4h5gmW","name":"VERSION","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":8,"digest":"sha256:611af0199576f0111b0da09996e2096a5fabff629c76010faaddb2a2f84deb23","download_count":2,"created_at":"2026-09-16T20:20:29Z","updated_at":"2026-09-16T20:20:29Z"},{"id":568723874,"node_id":"RA_kwDOBxKEqc4h5gmi","name":"VERSION.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":70,"digest":"sha256:2e9051f95b0b2fee9158d082fd943a13059c578e5a0f4092b206721fc494689f","download_count":2,"created_at":"2026-09-16T20:20:29Z","updated_at":"2026-09-16T20:20:29Z"}],"body":"# v2.25.0 Release - 09/16/2026\r\n**Linux amd64**\r\n`curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-linux-amd64 && chmod +x skaffold && sudo mv skaffold /usr/local/bin`\r\n\r\n**Linux arm64**\r\n`curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-linux-arm64 && chmod +x skaffold && sudo mv skaffold /usr/local/bin`\r\n\r\n**macOS amd64**\r\n`curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-darwin-amd64 && chmod +x skaffold && sudo mv skaffold /usr/local/bin`\r\n\r\n**macOS arm64**\r\n`curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-darwin-arm64 && chmod +x skaffold && sudo mv skaffold /usr/local/bin`\r\n\r\n**Windows**\r\nhttps://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-windows-amd64.exe\r\n\r\n**Docker image**\r\n`gcr.io/k8s-skaffold/skaffold:v2.25.0`\r\n\r\nHighlights:\r\n\r\nNew Features and Additions:\r\n\r\nFixes:\r\n\r\nUpdates and Refactors:\r\n* chore: correct go.mod version to 1.27.1 and update dependencies [#10186](https://github.com/GoogleContainerTools/skaffold/pull/10186)\r\n* chore: upgrade Go version to 1.27.1 and update dependencies [#10183](https://github.com/GoogleContainerTools/skaffold/pull/10183)\r\n* chore: bump github.com/containerd/containerd from 1.7.33 to 1.7.35 [#10178](https://github.com/GoogleContainerTools/skaffold/pull/10178)\r\n* chore: bump google.golang.org/grpc from 1.82.1 to 1.83.2 in /examples/grpc-e2e-tests/cloud-spanner-bootstrap [#10177](https://github.com/GoogleContainerTools/skaffold/pull/10177)\r\n* chore: bump google.golang.org/grpc from 1.82.1 to 1.83.1 [#10173](https://github.com/GoogleContainerTools/skaffold/pull/10173)\r\n* docs: Adds announcement to V2 docs and YAML reference landing pages regardi\u2026 [#10180](https://github.com/GoogleContainerTools/skaffold/pull/10180)\r\n* chore: upgrade Go version to 1.27.0 and update dependencies [#10167](https://github.com/GoogleContainerTools/skaffold/pull/10167)\r\n* chore: bump google.golang.org/grpc from 1.79.3 to 1.82.1 in /examples/grpc-e2e-tests/cloud-spanner-bootstrap [#10146](https://github.com/GoogleContainerTools/skaffold/pull/10146)\r\n* chore: bump google.golang.org/grpc from 1.56.3 to 1.82.1 in /examples/grpc-e2e-tests/service [#10145](https://github.com/GoogleContainerTools/skaffold/pull/10145)\r\n* chore: bump google.golang.org/grpc from 1.81.1 to 1.82.1 [#10148](https://github.com/GoogleContainerTools/skaffold/pull/10148)\r\n* chore: bump github.com/moby/go-archive from 0.2.0 to 0.3.0 [#10157](https://github.com/GoogleContainerTools/skaffold/pull/10157)\r\n* chore: bump github.com/moby/buildkit from 0.30.0 to 0.31.1 [#10158](https://github.com/GoogleContainerTools/skaffold/pull/10158)\r\n* chore: bump github.com/go-git/go-git/v5 from 5.19.1 to 5.19.2 [#10154](https://github.com/GoogleContainerTools/skaffold/pull/10154)\r\n\r\nDocs, Test, and Release Updates:\r\n\r\nHuge thanks goes out to all of our contributors for this release:\r\n\r\n- Abrahami2\r\n- Dave Dorbin\r\n- dependabot[bot]\r\n- ruhi-chaddha\r\n"}
+{"id":390240500,"author":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBxKEqc4XQpj0","tag_name":"v2.25.0","target_commitish":"main","name":"v2.25.0 Release","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-16T17:33:43Z","updated_at":"2026-09-16T20:24:33Z","published_at":"2026-09-16T20:24:33Z","assets":[{"id":568723697,"node_id":"RA_kwDOBxKEqc4h5gjx","name":"skaffold-darwin-amd64","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":136000752,"digest":"sha256:91facde91ba713328adb408be1949f538a5a5dcaee6a3b93725a2c5703bbbb5d","download_count":11,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:28Z"},{"id":568723696,"node_id":"RA_kwDOBxKEqc4h5gjw","name":"skaffold-darwin-amd64.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":88,"digest":"sha256:588765d9485dc75ccc49f65d5c9e41833680b4a7c88afab1d110b484932d1202","download_count":11,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:24Z"},{"id":568723699,"node_id":"RA_kwDOBxKEqc4h5gjz","name":"skaffold-darwin-amd64.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":71,"digest":"sha256:550c939625a80a896c073db2b514a9cade18762576daac781513072aa4b6940d","download_count":6,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:24Z"},{"id":568723702,"node_id":"RA_kwDOBxKEqc4h5gj2","name":"skaffold-darwin-amd64.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":71,"digest":"sha256:c678dfd0a2c07e80d6201cebf850e60029f9e86c38d1a9bc65d2486908f7d033","download_count":5,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:24Z"},{"id":568723698,"node_id":"RA_kwDOBxKEqc4h5gjy","name":"skaffold-darwin-arm64","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":127633744,"digest":"sha256:9adda767c94806827bcb22f2f7a9077bbde6b481331e891f9a7191e2f225dd27","download_count":20,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:28Z"},{"id":568723716,"node_id":"RA_kwDOBxKEqc4h5gkE","name":"skaffold-darwin-arm64.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":88,"digest":"sha256:3d924d0c78e8e4596da0c4bd9abe9b7e432000bb5a597d969af9aeaca9e69ee3","download_count":158,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723722,"node_id":"RA_kwDOBxKEqc4h5gkK","name":"skaffold-darwin-arm64.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":71,"digest":"sha256:0fae5b907bdc6bc2a0e10d65ff072a39608c10d96c2d30c70fbfc899779f1fd9","download_count":5,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723723,"node_id":"RA_kwDOBxKEqc4h5gkL","name":"skaffold-darwin-arm64.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":72,"digest":"sha256:23c8840a0371ed7d1b5b34d937e3ea3563fcf14663f4afdf0e99444a28885b9d","download_count":5,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723736,"node_id":"RA_kwDOBxKEqc4h5gkY","name":"skaffold-linux-amd64","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":127728552,"digest":"sha256:42b9e2e3246c19b78fcc53dd60cc7ded1da8704293886b909a2a02b9bef34d20","download_count":50,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:29Z"},{"id":568723737,"node_id":"RA_kwDOBxKEqc4h5gkZ","name":"skaffold-linux-amd64.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":87,"digest":"sha256:20a0516af3c2da4362d12b1f4ec2099eb802a48d25032a93b0a813edbacc47fc","download_count":30,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723750,"node_id":"RA_kwDOBxKEqc4h5gkm","name":"skaffold-linux-amd64.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":72,"digest":"sha256:34691eed839c930c170160aba620f54c6eae923421aa4ca6518a61a2a6725bd4","download_count":5,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723755,"node_id":"RA_kwDOBxKEqc4h5gkr","name":"skaffold-linux-amd64.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":72,"digest":"sha256:b14bba44655f029ef83ace78f1ffe0b09767f45729a18ab907d515eec12d8527","download_count":3,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:26Z"},{"id":568723763,"node_id":"RA_kwDOBxKEqc4h5gkz","name":"skaffold-linux-arm64","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":119000832,"digest":"sha256:416f5fed2009c2b4adc62ae887ee5fc19ff08cc8a0250b81d8682d55626a75fd","download_count":34,"created_at":"2026-09-16T20:20:26Z","updated_at":"2026-09-16T20:20:29Z"},{"id":568723773,"node_id":"RA_kwDOBxKEqc4h5gk9","name":"skaffold-linux-arm64.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":87,"digest":"sha256:9bb922951bebd87b1f99cfd982f0fd0dc44aeb16499099f07737c537319cc798","download_count":163,"created_at":"2026-09-16T20:20:26Z","updated_at":"2026-09-16T20:20:26Z"},{"id":568723781,"node_id":"RA_kwDOBxKEqc4h5glF","name":"skaffold-linux-arm64.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":70,"digest":"sha256:99841360297254eaf02445cba799ec7fd8ab9c040bd7b67721d2dc6ce4db74f3","download_count":4,"created_at":"2026-09-16T20:20:26Z","updated_at":"2026-09-16T20:20:27Z"},{"id":568723800,"node_id":"RA_kwDOBxKEqc4h5glY","name":"skaffold-linux-arm64.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":71,"digest":"sha256:cd9f6216d212e6a32740cb1f277dd95002514c76ad0bf524793724b70f6be5dc","download_count":3,"created_at":"2026-09-16T20:20:27Z","updated_at":"2026-09-16T20:20:27Z"},{"id":568723811,"node_id":"RA_kwDOBxKEqc4h5glj","name":"skaffold-windows-amd64.exe","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-msdownload","state":"uploaded","size":119910040,"digest":"sha256:4ca20b716f4756b0f5e2a06b13bf9cb189ebc8e6978665f274f8fd23fbcf47d6","download_count":75,"created_at":"2026-09-16T20:20:27Z","updated_at":"2026-09-16T20:20:31Z"},{"id":568723835,"node_id":"RA_kwDOBxKEqc4h5gl7","name":"skaffold-windows-amd64.exe.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":93,"digest":"sha256:b7d86f1af3ca23a98ed5a78bbcde2dd5c9904fef508f703d6885403d2ed9440a","download_count":205,"created_at":"2026-09-16T20:20:28Z","updated_at":"2026-09-16T20:20:28Z"},{"id":568723838,"node_id":"RA_kwDOBxKEqc4h5gl-","name":"skaffold-windows-amd64.exe.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":70,"digest":"sha256:d30fe725680584adba05e448cbc4de18d721e783ea0870f066b393b155a77a5a","download_count":4,"created_at":"2026-09-16T20:20:28Z","updated_at":"2026-09-16T20:20:28Z"},{"id":568723856,"node_id":"RA_kwDOBxKEqc4h5gmQ","name":"skaffold-windows-amd64.exe.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":72,"digest":"sha256:fb10bae1d1e2c8074f02908611a32966f8e76c1557af277a6e34adfb12766b49","download_count":3,"created_at":"2026-09-16T20:20:29Z","updated_at":"2026-09-16T20:20:29Z"},{"id":568723862,"node_id":"RA_kwDOBxKEqc4h5gmW","name":"VERSION","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":8,"digest":"sha256:611af0199576f0111b0da09996e2096a5fabff629c76010faaddb2a2f84deb23","download_count":3,"created_at":"2026-09-16T20:20:29Z","updated_at":"2026-09-16T20:20:29Z"},{"id":568723874,"node_id":"RA_kwDOBxKEqc4h5gmi","name":"VERSION.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":70,"digest":"sha256:2e9051f95b0b2fee9158d082fd943a13059c578e5a0f4092b206721fc494689f","download_count":3,"created_at":"2026-09-16T20:20:29Z","updated_at":"2026-09-16T20:20:29Z"}],"body":"# v2.25.0 Release - 09/16/2026\r\n**Linux amd64**\r\n`curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-linux-amd64 && chmod +x skaffold && sudo mv skaffold /usr/local/bin`\r\n\r\n**Linux arm64**\r\n`curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-linux-arm64 && chmod +x skaffold && sudo mv skaffold /usr/local/bin`\r\n\r\n**macOS amd64**\r\n`curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-darwin-amd64 && chmod +x skaffold && sudo mv skaffold /usr/local/bin`\r\n\r\n**macOS arm64**\r\n`curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-darwin-arm64 && chmod +x skaffold && sudo mv skaffold /usr/local/bin`\r\n\r\n**Windows**\r\nhttps://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-windows-amd64.exe\r\n\r\n**Docker image**\r\n`gcr.io/k8s-skaffold/skaffold:v2.25.0`\r\n\r\nHighlights:\r\n\r\nNew Features and Additions:\r\n\r\nFixes:\r\n\r\nUpdates and Refactors:\r\n* chore: correct go.mod version to 1.27.1 and update dependencies [#10186](https://github.com/GoogleContainerTools/skaffold/pull/10186)\r\n* chore: upgrade Go version to 1.27.1 and update dependencies [#10183](https://github.com/GoogleContainerTools/skaffold/pull/10183)\r\n* chore: bump github.com/containerd/containerd from 1.7.33 to 1.7.35 [#10178](https://github.com/GoogleContainerTools/skaffold/pull/10178)\r\n* chore: bump google.golang.org/grpc from 1.82.1 to 1.83.2 in /examples/grpc-e2e-tests/cloud-spanner-bootstrap [#10177](https://github.com/GoogleContainerTools/skaffold/pull/10177)\r\n* chore: bump google.golang.org/grpc from 1.82.1 to 1.83.1 [#10173](https://github.com/GoogleContainerTools/skaffold/pull/10173)\r\n* docs: Adds announcement to V2 docs and YAML reference landing pages regardi\u2026 [#10180](https://github.com/GoogleContainerTools/skaffold/pull/10180)\r\n* chore: upgrade Go version to 1.27.0 and update dependencies [#10167](https://github.com/GoogleContainerTools/skaffold/pull/10167)\r\n* chore: bump google.golang.org/grpc from 1.79.3 to 1.82.1 in /examples/grpc-e2e-tests/cloud-spanner-bootstrap [#10146](https://github.com/GoogleContainerTools/skaffold/pull/10146)\r\n* chore: bump google.golang.org/grpc from 1.56.3 to 1.82.1 in /examples/grpc-e2e-tests/service [#10145](https://github.com/GoogleContainerTools/skaffold/pull/10145)\r\n* chore: bump google.golang.org/grpc from 1.81.1 to 1.82.1 [#10148](https://github.com/GoogleContainerTools/skaffold/pull/10148)\r\n* chore: bump github.com/moby/go-archive from 0.2.0 to 0.3.0 [#10157](https://github.com/GoogleContainerTools/skaffold/pull/10157)\r\n* chore: bump github.com/moby/buildkit from 0.30.0 to 0.31.1 [#10158](https://github.com/GoogleContainerTools/skaffold/pull/10158)\r\n* chore: bump github.com/go-git/go-git/v5 from 5.19.1 to 5.19.2 [#10154](https://github.com/GoogleContainerTools/skaffold/pull/10154)\r\n\r\nDocs, Test, and Release Updates:\r\n\r\nHuge thanks goes out to all of our contributors for this release:\r\n\r\n- Abrahami2\r\n- Dave Dorbin\r\n- dependabot[bot]\r\n- ruhi-chaddha\r\n"}
