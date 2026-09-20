@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-09-15T05:24:12Z
+  collectedAt: 2026-09-20T05:22:49Z
 timeline:
   created: 2014-09-26
   lastCommit: 2026-09-11
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 
   lastPrerelease: 
 popularity:
-  star: 12425
-  watcher: 555
-  fork: 4358
+  star: 12433
+  watcher: 554
+  fork: 4359
   release: 0
-  contributor: 145
-  pullRequest: 703
-  issue: 38
+  contributor: 144
+  pullRequest: 707
+  issue: 39
 language:
   C++: 340050363
   C: 28614311
@@ -70,63 +70,63 @@ language:
 totalBytes: 398623517
 recent:
   last30d:
-    since: 2026-08-16
+    since: 2026-08-21
     release: 0
     mergedPR: 1
-    openPR: 15
+    openPR: 16
     closedIssue: 3
-    openIssue: 10
-    commit: 80
+    openIssue: 11
+    commit: 19
   last60d:
-    since: 2026-07-17
+    since: 2026-07-22
     release: 0
     mergedPR: 1
-    openPR: 20
-    closedIssue: 5
-    openIssue: 20
-    commit: 251
+    openPR: 24
+    closedIssue: 4
+    openIssue: 18
+    commit: 217
   last90d:
-    since: 2026-06-17
+    since: 2026-06-22
     release: 0
     mergedPR: 1
-    openPR: 22
-    closedIssue: 6
-    openIssue: 32
-    commit: 532
+    openPR: 25
+    closedIssue: 5
+    openIssue: 28
+    commit: 447
   last180d:
-    since: 2026-03-19
+    since: 2026-03-24
     release: 0
     mergedPR: 1
-    openPR: 23
+    openPR: 27
     closedIssue: 6
-    openIssue: 32
-    commit: 1253
+    openIssue: 33
+    commit: 1195
   last360d:
-    since: 2025-09-20
+    since: 2025-09-25
     release: 0
     mergedPR: 1
-    openPR: 23
+    openPR: 27
     closedIssue: 6
-    openIssue: 32
-    commit: 1924
+    openIssue: 33
+    commit: 1872
   last720d:
-    since: 2024-09-25
+    since: 2024-09-30
     release: 0
     mergedPR: 1
-    openPR: 23
+    openPR: 27
     closedIssue: 6
-    openIssue: 32
-    commit: 5904
+    openIssue: 33
+    commit: 5867
 total:
   release: 0
   mergedPR: 1
-  openPR: 23
+  openPR: 27
   closedIssue: 6
-  openIssue: 32
+  openIssue: 33
   commit: 191048
 ---
 path: /home/runner/.x-repo/github.com/mysql/mysql-server
-collectedAt: 2026-09-15T05:35:37Z
+collectedAt: 2026-09-20T05:33:42Z
 loc:
   Cpp:
     code: 2718138
@@ -444,33 +444,32 @@ total:
   blanks: 1289016
   files: 35466
 ---
-date: "2026-09-07"
+date: "2026-09-14"
 repo:
   name: github.com/mysql/mysql-server
-  commit: e174239c5b3c2bcf164649042ab8a7fc972ce88d
+  commit: fcf22d38b9097f2edaf450c76957218c5f4af509
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
-score: 4.8
+  version: v5.5.1-0.20260908181711-f92023a3f778
+  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+score: 6.5
 checks:
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 14 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 15 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Code-Review
     score: 0
     reason: Found 0/30 approved changesets -- score normalized to 0
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 0
-    reason: dangerous workflow patterns detected
-    details:
-      - 'Warn: untrusted code checkout ''${{ github.event.pull_request.base.sha }}'': .github/workflows/codex-pr-review.yml:31'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -486,9 +485,13 @@ checks:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/cache-warmer.yml:23'
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/cache-warmer.yml:72'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/clang-format.yml:24'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codex-pr-review.yml:24'
-      - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/codex-pr-review.yml:25'
-      - 'Warn: jobLevel ''statuses'' permission set to ''write'': .github/workflows/codex-pr-review.yml:420'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codex-pr-review.lock.yml:460'
+      - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/codex-pr-review.lock.yml:461'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codex-pr-review.lock.yml:1279'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codex-pr-review.lock.yml:1582'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codex-pr-review.lock.yml:1844'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codex-pr-review.lock.yml:113'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codex-pr-review.lock.yml:114'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/mtr.yml:41'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/pr-build.yml:21'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/pr-ci-report.yml:21'
@@ -498,7 +501,7 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/assign-codeowners.yml:10'
       - 'Info: found token with ''none'' permissions: .github/workflows/cache-warmer.yml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/clang-format.yml:1'
-      - 'Info: found token with ''none'' permissions: .github/workflows/codex-pr-review.yml:1'
+      - 'Info: found token with ''none'' permissions: .github/workflows/codex-pr-review.lock.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/labeler.yml:8'
       - 'Info: found token with ''none'' permissions: .github/workflows/mark-integrate.yml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/mtr.yml:1'
@@ -537,6 +540,12 @@ checks:
     reason: no SAST tool detected
     details:
       - 'Warn: no pull requests merged into dev branch'
+  - name: Binary-Artifacts
+    score: 8
+    reason: binaries present in source code
+    details:
+      - 'Warn: binary detected: mysql-test/std_data/bug21542698.dat:1'
+      - 'Warn: binary detected: mysql-test/std_data/parts/t1_blackhole.par:1'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -611,15 +620,9 @@ checks:
       - 'Info: CppLibFuzzer integration found: router/tests/fuzzers/fuzz_router_uri.cc:33'
       - 'Info: CppLibFuzzer integration found: router/tests/fuzzers/fuzz_router_uri_tostring.cc:36'
       - 'Info: CLibFuzzer integration found: extra/libedit/libedit-20240808-3.1/examples/fuzz1.c:18'
-  - name: Binary-Artifacts
-    score: 8
-    reason: binaries present in source code
-    details:
-      - 'Warn: binary detected: mysql-test/std_data/bug21542698.dat:1'
-      - 'Warn: binary detected: mysql-test/std_data/parts/t1_blackhole.par:1'
   - name: Pinned-Dependencies
-    score: 3
-    reason: dependency not pinned by hash detected -- score normalized to 3
+    score: 8
+    reason: dependency not pinned by hash detected -- score normalized to 8
     details:
       - 'Info: Possibly incomplete results: error parsing shell code: "foo(" must be followed by ): storage/ndb/test/run-test/atrt-mysqltest:0'
       - 'Info: Possibly incomplete results: error parsing shell code: "fi" can only be used to end an if: storage/ndb/test/run-test/ndb-autotest.sh:0'
@@ -630,8 +633,8 @@ checks:
       - 'Warn: containerImage not pinned by hash: components/telemetry/test/loki/Dockerfile-read:24: pin your Docker image by updating grafana/loki:3.0.0 to grafana/loki:3.0.0@sha256:757b5fadf816a1396f1fea598152947421fa49cb8b2db1ddd2a6e30fae003253'
       - 'Warn: containerImage not pinned by hash: components/telemetry/test/loki/Dockerfile-write:24: pin your Docker image by updating grafana/loki:3.0.0 to grafana/loki:3.0.0@sha256:757b5fadf816a1396f1fea598152947421fa49cb8b2db1ddd2a6e30fae003253'
       - 'Warn: containerImage not pinned by hash: components/telemetry/test/prometheus/Dockerfile:24: pin your Docker image by updating prom/prometheus:latest to prom/prometheus:latest@sha256:5ce7540c3c00ef4ab0c9d2c995c6a5b9c421f44b4a115d97a2c7af3b1c21cbb0'
-      - 'Warn: containerImage not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/.devcontainer/Dockerfile.dev:4: pin your Docker image by updating otel/cpp_format_tools to otel/cpp_format_tools@sha256:03e5af4c7901882c6ab12a69e273b824c686fe78b4bd2d5554e5ef201e749420'
-      - 'Warn: containerImage not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/ext/test/w3c_tracecontext_http_test_server/Dockerfile:4: pin your Docker image by updating python to python@sha256:8edbf9e42c7fb168b9c523718ed907117e6d2e60f5889c0c499bbda3a787da53'
+      - 'Warn: containerImage not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/.devcontainer/Dockerfile.dev:4: pin your Docker image by updating otel/cpp_format_tools to otel/cpp_format_tools@sha256:443b8cc6bbb0a837f6f46acdaf3b8526cdb344e0743f2611972be84bc3588737'
+      - 'Warn: containerImage not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/ext/test/w3c_tracecontext_http_test_server/Dockerfile:4: pin your Docker image by updating python to python@sha256:e06cc1111ed84189e91866447f562b89faadbfbbb9937cd67e6bf4172cdb45df'
       - 'Warn: pipCommand not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/.devcontainer/Dockerfile.conan:22'
       - 'Warn: downloadThenRun not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/.devcontainer/Dockerfile.dev:18-28'
       - 'Warn: npmCommand not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/.devcontainer/Dockerfile.dev:54'
@@ -642,10 +645,11 @@ checks:
       - 'Warn: nugetCommand not pinned by hash: extra/protobuf/protobuf-24.4/csharp/compatibility_tests/v3.0.0/test.sh:22: pin your dependencies by either enabling central package management (https://learn.microsoft.com/nuget/consume-packages/Central-Package-Management) or using a lockfile (https://learn.microsoft.com/nuget/consume-packages/package-references-in-project-files#locking-dependencies)'
       - 'Warn: pipCommand not pinned by hash: extra/protobuf/protobuf-24.4/python/release.sh:22'
       - 'Warn: pipCommand not pinned by hash: extra/protobuf/protobuf-24.4/python/release.sh:37'
-      - 'Info:  26 out of  26 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   2 out of   2 third-party GitHubAction dependencies pinned'
+      - 'Warn: npmCommand not pinned by hash: .github/workflows/codex-pr-review.lock.yml:554'
+      - 'Warn: npmCommand not pinned by hash: .github/workflows/codex-pr-review.lock.yml:1696'
+      - 'Info:  86 out of  86 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   4 out of  12 containerImage dependencies pinned'
       - 'Info:   0 out of   4 pipCommand dependencies pinned'
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
-      - 'Info:   0 out of   1 npmCommand dependencies pinned'
+      - 'Info:   0 out of   3 npmCommand dependencies pinned'
       - 'Info:   0 out of   4 nugetCommand dependencies pinned'

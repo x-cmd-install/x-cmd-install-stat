@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.1.2"
   latestRelease: "v0.1.2"
   latestPrerelease: ""
-  collectedAt: 2026-09-18T04:26:12Z
+  collectedAt: 2026-09-20T04:41:38Z
 timeline:
   created: 2025-12-24
   lastCommit: 2026-09-14
@@ -30,39 +30,39 @@ language:
 totalBytes: 793465
 recent:
   last30d:
-    since: 2026-08-19
+    since: 2026-08-21
     release: 1
     mergedPR: 20
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 24
+    commit: 10
   last60d:
-    since: 2026-07-20
+    since: 2026-07-22
     release: 1
     mergedPR: 33
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 35
+    commit: 33
   last90d:
-    since: 2026-06-20
+    since: 2026-06-22
     release: 1
-    mergedPR: 49
+    mergedPR: 47
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 55
   last180d:
-    since: 2026-03-22
+    since: 2026-03-24
     release: 3
-    mergedPR: 89
+    mergedPR: 85
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 99
+    commit: 89
   last360d:
-    since: 2025-09-23
+    since: 2025-09-25
     release: 19
     mergedPR: 125
     openPR: 0
@@ -70,7 +70,7 @@ recent:
     openIssue: 0
     commit: 347
   last720d:
-    since: 2024-09-28
+    since: 2024-09-30
     release: 19
     mergedPR: 125
     openPR: 0
@@ -86,7 +86,7 @@ total:
   commit: 462
 ---
 path: /home/runner/.x-repo/github.com/kpumuk/lazykiq
-collectedAt: 2026-09-18T04:26:14Z
+collectedAt: 2026-09-20T04:41:41Z
 loc:
   Go:
     code: 25304
@@ -149,7 +149,7 @@ total:
   blanks: 4461
   files: 174
 ---
-date: "2026-09-14T10:47:27Z"
+date: "2026-09-19T06:14:01Z"
 repo:
   name: github.com/kpumuk/lazykiq
   commit: 7807675708036e55527d88363c52a26ff20d12a2
@@ -163,29 +163,13 @@ checks:
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Security-Policy
+  - name: Binary-Artifacts
     score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: SECURITY.md:1'
-      - 'Info: Found linked content: SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
-      - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Code-Review
-    score: 0
-    reason: Found 0/2 approved changesets -- score normalized to 0
+    reason: no binaries found in the repo
     details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 10
@@ -203,6 +187,22 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/scorecards.yml:11'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yml:12'
       - 'Info: no jobLevel write permissions found'
+  - name: Code-Review
+    score: 0
+    reason: Found 0/2 approved changesets -- score normalized to 0
+    details: null
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: SECURITY.md:1'
+      - 'Info: Found linked content: SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
+      - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Pinned-Dependencies
     score: 10
     reason: all dependencies are pinned
@@ -214,27 +214,10 @@ checks:
     score: 2
     reason: 'badge detected: InProgress'
     details: null
-  - name: SAST
-    score: 10
-    reason: SAST tool is run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Info: all commits (30) are checked with a SAST tool'
   - name: Vulnerabilities
     score: 10
     reason: 0 existing vulnerabilities detected
     details: null
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:16'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -254,6 +237,23 @@ checks:
       - 'Info: provenance for release artifact: checksums.txt.intoto.jsonl: https://github.com/kpumuk/lazykiq/releases/tag/v0.1.0'
       - 'Info: provenance for release artifact: checksums.txt.intoto.jsonl: https://github.com/kpumuk/lazykiq/releases/tag/v0.0.16'
       - 'Info: provenance for release artifact: checksums.txt.intoto.jsonl: https://github.com/kpumuk/lazykiq/releases/tag/v0.0.15'
+  - name: SAST
+    score: 10
+    reason: SAST tool is run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Info: all commits (30) are checked with a SAST tool'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:16'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Branch-Protection
     score: 4
     reason: branch protection is not maximal on development and all release branches

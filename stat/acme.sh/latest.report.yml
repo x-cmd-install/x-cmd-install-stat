@@ -2,95 +2,95 @@ about:
   description: "A pure Unix shell script ACME client for SSL / TLS certificate automation"
   license: GPL-3.0
   homepage: https://acme.sh
-  head: 181425b
+  head: d5fc938
   archived: false
-  latestVersion: "3.1.4"
-  latestRelease: "3.1.4"
+  latestVersion: "3.1.5"
+  latestRelease: "3.1.5"
   latestPrerelease: ""
-  collectedAt: 2026-09-18T06:28:28Z
+  collectedAt: 2026-09-20T06:15:42Z
 timeline:
   created: 2015-12-26
-  lastCommit: 2026-09-04
-  lastVersion: 2026-07-17
-  lastRelease: 2026-07-17
+  lastCommit: 2026-09-19
+  lastVersion: 2026-09-19
+  lastRelease: 2026-09-19
   lastPrerelease: 
 popularity:
-  star: 47668
+  star: 47674
   watcher: 480
-  fork: 5670
-  release: 48
-  contributor: 651
-  pullRequest: 2557
-  issue: 3740
+  fork: 5672
+  release: 49
+  contributor: 661
+  pullRequest: 2560
+  issue: 3744
 language:
-  Shell: 1918543
+  Shell: 1998767
   Dockerfile: 2476
-totalBytes: 1921019
+totalBytes: 2001243
 recent:
   last30d:
-    since: 2026-08-19
-    release: 0
-    mergedPR: 13
-    openPR: 8
-    closedIssue: 32
-    openIssue: 7
-    commit: 18
-  last60d:
-    since: 2026-07-20
-    release: 0
-    mergedPR: 23
-    openPR: 13
-    closedIssue: 62
-    openIssue: 9
-    commit: 44
-  last90d:
-    since: 2026-06-20
+    since: 2026-08-21
     release: 1
-    mergedPR: 56
-    openPR: 17
-    closedIssue: 114
-    openIssue: 10
-    commit: 208
-  last180d:
-    since: 2026-03-22
+    mergedPR: 17
+    openPR: 6
+    closedIssue: 34
+    openIssue: 5
+    commit: 35
+  last60d:
+    since: 2026-07-22
+    release: 1
+    mergedPR: 27
+    openPR: 11
+    closedIssue: 64
+    openIssue: 8
+    commit: 55
+  last90d:
+    since: 2026-06-22
     release: 2
-    mergedPR: 101
-    openPR: 31
-    closedIssue: 184
-    openIssue: 15
-    commit: 290
-  last360d:
-    since: 2025-09-23
+    mergedPR: 60
+    openPR: 15
+    closedIssue: 114
+    openIssue: 8
+    commit: 225
+  last180d:
+    since: 2026-03-24
     release: 3
-    mergedPR: 181
-    openPR: 40
-    closedIssue: 374
-    openIssue: 24
-    commit: 513
+    mergedPR: 106
+    openPR: 29
+    closedIssue: 190
+    openIssue: 13
+    commit: 307
+  last360d:
+    since: 2025-09-25
+    release: 4
+    mergedPR: 186
+    openPR: 38
+    closedIssue: 379
+    openIssue: 22
+    commit: 526
   last720d:
-    since: 2024-09-28
-    release: 5
-    mergedPR: 291
-    openPR: 51
-    closedIssue: 607
-    openIssue: 34
-    commit: 1153
+    since: 2024-09-30
+    release: 6
+    mergedPR: 295
+    openPR: 49
+    closedIssue: 613
+    openIssue: 32
+    commit: 1167
 total:
-  release: 48
-  mergedPR: 1644
-  openPR: 61
-  closedIssue: 3700
-  openIssue: 40
-  commit: 6855
+  release: 49
+  mergedPR: 1649
+  openPR: 59
+  closedIssue: 3706
+  openIssue: 38
+  commit: 6876
 ---
 path: /home/runner/.x-repo/github.com/acmesh-official/acme.sh
-collectedAt: 2026-09-18T06:28:31Z
+collectedAt: 2026-09-20T06:15:47Z
 loc:
   Sh:
-    code: 48103
-    comments: 6225
-    blanks: 8638
-    files: 282
+    code: 49787
+    comments: 6570
+    blanks: 8824
+    files: 287
   Dockerfile:
     code: 80
     comments: 1
@@ -102,10 +102,10 @@ loc:
     blanks: 361
     files: 5
 total:
-  code: 48213
-  comments: 7258
-  blanks: 9014
-  files: 288
+  code: 49897
+  comments: 7603
+  blanks: 9200
+  files: 293
 ---
 date: "2026-09-14"
 repo:
@@ -330,4 +330,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---
-{"id":355438187,"author":{"login":"neilpang","id":8305679,"node_id":"MDQ6VXNlcjgzMDU2Nzk=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAuW9Zs4VL45r","tag_name":"3.1.4","target_commitish":"master","name":"3.1.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-07-17T02:01:37Z","updated_at":"2026-07-17T02:07:22Z","published_at":"2026-07-17T02:07:22Z","assets":[],"body":"1. Support ACME Renewal Information (ARI, RFC 9773), enabled by default. Renewals now follow the renewal window suggested by the CA. Set NO_ARI=1 to disable. The installed cron job now runs every 6 hours to react to ARI renewal windows in time.\r\n2. Support the dns-persist-01 challenge, with --dns-persist-days.\r\n3. A negative --days schedules renewal relative to the cert expiration date, and can be combined with --valid-to to set a renewal margin.\r\n4. Support ACME account key rollover.\r\n5. Support multiple account emails. --update-account now persists the new email.\r\n6. Retry failed install/deploy steps on the next renewal.\r\n7. Add bash completion, installed via --install.\r\n8. New DNS providers: Level27, CDMON, Poweradmin, IP-Projects, EuroDNS, Firestorm, creoline, LaoDC, WEDOS, muumuu, Volcano Engine, Glesys, Aruba Business, Calrissia, Hostinger. New deploy hooks: FortiGate, Baidu Cloud CDN, Windows RDP. New notify hook: customscript.\r\n9. dns_hetzner.sh was removed ([#6990](https://github.com/acmesh-official/acme.sh/issues/6990)).\r\n10. Docker images are now also published to ghcr.io.\r\n11. A lot of bug fixes.","reactions":{"total_count":31,"+1":18,"-1":0,"laugh":0,"hooray":4,"confused":0,"heart":0,"rocket":7,"eyes":2}}
+{"id":392169466,"author":{"login":"neilpang","id":8305679,"node_id":"MDQ6VXNlcjgzMDU2Nzk=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAuW9Zs4XYAf6","tag_name":"3.1.5","target_commitish":"master","name":"3.1.5","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-19T17:22:24Z","updated_at":"2026-09-19T18:11:14Z","published_at":"2026-09-19T18:11:14Z","assets":[],"body":"1. Release tags are signed from 3.1.5 on. The public key is allowed_signers\r\nin this repository; see \"Verify a Release\" in the README.\r\n2. New ACME_PACKAGED mode for distro-packaged installs: --install no longer\r\ncopies the script into LE_WORKING_DIR, and --upgrade, --install-online and the\r\nauto-upgrade cron path defer to the system package manager\r\n([#7135](https://github.com/acmesh-official/acme.sh/issues/7135)).\r\n3. Standalone mode listens on both IPv4 and IPv6 by default, and the port\r\ncheck now works on the BSDs, macOS and Haiku.\r\n4. An explicit --days or --valid-to now outranks the ARI renewal window.\r\n5. Order handling: poll the order this run created instead of the one the\r\nprevious cert came from, wait for a not-ready order instead of failing the\r\nfinalize, honor an HTTP-date Retry-After, retry a gateway error from the CA,\r\nand back off between retries.\r\n6. alreadyRevoked is now treated as a successful revocation.\r\n7. The conf file is never truncated when a saved value breaks the rewrite.\r\n8. New DNS providers: Huawei Cloud (dns_hw), HestiaCP, DNSMint, Opteamax,\r\nOptidata Cloud, NexDNS, Realtox Media, myloc. Azure now supports Private DNS\r\nzones, netcup moved to the new REST API, and JD Cloud moved to the v2 API.\r\n9. New deploy hooks: UniFi OS, JetKVM, Shelly (Gen3+), iKuai, and\r\ntruenas_websocat for TrueNAS SCALE 25.10+.\r\n10. dnsapi/dns_linode.sh (Linode API v3) was removed, use dns_linode_v4\r\n([#7054](https://github.com/acmesh-official/acme.sh/pull/7054)).\r\n11. CI now also covers GNU Hurd, openEuler, HardenedBSD and OPNsense\r\n(31 platforms).\r\n12. A lot of bug fixes.\r\n\r\n","reactions":{"total_count":6,"+1":5,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":0,"rocket":0,"eyes":0}}
