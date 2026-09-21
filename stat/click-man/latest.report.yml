@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.4.2"
   latestRelease: "v0.4.2"
   latestPrerelease: ""
-  collectedAt: 2026-09-20T06:32:38Z
+  collectedAt: 2026-09-21T06:38:34Z
 timeline:
   created: 2016-09-18
   lastCommit: 2026-02-28
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2021-10-14
   lastPrerelease: 
 popularity:
-  star: 209
+  star: 210
   watcher: 7
   fork: 53
   release: 5
@@ -27,7 +27,7 @@ language:
 totalBytes: 16901
 recent:
   last30d:
-    since: 2026-08-21
+    since: 2026-08-22
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-22
+    since: 2026-07-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-06-22
+    since: 2026-06-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-03-24
+    since: 2026-03-25
     release: 0
     mergedPR: 0
     openPR: 1
@@ -59,7 +59,7 @@ recent:
     openIssue: 2
     commit: 0
   last360d:
-    since: 2025-09-25
+    since: 2025-09-26
     release: 0
     mergedPR: 1
     openPR: 1
@@ -67,7 +67,7 @@ recent:
     openIssue: 3
     commit: 1
   last720d:
-    since: 2024-09-30
+    since: 2024-10-01
     release: 0
     mergedPR: 4
     openPR: 1
@@ -83,7 +83,7 @@ total:
   commit: 117
 ---
 path: /home/runner/.x-repo/github.com/click-contrib/click-man
-collectedAt: 2026-09-20T06:32:38Z
+collectedAt: 2026-09-21T06:38:35Z
 loc:
   Python:
     code: 642
@@ -121,7 +121,7 @@ total:
   blanks: 178
   files: 18
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/click-contrib/click-man
   commit: a8adaa265e5c75cfeaec4d8bfdcab21b3540f28c
@@ -138,6 +138,10 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
@@ -148,14 +152,12 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yaml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/click-contrib/click-man/ci.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/click-contrib/click-man/ci.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:32: update your workflow using https://app.stepsecurity.io/secureworkflow/click-contrib/click-man/ci.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:34: update your workflow using https://app.stepsecurity.io/secureworkflow/click-contrib/click-man/ci.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:54: update your workflow using https://app.stepsecurity.io/secureworkflow/click-contrib/click-man/ci.yaml/master?enable=pin'
@@ -163,8 +165,6 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:67: update your workflow using https://app.stepsecurity.io/secureworkflow/click-contrib/click-man/ci.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:71: update your workflow using https://app.stepsecurity.io/secureworkflow/click-contrib/click-man/ci.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:82: update your workflow using https://app.stepsecurity.io/secureworkflow/click-contrib/click-man/ci.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/click-contrib/click-man/ci.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/click-contrib/click-man/ci.yaml/master?enable=pin'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/ci.yaml:24'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/ci.yaml:39'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/ci.yaml:63'
@@ -175,6 +175,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -183,11 +188,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected

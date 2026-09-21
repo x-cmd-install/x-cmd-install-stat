@@ -7,7 +7,7 @@ about:
   latestVersion: "v4.3.4"
   latestRelease: "v4.3.4"
   latestPrerelease: "v3.0.0-rc1"
-  collectedAt: 2026-09-20T05:59:30Z
+  collectedAt: 2026-09-21T06:14:11Z
 timeline:
   created: 2023-05-17
   lastCommit: 2026-09-19
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-12
   lastPrerelease: 2024-10-15
 popularity:
-  star: 3087
+  star: 3092
   watcher: 23
   fork: 107
   release: 88
@@ -33,23 +33,23 @@ language:
 totalBytes: 7123565
 recent:
   last30d:
-    since: 2026-08-21
+    since: 2026-08-22
     release: 3
-    mergedPR: 6
+    mergedPR: 5
     openPR: 0
-    closedIssue: 7
+    closedIssue: 6
     openIssue: 0
     commit: 98
   last60d:
-    since: 2026-07-22
+    since: 2026-07-23
     release: 3
     mergedPR: 9
     openPR: 0
-    closedIssue: 10
+    closedIssue: 9
     openIssue: 1
     commit: 176
   last90d:
-    since: 2026-06-22
+    since: 2026-06-23
     release: 19
     mergedPR: 11
     openPR: 0
@@ -57,7 +57,7 @@ recent:
     openIssue: 1
     commit: 610
   last180d:
-    since: 2026-03-24
+    since: 2026-03-25
     release: 20
     mergedPR: 12
     openPR: 0
@@ -65,15 +65,15 @@ recent:
     openIssue: 1
     commit: 1406
   last360d:
-    since: 2025-09-25
+    since: 2025-09-26
     release: 32
     mergedPR: 19
     openPR: 0
-    closedIssue: 99
+    closedIssue: 97
     openIssue: 1
     commit: 1988
   last720d:
-    since: 2024-09-30
+    since: 2024-10-01
     release: 48
     mergedPR: 101
     openPR: 0
@@ -89,7 +89,7 @@ total:
   commit: 3567
 ---
 path: /home/runner/.x-repo/github.com/ravachol/kew
-collectedAt: 2026-09-20T05:59:41Z
+collectedAt: 2026-09-21T06:14:27Z
 loc:
   CHeader:
     code: 98358
@@ -159,4 +159,4 @@ total:
 ---
 
 ---
-{"id":387464630,"author":{"login":"ravachol","id":9517715,"node_id":"MDQ6VXNlcjk1MTc3MTU=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOJkBsTc4XGD22","tag_name":"v4.3.4","target_commitish":"main","name":"v4.3.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-12T05:20:11Z","updated_at":"2026-09-17T15:07:46Z","published_at":"2026-09-12T05:21:53Z","assets":[{"id":558676057,"node_id":"RA_kwDOJkBsTc4hTLhZ","name":"kew-4.3.4-windows-x64.exe","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-msdos-program","state":"uploaded","size":7796389,"digest":"sha256:3f5610a400fb7bd16cc778963e4c666cd11387d9c77df5069cd186280494973f","download_count":97,"created_at":"2026-09-12T05:25:39Z","updated_at":"2026-09-12T05:25:40Z"}],"body":"## kew 4.3.4\r\n\r\n#### Bug fixes:\r\n\r\n- Fix clicking links affecting rendering. By @ravachol.\r\n\r\n## kew 4.3.3\r\n\r\n#### Enhancements:\r\n\r\n- Add Scrollable text on help view. By @ravachol. Suggested by @hashfoeW.\r\n\r\n- Add progress bar below mini-controls. By @ravachol.\r\n\r\n- Moved the website source out of kew repository, it will now be on https://codeberg.org/ravachol/kew-website.git. This makes the zip and git clone as lightweight as before the website. By @ravachol.\r\n\r\n- Volume now can go to 12, or 120%. So when you're at 11, and you need a little bit more... By @ravachol. Suggested by @GTAGCT.\r\n\r\n- Added ability to read lyrics from TXXX (description: USLT) tags, which is how ffmpeg defaults to encode lyrics.\r\n\r\n- Auto-resume is now off by default in a fresh install. Sorry, auto-resumers, but it can be very annoying. We want to avoid annoying things. It can be changed in kewrc to `autoResume=1`.\r\n\r\n#### Bug fixes:\r\n\r\n- Fix: vulnerability in kew since v4.3.2. Maintainers of downstream packages can contact kew-player@proton.me for coordinated disclosure and additional technical information. By @ravachol. Reported by @eilvelia (https://github.com/eilvelia).\r\n\r\n- Fix Updating library sets sort to date bug. By @ravachol. Reported by @Narwha1.\r\n\r\n- Fixes so albums that are at the top-level aren't shuffled (only if they have sub-folders with songs, ie it's an artist or genre folder, not an album folder). By @ravachol. Reported by @Narwha1.\r\n\r\n- Fixes several issues with chroma and enables it on windows. However due to changes to chroma, it doesn't have audio reactivity unless you install the develop branch of chroma:\r\n\r\n```\r\ngit clone https://github.com/yuri-xyz/chroma.git\r\n\r\ncd chroma\r\n\r\ngit checkout branch develop\r\n\r\ncargo install --path .\r\n```\r\n\r\nBy @ravachol.\r\n\r\n- Fixes issue with karaoke lyrics. By @Moksh-Parikh.\r\n\r\n- Fix music auto-plays when merely expanding a directory where the songs are enqueued. By @ravachol.\r\n\r\n- When enqueueing in shuffle mode and I enqueue an album, the first song should also be shuffled. By @ravachol. Suggested by @Oyouu.\r\n\r\nWindows installer available at: https://kewplayer.com/download.html\r\n","mentions_count":7}
+{"id":387464630,"author":{"login":"ravachol","id":9517715,"node_id":"MDQ6VXNlcjk1MTc3MTU=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOJkBsTc4XGD22","tag_name":"v4.3.4","target_commitish":"main","name":"v4.3.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-12T05:20:11Z","updated_at":"2026-09-17T15:07:46Z","published_at":"2026-09-12T05:21:53Z","assets":[{"id":558676057,"node_id":"RA_kwDOJkBsTc4hTLhZ","name":"kew-4.3.4-windows-x64.exe","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-msdos-program","state":"uploaded","size":7796389,"digest":"sha256:3f5610a400fb7bd16cc778963e4c666cd11387d9c77df5069cd186280494973f","download_count":103,"created_at":"2026-09-12T05:25:39Z","updated_at":"2026-09-12T05:25:40Z"}],"body":"## kew 4.3.4\r\n\r\n#### Bug fixes:\r\n\r\n- Fix clicking links affecting rendering. By @ravachol.\r\n\r\n## kew 4.3.3\r\n\r\n#### Enhancements:\r\n\r\n- Add Scrollable text on help view. By @ravachol. Suggested by @hashfoeW.\r\n\r\n- Add progress bar below mini-controls. By @ravachol.\r\n\r\n- Moved the website source out of kew repository, it will now be on https://codeberg.org/ravachol/kew-website.git. This makes the zip and git clone as lightweight as before the website. By @ravachol.\r\n\r\n- Volume now can go to 12, or 120%. So when you're at 11, and you need a little bit more... By @ravachol. Suggested by @GTAGCT.\r\n\r\n- Added ability to read lyrics from TXXX (description: USLT) tags, which is how ffmpeg defaults to encode lyrics.\r\n\r\n- Auto-resume is now off by default in a fresh install. Sorry, auto-resumers, but it can be very annoying. We want to avoid annoying things. It can be changed in kewrc to `autoResume=1`.\r\n\r\n#### Bug fixes:\r\n\r\n- Fix: vulnerability in kew since v4.3.2. Maintainers of downstream packages can contact kew-player@proton.me for coordinated disclosure and additional technical information. By @ravachol. Reported by @eilvelia (https://github.com/eilvelia).\r\n\r\n- Fix Updating library sets sort to date bug. By @ravachol. Reported by @Narwha1.\r\n\r\n- Fixes so albums that are at the top-level aren't shuffled (only if they have sub-folders with songs, ie it's an artist or genre folder, not an album folder). By @ravachol. Reported by @Narwha1.\r\n\r\n- Fixes several issues with chroma and enables it on windows. However due to changes to chroma, it doesn't have audio reactivity unless you install the develop branch of chroma:\r\n\r\n```\r\ngit clone https://github.com/yuri-xyz/chroma.git\r\n\r\ncd chroma\r\n\r\ngit checkout branch develop\r\n\r\ncargo install --path .\r\n```\r\n\r\nBy @ravachol.\r\n\r\n- Fixes issue with karaoke lyrics. By @Moksh-Parikh.\r\n\r\n- Fix music auto-plays when merely expanding a directory where the songs are enqueued. By @ravachol.\r\n\r\n- When enqueueing in shuffle mode and I enqueue an album, the first song should also be shuffled. By @ravachol. Suggested by @Oyouu.\r\n\r\nWindows installer available at: https://kewplayer.com/download.html\r\n","mentions_count":7}

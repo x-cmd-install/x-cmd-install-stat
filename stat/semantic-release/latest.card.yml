@@ -7,7 +7,7 @@ about:
   latestVersion: "v26.0.0-beta.1"
   latestRelease: "v25.0.9"
   latestPrerelease: "v26.0.0-beta.1"
-  collectedAt: 2026-09-20T05:53:23Z
+  collectedAt: 2026-09-21T05:54:09Z
 timeline:
   created: 2014-09-15
   lastCommit: 2026-09-14
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-08-05
   lastPrerelease: 2026-08-07
 popularity:
-  star: 24051
+  star: 24053
   watcher: 62
   fork: 1810
   release: 456
@@ -27,7 +27,7 @@ language:
 totalBytes: 402248
 recent:
   last30d:
-    since: 2026-08-21
+    since: 2026-08-22
     release: 0
     mergedPR: 9
     openPR: 4
@@ -35,45 +35,45 @@ recent:
     openIssue: 0
     commit: 9
   last60d:
-    since: 2026-07-22
+    since: 2026-07-23
     release: 2
-    mergedPR: 25
+    mergedPR: 24
     openPR: 10
     closedIssue: 3
     openIssue: 1
-    commit: 26
+    commit: 18
   last90d:
-    since: 2026-06-22
+    since: 2026-06-23
     release: 5
-    mergedPR: 62
-    openPR: 16
+    mergedPR: 61
+    openPR: 15
     closedIssue: 4
     openIssue: 2
-    commit: 68
+    commit: 58
   last180d:
-    since: 2026-03-24
+    since: 2026-03-25
     release: 7
-    mergedPR: 146
+    mergedPR: 145
     openPR: 23
     closedIssue: 11
     openIssue: 5
-    commit: 160
+    commit: 152
   last360d:
-    since: 2025-09-25
+    since: 2025-09-26
     release: 24
-    mergedPR: 305
+    mergedPR: 304
     openPR: 30
-    closedIssue: 27
+    closedIssue: 26
     openIssue: 14
-    commit: 333
+    commit: 326
   last720d:
-    since: 2024-09-30
+    since: 2024-10-01
     release: 47
-    mergedPR: 590
+    mergedPR: 589
     openPR: 34
     closedIssue: 69
     openIssue: 26
-    commit: 656
+    commit: 655
 total:
   release: 456
   mergedPR: 1722
@@ -83,7 +83,7 @@ total:
   commit: 2226
 ---
 path: /home/runner/.x-repo/github.com/semantic-release/semantic-release
-collectedAt: 2026-09-20T05:53:28Z
+collectedAt: 2026-09-21T05:54:11Z
 loc:
   Json:
     code: 14831
@@ -121,7 +121,7 @@ total:
   blanks: 1540
   files: 74
 ---
-date: "2026-09-14T14:56:47Z"
+date: "2026-09-21T02:45:11Z"
 repo:
   name: github.com/semantic-release/semantic-release
   commit: 64b5e0ba5b42eccb2e926993bbb2411ad923bf08
@@ -130,14 +130,6 @@ scorecard:
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 7.8
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -146,14 +138,6 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:8'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yml:16'
       - 'Info: no jobLevel write permissions found'
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
@@ -164,6 +148,22 @@ checks:
       - 'Info:   9 out of   9 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   1 out of   1 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 npmCommand dependencies pinned'
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -172,6 +172,11 @@ checks:
     score: -1
     reason: no releases found
     details: null
+  - name: SAST
+    score: 10
+    reason: SAST tool is run on all commits
+    details:
+      - 'Info: all commits (30) are checked with a SAST tool'
   - name: Vulnerabilities
     score: 0
     reason: 19 existing vulnerabilities detected
@@ -211,16 +216,19 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: SAST
-    score: 10
-    reason: SAST tool is run on all commits
-    details:
-      - 'Info: all commits (30) are checked with a SAST tool'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: github.com/semantic-release/.github/.github/SECURITY.md:1'
+      - 'Info: Found linked content: github.com/semantic-release/.github/.github/SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/semantic-release/.github/.github/SECURITY.md:1'
+      - 'Info: Found text in security policy: github.com/semantic-release/.github/.github/SECURITY.md:1'
   - name: Branch-Protection
     score: 5
     reason: branch protection is not maximal on development and all release branches
@@ -252,14 +260,6 @@ checks:
       - 'Info: PRs are required in order to make changes on branch ''master'''
       - 'Info: PRs are required in order to make changes on branch ''beta'''
       - 'Info: PRs are required in order to make changes on branch ''alpha'''
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: github.com/semantic-release/.github/.github/SECURITY.md:1'
-      - 'Info: Found linked content: github.com/semantic-release/.github/.github/SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/semantic-release/.github/.github/SECURITY.md:1'
-      - 'Info: Found text in security policy: github.com/semantic-release/.github/.github/SECURITY.md:1'
   - name: CI-Tests
     score: 10
     reason: 30 out of 30 merged PRs checked by a CI test -- score normalized to 10

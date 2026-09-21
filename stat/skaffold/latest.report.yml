@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.25.0"
   latestRelease: "v2.25.0"
   latestPrerelease: "v2.0.0-beta3"
-  collectedAt: 2026-09-20T05:22:39Z
+  collectedAt: 2026-09-21T05:16:35Z
 timeline:
   created: 2018-01-23
   lastCommit: 2026-09-18
@@ -17,7 +17,7 @@ timeline:
 popularity:
   star: 15890
   watcher: 186
-  fork: 1700
+  fork: 1701
   release: 201
   contributor: 442
   pullRequest: 5883
@@ -45,39 +45,39 @@ language:
 totalBytes: 9967308
 recent:
   last30d:
-    since: 2026-08-21
+    since: 2026-08-22
     release: 1
     mergedPR: 10
     openPR: 9
     closedIssue: 3
     openIssue: 1
-    commit: 14
+    commit: 10
   last60d:
-    since: 2026-07-22
+    since: 2026-07-23
     release: 2
-    mergedPR: 17
-    openPR: 12
+    mergedPR: 16
+    openPR: 11
     closedIssue: 3
-    openIssue: 4
-    commit: 17
+    openIssue: 3
+    commit: 16
   last90d:
-    since: 2026-06-22
+    since: 2026-06-23
     release: 3
-    mergedPR: 29
+    mergedPR: 27
     openPR: 16
     closedIssue: 3
     openIssue: 9
-    commit: 34
+    commit: 22
   last180d:
-    since: 2026-03-24
+    since: 2026-03-25
     release: 9
     mergedPR: 72
     openPR: 29
     closedIssue: 9
     openIssue: 18
-    commit: 72
+    commit: 70
   last360d:
-    since: 2025-09-25
+    since: 2025-09-26
     release: 15
     mergedPR: 135
     openPR: 49
@@ -85,12 +85,12 @@ recent:
     openIssue: 36
     commit: 132
   last720d:
-    since: 2024-09-30
+    since: 2024-10-01
     release: 21
     mergedPR: 308
     openPR: 62
     closedIssue: 50
-    openIssue: 90
+    openIssue: 89
     commit: 316
 total:
   release: 201
@@ -101,7 +101,7 @@ total:
   commit: 9250
 ---
 path: /home/runner/.x-repo/github.com/GoogleContainerTools/skaffold
-collectedAt: 2026-09-20T05:22:57Z
+collectedAt: 2026-09-21T05:16:53Z
 loc:
   Go:
     code: 2255222
@@ -279,7 +279,7 @@ total:
   blanks: 357477
   files: 13952
 ---
-date: "2026-09-18T18:45:31Z"
+date: "2026-09-20T06:42:31Z"
 repo:
   name: github.com/GoogleContainerTools/skaffold
   commit: f64a3dcc7e136916e1575dee8720c760f7a9d6eb
@@ -288,10 +288,6 @@ scorecard:
   commit: c22063e786c11f9dd714d777a687ff7c4599b600
 score: 7.2
 checks:
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
@@ -301,6 +297,18 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: SECURITY.md:1'
+      - 'Info: Found linked content: SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
+      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Dependency-Update-Tool
     score: 10
     reason: update tool detected
@@ -327,14 +335,6 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/unit-tests-windows.yml:6'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/verify-examples.yml:10'
       - 'Info: no jobLevel write permissions found'
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: SECURITY.md:1'
-      - 'Info: Found linked content: SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
-      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: CII-Best-Practices
     score: 2
     reason: 'badge detected: InProgress'
@@ -347,31 +347,6 @@ checks:
       - 'Warn: binary detected: examples/jib-sync/gradle/wrapper/gradle-wrapper.jar:1'
       - 'Warn: binary detected: integration/examples/jib-gradle/gradle/wrapper/gradle-wrapper.jar:1'
       - 'Warn: binary detected: integration/examples/jib-sync/gradle/wrapper/gradle-wrapper.jar:1'
-  - name: SAST
-    score: 7
-    reason: SAST tool detected but not run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Branch-Protection
-    score: 6
-    reason: branch protection is not maximal on development and all release branches
-    details:
-      - 'Info: ''allow deletion'' disabled on branch ''main'''
-      - 'Info: ''force pushes'' disabled on branch ''main'''
-      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''main'''
-      - 'Info: ''stale review dismissal'' is required to merge on branch ''main'''
-      - 'Warn: required approving review count is 1 on branch ''main'''
-      - 'Info: codeowner review is required on branch ''main'''
-      - 'Info: ''last push approval'' is required to merge on branch ''main'''
-      - 'Info: ''up-to-date branches'' is required to merge on branch ''main'''
-      - 'Warn: no status checks found to merge onto branch ''main'''
-      - 'Info: PRs are required in order to make changes on branch ''main'''
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -386,12 +361,37 @@ checks:
       - 'Warn: release artifact v2.23.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/345534770'
       - 'Warn: release artifact v2.22.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/336055187'
       - 'Warn: release artifact v2.21.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/326280646'
+  - name: Branch-Protection
+    score: 6
+    reason: branch protection is not maximal on development and all release branches
+    details:
+      - 'Info: ''allow deletion'' disabled on branch ''main'''
+      - 'Info: ''force pushes'' disabled on branch ''main'''
+      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''main'''
+      - 'Info: ''stale review dismissal'' is required to merge on branch ''main'''
+      - 'Warn: required approving review count is 1 on branch ''main'''
+      - 'Info: codeowner review is required on branch ''main'''
+      - 'Info: ''last push approval'' is required to merge on branch ''main'''
+      - 'Info: ''up-to-date branches'' is required to merge on branch ''main'''
+      - 'Warn: no status checks found to merge onto branch ''main'''
+      - 'Info: PRs are required in order to make changes on branch ''main'''
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: SAST
+    score: 7
+    reason: SAST tool detected but not run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
   - name: Vulnerabilities
     score: 0
     reason: 149 existing vulnerabilities detected
@@ -544,7 +544,7 @@ checks:
       - 'Warn: Project is vulnerable to: PYSEC-2018-66 / GHSA-562c-5r94-xh97'
       - 'Warn: Project is vulnerable to: PYSEC-2019-179 / GHSA-5wv5-4vpf-pj6m'
       - 'Warn: Project is vulnerable to: PYSEC-2023-62 / GHSA-m2qf-hxjv-5gpq'
-      - 'Warn: Project is vulnerable to: CVE-2026-1229'
+      - 'Warn: Project is vulnerable to: CVE-2025-8556'
   - name: CI-Tests
     score: 10
     reason: 30 out of 30 merged PRs checked by a CI test -- score normalized to 10
@@ -584,7 +584,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:24'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:18: pin your Docker image by updating mirror.gcr.io/library/docker:28.1.1 to mirror.gcr.io/library/docker:28.1.1@sha256:eceba5b0fc2fcf83a74c298391c2ed9e1adbdaf04ee173611bd6282ec973e7ba'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:19: pin your Docker image by updating docker/buildx-bin:0.23.0 to docker/buildx-bin:0.23.0@sha256:89d02833a728be5d562f392b0bee26f9df12ecfd3d77ae1bbcaa32ba00ed2b55'
-      - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:20: pin your Docker image by updating mirror.gcr.io/library/golang:1.27.1 to mirror.gcr.io/library/golang:1.27.1@sha256:f44f6e88636cfb311f9ebace870ded69d943f227bb3cb27d32ffd84ea18c43ea'
+      - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:20: pin your Docker image by updating mirror.gcr.io/library/golang:1.27.1 to mirror.gcr.io/library/golang:1.27.1@sha256:3680233e3204827fbdc66088528ae6d4b3d034f51d03a99d454f6de034888244'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:23: pin your Docker image by updating mirror.gcr.io/library/alpine:3.21.2 to mirror.gcr.io/library/alpine:3.21.2@sha256:56fa17d2a7e7f168a043a2712e63aed1f8543aeafdcee47c58dcffe38ed51099'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:33: pin your Docker image by updating mirror.gcr.io/library/alpine:3.21.2 to mirror.gcr.io/library/alpine:3.21.2@sha256:56fa17d2a7e7f168a043a2712e63aed1f8543aeafdcee47c58dcffe38ed51099'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:43: pin your Docker image by updating mirror.gcr.io/library/alpine:3.21.2 to mirror.gcr.io/library/alpine:3.21.2@sha256:56fa17d2a7e7f168a043a2712e63aed1f8543aeafdcee47c58dcffe38ed51099'
@@ -595,7 +595,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:88: pin your Docker image by updating mirror.gcr.io/library/alpine:3.21.2 to mirror.gcr.io/library/alpine:3.21.2@sha256:56fa17d2a7e7f168a043a2712e63aed1f8543aeafdcee47c58dcffe38ed51099'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:97: pin your Docker image by updating mirror.gcr.io/library/alpine:3.21.2 to mirror.gcr.io/library/alpine:3.21.2@sha256:56fa17d2a7e7f168a043a2712e63aed1f8543aeafdcee47c58dcffe38ed51099'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:110: pin your Docker image by updating mirror.gcr.io/library/alpine:3.21.2 to mirror.gcr.io/library/alpine:3.21.2@sha256:56fa17d2a7e7f168a043a2712e63aed1f8543aeafdcee47c58dcffe38ed51099'
-      - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:121: pin your Docker image by updating mirror.gcr.io/library/ubuntu:24.04 to mirror.gcr.io/library/ubuntu:24.04@sha256:b3cc40b72b93588182b5410f723c7aaf142363311c2aa993d8a453ddcbb3ae15'
+      - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:121: pin your Docker image by updating mirror.gcr.io/library/ubuntu:24.04 to mirror.gcr.io/library/ubuntu:24.04@sha256:008173c23f95b170204355c12626cb5a965d779a7e1283b09e9cffbb1bf33ca3'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:160'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.lts:19: pin your Docker image by updating alpine:3.10 to alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.lts:27: pin your Docker image by updating alpine:3.10 to alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
@@ -640,7 +640,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: examples/grpc-e2e-tests/cloud-spanner/Dockerfile:2: pin your Docker image by updating google/cloud-sdk to google/cloud-sdk@sha256:e67e4253b8c1dfc18611339f7581685636897d744614a4ac30ac593a473d006d'
       - 'Warn: containerImage not pinned by hash: examples/grpc-e2e-tests/service/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.23 to mirror.gcr.io/library/golang:1.23@sha256:60deed95d3888cc5e4d9ff8a10c54e5edc008c6ae3fba6187be6fb592e19e8c0'
       - 'Warn: containerImage not pinned by hash: examples/grpc-e2e-tests/service/Dockerfile:10: pin your Docker image by updating gcr.io/distroless/base:latest to gcr.io/distroless/base:latest@sha256:0ebad3510af52aefe45045cc01b07564570be4feecf8d9f93d3a05d1b5f2f93b'
-      - 'Warn: containerImage not pinned by hash: examples/helm-deployment-dependencies/Dockerfile:2: pin your Docker image by updating nginx:stable to nginx:stable@sha256:f91bdb7aee4cba26f89b1c5c3aa12742ec3c91c6d70fd7007c6dc797e9676c45'
+      - 'Warn: containerImage not pinned by hash: examples/helm-deployment-dependencies/Dockerfile:2: pin your Docker image by updating nginx:stable to nginx:stable@sha256:0aa2d81d65bc0cac0407e738b8f07d312c8685a84225fcb4db7bcbdd8c9bdf11'
       - 'Warn: containerImage not pinned by hash: examples/helm-deployment/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.18 to mirror.gcr.io/library/golang:1.18@sha256:50c889275d26f816b5314fc99f55425fa76b18fcaf16af255f5d57f09e1f48da'
       - 'Warn: containerImage not pinned by hash: examples/helm-deployment/Dockerfile:10: pin your Docker image by updating mirror.gcr.io/library/alpine:3.10 to mirror.gcr.io/library/alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
       - 'Warn: containerImage not pinned by hash: examples/helm-render/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.18 to mirror.gcr.io/library/golang:1.18@sha256:50c889275d26f816b5314fc99f55425fa76b18fcaf16af255f5d57f09e1f48da'
@@ -718,7 +718,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: integration/examples/grpc-e2e-tests/cloud-spanner/Dockerfile:2: pin your Docker image by updating google/cloud-sdk to google/cloud-sdk@sha256:e67e4253b8c1dfc18611339f7581685636897d744614a4ac30ac593a473d006d'
       - 'Warn: containerImage not pinned by hash: integration/examples/grpc-e2e-tests/service/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.23 to mirror.gcr.io/library/golang:1.23@sha256:60deed95d3888cc5e4d9ff8a10c54e5edc008c6ae3fba6187be6fb592e19e8c0'
       - 'Warn: containerImage not pinned by hash: integration/examples/grpc-e2e-tests/service/Dockerfile:10: pin your Docker image by updating gcr.io/distroless/base:latest to gcr.io/distroless/base:latest@sha256:0ebad3510af52aefe45045cc01b07564570be4feecf8d9f93d3a05d1b5f2f93b'
-      - 'Warn: containerImage not pinned by hash: integration/examples/helm-deployment-dependencies/Dockerfile:2: pin your Docker image by updating nginx:stable to nginx:stable@sha256:f91bdb7aee4cba26f89b1c5c3aa12742ec3c91c6d70fd7007c6dc797e9676c45'
+      - 'Warn: containerImage not pinned by hash: integration/examples/helm-deployment-dependencies/Dockerfile:2: pin your Docker image by updating nginx:stable to nginx:stable@sha256:0aa2d81d65bc0cac0407e738b8f07d312c8685a84225fcb4db7bcbdd8c9bdf11'
       - 'Warn: containerImage not pinned by hash: integration/examples/helm-deployment/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.18 to mirror.gcr.io/library/golang:1.18@sha256:50c889275d26f816b5314fc99f55425fa76b18fcaf16af255f5d57f09e1f48da'
       - 'Warn: containerImage not pinned by hash: integration/examples/helm-deployment/Dockerfile:10: pin your Docker image by updating mirror.gcr.io/library/alpine:3.10 to mirror.gcr.io/library/alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
       - 'Warn: containerImage not pinned by hash: integration/examples/helm-render/Dockerfile:2: pin your Docker image by updating mirror.gcr.io/library/golang:1.18 to mirror.gcr.io/library/golang:1.18@sha256:50c889275d26f816b5314fc99f55425fa76b18fcaf16af255f5d57f09e1f48da'
@@ -793,10 +793,10 @@ checks:
       - 'Warn: goCommand not pinned by hash: vendor/github.com/pelletier/go-toml/benchmark.sh:10'
       - 'Info:  16 out of  23 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of 201 containerImage dependencies pinned'
-      - 'Info:   0 out of  15 npmCommand dependencies pinned'
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
       - 'Info:   0 out of   4 pipCommand dependencies pinned'
       - 'Info:  10 out of  14 goCommand dependencies pinned'
+      - 'Info:   0 out of 201 containerImage dependencies pinned'
+      - 'Info:   0 out of  15 npmCommand dependencies pinned'
 ---
-{"id":390240500,"author":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBxKEqc4XQpj0","tag_name":"v2.25.0","target_commitish":"main","name":"v2.25.0 Release","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-16T17:33:43Z","updated_at":"2026-09-16T20:24:33Z","published_at":"2026-09-16T20:24:33Z","assets":[{"id":568723697,"node_id":"RA_kwDOBxKEqc4h5gjx","name":"skaffold-darwin-amd64","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":136000752,"digest":"sha256:91facde91ba713328adb408be1949f538a5a5dcaee6a3b93725a2c5703bbbb5d","download_count":20,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:28Z"},{"id":568723696,"node_id":"RA_kwDOBxKEqc4h5gjw","name":"skaffold-darwin-amd64.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":88,"digest":"sha256:588765d9485dc75ccc49f65d5c9e41833680b4a7c88afab1d110b484932d1202","download_count":18,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:24Z"},{"id":568723699,"node_id":"RA_kwDOBxKEqc4h5gjz","name":"skaffold-darwin-amd64.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":71,"digest":"sha256:550c939625a80a896c073db2b514a9cade18762576daac781513072aa4b6940d","download_count":7,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:24Z"},{"id":568723702,"node_id":"RA_kwDOBxKEqc4h5gj2","name":"skaffold-darwin-amd64.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":71,"digest":"sha256:c678dfd0a2c07e80d6201cebf850e60029f9e86c38d1a9bc65d2486908f7d033","download_count":6,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:24Z"},{"id":568723698,"node_id":"RA_kwDOBxKEqc4h5gjy","name":"skaffold-darwin-arm64","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":127633744,"digest":"sha256:9adda767c94806827bcb22f2f7a9077bbde6b481331e891f9a7191e2f225dd27","download_count":29,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:28Z"},{"id":568723716,"node_id":"RA_kwDOBxKEqc4h5gkE","name":"skaffold-darwin-arm64.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":88,"digest":"sha256:3d924d0c78e8e4596da0c4bd9abe9b7e432000bb5a597d969af9aeaca9e69ee3","download_count":297,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723722,"node_id":"RA_kwDOBxKEqc4h5gkK","name":"skaffold-darwin-arm64.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":71,"digest":"sha256:0fae5b907bdc6bc2a0e10d65ff072a39608c10d96c2d30c70fbfc899779f1fd9","download_count":5,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723723,"node_id":"RA_kwDOBxKEqc4h5gkL","name":"skaffold-darwin-arm64.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":72,"digest":"sha256:23c8840a0371ed7d1b5b34d937e3ea3563fcf14663f4afdf0e99444a28885b9d","download_count":6,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723736,"node_id":"RA_kwDOBxKEqc4h5gkY","name":"skaffold-linux-amd64","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":127728552,"digest":"sha256:42b9e2e3246c19b78fcc53dd60cc7ded1da8704293886b909a2a02b9bef34d20","download_count":92,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:29Z"},{"id":568723737,"node_id":"RA_kwDOBxKEqc4h5gkZ","name":"skaffold-linux-amd64.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":87,"digest":"sha256:20a0516af3c2da4362d12b1f4ec2099eb802a48d25032a93b0a813edbacc47fc","download_count":38,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723750,"node_id":"RA_kwDOBxKEqc4h5gkm","name":"skaffold-linux-amd64.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":72,"digest":"sha256:34691eed839c930c170160aba620f54c6eae923421aa4ca6518a61a2a6725bd4","download_count":6,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723755,"node_id":"RA_kwDOBxKEqc4h5gkr","name":"skaffold-linux-amd64.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":72,"digest":"sha256:b14bba44655f029ef83ace78f1ffe0b09767f45729a18ab907d515eec12d8527","download_count":3,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:26Z"},{"id":568723763,"node_id":"RA_kwDOBxKEqc4h5gkz","name":"skaffold-linux-arm64","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":119000832,"digest":"sha256:416f5fed2009c2b4adc62ae887ee5fc19ff08cc8a0250b81d8682d55626a75fd","download_count":50,"created_at":"2026-09-16T20:20:26Z","updated_at":"2026-09-16T20:20:29Z"},{"id":568723773,"node_id":"RA_kwDOBxKEqc4h5gk9","name":"skaffold-linux-arm64.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":87,"digest":"sha256:9bb922951bebd87b1f99cfd982f0fd0dc44aeb16499099f07737c537319cc798","download_count":295,"created_at":"2026-09-16T20:20:26Z","updated_at":"2026-09-16T20:20:26Z"},{"id":568723781,"node_id":"RA_kwDOBxKEqc4h5glF","name":"skaffold-linux-arm64.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":70,"digest":"sha256:99841360297254eaf02445cba799ec7fd8ab9c040bd7b67721d2dc6ce4db74f3","download_count":4,"created_at":"2026-09-16T20:20:26Z","updated_at":"2026-09-16T20:20:27Z"},{"id":568723800,"node_id":"RA_kwDOBxKEqc4h5glY","name":"skaffold-linux-arm64.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":71,"digest":"sha256:cd9f6216d212e6a32740cb1f277dd95002514c76ad0bf524793724b70f6be5dc","download_count":3,"created_at":"2026-09-16T20:20:27Z","updated_at":"2026-09-16T20:20:27Z"},{"id":568723811,"node_id":"RA_kwDOBxKEqc4h5glj","name":"skaffold-windows-amd64.exe","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-msdownload","state":"uploaded","size":119910040,"digest":"sha256:4ca20b716f4756b0f5e2a06b13bf9cb189ebc8e6978665f274f8fd23fbcf47d6","download_count":147,"created_at":"2026-09-16T20:20:27Z","updated_at":"2026-09-16T20:20:31Z"},{"id":568723835,"node_id":"RA_kwDOBxKEqc4h5gl7","name":"skaffold-windows-amd64.exe.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":93,"digest":"sha256:b7d86f1af3ca23a98ed5a78bbcde2dd5c9904fef508f703d6885403d2ed9440a","download_count":343,"created_at":"2026-09-16T20:20:28Z","updated_at":"2026-09-16T20:20:28Z"},{"id":568723838,"node_id":"RA_kwDOBxKEqc4h5gl-","name":"skaffold-windows-amd64.exe.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":70,"digest":"sha256:d30fe725680584adba05e448cbc4de18d721e783ea0870f066b393b155a77a5a","download_count":4,"created_at":"2026-09-16T20:20:28Z","updated_at":"2026-09-16T20:20:28Z"},{"id":568723856,"node_id":"RA_kwDOBxKEqc4h5gmQ","name":"skaffold-windows-amd64.exe.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":72,"digest":"sha256:fb10bae1d1e2c8074f02908611a32966f8e76c1557af277a6e34adfb12766b49","download_count":3,"created_at":"2026-09-16T20:20:29Z","updated_at":"2026-09-16T20:20:29Z"},{"id":568723862,"node_id":"RA_kwDOBxKEqc4h5gmW","name":"VERSION","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":8,"digest":"sha256:611af0199576f0111b0da09996e2096a5fabff629c76010faaddb2a2f84deb23","download_count":3,"created_at":"2026-09-16T20:20:29Z","updated_at":"2026-09-16T20:20:29Z"},{"id":568723874,"node_id":"RA_kwDOBxKEqc4h5gmi","name":"VERSION.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":70,"digest":"sha256:2e9051f95b0b2fee9158d082fd943a13059c578e5a0f4092b206721fc494689f","download_count":3,"created_at":"2026-09-16T20:20:29Z","updated_at":"2026-09-16T20:20:29Z"}],"body":"# v2.25.0 Release - 09/16/2026\r\n**Linux amd64**\r\n`curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-linux-amd64 && chmod +x skaffold && sudo mv skaffold /usr/local/bin`\r\n\r\n**Linux arm64**\r\n`curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-linux-arm64 && chmod +x skaffold && sudo mv skaffold /usr/local/bin`\r\n\r\n**macOS amd64**\r\n`curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-darwin-amd64 && chmod +x skaffold && sudo mv skaffold /usr/local/bin`\r\n\r\n**macOS arm64**\r\n`curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-darwin-arm64 && chmod +x skaffold && sudo mv skaffold /usr/local/bin`\r\n\r\n**Windows**\r\nhttps://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-windows-amd64.exe\r\n\r\n**Docker image**\r\n`gcr.io/k8s-skaffold/skaffold:v2.25.0`\r\n\r\nHighlights:\r\n\r\nNew Features and Additions:\r\n\r\nFixes:\r\n\r\nUpdates and Refactors:\r\n* chore: correct go.mod version to 1.27.1 and update dependencies [#10186](https://github.com/GoogleContainerTools/skaffold/pull/10186)\r\n* chore: upgrade Go version to 1.27.1 and update dependencies [#10183](https://github.com/GoogleContainerTools/skaffold/pull/10183)\r\n* chore: bump github.com/containerd/containerd from 1.7.33 to 1.7.35 [#10178](https://github.com/GoogleContainerTools/skaffold/pull/10178)\r\n* chore: bump google.golang.org/grpc from 1.82.1 to 1.83.2 in /examples/grpc-e2e-tests/cloud-spanner-bootstrap [#10177](https://github.com/GoogleContainerTools/skaffold/pull/10177)\r\n* chore: bump google.golang.org/grpc from 1.82.1 to 1.83.1 [#10173](https://github.com/GoogleContainerTools/skaffold/pull/10173)\r\n* docs: Adds announcement to V2 docs and YAML reference landing pages regardi\u2026 [#10180](https://github.com/GoogleContainerTools/skaffold/pull/10180)\r\n* chore: upgrade Go version to 1.27.0 and update dependencies [#10167](https://github.com/GoogleContainerTools/skaffold/pull/10167)\r\n* chore: bump google.golang.org/grpc from 1.79.3 to 1.82.1 in /examples/grpc-e2e-tests/cloud-spanner-bootstrap [#10146](https://github.com/GoogleContainerTools/skaffold/pull/10146)\r\n* chore: bump google.golang.org/grpc from 1.56.3 to 1.82.1 in /examples/grpc-e2e-tests/service [#10145](https://github.com/GoogleContainerTools/skaffold/pull/10145)\r\n* chore: bump google.golang.org/grpc from 1.81.1 to 1.82.1 [#10148](https://github.com/GoogleContainerTools/skaffold/pull/10148)\r\n* chore: bump github.com/moby/go-archive from 0.2.0 to 0.3.0 [#10157](https://github.com/GoogleContainerTools/skaffold/pull/10157)\r\n* chore: bump github.com/moby/buildkit from 0.30.0 to 0.31.1 [#10158](https://github.com/GoogleContainerTools/skaffold/pull/10158)\r\n* chore: bump github.com/go-git/go-git/v5 from 5.19.1 to 5.19.2 [#10154](https://github.com/GoogleContainerTools/skaffold/pull/10154)\r\n\r\nDocs, Test, and Release Updates:\r\n\r\nHuge thanks goes out to all of our contributors for this release:\r\n\r\n- Abrahami2\r\n- Dave Dorbin\r\n- dependabot[bot]\r\n- ruhi-chaddha\r\n"}
+{"id":390240500,"author":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBxKEqc4XQpj0","tag_name":"v2.25.0","target_commitish":"main","name":"v2.25.0 Release","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-16T17:33:43Z","updated_at":"2026-09-16T20:24:33Z","published_at":"2026-09-16T20:24:33Z","assets":[{"id":568723697,"node_id":"RA_kwDOBxKEqc4h5gjx","name":"skaffold-darwin-amd64","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":136000752,"digest":"sha256:91facde91ba713328adb408be1949f538a5a5dcaee6a3b93725a2c5703bbbb5d","download_count":23,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:28Z"},{"id":568723696,"node_id":"RA_kwDOBxKEqc4h5gjw","name":"skaffold-darwin-amd64.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":88,"digest":"sha256:588765d9485dc75ccc49f65d5c9e41833680b4a7c88afab1d110b484932d1202","download_count":21,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:24Z"},{"id":568723699,"node_id":"RA_kwDOBxKEqc4h5gjz","name":"skaffold-darwin-amd64.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":71,"digest":"sha256:550c939625a80a896c073db2b514a9cade18762576daac781513072aa4b6940d","download_count":7,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:24Z"},{"id":568723702,"node_id":"RA_kwDOBxKEqc4h5gj2","name":"skaffold-darwin-amd64.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":71,"digest":"sha256:c678dfd0a2c07e80d6201cebf850e60029f9e86c38d1a9bc65d2486908f7d033","download_count":6,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:24Z"},{"id":568723698,"node_id":"RA_kwDOBxKEqc4h5gjy","name":"skaffold-darwin-arm64","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":127633744,"digest":"sha256:9adda767c94806827bcb22f2f7a9077bbde6b481331e891f9a7191e2f225dd27","download_count":34,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:28Z"},{"id":568723716,"node_id":"RA_kwDOBxKEqc4h5gkE","name":"skaffold-darwin-arm64.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":88,"digest":"sha256:3d924d0c78e8e4596da0c4bd9abe9b7e432000bb5a597d969af9aeaca9e69ee3","download_count":300,"created_at":"2026-09-16T20:20:24Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723722,"node_id":"RA_kwDOBxKEqc4h5gkK","name":"skaffold-darwin-arm64.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":71,"digest":"sha256:0fae5b907bdc6bc2a0e10d65ff072a39608c10d96c2d30c70fbfc899779f1fd9","download_count":5,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723723,"node_id":"RA_kwDOBxKEqc4h5gkL","name":"skaffold-darwin-arm64.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":72,"digest":"sha256:23c8840a0371ed7d1b5b34d937e3ea3563fcf14663f4afdf0e99444a28885b9d","download_count":6,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723736,"node_id":"RA_kwDOBxKEqc4h5gkY","name":"skaffold-linux-amd64","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":127728552,"digest":"sha256:42b9e2e3246c19b78fcc53dd60cc7ded1da8704293886b909a2a02b9bef34d20","download_count":121,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:29Z"},{"id":568723737,"node_id":"RA_kwDOBxKEqc4h5gkZ","name":"skaffold-linux-amd64.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":87,"digest":"sha256:20a0516af3c2da4362d12b1f4ec2099eb802a48d25032a93b0a813edbacc47fc","download_count":46,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723750,"node_id":"RA_kwDOBxKEqc4h5gkm","name":"skaffold-linux-amd64.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":72,"digest":"sha256:34691eed839c930c170160aba620f54c6eae923421aa4ca6518a61a2a6725bd4","download_count":8,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:25Z"},{"id":568723755,"node_id":"RA_kwDOBxKEqc4h5gkr","name":"skaffold-linux-amd64.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":72,"digest":"sha256:b14bba44655f029ef83ace78f1ffe0b09767f45729a18ab907d515eec12d8527","download_count":4,"created_at":"2026-09-16T20:20:25Z","updated_at":"2026-09-16T20:20:26Z"},{"id":568723763,"node_id":"RA_kwDOBxKEqc4h5gkz","name":"skaffold-linux-arm64","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":119000832,"digest":"sha256:416f5fed2009c2b4adc62ae887ee5fc19ff08cc8a0250b81d8682d55626a75fd","download_count":62,"created_at":"2026-09-16T20:20:26Z","updated_at":"2026-09-16T20:20:29Z"},{"id":568723773,"node_id":"RA_kwDOBxKEqc4h5gk9","name":"skaffold-linux-arm64.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":87,"digest":"sha256:9bb922951bebd87b1f99cfd982f0fd0dc44aeb16499099f07737c537319cc798","download_count":295,"created_at":"2026-09-16T20:20:26Z","updated_at":"2026-09-16T20:20:26Z"},{"id":568723781,"node_id":"RA_kwDOBxKEqc4h5glF","name":"skaffold-linux-arm64.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":70,"digest":"sha256:99841360297254eaf02445cba799ec7fd8ab9c040bd7b67721d2dc6ce4db74f3","download_count":4,"created_at":"2026-09-16T20:20:26Z","updated_at":"2026-09-16T20:20:27Z"},{"id":568723800,"node_id":"RA_kwDOBxKEqc4h5glY","name":"skaffold-linux-arm64.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":71,"digest":"sha256:cd9f6216d212e6a32740cb1f277dd95002514c76ad0bf524793724b70f6be5dc","download_count":3,"created_at":"2026-09-16T20:20:27Z","updated_at":"2026-09-16T20:20:27Z"},{"id":568723811,"node_id":"RA_kwDOBxKEqc4h5glj","name":"skaffold-windows-amd64.exe","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-msdownload","state":"uploaded","size":119910040,"digest":"sha256:4ca20b716f4756b0f5e2a06b13bf9cb189ebc8e6978665f274f8fd23fbcf47d6","download_count":169,"created_at":"2026-09-16T20:20:27Z","updated_at":"2026-09-16T20:20:31Z"},{"id":568723835,"node_id":"RA_kwDOBxKEqc4h5gl7","name":"skaffold-windows-amd64.exe.sha256","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":93,"digest":"sha256:b7d86f1af3ca23a98ed5a78bbcde2dd5c9904fef508f703d6885403d2ed9440a","download_count":343,"created_at":"2026-09-16T20:20:28Z","updated_at":"2026-09-16T20:20:28Z"},{"id":568723838,"node_id":"RA_kwDOBxKEqc4h5gl-","name":"skaffold-windows-amd64.exe.sha256.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":70,"digest":"sha256:d30fe725680584adba05e448cbc4de18d721e783ea0870f066b393b155a77a5a","download_count":4,"created_at":"2026-09-16T20:20:28Z","updated_at":"2026-09-16T20:20:28Z"},{"id":568723856,"node_id":"RA_kwDOBxKEqc4h5gmQ","name":"skaffold-windows-amd64.exe.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":72,"digest":"sha256:fb10bae1d1e2c8074f02908611a32966f8e76c1557af277a6e34adfb12766b49","download_count":3,"created_at":"2026-09-16T20:20:29Z","updated_at":"2026-09-16T20:20:29Z"},{"id":568723862,"node_id":"RA_kwDOBxKEqc4h5gmW","name":"VERSION","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":8,"digest":"sha256:611af0199576f0111b0da09996e2096a5fabff629c76010faaddb2a2f84deb23","download_count":3,"created_at":"2026-09-16T20:20:29Z","updated_at":"2026-09-16T20:20:29Z"},{"id":568723874,"node_id":"RA_kwDOBxKEqc4h5gmi","name":"VERSION.sig","label":"","uploader":{"login":"ruhi-chaddha","id":218991171,"node_id":"U_kgDODQ2KQw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":70,"digest":"sha256:2e9051f95b0b2fee9158d082fd943a13059c578e5a0f4092b206721fc494689f","download_count":3,"created_at":"2026-09-16T20:20:29Z","updated_at":"2026-09-16T20:20:29Z"}],"body":"# v2.25.0 Release - 09/16/2026\r\n**Linux amd64**\r\n`curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-linux-amd64 && chmod +x skaffold && sudo mv skaffold /usr/local/bin`\r\n\r\n**Linux arm64**\r\n`curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-linux-arm64 && chmod +x skaffold && sudo mv skaffold /usr/local/bin`\r\n\r\n**macOS amd64**\r\n`curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-darwin-amd64 && chmod +x skaffold && sudo mv skaffold /usr/local/bin`\r\n\r\n**macOS arm64**\r\n`curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-darwin-arm64 && chmod +x skaffold && sudo mv skaffold /usr/local/bin`\r\n\r\n**Windows**\r\nhttps://storage.googleapis.com/skaffold/releases/v2.25.0/skaffold-windows-amd64.exe\r\n\r\n**Docker image**\r\n`gcr.io/k8s-skaffold/skaffold:v2.25.0`\r\n\r\nHighlights:\r\n\r\nNew Features and Additions:\r\n\r\nFixes:\r\n\r\nUpdates and Refactors:\r\n* chore: correct go.mod version to 1.27.1 and update dependencies [#10186](https://github.com/GoogleContainerTools/skaffold/pull/10186)\r\n* chore: upgrade Go version to 1.27.1 and update dependencies [#10183](https://github.com/GoogleContainerTools/skaffold/pull/10183)\r\n* chore: bump github.com/containerd/containerd from 1.7.33 to 1.7.35 [#10178](https://github.com/GoogleContainerTools/skaffold/pull/10178)\r\n* chore: bump google.golang.org/grpc from 1.82.1 to 1.83.2 in /examples/grpc-e2e-tests/cloud-spanner-bootstrap [#10177](https://github.com/GoogleContainerTools/skaffold/pull/10177)\r\n* chore: bump google.golang.org/grpc from 1.82.1 to 1.83.1 [#10173](https://github.com/GoogleContainerTools/skaffold/pull/10173)\r\n* docs: Adds announcement to V2 docs and YAML reference landing pages regardi\u2026 [#10180](https://github.com/GoogleContainerTools/skaffold/pull/10180)\r\n* chore: upgrade Go version to 1.27.0 and update dependencies [#10167](https://github.com/GoogleContainerTools/skaffold/pull/10167)\r\n* chore: bump google.golang.org/grpc from 1.79.3 to 1.82.1 in /examples/grpc-e2e-tests/cloud-spanner-bootstrap [#10146](https://github.com/GoogleContainerTools/skaffold/pull/10146)\r\n* chore: bump google.golang.org/grpc from 1.56.3 to 1.82.1 in /examples/grpc-e2e-tests/service [#10145](https://github.com/GoogleContainerTools/skaffold/pull/10145)\r\n* chore: bump google.golang.org/grpc from 1.81.1 to 1.82.1 [#10148](https://github.com/GoogleContainerTools/skaffold/pull/10148)\r\n* chore: bump github.com/moby/go-archive from 0.2.0 to 0.3.0 [#10157](https://github.com/GoogleContainerTools/skaffold/pull/10157)\r\n* chore: bump github.com/moby/buildkit from 0.30.0 to 0.31.1 [#10158](https://github.com/GoogleContainerTools/skaffold/pull/10158)\r\n* chore: bump github.com/go-git/go-git/v5 from 5.19.1 to 5.19.2 [#10154](https://github.com/GoogleContainerTools/skaffold/pull/10154)\r\n\r\nDocs, Test, and Release Updates:\r\n\r\nHuge thanks goes out to all of our contributors for this release:\r\n\r\n- Abrahami2\r\n- Dave Dorbin\r\n- dependabot[bot]\r\n- ruhi-chaddha\r\n"}

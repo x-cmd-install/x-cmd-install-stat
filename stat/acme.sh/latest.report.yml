@@ -2,89 +2,89 @@ about:
   description: "A pure Unix shell script ACME client for SSL / TLS certificate automation"
   license: GPL-3.0
   homepage: https://acme.sh
-  head: d5fc938
+  head: 807da64
   archived: false
-  latestVersion: "3.1.5"
-  latestRelease: "3.1.5"
+  latestVersion: "3.1.6"
+  latestRelease: "3.1.6"
   latestPrerelease: ""
-  collectedAt: 2026-09-20T06:15:42Z
+  collectedAt: 2026-09-21T06:43:06Z
 timeline:
   created: 2015-12-26
-  lastCommit: 2026-09-19
-  lastVersion: 2026-09-19
-  lastRelease: 2026-09-19
+  lastCommit: 2026-09-20
+  lastVersion: 2026-09-20
+  lastRelease: 2026-09-20
   lastPrerelease: 
 popularity:
-  star: 47674
+  star: 47686
   watcher: 480
-  fork: 5672
-  release: 49
+  fork: 5673
+  release: 50
   contributor: 661
-  pullRequest: 2560
-  issue: 3744
+  pullRequest: 2563
+  issue: 3746
 language:
   Shell: 1998767
   Dockerfile: 2476
 totalBytes: 2001243
 recent:
   last30d:
-    since: 2026-08-21
-    release: 1
-    mergedPR: 17
-    openPR: 6
-    closedIssue: 34
-    openIssue: 5
-    commit: 35
-  last60d:
-    since: 2026-07-22
-    release: 1
-    mergedPR: 27
-    openPR: 11
-    closedIssue: 64
-    openIssue: 8
-    commit: 55
-  last90d:
-    since: 2026-06-22
+    since: 2026-08-22
     release: 2
-    mergedPR: 60
-    openPR: 15
-    closedIssue: 114
-    openIssue: 8
-    commit: 225
-  last180d:
-    since: 2026-03-24
+    mergedPR: 19
+    openPR: 7
+    closedIssue: 35
+    openIssue: 5
+    commit: 37
+  last60d:
+    since: 2026-07-23
+    release: 2
+    mergedPR: 28
+    openPR: 11
+    closedIssue: 65
+    openIssue: 9
+    commit: 57
+  last90d:
+    since: 2026-06-23
     release: 3
-    mergedPR: 106
-    openPR: 29
-    closedIssue: 190
-    openIssue: 13
-    commit: 307
-  last360d:
-    since: 2025-09-25
+    mergedPR: 62
+    openPR: 16
+    closedIssue: 115
+    openIssue: 9
+    commit: 227
+  last180d:
+    since: 2026-03-25
     release: 4
-    mergedPR: 186
-    openPR: 38
-    closedIssue: 379
-    openIssue: 22
-    commit: 526
+    mergedPR: 108
+    openPR: 30
+    closedIssue: 190
+    openIssue: 14
+    commit: 309
+  last360d:
+    since: 2025-09-26
+    release: 5
+    mergedPR: 188
+    openPR: 39
+    closedIssue: 376
+    openIssue: 23
+    commit: 528
   last720d:
-    since: 2024-09-30
-    release: 6
-    mergedPR: 295
-    openPR: 49
+    since: 2024-10-01
+    release: 7
+    mergedPR: 297
+    openPR: 50
     closedIssue: 613
-    openIssue: 32
-    commit: 1167
+    openIssue: 33
+    commit: 1166
 total:
-  release: 49
-  mergedPR: 1649
-  openPR: 59
-  closedIssue: 3706
-  openIssue: 38
-  commit: 6876
+  release: 50
+  mergedPR: 1651
+  openPR: 60
+  closedIssue: 3707
+  openIssue: 39
+  commit: 6880
 ---
 path: /home/runner/.x-repo/github.com/acmesh-official/acme.sh
-collectedAt: 2026-09-20T06:15:47Z
+collectedAt: 2026-09-21T06:43:10Z
 loc:
   Sh:
     code: 49787
@@ -330,4 +330,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---
-{"id":392169466,"author":{"login":"neilpang","id":8305679,"node_id":"MDQ6VXNlcjgzMDU2Nzk=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAuW9Zs4XYAf6","tag_name":"3.1.5","target_commitish":"master","name":"3.1.5","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-19T17:22:24Z","updated_at":"2026-09-19T18:11:14Z","published_at":"2026-09-19T18:11:14Z","assets":[],"body":"1. Release tags are signed from 3.1.5 on. The public key is allowed_signers\r\nin this repository; see \"Verify a Release\" in the README.\r\n2. New ACME_PACKAGED mode for distro-packaged installs: --install no longer\r\ncopies the script into LE_WORKING_DIR, and --upgrade, --install-online and the\r\nauto-upgrade cron path defer to the system package manager\r\n([#7135](https://github.com/acmesh-official/acme.sh/issues/7135)).\r\n3. Standalone mode listens on both IPv4 and IPv6 by default, and the port\r\ncheck now works on the BSDs, macOS and Haiku.\r\n4. An explicit --days or --valid-to now outranks the ARI renewal window.\r\n5. Order handling: poll the order this run created instead of the one the\r\nprevious cert came from, wait for a not-ready order instead of failing the\r\nfinalize, honor an HTTP-date Retry-After, retry a gateway error from the CA,\r\nand back off between retries.\r\n6. alreadyRevoked is now treated as a successful revocation.\r\n7. The conf file is never truncated when a saved value breaks the rewrite.\r\n8. New DNS providers: Huawei Cloud (dns_hw), HestiaCP, DNSMint, Opteamax,\r\nOptidata Cloud, NexDNS, Realtox Media, myloc. Azure now supports Private DNS\r\nzones, netcup moved to the new REST API, and JD Cloud moved to the v2 API.\r\n9. New deploy hooks: UniFi OS, JetKVM, Shelly (Gen3+), iKuai, and\r\ntruenas_websocat for TrueNAS SCALE 25.10+.\r\n10. dnsapi/dns_linode.sh (Linode API v3) was removed, use dns_linode_v4\r\n([#7054](https://github.com/acmesh-official/acme.sh/pull/7054)).\r\n11. CI now also covers GNU Hurd, openEuler, HardenedBSD and OPNsense\r\n(31 platforms).\r\n12. A lot of bug fixes.\r\n\r\n","reactions":{"total_count":6,"+1":5,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":0,"rocket":0,"eyes":0}}
+{"id":392406349,"author":{"login":"neilpang","id":8305679,"node_id":"MDQ6VXNlcjgzMDU2Nzk=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAuW9Zs4XY6VN","tag_name":"3.1.6","target_commitish":"master","name":"3.1.6","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-20T11:15:03Z","updated_at":"2026-09-20T11:15:48Z","published_at":"2026-09-20T11:15:48Z","assets":[],"body":"1. Release tags are signed from 3.1.6 on. The public key is allowed_signers\nin this repository; see \"Verify a Release\" in the README.\n2. 3.1.5 and earlier are unsigned. The 3.1.5 tag was created by the GitHub\nrelease form, which can only produce a lightweight tag and therefore carries\nno signature ([#7273](https://github.com/acmesh-official/acme.sh/issues/7273)).\n3. No functional change since 3.1.5.\n","reactions":{"total_count":10,"+1":9,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":1}}

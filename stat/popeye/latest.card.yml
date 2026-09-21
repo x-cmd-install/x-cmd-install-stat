@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.22.1"
   latestRelease: "v0.22.1"
   latestPrerelease: "v0.6.2"
-  collectedAt: 2026-09-20T06:23:38Z
+  collectedAt: 2026-09-21T06:25:14Z
 timeline:
   created: 2019-03-18
   lastCommit: 2025-04-14
@@ -30,7 +30,7 @@ language:
 totalBytes: 520447
 recent:
   last30d:
-    since: 2026-08-21
+    since: 2026-08-22
     release: 0
     mergedPR: 0
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-22
+    since: 2026-07-23
     release: 0
     mergedPR: 0
     openPR: 1
@@ -46,7 +46,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-06-22
+    since: 2026-06-23
     release: 0
     mergedPR: 0
     openPR: 1
@@ -54,7 +54,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-03-24
+    since: 2026-03-25
     release: 0
     mergedPR: 0
     openPR: 2
@@ -62,7 +62,7 @@ recent:
     openIssue: 1
     commit: 0
   last360d:
-    since: 2025-09-25
+    since: 2025-09-26
     release: 0
     mergedPR: 0
     openPR: 14
@@ -70,7 +70,7 @@ recent:
     openIssue: 12
     commit: 0
   last720d:
-    since: 2024-09-30
+    since: 2024-10-01
     release: 4
     mergedPR: 43
     openPR: 22
@@ -86,7 +86,7 @@ total:
   commit: 709
 ---
 path: /home/runner/.x-repo/github.com/derailed/popeye
-collectedAt: 2026-09-20T06:23:42Z
+collectedAt: 2026-09-21T06:25:18Z
 loc:
   Go:
     code: 17831
@@ -129,7 +129,7 @@ total:
   blanks: 4513
   files: 393
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/derailed/popeye
   commit: 5d07838165bb64fa70c594f2b46ef14a9080782f
@@ -142,6 +142,11 @@ checks:
     score: 1
     reason: Found 1/6 approved changesets -- score normalized to 1
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
@@ -150,11 +155,6 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -205,6 +205,11 @@ checks:
       - 'Info:   0 out of   5 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   1 out of   2 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -219,11 +224,6 @@ checks:
       - 'Warn: release artifact v0.21.7 does not have provenance: https://api.github.com/repos/derailed/popeye/releases/196790550'
       - 'Warn: release artifact v0.21.6 does not have provenance: https://api.github.com/repos/derailed/popeye/releases/192730503'
       - 'Warn: release artifact v0.21.5 does not have provenance: https://api.github.com/repos/derailed/popeye/releases/175088674'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

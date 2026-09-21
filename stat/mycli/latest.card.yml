@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.25.3"
   latestRelease: "v2.25.3"
   latestPrerelease: ""
-  collectedAt: 2026-09-20T04:47:44Z
+  collectedAt: 2026-09-21T04:51:20Z
 timeline:
   created: 2015-04-05
   lastCommit: 2026-09-19
@@ -30,39 +30,39 @@ language:
 totalBytes: 1878720
 recent:
   last30d:
-    since: 2026-08-21
+    since: 2026-08-22
     release: 24
-    mergedPR: 110
+    mergedPR: 102
     openPR: 0
     closedIssue: 1
     openIssue: 0
     commit: 94
   last60d:
-    since: 2026-07-22
-    release: 39
-    mergedPR: 213
+    since: 2026-07-23
+    release: 37
+    mergedPR: 211
     openPR: 0
     closedIssue: 9
     openIssue: 0
     commit: 186
   last90d:
-    since: 2026-06-22
+    since: 2026-06-23
     release: 45
-    mergedPR: 292
+    mergedPR: 285
     openPR: 0
-    closedIssue: 11
+    closedIssue: 10
     openIssue: 0
     commit: 277
   last180d:
-    since: 2026-03-24
+    since: 2026-03-25
     release: 60
-    mergedPR: 481
+    mergedPR: 478
     openPR: 0
     closedIssue: 26
     openIssue: 0
     commit: 474
   last360d:
-    since: 2025-09-25
+    since: 2025-09-26
     release: 97
     mergedPR: 819
     openPR: 0
@@ -70,7 +70,7 @@ recent:
     openIssue: 0
     commit: 835
   last720d:
-    since: 2024-09-30
+    since: 2024-10-01
     release: 100
     mergedPR: 959
     openPR: 0
@@ -86,7 +86,7 @@ total:
   commit: 3871
 ---
 path: /home/runner/.x-repo/github.com/dbcli/mycli
-collectedAt: 2026-09-20T04:47:51Z
+collectedAt: 2026-09-21T04:51:26Z
 loc:
   Python:
     code: 41037
@@ -134,10 +134,10 @@ total:
   blanks: 11466
   files: 167
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/dbcli/mycli
-  commit: 48546a1ac3b9ea7a0fec56873c82f4d59ac38060
+  commit: 8bc79bdd4c6648c64d5bc852fd82f669f3a687db
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -145,7 +145,11 @@ score: 5.1
 checks:
   - name: Code-Review
     score: 0
-    reason: Found 0/13 approved changesets -- score normalized to 0
+    reason: Found 0/15 approved changesets -- score normalized to 0
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Maintained
     score: 10
@@ -155,16 +159,13 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:278'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:258'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/publish.yml:281'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/publish.yml:283'
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/lint.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/publish.yml:8'
@@ -187,22 +188,22 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Pinned-Dependencies
-    score: 9
-    reason: dependency not pinned by hash detected -- score normalized to 9
-    details:
-      - 'Warn: containerImage not pinned by hash: docker/Dockerfile:1: pin your Docker image by updating python:3.14 to python:3.14@sha256:e06cc1111ed84189e91866447f562b89faadbfbbb9937cd67e6bf4172cdb45df'
-      - 'Warn: pipCommand not pinned by hash: docker/Dockerfile:24'
-      - 'Info:  24 out of  24 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:  22 out of  22 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   1 containerImage dependencies pinned'
-      - 'Info:   0 out of   1 pipCommand dependencies pinned'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE.txt:0'
       - 'Info: FSF or OSI recognized license: BSD 3-Clause "New" or "Revised" License: LICENSE.txt:0'
+  - name: Pinned-Dependencies
+    score: 9
+    reason: dependency not pinned by hash detected -- score normalized to 9
+    details:
+      - 'Warn: containerImage not pinned by hash: docker/Dockerfile:1: pin your Docker image by updating python:3.14 to python:3.14@sha256:be8ccd085666c34273c9dc5607c9842f8b2e3116128aae45148ce164c07ce09d'
+      - 'Warn: pipCommand not pinned by hash: docker/Dockerfile:24'
+      - 'Info:  25 out of  25 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:  24 out of  24 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   1 containerImage dependencies pinned'
+      - 'Info:   0 out of   1 pipCommand dependencies pinned'
   - name: Signed-Releases
     score: -1
     reason: no releases found
