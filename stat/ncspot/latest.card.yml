@@ -2,26 +2,26 @@ about:
   description: "Cross-platform ncurses Spotify client written in Rust, inspired by ncmpc and the likes."
   license: BSD-2-Clause
   homepage: 
-  head: c9a3af0
+  head: cea596d
   archived: false
   latestVersion: "v1.4.0"
   latestRelease: "v1.4.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-21T06:43:51Z
+  collectedAt: 2026-09-22T06:45:59Z
 timeline:
   created: 2018-11-10
-  lastCommit: 2026-09-12
+  lastCommit: 2026-09-21
   lastVersion: 2026-08-21
   lastRelease: 2026-08-21
   lastPrerelease: 
 popularity:
-  star: 6778
+  star: 6780
   watcher: 35
-  fork: 275
+  fork: 276
   release: 56
   contributor: 96
-  pullRequest: 1069
-  issue: 764
+  pullRequest: 1071
+  issue: 765
 language:
   Rust: 458709
   Nix: 154
@@ -29,63 +29,63 @@ language:
 totalBytes: 458871
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
-    mergedPR: 4
-    openPR: 3
+    mergedPR: 5
+    openPR: 2
     closedIssue: 1
-    openIssue: 1
-    commit: 3
+    openIssue: 2
+    commit: 4
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 1
-    mergedPR: 9
+    mergedPR: 10
+    openPR: 3
+    closedIssue: 2
+    openIssue: 3
+    commit: 10
+  last90d:
+    since: 2026-06-24
+    release: 1
+    mergedPR: 16
     openPR: 4
     closedIssue: 3
-    openIssue: 2
-    commit: 9
-  last90d:
-    since: 2026-06-23
-    release: 1
-    mergedPR: 15
-    openPR: 5
-    closedIssue: 3
-    openIssue: 3
-    commit: 16
+    openIssue: 4
+    commit: 17
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 2
-    mergedPR: 32
-    openPR: 9
+    mergedPR: 33
+    openPR: 8
     closedIssue: 5
-    openIssue: 7
-    commit: 34
+    openIssue: 8
+    commit: 35
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 4
-    mergedPR: 68
-    openPR: 10
-    closedIssue: 21
-    openIssue: 29
-    commit: 69
+    mergedPR: 69
+    openPR: 9
+    closedIssue: 20
+    openIssue: 30
+    commit: 70
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 9
-    mergedPR: 145
-    openPR: 13
-    closedIssue: 59
+    mergedPR: 146
+    openPR: 12
+    closedIssue: 58
     openIssue: 74
-    commit: 170
+    commit: 171
 total:
   release: 56
-  mergedPR: 672
-  openPR: 20
+  mergedPR: 673
+  openPR: 19
   closedIssue: 571
-  openIssue: 193
-  commit: 1399
+  openIssue: 194
+  commit: 1400
 ---
 path: /home/runner/.x-repo/github.com/hrkfdn/ncspot
-collectedAt: 2026-09-21T06:43:56Z
+collectedAt: 2026-09-22T06:46:02Z
 loc:
   Rust:
     code: 11672
@@ -118,35 +118,43 @@ total:
   blanks: 1784
   files: 68
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/hrkfdn/ncspot
-  commit: c9a3af0bd480a63cf2215faa92c8c5d207c20209
+  commit: cea596d1ec9b1420a71ec9405c0ecb5737dca3c8
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.8
 checks:
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Maintained
     score: 10
-    reason: 20 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10
+    reason: 19 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Code-Review
     score: 0
     reason: Found 1/12 approved changesets -- score normalized to 0
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
+    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/cd.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/update-rust-toolchain.yml:1'
+      - 'Info: no jobLevel write permissions found'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Pinned-Dependencies
     score: 0
@@ -163,20 +171,12 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/update-rust-toolchain.yml:13: update your workflow using https://app.stepsecurity.io/secureworkflow/hrkfdn/ncspot/update-rust-toolchain.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/update-rust-toolchain.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/hrkfdn/ncspot/update-rust-toolchain.yml/main?enable=pin'
       - 'Warn: downloadThenRun not pinned by hash: .github/workflows/cd.yml:50'
-      - 'Warn: downloadThenRun not pinned by hash: .github/workflows/ci.yml:103'
       - 'Warn: downloadThenRun not pinned by hash: .github/workflows/ci.yml:53'
       - 'Warn: downloadThenRun not pinned by hash: .github/workflows/ci.yml:79'
+      - 'Warn: downloadThenRun not pinned by hash: .github/workflows/ci.yml:103'
       - 'Info:   0 out of   8 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 downloadThenRun dependencies pinned'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/cd.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/update-rust-toolchain.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected

@@ -7,7 +7,7 @@ about:
   latestVersion: "helm-v2.20.0"
   latestRelease: "helm-v2.20.0"
   latestPrerelease: "helm-v2.7.3"
-  collectedAt: 2026-09-21T06:35:40Z
+  collectedAt: 2026-09-22T06:27:30Z
 timeline:
   created: 2017-05-29
   lastCommit: 2026-09-17
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-09-10
   lastPrerelease: 2023-01-16
 popularity:
-  star: 9285
+  star: 9286
   watcher: 77
-  fork: 778
+  fork: 779
   release: 204
   contributor: 184
   pullRequest: 1376
@@ -35,7 +35,7 @@ language:
 totalBytes: 427906
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 2
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 6
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 10
     mergedPR: 0
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 21
     mergedPR: 0
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 34
     mergedPR: 0
     openPR: 0
@@ -75,7 +75,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 52
     mergedPR: 0
     openPR: 0
@@ -91,7 +91,7 @@ total:
   commit: 1689
 ---
 path: /home/runner/.x-repo/github.com/bitnami-labs/sealed-secrets
-collectedAt: 2026-09-21T06:35:48Z
+collectedAt: 2026-09-22T06:27:42Z
 loc:
   Go:
     code: 8908
@@ -174,23 +174,15 @@ total:
   blanks: 3314
   files: 246
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/bitnami-labs/sealed-secrets
-  commit: 5a7b730c747ff5f3d18469c659f3ceccfb3c0bc9
+  commit: 5c3f42264c5899aa5b28d797024bfee01f7d62a2
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 6.8
 checks:
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 4 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -199,13 +191,17 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -220,6 +216,10 @@ checks:
       - 'Warn: topLevel ''packages'' permission set to ''write'': .github/workflows/release.yaml:11'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/stale.yml:8'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -244,15 +244,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yaml:14'
   - name: Signed-Releases
     score: 4
     reason: 3 out of the last 5 releases have a total of 3 signed artifacts.
@@ -267,6 +258,15 @@ checks:
       - 'Warn: release artifact v0.39.1 does not have provenance: https://api.github.com/repos/bitnami/sealed-secrets/releases/373597812'
       - 'Warn: release artifact helm-v2.19.3 does not have provenance: https://api.github.com/repos/bitnami/sealed-secrets/releases/373599823'
       - 'Warn: release artifact v0.39.0 does not have provenance: https://api.github.com/repos/bitnami/sealed-secrets/releases/372244064'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yaml:14'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

@@ -2,12 +2,12 @@ about:
   description: "Linux virtual machines, with a focus on running containers"
   license: Apache-2.0
   homepage: https://lima-vm.io/
-  head: 23314bd
+  head: a17d58c
   archived: false
   latestVersion: "v2.3.0-beta.0"
   latestRelease: "v2.2.0"
   latestPrerelease: "v2.3.0-beta.0"
-  collectedAt: 2026-09-21T05:05:25Z
+  collectedAt: 2026-09-22T04:58:09Z
 timeline:
   created: 2021-05-14
   lastCommit: 2026-09-21
@@ -15,15 +15,15 @@ timeline:
   lastRelease: 2026-07-21
   lastPrerelease: 2026-09-01
 popularity:
-  star: 21935
-  watcher: 91
+  star: 21942
+  watcher: 90
   fork: 957
   release: 102
   contributor: 217
-  pullRequest: 3504
-  issue: 1556
+  pullRequest: 3505
+  issue: 1557
 language:
-  Go: 1671832
+  Go: 1674453
   Shell: 434584
   Makefile: 38376
   HTML: 9440
@@ -31,72 +31,72 @@ language:
   SCSS: 1389
   Lua: 369
   Batchfile: 361
-totalBytes: 2165591
+totalBytes: 2168212
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 1
     mergedPR: 48
     openPR: 13
     closedIssue: 7
-    openIssue: 14
+    openIssue: 15
     commit: 43
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 1
-    mergedPR: 115
-    openPR: 25
-    closedIssue: 16
+    mergedPR: 114
+    openPR: 24
+    closedIssue: 15
     openIssue: 26
-    commit: 101
+    commit: 102
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 5
     mergedPR: 222
-    openPR: 35
-    closedIssue: 39
+    openPR: 33
+    closedIssue: 38
     openIssue: 44
-    commit: 234
+    commit: 235
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 9
-    mergedPR: 396
-    openPR: 60
+    mergedPR: 397
+    openPR: 59
     closedIssue: 108
-    openIssue: 69
-    commit: 435
+    openIssue: 70
+    commit: 437
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 25
-    mergedPR: 802
-    openPR: 81
+    mergedPR: 803
+    openPR: 80
     closedIssue: 234
-    openIssue: 123
-    commit: 885
+    openIssue: 124
+    commit: 887
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 44
-    mergedPR: 1612
-    openPR: 89
-    closedIssue: 530
-    openIssue: 231
-    commit: 3517
+    mergedPR: 1610
+    openPR: 88
+    closedIssue: 529
+    openIssue: 232
+    commit: 3520
 total:
   release: 102
-  mergedPR: 2943
-  openPR: 98
+  mergedPR: 2945
+  openPR: 97
   closedIssue: 1123
-  openIssue: 433
-  commit: 6646
+  openIssue: 434
+  commit: 6650
 ---
 path: /home/runner/.x-repo/github.com/lima-vm/lima
-collectedAt: 2026-09-21T05:05:30Z
+collectedAt: 2026-09-22T04:58:14Z
 loc:
   Go:
-    code: 48551
-    comments: 4815
-    blanks: 6653
-    files: 399
+    code: 48613
+    comments: 4827
+    blanks: 6665
+    files: 400
   Sh:
     code: 6199
     comments: 1488
@@ -178,15 +178,15 @@ loc:
     blanks: 1
     files: 6
 total:
-  code: 61957
-  comments: 11746
-  blanks: 9643
-  files: 714
+  code: 62019
+  comments: 11758
+  blanks: 9655
+  files: 715
 ---
-date: "2026-09-21T03:23:40Z"
+date: "2026-09-21T13:25:36Z"
 repo:
   name: github.com/lima-vm/lima
-  commit: 23314bd016a8112bf6ee08daad16da71cf6993af
+  commit: a17d58c15795b44824658a8a5ee4c6907e0d0056
 scorecard:
   version: v5.5.0
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
@@ -195,10 +195,6 @@ checks:
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 24 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Dependency-Update-Tool
     score: 10
@@ -210,6 +206,10 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -222,24 +222,27 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:16'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/spell.yml:12'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yml:22'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 24 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Pinned-Dependencies
     score: 6
     reason: dependency not pinned by hash detected -- score normalized to 6
     details:
       - 'Info: Possibly incomplete results: error parsing shell code: reached EOF without closing quote '': hack/test-templates.sh:535'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:505: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:534: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:561: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:580: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:701: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:609: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:624: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:297: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:316: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:354: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
@@ -247,34 +250,19 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:409: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:418: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:426: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:609: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:624: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:505: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:534: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:561: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:580: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:701: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:663: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
       - 'Info:  51 out of  51 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  11 out of  26 third-party GitHubAction dependencies pinned'
       - 'Info:   1 out of   1 goCommand dependencies pinned'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: CII-Best-Practices
     score: 5
     reason: 'badge detected: Passing'
     details: null
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: OSSFuzz integration found'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/cidata/fuzz_test.go:12'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/downloader/fuzz_test.go:17'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/imgutil/nativeimgutil/fuzz_test.go:15'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/iso9660util/fuzz_test.go:14'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/store/fuzz_test.go:16'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/store/fuzz_test.go:25'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/yqutil/fuzz_test.go:10'
   - name: Vulnerabilities
     score: 3
     reason: 7 existing vulnerabilities detected
@@ -286,6 +274,12 @@ checks:
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-xcpc-8h2w-3j85'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-2v37-7h3g-55p8'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-48c2-rrv3-qjmp'
+  - name: SAST
+    score: 7
+    reason: SAST tool detected but not run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: 9 commits out of 30 are checked with a SAST tool'
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -300,12 +294,6 @@ checks:
       - 'Warn: release artifact v2.2.0-rc.0 does not have provenance: https://api.github.com/repos/lima-vm/lima/releases/354861306'
       - 'Warn: release artifact v2.1.4 does not have provenance: https://api.github.com/repos/lima-vm/lima/releases/348353944'
       - 'Warn: release artifact v2.2.0-beta.0 does not have provenance: https://api.github.com/repos/lima-vm/lima/releases/348010582'
-  - name: SAST
-    score: 7
-    reason: SAST tool detected but not run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 11 commits out of 30 are checked with a SAST tool'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
@@ -318,6 +306,18 @@ checks:
       - 'Info: Found linked content: github.com/lima-vm/.github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/lima-vm/.github/SECURITY.md:1'
       - 'Info: Found text in security policy: github.com/lima-vm/.github/SECURITY.md:1'
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: OSSFuzz integration found'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/cidata/fuzz_test.go:12'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/downloader/fuzz_test.go:17'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/imgutil/nativeimgutil/fuzz_test.go:15'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/iso9660util/fuzz_test.go:14'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/store/fuzz_test.go:16'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/store/fuzz_test.go:25'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/yqutil/fuzz_test.go:10'
   - name: CI-Tests
     score: 10
     reason: 16 out of 16 merged PRs checked by a CI test -- score normalized to 10
@@ -328,4 +328,4 @@ checks:
     details:
       - 'Info: found contributions from: FIU-SCIS-Senior-Projects, LearningDrupal7Development, Masterminds, Perl, Perl-Toolchain-Gang, RamenDR, RedHat-Israel, SUSE, Stackato-Apps, Stackato-Garage, WebThreee, adam@adalogics.com, aind-containers, alexandear-org, avito, bits-bsc-cs, bugqore, buildsafedev, cloudfoundry-incubator, cncf-maintainers, containerbuilding, containerd, floelinux, getredash, golangci, ibm, istio, ksctl, kubernetes, kubernetes-sigs, lima-vm, mac-vz, moby, ntt, ntt-developers, open-telemetry, opencontainers, osrg, paypal, perl-libwin32, rancher, rancher labs @ suse, rancher-sandbox, reproducible-containers, rootless-containers, student, suse, suse @rancher'
 ---
-{"id":357433572,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOFeRR284VTgDk","tag_name":"v2.2.0","target_commitish":"master","name":"v2.2.0","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-07-21T14:48:33Z","updated_at":"2026-07-25T09:15:50Z","published_at":"2026-07-21T15:05:43Z","assets":[{"id":484813994,"node_id":"RA_kwDOFeRR284c5ayq","name":"lima-2.2.0-Darwin-arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":37586365,"digest":"sha256:bbdef91774885a0d05f7b048c4eb89ae2bcf3a0c252ae7ca7934e63df76d93c3","download_count":21997,"created_at":"2026-07-21T15:03:25Z","updated_at":"2026-07-21T15:03:26Z"},{"id":484813996,"node_id":"RA_kwDOFeRR284c5ays","name":"lima-2.2.0-Darwin-x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":24415554,"digest":"sha256:0d6f99c19f6e4bc3c92730c4c29d929e6927f0cb0a0ba1a84383367135a8ff31","download_count":6299,"created_at":"2026-07-21T15:03:25Z","updated_at":"2026-07-21T15:03:26Z"},{"id":484814017,"node_id":"RA_kwDOFeRR284c5azB","name":"lima-2.2.0-go-mod-vendor.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":8700497,"digest":"sha256:8765ec0690c575d22923318e32293a95167e22b969d4225a0202aecedf53e13f","download_count":37,"created_at":"2026-07-21T15:03:26Z","updated_at":"2026-07-21T15:03:27Z"},{"id":484813992,"node_id":"RA_kwDOFeRR284c5ayo","name":"lima-2.2.0-Linux-aarch64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":21611779,"digest":"sha256:7c6a09c6844f55f811e9b7b2b60a6070a512c696c8ec752dfdb3c8ed50ed0364","download_count":3961,"created_at":"2026-07-21T15:03:25Z","updated_at":"2026-07-21T15:03:26Z"},{"id":484813993,"node_id":"RA_kwDOFeRR284c5ayp","name":"lima-2.2.0-Linux-x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":23968157,"digest":"sha256:a0ea1ccf6b7335a900adb5f8d2b8384457965fecb1ba72f09b4e3e46d12f424a","download_count":78270,"created_at":"2026-07-21T15:03:25Z","updated_at":"2026-07-21T15:03:26Z"},{"id":484814002,"node_id":"RA_kwDOFeRR284c5ayy","name":"lima-2.2.0-Windows-AMD64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":24401531,"digest":"sha256:e7bf7dd2d2e7ab7ce020631f8f7533665f6e6f9068686d3ffcd0f3c438856ea9","download_count":1044,"created_at":"2026-07-21T15:03:25Z","updated_at":"2026-07-21T15:03:27Z"},{"id":484814016,"node_id":"RA_kwDOFeRR284c5azA","name":"lima-2.2.0-Windows-ARM64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":21874744,"digest":"sha256:d88edbfc3a3398f5c22e2fea09de263db2dd61e3c2b0b97ed2f133bbd77d4b08","download_count":525,"created_at":"2026-07-21T15:03:26Z","updated_at":"2026-07-21T15:03:27Z"},{"id":484814018,"node_id":"RA_kwDOFeRR284c5azC","name":"lima-additional-guestagents-2.2.0-Darwin-arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":38554314,"digest":"sha256:3aff4453eb3c359eb4f3b458056db24f2c5c15019232531292f49e04050554ed","download_count":1199,"created_at":"2026-07-21T15:03:26Z","updated_at":"2026-07-21T15:03:28Z"},{"id":484814019,"node_id":"RA_kwDOFeRR284c5azD","name":"lima-additional-guestagents-2.2.0-Darwin-x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":37753231,"digest":"sha256:d710253c44c5b46116c08cabd784b0e75ea8e7c494d0f75dfa55ee6ea6c5720c","download_count":196,"created_at":"2026-07-21T15:03:26Z","updated_at":"2026-07-21T15:03:28Z"},{"id":484814030,"node_id":"RA_kwDOFeRR284c5azO","name":"lima-additional-guestagents-2.2.0-Linux-aarch64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":38655062,"digest":"sha256:e6dc519fce67d016a70fef652f75ace3f8e46f2e92210116c01c5bffdc055b04","download_count":81,"created_at":"2026-07-21T15:03:27Z","updated_at":"2026-07-21T15:03:29Z"},{"id":484814032,"node_id":"RA_kwDOFeRR284c5azQ","name":"lima-additional-guestagents-2.2.0-Linux-x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":37848400,"digest":"sha256:8d03b82a456e299813276c6ff532fce1848fee5e50527433fe3374cde9183175","download_count":2819,"created_at":"2026-07-21T15:03:27Z","updated_at":"2026-07-21T15:03:29Z"},{"id":484814034,"node_id":"RA_kwDOFeRR284c5azS","name":"lima-additional-guestagents-2.2.0-Windows-AMD64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":37848272,"digest":"sha256:cc9fc8aa418f7ede746d02dc7059a53d8710feea187b610325ceb5993437a632","download_count":39,"created_at":"2026-07-21T15:03:28Z","updated_at":"2026-07-21T15:03:29Z"},{"id":484814039,"node_id":"RA_kwDOFeRR284c5azX","name":"lima-additional-guestagents-2.2.0-Windows-ARM64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":38655348,"digest":"sha256:8d959f43ce8e38d1a35e77c9685634f4eeb441f0eb29f7ef02c56b7b131c70ef","download_count":19,"created_at":"2026-07-21T15:03:28Z","updated_at":"2026-07-21T15:03:29Z"},{"id":484813995,"node_id":"RA_kwDOFeRR284c5ayr","name":"SHA256SUMS","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":1396,"digest":"sha256:7da5160ee9b22de8eec4222e581334ee6326881e20d5aa8eb29b22f897312a5f","download_count":6137,"created_at":"2026-07-21T15:03:25Z","updated_at":"2026-07-21T15:03:25Z"},{"id":484815947,"node_id":"RA_kwDOFeRR284c5bRL","name":"SHA256SUMS.asc","label":null,"uploader":{"login":"AkihiroSuda","id":9248427,"node_id":"MDQ6VXNlcjkyNDg0Mjc=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"text/plain","state":"uploaded","size":699,"digest":"sha256:b0333fbb88a0b83403641328cb96df81e896d3a61bed2c59788350d5f0fe3bf7","download_count":207,"created_at":"2026-07-21T15:05:32Z","updated_at":"2026-07-21T15:05:33Z"}],"body":"Highlights:\r\n- \ud83e\ude9f[Experimentally support Windows server 2025 guests](https://lima-vm.io/docs/usage/guests/windows/)\r\n- \ud83e\ude9f[Experimentally support Windows 11 guests](https://lima-vm.io/docs/usage/guests/windows/)\r\n- \ud83d\udc27[Experimentally allow opting out from password-less sudo](https://lima-vm.io/docs/config/sudo/)\r\n\r\n## Changes\r\n- Windows guest support:\r\n  - Experimentally support Windows server 2025 guests (#5138, thanks to [LFX mentee](https://lfx.linuxfoundation.org/tools/mentorship/) @mie313)\r\n  - Experimentally support Windows 11 guests (#5164 #5185 #5244, thanks to [LFX mentee](https://lfx.linuxfoundation.org/tools/mentorship/) @mie313)\r\n\r\n- Linux guest support:\r\n  - Experimentally allow opting out from password-less sudo (#5109 etc., thanks to @Aneesh-Hegde)\r\n\r\n- Windows host support:\r\n  - Change the default VM driver from `wsl2` to `qemu` (#4788)\r\n  - Remove dependency on `cygpath.exe` (#5205, thanks to [LFX mentee](https://lfx.linuxfoundation.org/tools/mentorship/) @mie313 with assistance from @jandubois)\r\n\r\n- macOS host support:\r\n  - Add LaunchDaemon support for headless macOS servers (#4984, thanks to @resker)\r\n\r\n- VM driver infrastructure:\r\n  - Update API (#4877, thanks to @unsuman)\r\n\r\n- QEMU:\r\n  - Implement TPM emulation (#5148, thanks to @mie313)\r\n\r\n- VZ:\r\n  - Implement virtio-sound interface (#5016, thanks to @Aneesh-Hegde)\r\n\r\n- `limactl` CLI:\r\n  - Add `limactl screenshot` (#5098, thanks to @trodemaster)\r\n  - Accept `limactl edit` flags in `limactl restart` (#5076, thanks to @itsme-ranger)\r\n  - Accept `--shell` flag in `limactl (create|edit|start)` (#5194, thanks to @unsuman)\r\n\r\n- Networking:\r\n  - Limit `socket_vmnet` access from `%everyone` to the `%admin` group (#5190, thanks to @ekalinin)\r\n\r\n- nerdctl:\r\n  - Update from v2.3.4 to [v2.3.5](https://github.com/containerd/nerdctl/releases/tag/v2.3.5) (#5297)\r\n\r\n- Templates:\r\n  - `almalinux-kitten`: Move to `experimental/` (#4736)\r\n  - `alpine`: Support `--plain` (#3057)\r\n  - `debian`: Support `--image-variant=nocloud` (#5159, thanks to @Nachiket-Roy)\r\n  - `fedora`: support RISC-V 64 (#5201)\r\n  - `ubuntu`: Support `--image-variant=minimal` (#5159, thanks to @Nachiket-Roy)\r\n  - `k8s`: Support version and registry parameters (#4872 #5200, thanks to @afbjorklund)\r\n  - `experimental/ubuntu-next`: point to `ubuntu-26.10` (#5214)\r\n\r\nFull changes: https://github.com/lima-vm/lima/milestone/70?closed=1\r\nThanks to @Aneesh-Hegde @Austin1serb @Nachiket-Roy @Nashit-h @SABITHSAHEB @SAY-5 @afbjorklund @arimu1 @arixmkii @bitalizer @ciderale @coulof @ekalinin @gaurav0107 @itsme-ranger @jandubois @kavirakesh14 @loncharles @mie313 @mvanhorn @opjt @pirate @resker @trodemaster @unsuman\r\n\r\n## Usage\r\n```console\r\n$ limactl create\r\n$ limactl start\r\n...\r\nINFO[0029] READY. Run `lima` to open the shell.\r\n\r\n$ lima uname\r\nLinux\r\n```\r\n\r\n- - -\r\nThe binaries were built automatically on GitHub Actions.\r\nThe build log is available for 90 days: https://github.com/lima-vm/lima/actions/runs/29840916918\r\n\r\nThe sha256sum of the SHA256SUMS file itself is `7da5160ee9b22de8eec4222e581334ee6326881e20d5aa8eb29b22f897312a5f` .\r\n- - -\r\nRelease manager: @AkihiroSuda\r\n","reactions":{"total_count":13,"+1":6,"-1":0,"laugh":0,"hooray":7,"confused":0,"heart":0,"rocket":0,"eyes":0},"mentions_count":26}
+{"id":357433572,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOFeRR284VTgDk","tag_name":"v2.2.0","target_commitish":"master","name":"v2.2.0","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-07-21T14:48:33Z","updated_at":"2026-07-25T09:15:50Z","published_at":"2026-07-21T15:05:43Z","assets":[{"id":484813994,"node_id":"RA_kwDOFeRR284c5ayq","name":"lima-2.2.0-Darwin-arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":37586365,"digest":"sha256:bbdef91774885a0d05f7b048c4eb89ae2bcf3a0c252ae7ca7934e63df76d93c3","download_count":23004,"created_at":"2026-07-21T15:03:25Z","updated_at":"2026-07-21T15:03:26Z"},{"id":484813996,"node_id":"RA_kwDOFeRR284c5ays","name":"lima-2.2.0-Darwin-x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":24415554,"digest":"sha256:0d6f99c19f6e4bc3c92730c4c29d929e6927f0cb0a0ba1a84383367135a8ff31","download_count":6497,"created_at":"2026-07-21T15:03:25Z","updated_at":"2026-07-21T15:03:26Z"},{"id":484814017,"node_id":"RA_kwDOFeRR284c5azB","name":"lima-2.2.0-go-mod-vendor.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":8700497,"digest":"sha256:8765ec0690c575d22923318e32293a95167e22b969d4225a0202aecedf53e13f","download_count":37,"created_at":"2026-07-21T15:03:26Z","updated_at":"2026-07-21T15:03:27Z"},{"id":484813992,"node_id":"RA_kwDOFeRR284c5ayo","name":"lima-2.2.0-Linux-aarch64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":21611779,"digest":"sha256:7c6a09c6844f55f811e9b7b2b60a6070a512c696c8ec752dfdb3c8ed50ed0364","download_count":4069,"created_at":"2026-07-21T15:03:25Z","updated_at":"2026-07-21T15:03:26Z"},{"id":484813993,"node_id":"RA_kwDOFeRR284c5ayp","name":"lima-2.2.0-Linux-x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":23968157,"digest":"sha256:a0ea1ccf6b7335a900adb5f8d2b8384457965fecb1ba72f09b4e3e46d12f424a","download_count":80687,"created_at":"2026-07-21T15:03:25Z","updated_at":"2026-07-21T15:03:26Z"},{"id":484814002,"node_id":"RA_kwDOFeRR284c5ayy","name":"lima-2.2.0-Windows-AMD64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":24401531,"digest":"sha256:e7bf7dd2d2e7ab7ce020631f8f7533665f6e6f9068686d3ffcd0f3c438856ea9","download_count":1077,"created_at":"2026-07-21T15:03:25Z","updated_at":"2026-07-21T15:03:27Z"},{"id":484814016,"node_id":"RA_kwDOFeRR284c5azA","name":"lima-2.2.0-Windows-ARM64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":21874744,"digest":"sha256:d88edbfc3a3398f5c22e2fea09de263db2dd61e3c2b0b97ed2f133bbd77d4b08","download_count":529,"created_at":"2026-07-21T15:03:26Z","updated_at":"2026-07-21T15:03:27Z"},{"id":484814018,"node_id":"RA_kwDOFeRR284c5azC","name":"lima-additional-guestagents-2.2.0-Darwin-arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":38554314,"digest":"sha256:3aff4453eb3c359eb4f3b458056db24f2c5c15019232531292f49e04050554ed","download_count":1218,"created_at":"2026-07-21T15:03:26Z","updated_at":"2026-07-21T15:03:28Z"},{"id":484814019,"node_id":"RA_kwDOFeRR284c5azD","name":"lima-additional-guestagents-2.2.0-Darwin-x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":37753231,"digest":"sha256:d710253c44c5b46116c08cabd784b0e75ea8e7c494d0f75dfa55ee6ea6c5720c","download_count":202,"created_at":"2026-07-21T15:03:26Z","updated_at":"2026-07-21T15:03:28Z"},{"id":484814030,"node_id":"RA_kwDOFeRR284c5azO","name":"lima-additional-guestagents-2.2.0-Linux-aarch64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":38655062,"digest":"sha256:e6dc519fce67d016a70fef652f75ace3f8e46f2e92210116c01c5bffdc055b04","download_count":81,"created_at":"2026-07-21T15:03:27Z","updated_at":"2026-07-21T15:03:29Z"},{"id":484814032,"node_id":"RA_kwDOFeRR284c5azQ","name":"lima-additional-guestagents-2.2.0-Linux-x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":37848400,"digest":"sha256:8d03b82a456e299813276c6ff532fce1848fee5e50527433fe3374cde9183175","download_count":2854,"created_at":"2026-07-21T15:03:27Z","updated_at":"2026-07-21T15:03:29Z"},{"id":484814034,"node_id":"RA_kwDOFeRR284c5azS","name":"lima-additional-guestagents-2.2.0-Windows-AMD64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":37848272,"digest":"sha256:cc9fc8aa418f7ede746d02dc7059a53d8710feea187b610325ceb5993437a632","download_count":39,"created_at":"2026-07-21T15:03:28Z","updated_at":"2026-07-21T15:03:29Z"},{"id":484814039,"node_id":"RA_kwDOFeRR284c5azX","name":"lima-additional-guestagents-2.2.0-Windows-ARM64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":38655348,"digest":"sha256:8d959f43ce8e38d1a35e77c9685634f4eeb441f0eb29f7ef02c56b7b131c70ef","download_count":19,"created_at":"2026-07-21T15:03:28Z","updated_at":"2026-07-21T15:03:29Z"},{"id":484813995,"node_id":"RA_kwDOFeRR284c5ayr","name":"SHA256SUMS","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":1396,"digest":"sha256:7da5160ee9b22de8eec4222e581334ee6326881e20d5aa8eb29b22f897312a5f","download_count":6379,"created_at":"2026-07-21T15:03:25Z","updated_at":"2026-07-21T15:03:25Z"},{"id":484815947,"node_id":"RA_kwDOFeRR284c5bRL","name":"SHA256SUMS.asc","label":null,"uploader":{"login":"AkihiroSuda","id":9248427,"node_id":"MDQ6VXNlcjkyNDg0Mjc=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"text/plain","state":"uploaded","size":699,"digest":"sha256:b0333fbb88a0b83403641328cb96df81e896d3a61bed2c59788350d5f0fe3bf7","download_count":210,"created_at":"2026-07-21T15:05:32Z","updated_at":"2026-07-21T15:05:33Z"}],"body":"Highlights:\r\n- \ud83e\ude9f[Experimentally support Windows server 2025 guests](https://lima-vm.io/docs/usage/guests/windows/)\r\n- \ud83e\ude9f[Experimentally support Windows 11 guests](https://lima-vm.io/docs/usage/guests/windows/)\r\n- \ud83d\udc27[Experimentally allow opting out from password-less sudo](https://lima-vm.io/docs/config/sudo/)\r\n\r\n## Changes\r\n- Windows guest support:\r\n  - Experimentally support Windows server 2025 guests (#5138, thanks to [LFX mentee](https://lfx.linuxfoundation.org/tools/mentorship/) @mie313)\r\n  - Experimentally support Windows 11 guests (#5164 #5185 #5244, thanks to [LFX mentee](https://lfx.linuxfoundation.org/tools/mentorship/) @mie313)\r\n\r\n- Linux guest support:\r\n  - Experimentally allow opting out from password-less sudo (#5109 etc., thanks to @Aneesh-Hegde)\r\n\r\n- Windows host support:\r\n  - Change the default VM driver from `wsl2` to `qemu` (#4788)\r\n  - Remove dependency on `cygpath.exe` (#5205, thanks to [LFX mentee](https://lfx.linuxfoundation.org/tools/mentorship/) @mie313 with assistance from @jandubois)\r\n\r\n- macOS host support:\r\n  - Add LaunchDaemon support for headless macOS servers (#4984, thanks to @resker)\r\n\r\n- VM driver infrastructure:\r\n  - Update API (#4877, thanks to @unsuman)\r\n\r\n- QEMU:\r\n  - Implement TPM emulation (#5148, thanks to @mie313)\r\n\r\n- VZ:\r\n  - Implement virtio-sound interface (#5016, thanks to @Aneesh-Hegde)\r\n\r\n- `limactl` CLI:\r\n  - Add `limactl screenshot` (#5098, thanks to @trodemaster)\r\n  - Accept `limactl edit` flags in `limactl restart` (#5076, thanks to @itsme-ranger)\r\n  - Accept `--shell` flag in `limactl (create|edit|start)` (#5194, thanks to @unsuman)\r\n\r\n- Networking:\r\n  - Limit `socket_vmnet` access from `%everyone` to the `%admin` group (#5190, thanks to @ekalinin)\r\n\r\n- nerdctl:\r\n  - Update from v2.3.4 to [v2.3.5](https://github.com/containerd/nerdctl/releases/tag/v2.3.5) (#5297)\r\n\r\n- Templates:\r\n  - `almalinux-kitten`: Move to `experimental/` (#4736)\r\n  - `alpine`: Support `--plain` (#3057)\r\n  - `debian`: Support `--image-variant=nocloud` (#5159, thanks to @Nachiket-Roy)\r\n  - `fedora`: support RISC-V 64 (#5201)\r\n  - `ubuntu`: Support `--image-variant=minimal` (#5159, thanks to @Nachiket-Roy)\r\n  - `k8s`: Support version and registry parameters (#4872 #5200, thanks to @afbjorklund)\r\n  - `experimental/ubuntu-next`: point to `ubuntu-26.10` (#5214)\r\n\r\nFull changes: https://github.com/lima-vm/lima/milestone/70?closed=1\r\nThanks to @Aneesh-Hegde @Austin1serb @Nachiket-Roy @Nashit-h @SABITHSAHEB @SAY-5 @afbjorklund @arimu1 @arixmkii @bitalizer @ciderale @coulof @ekalinin @gaurav0107 @itsme-ranger @jandubois @kavirakesh14 @loncharles @mie313 @mvanhorn @opjt @pirate @resker @trodemaster @unsuman\r\n\r\n## Usage\r\n```console\r\n$ limactl create\r\n$ limactl start\r\n...\r\nINFO[0029] READY. Run `lima` to open the shell.\r\n\r\n$ lima uname\r\nLinux\r\n```\r\n\r\n- - -\r\nThe binaries were built automatically on GitHub Actions.\r\nThe build log is available for 90 days: https://github.com/lima-vm/lima/actions/runs/29840916918\r\n\r\nThe sha256sum of the SHA256SUMS file itself is `7da5160ee9b22de8eec4222e581334ee6326881e20d5aa8eb29b22f897312a5f` .\r\n- - -\r\nRelease manager: @AkihiroSuda\r\n","reactions":{"total_count":13,"+1":6,"-1":0,"laugh":0,"hooray":7,"confused":0,"heart":0,"rocket":0,"eyes":0},"mentions_count":26}

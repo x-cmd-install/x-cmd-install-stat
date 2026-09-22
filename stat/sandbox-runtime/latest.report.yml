@@ -2,34 +2,34 @@ about:
   description: "A lightweight sandboxing tool for enforcing filesystem and network restrictions on arbitrary processes at the OS level, without requiring a container."
   license: Apache-2.0
   homepage: 
-  head: 2613895
+  head: ddbeb74
   archived: false
   latestVersion: "v0.0.77"
   latestRelease: "v0.0.77"
   latestPrerelease: ""
-  collectedAt: 2026-09-21T06:07:30Z
+  collectedAt: 2026-09-22T06:26:30Z
 timeline:
   created: 2025-10-20
-  lastCommit: 2026-09-20
+  lastCommit: 2026-09-21
   lastVersion: 2026-09-18
   lastRelease: 2026-09-18
   lastPrerelease: 
 popularity:
-  star: 5292
-  watcher: 20
-  fork: 451
+  star: 5300
+  watcher: 19
+  fork: 453
   release: 40
   contributor: 41
-  pullRequest: 449
+  pullRequest: 458
   issue: 135
 language:
-  TypeScript: 2447710
+  TypeScript: 2447786
   JavaScript: 5533
   Shell: 34
-totalBytes: 2453277
+totalBytes: 2453353
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 4
     mergedPR: 0
     openPR: 0
@@ -37,23 +37,23 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-23
-    release: 11
+    since: 2026-07-24
+    release: 10
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-23
-    release: 21
+    since: 2026-06-24
+    release: 18
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 35
     mergedPR: 0
     openPR: 0
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 40
     mergedPR: 0
     openPR: 0
@@ -69,7 +69,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 40
     mergedPR: 0
     openPR: 0
@@ -78,17 +78,17 @@ recent:
     commit: 0
 total:
   release: 40
-  mergedPR: 269
-  openPR: 119
+  mergedPR: 270
+  openPR: 127
   closedIssue: 35
   openIssue: 100
-  commit: 760
+  commit: 761
 ---
 path: /home/runner/.x-repo/github.com/anthropic-experimental/sandbox-runtime
-collectedAt: 2026-09-21T06:07:33Z
+collectedAt: 2026-09-22T06:26:33Z
 loc:
   TypeScript:
-    code: 48446
+    code: 48447
     comments: 12171
     blanks: 5316
     files: 132
@@ -138,11 +138,11 @@ loc:
     blanks: 8
     files: 2
 total:
-  code: 64558
+  code: 64559
   comments: 16444
   blanks: 6432
   files: 180
 ---
 
 ---
-{"id":391813082,"author":{"login":"dylan-conway","id":35280289,"node_id":"MDQ6VXNlcjM1MjgwMjg5","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQFjJqM4XWpfa","tag_name":"v0.0.77","target_commitish":"main","name":"v0.0.77","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-18T20:54:45Z","updated_at":"2026-09-18T22:09:16Z","published_at":"2026-09-18T22:09:16Z","assets":[],"body":"## What's Changed\r\n* A `/` write root (Linux) or read root (macOS) no longer switches off the denies beneath it by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/533\r\n* perf: resolve the global npm root off the event loop by @sosukesuzuki in https://github.com/anthropics/sandbox-runtime/pull/550\r\n* linux: a re-applied read-deny tmpfs restores read-only, so the write deny above it wins by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/537\r\n* linux: pass an over-long bwrap profile through --args by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/504\r\n* macos: deny a path the library computed as a literal, not a pattern by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/542\r\n* linux: keep a masked file masked when it is a write path or listed through a symlinked directory by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/554\r\n* Linux: pin ancestor directories of deny binds against rename by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/514\r\n* linux: a read deny or credential mask on a symlinked allowRead target wins over the carve-out by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/555\r\n* config: reject a deny glob written with a trailing separator by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/536\r\n* linux: collapse read-deny globs to directories, and mount denies where paths resolve by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/503\r\n* linux: throw a typed error when the bubblewrap profile cannot be run by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/553\r\n* violations: sanitize forged attribution keys, and give the Linux monitor bwrap's write rules by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/535\r\n* linux: refuse at start-up when root lacks CAP_SETFCAP, and correct the capability docs by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/534\r\n* fix(build): drop the duplicate normalizePathForSandbox import in sandbox-manager by @dylan-conway in https://github.com/anthropics/sandbox-runtime/pull/562\r\n* linux: remove the deny mount point a killed process left on the host by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/524\r\n* Default write paths obey a read deny, and interior path spellings are canonicalised by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/506\r\n* cli: refuse an unusable control fd or settings file, and keep the fd out of the sandbox by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/539\r\n* test(windows): fix five sources of failures in the Windows CI steps by @dylan-conway in https://github.com/anthropics/sandbox-runtime/pull/563\r\n* linux: walk a read-deny glob's directories once each, not once per name by @dylan-conway in https://github.com/anthropics/sandbox-runtime/pull/564\r\n* ci: run on Bun 1.4.2, and fix two tests it and a Linux timeout exposed by @dylan-conway in https://github.com/anthropics/sandbox-runtime/pull/565\r\n* perf(proxy): keep the TLS-terminate upstream connection alive per client connection by @dylan-conway in https://github.com/anthropics/sandbox-runtime/pull/561\r\n\r\n\r\n**Full Changelog**: https://github.com/anthropics/sandbox-runtime/compare/v0.0.76...v0.0.77","reactions":{"total_count":1,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":1,"eyes":0},"mentions_count":3}
+{"id":391813082,"author":{"login":"dylan-conway","id":35280289,"node_id":"MDQ6VXNlcjM1MjgwMjg5","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQFjJqM4XWpfa","tag_name":"v0.0.77","target_commitish":"main","name":"v0.0.77","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-18T20:54:45Z","updated_at":"2026-09-18T22:09:16Z","published_at":"2026-09-18T22:09:16Z","assets":[],"body":"## What's Changed\r\n* A `/` write root (Linux) or read root (macOS) no longer switches off the denies beneath it by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/533\r\n* perf: resolve the global npm root off the event loop by @sosukesuzuki in https://github.com/anthropics/sandbox-runtime/pull/550\r\n* linux: a re-applied read-deny tmpfs restores read-only, so the write deny above it wins by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/537\r\n* linux: pass an over-long bwrap profile through --args by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/504\r\n* macos: deny a path the library computed as a literal, not a pattern by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/542\r\n* linux: keep a masked file masked when it is a write path or listed through a symlinked directory by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/554\r\n* Linux: pin ancestor directories of deny binds against rename by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/514\r\n* linux: a read deny or credential mask on a symlinked allowRead target wins over the carve-out by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/555\r\n* config: reject a deny glob written with a trailing separator by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/536\r\n* linux: collapse read-deny globs to directories, and mount denies where paths resolve by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/503\r\n* linux: throw a typed error when the bubblewrap profile cannot be run by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/553\r\n* violations: sanitize forged attribution keys, and give the Linux monitor bwrap's write rules by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/535\r\n* linux: refuse at start-up when root lacks CAP_SETFCAP, and correct the capability docs by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/534\r\n* fix(build): drop the duplicate normalizePathForSandbox import in sandbox-manager by @dylan-conway in https://github.com/anthropics/sandbox-runtime/pull/562\r\n* linux: remove the deny mount point a killed process left on the host by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/524\r\n* Default write paths obey a read deny, and interior path spellings are canonicalised by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/506\r\n* cli: refuse an unusable control fd or settings file, and keep the fd out of the sandbox by @ronleizrowice-ant in https://github.com/anthropics/sandbox-runtime/pull/539\r\n* test(windows): fix five sources of failures in the Windows CI steps by @dylan-conway in https://github.com/anthropics/sandbox-runtime/pull/563\r\n* linux: walk a read-deny glob's directories once each, not once per name by @dylan-conway in https://github.com/anthropics/sandbox-runtime/pull/564\r\n* ci: run on Bun 1.4.2, and fix two tests it and a Linux timeout exposed by @dylan-conway in https://github.com/anthropics/sandbox-runtime/pull/565\r\n* perf(proxy): keep the TLS-terminate upstream connection alive per client connection by @dylan-conway in https://github.com/anthropics/sandbox-runtime/pull/561\r\n\r\n\r\n**Full Changelog**: https://github.com/anthropics/sandbox-runtime/compare/v0.0.76...v0.0.77","reactions":{"total_count":2,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":2,"eyes":0},"mentions_count":3}

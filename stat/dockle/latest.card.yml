@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.4.15"
   latestRelease: "v0.4.15"
   latestPrerelease: ""
-  collectedAt: 2026-09-21T06:33:54Z
+  collectedAt: 2026-09-22T06:38:20Z
 timeline:
   created: 2019-05-23
   lastCommit: 2026-07-02
@@ -28,7 +28,7 @@ language:
 totalBytes: 116878
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 0
     openPR: 9
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 0
     mergedPR: 7
     openPR: 16
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 7
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 0
     mergedPR: 10
     openPR: 17
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 11
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 0
     mergedPR: 11
     openPR: 17
@@ -68,7 +68,7 @@ recent:
     openIssue: 3
     commit: 11
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 1
     mergedPR: 18
     openPR: 17
@@ -84,7 +84,7 @@ total:
   commit: 248
 ---
 path: /home/runner/.x-repo/github.com/goodwithtech/dockle
-collectedAt: 2026-09-21T06:34:00Z
+collectedAt: 2026-09-22T06:38:22Z
 loc:
   Go:
     code: 4453
@@ -122,7 +122,7 @@ total:
   blanks: 889
   files: 65
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/goodwithtech/dockle
   commit: 35171ccb9b247592269f5c84be69331ef0ad6c19
@@ -135,6 +135,10 @@ checks:
     score: 2
     reason: Found 8/29 approved changesets -- score normalized to 2
     details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -142,10 +146,6 @@ checks:
   - name: Maintained
     score: 5
     reason: 7 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -184,23 +184,13 @@ checks:
     reason: dependency not pinned by hash detected -- score normalized to 5
     details:
       - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating golang:1.25-alpine to golang:1.25-alpine@sha256:1ae0735f00daffa3aaf1363a5184c0d2dc55c78e3db4ec70241cdac97bf84b59'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:9: pin your Docker image by updating alpine:3.21 to alpine:3.21@sha256:48b0309ca019d89d40f670aa1bc06e426dc0931948452e8491e3d65087abc07d'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:9: pin your Docker image by updating alpine:3.21 to alpine:3.21@sha256:ce64758a109eb420d874a118f87920e625e12d3634e03b4a5573fd9f6e5d3507'
       - 'Warn: containerImage not pinned by hash: Dockerfile.releaser:1: pin your Docker image by updating alpine:3.17.0_rc1 to alpine:3.17.0_rc1@sha256:36a03c95c2f0c83775d500101869054b927143a8320728f0e135dc151cb8ae61'
       - 'Warn: goCommand not pinned by hash: .github/workflows/govulncheck.yml:26'
       - 'Info:   5 out of   5 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   5 out of   5 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 containerImage dependencies pinned'
       - 'Info:   0 out of   1 goCommand dependencies pinned'
-  - name: Branch-Protection
-    score: 6
-    reason: branch protection is not maximal on development and all release branches
-    details:
-      - 'Info: ''allow deletion'' disabled on branch ''master'''
-      - 'Info: ''force pushes'' disabled on branch ''master'''
-      - 'Warn: required approving review count is 1 on branch ''master'''
-      - 'Warn: codeowners review is not required on branch ''master'''
-      - 'Warn: no status checks found to merge onto branch ''master'''
-      - 'Info: PRs are required in order to make changes on branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -215,6 +205,16 @@ checks:
       - 'Warn: release artifact v0.4.13 does not have provenance: https://api.github.com/repos/goodwithtech/dockle/releases/111513361'
       - 'Warn: release artifact v0.4.11 does not have provenance: https://api.github.com/repos/goodwithtech/dockle/releases/92137055'
       - 'Warn: release artifact v0.4.10 does not have provenance: https://api.github.com/repos/goodwithtech/dockle/releases/87691423'
+  - name: Branch-Protection
+    score: 6
+    reason: branch protection is not maximal on development and all release branches
+    details:
+      - 'Info: ''allow deletion'' disabled on branch ''master'''
+      - 'Info: ''force pushes'' disabled on branch ''master'''
+      - 'Warn: required approving review count is 1 on branch ''master'''
+      - 'Warn: codeowners review is not required on branch ''master'''
+      - 'Warn: no status checks found to merge onto branch ''master'''
+      - 'Info: PRs are required in order to make changes on branch ''master'''
   - name: Packaging
     score: 10
     reason: packaging workflow detected

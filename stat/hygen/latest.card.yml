@@ -7,7 +7,7 @@ about:
   latestVersion: "v6.2.11"
   latestRelease: "v6.2.11"
   latestPrerelease: ""
-  collectedAt: 2026-09-21T05:52:15Z
+  collectedAt: 2026-09-22T05:47:36Z
 timeline:
   created: 2017-08-13
   lastCommit: 2023-03-15
@@ -32,7 +32,7 @@ language:
 totalBytes: 141146
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -40,7 +40,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -48,7 +48,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -56,7 +56,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 0
     mergedPR: 0
     openPR: 0
@@ -64,7 +64,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 0
     mergedPR: 0
     openPR: 0
@@ -72,7 +72,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 0
     mergedPR: 0
     openPR: 3
@@ -88,7 +88,7 @@ total:
   commit: 539
 ---
 path: /home/runner/.x-repo/github.com/jondot/hygen
-collectedAt: 2026-09-21T05:52:25Z
+collectedAt: 2026-09-22T05:47:38Z
 loc:
   JavaScript:
     code: 2932
@@ -131,7 +131,7 @@ total:
   blanks: 1155
   files: 186
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/jondot/hygen
   commit: 26f76d8dede565b2bf38d0b9e9f3009ee2c8f9ae
@@ -140,10 +140,6 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 2.8
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Code-Review
     score: 3
     reason: Found 9/25 approved changesets -- score normalized to 3
@@ -152,9 +148,9 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Binary-Artifacts
+  - name: Dangerous-Workflow
     score: 10
-    reason: no binaries found in the repo
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -164,6 +160,10 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/docs.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -191,22 +191,22 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE.txt:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE.txt:0'
-  - name: Fuzzing
+  - name: Branch-Protection
     score: 0
-    reason: project is not fuzzed
+    reason: branch protection not enabled on development/release branches
     details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -221,11 +221,11 @@ checks:
       - 'Warn: release artifact v6.2.9 does not have provenance: https://api.github.com/repos/jondot/hygen/releases/76308776'
       - 'Warn: release artifact v6.2.0 does not have provenance: https://api.github.com/repos/jondot/hygen/releases/60773003'
       - 'Warn: release artifact v6.1.5 does not have provenance: https://api.github.com/repos/jondot/hygen/releases/60622989'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
     details:
-      - 'Warn: branch protection not enabled for branch ''master'''
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-09-21T05:19:15Z
+  collectedAt: 2026-09-22T05:11:02Z
 timeline:
   created: 2009-12-31
   lastCommit: 2026-09-20
@@ -46,7 +46,7 @@ language:
 totalBytes: 39598392
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 13
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 21
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -70,7 +70,7 @@ recent:
     openIssue: 0
     commit: 66
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 0
     mergedPR: 0
     openPR: 0
@@ -78,7 +78,7 @@ recent:
     openIssue: 0
     commit: 247
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 0
     mergedPR: 0
     openPR: 0
@@ -86,7 +86,7 @@ recent:
     openIssue: 0
     commit: 386
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 0
     mergedPR: 0
     openPR: 3
@@ -102,7 +102,7 @@ total:
   commit: 61644
 ---
 path: /home/runner/.x-repo/github.com/apache/subversion
-collectedAt: 2026-09-21T05:20:02Z
+collectedAt: 2026-09-22T05:12:05Z
 loc:
   C:
     code: 426537
@@ -265,32 +265,15 @@ total:
   blanks: 147975
   files: 1851
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/apache/subversion
-  commit: 41f5692c7148a01cf577ac52f20a790698224bbb
+  commit: 8070dd755dac4935aeac0add111796197fd03095
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.5
 checks:
-  - name: Code-Review
-    score: 0
-    reason: Found 0/30 approved changesets -- score normalized to 0
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -299,25 +282,36 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/cmake.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/detect-backport-conflicts.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Code-Review
+    score: 0
+    reason: Found 0/30 approved changesets -- score normalized to 0
+    details: null
   - name: SAST
     score: 0
     reason: no SAST tool detected
     details:
       - 'Warn: no pull requests merged into dev branch'
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
   - name: Signed-Releases
     score: -1
     reason: no releases found
@@ -338,16 +332,22 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cmake.yml:250: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/subversion/cmake.yml/trunk?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cmake.yml:257: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/subversion/cmake.yml/trunk?enable=pin'
       - 'Info:   0 out of   7 GitHub-owned GitHubAction dependencies pinned'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
+  - name: License
+    score: 10
+    reason: license file detected
     details:
-      - 'Warn: branch protection not enabled for branch ''trunk'''
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''trunk'''
   - name: Security-Policy
     score: 10
     reason: security policy file detected

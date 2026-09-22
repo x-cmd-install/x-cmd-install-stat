@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.32.1"
   latestRelease: "v0.32.1"
   latestPrerelease: ""
-  collectedAt: 2026-09-21T04:58:14Z
+  collectedAt: 2026-09-22T05:08:43Z
 timeline:
   created: 2019-10-22
   lastCommit: 2026-05-19
@@ -32,7 +32,7 @@ language:
 totalBytes: 438869
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -40,7 +40,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -48,7 +48,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -56,7 +56,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 1
     mergedPR: 4
     openPR: 1
@@ -64,7 +64,7 @@ recent:
     openIssue: 2
     commit: 4
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 4
     mergedPR: 10
     openPR: 3
@@ -72,7 +72,7 @@ recent:
     openIssue: 2
     commit: 17
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 7
     mergedPR: 15
     openPR: 4
@@ -88,7 +88,7 @@ total:
   commit: 197
 ---
 path: /home/runner/.x-repo/github.com/alajmo/mani
-collectedAt: 2026-09-21T04:58:15Z
+collectedAt: 2026-09-22T05:08:44Z
 loc:
   Go:
     code: 13302
@@ -136,7 +136,7 @@ total:
   blanks: 3865
   files: 198
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/alajmo/mani
   commit: ca8160952af5867429b54659a66cff3cc4ba656f
@@ -145,6 +145,13 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.2
 checks:
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Code-Review
     score: 2
     reason: Found 7/29 approved changesets -- score normalized to 2
@@ -157,13 +164,6 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -180,17 +180,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 1
     reason: dependency not pinned by hash detected -- score normalized to 1
@@ -206,13 +206,8 @@ checks:
       - 'Warn: containerImage not pinned by hash: test/images/alpine.test.Dockerfile:1: pin your Docker image by updating alpine:3.21.0 to alpine:3.21.0@sha256:21dc6063fd678b478f57c0e13f47560d0ea4eeba26dfc947b2a4f81f686b9f45'
       - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   3 containerImage dependencies pinned'
       - 'Info:   1 out of   1 goCommand dependencies pinned'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:9'
+      - 'Info:   0 out of   3 containerImage dependencies pinned'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
@@ -232,6 +227,11 @@ checks:
       - 'Warn: release artifact v0.31.2 does not have provenance: https://api.github.com/repos/alajmo/mani/releases/267871951'
       - 'Warn: release artifact v0.31.1 does not have provenance: https://api.github.com/repos/alajmo/mani/releases/259296550'
       - 'Warn: release artifact v0.31.0 does not have provenance: https://api.github.com/repos/alajmo/mani/releases/221031134'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:9'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

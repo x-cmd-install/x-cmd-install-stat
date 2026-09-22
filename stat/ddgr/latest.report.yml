@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.2"
   latestRelease: "v2.2"
   latestPrerelease: ""
-  collectedAt: 2026-09-21T04:54:05Z
+  collectedAt: 2026-09-22T04:51:12Z
 timeline:
   created: 2016-07-06
   lastCommit: 2026-08-16
@@ -30,7 +30,7 @@ language:
 totalBytes: 95337
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 0
     commit: 2
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 3
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 0
     mergedPR: 1
     openPR: 1
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 6
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 0
     mergedPR: 4
     openPR: 1
@@ -70,7 +70,7 @@ recent:
     openIssue: 0
     commit: 13
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 0
     mergedPR: 8
     openPR: 1
@@ -86,7 +86,7 @@ total:
   commit: 344
 ---
 path: /home/runner/.x-repo/github.com/jarun/ddgr
-collectedAt: 2026-09-21T04:54:06Z
+collectedAt: 2026-09-22T04:51:13Z
 loc:
   Python:
     code: 1726
@@ -124,7 +124,7 @@ total:
   blanks: 404
   files: 8
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/jarun/ddgr
   commit: 09a473282fc81353073d664a1905d84ae02efa41
@@ -133,10 +133,11 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 2.7
 checks:
-  - name: Code-Review
-    score: 3
-    reason: Found 8/21 approved changesets -- score normalized to 3
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: -1
     reason: No tokens found
@@ -145,11 +146,6 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Maintained
     score: 4
     reason: 4 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 4
@@ -157,6 +153,10 @@ checks:
   - name: Dangerous-Workflow
     score: -1
     reason: no workflows found
+    details: null
+  - name: Code-Review
+    score: 3
+    reason: Found 8/21 approved changesets -- score normalized to 3
     details: null
   - name: Pinned-Dependencies
     score: -1
@@ -174,22 +174,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: GNU General Public License v3.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''main'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -198,6 +193,11 @@ checks:
       - 'Warn: release artifact v1.8.1 not signed: https://api.github.com/repos/jarun/ddgr/releases/25381936'
       - 'Warn: release artifact v1.9 does not have provenance: https://api.github.com/repos/jarun/ddgr/releases/28941776'
       - 'Warn: release artifact v1.8.1 does not have provenance: https://api.github.com/repos/jarun/ddgr/releases/25381936'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''main'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

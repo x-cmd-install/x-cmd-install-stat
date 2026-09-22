@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.12.0"
   latestRelease: "v1.12.0"
   latestPrerelease: "v1.12.0-rc3"
-  collectedAt: 2026-09-21T05:08:52Z
+  collectedAt: 2026-09-22T05:01:39Z
 timeline:
   created: 2015-02-25
   lastCommit: 2026-09-01
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-08-29
   lastPrerelease: 2026-08-08
 popularity:
-  star: 16564
+  star: 16565
   watcher: 208
-  fork: 1608
+  fork: 1609
   release: 41
   contributor: 40
   pullRequest: 255
@@ -28,7 +28,7 @@ language:
 totalBytes: 221790
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 1
     mergedPR: 0
     openPR: 2
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 7
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 2
     mergedPR: 1
     openPR: 4
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 9
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 6
     mergedPR: 5
     openPR: 6
@@ -52,7 +52,7 @@ recent:
     openIssue: 4
     commit: 12
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 6
     mergedPR: 6
     openPR: 9
@@ -60,7 +60,7 @@ recent:
     openIssue: 5
     commit: 14
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 8
     mergedPR: 7
     openPR: 11
@@ -68,7 +68,7 @@ recent:
     openIssue: 8
     commit: 17
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 10
     mergedPR: 10
     openPR: 20
@@ -84,7 +84,7 @@ total:
   commit: 261
 ---
 path: /home/runner/.x-repo/github.com/jpillora/chisel
-collectedAt: 2026-09-21T05:08:55Z
+collectedAt: 2026-09-22T05:01:40Z
 loc:
   Go:
     code: 6893
@@ -117,7 +117,7 @@ total:
   blanks: 1116
   files: 82
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/jpillora/chisel
   commit: 3c00f04ca15472cf6e308227ec24c88c8f5d4ab3
@@ -126,6 +126,10 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 5.2
 checks:
+  - name: Code-Review
+    score: 0
+    reason: Found 2/23 approved changesets -- score normalized to 0
+    details: null
   - name: Maintained
     score: 10
     reason: 13 commit(s) and 30 issue activity found in the last 90 days -- score normalized to 10
@@ -134,9 +138,9 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Code-Review
-    score: 0
-    reason: Found 2/23 approved changesets -- score normalized to 0
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 10
@@ -146,10 +150,6 @@ checks:
       - 'Warn: jobLevel ''packages'' permission set to ''write'': .github/workflows/promote.yml:27'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:8'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/promote.yml:17'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Pinned-Dependencies
     score: 1
     reason: dependency not pinned by hash detected -- score normalized to 1
@@ -197,11 +197,6 @@ checks:
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 15 are checked with a SAST tool'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -216,6 +211,11 @@ checks:
       - 'Warn: release artifact v1.12.0-rc2 does not have provenance: https://api.github.com/repos/jpillora/chisel/releases/356119237'
       - 'Warn: release artifact v1.12.0-rc1 does not have provenance: https://api.github.com/repos/jpillora/chisel/releases/355762288'
       - 'Warn: release artifact v1.11.8 does not have provenance: https://api.github.com/repos/jpillora/chisel/releases/352090788'
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 15 are checked with a SAST tool'
   - name: Packaging
     score: 10
     reason: packaging workflow detected

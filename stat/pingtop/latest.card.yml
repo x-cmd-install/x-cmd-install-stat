@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-09-21T04:48:27Z
+  collectedAt: 2026-09-22T04:45:06Z
 timeline:
   created: 2019-04-01
   lastCommit: 2026-07-13
@@ -27,7 +27,7 @@ language:
 totalBytes: 87532
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 0
     mergedPR: 2
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 0
     mergedPR: 14
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 45
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 0
     mergedPR: 14
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 45
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 0
     mergedPR: 15
     openPR: 0
@@ -83,7 +83,7 @@ total:
   commit: 182
 ---
 path: /home/runner/.x-repo/github.com/laixintao/pingtop
-collectedAt: 2026-09-21T04:48:28Z
+collectedAt: 2026-09-22T04:45:07Z
 loc:
   Python:
     code: 2095
@@ -106,7 +106,7 @@ total:
   blanks: 494
   files: 23
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/laixintao/pingtop
   commit: 7f783ea73ea9b6cee6e5749b9786a07fafc7e073
@@ -115,26 +115,9 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.7
 checks:
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 7
-    reason: 9 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 7
-    details: null
-  - name: Code-Review
-    score: 3
-    reason: Found 5/16 approved changesets -- score normalized to 3
     details: null
   - name: Token-Permissions
     score: 9
@@ -143,6 +126,10 @@ checks:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:13'
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Code-Review
+    score: 3
+    reason: Found 5/16 approved changesets -- score normalized to 3
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -152,15 +139,23 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:27: update your workflow using https://app.stepsecurity.io/secureworkflow/laixintao/pingtop/ci.yml/master?enable=pin'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
+  - name: Maintained
+    score: 7
+    reason: 9 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 7
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -169,24 +164,29 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 19 are checked with a SAST tool'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
 ---

@@ -7,7 +7,7 @@ about:
   latestVersion: "v4.5.6"
   latestRelease: "v4.5.6"
   latestPrerelease: ""
-  collectedAt: 2026-09-21T05:09:41Z
+  collectedAt: 2026-09-22T05:14:55Z
 timeline:
   created: 2011-12-04
   lastCommit: 2026-09-19
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2026-08-01
   lastPrerelease: 
 popularity:
-  star: 33628
+  star: 33644
   watcher: 498
-  fork: 1811
+  fork: 1812
   release: 61
   contributor: 234
-  pullRequest: 1194
+  pullRequest: 1195
   issue: 2225
 language:
   Python: 1744611
@@ -36,63 +36,63 @@ language:
 totalBytes: 1981322
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 44
-    openPR: 3
+    openPR: 4
     closedIssue: 3
     openIssue: 1
     commit: 42
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 1
-    mergedPR: 64
-    openPR: 4
-    closedIssue: 21
+    mergedPR: 63
+    openPR: 5
+    closedIssue: 20
     openIssue: 5
     commit: 112
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 1
     mergedPR: 67
-    openPR: 6
+    openPR: 7
     closedIssue: 26
     openIssue: 5
     commit: 133
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 4
-    mergedPR: 95
-    openPR: 8
-    closedIssue: 48
+    mergedPR: 92
+    openPR: 9
+    closedIssue: 47
     openIssue: 9
     commit: 256
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 10
     mergedPR: 124
-    openPR: 9
+    openPR: 10
     closedIssue: 134
     openIssue: 21
     commit: 636
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 18
     mergedPR: 188
-    openPR: 11
-    closedIssue: 286
+    openPR: 12
+    closedIssue: 285
     openIssue: 46
     commit: 1546
 total:
   release: 61
   mergedPR: 877
-  openPR: 12
+  openPR: 13
   closedIssue: 2134
   openIssue: 91
   commit: 7405
 ---
 path: /home/runner/.x-repo/github.com/nicolargo/glances
-collectedAt: 2026-09-21T05:09:49Z
+collectedAt: 2026-09-22T05:15:04Z
 loc:
   Python:
     code: 33947
@@ -205,10 +205,10 @@ total:
   blanks: 12159
   files: 425
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/nicolargo/glances
-  commit: 06f6adb7a4140691eb08b70bd54e51487a1ecabd
+  commit: de61f9ab8acb9d631e50cc1ad7993aa9a5567508
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -224,7 +224,7 @@ checks:
       - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Code-Review
     score: 7
-    reason: Found 16/22 approved changesets -- score normalized to 7
+    reason: Found 17/23 approved changesets -- score normalized to 7
     details: null
   - name: Maintained
     score: 10
@@ -245,15 +245,15 @@ checks:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/build.yml:15'
       - 'Info: found token with ''none'' permissions: .github/workflows/build_docker.yml:1'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/build_docker.yml:57'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:26'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/ci.yml:32'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:38'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:46'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:55'
       - 'Warn: jobLevel ''security-events'' permission set to ''write'': .github/workflows/ci.yml:56'
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/ci.yml:20'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:21'
       - 'Warn: jobLevel ''security-events'' permission set to ''write'': .github/workflows/ci.yml:22'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:26'
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/ci.yml:32'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/ci.yml:20'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/cyber.yml:15'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/quality.yml:12'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/quality.yml:13'
@@ -289,15 +289,15 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''develop'''
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -308,12 +308,12 @@ checks:
     reason: SAST tool detected but not run on all commits
     details:
       - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 21 commits out of 24 are checked with a SAST tool'
+      - 'Warn: 18 commits out of 24 are checked with a SAST tool'
   - name: Pinned-Dependencies
     score: 3
     reason: dependency not pinned by hash detected -- score normalized to 3
     details:
-      - 'Warn: containerImage not pinned by hash: docker-files/alpine.Dockerfile:17: pin your Docker image by updating alpine:3.24 to alpine:3.24@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
+      - 'Warn: containerImage not pinned by hash: docker-files/alpine.Dockerfile:17: pin your Docker image by updating alpine:3.24 to alpine:3.24@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6'
       - 'Warn: containerImage not pinned by hash: docker-files/alpine.Dockerfile:40'
       - 'Warn: containerImage not pinned by hash: docker-files/alpine.Dockerfile:73'
       - 'Warn: containerImage not pinned by hash: docker-files/alpine.Dockerfile:81'
@@ -321,7 +321,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: docker-files/alpine.Dockerfile:123'
       - 'Warn: containerImage not pinned by hash: docker-files/alpine.Dockerfile:131'
       - 'Warn: containerImage not pinned by hash: docker-files/alpine.Dockerfile:143'
-      - 'Warn: containerImage not pinned by hash: docker-files/ubuntu.Dockerfile:16: pin your Docker image by updating ubuntu:26.04 to ubuntu:26.04@sha256:5cf058a7d21293819d67c8514b422f782570e5f5126126201d0f1bcbb74f6414'
+      - 'Warn: containerImage not pinned by hash: docker-files/ubuntu.Dockerfile:16: pin your Docker image by updating ubuntu:26.04 to ubuntu:26.04@sha256:da6fc2be547864451aa253836dd926da33623312df4a9a243e35dc877c378a78'
       - 'Warn: containerImage not pinned by hash: docker-files/ubuntu.Dockerfile:43'
       - 'Warn: containerImage not pinned by hash: docker-files/ubuntu.Dockerfile:76'
       - 'Warn: containerImage not pinned by hash: docker-files/ubuntu.Dockerfile:84'
@@ -332,10 +332,10 @@ checks:
       - 'Warn: pipCommand not pinned by hash: docker-files/ubuntu.Dockerfile:79-80'
       - 'Warn: pipCommand not pinned by hash: docker-files/ubuntu.Dockerfile:87-88'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/build.yml:24'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/test.yml:131'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/test.yml:132'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/test.yml:64'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/test.yml:65'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/test.yml:131'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/test.yml:132'
       - 'Info:  24 out of  24 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  10 out of  10 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of  16 containerImage dependencies pinned'

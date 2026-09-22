@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-09-21T04:45:45Z
+  collectedAt: 2026-09-22T04:45:10Z
 timeline:
   created: 2017-02-26
   lastCommit: 2026-01-05
@@ -27,7 +27,7 @@ language:
 totalBytes: 89514
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 0
     mergedPR: 0
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 0
     mergedPR: 2
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 1
     commit: 5
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 0
     mergedPR: 2
     openPR: 0
@@ -83,7 +83,7 @@ total:
   commit: 136
 ---
 path: /home/runner/.x-repo/github.com/m4b/bingrep
-collectedAt: 2026-09-21T04:45:48Z
+collectedAt: 2026-09-22T04:45:14Z
 loc:
   Rust:
     code: 2398
@@ -106,7 +106,7 @@ total:
   blanks: 340
   files: 10
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/m4b/bingrep
   commit: 99d10541c7d442c50f732e62c507f1d62001413e
@@ -119,29 +119,23 @@ checks:
     score: 3
     reason: Found 10/30 approved changesets -- score normalized to 3
     details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Dangerous-Workflow
+  - name: Binary-Artifacts
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: no binaries found in the repo
     details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -151,10 +145,21 @@ checks:
       - 'Warn: downloadThenRun not pinned by hash: .github/workflows/main.yml:47'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -163,11 +168,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected

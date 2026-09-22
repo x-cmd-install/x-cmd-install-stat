@@ -2,25 +2,25 @@ about:
   description: "Flexible, reusable and concise configuration for Kubernetes"
   license: Apache-2.0
   homepage: https://tanka.dev
-  head: 864f64c
+  head: 91f596c
   archived: false
-  latestVersion: "v0.39.1"
-  latestRelease: "v0.39.1"
+  latestVersion: "v0.39.2"
+  latestRelease: "v0.39.2"
   latestPrerelease: "v0.18.0"
-  collectedAt: 2026-09-21T05:13:41Z
+  collectedAt: 2026-09-22T05:11:42Z
 timeline:
   created: 2019-07-17
-  lastCommit: 2026-09-19
-  lastVersion: 2026-09-14
-  lastRelease: 2026-09-14
+  lastCommit: 2026-09-22
+  lastVersion: 2026-09-21
+  lastRelease: 2026-09-21
   lastPrerelease: 2021-10-04
 popularity:
   star: 2686
   watcher: 152
   fork: 192
-  release: 76
+  release: 77
   contributor: 183
-  pullRequest: 1811
+  pullRequest: 1818
   issue: 394
 language:
   Go: 454745
@@ -29,63 +29,63 @@ language:
 totalBytes: 458906
 recent:
   last30d:
-    since: 2026-08-22
-    release: 2
-    mergedPR: 39
-    openPR: 12
+    since: 2026-08-23
+    release: 3
+    mergedPR: 48
+    openPR: 9
     closedIssue: 0
     openIssue: 1
-    commit: 33
+    commit: 42
   last60d:
-    since: 2026-07-23
-    release: 2
-    mergedPR: 61
-    openPR: 13
+    since: 2026-07-24
+    release: 3
+    mergedPR: 68
+    openPR: 10
     closedIssue: 0
     openIssue: 1
-    commit: 60
+    commit: 69
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 5
-    mergedPR: 139
-    openPR: 17
+    mergedPR: 148
+    openPR: 14
     closedIssue: 1
     openIssue: 2
-    commit: 147
+    commit: 156
   last180d:
-    since: 2026-03-25
-    release: 10
-    mergedPR: 262
-    openPR: 18
+    since: 2026-03-26
+    release: 11
+    mergedPR: 269
+    openPR: 15
     closedIssue: 1
     openIssue: 3
-    commit: 258
+    commit: 267
   last360d:
-    since: 2025-09-26
-    release: 14
-    mergedPR: 486
-    openPR: 20
+    since: 2025-09-27
+    release: 15
+    mergedPR: 494
+    openPR: 17
     closedIssue: 8
     openIssue: 7
-    commit: 481
+    commit: 490
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 29
-    mergedPR: 919
-    openPR: 23
+    mergedPR: 928
+    openPR: 20
     closedIssue: 17
     openIssue: 15
-    commit: 924
+    commit: 931
 total:
-  release: 76
-  mergedPR: 1546
-  openPR: 23
+  release: 77
+  mergedPR: 1555
+  openPR: 20
   closedIssue: 355
   openIssue: 39
-  commit: 1586
+  commit: 1595
 ---
 path: /home/runner/.x-repo/github.com/grafana/tanka
-collectedAt: 2026-09-21T05:13:56Z
+collectedAt: 2026-09-22T05:11:56Z
 loc:
   Go:
     code: 28012
@@ -93,9 +93,9 @@ loc:
     blanks: 5767
     files: 147
   Yaml:
-    code: 3551
+    code: 3555
     comments: 1
-    blanks: 982
+    blanks: 984
     files: 4
   Jsonnet:
     code: 697
@@ -134,8 +134,8 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 3472
-    blanks: 1274
+    comments: 3508
+    blanks: 1281
     files: 41
   Text:
     code: 0
@@ -143,15 +143,15 @@ loc:
     blanks: 0
     files: 3
 total:
-  code: 33680
-  comments: 7679
-  blanks: 8127
+  code: 33684
+  comments: 7715
+  blanks: 8136
   files: 326
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/grafana/tanka
-  commit: 8c78fa54a1d2742d6bdfa9c1c8c1c0d4af16d0e6
+  commit: dec83b221e41d4eb9067f95eda61796aa1909682
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -161,6 +161,14 @@ checks:
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
+  - name: Code-Review
+    score: -1
+    reason: Found no human activity in the last 30 changesets
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -169,18 +177,20 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Code-Review
-    score: -1
-    reason: Found no human activity in the last 30 changesets
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Pinned-Dependencies
+    score: 9
+    reason: dependency not pinned by hash detected -- score normalized to 9
+    details:
+      - 'Warn: downloadThenRun not pinned by hash: .github/workflows/check-dagger-drift.yml:44'
+      - 'Info:  16 out of  16 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:  14 out of  14 third-party GitHubAction dependencies pinned'
+      - 'Info:   6 out of   6 containerImage dependencies pinned'
+      - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
+      - 'Info:   1 out of   1 goCommand dependencies pinned'
   - name: Token-Permissions
     score: 7
     reason: detected GitHub workflow tokens with excessive permissions
@@ -204,16 +214,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/release-please.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/signed-commits-info.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/tests.yml:18'
-  - name: Pinned-Dependencies
-    score: 9
-    reason: dependency not pinned by hash detected -- score normalized to 9
-    details:
-      - 'Warn: downloadThenRun not pinned by hash: .github/workflows/check-dagger-drift.yml:44'
-      - 'Info:  16 out of  16 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:  14 out of  14 third-party GitHubAction dependencies pinned'
-      - 'Info:   6 out of   6 containerImage dependencies pinned'
-      - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
-      - 'Info:   1 out of   1 goCommand dependencies pinned'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -229,6 +229,20 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v0.39.1 not signed: https://api.github.com/repos/grafana/tanka/releases/388392547'
+      - 'Warn: release artifact v0.39.0 not signed: https://api.github.com/repos/grafana/tanka/releases/377760994'
+      - 'Warn: release artifact v0.38.0 not signed: https://api.github.com/repos/grafana/tanka/releases/355033729'
+      - 'Warn: release artifact v0.37.5 not signed: https://api.github.com/repos/grafana/tanka/releases/347969327'
+      - 'Warn: release artifact v0.37.4 not signed: https://api.github.com/repos/grafana/tanka/releases/343477695'
+      - 'Warn: release artifact v0.39.1 does not have provenance: https://api.github.com/repos/grafana/tanka/releases/388392547'
+      - 'Warn: release artifact v0.39.0 does not have provenance: https://api.github.com/repos/grafana/tanka/releases/377760994'
+      - 'Warn: release artifact v0.38.0 does not have provenance: https://api.github.com/repos/grafana/tanka/releases/355033729'
+      - 'Warn: release artifact v0.37.5 does not have provenance: https://api.github.com/repos/grafana/tanka/releases/347969327'
+      - 'Warn: release artifact v0.37.4 does not have provenance: https://api.github.com/repos/grafana/tanka/releases/343477695'
   - name: Branch-Protection
     score: 5
     reason: branch protection is not maximal on development and all release branches
@@ -243,20 +257,6 @@ checks:
       - 'Warn: ''up-to-date branches'' is disabled on branch ''main'''
       - 'Info: status check found to merge onto on branch ''main'''
       - 'Info: PRs are required in order to make changes on branch ''main'''
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v0.39.0 not signed: https://api.github.com/repos/grafana/tanka/releases/377760994'
-      - 'Warn: release artifact v0.38.0 not signed: https://api.github.com/repos/grafana/tanka/releases/355033729'
-      - 'Warn: release artifact v0.37.5 not signed: https://api.github.com/repos/grafana/tanka/releases/347969327'
-      - 'Warn: release artifact v0.37.4 not signed: https://api.github.com/repos/grafana/tanka/releases/343477695'
-      - 'Warn: release artifact v0.37.3 not signed: https://api.github.com/repos/grafana/tanka/releases/340616393'
-      - 'Warn: release artifact v0.39.0 does not have provenance: https://api.github.com/repos/grafana/tanka/releases/377760994'
-      - 'Warn: release artifact v0.38.0 does not have provenance: https://api.github.com/repos/grafana/tanka/releases/355033729'
-      - 'Warn: release artifact v0.37.5 does not have provenance: https://api.github.com/repos/grafana/tanka/releases/347969327'
-      - 'Warn: release artifact v0.37.4 does not have provenance: https://api.github.com/repos/grafana/tanka/releases/343477695'
-      - 'Warn: release artifact v0.37.3 does not have provenance: https://api.github.com/repos/grafana/tanka/releases/340616393'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
@@ -268,4 +268,4 @@ checks:
     details:
       - 'Info: all commits (30) are checked with a SAST tool'
 ---
-{"id":388392547,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOC8Owc84XJmZj","tag_name":"v0.39.1","target_commitish":"a2aa73f2ad3cf4dcb2d118a2d1c6dd68ca13ad1a","name":"v0.39.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-14T12:46:01Z","updated_at":"2026-09-14T12:52:57Z","published_at":"2026-09-14T12:49:58Z","assets":[{"id":563393537,"node_id":"RA_kwDOC8Owc84hlLQB","name":"tk-darwin-amd64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":22980160,"digest":"sha256:2750949965414896ef4f3aaad19022c9d8bc59c089934c7d0c8b0eac7a58d5be","download_count":14,"created_at":"2026-09-14T12:52:55Z","updated_at":"2026-09-14T12:52:57Z"},{"id":563393486,"node_id":"RA_kwDOC8Owc84hlLPO","name":"tk-darwin-arm64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":21631922,"digest":"sha256:2d48362e00021825f1fc050418a829a24336f68d0f002ff4fa4f73a3cc17345a","download_count":28,"created_at":"2026-09-14T12:52:54Z","updated_at":"2026-09-14T12:52:55Z"},{"id":563393438,"node_id":"RA_kwDOC8Owc84hlLOe","name":"tk-linux-amd64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":21946528,"digest":"sha256:fffcb99cbfa69782a681f030a712ee3eddf26281d7308951e8130de8536a1b42","download_count":2694,"created_at":"2026-09-14T12:52:52Z","updated_at":"2026-09-14T12:52:53Z"},{"id":563393390,"node_id":"RA_kwDOC8Owc84hlLNu","name":"tk-linux-arm","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":20054176,"digest":"sha256:e0f3ffdd04456058185ecb862ee659a342efee3292a7e7e51ee3fe5d1778071c","download_count":9,"created_at":"2026-09-14T12:52:50Z","updated_at":"2026-09-14T12:52:52Z"},{"id":563393329,"node_id":"RA_kwDOC8Owc84hlLMx","name":"tk-linux-arm64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":20512928,"digest":"sha256:b50e748d2310daca1ba28ca36b8d9d64dff79aa8aadbd686f84fc2209776e3b8","download_count":127,"created_at":"2026-09-14T12:52:49Z","updated_at":"2026-09-14T12:52:50Z"},{"id":563393243,"node_id":"RA_kwDOC8Owc84hlLLb","name":"tk-windows-amd64.exe","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":22735360,"digest":"sha256:764d0603005922df1245659d043e27064c2cad9f027fa0f981a7639341792542","download_count":16,"created_at":"2026-09-14T12:52:47Z","updated_at":"2026-09-14T12:52:48Z"}],"body":"## [0.39.1](https://github.com/grafana/tanka/compare/v0.39.0...v0.39.1) (2026-09-14)\n\n\n### \ud83d\udc1b Bug Fixes\n\n* **deps:** update docs ([#2226](https://github.com/grafana/tanka/issues/2226)) ([8c78fa5](https://github.com/grafana/tanka/commit/8c78fa54a1d2742d6bdfa9c1c8c1c0d4af16d0e6))\n* **security/high/dagger:** update module google.golang.org/grpc to v1.83.2 [security] ([#2233](https://github.com/grafana/tanka/issues/2233)) ([c4a243d](https://github.com/grafana/tanka/commit/c4a243d4c41817d9d5478c32526d4d75070131ed))\n* **security/high/:** update module google.golang.org/grpc to v1.83.2 [security] ([#2232](https://github.com/grafana/tanka/issues/2232)) ([a0b57b3](https://github.com/grafana/tanka/commit/a0b57b39de38d2a0335926a45a3abe03793a043f))\n* **security/unknown/:** update module golang.org/x/crypto to v0.56.0 [security] ([#2231](https://github.com/grafana/tanka/issues/2231)) ([b8d321a](https://github.com/grafana/tanka/commit/b8d321a1bff991a98334f9e64c8772f07c467aa5))\n\n\n### \ud83d\udd27 Miscellaneous Chores\n\n* **deps:** update dependency pnpm to v11.23.0 ([#2224](https://github.com/grafana/tanka/issues/2224)) ([b566241](https://github.com/grafana/tanka/commit/b5662410d958eccb5c37b2bcae0ae955af87c7d8))\n* **deps:** update go toolchain directive to v1.27.1 ([#2205](https://github.com/grafana/tanka/issues/2205)) ([656b164](https://github.com/grafana/tanka/commit/656b16426961e1400c11443112d8deb4a3c2f31d))\n* **deps:** update k8s.io/kube-openapi digest to be32def ([#2216](https://github.com/grafana/tanka/issues/2216)) ([cbcad63](https://github.com/grafana/tanka/commit/cbcad63c3152e471a07c4a06280b00cb876feedd))"}
+{"id":392968797,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOC8Owc84XbDpd","tag_name":"v0.39.2","target_commitish":"267cde47748b6c07ccf2bca8800eea0dfdd00ec6","name":"v0.39.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-21T13:03:07Z","updated_at":"2026-09-21T13:10:43Z","published_at":"2026-09-21T13:07:36Z","assets":[{"id":579069338,"node_id":"RA_kwDOC8Owc84ig-Wa","name":"tk-darwin-amd64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":23043936,"digest":"sha256:4f27d7ad73341e6cb703d1ca67fb6d5f28f8806eab30f7acbfbb377c1a8eb578","download_count":6,"created_at":"2026-09-21T13:10:42Z","updated_at":"2026-09-21T13:10:43Z"},{"id":579069284,"node_id":"RA_kwDOC8Owc84ig-Vk","name":"tk-darwin-arm64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":21683810,"digest":"sha256:85caed9e0d4b26de4c1b441f9421faf622102b97426571287010215221a6e050","download_count":5,"created_at":"2026-09-21T13:10:40Z","updated_at":"2026-09-21T13:10:41Z"},{"id":579069250,"node_id":"RA_kwDOC8Owc84ig-VC","name":"tk-linux-amd64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":22007968,"digest":"sha256:a0acaca63d78c6449f36a3071acd103aa1938b0b38f5b714b82f9286c594c599","download_count":356,"created_at":"2026-09-21T13:10:39Z","updated_at":"2026-09-21T13:10:40Z"},{"id":579069195,"node_id":"RA_kwDOC8Owc84ig-UL","name":"tk-linux-arm","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":20119712,"digest":"sha256:b966e18d5ef6e624b6e80bf025dc08001836f0ca22a66627317bcd2c1352a6a7","download_count":4,"created_at":"2026-09-21T13:10:37Z","updated_at":"2026-09-21T13:10:38Z"},{"id":579069150,"node_id":"RA_kwDOC8Owc84ig-Te","name":"tk-linux-arm64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":20578464,"digest":"sha256:2742865409350d3d84914f78aa05abd19785a01e41f7285f831ff730a644f7b0","download_count":13,"created_at":"2026-09-21T13:10:36Z","updated_at":"2026-09-21T13:10:37Z"},{"id":579069102,"node_id":"RA_kwDOC8Owc84ig-Su","name":"tk-windows-amd64.exe","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":22800384,"digest":"sha256:007ed88d720a2871b6401053c6f388c6336cfad1bfdb3375aa71ff6f221bcd50","download_count":8,"created_at":"2026-09-21T13:10:34Z","updated_at":"2026-09-21T13:10:35Z"}],"body":"## [0.39.2](https://github.com/grafana/tanka/compare/v0.39.1...v0.39.2) (2026-09-21)\n\n\n### \ud83d\udc1b Bug Fixes\n\n* **deps:** update dagger-otel ([#2064](https://github.com/grafana/tanka/issues/2064)) ([4530316](https://github.com/grafana/tanka/commit/4530316deea3a379da1698d7e83e1f7d65e06d1a))\n* **deps:** update dagger-otel ([#2251](https://github.com/grafana/tanka/issues/2251)) ([1f29e61](https://github.com/grafana/tanka/commit/1f29e618a99d5d03e6dfce85fb180dc5ea9c3bad))\n* **deps:** update kubernetes monorepo to v0.37.0 ([#2252](https://github.com/grafana/tanka/issues/2252)) ([d0a8899](https://github.com/grafana/tanka/commit/d0a8899bb402a8c13db1d66d872b52c38ec6397f))\n* **deps:** update module github.com/99designs/gqlgen to v0.17.95 ([#2239](https://github.com/grafana/tanka/issues/2239)) ([28a6d6d](https://github.com/grafana/tanka/commit/28a6d6d4abd133547d8e16bc09dc7f4ee5de6acf))\n* **deps:** update module github.com/vektah/gqlparser/v2 to v2.5.37 ([#2240](https://github.com/grafana/tanka/issues/2240)) ([62c97a1](https://github.com/grafana/tanka/commit/62c97a136a3aaf8628b65a6899ae31fa90dd2cd6))\n* **deps:** update module google.golang.org/grpc to v1.84.0 ([#2268](https://github.com/grafana/tanka/issues/2268)) ([6b45ce5](https://github.com/grafana/tanka/commit/6b45ce5fd690cfaf1ad484c876c36e530e9e09c1))\n* **deps:** update otel ([#2194](https://github.com/grafana/tanka/issues/2194)) ([85261a0](https://github.com/grafana/tanka/commit/85261a01dfb7da12d5b4a7baf4f420cd79f29fb5))\n* **security/medium/dagger:** update dagger go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploggrpc [security] ([#2258](https://github.com/grafana/tanka/issues/2258)) ([0cb59dc](https://github.com/grafana/tanka/commit/0cb59dc3c5e1654efc5e6180e4fa0a35431414ac))\n\n\n### \ud83d\udd27 Miscellaneous Chores\n\n* **deps:** update actions/deploy-pages action to v5.0.1 ([#2236](https://github.com/grafana/tanka/issues/2236)) ([b962b0e](https://github.com/grafana/tanka/commit/b962b0e5cac941bcb1e52e0bf16f0d493dfda300))\n* **deps:** update dependency @astrojs/starlight to v0.42.1 ([#2263](https://github.com/grafana/tanka/issues/2263)) ([6c587d7](https://github.com/grafana/tanka/commit/6c587d73a5114082189a6d793f7e598d8d81fd96))\n* **deps:** update dependency @astrojs/starlight to v0.42.2 ([#2271](https://github.com/grafana/tanka/issues/2271)) ([dec83b2](https://github.com/grafana/tanka/commit/dec83b221e41d4eb9067f95eda61796aa1909682))\n* **deps:** update dependency @types/node to v24.13.5 ([#2265](https://github.com/grafana/tanka/issues/2265)) ([1ff4bb9](https://github.com/grafana/tanka/commit/1ff4bb9c69bba3a635d634c724842ce4ee5ce5dd))\n* **deps:** update dependency pnpm to v11.26.0 ([#2228](https://github.com/grafana/tanka/issues/2228)) ([dae7eeb](https://github.com/grafana/tanka/commit/dae7eeba86726d33e79ba66888102912de7b3427))\n* **deps:** update dependency pnpm to v11.27.0 ([#2241](https://github.com/grafana/tanka/issues/2241)) ([40064b2](https://github.com/grafana/tanka/commit/40064b201aeadc0d732fda49780a6793471cab50))\n* **deps:** update dependency pnpm to v12 ([#2254](https://github.com/grafana/tanka/issues/2254)) ([40f6216](https://github.com/grafana/tanka/commit/40f6216287a8f18d347ce6fa70481175ae671259))\n* **deps:** update dependency pnpm to v12.4.2 ([#2260](https://github.com/grafana/tanka/issues/2260)) ([860bda7](https://github.com/grafana/tanka/commit/860bda75c3f03328875bc458939c47a2dfc3e839))\n* **deps:** update dependency prettier to v3.9.7 ([#2266](https://github.com/grafana/tanka/issues/2266)) ([864f64c](https://github.com/grafana/tanka/commit/864f64c9d92b2069a260cf2bda08b8530d64ada1))\n* **deps:** update docker/build-push-action action to v7.4.0 ([#2261](https://github.com/grafana/tanka/issues/2261)) ([a98b172](https://github.com/grafana/tanka/commit/a98b17238184ff2bf1e47a9b6b2940cd9d2b3fa1))\n* **deps:** update docker/setup-buildx-action action to v4.4.1 ([#2262](https://github.com/grafana/tanka/issues/2262)) ([6532559](https://github.com/grafana/tanka/commit/65325597c939a08bc3d671afda072fb48fa77123))\n* **deps:** update docs ([#2267](https://github.com/grafana/tanka/issues/2267)) ([d72a79b](https://github.com/grafana/tanka/commit/d72a79be1e25f9a9f1bc9c871af1f43e7383e6f0))\n* **deps:** update golang docker tag to v1.27.1 ([#2238](https://github.com/grafana/tanka/issues/2238)) ([27213d2](https://github.com/grafana/tanka/commit/27213d2dabd3b9af540522399690928b41d0bcbf))\n* **deps:** update google.golang.org/genproto/googleapis/api digest to f61a6ca ([#2195](https://github.com/grafana/tanka/issues/2195)) ([7c2f2c0](https://github.com/grafana/tanka/commit/7c2f2c0718d2e5a7d4d986f2710e5ca317e226eb))\n* **deps:** update google.golang.org/genproto/googleapis/rpc digest to f61a6ca ([#2230](https://github.com/grafana/tanka/issues/2230)) ([4d80b05](https://github.com/grafana/tanka/commit/4d80b05b953050fc89b0dce2ec397b90e190518c))\n* **deps:** update module github.com/fxamacker/cbor/v2 to v2.9.4 ([#2259](https://github.com/grafana/tanka/issues/2259)) ([adfdce7](https://github.com/grafana/tanka/commit/adfdce7a3599e5e75947409d13e5d29012d873ed))\n* **deps:** update module github.com/google/go-containerregistry to v0.22.1 ([#2242](https://github.com/grafana/tanka/issues/2242)) ([d5a17b8](https://github.com/grafana/tanka/commit/d5a17b823c802bb67c6507815c0ebf14a8b82645))\n* **deps:** update module github.com/grpc-ecosystem/grpc-gateway/v2 to v2.30.0 ([#2219](https://github.com/grafana/tanka/issues/2219)) ([6d0f9d2](https://github.com/grafana/tanka/commit/6d0f9d276bf6d7e80266dd3905b2393506a7bf4f))\n* **deps:** update module github.com/huandu/xstrings to v1.6.0 ([#2244](https://github.com/grafana/tanka/issues/2244)) ([9b24297](https://github.com/grafana/tanka/commit/9b24297c31fbc5a10cfd90d5bffd6a650dbfac55))\n* **deps:** update module golang.org/x/crypto to v0.57.0 ([#2245](https://github.com/grafana/tanka/issues/2245)) ([971476d](https://github.com/grafana/tanka/commit/971476da8e79573b2a6960827d6d1783445ae3d4))\n* **deps:** update module golang.org/x/net to v0.59.0 ([#2246](https://github.com/grafana/tanka/issues/2246)) ([52c4264](https://github.com/grafana/tanka/commit/52c4264848e8c00c4f711dc8633f91d28d3e505f))\n* **deps:** update module golang.org/x/sys to v0.48.0 ([#2247](https://github.com/grafana/tanka/issues/2247)) ([9f8081a](https://github.com/grafana/tanka/commit/9f8081a1fba0eefecaddf733fd2101537619521b))\n* **deps:** update pnpm to v11.27.0 ([#2249](https://github.com/grafana/tanka/issues/2249)) ([8b179dc](https://github.com/grafana/tanka/commit/8b179dc1824e3ea83b72fe4d341857d3d6795d36))\n* **deps:** update pnpm/action-setup action to v6.1.0 ([#2250](https://github.com/grafana/tanka/issues/2250)) ([518cfb8](https://github.com/grafana/tanka/commit/518cfb8e7fa5249b1dbcb2e9d15552a2f365aaa5))\n* **deps:** update sigs.k8s.io/json digest to 11ed52e ([#2234](https://github.com/grafana/tanka/issues/2234)) ([49ed5d8](https://github.com/grafana/tanka/commit/49ed5d854568a6e5e5e3935aa4dc3971614c6f63))"}

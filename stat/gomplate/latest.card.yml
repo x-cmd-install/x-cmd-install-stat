@@ -7,7 +7,7 @@ about:
   latestVersion: "v5.2.0"
   latestRelease: "v5.2.0"
   latestPrerelease: "v4.0.0-pre-3"
-  collectedAt: 2026-09-21T06:21:38Z
+  collectedAt: 2026-09-22T06:13:03Z
 timeline:
   created: 2016-01-23
   lastCommit: 2026-09-08
@@ -30,15 +30,15 @@ language:
 totalBytes: 756121
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
-    mergedPR: 13
+    mergedPR: 12
     openPR: 13
     closedIssue: 0
     openIssue: 0
     commit: 12
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 36
     openPR: 13
@@ -46,23 +46,23 @@ recent:
     openIssue: 1
     commit: 36
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 1
-    mergedPR: 61
+    mergedPR: 60
     openPR: 15
     closedIssue: 2
     openIssue: 1
     commit: 70
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 2
-    mergedPR: 129
+    mergedPR: 128
     openPR: 15
     closedIssue: 8
     openIssue: 2
     commit: 131
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 3
     mergedPR: 203
     openPR: 15
@@ -70,7 +70,7 @@ recent:
     openIssue: 2
     commit: 207
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 8
     mergedPR: 315
     openPR: 16
@@ -86,7 +86,7 @@ total:
   commit: 2695
 ---
 path: /home/runner/.x-repo/github.com/hairyhenderson/gomplate
-collectedAt: 2026-09-21T06:21:50Z
+collectedAt: 2026-09-22T06:13:09Z
 loc:
   Go:
     code: 23491
@@ -149,7 +149,7 @@ total:
   blanks: 8451
   files: 297
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/hairyhenderson/gomplate
   commit: d7b35f9f39bf3e2978114d5bb62adb8395c7b823
@@ -166,6 +166,10 @@ checks:
     score: 10
     reason: 30 commit(s) and 5 issue activity found in the last 90 days -- score normalized to 10
     details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -175,24 +179,20 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/docker-build.yml:32'
+      - 'Warn: jobLevel ''packages'' permission set to ''write'': .github/workflows/docker-build.yml:34'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/docker-build.yml:60'
       - 'Warn: jobLevel ''packages'' permission set to ''write'': .github/workflows/docker-build.yml:62'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/docker-build.yml:15'
-      - 'Warn: jobLevel ''packages'' permission set to ''write'': .github/workflows/docker-build.yml:34'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/docker-build.yml:32'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/label.yml:14'
-      - 'Warn: jobLevel ''packages'' permission set to ''write'': .github/workflows/release.yml:158'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:156'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:190'
+      - 'Warn: jobLevel ''packages'' permission set to ''write'': .github/workflows/release.yml:158'
       - 'Warn: jobLevel ''packages'' permission set to ''write'': .github/workflows/release.yml:192'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:190'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/benchmark.yml:10'
       - 'Warn: no topLevel permission defined: .github/workflows/build.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/conventional-commits.yml:1'
@@ -214,8 +214,8 @@ checks:
       - 'Warn: npmCommand not pinned by hash: .github/workflows/release-please.yml:39'
       - 'Info:  31 out of  31 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   7 out of   8 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   1 npmCommand dependencies pinned'
       - 'Info:   6 out of   7 containerImage dependencies pinned'
+      - 'Info:   0 out of   1 npmCommand dependencies pinned'
   - name: CII-Best-Practices
     score: 5
     reason: 'badge detected: Passing'
@@ -242,15 +242,6 @@ checks:
       - 'Info: Found linked content: github.com/hairyhenderson/.github/SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: github.com/hairyhenderson/.github/SECURITY.md:1'
-  - name: Branch-Protection
-    score: 3
-    reason: branch protection is not maximal on development and all release branches
-    details:
-      - 'Info: ''allow deletion'' disabled on branch ''main'''
-      - 'Info: ''force pushes'' disabled on branch ''main'''
-      - 'Warn: branch ''main'' does not require approvers'
-      - 'Warn: codeowners review is not required on branch ''main'''
-      - 'Info: status check found to merge onto on branch ''main'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -265,6 +256,15 @@ checks:
       - 'Warn: release artifact v5.0.0 does not have provenance: https://api.github.com/repos/hairyhenderson/gomplate/releases/278636127'
       - 'Warn: release artifact v4.3.3 does not have provenance: https://api.github.com/repos/hairyhenderson/gomplate/releases/231998641'
       - 'Warn: release artifact v4.3.2 does not have provenance: https://api.github.com/repos/hairyhenderson/gomplate/releases/212336332'
+  - name: Branch-Protection
+    score: 3
+    reason: branch protection is not maximal on development and all release branches
+    details:
+      - 'Info: ''allow deletion'' disabled on branch ''main'''
+      - 'Info: ''force pushes'' disabled on branch ''main'''
+      - 'Warn: branch ''main'' does not require approvers'
+      - 'Warn: codeowners review is not required on branch ''main'''
+      - 'Info: status check found to merge onto on branch ''main'''
   - name: SAST
     score: 9
     reason: SAST tool is not run on all commits -- score normalized to 9

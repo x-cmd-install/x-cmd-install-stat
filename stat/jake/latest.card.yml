@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-09-21T05:26:46Z
+  collectedAt: 2026-09-22T05:20:24Z
 timeline:
   created: 2010-03-22
   lastCommit: 2026-05-25
@@ -30,7 +30,7 @@ language:
 totalBytes: 181633
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 0
     mergedPR: 0
     openPR: 0
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 9
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 0
     mergedPR: 1
     openPR: 1
@@ -70,7 +70,7 @@ recent:
     openIssue: 0
     commit: 13
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 0
     mergedPR: 3
     openPR: 1
@@ -86,7 +86,7 @@ total:
   commit: 1456
 ---
 path: /home/runner/.x-repo/github.com/jakejs/jake
-collectedAt: 2026-09-21T05:26:46Z
+collectedAt: 2026-09-22T05:20:25Z
 loc:
   JavaScript:
     code: 4285
@@ -129,7 +129,7 @@ total:
   blanks: 1106
   files: 48
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/jakejs/jake
   commit: 322b1b2b4451c632c56c6af19914895b4db41b61
@@ -138,14 +138,9 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 2.1
 checks:
-  - name: Packaging
+  - name: Token-Permissions
     score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 1
-    reason: Found 3/27 approved changesets -- score normalized to 1
+    reason: No tokens found
     details: null
   - name: Dangerous-Workflow
     score: -1
@@ -155,13 +150,18 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Token-Permissions
-    score: -1
-    reason: No tokens found
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 1
+    reason: Found 3/27 approved changesets -- score normalized to 1
     details: null
   - name: Pinned-Dependencies
     score: -1
@@ -171,6 +171,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -179,11 +184,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected

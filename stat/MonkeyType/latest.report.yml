@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-09-21T05:46:21Z
+  collectedAt: 2026-09-22T05:44:33Z
 timeline:
   created: 2017-07-11
   lastCommit: 2025-06-14
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 
   lastPrerelease: 
 popularity:
-  star: 5003
+  star: 5004
   watcher: 57
   fork: 209
   release: 0
@@ -27,7 +27,7 @@ language:
 totalBytes: 250805
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 0
     mergedPR: 0
     openPR: 3
@@ -59,7 +59,7 @@ recent:
     openIssue: 1
     commit: 0
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 0
     mergedPR: 0
     openPR: 15
@@ -67,7 +67,7 @@ recent:
     openIssue: 1
     commit: 0
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 0
     mergedPR: 2
     openPR: 17
@@ -83,7 +83,7 @@ total:
   commit: 355
 ---
 path: /home/runner/.x-repo/github.com/Instagram/MonkeyType
-collectedAt: 2026-09-21T05:46:25Z
+collectedAt: 2026-09-22T05:44:35Z
 loc:
   Python:
     code: 6402
@@ -136,7 +136,7 @@ total:
   blanks: 1619
   files: 56
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/Instagram/MonkeyType
   commit: 15e7bca60146a7afbde46ee8782a0c650f781c74
@@ -145,19 +145,20 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.1
 checks:
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 3
-    reason: Found 7/18 approved changesets -- score normalized to 3
-    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Code-Review
+    score: 3
+    reason: Found 7/18 approved changesets -- score normalized to 3
+    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
@@ -166,12 +167,6 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -185,6 +180,11 @@ checks:
       - 'Warn: pipCommand not pinned by hash: .github/workflows/test.yml:40'
       - 'Info:   0 out of   6 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 pipCommand dependencies pinned'
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -204,10 +204,6 @@ checks:
     score: -1
     reason: no releases found
     details: null
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Security-Policy
     score: 9
     reason: security policy file detected
@@ -216,6 +212,10 @@ checks:
       - 'Info: Found linked content: github.com/Instagram/.github/SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: github.com/Instagram/.github/SECURITY.md:1'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

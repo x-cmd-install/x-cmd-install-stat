@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.13.0"
   latestRelease: "v3.13.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-21T06:43:04Z
+  collectedAt: 2026-09-22T06:43:38Z
 timeline:
   created: 2010-03-20
   lastCommit: 2026-08-16
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-01-28
   lastPrerelease: 
 popularity:
-  star: 3734
+  star: 3733
   watcher: 91
   fork: 479
   release: 69
@@ -34,7 +34,7 @@ language:
 totalBytes: 1761659
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 2
@@ -42,7 +42,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 13
     openPR: 2
@@ -50,7 +50,7 @@ recent:
     openIssue: 0
     commit: 17
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 0
     mergedPR: 23
     openPR: 2
@@ -58,7 +58,7 @@ recent:
     openIssue: 1
     commit: 30
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 0
     mergedPR: 27
     openPR: 4
@@ -66,7 +66,7 @@ recent:
     openIssue: 8
     commit: 38
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 1
     mergedPR: 41
     openPR: 6
@@ -74,7 +74,7 @@ recent:
     openIssue: 18
     commit: 65
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 69
     mergedPR: 74
     openPR: 13
@@ -90,7 +90,7 @@ total:
   commit: 2974
 ---
 path: /home/runner/.x-repo/github.com/luarocks/luarocks
-collectedAt: 2026-09-21T06:43:16Z
+collectedAt: 2026-09-22T06:43:51Z
 loc:
   Lua:
     code: 27044
@@ -153,7 +153,7 @@ total:
   blanks: 9557
   files: 266
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/luarocks/luarocks
   commit: 2d2cc8eff2f03c23d142f8059146fb241dcf56b5
@@ -162,10 +162,6 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 5.8
 checks:
-  - name: Code-Review
-    score: 9
-    reason: Found 22/23 approved changesets -- score normalized to 9
-    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -174,21 +170,22 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 11 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/pr-gh-actions.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
-      - 'Info: no jobLevel write permissions found'
-  - name: Maintained
+  - name: Code-Review
+    score: 9
+    reason: Found 22/23 approved changesets -- score normalized to 9
+    details: null
+  - name: Dangerous-Workflow
     score: 10
-    reason: 30 commit(s) and 11 issue activity found in the last 90 days -- score normalized to 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Binary-Artifacts
     score: 0
@@ -218,14 +215,13 @@ checks:
       - 'Warn: binary detected: win32/tools/mv.exe:1'
       - 'Warn: binary detected: win32/tools/uname.exe:1'
       - 'Warn: binary detected: win32/tools/wget.exe:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: CII-Best-Practices
+  - name: Token-Permissions
     score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/pr-gh-actions.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 8
     reason: dependency not pinned by hash detected -- score normalized to 8
@@ -234,6 +230,10 @@ checks:
       - 'Info:  15 out of  15 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   6 out of   6 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 pipCommand dependencies pinned'
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed

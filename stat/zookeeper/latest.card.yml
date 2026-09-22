@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-09-21T05:04:04Z
+  collectedAt: 2026-09-22T05:07:28Z
 timeline:
   created: 2009-03-27
   lastCommit: 2026-09-20
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 
   lastPrerelease: 
 popularity:
-  star: 12809
+  star: 12808
   watcher: 650
-  fork: 7320
+  fork: 7319
   release: 0
   contributor: 267
   pullRequest: 2454
@@ -46,7 +46,7 @@ language:
 totalBytes: 10727866
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 10
     openPR: 8
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 14
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 19
     openPR: 14
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 22
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 0
     mergedPR: 30
     openPR: 18
@@ -70,7 +70,7 @@ recent:
     openIssue: 0
     commit: 34
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 0
     mergedPR: 55
     openPR: 28
@@ -78,15 +78,15 @@ recent:
     openIssue: 0
     commit: 52
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 0
-    mergedPR: 84
+    mergedPR: 83
     openPR: 39
     closedIssue: 0
     openIssue: 0
     commit: 79
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 0
     mergedPR: 169
     openPR: 50
@@ -102,7 +102,7 @@ total:
   commit: 2742
 ---
 path: /home/runner/.x-repo/github.com/apache/zookeeper
-collectedAt: 2026-09-21T05:04:18Z
+collectedAt: 2026-09-22T05:07:53Z
 loc:
   Java:
     code: 126881
@@ -250,10 +250,10 @@ total:
   blanks: 35499
   files: 1432
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/apache/zookeeper
-  commit: 9102d0be12e66a5c592d8cbf0c6865f68ffa9252
+  commit: b9818714f4790347c27f37fd49739a91b46c8e5e
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -265,13 +265,17 @@ checks:
     details: null
   - name: Code-Review
     score: 8
-    reason: Found 26/30 approved changesets -- score normalized to 8
+    reason: Found 25/30 approved changesets -- score normalized to 8
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -282,10 +286,6 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/scripts.yaml:31'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/website.yaml:27'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -294,12 +294,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE.txt:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE.txt:0'
   - name: Pinned-Dependencies
     score: 7
     reason: dependency not pinned by hash detected -- score normalized to 7
@@ -311,20 +305,21 @@ checks:
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   1 out of   1 npmCommand dependencies pinned'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
     details:
       - 'Info: OSSFuzz integration found'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
+  - name: License
+    score: 10
+    reason: license file detected
     details:
-      - 'Warn: branch protection not enabled for branch ''master'''
+      - 'Info: project has a license file: LICENSE.txt:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE.txt:0'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -333,9 +328,14 @@ checks:
       - 'Info: Found linked content: github.com/apache/.github/.github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/apache/.github/.github/SECURITY.md:1'
       - 'Info: Found text in security policy: github.com/apache/.github/.github/SECURITY.md:1'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
-      - 'Warn: 0 commits out of 27 are checked with a SAST tool'
+      - 'Warn: 0 commits out of 25 are checked with a SAST tool'
 ---

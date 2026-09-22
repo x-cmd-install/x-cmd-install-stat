@@ -2,15 +2,15 @@ about:
   description: "Abseil Common Libraries (C++)"
   license: Apache-2.0
   homepage: https://abseil.io
-  head: 2d5a8e3
+  head: 51c2973
   archived: false
   latestVersion: "20260817.0"
   latestRelease: "20260817.0"
   latestPrerelease: "20260526.rc1"
-  collectedAt: 2026-09-21T06:29:58Z
+  collectedAt: 2026-09-22T06:24:09Z
 timeline:
   created: 2017-09-20
-  lastCommit: 2026-09-19
+  lastCommit: 2026-09-22
   lastVersion: 2026-08-18
   lastRelease: 2026-08-18
   lastPrerelease: 2026-05-28
@@ -23,7 +23,7 @@ popularity:
   pullRequest: 730
   issue: 1007
 language:
-  C++: 10273106
+  C++: 10273927
   Starlark: 286555
   CMake: 233238
   NASL: 217795
@@ -32,75 +32,75 @@ language:
   Python: 26232
   Batchfile: 7130
   Linker Script: 352
-totalBytes: 11176268
+totalBytes: 11177089
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 1
     openPR: 8
-    closedIssue: 6
-    openIssue: 6
-    commit: 35
+    closedIssue: 7
+    openIssue: 5
+    commit: 37
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 1
     mergedPR: 2
     openPR: 10
-    closedIssue: 8
-    openIssue: 6
-    commit: 95
+    closedIssue: 9
+    openIssue: 5
+    commit: 97
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 1
     mergedPR: 2
     openPR: 13
     closedIssue: 16
-    openIssue: 6
-    commit: 165
+    openIssue: 5
+    commit: 167
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 3
     mergedPR: 5
     openPR: 26
-    closedIssue: 24
-    openIssue: 12
-    commit: 261
+    closedIssue: 25
+    openIssue: 11
+    commit: 263
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 9
     mergedPR: 12
     openPR: 36
-    closedIssue: 45
-    openIssue: 22
-    commit: 424
+    closedIssue: 46
+    openIssue: 21
+    commit: 426
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 19
     mergedPR: 22
     openPR: 45
-    closedIssue: 85
-    openIssue: 47
-    commit: 1344
+    closedIssue: 86
+    openIssue: 46
+    commit: 1349
 total:
   release: 48
   mergedPR: 253
   openPR: 50
-  closedIssue: 816
-  openIssue: 191
-  commit: 3732
+  closedIssue: 817
+  openIssue: 190
+  commit: 3737
 ---
 path: /home/runner/.x-repo/github.com/abseil/abseil-cpp
-collectedAt: 2026-09-21T06:30:02Z
+collectedAt: 2026-09-22T06:24:13Z
 loc:
   Cpp:
-    code: 136817
+    code: 136829
     comments: 23053
     blanks: 22606
     files: 489
   CHeader:
-    code: 53631
-    comments: 37112
+    code: 53644
+    comments: 37105
     blanks: 12144
     files: 385
   CMake:
@@ -149,29 +149,33 @@ loc:
     blanks: 142
     files: 6
 total:
-  code: 207296
-  comments: 62340
+  code: 207321
+  comments: 62333
   blanks: 36435
   files: 961
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/abseil/abseil-cpp
-  commit: 8bd6e5097d96974f5c85031759c545a8e7426b4a
+  commit: f573cfba0bd0de72949cf32f31be544adf09e683
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 6
 checks:
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 4 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Token-Permissions
     score: -1
     reason: No tokens found
@@ -179,10 +183,6 @@ checks:
   - name: Dangerous-Workflow
     score: -1
     reason: no workflows found
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: SAST
     score: 0
@@ -212,10 +212,14 @@ checks:
     reason: project is fuzzed
     details:
       - 'Info: OSSFuzz integration found'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -228,12 +232,8 @@ checks:
       - 'Warn: release artifact 20260526.0 does not have provenance: https://api.github.com/repos/abseil/abseil-cpp/releases/332708430'
       - 'Warn: release artifact 20260107.1 does not have provenance: https://api.github.com/repos/abseil/abseil-cpp/releases/285309881'
       - 'Warn: release artifact 20250814.2 does not have provenance: https://api.github.com/repos/abseil/abseil-cpp/releases/285310731'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
 ---

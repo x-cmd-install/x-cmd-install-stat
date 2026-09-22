@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.7.20"
   latestRelease: "v0.7.20"
   latestPrerelease: "v0.5.4"
-  collectedAt: 2026-09-21T06:25:27Z
+  collectedAt: 2026-09-22T06:29:47Z
 timeline:
   created: 2017-08-01
   lastCommit: 2026-08-26
@@ -20,7 +20,7 @@ popularity:
   fork: 455
   release: 66
   contributor: 505
-  pullRequest: 807
+  pullRequest: 809
   issue: 300
 language:
   Go: 403162
@@ -31,15 +31,15 @@ language:
 totalBytes: 465743
 recent:
   last30d:
-    since: 2026-08-22
-    release: 2
+    since: 2026-08-23
+    release: 1
     mergedPR: 2
     openPR: 5
     closedIssue: 0
     openIssue: 2
     commit: 0
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 2
     mergedPR: 4
     openPR: 7
@@ -47,7 +47,7 @@ recent:
     openIssue: 2
     commit: 7
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 2
     mergedPR: 8
     openPR: 9
@@ -55,7 +55,7 @@ recent:
     openIssue: 3
     commit: 11
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 8
     mergedPR: 29
     openPR: 12
@@ -63,7 +63,7 @@ recent:
     openIssue: 3
     commit: 34
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 13
     mergedPR: 69
     openPR: 14
@@ -71,9 +71,9 @@ recent:
     openIssue: 3
     commit: 86
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 24
-    mergedPR: 160
+    mergedPR: 159
     openPR: 14
     closedIssue: 5
     openIssue: 3
@@ -87,7 +87,7 @@ total:
   commit: 1030
 ---
 path: /home/runner/.x-repo/github.com/kubernetes-sigs/aws-iam-authenticator
-collectedAt: 2026-09-21T06:25:32Z
+collectedAt: 2026-09-22T06:29:53Z
 loc:
   Go:
     code: 10137
@@ -140,7 +140,7 @@ total:
   blanks: 1964
   files: 132
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/kubernetes-sigs/aws-iam-authenticator
   commit: 5ae0e8e3b6dea279c25278c8f4e701cd3f7bcbb7
@@ -161,6 +161,10 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 9
     reason: detected GitHub workflow tokens with excessive permissions
@@ -169,10 +173,6 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/deps.yml:6'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/pr.yml:8'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -201,18 +201,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: github.com/kubernetes-sigs/.github/SECURITY.md:1'
-      - 'Info: Found linked content: github.com/kubernetes-sigs/.github/SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/kubernetes-sigs/.github/SECURITY.md:1'
-      - 'Info: Found text in security policy: github.com/kubernetes-sigs/.github/SECURITY.md:1'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -227,6 +215,18 @@ checks:
       - 'Warn: release artifact v0.7.18 does not have provenance: https://api.github.com/repos/kubernetes-sigs/aws-iam-authenticator/releases/339746615'
       - 'Warn: release artifact v0.7.17 does not have provenance: https://api.github.com/repos/kubernetes-sigs/aws-iam-authenticator/releases/333357679'
       - 'Warn: release artifact v0.7.16 does not have provenance: https://api.github.com/repos/kubernetes-sigs/aws-iam-authenticator/releases/324467047'
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: github.com/kubernetes-sigs/.github/SECURITY.md:1'
+      - 'Info: Found linked content: github.com/kubernetes-sigs/.github/SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/kubernetes-sigs/.github/SECURITY.md:1'
+      - 'Info: Found text in security policy: github.com/kubernetes-sigs/.github/SECURITY.md:1'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Packaging
     score: 10
     reason: packaging workflow detected

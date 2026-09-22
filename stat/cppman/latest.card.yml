@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.6.3"
   latestRelease: "v0.6.3"
   latestPrerelease: ""
-  collectedAt: 2026-09-21T05:37:04Z
+  collectedAt: 2026-09-22T05:36:42Z
 timeline:
   created: 2010-07-03
   lastCommit: 2026-07-27
@@ -31,7 +31,7 @@ language:
 totalBytes: 95497
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 1
@@ -39,7 +39,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 2
     mergedPR: 0
     openPR: 1
@@ -47,7 +47,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 2
     mergedPR: 0
     openPR: 1
@@ -55,7 +55,7 @@ recent:
     openIssue: 2
     commit: 12
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 2
     mergedPR: 2
     openPR: 1
@@ -63,7 +63,7 @@ recent:
     openIssue: 2
     commit: 18
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 3
     mergedPR: 2
     openPR: 1
@@ -71,7 +71,7 @@ recent:
     openIssue: 3
     commit: 27
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 4
     mergedPR: 8
     openPR: 1
@@ -87,7 +87,7 @@ total:
   commit: 500
 ---
 path: /home/runner/.x-repo/github.com/aitjcize/cppman
-collectedAt: 2026-09-21T05:37:05Z
+collectedAt: 2026-09-22T05:36:43Z
 loc:
   Python:
     code: 1600
@@ -140,7 +140,7 @@ total:
   blanks: 414
   files: 23
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/aitjcize/cppman
   commit: 69c6ada3d01c76749d0a0c8314c25fc5301eb982
@@ -149,6 +149,10 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.5
 checks:
+  - name: Code-Review
+    score: 1
+    reason: Found 4/29 approved changesets -- score normalized to 1
+    details: null
   - name: Maintained
     score: 10
     reason: 12 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
@@ -156,14 +160,6 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Code-Review
-    score: 1
-    reason: Found 4/29 approved changesets -- score normalized to 1
     details: null
   - name: Packaging
     score: -1
@@ -177,6 +173,10 @@ checks:
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:9'
       - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -198,11 +198,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -211,11 +206,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Branch-Protection
+  - name: Fuzzing
     score: 0
-    reason: branch protection not enabled on development/release branches
+    reason: project is not fuzzed
     details:
-      - 'Warn: branch protection not enabled for branch ''main'''
+      - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: COPYING:0'
+      - 'Info: FSF or OSI recognized license: GNU General Public License v3.0: COPYING:0'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -226,12 +227,11 @@ checks:
       - 'Warn: release artifact v0.6.3 does not have provenance: https://api.github.com/repos/aitjcize/cppman/releases/360210572'
       - 'Warn: release artifact v0.6.2 does not have provenance: https://api.github.com/repos/aitjcize/cppman/releases/360174303'
       - 'Warn: release artifact v0.6.0 does not have provenance: https://api.github.com/repos/aitjcize/cppman/releases/271645222'
-  - name: License
-    score: 10
-    reason: license file detected
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
     details:
-      - 'Info: project has a license file: COPYING:0'
-      - 'Info: FSF or OSI recognized license: GNU General Public License v3.0: COPYING:0'
+      - 'Warn: branch protection not enabled for branch ''main'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

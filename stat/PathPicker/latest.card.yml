@@ -7,7 +7,7 @@ about:
   latestVersion: "0.9.5"
   latestRelease: "0.9.5"
   latestPrerelease: ""
-  collectedAt: 2026-09-21T06:34:02Z
+  collectedAt: 2026-09-22T06:37:22Z
 timeline:
   created: 2015-05-01
   lastCommit: 2024-09-05
@@ -31,7 +31,7 @@ language:
 totalBytes: 153654
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -39,7 +39,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -47,7 +47,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -55,7 +55,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 0
     mergedPR: 0
     openPR: 0
@@ -63,7 +63,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 0
     mergedPR: 0
     openPR: 2
@@ -71,7 +71,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 0
     mergedPR: 0
     openPR: 2
@@ -87,7 +87,7 @@ total:
   commit: 700
 ---
 path: /home/runner/.x-repo/github.com/facebook/PathPicker
-collectedAt: 2026-09-21T06:34:03Z
+collectedAt: 2026-09-22T06:37:23Z
 loc:
   Python:
     code: 3003
@@ -170,7 +170,7 @@ total:
   blanks: 1508
   files: 107
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/facebook/PathPicker
   commit: c1dd1f7fc4dae5aa807218cf086942f1c9241783
@@ -179,17 +179,22 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.2
 checks:
-  - name: Code-Review
-    score: 8
-    reason: Found 15/18 approved changesets -- score normalized to 8
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+  - name: Code-Review
+    score: 8
+    reason: Found 15/18 approved changesets -- score normalized to 8
     details: null
   - name: Token-Permissions
     score: 0
@@ -201,11 +206,6 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -240,6 +240,10 @@ checks:
       - 'Warn: release artifact 0.8.2 does not have provenance: https://api.github.com/repos/facebook/PathPicker/releases/19168544'
       - 'Warn: release artifact 0.7.2 does not have provenance: https://api.github.com/repos/facebook/PathPicker/releases/5052624'
       - 'Warn: release artifact 0.7.1 does not have provenance: https://api.github.com/repos/facebook/PathPicker/releases/3034303'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Security-Policy
     score: 9
     reason: security policy file detected
@@ -248,10 +252,6 @@ checks:
       - 'Info: Found linked content: github.com/facebook/.github/SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: github.com/facebook/.github/SECURITY.md:1'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

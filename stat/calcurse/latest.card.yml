@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-09-21T06:40:11Z
+  collectedAt: 2026-09-22T06:37:59Z
 timeline:
   created: 2013-09-24
   lastCommit: 2026-08-05
@@ -31,7 +31,7 @@ language:
 totalBytes: 984087
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -39,7 +39,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -47,7 +47,7 @@ recent:
     openIssue: 1
     commit: 3
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -55,7 +55,7 @@ recent:
     openIssue: 1
     commit: 3
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 0
     mergedPR: 0
     openPR: 3
@@ -63,7 +63,7 @@ recent:
     openIssue: 1
     commit: 3
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 0
     mergedPR: 0
     openPR: 4
@@ -71,7 +71,7 @@ recent:
     openIssue: 6
     commit: 3
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 0
     mergedPR: 0
     openPR: 5
@@ -87,7 +87,7 @@ total:
   commit: 2055
 ---
 path: /home/runner/.x-repo/github.com/lfos/calcurse
-collectedAt: 2026-09-21T06:40:14Z
+collectedAt: 2026-09-22T06:38:02Z
 loc:
   C:
     code: 17096
@@ -140,7 +140,7 @@ total:
   blanks: 6819
   files: 302
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/lfos/calcurse
   commit: 8b44a54f3a0bdf0701b55ccc7c0a8a8d54452cf1
@@ -149,10 +149,13 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.2
 checks:
-  - name: Code-Review
+  - name: Token-Permissions
     score: 0
-    reason: Found 0/30 approved changesets -- score normalized to 0
-    details: null
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/lint_python.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/make.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Maintained
     score: 4
     reason: 3 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 4
@@ -161,13 +164,10 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Token-Permissions
+  - name: Code-Review
     score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/lint_python.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/make.yml:1'
-      - 'Info: no jobLevel write permissions found'
+    reason: Found 0/30 approved changesets -- score normalized to 0
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -204,17 +204,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: COPYING:0'
       - 'Info: FSF or OSI recognized license: BSD 2-Clause "Simplified" License: COPYING:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: -1
     reason: no releases found

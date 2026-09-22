@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.6.1"
   latestRelease: "v1.6.1"
   latestPrerelease: ""
-  collectedAt: 2026-09-21T06:25:44Z
+  collectedAt: 2026-09-22T06:37:03Z
 timeline:
   created: 2026-04-08
   lastCommit: 2026-09-16
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-16
   lastPrerelease: 
 popularity:
-  star: 5970
+  star: 5975
   watcher: 40
   fork: 670
   release: 22
@@ -34,7 +34,7 @@ language:
 totalBytes: 1573798
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 4
     mergedPR: 0
     openPR: 0
@@ -42,15 +42,15 @@ recent:
     openIssue: 6
     commit: 4
   last60d:
-    since: 2026-07-23
-    release: 9
+    since: 2026-07-24
+    release: 7
     mergedPR: 0
     openPR: 0
-    closedIssue: 17
-    openIssue: 13
+    closedIssue: 16
+    openIssue: 12
     commit: 8
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 13
     mergedPR: 0
     openPR: 0
@@ -58,7 +58,7 @@ recent:
     openIssue: 18
     commit: 12
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 22
     mergedPR: 0
     openPR: 0
@@ -66,7 +66,7 @@ recent:
     openIssue: 26
     commit: 36
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 22
     mergedPR: 0
     openPR: 0
@@ -74,7 +74,7 @@ recent:
     openIssue: 26
     commit: 36
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 22
     mergedPR: 0
     openPR: 0
@@ -90,7 +90,7 @@ total:
   commit: 41
 ---
 path: /home/runner/.x-repo/github.com/google/agents-cli
-collectedAt: 2026-09-21T06:25:45Z
+collectedAt: 2026-09-22T06:37:06Z
 loc:
   Python:
     code: 25922
@@ -180,4 +180,4 @@ total:
 ---
 
 ---
-{"id":389904271,"author":{"login":"pvlsirotkin","id":285394121,"node_id":"U_kgDOEQLEyQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOR9TwcM4XPXeP","tag_name":"v1.6.1","target_commitish":"main","name":"Release v1.6.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-16T12:22:17Z","updated_at":"2026-09-16T12:40:10Z","published_at":"2026-09-16T12:31:44Z","assets":[{"id":567932082,"node_id":"RA_kwDOR9TwcM4h2fSy","name":"google_agents_cli-1.6.1-py3-none-any.whl","label":"","uploader":{"login":"pvlsirotkin","id":285394121,"node_id":"U_kgDOEQLEyQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":1343376,"digest":"sha256:82fd7b81d1fed64c2f69d055b1657d9007bc9fdd8c65e590bf3d8ff6361608be","download_count":4,"created_at":"2026-09-16T12:31:43Z","updated_at":"2026-09-16T12:31:43Z"},{"id":567932083,"node_id":"RA_kwDOR9TwcM4h2fSz","name":"google_agents_cli-1.6.1.tar.gz","label":"","uploader":{"login":"pvlsirotkin","id":285394121,"node_id":"U_kgDOEQLEyQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":1091470,"digest":"sha256:564d41d9ba7a2b872ec9efbb2004623eaec86ef2686736b4bae567babb0c5519","download_count":4,"created_at":"2026-09-16T12:31:43Z","updated_at":"2026-09-16T12:31:43Z"}],"body":"Release v1.6.1\n\n- **ADK Go is now available to everyone (Preview).** The `adk_go` template (\"Go agent with A2A\") now appears in `agents-cli scaffold create` with no experiment override, and Go projects get the toolchain Python already has:\n  - Deploy to Agent Runtime, Cloud Run and GKE, with session methods exposed to `agent_engines.get()` clients.\n  - CloudSQL, Agent Platform and in-memory session services.\n  - Prompts and responses in BigQuery Agent Analytics, and telemetry through OTLP.\n  - CI/CD templates at parity with Python.\n  - The bundled skills cover Go and Python.\n- Scaffolds now default to `gemini-3.8-flash`.\n- Pin `google-adk` below 2.9.0. On 2.9.0 a Cloud Run agent's prompts and responses stopped reaching BigQuery Agent Analytics.\n- `agents-cli scaffold create` no longer asks for a region when the deployment target is `none`.\n- The one-off `agents-cli run` no longer prints stop and resume hints for a server it did not leave running.\n- `agents-cli deploy` prints how to talk to a Cloud Run agent once the deploy finishes.\n- `agents-cli deploy` can change the identity type on an existing agent.\n- `agents-cli deploy` now reports the correct identity after a deploy, instead of the wrong principal for agents using Agent Identity.\n- Exclude vendored extensions from the deploy payload, where they could add megabytes to every deploy.\n- `agents-cli infra single-project` now correctly enables the Service Usage API, so a new project bootstraps without enabling it by hand.\n- Fix remote ADK samples generating two agent directories and an unbuildable project.\n- Scaffolded Dockerfiles install uv from a pinned image instead of `pip install`.\n- `agents-cli run` and `agents-cli eval` no longer stop a background server they only borrowed.\n  - https://github.com/google/agents-cli/issues/71\n- Startup and version notices now go to stderr, so `--json` output stays machine-readable.\n  - https://github.com/google/agents-cli/issues/69\n- `agents-cli eval generate` no longer silently drops per-case session state.\n  - https://github.com/google/agents-cli/issues/52\n- `agents-cli run --mode a2a` now shows status updates, errors and empty turns instead of staying silent.\n- The `run` resume hint includes `--url` and the other routing flags.\n- `agents-cli info --json` reports `root_agent_name`.\n- `agents-cli extension add` no longer copies ignored files from a `local@` source.\n- Fix the macOS-only `sed` in the Starter Pack migration guide and spell out the dry-run and apply steps.\n  - https://github.com/google/agents-cli/issues/78\n"}
+{"id":389904271,"author":{"login":"pvlsirotkin","id":285394121,"node_id":"U_kgDOEQLEyQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOR9TwcM4XPXeP","tag_name":"v1.6.1","target_commitish":"main","name":"Release v1.6.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-16T12:22:17Z","updated_at":"2026-09-16T12:40:10Z","published_at":"2026-09-16T12:31:44Z","assets":[{"id":567932082,"node_id":"RA_kwDOR9TwcM4h2fSy","name":"google_agents_cli-1.6.1-py3-none-any.whl","label":"","uploader":{"login":"pvlsirotkin","id":285394121,"node_id":"U_kgDOEQLEyQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":1343376,"digest":"sha256:82fd7b81d1fed64c2f69d055b1657d9007bc9fdd8c65e590bf3d8ff6361608be","download_count":4,"created_at":"2026-09-16T12:31:43Z","updated_at":"2026-09-16T12:31:43Z"},{"id":567932083,"node_id":"RA_kwDOR9TwcM4h2fSz","name":"google_agents_cli-1.6.1.tar.gz","label":"","uploader":{"login":"pvlsirotkin","id":285394121,"node_id":"U_kgDOEQLEyQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":1091470,"digest":"sha256:564d41d9ba7a2b872ec9efbb2004623eaec86ef2686736b4bae567babb0c5519","download_count":5,"created_at":"2026-09-16T12:31:43Z","updated_at":"2026-09-16T12:31:43Z"}],"body":"Release v1.6.1\n\n- **ADK Go is now available to everyone (Preview).** The `adk_go` template (\"Go agent with A2A\") now appears in `agents-cli scaffold create` with no experiment override, and Go projects get the toolchain Python already has:\n  - Deploy to Agent Runtime, Cloud Run and GKE, with session methods exposed to `agent_engines.get()` clients.\n  - CloudSQL, Agent Platform and in-memory session services.\n  - Prompts and responses in BigQuery Agent Analytics, and telemetry through OTLP.\n  - CI/CD templates at parity with Python.\n  - The bundled skills cover Go and Python.\n- Scaffolds now default to `gemini-3.8-flash`.\n- Pin `google-adk` below 2.9.0. On 2.9.0 a Cloud Run agent's prompts and responses stopped reaching BigQuery Agent Analytics.\n- `agents-cli scaffold create` no longer asks for a region when the deployment target is `none`.\n- The one-off `agents-cli run` no longer prints stop and resume hints for a server it did not leave running.\n- `agents-cli deploy` prints how to talk to a Cloud Run agent once the deploy finishes.\n- `agents-cli deploy` can change the identity type on an existing agent.\n- `agents-cli deploy` now reports the correct identity after a deploy, instead of the wrong principal for agents using Agent Identity.\n- Exclude vendored extensions from the deploy payload, where they could add megabytes to every deploy.\n- `agents-cli infra single-project` now correctly enables the Service Usage API, so a new project bootstraps without enabling it by hand.\n- Fix remote ADK samples generating two agent directories and an unbuildable project.\n- Scaffolded Dockerfiles install uv from a pinned image instead of `pip install`.\n- `agents-cli run` and `agents-cli eval` no longer stop a background server they only borrowed.\n  - https://github.com/google/agents-cli/issues/71\n- Startup and version notices now go to stderr, so `--json` output stays machine-readable.\n  - https://github.com/google/agents-cli/issues/69\n- `agents-cli eval generate` no longer silently drops per-case session state.\n  - https://github.com/google/agents-cli/issues/52\n- `agents-cli run --mode a2a` now shows status updates, errors and empty turns instead of staying silent.\n- The `run` resume hint includes `--url` and the other routing flags.\n- `agents-cli info --json` reports `root_agent_name`.\n- `agents-cli extension add` no longer copies ignored files from a `local@` source.\n- Fix the macOS-only `sed` in the Starter Pack migration guide and spell out the dry-run and apply steps.\n  - https://github.com/google/agents-cli/issues/78\n"}

@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-09-21T06:35:08Z
+  collectedAt: 2026-09-22T06:45:10Z
 timeline:
   created: 2018-06-07
   lastCommit: 2023-01-20
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 
   lastPrerelease: 
 popularity:
-  star: 1608
+  star: 1607
   watcher: 8
   fork: 136
   release: 0
@@ -31,7 +31,7 @@ language:
 totalBytes: 134049
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -39,7 +39,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -47,7 +47,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -55,7 +55,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 0
     mergedPR: 0
     openPR: 0
@@ -63,7 +63,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 0
     mergedPR: 0
     openPR: 0
@@ -71,7 +71,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 0
     mergedPR: 0
     openPR: 16
@@ -87,7 +87,7 @@ total:
   commit: 186
 ---
 path: /home/runner/.x-repo/github.com/facebookincubator/Bowler
-collectedAt: 2026-09-21T06:35:08Z
+collectedAt: 2026-09-22T06:45:11Z
 loc:
   Python:
     code: 2836
@@ -150,7 +150,7 @@ total:
   blanks: 1096
   files: 64
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/facebookincubator/Bowler
   commit: 92c9eeb7eebab8a1b65a989d0cf3b4947773ea2b
@@ -163,16 +163,20 @@ checks:
     score: 5
     reason: Found 8/16 approved changesets -- score normalized to 5
     details: null
-  - name: Maintained
-    score: 0
-    reason: project is archived
-    details:
-      - 'Warn: Repository is archived.'
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Maintained
+    score: 0
+    reason: project is archived
+    details:
+      - 'Warn: Repository is archived.'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -183,10 +187,6 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/build.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -206,15 +206,19 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Signed-Releases
+  - name: Branch-Protection
     score: -1
-    reason: no releases found
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
   - name: Security-Policy
     score: 9
@@ -224,10 +228,6 @@ checks:
       - 'Info: Found linked content: github.com/facebookincubator/.github/SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: github.com/facebookincubator/.github/SECURITY.md:1'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

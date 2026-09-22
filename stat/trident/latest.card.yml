@@ -7,7 +7,7 @@ about:
   latestVersion: "v26.06.1"
   latestRelease: "v26.06.1"
   latestPrerelease: "v20.01.0-beta.1"
-  collectedAt: 2026-09-21T03:58:57Z
+  collectedAt: 2026-09-22T03:56:30Z
 timeline:
   created: 2016-12-22
   lastCommit: 2026-09-15
@@ -34,7 +34,7 @@ language:
 totalBytes: 20023074
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 5
@@ -42,7 +42,7 @@ recent:
     openIssue: 9
     commit: 8
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 1
     mergedPR: 0
     openPR: 6
@@ -50,15 +50,15 @@ recent:
     openIssue: 13
     commit: 26
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 2
     mergedPR: 0
-    openPR: 11
+    openPR: 10
     closedIssue: 2
     openIssue: 21
     commit: 47
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 3
     mergedPR: 0
     openPR: 17
@@ -66,7 +66,7 @@ recent:
     openIssue: 37
     commit: 112
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 6
     mergedPR: 0
     openPR: 19
@@ -74,13 +74,13 @@ recent:
     openIssue: 62
     commit: 260
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 13
     mergedPR: 0
     openPR: 31
     closedIssue: 92
     openIssue: 120
-    commit: 488
+    commit: 485
 total:
   release: 75
   mergedPR: 4
@@ -90,7 +90,7 @@ total:
   commit: 1887
 ---
 path: /home/runner/.x-repo/github.com/NetApp/trident
-collectedAt: 2026-09-21T03:59:13Z
+collectedAt: 2026-09-22T03:56:42Z
 loc:
   Go:
     code: 2088441
@@ -153,10 +153,10 @@ total:
   blanks: 584577
   files: 6003
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/NetApp/trident
-  commit: 63e21f7d7e1e36e5f8662340fd731a5eb6d53d08
+  commit: 211afce836eedda13f8b547f2ab01fbb1c7e4f64
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -164,7 +164,7 @@ score: 4.8
 checks:
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Code-Review
     score: 0
@@ -175,6 +175,10 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -188,14 +192,16 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/github-actions.yml:15'
       - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/jira-check.yml:12'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: SAST
+    score: 10
+    reason: 'SAST tool detected: CodeQL'
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: no pull requests merged into dev branch'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -204,27 +210,25 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: SAST
-    score: 10
-    reason: 'SAST tool detected: CodeQL'
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: no pull requests merged into dev branch'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -239,10 +243,6 @@ checks:
       - 'Warn: release artifact v26.02.1 does not have provenance: https://api.github.com/repos/NetApp/trident/releases/318092824'
       - 'Warn: release artifact v26.02.0 does not have provenance: https://api.github.com/repos/NetApp/trident/releases/291163241'
       - 'Warn: release artifact v25.06.3 does not have provenance: https://api.github.com/repos/NetApp/trident/releases/261588961'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
@@ -251,6 +251,8 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:67: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/codeql.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:77: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/codeql.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:105: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/codeql.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:51: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:55: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:70: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:71: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:91: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
@@ -263,12 +265,10 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/github-actions.yml:230: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:297: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:28: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:51: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:55: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
       - 'Warn: containerImage not pinned by hash: Dockerfile:4'
       - 'Warn: containerImage not pinned by hash: Dockerfile.Windows:4: pin your Docker image by updating mcr.microsoft.com/windows/servercore:ltsc2022 to mcr.microsoft.com/windows/servercore:ltsc2022@sha256:76cf422c98ca437b308374d0498280541fa42ac7061bb44015a6c8b70cf4db6a'
       - 'Warn: containerImage not pinned by hash: Dockerfile.Windows:5: pin your Docker image by updating mcr.microsoft.com/windows/nanoserver:ltsc2022 to mcr.microsoft.com/windows/nanoserver:ltsc2022@sha256:8e17c72fbf586d21e7e5a4edf51d97d05ce2c095cbbd345246c69d151fb3ddb3'
-      - 'Warn: containerImage not pinned by hash: contrib/docker/plugin/Dockerfile:1: pin your Docker image by updating alpine:3 to alpine:3@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
+      - 'Warn: containerImage not pinned by hash: contrib/docker/plugin/Dockerfile:1: pin your Docker image by updating alpine:3 to alpine:3@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6'
       - 'Warn: containerImage not pinned by hash: operator/Dockerfile:4'
       - 'Warn: goCommand not pinned by hash: .github/workflows/github-actions.yml:181'
       - 'Info:   0 out of  16 GitHub-owned GitHubAction dependencies pinned'

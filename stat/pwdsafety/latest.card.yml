@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.4.2"
   latestRelease: "v0.4.2"
   latestPrerelease: "0.2"
-  collectedAt: 2026-09-21T05:22:01Z
+  collectedAt: 2026-09-22T05:25:27Z
 timeline:
   created: 2020-03-14
   lastCommit: 2026-05-26
@@ -29,7 +29,7 @@ language:
 totalBytes: 35946
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 1
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 0
     openPR: 1
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 0
     mergedPR: 0
     openPR: 1
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 0
     mergedPR: 3
     openPR: 1
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 3
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 1
     mergedPR: 8
     openPR: 1
@@ -69,7 +69,7 @@ recent:
     openIssue: 0
     commit: 10
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 2
     mergedPR: 23
     openPR: 1
@@ -85,7 +85,7 @@ total:
   commit: 501
 ---
 path: /home/runner/.x-repo/github.com/edoardottt/pwdsafety
-collectedAt: 2026-09-21T05:22:04Z
+collectedAt: 2026-09-22T05:25:31Z
 loc:
   Go:
     code: 912
@@ -123,7 +123,7 @@ total:
   blanks: 327
   files: 19
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/edoardottt/pwdsafety
   commit: 4b0571ecfe79ee10c21aa8dceb14167a99406fb4
@@ -136,10 +136,6 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Code-Review
-    score: 0
-    reason: Found 0/7 approved changesets -- score normalized to 0
-    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
@@ -148,15 +144,10 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Token-Permissions
+  - name: Code-Review
     score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/go.yml:1'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/golangci-lint.yml:10'
-      - 'Warn: no topLevel permission defined: .github/workflows/release-binary.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/release-test.yml:1'
-      - 'Info: no jobLevel write permissions found'
+    reason: Found 0/7 approved changesets -- score normalized to 0
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -174,6 +165,15 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release-test.yml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/edoardottt/pwdsafety/release-test.yml/master?enable=pin'
       - 'Info:   0 out of   8 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 third-party GitHubAction dependencies pinned'
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/go.yml:1'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/golangci-lint.yml:10'
+      - 'Warn: no topLevel permission defined: .github/workflows/release-binary.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/release-test.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -197,11 +197,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: GNU General Public License v3.0: LICENSE:0'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release-binary.yml:10'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -212,6 +207,11 @@ checks:
       - 'Warn: release artifact v0.4.2 does not have provenance: https://api.github.com/repos/edoardottt/pwdsafety/releases/299698227'
       - 'Warn: release artifact v0.4.1 does not have provenance: https://api.github.com/repos/edoardottt/pwdsafety/releases/247208509'
       - 'Warn: release artifact v0.4.0 does not have provenance: https://api.github.com/repos/edoardottt/pwdsafety/releases/151887044'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release-binary.yml:10'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches

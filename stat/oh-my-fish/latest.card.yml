@@ -7,7 +7,7 @@ about:
   latestVersion: "v8"
   latestRelease: "v8"
   latestPrerelease: ""
-  collectedAt: 2026-09-21T06:07:31Z
+  collectedAt: 2026-09-22T06:03:41Z
 timeline:
   created: 2015-09-03
   lastCommit: 2026-09-09
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-04-07
   lastPrerelease: 
 popularity:
-  star: 11392
+  star: 11391
   watcher: 125
   fork: 806
   release: 7
@@ -28,7 +28,7 @@ language:
 totalBytes: 102715
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 2
     openPR: 4
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 3
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 2
     openPR: 4
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 3
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 0
     mergedPR: 2
     openPR: 4
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 3
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 1
     mergedPR: 4
     openPR: 4
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 12
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 1
     mergedPR: 4
     openPR: 4
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 12
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 1
     mergedPR: 10
     openPR: 4
@@ -84,7 +84,7 @@ total:
   commit: 1816
 ---
 path: /home/runner/.x-repo/github.com/oh-my-fish/oh-my-fish
-collectedAt: 2026-09-21T06:07:34Z
+collectedAt: 2026-09-22T06:03:44Z
 loc:
   Fish:
     code: 2679
@@ -117,7 +117,7 @@ total:
   blanks: 3449
   files: 137
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/oh-my-fish/oh-my-fish
   commit: 634c94b4d5e1c0737eac2e35b75022b7ea3910c9
@@ -126,9 +126,22 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.7
 checks:
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 5
+    reason: Found 10/19 approved changesets -- score normalized to 5
+    details: null
   - name: Maintained
     score: 2
     reason: 3 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 2
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Security-Policy
     score: 10
@@ -138,33 +151,25 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/build.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Code-Review
-    score: 5
-    reason: Found 10/19 approved changesets -- score normalized to 5
-    details: null
-  - name: Dangerous-Workflow
+  - name: Binary-Artifacts
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: no binaries found in the repo
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -174,11 +179,6 @@ checks:
       - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating ohmyfish/fish:4.8.1 to ohmyfish/fish:4.8.1@sha256:79492a4fdfa89d040600edc3c634acb6570fbff49191d2dc29bbbe64167de5b5'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected

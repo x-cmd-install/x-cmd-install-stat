@@ -2,12 +2,12 @@ about:
   description: "Linux virtual machines, with a focus on running containers"
   license: Apache-2.0
   homepage: https://lima-vm.io/
-  head: 23314bd
+  head: a17d58c
   archived: false
   latestVersion: "v2.3.0-beta.0"
   latestRelease: "v2.2.0"
   latestPrerelease: "v2.3.0-beta.0"
-  collectedAt: 2026-09-21T05:05:25Z
+  collectedAt: 2026-09-22T04:58:09Z
 timeline:
   created: 2021-05-14
   lastCommit: 2026-09-21
@@ -15,15 +15,15 @@ timeline:
   lastRelease: 2026-07-21
   lastPrerelease: 2026-09-01
 popularity:
-  star: 21935
-  watcher: 91
+  star: 21942
+  watcher: 90
   fork: 957
   release: 102
   contributor: 217
-  pullRequest: 3504
-  issue: 1556
+  pullRequest: 3505
+  issue: 1557
 language:
-  Go: 1671832
+  Go: 1674453
   Shell: 434584
   Makefile: 38376
   HTML: 9440
@@ -31,72 +31,72 @@ language:
   SCSS: 1389
   Lua: 369
   Batchfile: 361
-totalBytes: 2165591
+totalBytes: 2168212
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 1
     mergedPR: 48
     openPR: 13
     closedIssue: 7
-    openIssue: 14
+    openIssue: 15
     commit: 43
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 1
-    mergedPR: 115
-    openPR: 25
-    closedIssue: 16
+    mergedPR: 114
+    openPR: 24
+    closedIssue: 15
     openIssue: 26
-    commit: 101
+    commit: 102
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 5
     mergedPR: 222
-    openPR: 35
-    closedIssue: 39
+    openPR: 33
+    closedIssue: 38
     openIssue: 44
-    commit: 234
+    commit: 235
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 9
-    mergedPR: 396
-    openPR: 60
+    mergedPR: 397
+    openPR: 59
     closedIssue: 108
-    openIssue: 69
-    commit: 435
+    openIssue: 70
+    commit: 437
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 25
-    mergedPR: 802
-    openPR: 81
+    mergedPR: 803
+    openPR: 80
     closedIssue: 234
-    openIssue: 123
-    commit: 885
+    openIssue: 124
+    commit: 887
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 44
-    mergedPR: 1612
-    openPR: 89
-    closedIssue: 530
-    openIssue: 231
-    commit: 3517
+    mergedPR: 1610
+    openPR: 88
+    closedIssue: 529
+    openIssue: 232
+    commit: 3520
 total:
   release: 102
-  mergedPR: 2943
-  openPR: 98
+  mergedPR: 2945
+  openPR: 97
   closedIssue: 1123
-  openIssue: 433
-  commit: 6646
+  openIssue: 434
+  commit: 6650
 ---
 path: /home/runner/.x-repo/github.com/lima-vm/lima
-collectedAt: 2026-09-21T05:05:30Z
+collectedAt: 2026-09-22T04:58:14Z
 loc:
   Go:
-    code: 48551
-    comments: 4815
-    blanks: 6653
-    files: 399
+    code: 48613
+    comments: 4827
+    blanks: 6665
+    files: 400
   Sh:
     code: 6199
     comments: 1488
@@ -178,15 +178,15 @@ loc:
     blanks: 1
     files: 6
 total:
-  code: 61957
-  comments: 11746
-  blanks: 9643
-  files: 714
+  code: 62019
+  comments: 11758
+  blanks: 9655
+  files: 715
 ---
-date: "2026-09-21T03:23:40Z"
+date: "2026-09-21T13:25:36Z"
 repo:
   name: github.com/lima-vm/lima
-  commit: 23314bd016a8112bf6ee08daad16da71cf6993af
+  commit: a17d58c15795b44824658a8a5ee4c6907e0d0056
 scorecard:
   version: v5.5.0
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
@@ -195,10 +195,6 @@ checks:
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 24 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Dependency-Update-Tool
     score: 10
@@ -210,6 +206,10 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -222,24 +222,27 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:16'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/spell.yml:12'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yml:22'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 24 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Pinned-Dependencies
     score: 6
     reason: dependency not pinned by hash detected -- score normalized to 6
     details:
       - 'Info: Possibly incomplete results: error parsing shell code: reached EOF without closing quote '': hack/test-templates.sh:535'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:505: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:534: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:561: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:580: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:701: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:609: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:624: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:297: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:316: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:354: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
@@ -247,34 +250,19 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:409: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:418: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:426: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:609: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:624: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:505: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:534: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:561: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:580: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:701: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:663: update your workflow using https://app.stepsecurity.io/secureworkflow/lima-vm/lima/test.yml/master?enable=pin'
       - 'Info:  51 out of  51 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  11 out of  26 third-party GitHubAction dependencies pinned'
       - 'Info:   1 out of   1 goCommand dependencies pinned'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: CII-Best-Practices
     score: 5
     reason: 'badge detected: Passing'
     details: null
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: OSSFuzz integration found'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/cidata/fuzz_test.go:12'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/downloader/fuzz_test.go:17'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/imgutil/nativeimgutil/fuzz_test.go:15'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/iso9660util/fuzz_test.go:14'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/store/fuzz_test.go:16'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/store/fuzz_test.go:25'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/yqutil/fuzz_test.go:10'
   - name: Vulnerabilities
     score: 3
     reason: 7 existing vulnerabilities detected
@@ -286,6 +274,12 @@ checks:
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-xcpc-8h2w-3j85'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-2v37-7h3g-55p8'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-48c2-rrv3-qjmp'
+  - name: SAST
+    score: 7
+    reason: SAST tool detected but not run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: 9 commits out of 30 are checked with a SAST tool'
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -300,12 +294,6 @@ checks:
       - 'Warn: release artifact v2.2.0-rc.0 does not have provenance: https://api.github.com/repos/lima-vm/lima/releases/354861306'
       - 'Warn: release artifact v2.1.4 does not have provenance: https://api.github.com/repos/lima-vm/lima/releases/348353944'
       - 'Warn: release artifact v2.2.0-beta.0 does not have provenance: https://api.github.com/repos/lima-vm/lima/releases/348010582'
-  - name: SAST
-    score: 7
-    reason: SAST tool detected but not run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 11 commits out of 30 are checked with a SAST tool'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
@@ -318,6 +306,18 @@ checks:
       - 'Info: Found linked content: github.com/lima-vm/.github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/lima-vm/.github/SECURITY.md:1'
       - 'Info: Found text in security policy: github.com/lima-vm/.github/SECURITY.md:1'
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: OSSFuzz integration found'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/cidata/fuzz_test.go:12'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/downloader/fuzz_test.go:17'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/imgutil/nativeimgutil/fuzz_test.go:15'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/iso9660util/fuzz_test.go:14'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/store/fuzz_test.go:16'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/store/fuzz_test.go:25'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/yqutil/fuzz_test.go:10'
   - name: CI-Tests
     score: 10
     reason: 16 out of 16 merged PRs checked by a CI test -- score normalized to 10

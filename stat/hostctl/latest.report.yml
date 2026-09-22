@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.1.4"
   latestRelease: "v1.1.4"
   latestPrerelease: ""
-  collectedAt: 2026-09-21T05:43:41Z
+  collectedAt: 2026-09-22T05:39:56Z
 timeline:
   created: 2020-03-14
   lastCommit: 2023-08-20
@@ -27,7 +27,7 @@ language:
 totalBytes: 144947
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 0
     mergedPR: 0
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 0
     mergedPR: 0
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 0
     mergedPR: 0
     openPR: 0
@@ -83,7 +83,7 @@ total:
   commit: 249
 ---
 path: /home/runner/.x-repo/github.com/guumaster/hostctl
-collectedAt: 2026-09-21T05:43:43Z
+collectedAt: 2026-09-22T05:39:58Z
 loc:
   Go:
     code: 4914
@@ -106,7 +106,7 @@ total:
   blanks: 1402
   files: 86
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/guumaster/hostctl
   commit: d6d96999f81952fa8d2ea3121ae5e3cce08afed6
@@ -115,22 +115,33 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 2.6
 checks:
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
   - name: Code-Review
     score: 1
     reason: Found 5/30 approved changesets -- score normalized to 1
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
     details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/aur.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/clean_artifacts.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/gh-pages.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/goreleaser.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/lint.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/tests.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -157,17 +168,6 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/tests.yml:58: update your workflow using https://app.stepsecurity.io/secureworkflow/guumaster/hostctl/tests.yml/master?enable=pin'
       - 'Info:   0 out of  12 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   8 third-party GitHubAction dependencies pinned'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/aur.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/clean_artifacts.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/gh-pages.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/goreleaser.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/lint.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/tests.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -177,12 +177,6 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -191,6 +185,12 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -221,4 +221,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 5 are checked with a SAST tool'
 ---
-{"id":101570381,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDODrzyJc4GDddN","tag_name":"v1.1.4","target_commitish":"master","name":"v1.1.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2023-05-02T12:19:36Z","updated_at":"2023-05-02T12:26:28Z","published_at":"2023-05-02T12:26:24Z","assets":[{"id":106318961,"node_id":"RA_kwDODrzyJc4GVkxx","name":"hostctl_1.1.4_checksums.txt","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":787,"digest":null,"download_count":1244,"created_at":"2023-05-02T12:26:28Z","updated_at":"2023-05-02T12:26:28Z"},{"id":106318956,"node_id":"RA_kwDODrzyJc4GVkxs","name":"hostctl_1.1.4_linux_64-bit.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":3584870,"digest":null,"download_count":233023,"created_at":"2023-05-02T12:26:27Z","updated_at":"2023-05-02T12:26:27Z"},{"id":106318960,"node_id":"RA_kwDODrzyJc4GVkxw","name":"hostctl_1.1.4_linux_amd64.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/vnd.debian.binary-package","state":"uploaded","size":3704918,"digest":null,"download_count":113705,"created_at":"2023-05-02T12:26:27Z","updated_at":"2023-05-02T12:26:28Z"},{"id":106318959,"node_id":"RA_kwDODrzyJc4GVkxv","name":"hostctl_1.1.4_linux_arm64.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/vnd.debian.binary-package","state":"uploaded","size":3344272,"digest":null,"download_count":36060,"created_at":"2023-05-02T12:26:27Z","updated_at":"2023-05-02T12:26:28Z"},{"id":106318954,"node_id":"RA_kwDODrzyJc4GVkxq","name":"hostctl_1.1.4_linux_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":3250067,"digest":null,"download_count":37688,"created_at":"2023-05-02T12:26:26Z","updated_at":"2023-05-02T12:26:26Z"},{"id":106318952,"node_id":"RA_kwDODrzyJc4GVkxo","name":"hostctl_1.1.4_macOS_64-bit.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":3756109,"digest":null,"download_count":1621,"created_at":"2023-05-02T12:26:25Z","updated_at":"2023-05-02T12:26:25Z"},{"id":106318957,"node_id":"RA_kwDODrzyJc4GVkxt","name":"hostctl_1.1.4_macOS_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":3575914,"digest":null,"download_count":3996,"created_at":"2023-05-02T12:26:27Z","updated_at":"2023-05-02T12:26:27Z"},{"id":106318953,"node_id":"RA_kwDODrzyJc4GVkxp","name":"hostctl_1.1.4_windows_64-bit.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3710827,"digest":null,"download_count":1661,"created_at":"2023-05-02T12:26:26Z","updated_at":"2023-05-02T12:26:26Z"},{"id":106318951,"node_id":"RA_kwDODrzyJc4GVkxn","name":"hostctl_1.1.4_windows_arm64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3360208,"digest":null,"download_count":183,"created_at":"2023-05-02T12:26:25Z","updated_at":"2023-05-02T12:26:25Z"}],"body":"## Changelog\n* 2cf00b4 update versions\n* 911d975 update lint issues\n* ed5345d update golangci-lint version\n* ae1c440 fix go-version for linter\n* f1bc636 #89 fix panic: runtime error: index out of range [1] with length 0 (#90)\n\n"}
+{"id":101570381,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDODrzyJc4GDddN","tag_name":"v1.1.4","target_commitish":"master","name":"v1.1.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2023-05-02T12:19:36Z","updated_at":"2023-05-02T12:26:28Z","published_at":"2023-05-02T12:26:24Z","assets":[{"id":106318961,"node_id":"RA_kwDODrzyJc4GVkxx","name":"hostctl_1.1.4_checksums.txt","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":787,"digest":null,"download_count":1247,"created_at":"2023-05-02T12:26:28Z","updated_at":"2023-05-02T12:26:28Z"},{"id":106318956,"node_id":"RA_kwDODrzyJc4GVkxs","name":"hostctl_1.1.4_linux_64-bit.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":3584870,"digest":null,"download_count":234068,"created_at":"2023-05-02T12:26:27Z","updated_at":"2023-05-02T12:26:27Z"},{"id":106318960,"node_id":"RA_kwDODrzyJc4GVkxw","name":"hostctl_1.1.4_linux_amd64.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/vnd.debian.binary-package","state":"uploaded","size":3704918,"digest":null,"download_count":113755,"created_at":"2023-05-02T12:26:27Z","updated_at":"2023-05-02T12:26:28Z"},{"id":106318959,"node_id":"RA_kwDODrzyJc4GVkxv","name":"hostctl_1.1.4_linux_arm64.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/vnd.debian.binary-package","state":"uploaded","size":3344272,"digest":null,"download_count":36566,"created_at":"2023-05-02T12:26:27Z","updated_at":"2023-05-02T12:26:28Z"},{"id":106318954,"node_id":"RA_kwDODrzyJc4GVkxq","name":"hostctl_1.1.4_linux_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":3250067,"digest":null,"download_count":38184,"created_at":"2023-05-02T12:26:26Z","updated_at":"2023-05-02T12:26:26Z"},{"id":106318952,"node_id":"RA_kwDODrzyJc4GVkxo","name":"hostctl_1.1.4_macOS_64-bit.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":3756109,"digest":null,"download_count":1621,"created_at":"2023-05-02T12:26:25Z","updated_at":"2023-05-02T12:26:25Z"},{"id":106318957,"node_id":"RA_kwDODrzyJc4GVkxt","name":"hostctl_1.1.4_macOS_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":3575914,"digest":null,"download_count":4002,"created_at":"2023-05-02T12:26:27Z","updated_at":"2023-05-02T12:26:27Z"},{"id":106318953,"node_id":"RA_kwDODrzyJc4GVkxp","name":"hostctl_1.1.4_windows_64-bit.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3710827,"digest":null,"download_count":1662,"created_at":"2023-05-02T12:26:26Z","updated_at":"2023-05-02T12:26:26Z"},{"id":106318951,"node_id":"RA_kwDODrzyJc4GVkxn","name":"hostctl_1.1.4_windows_arm64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3360208,"digest":null,"download_count":183,"created_at":"2023-05-02T12:26:25Z","updated_at":"2023-05-02T12:26:25Z"}],"body":"## Changelog\n* 2cf00b4 update versions\n* 911d975 update lint issues\n* ed5345d update golangci-lint version\n* ae1c440 fix go-version for linter\n* f1bc636 #89 fix panic: runtime error: index out of range [1] with length 0 (#90)\n\n"}

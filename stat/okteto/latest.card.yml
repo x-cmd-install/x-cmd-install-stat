@@ -2,15 +2,15 @@ about:
   description: "Develop your applications directly in your Kubernetes Cluster"
   license: Apache-2.0
   homepage: https://okteto.com
-  head: f72d931
+  head: ad42c08
   archived: false
   latestVersion: "3.23.1-beta.1"
   latestRelease: "3.23.1"
   latestPrerelease: "3.23.1-beta.1"
-  collectedAt: 2026-09-21T06:12:49Z
+  collectedAt: 2026-09-22T06:09:39Z
 timeline:
   created: 2018-08-07
-  lastCommit: 2026-09-18
+  lastCommit: 2026-09-21
   lastVersion: 2026-09-08
   lastRelease: 2026-09-08
   lastPrerelease: 2026-09-08
@@ -31,63 +31,63 @@ language:
 totalBytes: 4933637
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 5
-    mergedPR: 26
-    openPR: 2
+    mergedPR: 27
+    openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 20
+    commit: 0
   last60d:
-    since: 2026-07-23
-    release: 9
-    mergedPR: 49
-    openPR: 2
+    since: 2026-07-24
+    release: 8
+    mergedPR: 47
+    openPR: 0
     closedIssue: 1
     openIssue: 0
-    commit: 40
+    commit: 0
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 14
     mergedPR: 77
-    openPR: 2
+    openPR: 0
     closedIssue: 1
     openIssue: 0
-    commit: 65
+    commit: 0
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 23
     mergedPR: 161
-    openPR: 2
+    openPR: 0
     closedIssue: 1
     openIssue: 0
-    commit: 147
+    commit: 0
   last360d:
-    since: 2025-09-26
-    release: 65
-    mergedPR: 317
-    openPR: 2
+    since: 2025-09-27
+    release: 64
+    mergedPR: 318
+    openPR: 0
     closedIssue: 3
     openIssue: 1
-    commit: 279
+    commit: 0
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 100
-    mergedPR: 561
-    openPR: 2
+    mergedPR: 559
+    openPR: 0
     closedIssue: 9
     openIssue: 1
-    commit: 494
+    commit: 488
 total:
   release: 570
-  mergedPR: 3342
-  openPR: 2
+  mergedPR: 3343
+  openPR: 0
   closedIssue: 1448
   openIssue: 35
-  commit: 3307
+  commit: 3308
 ---
 path: /home/runner/.x-repo/github.com/okteto/okteto
-collectedAt: 2026-09-21T06:12:54Z
+collectedAt: 2026-09-22T06:09:44Z
 loc:
   Go:
     code: 137841
@@ -185,28 +185,32 @@ total:
   blanks: 17959
   files: 898
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/okteto/okteto
-  commit: e53a7bcc2e318fa36dc1230a475b34f3410677a3
+  commit: ad42c0823762a2255d4b4ad2e53fb4ec190010e7
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.9
 checks:
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -219,10 +223,6 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/stale.yml:13'
       - 'Warn: no topLevel permission defined: .github/workflows/trigger-circleci-e2e.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Binary-Artifacts
     score: 8
     reason: binaries present in source code
@@ -248,6 +248,14 @@ checks:
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -262,14 +270,6 @@ checks:
       - 'Warn: release artifact 3.23.0 does not have provenance: https://api.github.com/repos/okteto/okteto/releases/381369470'
       - 'Warn: release artifact 3.23.0-beta.2 does not have provenance: https://api.github.com/repos/okteto/okteto/releases/381327556'
       - 'Warn: release artifact 3.23.0-beta.1 does not have provenance: https://api.github.com/repos/okteto/okteto/releases/378426754'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: Pinned-Dependencies
     score: 2
     reason: dependency not pinned by hash detected -- score normalized to 2
@@ -291,10 +291,10 @@ checks:
       - 'Warn: containerImage not pinned by hash: samples/java-maven/Dockerfile:1'
       - 'Warn: containerImage not pinned by hash: samples/java-maven/Dockerfile:6'
       - 'Warn: containerImage not pinned by hash: samples/node.js/Dockerfile:1: pin your Docker image by updating node:14-slim to node:14-slim@sha256:198142146b4c47193348f6415da769bdb5035c16fcab051c38c256a6b48f2e1c'
-      - 'Warn: containerImage not pinned by hash: samples/php/Dockerfile:1: pin your Docker image by updating php:8 to php:8@sha256:9ebdf4c28ab12c02085e171c31e22ac5f7bbb6a9f6927e3bc3dfe7ee23df51e0'
+      - 'Warn: containerImage not pinned by hash: samples/php/Dockerfile:1: pin your Docker image by updating php:8 to php:8@sha256:df50257c90ad9a53052fb4e9c6fdba8262cf72ca9e9a048b7c89f74c8d23fc0d'
       - 'Warn: containerImage not pinned by hash: samples/php/Dockerfile:7'
       - 'Warn: containerImage not pinned by hash: samples/php/Dockerfile:25'
-      - 'Warn: containerImage not pinned by hash: samples/python/Dockerfile:1: pin your Docker image by updating python:3-slim to python:3-slim@sha256:cad9a2c871761c413caa6fdd6441c783451e740a48aaeba60ae62a8b53525ef6'
+      - 'Warn: containerImage not pinned by hash: samples/python/Dockerfile:1: pin your Docker image by updating python:3-slim to python:3-slim@sha256:caaf356f40667c496d405780745b9ac25771c189a51dfcc42430d531ea09f8a2'
       - 'Warn: containerImage not pinned by hash: samples/ruby/Dockerfile:1: pin your Docker image by updating ruby:2 to ruby:2@sha256:2347de892e419c7160fc21dec721d5952736909f8c3fbb7f84cb4a07aaf9ce7d'
       - 'Warn: containerImage not pinned by hash: samples/ruby/Dockerfile:10'
       - 'Warn: containerImage not pinned by hash: samples/ruby/Dockerfile:25: pin your Docker image by updating ruby:2 to ruby:2@sha256:2347de892e419c7160fc21dec721d5952736909f8c3fbb7f84cb4a07aaf9ce7d'
@@ -305,10 +305,10 @@ checks:
       - 'Warn: pipCommand not pinned by hash: .github/workflows/pre-commit.yml:26'
       - 'Info:   0 out of   5 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   3 pipCommand dependencies pinned'
       - 'Info:  10 out of  25 containerImage dependencies pinned'
       - 'Info:   0 out of   1 nugetCommand dependencies pinned'
       - 'Info:   0 out of   1 npmCommand dependencies pinned'
+      - 'Info:   0 out of   3 pipCommand dependencies pinned'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

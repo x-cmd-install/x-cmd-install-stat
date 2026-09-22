@@ -7,7 +7,7 @@ about:
   latestVersion: "0.10.3"
   latestRelease: "0.10.3"
   latestPrerelease: "0.6.9"
-  collectedAt: 2026-09-21T05:27:10Z
+  collectedAt: 2026-09-22T05:27:09Z
 timeline:
   created: 2018-01-26
   lastCommit: 2026-09-05
@@ -29,7 +29,7 @@ language:
 totalBytes: 1045240
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 1
     mergedPR: 0
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 6
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 1
     mergedPR: 0
     openPR: 0
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 9
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 2
     mergedPR: 0
     openPR: 0
@@ -53,7 +53,7 @@ recent:
     openIssue: 1
     commit: 42
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 4
     mergedPR: 1
     openPR: 0
@@ -61,7 +61,7 @@ recent:
     openIssue: 1
     commit: 175
   last360d:
-    since: 2025-09-26
+    since: 2025-09-27
     release: 7
     mergedPR: 1
     openPR: 0
@@ -69,7 +69,7 @@ recent:
     openIssue: 1
     commit: 475
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 13
     mergedPR: 2
     openPR: 0
@@ -85,7 +85,7 @@ total:
   commit: 1446
 ---
 path: /home/runner/.x-repo/github.com/jhspetersson/fselect
-collectedAt: 2026-09-21T05:27:12Z
+collectedAt: 2026-09-22T05:27:11Z
 loc:
   Rust:
     code: 25196
@@ -123,7 +123,7 @@ total:
   blanks: 3696
   files: 67
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/jhspetersson/fselect
   commit: e5919213058e239eb3dfa36bfbe1e70d56d3341c
@@ -132,6 +132,10 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.4
 checks:
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Code-Review
     score: 0
     reason: Found 0/30 approved changesets -- score normalized to 0
@@ -145,9 +149,9 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
+  - name: Binary-Artifacts
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -156,10 +160,6 @@ checks:
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:13'
       - 'Warn: no topLevel permission defined: .github/workflows/rust.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: SAST
     score: 0
     reason: no SAST tool detected
@@ -169,14 +169,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -194,10 +186,18 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:158: update your workflow using https://app.stepsecurity.io/secureworkflow/jhspetersson/fselect/release.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/rust.yml:29: update your workflow using https://app.stepsecurity.io/secureworkflow/jhspetersson/fselect/rust.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/rust.yml:30: update your workflow using https://app.stepsecurity.io/secureworkflow/jhspetersson/fselect/rust.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating rust:latest to rust:latest@sha256:bf5a9aa29062a6cb03c49bd59a46eb55e3cc770caf598a221a7866e500be3082'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating rust:latest to rust:latest@sha256:a8a5f0a1e5fe7dfe1d352591e4a1c7dd2c08fd70475cae872cf3458ba0df0546'
       - 'Info:   0 out of   5 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   8 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -209,11 +209,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE-APACHE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE-APACHE:0'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -228,4 +223,9 @@ checks:
       - 'Warn: release artifact 0.10.1 does not have provenance: https://api.github.com/repos/jhspetersson/fselect/releases/331894275'
       - 'Warn: release artifact 0.10.0 does not have provenance: https://api.github.com/repos/jhspetersson/fselect/releases/307500209'
       - 'Warn: release artifact 0.9.3 does not have provenance: https://api.github.com/repos/jhspetersson/fselect/releases/292722220'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
 ---

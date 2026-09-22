@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.13.1"
   latestRelease: "v1.13.1"
   latestPrerelease: "v1.6.0-beta.1"
-  collectedAt: 2026-09-21T04:58:14Z
+  collectedAt: 2026-09-22T04:58:17Z
 timeline:
   created: 2025-08-05
   lastCommit: 2026-09-17
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-09-17
   lastPrerelease: 2026-07-08
 popularity:
-  star: 69698
+  star: 69788
   watcher: 286
-  fork: 4772
+  fork: 4780
   release: 49
   contributor: 115
-  pullRequest: 1021
-  issue: 681
+  pullRequest: 1032
+  issue: 689
 language:
   TypeScript: 4877593
   JavaScript: 41329
@@ -31,63 +31,63 @@ language:
 totalBytes: 4928682
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 4
     mergedPR: 66
-    openPR: 46
+    openPR: 57
     closedIssue: 35
-    openIssue: 41
+    openIssue: 49
     commit: 74
   last60d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 8
     mergedPR: 168
-    openPR: 58
-    closedIssue: 75
-    openIssue: 64
+    openPR: 68
+    closedIssue: 74
+    openIssue: 72
     commit: 164
   last90d:
-    since: 2026-06-23
+    since: 2026-06-24
     release: 11
-    mergedPR: 252
-    openPR: 69
-    closedIssue: 127
-    openIssue: 72
+    mergedPR: 247
+    openPR: 78
+    closedIssue: 125
+    openIssue: 79
     commit: 272
   last180d:
-    since: 2026-03-25
+    since: 2026-03-26
     release: 15
-    mergedPR: 337
-    openPR: 104
-    closedIssue: 255
-    openIssue: 86
+    mergedPR: 336
+    openPR: 115
+    closedIssue: 251
+    openIssue: 93
     commit: 342
   last360d:
-    since: 2025-09-26
-    release: 46
+    since: 2025-09-27
+    release: 45
     mergedPR: 595
-    openPR: 119
+    openPR: 130
     closedIssue: 550
-    openIssue: 125
+    openIssue: 133
     commit: 582
   last720d:
-    since: 2024-10-01
+    since: 2024-10-02
     release: 49
     mergedPR: 665
-    openPR: 119
+    openPR: 130
     closedIssue: 556
-    openIssue: 125
+    openIssue: 133
     commit: 882
 total:
   release: 49
   mergedPR: 665
-  openPR: 119
+  openPR: 130
   closedIssue: 556
-  openIssue: 125
+  openIssue: 133
   commit: 882
 ---
 path: /home/runner/.x-repo/github.com/Fission-AI/OpenSpec
-collectedAt: 2026-09-21T04:58:20Z
+collectedAt: 2026-09-22T04:58:18Z
 loc:
   TypeScript:
     code: 100617
@@ -147,4 +147,4 @@ total:
 ---
 
 ---
-{"id":390370007,"author":{"login":"openspec-release-bot[bot]","id":254190582,"node_id":"BOT_kgDODyaj9g","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOPYoUTM4XRJLX","tag_name":"v1.13.1","target_commitish":"634c557bd0470eec37861b46172c3f503d283c1b","name":"v1.13.1 - Hardened CLI, safer archives","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-17T01:01:33Z","updated_at":"2026-09-17T01:24:43Z","published_at":"2026-09-17T01:11:07Z","assets":[],"body":"## What's New in v1.13.1\n\nThis release makes OpenSpec safer to run in repositories you have not reviewed yet, and makes archive, validation, and the agent workflows more predictable.\n\n### Improved\n\n- **Security hardening** - OpenSpec is safer in a freshly cloned repository. A `config.yaml` value can no longer inject directives into agent instructions, crafted files can no longer hang `openspec update` or `openspec archive`, and a repository's `.npmrc` can no longer redirect the update check.\n- **Next step in `openspec status`** - Status now ends with a `Next:` line naming the exact command that moves the change forward, so resuming a change no longer means knowing the workflow by heart.\n- **Profile-aware skills** - Generated skills and commands name only the workflows your profile installs, and they match natural phrasing such as \"openspec propose\" or \"do an openspec apply\".\n- **Project check** - Workflows confirm the project has run `openspec init` before writing anything, and never create an `openspec/` folder as a side effect.\n- **Explore and update workflows** - Explore names `/opsx:propose` and `/opsx:apply` at every handoff and treats your explicit request to capture a change as confirmation. `/opsx:update` drafts its revisions first and writes only after you confirm.\n- **Artifact templates** - Generated proposal, spec, design, and tasks files open with a top-level heading, so markdownlint no longer flags every artifact.\n- **Tool picker** - The vendor-neutral target is listed as \"Other / Universal\" and can be found by searching for terms like `universal`, `generic`, or `custom`.\n- **Nix** - The flake package now ships bash, zsh, and fish completions.\n\n### Fixed\n\n- **Archive** - Archive refuses a requirement name that differs from an existing one only in case, a `RENAMED` section whose `FROM:` and `TO:` lines do not pair up, and a delta file it would never read. Bulk archive checks every target before writing any spec, and agent-driven archive and sync create the main spec for a new capability.\n- **Validation** - `openspec validate` reports requirements written outside a delta section, rejects a scenario with no body, warns when tracked tasks have no checkboxes, and checks a schema's `apply.requires` against its artifacts.\n- **Task progress** - Tasks under `+`, `1.`, and `1)` list markers now count, and an unrecognized marker such as `[~]` counts as unfinished, so `\u2713 Complete` no longer hides open work.\n- **Spec parsing** - Requirement headings with a closing `###` sequence resolve correctly, and `openspec show --json --deltas-only` reports exactly the deltas archive applies.\n- **Changes and lists** - A change nested inside a namespace folder is reported instead of silently misread, and one dangling symlink no longer breaks `openspec list`.\n- **Stores** - `openspec store remove` no longer deletes a store nested inside the one being removed, a store named `specs` or `changes` no longer becomes the planning root, and `store setup --no-init-git` works inside an existing Git repository.\n- **Configuration** - A global config file with a syntax error is left untouched instead of being overwritten, `openspec config edit` supports an `EDITOR` with arguments such as `code --wait`, and `DO_NOT_TRACK=true` now disables telemetry.\n- **Setup and completions** - Legacy cleanup keeps your own files in old command folders, and uninstalling bash completions restores `.bashrc` byte for byte.\n\n## New Contributors\n\n* @choi138 made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1829\n\n**Full Changelog**: https://github.com/Fission-AI/OpenSpec/compare/v1.13.0...v1.13.1\n","reactions":{"total_count":5,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":5,"eyes":0},"mentions_count":1}
+{"id":390370007,"author":{"login":"openspec-release-bot[bot]","id":254190582,"node_id":"BOT_kgDODyaj9g","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOPYoUTM4XRJLX","tag_name":"v1.13.1","target_commitish":"634c557bd0470eec37861b46172c3f503d283c1b","name":"v1.13.1 - Hardened CLI, safer archives","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-17T01:01:33Z","updated_at":"2026-09-17T01:24:43Z","published_at":"2026-09-17T01:11:07Z","assets":[],"body":"## What's New in v1.13.1\n\nThis release makes OpenSpec safer to run in repositories you have not reviewed yet, and makes archive, validation, and the agent workflows more predictable.\n\n### Improved\n\n- **Security hardening** - OpenSpec is safer in a freshly cloned repository. A `config.yaml` value can no longer inject directives into agent instructions, crafted files can no longer hang `openspec update` or `openspec archive`, and a repository's `.npmrc` can no longer redirect the update check.\n- **Next step in `openspec status`** - Status now ends with a `Next:` line naming the exact command that moves the change forward, so resuming a change no longer means knowing the workflow by heart.\n- **Profile-aware skills** - Generated skills and commands name only the workflows your profile installs, and they match natural phrasing such as \"openspec propose\" or \"do an openspec apply\".\n- **Project check** - Workflows confirm the project has run `openspec init` before writing anything, and never create an `openspec/` folder as a side effect.\n- **Explore and update workflows** - Explore names `/opsx:propose` and `/opsx:apply` at every handoff and treats your explicit request to capture a change as confirmation. `/opsx:update` drafts its revisions first and writes only after you confirm.\n- **Artifact templates** - Generated proposal, spec, design, and tasks files open with a top-level heading, so markdownlint no longer flags every artifact.\n- **Tool picker** - The vendor-neutral target is listed as \"Other / Universal\" and can be found by searching for terms like `universal`, `generic`, or `custom`.\n- **Nix** - The flake package now ships bash, zsh, and fish completions.\n\n### Fixed\n\n- **Archive** - Archive refuses a requirement name that differs from an existing one only in case, a `RENAMED` section whose `FROM:` and `TO:` lines do not pair up, and a delta file it would never read. Bulk archive checks every target before writing any spec, and agent-driven archive and sync create the main spec for a new capability.\n- **Validation** - `openspec validate` reports requirements written outside a delta section, rejects a scenario with no body, warns when tracked tasks have no checkboxes, and checks a schema's `apply.requires` against its artifacts.\n- **Task progress** - Tasks under `+`, `1.`, and `1)` list markers now count, and an unrecognized marker such as `[~]` counts as unfinished, so `\u2713 Complete` no longer hides open work.\n- **Spec parsing** - Requirement headings with a closing `###` sequence resolve correctly, and `openspec show --json --deltas-only` reports exactly the deltas archive applies.\n- **Changes and lists** - A change nested inside a namespace folder is reported instead of silently misread, and one dangling symlink no longer breaks `openspec list`.\n- **Stores** - `openspec store remove` no longer deletes a store nested inside the one being removed, a store named `specs` or `changes` no longer becomes the planning root, and `store setup --no-init-git` works inside an existing Git repository.\n- **Configuration** - A global config file with a syntax error is left untouched instead of being overwritten, `openspec config edit` supports an `EDITOR` with arguments such as `code --wait`, and `DO_NOT_TRACK=true` now disables telemetry.\n- **Setup and completions** - Legacy cleanup keeps your own files in old command folders, and uninstalling bash completions restores `.bashrc` byte for byte.\n\n## New Contributors\n\n* @choi138 made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1829\n\n**Full Changelog**: https://github.com/Fission-AI/OpenSpec/compare/v1.13.0...v1.13.1\n","reactions":{"total_count":7,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":7,"eyes":0},"mentions_count":1}
