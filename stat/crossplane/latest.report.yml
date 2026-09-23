@@ -2,96 +2,96 @@ about:
   description: "The Cloud Native Control Plane"
   license: Apache-2.0
   homepage: https://crossplane.io
-  head: a6bd21d
+  head: bbd1a68
   archived: false
-  latestVersion: "v1.20.13"
-  latestRelease: "v1.20.13"
+  latestVersion: "v2.4.2"
+  latestRelease: "v2.4.2"
   latestPrerelease: "v2.4.0-rc.1"
-  collectedAt: 2026-09-22T06:31:58Z
+  collectedAt: 2026-09-23T06:44:38Z
 timeline:
   created: 2018-09-08
   lastCommit: 2026-09-22
-  lastVersion: 2026-09-15
-  lastRelease: 2026-09-15
+  lastVersion: 2026-09-22
+  lastRelease: 2026-09-22
   lastPrerelease: 2026-08-14
 popularity:
-  star: 12096
+  star: 12098
   watcher: 143
-  fork: 1266
-  release: 181
-  contributor: 298
-  pullRequest: 4740
-  issue: 2675
+  fork: 1267
+  release: 182
+  contributor: 299
+  pullRequest: 4751
+  issue: 2676
 language:
-  Go: 3308246
+  Go: 3310678
   Nix: 44551
   Shell: 15735
   Mustache: 995
-totalBytes: 3369527
+totalBytes: 3371959
 recent:
   last30d:
-    since: 2026-08-23
-    release: 4
-    mergedPR: 34
-    openPR: 30
-    closedIssue: 1
-    openIssue: 10
-    commit: 17
+    since: 2026-08-24
+    release: 5
+    mergedPR: 40
+    openPR: 32
+    closedIssue: 2
+    openIssue: 9
+    commit: 21
   last60d:
-    since: 2026-07-24
-    release: 9
-    mergedPR: 121
-    openPR: 47
-    closedIssue: 5
+    since: 2026-07-25
+    release: 10
+    mergedPR: 127
+    openPR: 50
+    closedIssue: 6
     openIssue: 22
-    commit: 72
+    commit: 76
   last90d:
-    since: 2026-06-24
-    release: 13
-    mergedPR: 176
-    openPR: 56
-    closedIssue: 12
+    since: 2026-06-25
+    release: 14
+    mergedPR: 182
+    openPR: 60
+    closedIssue: 13
     openIssue: 26
-    commit: 100
+    commit: 104
   last180d:
-    since: 2026-03-26
-    release: 30
-    mergedPR: 352
-    openPR: 72
-    closedIssue: 42
+    since: 2026-03-27
+    release: 31
+    mergedPR: 359
+    openPR: 76
+    closedIssue: 43
     openIssue: 49
-    commit: 270
+    commit: 274
   last360d:
-    since: 2025-09-27
-    release: 47
-    mergedPR: 579
-    openPR: 79
-    closedIssue: 138
+    since: 2025-09-28
+    release: 48
+    mergedPR: 586
+    openPR: 83
+    closedIssue: 139
     openIssue: 66
-    commit: 641
+    commit: 645
   last720d:
-    since: 2024-10-02
-    release: 76
-    mergedPR: 975
-    openPR: 79
-    closedIssue: 417
+    since: 2024-10-03
+    release: 77
+    mergedPR: 982
+    openPR: 83
+    closedIssue: 418
     openIssue: 85
-    commit: 2029
+    commit: 2028
 total:
-  release: 181
-  mergedPR: 3988
-  openPR: 79
-  closedIssue: 2560
+  release: 182
+  mergedPR: 3995
+  openPR: 83
+  closedIssue: 2561
   openIssue: 115
-  commit: 9128
+  commit: 9134
 ---
 path: /home/runner/.x-repo/github.com/crossplane/crossplane
-collectedAt: 2026-09-22T06:32:08Z
+collectedAt: 2026-09-23T06:44:46Z
 loc:
   Go:
-    code: 83995
+    code: 84061
     comments: 16279
-    blanks: 10906
+    blanks: 10910
     files: 389
   Yaml:
     code: 23634
@@ -134,9 +134,9 @@ loc:
     blanks: 8
     files: 3
 total:
-  code: 116561
+  code: 116627
   comments: 44194
-  blanks: 18421
+  blanks: 18425
   files: 880
 ---
 date: "2026-09-21"
@@ -249,4 +249,4 @@ checks:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Info: all commits (30) are checked with a SAST tool'
 ---
-{"id":389054390,"author":{"login":"phisco","id":5697904,"node_id":"MDQ6VXNlcjU2OTc5MDQ=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCNCQAM4XMH-2","tag_name":"v2.4.1","target_commitish":"main","name":"v2.4.1","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-09-15T10:06:06Z","updated_at":"2026-09-15T17:16:10Z","published_at":"2026-09-15T17:16:10Z","assets":[],"body":"`v2.4.1` is a patch release scoped to fixing issues reported by users of Crossplane `v2.4` and fixing security related issues in Crossplane and its dependencies.\n\n# \ud83c\udf89 Highlights\n\n* **Package revisions now take control of established objects from the revision they replace:** An outgoing package revision could fail to relinquish control of the package's CRDs, leaving the incoming revision permanently unhealthy with `cannot establish control of object`. The provider's pod would never be created, so that provider could do no work without manual intervention by someone either deleting the stale revision or editing the CRD's owner reference by hand. Package revisions now directly take control from the revision they replace, so the hand-off succeeds without any intervention. Backported in #7821, originally fixed in #7733.\n* **Dependency security updates:** Bumps the Go toolchain to `1.26.7` (#7803), `google.golang.org/grpc` to `v1.83.2` (#7800, #7826), and `golang.org/x/crypto` to `v0.56.0` (#7810) to pick up upstream CVE fixes \u2014 including the gRPC advisory [GHSA-2v4p-qf9q-27wj](https://github.com/grpc/grpc-go/security/advisories/GHSA-2v4p-qf9q-27wj). Also bumps `github.com/crossplane/crossplane/apis/v2` to `v2.4.0` (#7780) and refreshes the lock file (#7779).\n\n## What's Changed\n* chore(deps): lock file maintenance (release-2.4) by @crossplane-renovate[bot] in https://github.com/crossplane/crossplane/pull/7779\n* fix(deps): update module github.com/crossplane/crossplane/apis/v2 to v2.4.0 (release-2.4) by @phisco in https://github.com/crossplane/crossplane/pull/7780\n* fix(deps): update module google.golang.org/grpc to v1.83.1 [security] (release-2.4) by @crossplane-renovate[bot] in https://github.com/crossplane/crossplane/pull/7800\n* [Backport release-2.4] Bump go to 1.26 by @github-actions[bot] in https://github.com/crossplane/crossplane/pull/7803\n* chore(deps): update module golang.org/x/crypto to v0.56.0 [security] (release-2.4) by @crossplane-renovate[bot] in https://github.com/crossplane/crossplane/pull/7810\n* [Backport release-2.4] fix(pkg): take control of established objects from replaced revisions by @github-actions[bot] in https://github.com/crossplane/crossplane/pull/7821\n* fix(deps): update module google.golang.org/grpc to v1.83.2 [security] (release-2.4) by @crossplane-renovate[bot] in https://github.com/crossplane/crossplane/pull/7826\n\n\n**Full Changelog**: https://github.com/crossplane/crossplane/compare/v2.4.0...v2.4.1\n\n","mentions_count":1}
+{"id":394041276,"author":{"login":"adamwg","id":414574,"node_id":"MDQ6VXNlcjQxNDU3NA==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCNCQAM4XfJe8","tag_name":"v2.4.2","target_commitish":"main","name":"v2.4.2","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-09-22T18:41:35Z","updated_at":"2026-09-22T19:11:31Z","published_at":"2026-09-22T19:11:31Z","assets":[],"body":"`v2.4.2` is a patch release scoped to fixing issues reported by users of Crossplane `v2.4` and fixing security related issues in Crossplane and its dependencies.\r\n\r\n## \ud83c\udf89 Highlights\r\n\r\n* Fixed a bug where ownership of `ServiceAccount`s was not correctly transferred to newly active package revisions (#7838). Fixed in #7839 and backported in #7852.\r\n\r\n## What's Changed\r\n* [Backport release-2.4] fix: demote old revision controller ownerReference for SA by @github-actions[bot] in https://github.com/crossplane/crossplane/pull/7852\r\n* chore(deps): update module go.opentelemetry.io/otel/exporters/otlp/otlptrace to v1.45.0 [security] (release-2.4) by @crossplane-renovate[bot] in https://github.com/crossplane/crossplane/pull/7847\r\n* [Backport release-2.4] fix: fail closed when a claim cannot list its XRD by @github-actions[bot] in https://github.com/crossplane/crossplane/pull/7862\r\n* Bump crossplane-runtime dependency to v2.4.2 by @adamwg in https://github.com/crossplane/crossplane/pull/7863\r\n\r\n\r\n**Full Changelog**: https://github.com/crossplane/crossplane/compare/v2.4.1...v2.4.2","mentions_count":1}

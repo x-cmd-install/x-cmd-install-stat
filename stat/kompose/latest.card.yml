@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.38.0"
   latestRelease: "v1.38.0"
   latestPrerelease: "v0.0.1-beta.2"
-  collectedAt: 2026-09-22T06:40:37Z
+  collectedAt: 2026-09-23T06:42:32Z
 timeline:
   created: 2016-06-27
   lastCommit: 2026-09-18
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-01-15
   lastPrerelease: 2016-08-05
 popularity:
-  star: 10626
+  star: 10627
   watcher: 128
   fork: 819
   release: 54
@@ -30,23 +30,23 @@ language:
 totalBytes: 552120
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 1
-    openPR: 14
+    openPR: 11
     closedIssue: 0
     openIssue: 0
     commit: 2
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
     mergedPR: 1
     openPR: 14
     closedIssue: 0
-    openIssue: 2
+    openIssue: 1
     commit: 2
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 0
     mergedPR: 1
     openPR: 14
@@ -54,7 +54,7 @@ recent:
     openIssue: 2
     commit: 2
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 0
     mergedPR: 3
     openPR: 14
@@ -62,7 +62,7 @@ recent:
     openIssue: 3
     commit: 3
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 1
     mergedPR: 15
     openPR: 14
@@ -70,7 +70,7 @@ recent:
     openIssue: 4
     commit: 17
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 4
     mergedPR: 42
     openPR: 14
@@ -86,7 +86,7 @@ total:
   commit: 1813
 ---
 path: /home/runner/.x-repo/github.com/kubernetes/kompose
-collectedAt: 2026-09-22T06:40:41Z
+collectedAt: 2026-09-23T06:42:36Z
 loc:
   Json:
     code: 29471
@@ -169,22 +169,18 @@ total:
   blanks: 5453
   files: 497
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/kubernetes/kompose
-  commit: c2dd9614fd5026b8f6cb95d61bba802626088b13
+  commit: 43b9d898f27e74d6240c7ec81ef787c1922ab741
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
-score: 4.8
+score: 5
 checks:
   - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
+    score: 2
+    reason: 3 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 2
     details: null
   - name: Dangerous-Workflow
     score: 10
@@ -203,6 +199,10 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -230,6 +230,10 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -249,11 +253,11 @@ checks:
     reason: dependency not pinned by hash detected -- score normalized to 5
     details:
       - 'Warn: containerImage not pinned by hash: Dockerfile:2'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:15: pin your Docker image by updating alpine to alpine@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:15: pin your Docker image by updating alpine to alpine@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6'
       - 'Warn: containerImage not pinned by hash: examples/web/Dockerfile:1: pin your Docker image by updating golang:1.21.2 to golang:1.21.2@sha256:e9ebfe932adeff65af5338236f0b0604c86b143c1bff3e1d0551d8f6196ab5c5'
-      - 'Warn: containerImage not pinned by hash: script/test/fixtures/buildargs/build/Dockerfile:1: pin your Docker image by updating busybox to busybox@sha256:dc2d74b28e4cf8984fa52af1f39bc7c3d9c73760b41a74d629f5d11b1ab28616'
-      - 'Warn: containerImage not pinned by hash: script/test/fixtures/buildconfig/build/Dockerfile:1: pin your Docker image by updating busybox to busybox@sha256:dc2d74b28e4cf8984fa52af1f39bc7c3d9c73760b41a74d629f5d11b1ab28616'
-      - 'Warn: containerImage not pinned by hash: script/test/fixtures/nginx-node-redis/nginx/Dockerfile:2: pin your Docker image by updating nginx to nginx@sha256:a53fc6c27208b0095f6a831d3ff92d1c2cb20209fdcf3b901231048f930cac93'
+      - 'Warn: containerImage not pinned by hash: script/test/fixtures/buildargs/build/Dockerfile:1: pin your Docker image by updating busybox to busybox@sha256:cac8f90bbee42dc962a6b38bb1a235948d070385bb9d996bba15a6db8d364008'
+      - 'Warn: containerImage not pinned by hash: script/test/fixtures/buildconfig/build/Dockerfile:1: pin your Docker image by updating busybox to busybox@sha256:cac8f90bbee42dc962a6b38bb1a235948d070385bb9d996bba15a6db8d364008'
+      - 'Warn: containerImage not pinned by hash: script/test/fixtures/nginx-node-redis/nginx/Dockerfile:2: pin your Docker image by updating nginx to nginx@sha256:abe47724e466aeab9a345d8e46a221c2fa8953c7848bb4a3bd9976a7199f8cf2'
       - 'Warn: containerImage not pinned by hash: script/test/fixtures/nginx-node-redis/node/Dockerfile:1: pin your Docker image by updating centos:7 to centos:7@sha256:be65f488b7764ad3638f236b7b515b3678369a5124c47b8d32916d6487418ea4'
       - 'Warn: containerImage not pinned by hash: script/test_in_container/Dockerfile:18'
       - 'Warn: npmCommand not pinned by hash: script/test/fixtures/nginx-node-redis/node/Dockerfile:5'
@@ -262,10 +266,6 @@ checks:
       - 'Info:   0 out of   8 containerImage dependencies pinned'
       - 'Info:   0 out of   2 npmCommand dependencies pinned'
       - 'Info:   2 out of   2 goCommand dependencies pinned'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

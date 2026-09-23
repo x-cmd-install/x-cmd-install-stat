@@ -2,12 +2,12 @@ about:
   description: "The official command line interface for the DigitalOcean API."
   license: Apache-2.0
   homepage: https://docs.digitalocean.com/reference/doctl/
-  head: f4e7d17
+  head: 2039c37
   archived: false
-  latestVersion: "v1.170.0"
-  latestRelease: "v1.170.0"
+  latestVersion: "v1.171.2"
+  latestRelease: "v1.171.2"
   latestPrerelease: "v1.169.0-beta.2"
-  collectedAt: 2026-09-22T06:19:36Z
+  collectedAt: 2026-09-23T06:17:20Z
 timeline:
   created: 2015-05-29
   lastCommit: 2026-09-22
@@ -17,82 +17,82 @@ timeline:
 popularity:
   star: 3452
   watcher: 124
-  fork: 503
-  release: 271
-  contributor: 260
-  pullRequest: 1432
+  fork: 504
+  release: 274
+  contributor: 261
+  pullRequest: 1435
   issue: 536
 language:
-  Go: 5331531
+  Go: 5326533
   Shell: 14162
   HTML: 7602
   Makefile: 5061
   Dockerfile: 656
-totalBytes: 5359012
+totalBytes: 5354014
 recent:
   last30d:
-    since: 2026-08-23
-    release: 30
-    mergedPR: 48
-    openPR: 10
+    since: 2026-08-24
+    release: 33
+    mergedPR: 47
+    openPR: 7
     closedIssue: 0
     openIssue: 0
-    commit: 9
+    commit: 13
   last60d:
-    since: 2026-07-24
-    release: 46
-    mergedPR: 69
-    openPR: 12
+    since: 2026-07-25
+    release: 49
+    mergedPR: 73
+    openPR: 11
     closedIssue: 1
     openIssue: 0
-    commit: 16
+    commit: 20
   last90d:
-    since: 2026-06-24
-    release: 58
-    mergedPR: 82
-    openPR: 19
+    since: 2026-06-25
+    release: 61
+    mergedPR: 85
+    openPR: 18
     closedIssue: 1
     openIssue: 5
-    commit: 25
+    commit: 29
   last180d:
-    since: 2026-03-26
-    release: 68
-    mergedPR: 103
-    openPR: 25
+    since: 2026-03-27
+    release: 71
+    mergedPR: 107
+    openPR: 24
     closedIssue: 3
     openIssue: 7
-    commit: 44
+    commit: 48
   last360d:
-    since: 2025-09-27
-    release: 76
-    mergedPR: 132
-    openPR: 39
+    since: 2025-09-28
+    release: 79
+    mergedPR: 136
+    openPR: 38
     closedIssue: 7
     openIssue: 16
-    commit: 74
+    commit: 78
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 100
-    mergedPR: 255
-    openPR: 42
+    mergedPR: 259
+    openPR: 41
     closedIssue: 18
     openIssue: 38
-    commit: 197
+    commit: 201
 total:
-  release: 271
-  mergedPR: 1265
-  openPR: 47
+  release: 274
+  mergedPR: 1269
+  openPR: 46
   closedIssue: 426
   openIssue: 110
-  commit: 2608
+  commit: 2612
 ---
 path: /home/runner/.x-repo/github.com/digitalocean/doctl
-collectedAt: 2026-09-22T06:19:45Z
+collectedAt: 2026-09-23T06:17:27Z
 loc:
   Go:
-    code: 1080366
-    comments: 155274
-    blanks: 112402
+    code: 1080435
+    comments: 155243
+    blanks: 112421
     files: 3621
   Xml:
     code: 41939
@@ -181,8 +181,8 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 15700
-    blanks: 6639
+    comments: 15702
+    blanks: 6641
     files: 190
   Text:
     code: 0
@@ -190,15 +190,15 @@ loc:
     blanks: 157
     files: 16
 total:
-  code: 1161776
-  comments: 189565
-  blanks: 127341
+  code: 1161845
+  comments: 189536
+  blanks: 127362
   files: 4374
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/digitalocean/doctl
-  commit: f0b7b1d0a11d599afd3aefc0544dfd5bc7d6d4dc
+  commit: 4b5fba0d936e6537cb0af5ec0f03026c0f9278d2
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -214,7 +214,7 @@ checks:
     details: null
   - name: Maintained
     score: 10
-    reason: 22 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    reason: 26 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Token-Permissions
     score: 0
@@ -245,14 +245,24 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE.txt:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE.txt:0'
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
     details:
-      - 'Info: security policy file detected: github.com/digitalocean/.github/SECURITY.md:1'
-      - 'Info: Found linked content: github.com/digitalocean/.github/SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/digitalocean/.github/SECURITY.md:1'
-      - 'Info: Found text in security policy: github.com/digitalocean/.github/SECURITY.md:1'
+      - 'Warn: release artifact v1.170.0 not signed: https://api.github.com/repos/digitalocean/doctl/releases/393446771'
+      - 'Warn: release artifact v1.169.0-beta.2 not signed: https://api.github.com/repos/digitalocean/doctl/releases/393113206'
+      - 'Warn: release artifact v1.169.0-beta.1 not signed: https://api.github.com/repos/digitalocean/doctl/releases/392804299'
+      - 'Warn: release artifact v1.169.0 not signed: https://api.github.com/repos/digitalocean/doctl/releases/391420821'
+      - 'Warn: release artifact v1.168.0-beta.16 not signed: https://api.github.com/repos/digitalocean/doctl/releases/390860648'
+      - 'Warn: release artifact v1.170.0 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/393446771'
+      - 'Warn: release artifact v1.169.0-beta.2 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/393113206'
+      - 'Warn: release artifact v1.169.0-beta.1 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/392804299'
+      - 'Warn: release artifact v1.169.0 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/391420821'
+      - 'Warn: release artifact v1.168.0-beta.16 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/390860648'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -288,24 +298,14 @@ checks:
       - 'Info:   0 out of   8 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 containerImage dependencies pinned'
       - 'Info:   1 out of   3 goCommand dependencies pinned'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
     details:
-      - 'Warn: release artifact v1.168.0-beta.11 not signed: https://api.github.com/repos/digitalocean/doctl/releases/387856870'
-      - 'Warn: release artifact v1.168.0-beta.10 not signed: https://api.github.com/repos/digitalocean/doctl/releases/386406026'
-      - 'Warn: release artifact v1.168.0-beta.8 not signed: https://api.github.com/repos/digitalocean/doctl/releases/385571225'
-      - 'Warn: release artifact v1.168.0-beta.7 not signed: https://api.github.com/repos/digitalocean/doctl/releases/382691305'
-      - 'Warn: release artifact v1.168.0-beta.6 not signed: https://api.github.com/repos/digitalocean/doctl/releases/382583876'
-      - 'Warn: release artifact v1.168.0-beta.11 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/387856870'
-      - 'Warn: release artifact v1.168.0-beta.10 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/386406026'
-      - 'Warn: release artifact v1.168.0-beta.8 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/385571225'
-      - 'Warn: release artifact v1.168.0-beta.7 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/382691305'
-      - 'Warn: release artifact v1.168.0-beta.6 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/382583876'
+      - 'Info: security policy file detected: github.com/digitalocean/.github/SECURITY.md:1'
+      - 'Info: Found linked content: github.com/digitalocean/.github/SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/digitalocean/.github/SECURITY.md:1'
+      - 'Info: Found text in security policy: github.com/digitalocean/.github/SECURITY.md:1'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
@@ -317,4 +317,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---
-{"id":393446771,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAi1mvs4Xc4Vz","tag_name":"v1.170.0","target_commitish":"main","name":"v1.170.0","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-09-22T03:55:32Z","updated_at":"2026-09-22T04:07:42Z","published_at":"2026-09-22T04:03:42Z","assets":[{"id":580502730,"node_id":"RA_kwDOAi1mvs4imcTK","name":"doctl-1.170.0-checksums.sha256","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":881,"digest":"sha256:ad130f069b0c0d2f273c0745b1fc5ea82c9c5562ee48697017d6885b3cff44ef","download_count":44,"created_at":"2026-09-22T04:03:41Z","updated_at":"2026-09-22T04:03:41Z"},{"id":580502633,"node_id":"RA_kwDOAi1mvs4imcRp","name":"doctl-1.170.0-darwin-amd64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":23155839,"digest":"sha256:fcccfe954b7d2819e7157f51134f0bfa6de745339c2edf549a3e487601cec769","download_count":2,"created_at":"2026-09-22T04:03:37Z","updated_at":"2026-09-22T04:03:38Z"},{"id":580502700,"node_id":"RA_kwDOAi1mvs4imcSs","name":"doctl-1.170.0-darwin-arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":21763688,"digest":"sha256:ef76668255d83a2e28329b2e34f7d80c6a25d7c1df216eda73bd1cfc0650f578","download_count":2,"created_at":"2026-09-22T04:03:39Z","updated_at":"2026-09-22T04:03:41Z"},{"id":580502632,"node_id":"RA_kwDOAi1mvs4imcRo","name":"doctl-1.170.0-linux-386.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":21092498,"digest":"sha256:85d29e64c44d84fa217b0257921591ce95682acd46f63da4d30459edf60d9fcc","download_count":2,"created_at":"2026-09-22T04:03:37Z","updated_at":"2026-09-22T04:03:39Z"},{"id":580502690,"node_id":"RA_kwDOAi1mvs4imcSi","name":"doctl-1.170.0-linux-amd64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":22151324,"digest":"sha256:8e50969b7725d2f4c23747b1313ae721ddf42a34c342ec6e16c9f3e7e676c813","download_count":1221,"created_at":"2026-09-22T04:03:39Z","updated_at":"2026-09-22T04:03:40Z"},{"id":580502634,"node_id":"RA_kwDOAi1mvs4imcRq","name":"doctl-1.170.0-linux-arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":20299680,"digest":"sha256:4101dd8c4d57fa8ef42182d8a6d65d83386d0d9b9c6f8378158d3421a6d17046","download_count":49,"created_at":"2026-09-22T04:03:37Z","updated_at":"2026-09-22T04:03:38Z"},{"id":580502725,"node_id":"RA_kwDOAi1mvs4imcTF","name":"doctl-1.170.0-source.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":10464232,"digest":"sha256:004b42d2a2078c371c86219bf54b6959fadd572011920f8888c2e40a7838d379","download_count":1,"created_at":"2026-09-22T04:03:41Z","updated_at":"2026-09-22T04:03:41Z"},{"id":580502635,"node_id":"RA_kwDOAi1mvs4imcRr","name":"doctl-1.170.0-windows-386.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":21773828,"digest":"sha256:bbab4eafa3a6abbee6d7ecd08743d1d9b0aa6e80072f6162c6ee26aaf2b70659","download_count":3,"created_at":"2026-09-22T04:03:37Z","updated_at":"2026-09-22T04:03:38Z"},{"id":580502688,"node_id":"RA_kwDOAi1mvs4imcSg","name":"doctl-1.170.0-windows-amd64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":22573458,"digest":"sha256:9c97780d87edf75a499c52e48e24b07af65e005fdcb3aa5527f3e15ac7feaba3","download_count":5,"created_at":"2026-09-22T04:03:39Z","updated_at":"2026-09-22T04:03:40Z"},{"id":580502691,"node_id":"RA_kwDOAi1mvs4imcSj","name":"doctl-1.170.0-windows-arm64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":20530427,"digest":"sha256:ea9be60ea158ab501e4342bf58beef1bda0531acd43a03f38ad1b482e83fefa0","download_count":3,"created_at":"2026-09-22T04:03:39Z","updated_at":"2026-09-22T04:03:40Z"}],"body":"**What\u2019s new**\r\n\r\n**Create and talk to agents**\r\n\r\n- Start a session from a YAML/JSON manifest, a saved config, or quick flags (--harness, --gh-repo, --prompt, and more)\r\n- create builds a session without attaching; launch opens one (and creates it first if needed)\r\n- prompt / ask sends one message and prints the answer \u2014 good for scripts\r\n- Interactive attach shows markdown replies, reasoning (\u201cthinking\u201d), and a clearer live stream\r\n- First session create shows Public Preview terms\r\n\r\n**Approvals and human-in-the-loop**\r\n\r\n- Approve, reject, or defer actions while attached\r\n- Handle MCP-style prompts: simple yes/no, open a URL, or fill in a short form\r\n- Headless mode with --on-hitl for unattended runs\r\n- Out-of-band approve for pending requests (including form answers via --content)\r\n\r\n**Session lifecycle**\r\n\r\n- List, show, pause, resume, update, and remove sessions\r\n- Filter lists by status, name, parent session, or pause reason (e.g. low balance)\r\n- Fork and roll back from checkpoints\r\n- Clearer messaging when a session pauses (including low-balance pauses)\r\n\r\n**Workspace and sandbox**\r\n\r\n- Upload and download files\r\n- Run commands in the sandbox with exec\r\n- Forward local ports into the session\r\n- Bridge Codex / OpenCode CLIs with start-proxy\r\n\r\n**Templates, configs, sizes, triggers, files**\r\n\r\n- Manage reusable templates and configs\r\n- List sizes\r\n- Set up triggers (including webhook secrets handled safely for scripting)\r\n- Browse workspace files\r\n\r\n**Billing awareness**\r\n\r\n- balance shows your team\u2019s prepayment balance and gate status\r\n- When funds run out, commands show a clear add-funds message instead of a generic failure\r\n- Sessions that pause for billing explain why, including mid-stream\r\n\r\n\r\n\r\n"}
+{"id":394172341,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAi1mvs4Xfpe1","tag_name":"v1.171.2","target_commitish":"main","name":"v1.171.2","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-09-22T22:41:20Z","updated_at":"2026-09-22T22:46:04Z","published_at":"2026-09-22T22:46:04Z","assets":[{"id":582410380,"node_id":"RA_kwDOAi1mvs4ituCM","name":"doctl-1.171.2-checksums.sha256","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":881,"digest":"sha256:d624cfa9a7497ff3342c399b86a197f602e867b7264bfacd197358ae4dba667f","download_count":48,"created_at":"2026-09-22T22:46:03Z","updated_at":"2026-09-22T22:46:03Z"},{"id":582410302,"node_id":"RA_kwDOAi1mvs4ituA-","name":"doctl-1.171.2-darwin-amd64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":23160649,"digest":"sha256:4a52dacf8691ed89ab1ffdcdec2040adfa8e23a2313a984a05e1c011d5cb61d0","download_count":4,"created_at":"2026-09-22T22:45:59Z","updated_at":"2026-09-22T22:46:01Z"},{"id":582410353,"node_id":"RA_kwDOAi1mvs4ituBx","name":"doctl-1.171.2-darwin-arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":21768170,"digest":"sha256:1f8bf192ece3f85cb80d9f51278c361ee1c34ea96ad7e6b93352fb47c43fd9c4","download_count":16,"created_at":"2026-09-22T22:46:01Z","updated_at":"2026-09-22T22:46:02Z"},{"id":582410352,"node_id":"RA_kwDOAi1mvs4ituBw","name":"doctl-1.171.2-linux-386.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":21095801,"digest":"sha256:d172cb0f05790757835b0abd9fb5aa3005507a6646471b8222183df425415702","download_count":3,"created_at":"2026-09-22T22:46:01Z","updated_at":"2026-09-22T22:46:02Z"},{"id":582410300,"node_id":"RA_kwDOAi1mvs4ituA8","name":"doctl-1.171.2-linux-amd64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":22156550,"digest":"sha256:4a00b59945882373ee17c71ee2aec270e08c44d1b70c160f93115940518b5d55","download_count":4246,"created_at":"2026-09-22T22:45:59Z","updated_at":"2026-09-22T22:46:01Z"},{"id":582410356,"node_id":"RA_kwDOAi1mvs4ituB0","name":"doctl-1.171.2-linux-arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":20305510,"digest":"sha256:d3998cafafb00f911d8f3f2a66a83a2f724c3090b9e23c187699eb23629c3199","download_count":34,"created_at":"2026-09-22T22:46:01Z","updated_at":"2026-09-22T22:46:02Z"},{"id":582410374,"node_id":"RA_kwDOAi1mvs4ituCG","name":"doctl-1.171.2-source.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":10462768,"digest":"sha256:0c68c7e8b5f0f584bde68f54d5cccd1d1f388b529528b40b222751f0e9109645","download_count":2,"created_at":"2026-09-22T22:46:03Z","updated_at":"2026-09-22T22:46:03Z"},{"id":582410301,"node_id":"RA_kwDOAi1mvs4ituA9","name":"doctl-1.171.2-windows-386.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":21776496,"digest":"sha256:9e0d64bcedc2be0452b70d4f56f6833a42abfab87c2e587bd96284ff76b5b62f","download_count":5,"created_at":"2026-09-22T22:45:59Z","updated_at":"2026-09-22T22:46:01Z"},{"id":582410355,"node_id":"RA_kwDOAi1mvs4ituBz","name":"doctl-1.171.2-windows-amd64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":22575113,"digest":"sha256:15d518cfe1e69a0116f8bc62dd49d74e2066876009127ec35e8b0f02c491d759","download_count":15,"created_at":"2026-09-22T22:46:01Z","updated_at":"2026-09-22T22:46:02Z"},{"id":582410303,"node_id":"RA_kwDOAi1mvs4ituA_","name":"doctl-1.171.2-windows-arm64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":20532763,"digest":"sha256:a725af684565a6f7cd436511a5c6b977ffbd70df8cf6cf97584cc4177e790849","download_count":6,"created_at":"2026-09-22T22:45:59Z","updated_at":"2026-09-22T22:46:01Z"}],"body":"## Changelog\n* 2039c37e8512c78cdf6cd7d839fe371d70c2a874 agents port-forward: say what a tunnel close code means, once per port (#1983)\n\n"}

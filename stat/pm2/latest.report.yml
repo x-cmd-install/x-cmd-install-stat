@@ -7,7 +7,7 @@ about:
   latestVersion: "v7.0.4"
   latestRelease: "v7.0.4"
   latestPrerelease: "4.0.0-rc1"
-  collectedAt: 2026-09-22T06:44:24Z
+  collectedAt: 2026-09-23T06:53:32Z
 timeline:
   created: 2013-05-21
   lastCommit: 2026-08-24
@@ -34,15 +34,15 @@ language:
 totalBytes: 1569519
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 1
     mergedPR: 0
-    openPR: 9
+    openPR: 8
     closedIssue: 0
     openIssue: 4
     commit: 0
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 1
     mergedPR: 0
     openPR: 15
@@ -50,7 +50,7 @@ recent:
     openIssue: 4
     commit: 5
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 3
     mergedPR: 0
     openPR: 18
@@ -58,7 +58,7 @@ recent:
     openIssue: 10
     commit: 14
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 5
     mergedPR: 0
     openPR: 23
@@ -66,7 +66,7 @@ recent:
     openIssue: 17
     commit: 58
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 6
     mergedPR: 2
     openPR: 33
@@ -74,7 +74,7 @@ recent:
     openIssue: 31
     commit: 84
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 15
     mergedPR: 10
     openPR: 45
@@ -90,7 +90,7 @@ total:
   commit: 5239
 ---
 path: /home/runner/.x-repo/github.com/Unitech/pm2
-collectedAt: 2026-09-22T06:44:26Z
+collectedAt: 2026-09-23T06:53:34Z
 loc:
   JavaScript:
     code: 41537
@@ -302,4 +302,4 @@ checks:
     details:
       - 'Warn: branch protection not enabled for branch ''master'''
 ---
-{"id":375684580,"author":{"login":"Unitech","id":757747,"node_id":"MDQ6VXNlcjc1Nzc0Nw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAJtxSs4WZH3k","tag_name":"v7.0.4","target_commitish":"master","name":"v7.0.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-24T12:35:02Z","updated_at":"2026-08-24T12:35:48Z","published_at":"2026-08-24T12:35:48Z","assets":[],"body":"## 7.0.4\r\n\r\n### Features\r\n\r\n- Start `.ts` apps with Node.js native type stripping when bun is not installed (Node.js >= 22.18 /\r\n23.6, `--experimental-strip-types` auto-injected on 22.6+); `ts-node` fallback now resolved from the\r\napp's own dependencies\r\n\r\n### Bug Fixes\r\n\r\n- Fix `pm2 start --container` / `--container --dist` crashing with `Cannot find module` \u2014 wrong\r\nrequire depth in `Containerizer.js` from the v7 promptly internalization\r\n- Bump `js-yaml` 4.3.0 \u2192 4.3.1\r\n- Fix overlapping reloads colliding on the `_old_<pm_id>` slot and orphaning a cluster worker \u2014 a\r\nreload is now refused while one is in progress #6129\r\n- Ignore stale exit events from a replaced process \u2014 fixes double start on Windows with\r\n`shutdown_with_message` #6142\r\n- Fix `retrying in NaNms` kill log and ~1ms poll spam when `kill_retry_time` is unset \u2014 fallback to\r\n`KILL_RETRY_TIME` constant (100ms, `PM2_KILL_RETRY_TIME` overridable)\r\n- Fix `pm2 start`/`restart` RPC hanging forever when a cluster worker dies before its `online` event\r\n(bad `node_args`, boot OOM) \u2014 executeApp now concludes on exit-before-online\r\n- Surface the daemon's actual error in CLI output instead of masking everything as `Process not\r\nfound`\r\n- Pin OpenTelemetry package versions in `pm2 install-otel` and re-emit legacy HTTP span tags\r\n(`http.method`, `http.status_code`, `http.target`) dropped by `@opentelemetry/instrumentation-http`\r\n>= 0.220\r\n\r\n### Core Refactor\r\n\r\n- Remove dead code: `promise.min.js` polyfill (native `Promise`), `IsAbsolute.js` (native\r\n`path.isAbsolute`), unused Java/Ruby Dockerfile templates, always-false `win64` platform checks","reactions":{"total_count":6,"+1":2,"-1":0,"laugh":0,"hooray":3,"confused":0,"heart":0,"rocket":0,"eyes":1}}
+{"id":375684580,"author":{"login":"Unitech","id":757747,"node_id":"MDQ6VXNlcjc1Nzc0Nw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAJtxSs4WZH3k","tag_name":"v7.0.4","target_commitish":"master","name":"v7.0.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-24T12:35:02Z","updated_at":"2026-08-24T12:35:48Z","published_at":"2026-08-24T12:35:48Z","assets":[],"body":"## 7.0.4\r\n\r\n### Features\r\n\r\n- Start `.ts` apps with Node.js native type stripping when bun is not installed (Node.js >= 22.18 /\r\n23.6, `--experimental-strip-types` auto-injected on 22.6+); `ts-node` fallback now resolved from the\r\napp's own dependencies\r\n\r\n### Bug Fixes\r\n\r\n- Fix `pm2 start --container` / `--container --dist` crashing with `Cannot find module` \u2014 wrong\r\nrequire depth in `Containerizer.js` from the v7 promptly internalization\r\n- Bump `js-yaml` 4.3.0 \u2192 4.3.1\r\n- Fix overlapping reloads colliding on the `_old_<pm_id>` slot and orphaning a cluster worker \u2014 a\r\nreload is now refused while one is in progress #6129\r\n- Ignore stale exit events from a replaced process \u2014 fixes double start on Windows with\r\n`shutdown_with_message` #6142\r\n- Fix `retrying in NaNms` kill log and ~1ms poll spam when `kill_retry_time` is unset \u2014 fallback to\r\n`KILL_RETRY_TIME` constant (100ms, `PM2_KILL_RETRY_TIME` overridable)\r\n- Fix `pm2 start`/`restart` RPC hanging forever when a cluster worker dies before its `online` event\r\n(bad `node_args`, boot OOM) \u2014 executeApp now concludes on exit-before-online\r\n- Surface the daemon's actual error in CLI output instead of masking everything as `Process not\r\nfound`\r\n- Pin OpenTelemetry package versions in `pm2 install-otel` and re-emit legacy HTTP span tags\r\n(`http.method`, `http.status_code`, `http.target`) dropped by `@opentelemetry/instrumentation-http`\r\n>= 0.220\r\n\r\n### Core Refactor\r\n\r\n- Remove dead code: `promise.min.js` polyfill (native `Promise`), `IsAbsolute.js` (native\r\n`path.isAbsolute`), unused Java/Ruby Dockerfile templates, always-false `win64` platform checks","reactions":{"total_count":7,"+1":3,"-1":0,"laugh":0,"hooray":3,"confused":0,"heart":0,"rocket":0,"eyes":1}}

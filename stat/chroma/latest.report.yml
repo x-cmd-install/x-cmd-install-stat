@@ -7,7 +7,7 @@ about:
   latestVersion: "latest"
   latestRelease: "1.5.9"
   latestPrerelease: "latest"
-  collectedAt: 2026-09-22T06:34:11Z
+  collectedAt: 2026-09-23T06:37:44Z
 timeline:
   created: 2022-10-05
   lastCommit: 2026-09-21
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2026-05-05
   lastPrerelease: 2025-04-01
 popularity:
-  star: 29354
+  star: 29356
   watcher: 138
-  fork: 2526
+  fork: 2527
   release: 137
   contributor: 195
-  pullRequest: 6017
+  pullRequest: 6021
   issue: 1698
 language:
   Rust: 12021623
@@ -39,63 +39,63 @@ language:
 totalBytes: 17046391
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 34
-    openPR: 75
+    openPR: 76
     closedIssue: 0
-    openIssue: 17
+    openIssue: 16
     commit: 33
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
-    mergedPR: 70
-    openPR: 144
+    mergedPR: 69
+    openPR: 145
     closedIssue: 1
     openIssue: 24
     commit: 62
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 0
-    mergedPR: 161
-    openPR: 193
+    mergedPR: 135
+    openPR: 190
     closedIssue: 1
     openIssue: 41
     commit: 145
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 8
-    mergedPR: 441
-    openPR: 316
+    mergedPR: 435
+    openPR: 314
     closedIssue: 13
-    openIssue: 91
+    openIssue: 90
     commit: 408
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 32
     mergedPR: 1324
-    openPR: 397
+    openPR: 399
     closedIssue: 64
     openIssue: 140
     commit: 1218
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 75
-    mergedPR: 3157
-    openPR: 495
+    mergedPR: 3152
+    openPR: 497
     closedIssue: 294
     openIssue: 230
     commit: 2927
 total:
   release: 137
   mergedPR: 4402
-  openPR: 529
+  openPR: 531
   closedIssue: 1350
   openIssue: 348
   commit: 4648
 ---
 path: /home/runner/.x-repo/github.com/chroma-core/chroma
-collectedAt: 2026-09-22T06:34:55Z
+collectedAt: 2026-09-23T06:38:30Z
 loc:
   Rust:
     code: 273370
@@ -218,10 +218,10 @@ total:
   blanks: 59238
   files: 1871
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/chroma-core/chroma
-  commit: da60f6821a050757f30d9251f474c1c6830463a4
+  commit: 0ca571e2c0a67514ab7a382cec8975b86dff0984
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -229,7 +229,7 @@ score: 5.1
 checks:
   - name: Code-Review
     score: 9
-    reason: Found 28/30 approved changesets -- score normalized to 9
+    reason: Found 29/30 approved changesets -- score normalized to 9
     details: null
   - name: Maintained
     score: 10
@@ -252,8 +252,8 @@ checks:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/nightly-tests.yml:73'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/pr.yml:327'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/pr.yml:328'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release-chromadb.yml:229'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release-chromadb.yml:228'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release-chromadb.yml:229'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release-cli.yml:112'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release-dev-javascript-client.yml:117'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release-dev-javascript-client.yml:118'
@@ -327,12 +327,27 @@ checks:
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release-chromadb.yml:115'
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
       - 'Info: Possibly incomplete results: error parsing shell code: reached EOF without closing quote `: Dockerfile.windows:3'
       - 'Info: Possibly incomplete results: error parsing shell code: statements must be separated by &, ; or a newline: Dockerfile.windows:12'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:122: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:124: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:129: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:147: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:173: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:179: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:195: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:197: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:202: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:210: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:28: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
@@ -344,16 +359,6 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:83: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:94: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:109: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:122: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:124: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:129: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:147: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:173: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:179: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:195: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:197: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:202: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_js_bindings.yml:210: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_js_bindings.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_release_container.yml:65: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_release_container.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/_build_release_container.yml:103: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_release_container.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_build_release_container.yml:127: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_build_release_container.yml/main?enable=pin'
@@ -377,15 +382,20 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_go-tests.yml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_go-tests.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_javascript-client-tests.yml:14: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_javascript-client-tests.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/_javascript-client-tests.yml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_javascript-client-tests.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:340: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:346: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:371: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:647: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:657: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:677: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:696: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:699: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:708: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:180: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:186: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:217: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:340: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:346: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:371: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:495: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:522: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:561: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:567: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:588: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:37: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:47: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:51: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
@@ -394,18 +404,13 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:411: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:417: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:443: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:495: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:522: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:546: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:561: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:567: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:588: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:603: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:609: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:630: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:180: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:186: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:217: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:647: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:657: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-tests.yml:677: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-tests.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-vulnerability-scan.yml:13: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-vulnerability-scan.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_python-vulnerability-scan.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_python-vulnerability-scan.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_rust-tests.yml:27: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_rust-tests.yml/main?enable=pin'
@@ -413,35 +418,33 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_rust-tests.yml:64: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_rust-tests.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_rust-tests.yml:123: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_rust-tests.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/_rust-tests.yml:200: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/_rust-tests.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/apply-hotfix.yaml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/apply-hotfix.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/apply-hotfix.yaml:51: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/apply-hotfix.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/apply-hotfix.yaml:99: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/apply-hotfix.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/apply-hotfix.yaml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/apply-hotfix.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/modal-mdac-deploy.yml:37: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/modal-mdac-deploy.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/modal-mdac-deploy.yml:40: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/modal-mdac-deploy.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/nightly-tests.yml:60: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/nightly-tests.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/nightly-tests.yml:76: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/nightly-tests.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/nightly-tests.yml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/nightly-tests.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/nightly-tests.yml:30: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/nightly-tests.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/nightly-tests.yml:50: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/nightly-tests.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/nightly-tests.yml:60: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/nightly-tests.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/nightly-tests.yml:76: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/nightly-tests.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pr-check-title.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr-check-title.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pr-check-title.yml:29: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr-check-title.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pr-check-title.yml:36: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr-check-title.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pr-review-checklist.yml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr-review-checklist.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pr.yml:331: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pr.yml:28: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pr.yml:34: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pr.yml:196: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pr.yml:198: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pr.yml:262: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pr.yml:315: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pr.yml:177: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pr.yml:356: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pr.yml:151: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pr.yml:154: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pr.yml:162: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pr.yml:196: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pr.yml:198: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pr.yml:331: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pr.yml:356: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pr.yml:315: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pr.yml:28: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pr.yml:34: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pr.yml:177: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/pr.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release-chromadb.yml:251: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-chromadb.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-chromadb.yml:35: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-chromadb.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-chromadb.yml:39: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-chromadb.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-chromadb.yml:232: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-chromadb.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-chromadb.yml:127: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-chromadb.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release-chromadb.yml:141: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-chromadb.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release-chromadb.yml:148: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-chromadb.yml/main?enable=pin'
@@ -449,9 +452,9 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-chromadb.yml:168: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-chromadb.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release-chromadb.yml:176: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-chromadb.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release-chromadb.yml:196: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-chromadb.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-chromadb.yml:232: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-chromadb.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-cli.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-cli.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-cli.yml:36: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-cli.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release-chromadb.yml:251: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-chromadb.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-chromadb.yml:35: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-chromadb.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-chromadb.yml:39: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-chromadb.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-cli.yml:46: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-cli.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-cli.yml:64: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-cli.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-cli.yml:74: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-cli.yml/main?enable=pin'
@@ -459,6 +462,8 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-cli.yml:102: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-cli.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-cli.yml:115: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-cli.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-cli.yml:118: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-cli.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-cli.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-cli.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-cli.yml:36: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-cli.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-dev-javascript-client.yml:35: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-dev-javascript-client.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release-dev-javascript-client.yml:40: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-dev-javascript-client.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-dev-javascript-client.yml:46: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-dev-javascript-client.yml/main?enable=pin'
@@ -474,19 +479,19 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release-javascript-client.yml:54: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-javascript-client.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-javascript-client.yml:59: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-javascript-client.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release-javascript-client.yml:111: update your workflow using https://app.stepsecurity.io/secureworkflow/chroma-core/chroma/release-javascript-client.yml/main?enable=pin'
-      - 'Warn: containerImage not pinned by hash: .github/actions/bandit-scan/Dockerfile:1: pin your Docker image by updating python:3.10-alpine to python:3.10-alpine@sha256:6e67d897508774ad8f2250bbf0c414e029d3bc612b565017fba334b6193a798d'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating python:3.11-slim-bookworm to python:3.11-slim-bookworm@sha256:528257d48c1da0dcecc2e725d1ae34498d60c965f1241e39cd6a85a8859bdf84'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:70: pin your Docker image by updating python:3.11-slim-bookworm to python:3.11-slim-bookworm@sha256:528257d48c1da0dcecc2e725d1ae34498d60c965f1241e39cd6a85a8859bdf84'
+      - 'Warn: containerImage not pinned by hash: .github/actions/bandit-scan/Dockerfile:1: pin your Docker image by updating python:3.10-alpine to python:3.10-alpine@sha256:8d62622e4ad0e5adfd01efecd25a0a5ea571a22aaaeff481796ce10828d46504'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating python:3.11-slim-bookworm to python:3.11-slim-bookworm@sha256:a36c24f9cbdf4fd0f52d67f0823eeac19c2028c637cecc392d97f980d4fec56b'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:70: pin your Docker image by updating python:3.11-slim-bookworm to python:3.11-slim-bookworm@sha256:a36c24f9cbdf4fd0f52d67f0823eeac19c2028c637cecc392d97f980d4fec56b'
       - 'Warn: containerImage not pinned by hash: Dockerfile.windows:1: pin your Docker image by updating python:3.11.9 to python:3.11.9@sha256:a03f4e5b67980d474839e7b4d4a405871a4259690287d65060cff95d0cb311cd'
-      - 'Warn: containerImage not pinned by hash: go/Dockerfile:1: pin your Docker image by updating golang:bookworm to golang:bookworm@sha256:648f440f42a0958804efb24df176f806f9d353b41f1c0627f666428e40310f6b'
-      - 'Warn: containerImage not pinned by hash: go/Dockerfile:47: pin your Docker image by updating debian:bookworm-slim to debian:bookworm-slim@sha256:88200866dfff7ea7f5cbcb6ec7c8a701889efe6fe859fe64d6990e4b07ea4171'
+      - 'Warn: containerImage not pinned by hash: go/Dockerfile:1: pin your Docker image by updating golang:bookworm to golang:bookworm@sha256:69a7b9788769bec032d238959b61854e9ae87f57be9029ec04e9885fabf99195'
+      - 'Warn: containerImage not pinned by hash: go/Dockerfile:47: pin your Docker image by updating debian:bookworm-slim to debian:bookworm-slim@sha256:3783cc01769c7b2b1b83a5c5ad96c815348e28ed7da68e2e3687004faa906251'
       - 'Warn: containerImage not pinned by hash: go/Dockerfile:53'
-      - 'Warn: containerImage not pinned by hash: go/Dockerfile.migration:1: pin your Docker image by updating arigaio/atlas:latest to arigaio/atlas:latest@sha256:84121add07efbc19ef493e9fa4ccc84ebf7b8ccac0f19c22bbcfb200e10a8076'
-      - 'Warn: containerImage not pinned by hash: k8s/test/postgres/Dockerfile:1: pin your Docker image by updating docker.io/postgres:15 to docker.io/postgres:15@sha256:9b1d34adbce1dd07ee6e94b4a2cf698884b89bd44a6c9c12f5da8f3acbfe4957'
+      - 'Warn: containerImage not pinned by hash: go/Dockerfile.migration:1: pin your Docker image by updating arigaio/atlas:latest to arigaio/atlas:latest@sha256:bc8a36015b294a151702c920000b28b779ce83061094142b410d96b822ee140b'
+      - 'Warn: containerImage not pinned by hash: k8s/test/postgres/Dockerfile:1: pin your Docker image by updating docker.io/postgres:15 to docker.io/postgres:15@sha256:dfbbb0ad8cab91d41e99123664e37a9b25d0413426d4fb3154e4d668e5d35246'
       - 'Warn: containerImage not pinned by hash: rust/Dockerfile:10: pin your Docker image by updating rust:1.92.0 to rust:1.92.0@sha256:f58923369ba295ae1f60bc49d03f2c955a5c93a0b7d49acfb2b2a65bebaf350d'
       - 'Warn: containerImage not pinned by hash: rust/Dockerfile:54'
       - 'Warn: containerImage not pinned by hash: rust/Dockerfile:77'
-      - 'Warn: containerImage not pinned by hash: rust/Dockerfile:145: pin your Docker image by updating debian:stable-slim to debian:stable-slim@sha256:04634311a8d5fc442b6eb06d792293c4f3e2268652ca7634e00ce8ef5cc0a28a'
+      - 'Warn: containerImage not pinned by hash: rust/Dockerfile:145: pin your Docker image by updating debian:stable-slim to debian:stable-slim@sha256:5bc3287b25407c965a30f38e32603dc253a3869e1b12a21ac09bfc27fd8b13ce'
       - 'Warn: containerImage not pinned by hash: rust/Dockerfile:158'
       - 'Warn: containerImage not pinned by hash: rust/Dockerfile:168'
       - 'Warn: containerImage not pinned by hash: rust/Dockerfile:172'
@@ -500,7 +505,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: rust/Dockerfile:204'
       - 'Warn: containerImage not pinned by hash: rust/Dockerfile:208'
       - 'Warn: containerImage not pinned by hash: rust/Dockerfile.mdac:5: pin your Docker image by updating rust:1.92.0-trixie to rust:1.92.0-trixie@sha256:f58923369ba295ae1f60bc49d03f2c955a5c93a0b7d49acfb2b2a65bebaf350d'
-      - 'Warn: containerImage not pinned by hash: rust/Dockerfile.mdac:20: pin your Docker image by updating debian:trixie-slim to debian:trixie-slim@sha256:d7e12182ce18b85b93007c1dedf31f2d29e01ccf3182cc4017c709b6259bc132'
+      - 'Warn: containerImage not pinned by hash: rust/Dockerfile.mdac:20: pin your Docker image by updating debian:trixie-slim to debian:trixie-slim@sha256:a99cfc517144bc59b1978475ec53b46ecabec7e43635402ee5b77cc54cd1b20a'
       - 'Warn: pipCommand not pinned by hash: .github/actions/bandit-scan/Dockerfile:3'
       - 'Warn: downloadThenRun not pinned by hash: Dockerfile:4-16'
       - 'Warn: pipCommand not pinned by hash: Dockerfile:39'
@@ -517,21 +522,16 @@ checks:
       - 'Warn: pipCommand not pinned by hash: .github/workflows/_build_release_pypi.yml:180'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/_python-tests.yml:193'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/_python-tests.yml:616'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/_python-tests.yml:663'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/_python-tests.yml:574'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/_python-tests.yml:663'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/modal-mdac-deploy.yml:46'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/release-chromadb.yml:44'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/release-chromadb.yml:140'
       - 'Info:   0 out of 103 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of  38 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
-      - 'Info:   2 out of   2 goCommand dependencies pinned'
       - 'Info:   0 out of  27 containerImage dependencies pinned'
       - 'Info:   1 out of  21 pipCommand dependencies pinned'
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
+      - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
+      - 'Info:   2 out of   2 goCommand dependencies pinned'
 ---
 {"id":317623482,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOII5zmM4S7oy6","tag_name":"1.5.9","target_commitish":"main","name":"1.5.9","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-05-04T23:34:47Z","updated_at":"2026-05-05T05:55:40Z","published_at":"2026-05-05T05:55:40Z","assets":[],"body":"Version: `1.5.9`\nGit ref: `refs/tags/1.5.9`\nBuild Date: `2026-05-05T05:55`\nPIP Package: `chroma-1.5.9.tar.gz`\nGithub Container Registry Image: `:1.5.9`\nDockerHub Image: `:1.5.9`\n\n## What's Changed\n* [ENH](frontend): block functions on topology dbs by @rescrv in https://github.com/chroma-core/chroma/pull/6836\n* [ENH](faults): Add Tilt fault injection CLI by @rescrv in https://github.com/chroma-core/chroma/pull/6881\n* [CHORE]  Debug TimeoutError in test_add.py by @rescrv in https://github.com/chroma-core/chroma/pull/6905\n* [ENH]: Enable rebuilds for sharded collections by @tanujnay112 in https://github.com/chroma-core/chroma/pull/6916\n* [ENH]: Group by support with sharding by @sanketkedia in https://github.com/chroma-core/chroma/pull/6909\n* [CHORE]: Denormalize tenant and database into collection_compaction_cursors table by @tanujnay112 in https://github.com/chroma-core/chroma/pull/6940\n* [CHORE]  Use normalized record sets for test add by @rescrv in https://github.com/chroma-core/chroma/pull/6935\n* [ENH]: Add workflow to build and publish service container images by @jasonvigil in https://github.com/chroma-core/chroma/pull/6944\n* [ENH] - Updates language around Chroma Cloud to be more representative. by @tjkrusinskichroma in https://github.com/chroma-core/chroma/pull/6952\n* [ENH]: Add change stream to collection compaction cursors by @tanujnay112 in https://github.com/chroma-core/chroma/pull/6955\n* [BUG] Switch to storing DOCKERHUB_USERNAME as var by @jasonvigil in https://github.com/chroma-core/chroma/pull/6962\n* [CHORE]: Standardize Tilt CI image build on root docker-bake.hcl by @jasonvigil in https://github.com/chroma-core/chroma/pull/6958\n* [BUG]: Rename database on soft delete by @tanujnay112 in https://github.com/chroma-core/chroma/pull/6943\n* Revert \"[CHORE]: Standardize Tilt CI image build on root docker-bake.hcl\" by @jasonvigil in https://github.com/chroma-core/chroma/pull/6965\n* [ENH](system): name and size all worker threads by @rescrv in https://github.com/chroma-core/chroma/pull/6936\n* [BUG](test): simplify flaky indexing progress test by @rescrv in https://github.com/chroma-core/chroma/pull/6968\n* [CHORE] stabilize Tilt dev environment configs by @rescrv in https://github.com/chroma-core/chroma/pull/6937\n* [BUG](garbage_collector): use correct version file per collection in ancestor walk by @rescrv in https://github.com/chroma-core/chroma/pull/6970\n* [ENH] Add SparsePostingBlock by @HammadB in https://github.com/chroma-core/chroma/pull/6823\n* [ENH] Add basic maxscore writer/reader by @HammadB in https://github.com/chroma-core/chroma/pull/6825\n* [ENH] Add maxscore lazy cursor by @HammadB in https://github.com/chroma-core/chroma/pull/6829\n* [ENH] Add SIMD for maxscore by @Sicheng-Pan in https://github.com/chroma-core/chroma/pull/6865\n* [ENH] Benchmark maxscore by @Sicheng-Pan in https://github.com/chroma-core/chroma/pull/6866\n* [ENH] Add maxscore option in schema by @Sicheng-Pan in https://github.com/chroma-core/chroma/pull/6878\n* [ENH] Add maxscore index to metadata segment by @Sicheng-Pan in https://github.com/chroma-core/chroma/pull/6880\n* [ENH] Wire maxscore reader in search by @Sicheng-Pan in https://github.com/chroma-core/chroma/pull/6899\n* [PERF] Batch load lazy cursor by @Sicheng-Pan in https://github.com/chroma-core/chroma/pull/6974\n* [ENH](garbage_collector): add MCMR support for log GC by @rescrv in https://github.com/chroma-core/chroma/pull/6946\n* [ENH](test): parameterize multi-region config by @rescrv in https://github.com/chroma-core/chroma/pull/6951\n* [CHORE]  fix merge conflict in main by @rescrv in https://github.com/chroma-core/chroma/pull/6986\n* [ENH]: Refactor offset_id to be a mutable AtomicU32 in record by @tanujnay112 in https://github.com/chroma-core/chroma/pull/6922\n* [ENH](spanner): add spanner-cli wrapper binary by @rescrv in https://github.com/chroma-core/chroma/pull/6959\n* [BUG](sysdb): preserve legacy hnsw: metadata keys by @rescrv in https://github.com/chroma-core/chroma/pull/6953\n* [TST] refactor repair collection log offset test by @rescrv in https://github.com/chroma-core/chroma/pull/6954\n* [TST](garbage_collector): add MCMR hard delete test by @rescrv in https://github.com/chroma-core/chroma/pull/6947\n* [ENH](log-service): defer Spanner init to first use by @rescrv in https://github.com/chroma-core/chroma/pull/6915\n* [CHORE]: Denormalize is_deleted in mcmr by @tanujnay112 in https://github.com/chroma-core/chroma/pull/6989\n* [BUG] Reject NaN/Infinity in base64-encoded embeddings by @philipithomas in https://github.com/chroma-core/chroma/pull/6664\n* Revert \"[TST](garbage_collector): add MCMR hard delete test\" by @rescrv in https://github.com/chroma-core/chroma/pull/6992\n* [ENH] Verify file path for compaction by @Sicheng-Pan in https://github.com/chroma-core/chroma/pull/6991\n* [DOC]: Document file-upload sync API, AWS credential reuse, and EU region by @philipithomas in https://github.com/chroma-core/chroma/pull/6988\n* [ENH]: Seal redistributes lower offset ids to prev active shard by @tanujnay112 in https://github.com/chroma-core/chroma/pull/6923\n* [TST] add multi_region_test to more tests by @rescrv in https://github.com/chroma-core/chroma/pull/6956\n* [TST](gc): add MCMR hard delete integration test by @rescrv in https://github.com/chroma-core/chroma/pull/6997\n* [ENH](rust-client): Add read-only backend failover by @rescrv in https://github.com/chroma-core/chroma/pull/6985\n* [ENH](gc): GC empty MCMR collections by @rescrv in https://github.com/chroma-core/chroma/pull/6961\n* [ENH] scaffold foundation CLI project by @davedash in https://github.com/chroma-core/chroma/pull/6999\n* [ENH](ci): move foundation/ to top-level so rust/** filters skip it by @davedash in https://github.com/chroma-core/chroma/pull/7008\n* [BLD] Add foundation CLI install script by @davedash in https://github.com/chroma-core/chroma/pull/7005\n* [DOC] Add CLAUDE.md, AGENTS.md, scoped Rust rule by @davedash in https://github.com/chroma-core/chroma/pull/7010\n* [ENH](foundation-cli): Add login, logout, and whoami commands by @davedash in https://github.com/chroma-core/chroma/pull/7007\n* [CHORE]: Remove foundation/ from chroma by @davedash in https://github.com/chroma-core/chroma/pull/7017\n* [ENH]: add client header to Gemini embedding functions by @markmcd in https://github.com/chroma-core/chroma/pull/6990\n* [RELEASE] CLI 1.4.4 Python 1.5.9 JS 3.4.5 by @itaismith in https://github.com/chroma-core/chroma/pull/7018\n\n\n**Full Changelog**: https://github.com/chroma-core/chroma/compare/1.5.8...1.5.9","mentions_count":11}

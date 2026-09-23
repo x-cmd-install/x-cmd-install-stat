@@ -7,7 +7,7 @@ about:
   latestVersion: "1.9.22-rc"
   latestRelease: "1.9.19"
   latestPrerelease: "1.9.22-rc"
-  collectedAt: 2026-09-22T05:21:50Z
+  collectedAt: 2026-09-23T05:15:55Z
 timeline:
   created: 2021-04-14
   lastCommit: 2023-08-01
@@ -32,7 +32,7 @@ language:
 totalBytes: 402675
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -40,7 +40,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -48,7 +48,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -56,7 +56,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 0
     mergedPR: 0
     openPR: 0
@@ -64,7 +64,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 0
     mergedPR: 0
     openPR: 0
@@ -72,7 +72,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 0
     mergedPR: 0
     openPR: 0
@@ -88,7 +88,7 @@ total:
   commit: 1130
 ---
 path: /home/runner/.x-repo/github.com/datreeio/datree
-collectedAt: 2026-09-22T05:21:51Z
+collectedAt: 2026-09-23T05:15:57Z
 loc:
   Yaml:
     code: 17194
@@ -161,7 +161,7 @@ total:
   blanks: 3421
   files: 511
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/datreeio/datree
   commit: 0c3b63e6ce9688cdb5ad3bf06768875664cf15be
@@ -170,11 +170,6 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.8
 checks:
-  - name: Maintained
-    score: 0
-    reason: project is archived
-    details:
-      - 'Warn: Repository is archived.'
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
@@ -183,6 +178,11 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Maintained
+    score: 0
+    reason: project is archived
+    details:
+      - 'Warn: Repository is archived.'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -210,6 +210,12 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE.md:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE.md:0'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -218,12 +224,15 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: License
-    score: 10
-    reason: license file detected
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
     details:
-      - 'Info: project has a license file: LICENSE.md:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE.md:0'
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -236,6 +245,7 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/golangci-lint.yml:9: update your workflow using https://app.stepsecurity.io/secureworkflow/datreeio/datree/golangci-lint.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/golangci-lint.yml:11: update your workflow using https://app.stepsecurity.io/secureworkflow/datreeio/datree/golangci-lint.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/golangci-lint.yml:15: update your workflow using https://app.stepsecurity.io/secureworkflow/datreeio/datree/golangci-lint.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/datreeio/datree/release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:38: update your workflow using https://app.stepsecurity.io/secureworkflow/datreeio/datree/release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:54: update your workflow using https://app.stepsecurity.io/secureworkflow/datreeio/datree/release.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:62: update your workflow using https://app.stepsecurity.io/secureworkflow/datreeio/datree/release.yml/main?enable=pin'
@@ -245,7 +255,6 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:101: update your workflow using https://app.stepsecurity.io/secureworkflow/datreeio/datree/release.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:106: update your workflow using https://app.stepsecurity.io/secureworkflow/datreeio/datree/release.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:118: update your workflow using https://app.stepsecurity.io/secureworkflow/datreeio/datree/release.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/datreeio/datree/release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release_candidate.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/datreeio/datree/release_candidate.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release_candidate.yml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/datreeio/datree/release_candidate.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/reusable_go_build.yml:15: update your workflow using https://app.stepsecurity.io/secureworkflow/datreeio/datree/reusable_go_build.yml/main?enable=pin'
@@ -278,19 +287,10 @@ checks:
       - 'Warn: release artifact 1.9.20-rc does not have provenance: https://api.github.com/repos/datreeio/datree/releases/113215846'
       - 'Warn: release artifact 1.9.19 does not have provenance: https://api.github.com/repos/datreeio/datree/releases/113215516'
       - 'Warn: release artifact 1.9.19-rc does not have provenance: https://api.github.com/repos/datreeio/datree/releases/112964926'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---
-{"id":113215516,"author":{"login":"datree-ci","id":41264658,"node_id":"MDQ6VXNlcjQxMjY0NjU4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOFVTlhs4Gv4gc","tag_name":"1.9.19","target_commitish":"main","name":"1.9.19","draft":false,"immutable":false,"prerelease":false,"created_at":"2023-07-23T08:44:47Z","updated_at":"2023-07-23T08:51:23Z","published_at":"2023-07-23T08:51:19Z","assets":[{"id":118218729,"node_id":"RA_kwDOFVTlhs4HC9_p","name":"checksums.txt","label":"","uploader":{"login":"datree-ci","id":41264658,"node_id":"MDQ6VXNlcjQxMjY0NjU4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":705,"digest":null,"download_count":1219,"created_at":"2023-07-23T08:51:19Z","updated_at":"2023-07-23T08:51:19Z"},{"id":118218739,"node_id":"RA_kwDOFVTlhs4HC9_z","name":"datree-cli_1.9.19_Darwin_arm64.zip","label":"","uploader":{"login":"datree-ci","id":41264658,"node_id":"MDQ6VXNlcjQxMjY0NjU4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":18003068,"digest":null,"download_count":4970,"created_at":"2023-07-23T08:51:22Z","updated_at":"2023-07-23T08:51:23Z"},{"id":118218728,"node_id":"RA_kwDOFVTlhs4HC9_o","name":"datree-cli_1.9.19_Darwin_x86_64.zip","label":"","uploader":{"login":"datree-ci","id":41264658,"node_id":"MDQ6VXNlcjQxMjY0NjU4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":18627941,"digest":null,"download_count":5378,"created_at":"2023-07-23T08:51:19Z","updated_at":"2023-07-23T08:51:20Z"},{"id":118218740,"node_id":"RA_kwDOFVTlhs4HC9_0","name":"datree-cli_1.9.19_Linux_386.zip","label":"","uploader":{"login":"datree-ci","id":41264658,"node_id":"MDQ6VXNlcjQxMjY0NjU4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":18592403,"digest":null,"download_count":68,"created_at":"2023-07-23T08:51:23Z","updated_at":"2023-07-23T08:51:23Z"},{"id":118218734,"node_id":"RA_kwDOFVTlhs4HC9_u","name":"datree-cli_1.9.19_Linux_arm64.zip","label":"","uploader":{"login":"datree-ci","id":41264658,"node_id":"MDQ6VXNlcjQxMjY0NjU4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":17649295,"digest":null,"download_count":3767,"created_at":"2023-07-23T08:51:20Z","updated_at":"2023-07-23T08:51:21Z"},{"id":118218737,"node_id":"RA_kwDOFVTlhs4HC9_x","name":"datree-cli_1.9.19_Linux_x86_64.zip","label":"","uploader":{"login":"datree-ci","id":41264658,"node_id":"MDQ6VXNlcjQxMjY0NjU4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":18900104,"digest":null,"download_count":173576,"created_at":"2023-07-23T08:51:21Z","updated_at":"2023-07-23T08:51:22Z"},{"id":118218731,"node_id":"RA_kwDOFVTlhs4HC9_r","name":"datree-cli_1.9.19_windows_386.zip","label":"","uploader":{"login":"datree-ci","id":41264658,"node_id":"MDQ6VXNlcjQxMjY0NjU4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":19050901,"digest":null,"download_count":217,"created_at":"2023-07-23T08:51:20Z","updated_at":"2023-07-23T08:51:20Z"},{"id":118218735,"node_id":"RA_kwDOFVTlhs4HC9_v","name":"datree-cli_1.9.19_windows_x86_64.zip","label":"","uploader":{"login":"datree-ci","id":41264658,"node_id":"MDQ6VXNlcjQxMjY0NjU4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":19127443,"digest":null,"download_count":5966,"created_at":"2023-07-23T08:51:21Z","updated_at":"2023-07-23T08:51:22Z"}],"body":"68a198d  feat: add custom key for cel expression support (#961) \n\n5d637d2  docs: link installation logos to relevant docs (#960) \n\n\n","reactions":{"total_count":1,"+1":1,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0}}
+{"id":113215516,"author":{"login":"datree-ci","id":41264658,"node_id":"MDQ6VXNlcjQxMjY0NjU4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOFVTlhs4Gv4gc","tag_name":"1.9.19","target_commitish":"main","name":"1.9.19","draft":false,"immutable":false,"prerelease":false,"created_at":"2023-07-23T08:44:47Z","updated_at":"2023-07-23T08:51:23Z","published_at":"2023-07-23T08:51:19Z","assets":[{"id":118218729,"node_id":"RA_kwDOFVTlhs4HC9_p","name":"checksums.txt","label":"","uploader":{"login":"datree-ci","id":41264658,"node_id":"MDQ6VXNlcjQxMjY0NjU4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":705,"digest":null,"download_count":1220,"created_at":"2023-07-23T08:51:19Z","updated_at":"2023-07-23T08:51:19Z"},{"id":118218739,"node_id":"RA_kwDOFVTlhs4HC9_z","name":"datree-cli_1.9.19_Darwin_arm64.zip","label":"","uploader":{"login":"datree-ci","id":41264658,"node_id":"MDQ6VXNlcjQxMjY0NjU4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":18003068,"digest":null,"download_count":4977,"created_at":"2023-07-23T08:51:22Z","updated_at":"2023-07-23T08:51:23Z"},{"id":118218728,"node_id":"RA_kwDOFVTlhs4HC9_o","name":"datree-cli_1.9.19_Darwin_x86_64.zip","label":"","uploader":{"login":"datree-ci","id":41264658,"node_id":"MDQ6VXNlcjQxMjY0NjU4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":18627941,"digest":null,"download_count":5382,"created_at":"2023-07-23T08:51:19Z","updated_at":"2023-07-23T08:51:20Z"},{"id":118218740,"node_id":"RA_kwDOFVTlhs4HC9_0","name":"datree-cli_1.9.19_Linux_386.zip","label":"","uploader":{"login":"datree-ci","id":41264658,"node_id":"MDQ6VXNlcjQxMjY0NjU4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":18592403,"digest":null,"download_count":68,"created_at":"2023-07-23T08:51:23Z","updated_at":"2023-07-23T08:51:23Z"},{"id":118218734,"node_id":"RA_kwDOFVTlhs4HC9_u","name":"datree-cli_1.9.19_Linux_arm64.zip","label":"","uploader":{"login":"datree-ci","id":41264658,"node_id":"MDQ6VXNlcjQxMjY0NjU4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":17649295,"digest":null,"download_count":3771,"created_at":"2023-07-23T08:51:20Z","updated_at":"2023-07-23T08:51:21Z"},{"id":118218737,"node_id":"RA_kwDOFVTlhs4HC9_x","name":"datree-cli_1.9.19_Linux_x86_64.zip","label":"","uploader":{"login":"datree-ci","id":41264658,"node_id":"MDQ6VXNlcjQxMjY0NjU4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":18900104,"digest":null,"download_count":173919,"created_at":"2023-07-23T08:51:21Z","updated_at":"2023-07-23T08:51:22Z"},{"id":118218731,"node_id":"RA_kwDOFVTlhs4HC9_r","name":"datree-cli_1.9.19_windows_386.zip","label":"","uploader":{"login":"datree-ci","id":41264658,"node_id":"MDQ6VXNlcjQxMjY0NjU4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":19050901,"digest":null,"download_count":217,"created_at":"2023-07-23T08:51:20Z","updated_at":"2023-07-23T08:51:20Z"},{"id":118218735,"node_id":"RA_kwDOFVTlhs4HC9_v","name":"datree-cli_1.9.19_windows_x86_64.zip","label":"","uploader":{"login":"datree-ci","id":41264658,"node_id":"MDQ6VXNlcjQxMjY0NjU4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":19127443,"digest":null,"download_count":5972,"created_at":"2023-07-23T08:51:21Z","updated_at":"2023-07-23T08:51:22Z"}],"body":"68a198d  feat: add custom key for cel expression support (#961) \n\n5d637d2  docs: link installation logos to relevant docs (#960) \n\n\n","reactions":{"total_count":1,"+1":1,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0}}

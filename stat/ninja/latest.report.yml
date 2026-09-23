@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.13.2"
   latestRelease: "v1.13.2"
   latestPrerelease: ""
-  collectedAt: 2026-09-22T03:27:45Z
+  collectedAt: 2026-09-23T03:29:00Z
 timeline:
   created: 2011-02-06
   lastCommit: 2026-09-20
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2025-11-20
   lastPrerelease: 
 popularity:
-  star: 13252
+  star: 13256
   watcher: 260
   fork: 1828
   release: 28
@@ -32,7 +32,7 @@ language:
 totalBytes: 1163823
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 3
     openPR: 3
@@ -40,15 +40,15 @@ recent:
     openIssue: 1
     commit: 6
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
-    mergedPR: 7
+    mergedPR: 6
     openPR: 8
     closedIssue: 2
     openIssue: 2
     commit: 11
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 0
     mergedPR: 8
     openPR: 11
@@ -56,15 +56,15 @@ recent:
     openIssue: 3
     commit: 15
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 0
     mergedPR: 24
     openPR: 23
-    closedIssue: 18
-    openIssue: 7
+    closedIssue: 17
+    openIssue: 6
     commit: 48
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 1
     mergedPR: 55
     openPR: 38
@@ -72,9 +72,9 @@ recent:
     openIssue: 18
     commit: 100
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 3
-    mergedPR: 103
+    mergedPR: 102
     openPR: 52
     closedIssue: 92
     openIssue: 42
@@ -88,7 +88,7 @@ total:
   commit: 3458
 ---
 path: /home/runner/.x-repo/github.com/ninja-build/ninja
-collectedAt: 2026-09-22T03:27:47Z
+collectedAt: 2026-09-23T03:29:03Z
 loc:
   Cpp:
     code: 21046
@@ -166,48 +166,36 @@ total:
   blanks: 5610
   files: 158
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/ninja-build/ninja
-  commit: e4a128055f7698522da6de2821ffe0761623f298
+  commit: c8b233e8053c03d2fd57389035b47d36e98e69a8
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
-score: 4.7
+score: 4.8
 checks:
+  - name: Code-Review
+    score: 8
+    reason: Found 12/15 approved changesets -- score normalized to 8
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 10 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 7
-    reason: Found 11/14 approved changesets -- score normalized to 7
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/linux-musl.yml:23'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/linux.yml:113'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/linux.yml:171'
-      - 'Info: found token with ''none'' permissions: .github/workflows/linux-musl.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/linux.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/macos.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/windows.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -228,6 +216,18 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/windows.yml:62: update your workflow using https://app.stepsecurity.io/secureworkflow/ninja-build/ninja/windows.yml/master?enable=pin'
       - 'Info:   0 out of  10 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 third-party GitHubAction dependencies pinned'
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/linux-musl.yml:23'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/linux.yml:113'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/linux.yml:171'
+      - 'Info: found token with ''none'' permissions: .github/workflows/linux-musl.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/linux.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/macos.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/windows.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -240,12 +240,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: COPYING:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: COPYING:0'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -253,6 +247,12 @@ checks:
       - 'Info: OSSFuzz integration found'
       - 'Info: CppLibFuzzer integration found: misc/manifest_fuzzer.cc:22'
       - 'Info: CppLibFuzzer integration found: misc/manifest_fuzzer.cc:22'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: COPYING:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: COPYING:0'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -279,4 +279,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 27 are checked with a SAST tool'
 ---
-{"id":264058815,"author":{"login":"jhasse","id":80071,"node_id":"MDQ6VXNlcjgwMDcx","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOABRfXM4PvTe_","tag_name":"v1.13.2","target_commitish":"master","name":"v1.13.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2025-11-20T16:26:20Z","updated_at":"2025-11-20T17:01:20Z","published_at":"2025-11-20T16:51:20Z","assets":[{"id":318864579,"node_id":"RA_kwDOABRfXM4TAXzD","name":"ninja-linux-aarch64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":126256,"digest":"sha256:fd2cacc8050a7f12a16a2e48f9e06fca5c14fc4c2bee2babb67b58be17a607fc","download_count":178154,"created_at":"2025-11-20T16:58:24Z","updated_at":"2025-11-20T16:58:24Z"},{"id":318865358,"node_id":"RA_kwDOABRfXM4TAX_O","name":"ninja-linux.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":134040,"digest":"sha256:5749cbc4e668273514150a80e387a957f933c6ed3f5f11e03fb30955e2bbead6","download_count":2087672,"created_at":"2025-11-20T17:01:20Z","updated_at":"2025-11-20T17:01:20Z"},{"id":318863524,"node_id":"RA_kwDOABRfXM4TAXik","name":"ninja-mac.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":314051,"digest":"sha256:c99048673aa765960a99cf10c6ddb9f1fad506099ff0a0e137ad8960a88f321b","download_count":344877,"created_at":"2025-11-20T16:54:38Z","updated_at":"2025-11-20T16:54:38Z"},{"id":318863577,"node_id":"RA_kwDOABRfXM4TAXjZ","name":"ninja-win.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":291570,"digest":"sha256:07fc8261b42b20e71d1720b39068c2e14ffcee6396b76fb7a795fb460b78dc65","download_count":3108305,"created_at":"2025-11-20T16:54:59Z","updated_at":"2025-11-20T16:54:59Z"},{"id":318863570,"node_id":"RA_kwDOABRfXM4TAXjS","name":"ninja-winarm64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":270354,"digest":"sha256:e52f0bdef9dfb1003229dbd6508a508c4073fd017247002adc66e5e806cb0391","download_count":149621,"created_at":"2025-11-20T16:54:57Z","updated_at":"2025-11-20T16:54:57Z"}],"body":"* Fix Ninja exit code when interrupted (issue #2681) #2690","reactions":{"total_count":83,"+1":40,"-1":0,"laugh":7,"hooray":6,"confused":0,"heart":14,"rocket":8,"eyes":8}}
+{"id":264058815,"author":{"login":"jhasse","id":80071,"node_id":"MDQ6VXNlcjgwMDcx","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOABRfXM4PvTe_","tag_name":"v1.13.2","target_commitish":"master","name":"v1.13.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2025-11-20T16:26:20Z","updated_at":"2025-11-20T17:01:20Z","published_at":"2025-11-20T16:51:20Z","assets":[{"id":318864579,"node_id":"RA_kwDOABRfXM4TAXzD","name":"ninja-linux-aarch64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":126256,"digest":"sha256:fd2cacc8050a7f12a16a2e48f9e06fca5c14fc4c2bee2babb67b58be17a607fc","download_count":179731,"created_at":"2025-11-20T16:58:24Z","updated_at":"2025-11-20T16:58:24Z"},{"id":318865358,"node_id":"RA_kwDOABRfXM4TAX_O","name":"ninja-linux.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":134040,"digest":"sha256:5749cbc4e668273514150a80e387a957f933c6ed3f5f11e03fb30955e2bbead6","download_count":2102144,"created_at":"2025-11-20T17:01:20Z","updated_at":"2025-11-20T17:01:20Z"},{"id":318863524,"node_id":"RA_kwDOABRfXM4TAXik","name":"ninja-mac.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":314051,"digest":"sha256:c99048673aa765960a99cf10c6ddb9f1fad506099ff0a0e137ad8960a88f321b","download_count":347823,"created_at":"2025-11-20T16:54:38Z","updated_at":"2025-11-20T16:54:38Z"},{"id":318863577,"node_id":"RA_kwDOABRfXM4TAXjZ","name":"ninja-win.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":291570,"digest":"sha256:07fc8261b42b20e71d1720b39068c2e14ffcee6396b76fb7a795fb460b78dc65","download_count":3127377,"created_at":"2025-11-20T16:54:59Z","updated_at":"2025-11-20T16:54:59Z"},{"id":318863570,"node_id":"RA_kwDOABRfXM4TAXjS","name":"ninja-winarm64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":270354,"digest":"sha256:e52f0bdef9dfb1003229dbd6508a508c4073fd017247002adc66e5e806cb0391","download_count":151039,"created_at":"2025-11-20T16:54:57Z","updated_at":"2025-11-20T16:54:57Z"}],"body":"* Fix Ninja exit code when interrupted (issue #2681) #2690","reactions":{"total_count":83,"+1":40,"-1":0,"laugh":7,"hooray":6,"confused":0,"heart":14,"rocket":8,"eyes":8}}

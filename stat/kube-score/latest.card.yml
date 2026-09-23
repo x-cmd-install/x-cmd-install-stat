@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.20.0"
   latestRelease: "v1.20.0"
   latestPrerelease: "v0.1.0-beta1"
-  collectedAt: 2026-09-22T02:55:19Z
+  collectedAt: 2026-09-23T02:56:01Z
 timeline:
   created: 2018-09-16
   lastCommit: 2026-05-20
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2025-04-28
   lastPrerelease: 2018-09-26
 popularity:
-  star: 3103
+  star: 3104
   watcher: 25
   fork: 203
   release: 40
@@ -34,7 +34,7 @@ language:
 totalBytes: 336891
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 0
     openPR: 1
@@ -42,7 +42,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
     mergedPR: 0
     openPR: 2
@@ -50,7 +50,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 0
     mergedPR: 0
     openPR: 3
@@ -58,7 +58,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 0
     mergedPR: 1
     openPR: 5
@@ -66,7 +66,7 @@ recent:
     openIssue: 1
     commit: 1
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 0
     mergedPR: 3
     openPR: 8
@@ -74,7 +74,7 @@ recent:
     openIssue: 2
     commit: 3
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 1
     mergedPR: 27
     openPR: 10
@@ -90,7 +90,7 @@ total:
   commit: 784
 ---
 path: /home/runner/.x-repo/github.com/zegl/kube-score
-collectedAt: 2026-09-22T02:55:23Z
+collectedAt: 2026-09-23T02:56:02Z
 loc:
   Go:
     code: 8227
@@ -163,7 +163,7 @@ total:
   blanks: 2794
   files: 293
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/zegl/kube-score
   commit: 06dedc9ccce58bff50a4f42a3ce0633dc72b0dfa
@@ -176,6 +176,17 @@ checks:
     score: 5
     reason: Found 4/8 approved changesets -- score normalized to 5
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/test.yaml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
@@ -184,17 +195,6 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/test.yaml:1'
-      - 'Info: no jobLevel write permissions found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -203,17 +203,25 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Fuzzing
+  - name: Security-Policy
     score: 0
-    reason: project is not fuzzed
+    reason: security policy file not detected
     details:
-      - 'Warn: no fuzzer integrations found'
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
@@ -232,14 +240,6 @@ checks:
       - 'Warn: release artifact v1.18.0 does not have provenance: https://api.github.com/repos/zegl/kube-score/releases/139920148'
       - 'Warn: release artifact v1.17.0 does not have provenance: https://api.github.com/repos/zegl/kube-score/releases/111213795'
       - 'Warn: release artifact v1.16.1 does not have provenance: https://api.github.com/repos/zegl/kube-score/releases/86308129'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -250,7 +250,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: Dockerfile:9'
       - 'Warn: containerImage not pinned by hash: Dockerfile:13'
       - 'Warn: containerImage not pinned by hash: Dockerfile:20'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:40: pin your Docker image by updating golang:1.26-alpine to golang:1.26-alpine@sha256:ce864e7223ac17b1775e6fd0b4c0db580c2eb50e7953a427916379e4b92a1628'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:40: pin your Docker image by updating golang:1.26-alpine to golang:1.26-alpine@sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c'
       - 'Warn: containerImage not pinned by hash: Dockerfile:59: pin your Docker image by updating alpine:3.17.0 to alpine:3.17.0@sha256:8914eb54f968791faf6a8638949e480fef81e697984fba772b3976835194c6d4'
       - 'Warn: containerImage not pinned by hash: cmd/kube-score/helm.Dockerfile:1: pin your Docker image by updating debian:stretch to debian:stretch@sha256:c5c5200ff1e9c73ffbf188b4a67eb1c91531b644856b4aefe86a58d2f0cb05be'
       - 'Warn: containerImage not pinned by hash: cmd/kube-score/helm.Dockerfile:13: pin your Docker image by updating alpine:3.14.2 to alpine:3.14.2@sha256:e1c082e3d3c45cccac829840a25941e679c25d438cc8412c2fa221cf1a824e6a'

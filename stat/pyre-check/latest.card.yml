@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.9.23"
   latestRelease: "v0.9.23"
   latestPrerelease: ""
-  collectedAt: 2026-09-22T05:27:32Z
+  collectedAt: 2026-09-23T05:27:49Z
 timeline:
   created: 2017-11-10
   lastCommit: 2026-06-26
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2024-10-29
   lastPrerelease: 
 popularity:
-  star: 7171
+  star: 7172
   watcher: 114
   fork: 452
   release: 12
@@ -34,7 +34,7 @@ language:
 totalBytes: 19837223
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -42,7 +42,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -50,7 +50,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -58,15 +58,15 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 0
     mergedPR: 0
-    openPR: 9
+    openPR: 8
     closedIssue: 0
     openIssue: 1
     commit: 190
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 0
     mergedPR: 0
     openPR: 17
@@ -74,13 +74,13 @@ recent:
     openIssue: 3
     commit: 662
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 1
     mergedPR: 3
     openPR: 18
     closedIssue: 11
     openIssue: 18
-    commit: 4142
+    commit: 4137
 total:
   release: 12
   mergedPR: 7
@@ -90,7 +90,7 @@ total:
   commit: 20985
 ---
 path: /home/runner/.x-repo/github.com/facebook/pyre-check
-collectedAt: 2026-09-22T05:28:51Z
+collectedAt: 2026-09-23T05:29:43Z
 loc:
   OCaml:
     code: 322650
@@ -188,7 +188,7 @@ total:
   blanks: 66361
   files: 1608
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/facebook/pyre-check
   commit: d5614e0a75f539443225fce3c3c55a77cfbfb72c
@@ -206,15 +206,15 @@ checks:
     reason: project is archived
     details:
       - 'Warn: Repository is archived.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -223,15 +223,15 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/pysa.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/tests.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
   - name: SAST
     score: 0
     reason: no SAST tool detected
     details:
       - 'Warn: no pull requests merged into dev branch'
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -256,15 +256,23 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
+  - name: Security-Policy
+    score: 9
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: github.com/facebook/.github/SECURITY.md:1'
+      - 'Info: Found linked content: github.com/facebook/.github/SECURITY.md:1'
+      - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
+      - 'Info: Found text in security policy: github.com/facebook/.github/SECURITY.md:1'
   - name: Branch-Protection
     score: 3
     reason: branch protection is not maximal on development and all release branches
@@ -277,12 +285,4 @@ checks:
       - 'Warn: ''up-to-date branches'' is disabled on branch ''main'''
       - 'Info: status check found to merge onto on branch ''main'''
       - 'Warn: PRs are not required to make changes on branch ''main''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
-  - name: Security-Policy
-    score: 9
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: github.com/facebook/.github/SECURITY.md:1'
-      - 'Info: Found linked content: github.com/facebook/.github/SECURITY.md:1'
-      - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
-      - 'Info: Found text in security policy: github.com/facebook/.github/SECURITY.md:1'
 ---

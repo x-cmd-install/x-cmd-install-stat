@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.79.0"
   latestRelease: "v0.79.0"
   latestPrerelease: "nightly"
-  collectedAt: 2026-09-22T04:39:21Z
+  collectedAt: 2026-09-23T04:35:12Z
 timeline:
   created: 2018-10-30
   lastCommit: 2023-10-24
@@ -19,7 +19,7 @@ popularity:
   watcher: 22
   fork: 507
   release: 142
-  contributor: 3059
+  contributor: 3062
   pullRequest: 3556
   issue: 1561
 language:
@@ -34,7 +34,7 @@ language:
 totalBytes: 5801445
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -42,7 +42,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -50,7 +50,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -58,7 +58,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 0
     mergedPR: 0
     openPR: 0
@@ -66,7 +66,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 0
     mergedPR: 0
     openPR: 0
@@ -74,7 +74,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 0
     mergedPR: 0
     openPR: 0
@@ -90,7 +90,7 @@ total:
   commit: 5523
 ---
 path: /home/runner/.x-repo/github.com/Azure/aks-engine
-collectedAt: 2026-09-22T04:39:37Z
+collectedAt: 2026-09-23T04:35:30Z
 loc:
   Go:
     code: 1334577
@@ -208,7 +208,7 @@ total:
   blanks: 146785
   files: 4796
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/Azure/aks-engine
   commit: f634f52ff4f6295876b2d5391fc3af1f5bb3ad3e
@@ -222,19 +222,15 @@ checks:
     reason: project is archived
     details:
       - 'Warn: Repository is archived.'
-  - name: Code-Review
-    score: 9
-    reason: Found 25/26 approved changesets -- score normalized to 9
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -243,6 +239,10 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Code-Review
+    score: 9
+    reason: Found 25/26 approved changesets -- score normalized to 9
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -274,29 +274,16 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Branch-Protection
-    score: 9
-    reason: branch protection is not maximal on development and all release branches
-    details:
-      - 'Info: ''allow deletion'' disabled on branch ''master'''
-      - 'Info: ''force pushes'' disabled on branch ''master'''
-      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''master'''
-      - 'Warn: ''stale review dismissal'' is disabled on branch ''master'''
-      - 'Info: required approving review count is 2 on branch ''master'''
-      - 'Info: codeowner review is required on branch ''master'''
-      - 'Info: ''last push approval'' is required to merge on branch ''master'''
-      - 'Info: status check found to merge onto on branch ''master'''
-      - 'Info: PRs are required in order to make changes on branch ''master'''
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
       - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered (: parts/k8s/cloud-init/artifacts/cse_config.sh:0'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/create-release-branch.yaml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/Azure/aks-engine/create-release-branch.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/create-release-branch.yaml:27: update your workflow using https://app.stepsecurity.io/secureworkflow/Azure/aks-engine/create-release-branch.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/create-release-branch.yaml:88: update your workflow using https://app.stepsecurity.io/secureworkflow/Azure/aks-engine/create-release-branch.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/create-release-branch.yaml:93: update your workflow using https://app.stepsecurity.io/secureworkflow/Azure/aks-engine/create-release-branch.yaml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/create-release-branch.yaml:107: update your workflow using https://app.stepsecurity.io/secureworkflow/Azure/aks-engine/create-release-branch.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/create-release-branch.yaml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/Azure/aks-engine/create-release-branch.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/create-release-branch.yaml:27: update your workflow using https://app.stepsecurity.io/secureworkflow/Azure/aks-engine/create-release-branch.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/generate-azure-consts.yaml:9: update your workflow using https://app.stepsecurity.io/secureworkflow/Azure/aks-engine/generate-azure-consts.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/generate-azure-consts.yaml:11: update your workflow using https://app.stepsecurity.io/secureworkflow/Azure/aks-engine/generate-azure-consts.yaml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/generate-azure-consts.yaml:24: update your workflow using https://app.stepsecurity.io/secureworkflow/Azure/aks-engine/generate-azure-consts.yaml/master?enable=pin'
@@ -324,6 +311,19 @@ checks:
       - 'Info:   0 out of   3 containerImage dependencies pinned'
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
       - 'Info:   1 out of   2 goCommand dependencies pinned'
+  - name: Branch-Protection
+    score: 9
+    reason: branch protection is not maximal on development and all release branches
+    details:
+      - 'Info: ''allow deletion'' disabled on branch ''master'''
+      - 'Info: ''force pushes'' disabled on branch ''master'''
+      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''master'''
+      - 'Warn: ''stale review dismissal'' is disabled on branch ''master'''
+      - 'Info: required approving review count is 2 on branch ''master'''
+      - 'Info: codeowner review is required on branch ''master'''
+      - 'Info: ''last push approval'' is required to merge on branch ''master'''
+      - 'Info: status check found to merge onto on branch ''master'''
+      - 'Info: PRs are required in order to make changes on branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.

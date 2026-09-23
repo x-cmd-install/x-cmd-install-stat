@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.22.22"
   latestRelease: "v1.22.22"
   latestPrerelease: "v1.20.0"
-  collectedAt: 2026-09-22T05:31:27Z
+  collectedAt: 2026-09-23T05:35:19Z
 timeline:
   created: 2016-01-19
   lastCommit: 2026-02-12
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2024-03-09
   lastPrerelease: 2019-12-01
 popularity:
-  star: 41475
+  star: 41478
   watcher: 537
   fork: 2710
   release: 153
@@ -31,7 +31,7 @@ language:
 totalBytes: 1627294
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -39,7 +39,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -47,7 +47,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -55,7 +55,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 0
     mergedPR: 0
     openPR: 0
@@ -63,7 +63,7 @@ recent:
     openIssue: 1
     commit: 0
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 0
     mergedPR: 1
     openPR: 2
@@ -71,7 +71,7 @@ recent:
     openIssue: 2
     commit: 1
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 0
     mergedPR: 1
     openPR: 51
@@ -87,7 +87,7 @@ total:
   commit: 2358
 ---
 path: /home/runner/.x-repo/github.com/yarnpkg/yarn
-collectedAt: 2026-09-22T05:31:37Z
+collectedAt: 2026-09-23T05:35:27Z
 loc:
   JavaScript:
     code: 43172
@@ -150,7 +150,7 @@ total:
   blanks: 10303
   files: 1597
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/yarnpkg/yarn
   commit: c2dda503f3759b5be5f0e24ecd9cf5c97a540147
@@ -159,19 +159,27 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4
 checks:
-  - name: Code-Review
-    score: 1
-    reason: Found 4/30 approved changesets -- score normalized to 1
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 1
+    reason: Found 4/30 approved changesets -- score normalized to 1
+    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
+  - name: Security-Policy
+    score: 9
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: SECURITY.md:1'
+      - 'Info: Found linked content: SECURITY.md:1'
+      - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
+      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -182,14 +190,6 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Security-Policy
-    score: 9
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: SECURITY.md:1'
-      - 'Info: Found linked content: SECURITY.md:1'
-      - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
-      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -204,15 +204,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 2
     reason: dependency not pinned by hash detected -- score normalized to 2
@@ -224,6 +215,15 @@ checks:
       - 'Info:   1 out of   1 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 4
     reason: 3 out of the last 5 releases have a total of 3 signed artifacts.

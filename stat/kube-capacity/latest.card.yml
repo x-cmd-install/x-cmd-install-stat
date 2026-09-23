@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.8.0"
   latestRelease: "v0.8.0"
   latestPrerelease: "v0.8.0-rc3"
-  collectedAt: 2026-09-22T04:49:56Z
+  collectedAt: 2026-09-23T04:47:17Z
 timeline:
   created: 2019-02-02
   lastCommit: 2025-08-18
@@ -28,7 +28,7 @@ language:
 totalBytes: 81603
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
     mergedPR: 0
     openPR: 1
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 0
     mergedPR: 0
     openPR: 1
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 0
     mergedPR: 0
     openPR: 3
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 0
     mergedPR: 0
     openPR: 8
@@ -68,7 +68,7 @@ recent:
     openIssue: 3
     commit: 0
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 0
     mergedPR: 13
     openPR: 14
@@ -84,7 +84,7 @@ total:
   commit: 134
 ---
 path: /home/runner/.x-repo/github.com/robscott/kube-capacity
-collectedAt: 2026-09-22T04:50:02Z
+collectedAt: 2026-09-23T04:47:22Z
 loc:
   Go:
     code: 2179
@@ -107,7 +107,7 @@ total:
   blanks: 347
   files: 18
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/robscott/kube-capacity
   commit: 0400896336388d438649f5bb5af6f03f97eb0224
@@ -116,6 +116,14 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.1
 checks:
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Code-Review
     score: 9
     reason: Found 13/14 approved changesets -- score normalized to 9
@@ -124,14 +132,15 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
+  - name: Token-Permissions
     score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/golangci-lint.yaml:11'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/goreleaser-build.yaml:11'
+      - 'Warn: no topLevel permission defined: .github/workflows/release.yaml:1'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yaml:12'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -150,15 +159,6 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yaml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/robscott/kube-capacity/test.yaml/main?enable=pin'
       - 'Info:   0 out of   8 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 third-party GitHubAction dependencies pinned'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/golangci-lint.yaml:11'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/goreleaser-build.yaml:11'
-      - 'Warn: no topLevel permission defined: .github/workflows/release.yaml:1'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yaml:12'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -200,14 +200,14 @@ checks:
       - 'Warn: release artifact v0.8.0-rc2 does not have provenance: https://api.github.com/repos/robscott/kube-capacity/releases/142274014'
       - 'Warn: release artifact v0.8.0-rc1 does not have provenance: https://api.github.com/repos/robscott/kube-capacity/releases/141741393'
       - 'Warn: release artifact v0.7.4-rc7 does not have provenance: https://api.github.com/repos/robscott/kube-capacity/releases/92175248'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/goreleaser-build.yaml:13'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/goreleaser-build.yaml:13'
 ---

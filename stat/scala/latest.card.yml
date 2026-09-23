@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.12.21"
   latestRelease: "v2.12.21"
   latestPrerelease: "v2.13.0-RC3"
-  collectedAt: 2026-09-22T06:25:05Z
+  collectedAt: 2026-09-23T06:40:33Z
 timeline:
   created: 2011-12-01
   lastCommit: 2026-08-24
@@ -17,10 +17,10 @@ timeline:
 popularity:
   star: 14562
   watcher: 748
-  fork: 3218
+  fork: 3217
   release: 80
   contributor: 600
-  pullRequest: 11214
+  pullRequest: 11215
   issue: 0
 language:
   Scala: 20767623
@@ -38,63 +38,63 @@ language:
 totalBytes: 21277816
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 2
-    openPR: 3
+    openPR: 4
     closedIssue: 0
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
     mergedPR: 16
-    openPR: 3
+    openPR: 4
     closedIssue: 0
     openIssue: 0
     commit: 32
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 0
     mergedPR: 20
-    openPR: 3
+    openPR: 4
     closedIssue: 0
     openIssue: 0
     commit: 41
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 0
-    mergedPR: 42
-    openPR: 4
+    mergedPR: 41
+    openPR: 5
     closedIssue: 0
     openIssue: 0
     commit: 92
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 3
     mergedPR: 112
-    openPR: 7
+    openPR: 8
     closedIssue: 0
     openIssue: 0
     commit: 249
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 4
     mergedPR: 334
-    openPR: 13
+    openPR: 14
     closedIssue: 0
     openIssue: 0
     commit: 822
 total:
   release: 80
   mergedPR: 8733
-  openPR: 15
+  openPR: 16
   closedIssue: 0
   openIssue: 0
   commit: 40718
 ---
 path: /home/runner/.x-repo/github.com/scala/scala
-collectedAt: 2026-09-22T06:25:49Z
+collectedAt: 2026-09-23T06:41:04Z
 loc:
   Scala:
     code: 391946
@@ -192,7 +192,7 @@ total:
   blanks: 78383
   files: 10166
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/scala/scala
   commit: 71440b9225be58c9183a4028af9036dd0fd49673
@@ -205,15 +205,15 @@ checks:
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
+  - name: Code-Review
+    score: 8
+    reason: Found 8/9 approved changesets -- score normalized to 8
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 8
-    reason: Found 8/9 approved changesets -- score normalized to 8
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -221,6 +221,10 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:13'
       - 'Warn: no topLevel permission defined: .github/workflows/validate.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Security-Policy
     score: 9
     reason: security policy file detected
@@ -229,25 +233,21 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -275,6 +275,10 @@ checks:
       - 'Warn: binary detected: test/files/jvm/natives-64.dll:1'
       - 'Warn: binary detected: test/sbt-test/source-dependencies/canon/actual/a.jar:1'
       - 'Warn: binary detected: test/sbt-test/source-dependencies/canon/lib/a.jar:1'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -289,10 +293,6 @@ checks:
       - 'Warn: release artifact v2.13.17 does not have provenance: https://api.github.com/repos/scala/scala/releases/251059820'
       - 'Warn: release artifact v2.13.16 does not have provenance: https://api.github.com/repos/scala/scala/releases/195021856'
       - 'Warn: release artifact v2.13.15 does not have provenance: https://api.github.com/repos/scala/scala/releases/176897281'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

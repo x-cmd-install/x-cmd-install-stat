@@ -7,7 +7,7 @@ about:
   latestVersion: "v9.1.0"
   latestRelease: "v9.1.0"
   latestPrerelease: "v5.0.0-rc.0"
-  collectedAt: 2026-09-22T04:44:21Z
+  collectedAt: 2026-09-23T04:36:57Z
 timeline:
   created: 2015-07-23
   lastCommit: 2026-07-21
@@ -27,7 +27,7 @@ language:
 totalBytes: 60655
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 0
     openPR: 4
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
     mergedPR: 0
     openPR: 4
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 1
     mergedPR: 1
     openPR: 5
@@ -51,7 +51,7 @@ recent:
     openIssue: 1
     commit: 2
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 4
     mergedPR: 8
     openPR: 7
@@ -59,7 +59,7 @@ recent:
     openIssue: 2
     commit: 18
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 7
     mergedPR: 10
     openPR: 7
@@ -67,7 +67,7 @@ recent:
     openIssue: 6
     commit: 25
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 13
     mergedPR: 17
     openPR: 8
@@ -83,7 +83,7 @@ total:
   commit: 289
 ---
 path: /home/runner/.x-repo/github.com/jeffbski/wait-on
-collectedAt: 2026-09-22T04:44:21Z
+collectedAt: 2026-09-23T04:37:00Z
 loc:
   Json:
     code: 4151
@@ -111,7 +111,7 @@ total:
   blanks: 314
   files: 11
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/jeffbski/wait-on
   commit: 30ec1418bf53e4aed39a06cc2806302d758167a7
@@ -125,6 +125,10 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 0
+    reason: Found 0/16 approved changesets -- score normalized to 0
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -133,6 +137,12 @@ checks:
     score: 3
     reason: 3 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 3
     details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/node.js.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -145,16 +155,6 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/node.js.yml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/jeffbski/wait-on/node.js.yml/master?enable=pin'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   1 out of   1 npmCommand dependencies pinned'
-  - name: Code-Review
-    score: 0
-    reason: Found 0/16 approved changesets -- score normalized to 0
-    details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/node.js.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -178,15 +178,15 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''master'''
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

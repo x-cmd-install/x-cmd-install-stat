@@ -7,7 +7,7 @@ about:
   latestVersion: "v6.21.0"
   latestRelease: "v6.21.0"
   latestPrerelease: "v5.10.4"
-  collectedAt: 2026-09-22T06:21:59Z
+  collectedAt: 2026-09-23T06:37:55Z
 timeline:
   created: 2015-05-03
   lastCommit: 2026-09-14
@@ -40,15 +40,15 @@ language:
 totalBytes: 19359143
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
-    mergedPR: 11
+    mergedPR: 10
     openPR: 3
     closedIssue: 0
     openIssue: 2
     commit: 10
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 1
     mergedPR: 23
     openPR: 3
@@ -56,23 +56,23 @@ recent:
     openIssue: 3
     commit: 29
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 2
-    mergedPR: 127
+    mergedPR: 126
     openPR: 12
     closedIssue: 5
     openIssue: 4
     commit: 137
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 4
     mergedPR: 193
     openPR: 12
-    closedIssue: 15
+    closedIssue: 14
     openIssue: 5
     commit: 219
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 6
     mergedPR: 311
     openPR: 12
@@ -80,13 +80,13 @@ recent:
     openIssue: 5
     commit: 350
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 9
-    mergedPR: 466
+    mergedPR: 465
     openPR: 12
     closedIssue: 59
     openIssue: 9
-    commit: 528
+    commit: 526
 total:
   release: 73
   mergedPR: 1248
@@ -96,7 +96,7 @@ total:
   commit: 9427
 ---
 path: /home/runner/.x-repo/github.com/johnkerl/miller
-collectedAt: 2026-09-22T06:22:29Z
+collectedAt: 2026-09-23T06:38:44Z
 loc:
   Json:
     code: 715955
@@ -219,7 +219,7 @@ total:
   blanks: 23387
   files: 898
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/johnkerl/miller
   commit: 07d4d1c36f6ecf8390c15e5daf15bb4c4a3281f1
@@ -228,6 +228,14 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.6
 checks:
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 22 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Code-Review
     score: 1
     reason: Found 2/12 approved changesets -- score normalized to 1
@@ -244,14 +252,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/test-snap-can-build.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 22 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -264,17 +264,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 9
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE.txt:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -296,11 +296,6 @@ checks:
       - 'Info:  13 out of  15 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   3 out of   7 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 goCommand dependencies pinned'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:12'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -315,6 +310,11 @@ checks:
       - 'Warn: release artifact v6.19.0 does not have provenance: https://api.github.com/repos/johnkerl/miller/releases/342163770'
       - 'Warn: release artifact v6.18.1 does not have provenance: https://api.github.com/repos/johnkerl/miller/releases/310890530'
       - 'Warn: release artifact v6.17.0 does not have provenance: https://api.github.com/repos/johnkerl/miller/releases/288998649'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:12'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches

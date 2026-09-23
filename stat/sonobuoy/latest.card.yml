@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.57.5"
   latestRelease: "v0.57.5"
   latestPrerelease: ""
-  collectedAt: 2026-09-22T06:07:11Z
+  collectedAt: 2026-09-23T05:46:54Z
 timeline:
   created: 2017-07-26
   lastCommit: 2026-07-27
@@ -33,15 +33,15 @@ language:
 totalBytes: 1093136
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 0
     openPR: 0
     closedIssue: 0
-    openIssue: 2
+    openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
     mergedPR: 0
     openPR: 2
@@ -49,7 +49,7 @@ recent:
     openIssue: 4
     commit: 0
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 1
     mergedPR: 3
     openPR: 4
@@ -57,7 +57,7 @@ recent:
     openIssue: 9
     commit: 5
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 1
     mergedPR: 4
     openPR: 4
@@ -65,7 +65,7 @@ recent:
     openIssue: 10
     commit: 9
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 1
     mergedPR: 6
     openPR: 7
@@ -73,7 +73,7 @@ recent:
     openIssue: 15
     commit: 11
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 2
     mergedPR: 14
     openPR: 8
@@ -89,7 +89,7 @@ total:
   commit: 1272
 ---
 path: /home/runner/.x-repo/github.com/vmware-tanzu/sonobuoy
-collectedAt: 2026-09-22T06:07:17Z
+collectedAt: 2026-09-23T05:46:57Z
 loc:
   Go:
     code: 23798
@@ -172,26 +172,22 @@ total:
   blanks: 28033
   files: 1698
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/vmware-tanzu/sonobuoy
   commit: b2ad5537cb7ca70899949aa2e32d0eff1683f4e5
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
-score: 5.9
+score: 5.7
 checks:
+  - name: Maintained
+    score: 5
+    reason: 7 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5
+    details: null
   - name: Code-Review
     score: 9
     reason: Found 22/23 approved changesets -- score normalized to 9
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 7
-    reason: 9 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 7
     details: null
   - name: Security-Policy
     score: 10
@@ -201,6 +197,10 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -233,10 +233,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -251,18 +247,22 @@ checks:
       - 'Warn: release artifact v0.57.2 does not have provenance: https://api.github.com/repos/vmware-tanzu/sonobuoy/releases/172531949'
       - 'Warn: release artifact v0.57.1 does not have provenance: https://api.github.com/repos/vmware-tanzu/sonobuoy/releases/129868182'
       - 'Warn: release artifact v0.57.0 does not have provenance: https://api.github.com/repos/vmware-tanzu/sonobuoy/releases/125720805'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/blogDrumbeat.yaml:14: update your workflow using https://app.stepsecurity.io/secureworkflow/vmware-tanzu/sonobuoy/blogDrumbeat.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/blogTopical.yaml:14: update your workflow using https://app.stepsecurity.io/secureworkflow/vmware-tanzu/sonobuoy/blogTopical.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci-lint.yaml:7: update your workflow using https://app.stepsecurity.io/secureworkflow/vmware-tanzu/sonobuoy/ci-lint.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci-lint.yaml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/vmware-tanzu/sonobuoy/ci-lint.yaml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci-lint.yaml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/vmware-tanzu/sonobuoy/ci-lint.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci-lint.yaml:24: update your workflow using https://app.stepsecurity.io/secureworkflow/vmware-tanzu/sonobuoy/ci-lint.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci-lint.yaml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/vmware-tanzu/sonobuoy/ci-lint.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci-lint.yaml:34: update your workflow using https://app.stepsecurity.io/secureworkflow/vmware-tanzu/sonobuoy/ci-lint.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci-lint.yaml:7: update your workflow using https://app.stepsecurity.io/secureworkflow/vmware-tanzu/sonobuoy/ci-lint.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci-lint.yaml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/vmware-tanzu/sonobuoy/ci-lint.yaml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci-lint.yaml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/vmware-tanzu/sonobuoy/ci-lint.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci-test.yaml:99: update your workflow using https://app.stepsecurity.io/secureworkflow/vmware-tanzu/sonobuoy/ci-test.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci-test.yaml:111: update your workflow using https://app.stepsecurity.io/secureworkflow/vmware-tanzu/sonobuoy/ci-test.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci-test.yaml:133: update your workflow using https://app.stepsecurity.io/secureworkflow/vmware-tanzu/sonobuoy/ci-test.yaml/main?enable=pin'
@@ -296,7 +296,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: Dockerfile:15'
       - 'Warn: containerImage not pinned by hash: DockerfileWindows:16'
       - 'Warn: containerImage not pinned by hash: DockerfileWindows:17'
-      - 'Warn: containerImage not pinned by hash: scripts/gathere2e/Dockerfile:1: pin your Docker image by updating debian:stable-slim to debian:stable-slim@sha256:04634311a8d5fc442b6eb06d792293c4f3e2268652ca7634e00ce8ef5cc0a28a'
+      - 'Warn: containerImage not pinned by hash: scripts/gathere2e/Dockerfile:1: pin your Docker image by updating debian:stable-slim to debian:stable-slim@sha256:5bc3287b25407c965a30f38e32603dc253a3869e1b12a21ac09bfc27fd8b13ce'
       - 'Warn: containerImage not pinned by hash: test/integration/testImage/Dockerfile:15: pin your Docker image by updating golang:1.26.5 to golang:1.26.5@sha256:705e964a93a2fd2e75c7d59bb7d781b57e30f12293ffde5175c69229e18fb678'
       - 'Warn: containerImage not pinned by hash: test/integration/testImage/Dockerfile:27: pin your Docker image by updating gcr.io/distroless/static-debian10:latest to gcr.io/distroless/static-debian10:latest@sha256:73c9f3f9ee72a6070499e46826dacfda8cb428cb97bef9a70ee6f67957ec99c6'
       - 'Info:   0 out of  26 GitHub-owned GitHubAction dependencies pinned'

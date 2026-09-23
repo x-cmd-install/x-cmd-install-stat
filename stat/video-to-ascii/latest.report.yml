@@ -7,7 +7,7 @@ about:
   latestVersion: "1.2.9"
   latestRelease: "1.2.9"
   latestPrerelease: ""
-  collectedAt: 2026-09-22T05:24:41Z
+  collectedAt: 2026-09-23T05:15:41Z
 timeline:
   created: 2018-11-25
   lastCommit: 2025-09-27
@@ -28,7 +28,7 @@ language:
 totalBytes: 23009
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 0
     mergedPR: 0
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 1
     commit: 0
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 0
     mergedPR: 1
     openPR: 1
@@ -84,7 +84,7 @@ total:
   commit: 198
 ---
 path: /home/runner/.x-repo/github.com/joelibaceta/video-to-ascii
-collectedAt: 2026-09-22T05:24:50Z
+collectedAt: 2026-09-23T05:15:48Z
 loc:
   Python:
     code: 542
@@ -127,7 +127,7 @@ total:
   blanks: 345
   files: 26
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/joelibaceta/video-to-ascii
   commit: b04a494e6e1be429d18af2400425cea93f896377
@@ -136,17 +136,17 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.4
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
+  - name: Code-Review
+    score: 6
+    reason: Found 10/15 approved changesets -- score normalized to 6
     details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Code-Review
-    score: 6
-    reason: Found 10/15 approved changesets -- score normalized to 6
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Packaging
     score: -1
@@ -167,6 +167,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -175,11 +180,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
@@ -192,22 +192,22 @@ checks:
     details:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/lint_python.yml:7: update your workflow using https://app.stepsecurity.io/secureworkflow/joelibaceta/video-to-ascii/lint_python.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/lint_python.yml:8: update your workflow using https://app.stepsecurity.io/secureworkflow/joelibaceta/video-to-ascii/lint_python.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating python:3 to python:3@sha256:e06cc1111ed84189e91866447f562b89faadbfbbb9937cd67e6bf4172cdb45df'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating python:3 to python:3@sha256:be8ccd085666c34273c9dc5607c9842f8b2e3116128aae45148ce164c07ce09d'
       - 'Warn: pipCommand not pinned by hash: Dockerfile:5'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/lint_python.yml:10'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/lint_python.yml:17'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   0 out of   3 pipCommand dependencies pinned'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''master'''
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

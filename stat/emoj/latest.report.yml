@@ -7,7 +7,7 @@ about:
   latestVersion: "v4.2.0"
   latestRelease: "v4.2.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-22T05:48:22Z
+  collectedAt: 2026-09-23T05:50:47Z
 timeline:
   created: 2016-06-22
   lastCommit: 2026-02-13
@@ -28,7 +28,7 @@ language:
 totalBytes: 10541
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 0
     mergedPR: 1
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 1
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 1
     mergedPR: 1
     openPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 65
 ---
 path: /home/runner/.x-repo/github.com/sindresorhus/emoj
-collectedAt: 2026-09-22T05:48:24Z
+collectedAt: 2026-09-23T05:50:50Z
 loc:
   Tsx:
     code: 342
@@ -107,7 +107,7 @@ total:
   blanks: 79
   files: 7
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/sindresorhus/emoj
   commit: af4eefdcc16ba1b43ef496bb717eae84fbffd066
@@ -116,15 +116,25 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3
 checks:
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Code-Review
+    score: 2
+    reason: Found 7/30 approved changesets -- score normalized to 2
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -133,16 +143,6 @@ checks:
     score: 0
     reason: 0 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Code-Review
-    score: 2
-    reason: Found 7/30 approved changesets -- score normalized to 2
-    details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -167,15 +167,15 @@ checks:
     details:
       - 'Info: project has a license file: license:0'
       - 'Info: FSF or OSI recognized license: MIT License: license:0'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''main'''
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Security-Policy
     score: 0
     reason: security policy file not detected

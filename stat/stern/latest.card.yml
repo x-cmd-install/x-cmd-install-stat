@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.34.0"
   latestRelease: "v1.34.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-22T05:13:46Z
+  collectedAt: 2026-09-23T05:24:04Z
 timeline:
   created: 2020-10-21
   lastCommit: 2026-09-14
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-05-02
   lastPrerelease: 
 popularity:
-  star: 4870
+  star: 4871
   watcher: 28
-  fork: 178
+  fork: 177
   release: 27
   contributor: 60
   pullRequest: 203
@@ -31,7 +31,7 @@ language:
 totalBytes: 176673
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 0
     openPR: 1
@@ -39,15 +39,15 @@ recent:
     openIssue: 0
     commit: 2
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
     mergedPR: 3
-    openPR: 4
+    openPR: 2
     closedIssue: 1
     openIssue: 0
     commit: 3
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 0
     mergedPR: 3
     openPR: 5
@@ -55,7 +55,7 @@ recent:
     openIssue: 0
     commit: 4
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 1
     mergedPR: 12
     openPR: 6
@@ -63,7 +63,7 @@ recent:
     openIssue: 0
     commit: 12
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 2
     mergedPR: 15
     openPR: 7
@@ -71,7 +71,7 @@ recent:
     openIssue: 3
     commit: 15
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 5
     mergedPR: 30
     openPR: 9
@@ -87,7 +87,7 @@ total:
   commit: 320
 ---
 path: /home/runner/.x-repo/github.com/stern/stern
-collectedAt: 2026-09-22T05:13:49Z
+collectedAt: 2026-09-23T05:24:07Z
 loc:
   Go:
     code: 5638
@@ -130,30 +130,30 @@ total:
   blanks: 889
   files: 46
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/stern/stern
   commit: 96b3c3a15a46e42080ec8413d9f4a636d765709d
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
-score: 4.3
+score: 4.1
 checks:
-  - name: Binary-Artifacts
+  - name: Code-Review
     score: 10
-    reason: no binaries found in the repo
+    reason: all changesets reviewed
     details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
   - name: Maintained
-    score: 5
-    reason: 6 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5
+    score: 3
+    reason: 4 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 3
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Packaging
     score: -1
@@ -172,11 +172,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -191,6 +186,25 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v1.34.0 not signed: https://api.github.com/repos/stern/stern/releases/316691032'
+      - 'Warn: release artifact v1.33.1 not signed: https://api.github.com/repos/stern/stern/releases/259532449'
+      - 'Warn: release artifact v1.33.0 not signed: https://api.github.com/repos/stern/stern/releases/245330163'
+      - 'Warn: release artifact v1.32.0 not signed: https://api.github.com/repos/stern/stern/releases/195739576'
+      - 'Warn: release artifact v1.31.0 not signed: https://api.github.com/repos/stern/stern/releases/178640231'
+      - 'Warn: release artifact v1.34.0 does not have provenance: https://api.github.com/repos/stern/stern/releases/316691032'
+      - 'Warn: release artifact v1.33.1 does not have provenance: https://api.github.com/repos/stern/stern/releases/259532449'
+      - 'Warn: release artifact v1.33.0 does not have provenance: https://api.github.com/repos/stern/stern/releases/245330163'
+      - 'Warn: release artifact v1.32.0 does not have provenance: https://api.github.com/repos/stern/stern/releases/195739576'
+      - 'Warn: release artifact v1.31.0 does not have provenance: https://api.github.com/repos/stern/stern/releases/178640231'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -209,20 +223,6 @@ checks:
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v1.34.0 not signed: https://api.github.com/repos/stern/stern/releases/316691032'
-      - 'Warn: release artifact v1.33.1 not signed: https://api.github.com/repos/stern/stern/releases/259532449'
-      - 'Warn: release artifact v1.33.0 not signed: https://api.github.com/repos/stern/stern/releases/245330163'
-      - 'Warn: release artifact v1.32.0 not signed: https://api.github.com/repos/stern/stern/releases/195739576'
-      - 'Warn: release artifact v1.31.0 not signed: https://api.github.com/repos/stern/stern/releases/178640231'
-      - 'Warn: release artifact v1.34.0 does not have provenance: https://api.github.com/repos/stern/stern/releases/316691032'
-      - 'Warn: release artifact v1.33.1 does not have provenance: https://api.github.com/repos/stern/stern/releases/259532449'
-      - 'Warn: release artifact v1.33.0 does not have provenance: https://api.github.com/repos/stern/stern/releases/245330163'
-      - 'Warn: release artifact v1.32.0 does not have provenance: https://api.github.com/repos/stern/stern/releases/195739576'
-      - 'Warn: release artifact v1.31.0 does not have provenance: https://api.github.com/repos/stern/stern/releases/178640231'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

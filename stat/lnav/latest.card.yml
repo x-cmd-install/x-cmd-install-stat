@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.14.1"
   latestRelease: "v0.14.1"
   latestPrerelease: "v0.14.1-rc1"
-  collectedAt: 2026-09-22T06:43:06Z
+  collectedAt: 2026-09-23T06:49:05Z
 timeline:
   created: 2009-09-14
   lastCommit: 2026-09-08
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-09-05
   lastPrerelease: 2026-05-10
 popularity:
-  star: 10692
+  star: 10694
   watcher: 83
-  fork: 404
+  fork: 406
   release: 74
   contributor: 76
   pullRequest: 332
@@ -39,7 +39,7 @@ language:
 totalBytes: 10104965
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 1
     mergedPR: 1
     openPR: 1
@@ -47,15 +47,15 @@ recent:
     openIssue: 6
     commit: 2
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 1
     mergedPR: 2
-    openPR: 2
+    openPR: 1
     closedIssue: 5
     openIssue: 10
     commit: 5
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 1
     mergedPR: 3
     openPR: 2
@@ -63,15 +63,15 @@ recent:
     openIssue: 20
     commit: 20
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 5
     mergedPR: 4
     openPR: 2
     closedIssue: 31
-    openIssue: 59
+    openIssue: 58
     commit: 123
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 7
     mergedPR: 18
     openPR: 3
@@ -79,7 +79,7 @@ recent:
     openIssue: 89
     commit: 460
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 29
     mergedPR: 55
     openPR: 5
@@ -95,7 +95,7 @@ total:
   commit: 4762
 ---
 path: /home/runner/.x-repo/github.com/tstack/lnav
-collectedAt: 2026-09-22T06:43:15Z
+collectedAt: 2026-09-23T06:49:13Z
 loc:
   Cpp:
     code: 231687
@@ -253,7 +253,7 @@ total:
   blanks: 56644
   files: 1238
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/tstack/lnav
   commit: 18779fc5b492efd61fae8898d66df7bf928ee282
@@ -292,6 +292,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Binary-Artifacts
+    score: 9
+    reason: binaries present in source code
+    details:
+      - 'Warn: binary detected: src/tailer/tailer.ape:1'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -300,22 +305,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Binary-Artifacts
-    score: 9
-    reason: binaries present in source code
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
     details:
-      - 'Warn: binary detected: src/tailer/tailer.ape:1'
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: BSD 2-Clause "Simplified" License: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
@@ -345,14 +345,6 @@ checks:
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
       - 'Info: Possibly incomplete results: error parsing shell code: "foo(" must be followed by ): src/scripts/otel_collector_log-converter.sh:27'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/bins.yml:58: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/bins.yml:73: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/bins.yml:80: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/bins.yml:106: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/bins.yml:108: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/bins.yml:110: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/bins.yml:126: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/bins.yml:133: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/bins.yml:155: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/bins.yml:184: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/bins.yml:194: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
@@ -363,6 +355,14 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/bins.yml:312: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/bins.yml:330: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/bins.yml:343: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/bins.yml:58: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/bins.yml:73: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/bins.yml:80: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/bins.yml:106: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/bins.yml:108: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/bins.yml:110: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/bins.yml:126: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/bins.yml:133: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/bins.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/c-cpp.yml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/c-cpp.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/c-cpp.yml:66: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/c-cpp.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/c-cpp.yml:98: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/c-cpp.yml/master?enable=pin'
@@ -388,8 +388,8 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/tailer-ape.yml:15: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/tailer-ape.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/tailer-ape.yml:32: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/tailer-ape.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/winget-release.yml:13: update your workflow using https://app.stepsecurity.io/secureworkflow/tstack/lnav/winget-release.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: .github/actions/muslbuilder/Dockerfile:1: pin your Docker image by updating alpine:latest to alpine:latest@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
-      - 'Warn: containerImage not pinned by hash: .github/actions/muslbuilder/Dockerfile:118: pin your Docker image by updating alpine:latest to alpine:latest@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b'
+      - 'Warn: containerImage not pinned by hash: .github/actions/muslbuilder/Dockerfile:1: pin your Docker image by updating alpine:latest to alpine:latest@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6'
+      - 'Warn: containerImage not pinned by hash: .github/actions/muslbuilder/Dockerfile:118: pin your Docker image by updating alpine:latest to alpine:latest@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6'
       - 'Warn: containerImage not pinned by hash: crashd/Dockerfile:5: pin your Docker image by updating python:3.12.3-slim to python:3.12.3-slim@sha256:afc139a0a640942491ec481ad8dda10f2c5b753f5c969393b12480155fe15a63'
       - 'Warn: containerImage not pinned by hash: demo/Dockerfile:2: pin your Docker image by updating debian:11.3-slim to debian:11.3-slim@sha256:f6957458017ec31c4e325a76f39d6323c4c21b0e31572efa006baa927a160891'
       - 'Warn: pipCommand not pinned by hash: crashd/Dockerfile:13'

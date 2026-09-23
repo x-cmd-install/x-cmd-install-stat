@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-09-21T05:19:47Z
+  collectedAt: 2026-09-23T05:19:53Z
 timeline:
   created: 2014-09-26
   lastCommit: 2026-09-11
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 
   lastPrerelease: 
 popularity:
-  star: 12433
+  star: 12435
   watcher: 554
-  fork: 4360
+  fork: 4359
   release: 0
   contributor: 144
-  pullRequest: 714
-  issue: 39
+  pullRequest: 717
+  issue: 42
 language:
   C++: 340050363
   C: 28614311
@@ -70,63 +70,63 @@ language:
 totalBytes: 398623517
 recent:
   last30d:
-    since: 2026-08-22
+    since: 2026-08-24
     release: 0
-    mergedPR: 1
-    openPR: 23
+    mergedPR: 0
+    openPR: 25
     closedIssue: 3
-    openIssue: 11
+    openIssue: 14
     commit: 19
   last60d:
-    since: 2026-07-23
+    since: 2026-07-25
     release: 0
     mergedPR: 1
-    openPR: 31
+    openPR: 34
     closedIssue: 4
-    openIssue: 17
+    openIssue: 20
     commit: 217
   last90d:
-    since: 2026-06-23
+    since: 2026-06-25
     release: 0
     mergedPR: 1
-    openPR: 32
+    openPR: 35
     closedIssue: 5
-    openIssue: 28
+    openIssue: 31
     commit: 447
   last180d:
-    since: 2026-03-25
+    since: 2026-03-27
     release: 0
     mergedPR: 1
-    openPR: 34
+    openPR: 37
     closedIssue: 6
-    openIssue: 33
+    openIssue: 36
     commit: 1195
   last360d:
-    since: 2025-09-26
+    since: 2025-09-28
     release: 0
     mergedPR: 1
-    openPR: 34
+    openPR: 37
     closedIssue: 6
-    openIssue: 33
+    openIssue: 36
     commit: 1872
   last720d:
-    since: 2024-10-01
+    since: 2024-10-03
     release: 0
     mergedPR: 1
-    openPR: 34
+    openPR: 37
     closedIssue: 6
-    openIssue: 33
-    commit: 5865
+    openIssue: 36
+    commit: 5856
 total:
   release: 0
   mergedPR: 1
-  openPR: 34
+  openPR: 37
   closedIssue: 6
-  openIssue: 33
+  openIssue: 36
   commit: 191048
 ---
 path: /home/runner/.x-repo/github.com/mysql/mysql-server
-collectedAt: 2026-09-21T05:29:24Z
+collectedAt: 2026-09-23T05:33:29Z
 loc:
   Cpp:
     code: 2718138
@@ -444,7 +444,7 @@ total:
   blanks: 1289016
   files: 35466
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/mysql/mysql-server
   commit: fcf22d38b9097f2edaf450c76957218c5f4af509
@@ -455,21 +455,12 @@ score: 6.5
 checks:
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 15 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 11 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Code-Review
     score: 0
     reason: Found 0/30 approved changesets -- score normalized to 0
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -478,6 +469,15 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -496,8 +496,8 @@ checks:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/pr-build.yml:21'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/pr-ci-report.yml:21'
       - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/pr-ci-report.yml:22'
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/pr-ci-report.yml:261'
       - 'Warn: jobLevel ''statuses'' permission set to ''write'': .github/workflows/pr-ci-report.yml:263'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/pr-ci-report.yml:261'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/assign-codeowners.yml:10'
       - 'Info: found token with ''none'' permissions: .github/workflows/cache-warmer.yml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/clang-format.yml:1'
@@ -540,12 +540,6 @@ checks:
     reason: no SAST tool detected
     details:
       - 'Warn: no pull requests merged into dev branch'
-  - name: Binary-Artifacts
-    score: 8
-    reason: binaries present in source code
-    details:
-      - 'Warn: binary detected: mysql-test/std_data/bug21542698.dat:1'
-      - 'Warn: binary detected: mysql-test/std_data/parts/t1_blackhole.par:1'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -620,6 +614,12 @@ checks:
       - 'Info: CppLibFuzzer integration found: router/tests/fuzzers/fuzz_router_uri.cc:33'
       - 'Info: CppLibFuzzer integration found: router/tests/fuzzers/fuzz_router_uri_tostring.cc:36'
       - 'Info: CLibFuzzer integration found: extra/libedit/libedit-20240808-3.1/examples/fuzz1.c:18'
+  - name: Binary-Artifacts
+    score: 8
+    reason: binaries present in source code
+    details:
+      - 'Warn: binary detected: mysql-test/std_data/bug21542698.dat:1'
+      - 'Warn: binary detected: mysql-test/std_data/parts/t1_blackhole.par:1'
   - name: Pinned-Dependencies
     score: 8
     reason: dependency not pinned by hash detected -- score normalized to 8
@@ -627,14 +627,14 @@ checks:
       - 'Info: Possibly incomplete results: error parsing shell code: "foo(" must be followed by ): storage/ndb/test/run-test/atrt-mysqltest:0'
       - 'Info: Possibly incomplete results: error parsing shell code: "fi" can only be used to end an if: storage/ndb/test/run-test/ndb-autotest.sh:0'
       - 'Info: Possibly incomplete results: error parsing shell code: "fi" can only be used to end an if: storage/ndb/test/run-test/upgrade-boot.sh:0'
-      - 'Warn: containerImage not pinned by hash: components/telemetry/test/collector/Dockerfile:25: pin your Docker image by updating otel/opentelemetry-collector to otel/opentelemetry-collector@sha256:e495787f07dbe432ce763ebaf5bc3d113850e9eee2250ade7a3da6a882d0d69a'
+      - 'Warn: containerImage not pinned by hash: components/telemetry/test/collector/Dockerfile:25: pin your Docker image by updating otel/opentelemetry-collector to otel/opentelemetry-collector@sha256:b6d2b9a85b1029d05b5ad913150c1f014eed4ae99be81a1813ca5ade4a191913'
       - 'Warn: containerImage not pinned by hash: components/telemetry/test/loki/Dockerfile-all:24: pin your Docker image by updating grafana/loki:3.0.0 to grafana/loki:3.0.0@sha256:757b5fadf816a1396f1fea598152947421fa49cb8b2db1ddd2a6e30fae003253'
       - 'Warn: containerImage not pinned by hash: components/telemetry/test/loki/Dockerfile-backend:24: pin your Docker image by updating grafana/loki:3.0.0 to grafana/loki:3.0.0@sha256:757b5fadf816a1396f1fea598152947421fa49cb8b2db1ddd2a6e30fae003253'
       - 'Warn: containerImage not pinned by hash: components/telemetry/test/loki/Dockerfile-read:24: pin your Docker image by updating grafana/loki:3.0.0 to grafana/loki:3.0.0@sha256:757b5fadf816a1396f1fea598152947421fa49cb8b2db1ddd2a6e30fae003253'
       - 'Warn: containerImage not pinned by hash: components/telemetry/test/loki/Dockerfile-write:24: pin your Docker image by updating grafana/loki:3.0.0 to grafana/loki:3.0.0@sha256:757b5fadf816a1396f1fea598152947421fa49cb8b2db1ddd2a6e30fae003253'
       - 'Warn: containerImage not pinned by hash: components/telemetry/test/prometheus/Dockerfile:24: pin your Docker image by updating prom/prometheus:latest to prom/prometheus:latest@sha256:5ce7540c3c00ef4ab0c9d2c995c6a5b9c421f44b4a115d97a2c7af3b1c21cbb0'
-      - 'Warn: containerImage not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/.devcontainer/Dockerfile.dev:4: pin your Docker image by updating otel/cpp_format_tools to otel/cpp_format_tools@sha256:443b8cc6bbb0a837f6f46acdaf3b8526cdb344e0743f2611972be84bc3588737'
-      - 'Warn: containerImage not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/ext/test/w3c_tracecontext_http_test_server/Dockerfile:4: pin your Docker image by updating python to python@sha256:e06cc1111ed84189e91866447f562b89faadbfbbb9937cd67e6bf4172cdb45df'
+      - 'Warn: containerImage not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/.devcontainer/Dockerfile.dev:4: pin your Docker image by updating otel/cpp_format_tools to otel/cpp_format_tools@sha256:be18405ec17538c887b330e390883c396f0fb9e73c86e2c878757a491efaca53'
+      - 'Warn: containerImage not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/ext/test/w3c_tracecontext_http_test_server/Dockerfile:4: pin your Docker image by updating python to python@sha256:be8ccd085666c34273c9dc5607c9842f8b2e3116128aae45148ce164c07ce09d'
       - 'Warn: pipCommand not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/.devcontainer/Dockerfile.conan:22'
       - 'Warn: downloadThenRun not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/.devcontainer/Dockerfile.dev:18-28'
       - 'Warn: npmCommand not pinned by hash: extra/opentelemetry-cpp/opentelemetry-cpp-1.27.0/.devcontainer/Dockerfile.dev:54'

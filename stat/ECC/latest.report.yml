@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.2.1"
   latestRelease: "v2.2.1"
   latestPrerelease: "v2.0.0-rc.1"
-  collectedAt: 2026-09-22T04:41:29Z
+  collectedAt: 2026-09-23T04:37:57Z
 timeline:
   created: 2026-01-18
   lastCommit: 2026-09-21
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-09-08
   lastPrerelease: 2026-05-25
 popularity:
-  star: 264832
-  watcher: 1348
-  fork: 39573
+  star: 265557
+  watcher: 1349
+  fork: 39688
   release: 17
   contributor: 377
-  pullRequest: 2271
-  issue: 795
+  pullRequest: 2278
+  issue: 798
 language:
   JavaScript: 7384519
   Rust: 1911228
@@ -36,63 +36,63 @@ language:
 totalBytes: 11028289
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 2
-    mergedPR: 96
-    openPR: 99
-    closedIssue: 41
+    mergedPR: 95
+    openPR: 98
+    closedIssue: 40
     openIssue: 41
     commit: 181
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 3
-    mergedPR: 164
-    openPR: 131
-    closedIssue: 76
-    openIssue: 59
+    mergedPR: 162
+    openPR: 136
+    closedIssue: 75
+    openIssue: 60
     commit: 384
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 3
-    mergedPR: 265
-    openPR: 138
-    closedIssue: 107
-    openIssue: 65
+    mergedPR: 263
+    openPR: 144
+    closedIssue: 104
+    openIssue: 68
     commit: 534
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 6
-    mergedPR: 835
-    openPR: 141
-    closedIssue: 388
-    openIssue: 67
+    mergedPR: 828
+    openPR: 147
+    closedIssue: 385
+    openIssue: 70
     commit: 1668
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 17
     mergedPR: 1097
-    openPR: 141
+    openPR: 147
     closedIssue: 727
-    openIssue: 67
+    openIssue: 70
     commit: 2492
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 17
     mergedPR: 1097
-    openPR: 141
+    openPR: 147
     closedIssue: 727
-    openIssue: 67
+    openIssue: 70
     commit: 2811
 total:
   release: 17
   mergedPR: 1100
-  openPR: 141
+  openPR: 147
   closedIssue: 728
-  openIssue: 67
+  openIssue: 70
   commit: 2811
 ---
 path: /home/runner/.x-repo/github.com/affaan-m/ECC
-collectedAt: 2026-09-22T04:42:05Z
+collectedAt: 2026-09-23T04:38:02Z
 loc:
   JavaScript:
     code: 171260
@@ -197,4 +197,4 @@ total:
 ---
 
 ---
-{"id":384945417,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQ77-1M4W8c0J","tag_name":"v2.2.1","target_commitish":"main","name":"v2.2.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-08T17:39:02Z","updated_at":"2026-09-08T17:52:08Z","published_at":"2026-09-08T17:52:08Z","assets":[],"body":"# ECC 2.2.1\n\nECC 2.2.1 is a bug and security patch for ECC 2.2. It keeps the published\n`v2.2.0` history immutable. These notes describe the prepared patch; publication\nand signing evidence are tracked separately in the release checklist.\n\n## Security and data protection\n\n- GateGuard and governance capture recognize destructive PowerShell commands,\n  including the native PowerShell tool path. Dynamic command handling prevents\n  later variable assignments from concealing earlier unresolved invocations\n  ([#2961](https://github.com/affaan-m/ECC/pull/2961)).\n- Relative GateGuard exemption globs stay within the project root. Explicit\n  absolute exemptions remain supported\n  ([#2921](https://github.com/affaan-m/ECC/issues/2921)).\n- Installer writes reject collisions with untracked user-owned files. Failed\n  installs refresh ownership hashes only for files they actually wrote, preserving the previous\n  ownership hashes of untouched managed files\n  ([#2964](https://github.com/affaan-m/ECC/issues/2964)).\n- Guided setup revalidates its preview before ownership filtering, so files\n  appearing between preview and apply cause a clear retry instead of a false\n  success. Existing identical user files stay outside ECC ownership.\n- Uninstall respects `ECC_DRY_RUN=1`, including legacy Codex paths, and rejects\n  invalid dry-run values instead of silently allowing deletion\n  ([#2952](https://github.com/affaan-m/ECC/issues/2952)).\n- Observer analysis retains observations on unsuccessful or unconfirmed\n  processing. Exit code zero alone no longer permits archival\n  ([#2971](https://github.com/affaan-m/ECC/pull/2971)).\n- The Yarn lockfile updates `toml` to 4.3.0, matching the npm lockfile and\n  removing the affected older resolution.\n\n## Hooks and installation\n\n- Manual Claude installs register ECC-owned hook entries in Claude settings.\n  Repair, consent changes, and uninstall reconcile those entries while\n  preserving unrelated settings. Atomic settings updates check directory\n  identity and retry detected concurrent edits\n  ([#2992](https://github.com/affaan-m/ECC/pull/2992)).\n- Direct hook entrypoints handle larger JSON payloads with bounded, UTF-8-safe\n  reads instead of silently truncating valid inputs. Existing production\n  wrapper limits remain unchanged\n  ([#2924](https://github.com/affaan-m/ECC/issues/2924)).\n- The Pi adapter selects an actual Node runtime instead of recursively\n  executing a compiled OMP host as Node\n  ([#2909](https://github.com/affaan-m/ECC/issues/2909)).\n- Installer listing and control-pane help avoid eager third-party dependency\n  loading. Features that require absent runtime packages report the missing\n  dependency explicitly\n  ([#2994](https://github.com/affaan-m/ECC/pull/2994)).\n- Autonomous harness setup documentation replaces nonexistent package names\n  and unsupported CLI flags with documented interfaces, and distinguishes\n  session scheduling from a durable external scheduler\n  ([#2957](https://github.com/affaan-m/ECC/issues/2957)).\n\n## Installer and release-surface hardening\n\n- Public and packaged install docs now consistently point at the published\n  `ecc-universal` commands instead of stale or unrelated package names.\n- The AdaL adapter docs use the correct `npx ecc-universal doctor --target adal`\n  command.\n- Claude setup preflights `git` before provider-specific work starts, so missing\n  prerequisites fail fast with the right action.\n- Guided setup dry runs use isolated HOME, config, XDG, temp, and Windows app\n  data roots to avoid ambient host state affecting review or tests.\n- The exact packed artifact now has stronger lifecycle coverage for Claude and\n  Kimi setup, update, doctor, repeat install, uninstall, and dry-run flows.\n- Identifier regression coverage blocks stale `ecc`, `ecc-install`, and other\n  mismatched release-path commands from creeping back into user-facing docs.\n\n## Current-main documentation included in this patch\n\n- The canonical It\u00f4 workflow now documents `ecc ito accept <ticket-id>` and the\n  `ito_accept` MCP tool.\n- Acceptance is explicitly bounded to buyer-authority routing. It routes the\n  active desk quote to human review and does not claim to place a trade.\n\n## Provenance boundary\n\n- `v2.2.1` is intended to be a signed annotated tag on exact green `main`.\n- `v2.2.0` remains the immutable historical unsigned exception. Do not move,\n  recreate, or reuse that tag.\n\n## Scope and limitations\n\n- Plugin dependency handling does not bundle or automatically install missing\n  modules. Database and schema-validation features require their declared\n  runtime dependencies.\n- Ownership protection covers untracked collisions and failed-install\n  checkpoints. Successful upgrades retain the existing contract for replacing\n  previously managed files. Back up intentional edits before upgrading.\n- This patch does not introduce new harness platforms or claim that every\n  open community issue is resolved.\n\n## Upgrade\n\nAfter the release workflow publishes 2.2.1 and verifies registry integrity,\ninstall or update the package, then run the same ECC command path you already\nuse. Until publication completes, the exact-version command below returns E404.\n\n```bash\nnpm install -g ecc-universal@2.2.1\necc doctor\n```\n\nFor first-time or guided terminal setup:\n\n```bash\nnpx ecc-universal setup\n```\n\nThe native Claude marketplace path remains supported:\n\n```text\n/plugin marketplace add https://github.com/affaan-m/ECC\n/plugin install ecc@ecc\n```\n","reactions":{"total_count":13,"+1":2,"-1":0,"laugh":0,"hooray":3,"confused":0,"heart":0,"rocket":8,"eyes":0}}
+{"id":384945417,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQ77-1M4W8c0J","tag_name":"v2.2.1","target_commitish":"main","name":"v2.2.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-08T17:39:02Z","updated_at":"2026-09-08T17:52:08Z","published_at":"2026-09-08T17:52:08Z","assets":[],"body":"# ECC 2.2.1\n\nECC 2.2.1 is a bug and security patch for ECC 2.2. It keeps the published\n`v2.2.0` history immutable. These notes describe the prepared patch; publication\nand signing evidence are tracked separately in the release checklist.\n\n## Security and data protection\n\n- GateGuard and governance capture recognize destructive PowerShell commands,\n  including the native PowerShell tool path. Dynamic command handling prevents\n  later variable assignments from concealing earlier unresolved invocations\n  ([#2961](https://github.com/affaan-m/ECC/pull/2961)).\n- Relative GateGuard exemption globs stay within the project root. Explicit\n  absolute exemptions remain supported\n  ([#2921](https://github.com/affaan-m/ECC/issues/2921)).\n- Installer writes reject collisions with untracked user-owned files. Failed\n  installs refresh ownership hashes only for files they actually wrote, preserving the previous\n  ownership hashes of untouched managed files\n  ([#2964](https://github.com/affaan-m/ECC/issues/2964)).\n- Guided setup revalidates its preview before ownership filtering, so files\n  appearing between preview and apply cause a clear retry instead of a false\n  success. Existing identical user files stay outside ECC ownership.\n- Uninstall respects `ECC_DRY_RUN=1`, including legacy Codex paths, and rejects\n  invalid dry-run values instead of silently allowing deletion\n  ([#2952](https://github.com/affaan-m/ECC/issues/2952)).\n- Observer analysis retains observations on unsuccessful or unconfirmed\n  processing. Exit code zero alone no longer permits archival\n  ([#2971](https://github.com/affaan-m/ECC/pull/2971)).\n- The Yarn lockfile updates `toml` to 4.3.0, matching the npm lockfile and\n  removing the affected older resolution.\n\n## Hooks and installation\n\n- Manual Claude installs register ECC-owned hook entries in Claude settings.\n  Repair, consent changes, and uninstall reconcile those entries while\n  preserving unrelated settings. Atomic settings updates check directory\n  identity and retry detected concurrent edits\n  ([#2992](https://github.com/affaan-m/ECC/pull/2992)).\n- Direct hook entrypoints handle larger JSON payloads with bounded, UTF-8-safe\n  reads instead of silently truncating valid inputs. Existing production\n  wrapper limits remain unchanged\n  ([#2924](https://github.com/affaan-m/ECC/issues/2924)).\n- The Pi adapter selects an actual Node runtime instead of recursively\n  executing a compiled OMP host as Node\n  ([#2909](https://github.com/affaan-m/ECC/issues/2909)).\n- Installer listing and control-pane help avoid eager third-party dependency\n  loading. Features that require absent runtime packages report the missing\n  dependency explicitly\n  ([#2994](https://github.com/affaan-m/ECC/pull/2994)).\n- Autonomous harness setup documentation replaces nonexistent package names\n  and unsupported CLI flags with documented interfaces, and distinguishes\n  session scheduling from a durable external scheduler\n  ([#2957](https://github.com/affaan-m/ECC/issues/2957)).\n\n## Installer and release-surface hardening\n\n- Public and packaged install docs now consistently point at the published\n  `ecc-universal` commands instead of stale or unrelated package names.\n- The AdaL adapter docs use the correct `npx ecc-universal doctor --target adal`\n  command.\n- Claude setup preflights `git` before provider-specific work starts, so missing\n  prerequisites fail fast with the right action.\n- Guided setup dry runs use isolated HOME, config, XDG, temp, and Windows app\n  data roots to avoid ambient host state affecting review or tests.\n- The exact packed artifact now has stronger lifecycle coverage for Claude and\n  Kimi setup, update, doctor, repeat install, uninstall, and dry-run flows.\n- Identifier regression coverage blocks stale `ecc`, `ecc-install`, and other\n  mismatched release-path commands from creeping back into user-facing docs.\n\n## Current-main documentation included in this patch\n\n- The canonical It\u00f4 workflow now documents `ecc ito accept <ticket-id>` and the\n  `ito_accept` MCP tool.\n- Acceptance is explicitly bounded to buyer-authority routing. It routes the\n  active desk quote to human review and does not claim to place a trade.\n\n## Provenance boundary\n\n- `v2.2.1` is intended to be a signed annotated tag on exact green `main`.\n- `v2.2.0` remains the immutable historical unsigned exception. Do not move,\n  recreate, or reuse that tag.\n\n## Scope and limitations\n\n- Plugin dependency handling does not bundle or automatically install missing\n  modules. Database and schema-validation features require their declared\n  runtime dependencies.\n- Ownership protection covers untracked collisions and failed-install\n  checkpoints. Successful upgrades retain the existing contract for replacing\n  previously managed files. Back up intentional edits before upgrading.\n- This patch does not introduce new harness platforms or claim that every\n  open community issue is resolved.\n\n## Upgrade\n\nAfter the release workflow publishes 2.2.1 and verifies registry integrity,\ninstall or update the package, then run the same ECC command path you already\nuse. Until publication completes, the exact-version command below returns E404.\n\n```bash\nnpm install -g ecc-universal@2.2.1\necc doctor\n```\n\nFor first-time or guided terminal setup:\n\n```bash\nnpx ecc-universal setup\n```\n\nThe native Claude marketplace path remains supported:\n\n```text\n/plugin marketplace add https://github.com/affaan-m/ECC\n/plugin install ecc@ecc\n```\n","reactions":{"total_count":14,"+1":3,"-1":0,"laugh":0,"hooray":3,"confused":0,"heart":0,"rocket":8,"eyes":0}}

@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.0.1"
   latestRelease: "v2.0.1"
   latestPrerelease: ""
-  collectedAt: 2026-09-22T05:54:25Z
+  collectedAt: 2026-09-23T06:04:09Z
 timeline:
   created: 2022-06-10
   lastCommit: 2026-09-11
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-09-11
   lastPrerelease: 
 popularity:
-  star: 24402
+  star: 24409
   watcher: 68
-  fork: 550
+  fork: 551
   release: 28
   contributor: 77
   pullRequest: 593
@@ -29,23 +29,23 @@ language:
 totalBytes: 168949
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 1
     mergedPR: 1
-    openPR: 16
+    openPR: 15
     closedIssue: 0
-    openIssue: 9
+    openIssue: 6
     commit: 1
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 2
     mergedPR: 5
     openPR: 20
     closedIssue: 0
-    openIssue: 13
+    openIssue: 12
     commit: 5
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 2
     mergedPR: 5
     openPR: 25
@@ -53,7 +53,7 @@ recent:
     openIssue: 20
     commit: 5
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 2
     mergedPR: 14
     openPR: 41
@@ -61,7 +61,7 @@ recent:
     openIssue: 23
     commit: 15
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 2
     mergedPR: 25
     openPR: 52
@@ -69,7 +69,7 @@ recent:
     openIssue: 41
     commit: 29
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 9
     mergedPR: 163
     openPR: 64
@@ -85,7 +85,7 @@ total:
   commit: 682
 ---
 path: /home/runner/.x-repo/github.com/charmbracelet/gum
-collectedAt: 2026-09-22T05:54:26Z
+collectedAt: 2026-09-23T06:04:10Z
 loc:
   Go:
     code: 4581
@@ -138,7 +138,7 @@ total:
   blanks: 939
   files: 84
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/charmbracelet/gum
   commit: 7179388031ae67d7f538d001be87d931f1cf5e28
@@ -152,6 +152,10 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 5
+    reason: 7 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5
+    details: null
   - name: Code-Review
     score: 5
     reason: Found 9/16 approved changesets -- score normalized to 5
@@ -159,10 +163,6 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 5
-    reason: 7 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -183,17 +183,17 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -211,14 +211,11 @@ checks:
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
     details:
-      - 'Info: security policy file detected: github.com/charmbracelet/.github/SECURITY.md:1'
-      - 'Info: Found linked content: github.com/charmbracelet/.github/SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/charmbracelet/.github/SECURITY.md:1'
-      - 'Info: Found text in security policy: github.com/charmbracelet/.github/SECURITY.md:1'
+      - 'Warn: 0 commits out of 27 are checked with a SAST tool'
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -233,9 +230,12 @@ checks:
       - 'Warn: release artifact v0.17.0 does not have provenance: https://api.github.com/repos/charmbracelet/gum/releases/245136112'
       - 'Warn: release artifact v0.16.2 does not have provenance: https://api.github.com/repos/charmbracelet/gum/releases/227167086'
       - 'Warn: release artifact v0.16.1 does not have provenance: https://api.github.com/repos/charmbracelet/gum/releases/222083303'
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
     details:
-      - 'Warn: 0 commits out of 27 are checked with a SAST tool'
+      - 'Info: security policy file detected: github.com/charmbracelet/.github/SECURITY.md:1'
+      - 'Info: Found linked content: github.com/charmbracelet/.github/SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/charmbracelet/.github/SECURITY.md:1'
+      - 'Info: Found text in security policy: github.com/charmbracelet/.github/SECURITY.md:1'
 ---

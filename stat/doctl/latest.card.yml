@@ -2,12 +2,12 @@ about:
   description: "The official command line interface for the DigitalOcean API."
   license: Apache-2.0
   homepage: https://docs.digitalocean.com/reference/doctl/
-  head: f4e7d17
+  head: 2039c37
   archived: false
-  latestVersion: "v1.170.0"
-  latestRelease: "v1.170.0"
+  latestVersion: "v1.171.2"
+  latestRelease: "v1.171.2"
   latestPrerelease: "v1.169.0-beta.2"
-  collectedAt: 2026-09-22T06:19:36Z
+  collectedAt: 2026-09-23T06:17:20Z
 timeline:
   created: 2015-05-29
   lastCommit: 2026-09-22
@@ -17,82 +17,82 @@ timeline:
 popularity:
   star: 3452
   watcher: 124
-  fork: 503
-  release: 271
-  contributor: 260
-  pullRequest: 1432
+  fork: 504
+  release: 274
+  contributor: 261
+  pullRequest: 1435
   issue: 536
 language:
-  Go: 5331531
+  Go: 5326533
   Shell: 14162
   HTML: 7602
   Makefile: 5061
   Dockerfile: 656
-totalBytes: 5359012
+totalBytes: 5354014
 recent:
   last30d:
-    since: 2026-08-23
-    release: 30
-    mergedPR: 48
-    openPR: 10
+    since: 2026-08-24
+    release: 33
+    mergedPR: 47
+    openPR: 7
     closedIssue: 0
     openIssue: 0
-    commit: 9
+    commit: 13
   last60d:
-    since: 2026-07-24
-    release: 46
-    mergedPR: 69
-    openPR: 12
+    since: 2026-07-25
+    release: 49
+    mergedPR: 73
+    openPR: 11
     closedIssue: 1
     openIssue: 0
-    commit: 16
+    commit: 20
   last90d:
-    since: 2026-06-24
-    release: 58
-    mergedPR: 82
-    openPR: 19
+    since: 2026-06-25
+    release: 61
+    mergedPR: 85
+    openPR: 18
     closedIssue: 1
     openIssue: 5
-    commit: 25
+    commit: 29
   last180d:
-    since: 2026-03-26
-    release: 68
-    mergedPR: 103
-    openPR: 25
+    since: 2026-03-27
+    release: 71
+    mergedPR: 107
+    openPR: 24
     closedIssue: 3
     openIssue: 7
-    commit: 44
+    commit: 48
   last360d:
-    since: 2025-09-27
-    release: 76
-    mergedPR: 132
-    openPR: 39
+    since: 2025-09-28
+    release: 79
+    mergedPR: 136
+    openPR: 38
     closedIssue: 7
     openIssue: 16
-    commit: 74
+    commit: 78
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 100
-    mergedPR: 255
-    openPR: 42
+    mergedPR: 259
+    openPR: 41
     closedIssue: 18
     openIssue: 38
-    commit: 197
+    commit: 201
 total:
-  release: 271
-  mergedPR: 1265
-  openPR: 47
+  release: 274
+  mergedPR: 1269
+  openPR: 46
   closedIssue: 426
   openIssue: 110
-  commit: 2608
+  commit: 2612
 ---
 path: /home/runner/.x-repo/github.com/digitalocean/doctl
-collectedAt: 2026-09-22T06:19:45Z
+collectedAt: 2026-09-23T06:17:27Z
 loc:
   Go:
-    code: 1080366
-    comments: 155274
-    blanks: 112402
+    code: 1080435
+    comments: 155243
+    blanks: 112421
     files: 3621
   Xml:
     code: 41939
@@ -181,8 +181,8 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 15700
-    blanks: 6639
+    comments: 15702
+    blanks: 6641
     files: 190
   Text:
     code: 0
@@ -190,15 +190,15 @@ loc:
     blanks: 157
     files: 16
 total:
-  code: 1161776
-  comments: 189565
-  blanks: 127341
+  code: 1161845
+  comments: 189536
+  blanks: 127362
   files: 4374
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/digitalocean/doctl
-  commit: f0b7b1d0a11d599afd3aefc0544dfd5bc7d6d4dc
+  commit: 4b5fba0d936e6537cb0af5ec0f03026c0f9278d2
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -214,7 +214,7 @@ checks:
     details: null
   - name: Maintained
     score: 10
-    reason: 22 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    reason: 26 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Token-Permissions
     score: 0
@@ -245,14 +245,24 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE.txt:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE.txt:0'
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
     details:
-      - 'Info: security policy file detected: github.com/digitalocean/.github/SECURITY.md:1'
-      - 'Info: Found linked content: github.com/digitalocean/.github/SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/digitalocean/.github/SECURITY.md:1'
-      - 'Info: Found text in security policy: github.com/digitalocean/.github/SECURITY.md:1'
+      - 'Warn: release artifact v1.170.0 not signed: https://api.github.com/repos/digitalocean/doctl/releases/393446771'
+      - 'Warn: release artifact v1.169.0-beta.2 not signed: https://api.github.com/repos/digitalocean/doctl/releases/393113206'
+      - 'Warn: release artifact v1.169.0-beta.1 not signed: https://api.github.com/repos/digitalocean/doctl/releases/392804299'
+      - 'Warn: release artifact v1.169.0 not signed: https://api.github.com/repos/digitalocean/doctl/releases/391420821'
+      - 'Warn: release artifact v1.168.0-beta.16 not signed: https://api.github.com/repos/digitalocean/doctl/releases/390860648'
+      - 'Warn: release artifact v1.170.0 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/393446771'
+      - 'Warn: release artifact v1.169.0-beta.2 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/393113206'
+      - 'Warn: release artifact v1.169.0-beta.1 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/392804299'
+      - 'Warn: release artifact v1.169.0 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/391420821'
+      - 'Warn: release artifact v1.168.0-beta.16 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/390860648'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -288,24 +298,14 @@ checks:
       - 'Info:   0 out of   8 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 containerImage dependencies pinned'
       - 'Info:   1 out of   3 goCommand dependencies pinned'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
     details:
-      - 'Warn: release artifact v1.168.0-beta.11 not signed: https://api.github.com/repos/digitalocean/doctl/releases/387856870'
-      - 'Warn: release artifact v1.168.0-beta.10 not signed: https://api.github.com/repos/digitalocean/doctl/releases/386406026'
-      - 'Warn: release artifact v1.168.0-beta.8 not signed: https://api.github.com/repos/digitalocean/doctl/releases/385571225'
-      - 'Warn: release artifact v1.168.0-beta.7 not signed: https://api.github.com/repos/digitalocean/doctl/releases/382691305'
-      - 'Warn: release artifact v1.168.0-beta.6 not signed: https://api.github.com/repos/digitalocean/doctl/releases/382583876'
-      - 'Warn: release artifact v1.168.0-beta.11 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/387856870'
-      - 'Warn: release artifact v1.168.0-beta.10 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/386406026'
-      - 'Warn: release artifact v1.168.0-beta.8 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/385571225'
-      - 'Warn: release artifact v1.168.0-beta.7 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/382691305'
-      - 'Warn: release artifact v1.168.0-beta.6 does not have provenance: https://api.github.com/repos/digitalocean/doctl/releases/382583876'
+      - 'Info: security policy file detected: github.com/digitalocean/.github/SECURITY.md:1'
+      - 'Info: Found linked content: github.com/digitalocean/.github/SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/digitalocean/.github/SECURITY.md:1'
+      - 'Info: Found text in security policy: github.com/digitalocean/.github/SECURITY.md:1'
   - name: Packaging
     score: 10
     reason: packaging workflow detected

@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-09-22T06:03:54Z
+  collectedAt: 2026-09-23T05:59:21Z
 timeline:
   created: 
   lastCommit: 
@@ -24,7 +24,7 @@ popularity:
   issue: 0
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -32,7 +32,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -40,7 +40,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -48,7 +48,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 0
     mergedPR: 0
     openPR: 0
@@ -56,7 +56,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 0
     mergedPR: 0
     openPR: 0
@@ -64,7 +64,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 0
     mergedPR: 0
     openPR: 0
@@ -83,7 +83,7 @@ graphqlErrors:
   - Could not resolve to a Repository with the name 'sindresorhus/public-ip-cli#readme'.
 ---
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/sindresorhus/public-ip-cli
   commit: cbb31828b16e1bf2a611a81c4c4f00c488638778
@@ -92,27 +92,33 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 2.8
 checks:
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Code-Review
     score: 0
     reason: Found 2/21 approved changesets -- score normalized to 0
-    details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -122,12 +128,6 @@ checks:
       - 'Warn: npmCommand not pinned by hash: .github/workflows/main.yml:21'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 npmCommand dependencies pinned'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -147,11 +147,11 @@ checks:
     score: -1
     reason: no releases found
     details: null
-  - name: Branch-Protection
+  - name: SAST
     score: 0
-    reason: branch protection not enabled on development/release branches
+    reason: SAST tool is not run on all commits -- score normalized to 0
     details:
-      - 'Warn: branch protection not enabled for branch ''main'''
+      - 'Warn: 0 commits out of 2 are checked with a SAST tool'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -160,9 +160,9 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: SAST
+  - name: Branch-Protection
     score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
+    reason: branch protection not enabled on development/release branches
     details:
-      - 'Warn: 0 commits out of 2 are checked with a SAST tool'
+      - 'Warn: branch protection not enabled for branch ''main'''
 ---

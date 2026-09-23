@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.37.0-beta.1"
   latestRelease: "v1.36.2"
   latestPrerelease: "v1.37.0-beta.1"
-  collectedAt: 2026-09-22T05:46:01Z
+  collectedAt: 2026-09-23T05:50:35Z
 timeline:
   created: 2016-06-27
   lastCommit: 2026-09-17
@@ -20,8 +20,8 @@ popularity:
   fork: 4716
   release: 239
   contributor: 1474
-  pullRequest: 13272
-  issue: 5356
+  pullRequest: 13273
+  issue: 5357
 language:
   Go: 8485480
   HCL: 3964637
@@ -34,63 +34,63 @@ language:
 totalBytes: 13573449
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 1
-    mergedPR: 49
+    mergedPR: 45
     openPR: 7
     closedIssue: 2
-    openIssue: 1
+    openIssue: 2
     commit: 80
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 3
-    mergedPR: 149
-    openPR: 13
+    mergedPR: 147
+    openPR: 11
     closedIssue: 6
-    openIssue: 4
+    openIssue: 5
     commit: 341
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 6
-    mergedPR: 237
+    mergedPR: 236
     openPR: 23
     closedIssue: 10
-    openIssue: 5
+    openIssue: 6
     commit: 500
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 10
-    mergedPR: 552
-    openPR: 37
-    closedIssue: 31
-    openIssue: 9
+    mergedPR: 547
+    openPR: 36
+    closedIssue: 30
+    openIssue: 10
     commit: 1148
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 19
-    mergedPR: 932
+    mergedPR: 931
     openPR: 43
     closedIssue: 78
-    openIssue: 16
+    openIssue: 17
     commit: 1870
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 34
     mergedPR: 1391
     openPR: 44
     closedIssue: 187
-    openIssue: 23
+    openIssue: 24
     commit: 2722
 total:
   release: 239
   mergedPR: 11643
   openPR: 44
   closedIssue: 5269
-  openIssue: 87
+  openIssue: 88
   commit: 24432
 ---
 path: /home/runner/.x-repo/github.com/kubernetes/kops
-collectedAt: 2026-09-22T05:47:18Z
+collectedAt: 2026-09-23T05:51:41Z
 loc:
   Go:
     code: 3268825
@@ -213,10 +213,10 @@ total:
   blanks: 528601
   files: 14714
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/kubernetes/kops
-  commit: 8aa3a4cb47b3190ca27e80ef4ce0c6e0b69487fa
+  commit: 636caf1aae51236eb08f78892ff8b1e5dbc1b3bf
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -226,11 +226,24 @@ checks:
     score: 10
     reason: all changesets reviewed
     details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 16 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Token-Permissions
+    score: 9
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/tag-release.yml:17'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/depsreview.yaml:9'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/e2e.yml:13'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:13'
+      - 'Warn: no topLevel permission defined: .github/workflows/tag-release.yml:1'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -243,19 +256,6 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 16 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Token-Permissions
-    score: 9
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/tag-release.yml:17'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/depsreview.yaml:9'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/e2e.yml:13'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:13'
-      - 'Warn: no topLevel permission defined: .github/workflows/tag-release.yml:1'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -293,6 +293,11 @@ checks:
       - 'Warn: release artifact v1.36.1 does not have provenance: https://api.github.com/repos/kubernetes/kops/releases/361043997'
       - 'Warn: release artifact v1.37.0-alpha.1 does not have provenance: https://api.github.com/repos/kubernetes/kops/releases/354460487'
       - 'Warn: release artifact v1.36.0 does not have provenance: https://api.github.com/repos/kubernetes/kops/releases/354459860'
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
   - name: Pinned-Dependencies
     score: 6
     reason: dependency not pinned by hash detected -- score normalized to 6
@@ -301,7 +306,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: hooks/nvidia-bootstrap/image/Dockerfile:15: pin your Docker image by updating debian:jessie to debian:jessie@sha256:32ad5050caffb2c7e969dac873bce2c370015c2256ff984b70c1c08b3a2816a0'
       - 'Warn: containerImage not pinned by hash: hooks/nvidia-device-plugin/image/Dockerfile:15: pin your Docker image by updating debian:stretch-slim to debian:stretch-slim@sha256:abaa313c7e1dfe16069a1a42fa254014780f165d4fd084844602edbe29915e70'
       - 'Warn: containerImage not pinned by hash: hooks/prepull-images/image/Dockerfile:15: pin your Docker image by updating alpine:3.6 to alpine:3.6@sha256:66790a2b79e1ea3e1dabac43990c54aca5d1ddf268d9a5a0285e4167c8b24475'
-      - 'Warn: containerImage not pinned by hash: images/mkdocs/Dockerfile:15: pin your Docker image by updating alpine:3.22 to alpine:3.22@sha256:14358309a308569c32bdc37e2e0e9694be33a9d99e68afb0f5ff33cc1f695dce'
+      - 'Warn: containerImage not pinned by hash: images/mkdocs/Dockerfile:15: pin your Docker image by updating alpine:3.22 to alpine:3.22@sha256:5291449c3df73caf6ed85e649dec1b9e818b39a5d8c871e97afc13e9cd5e8fa8'
       - 'Warn: pipCommand not pinned by hash: images/mkdocs/Dockerfile:17-30'
       - 'Warn: pipCommand not pinned by hash: images/mkdocs/Dockerfile:33'
       - 'Warn: goCommand not pinned by hash: hack/verify-golangci-lint.sh:33'
@@ -313,9 +318,4 @@ checks:
       - 'Info:   0 out of   4 containerImage dependencies pinned'
       - 'Info:   0 out of   2 pipCommand dependencies pinned'
       - 'Info:   0 out of   5 goCommand dependencies pinned'
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---

@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.5.0"
   latestRelease: "v1.5.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-22T06:28:40Z
+  collectedAt: 2026-09-23T06:34:25Z
 timeline:
   created: 2018-01-28
   lastCommit: 2026-01-16
@@ -30,7 +30,7 @@ language:
 totalBytes: 185122
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 0
     openPR: 1
@@ -38,7 +38,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
     mergedPR: 0
     openPR: 1
@@ -46,7 +46,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 0
     mergedPR: 0
     openPR: 2
@@ -54,7 +54,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 0
     mergedPR: 0
     openPR: 2
@@ -62,7 +62,7 @@ recent:
     openIssue: 1
     commit: 0
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 0
     mergedPR: 3
     openPR: 2
@@ -70,7 +70,7 @@ recent:
     openIssue: 3
     commit: 6
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 0
     mergedPR: 4
     openPR: 5
@@ -86,7 +86,7 @@ total:
   commit: 498
 ---
 path: /home/runner/.x-repo/github.com/github/git-sizer
-collectedAt: 2026-09-22T06:28:41Z
+collectedAt: 2026-09-23T06:34:26Z
 loc:
   Go:
     code: 4866
@@ -119,7 +119,7 @@ total:
   blanks: 1158
   files: 53
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/github/git-sizer
   commit: 88eaa80df48db1b47291f3a43b084b8c79082339
@@ -128,23 +128,35 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.8
 checks:
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Dangerous-Workflow
+  - name: Binary-Artifacts
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: no binaries found in the repo
+    details: null
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/lint.yml:16'
+      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:10'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yml:5'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -158,18 +170,6 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/github/git-sizer/test.yml/master?enable=pin'
       - 'Info:   0 out of   6 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/lint.yml:16'
-      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:10'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yml:5'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected

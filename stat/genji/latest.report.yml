@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.18.0"
   latestRelease: "v0.18.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-22T06:38:16Z
+  collectedAt: 2026-09-23T06:41:33Z
 timeline:
   created: 2018-06-23
   lastCommit: 2025-11-05
@@ -28,7 +28,7 @@ language:
 totalBytes: 908756
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 1
     mergedPR: 0
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 3
     mergedPR: 0
     openPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 2108
 ---
 path: /home/runner/.x-repo/github.com/genjidb/genji
-collectedAt: 2026-09-22T06:38:18Z
+collectedAt: 2026-09-23T06:41:35Z
 loc:
   Go:
     code: 28849
@@ -112,7 +112,7 @@ total:
   blanks: 6443
   files: 294
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/genjidb/genji
   commit: e53516f8185cac23ea7437592022c5852adc01fd
@@ -121,10 +121,6 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.4
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -134,16 +130,20 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
+  - name: Code-Review
+    score: 0
+    reason: Found 0/30 approved changesets -- score normalized to 0
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/go.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Code-Review
-    score: 0
-    reason: Found 0/30 approved changesets -- score normalized to 0
-    details: null
   - name: SAST
     score: 0
     reason: no SAST tool detected
@@ -172,17 +172,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: GoBuiltInFuzzer integration found: internal/sql/parser/parser_fuzz_test.go:10'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: GoBuiltInFuzzer integration found: internal/sql/parser/parser_fuzz_test.go:10'
   - name: Signed-Releases
     score: -1
     reason: no releases found

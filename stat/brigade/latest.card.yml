@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.6.0"
   latestRelease: "v2.6.0"
   latestPrerelease: "v2.6.0-rc.2"
-  collectedAt: 2026-09-22T05:34:48Z
+  collectedAt: 2026-09-23T05:37:19Z
 timeline:
   created: 2017-10-23
   lastCommit: 2022-09-28
@@ -36,7 +36,7 @@ language:
 totalBytes: 1652897
 recent:
   last30d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-24
+    since: 2026-06-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-26
+    since: 2026-03-27
     release: 0
     mergedPR: 0
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-27
+    since: 2025-09-28
     release: 0
     mergedPR: 0
     openPR: 0
@@ -76,7 +76,7 @@ recent:
     openIssue: 1
     commit: 0
   last720d:
-    since: 2024-10-02
+    since: 2024-10-03
     release: 0
     mergedPR: 0
     openPR: 0
@@ -92,7 +92,7 @@ total:
   commit: 2046
 ---
 path: /home/runner/.x-repo/github.com/brigadecore/brigade
-collectedAt: 2026-09-22T05:34:54Z
+collectedAt: 2026-09-23T05:37:31Z
 loc:
   Go:
     code: 50033
@@ -175,7 +175,7 @@ total:
   blanks: 5737
   files: 443
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/brigadecore/brigade
   commit: 21d51b12f495aef427a7f5fc43c3236bf6382e87
@@ -184,18 +184,19 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.9
 checks:
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Dangerous-Workflow
+  - name: Code-Review
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: all changesets reviewed
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -203,11 +204,10 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yaml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/release.yaml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
