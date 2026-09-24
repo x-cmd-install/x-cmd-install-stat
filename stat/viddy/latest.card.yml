@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.3.1"
   latestRelease: "v1.3.1"
   latestPrerelease: "v1.0.0-rc.6"
-  collectedAt: 2026-09-23T05:02:50Z
+  collectedAt: 2026-09-24T04:51:57Z
 timeline:
   created: 2021-08-14
   lastCommit: 2026-08-16
@@ -29,7 +29,7 @@ language:
 totalBytes: 179842
 recent:
   last30d:
-    since: 2026-08-24
+    since: 2026-08-25
     release: 0
     mergedPR: 0
     openPR: 2
@@ -37,7 +37,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-25
+    since: 2026-07-26
     release: 0
     mergedPR: 1
     openPR: 3
@@ -45,7 +45,7 @@ recent:
     openIssue: 1
     commit: 1
   last90d:
-    since: 2026-06-25
+    since: 2026-06-26
     release: 0
     mergedPR: 1
     openPR: 3
@@ -53,7 +53,7 @@ recent:
     openIssue: 1
     commit: 1
   last180d:
-    since: 2026-03-27
+    since: 2026-03-28
     release: 1
     mergedPR: 3
     openPR: 3
@@ -61,7 +61,7 @@ recent:
     openIssue: 2
     commit: 4
   last360d:
-    since: 2025-09-28
+    since: 2025-09-29
     release: 1
     mergedPR: 3
     openPR: 7
@@ -69,9 +69,9 @@ recent:
     openIssue: 2
     commit: 4
   last720d:
-    since: 2024-10-03
+    since: 2024-10-04
     release: 5
-    mergedPR: 9
+    mergedPR: 8
     openPR: 10
     closedIssue: 7
     openIssue: 16
@@ -85,7 +85,7 @@ total:
   commit: 308
 ---
 path: /home/runner/.x-repo/github.com/sachaos/viddy
-collectedAt: 2026-09-23T05:02:52Z
+collectedAt: 2026-09-24T04:51:58Z
 loc:
   Rust:
     code: 4905
@@ -113,7 +113,7 @@ total:
   blanks: 700
   files: 37
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/sachaos/viddy
   commit: b56efe0876f255ade025d6b77fb9f3f30099675b
@@ -122,6 +122,19 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3
 checks:
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Code-Review
+    score: 1
+    reason: Found 3/16 approved changesets -- score normalized to 1
+    details: null
   - name: Maintained
     score: 1
     reason: 2 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 1
@@ -130,26 +143,6 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 1
-    reason: Found 3/16 approved changesets -- score normalized to 1
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/cd.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -173,6 +166,13 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:59: update your workflow using https://app.stepsecurity.io/secureworkflow/sachaos/viddy/ci.yml/master?enable=pin'
       - 'Info:   0 out of   5 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of  12 third-party GitHubAction dependencies pinned'
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/cd.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -185,17 +185,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'

@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.19.13"
   latestRelease: "v2.19.13"
   latestPrerelease: ""
-  collectedAt: 2026-09-23T05:06:19Z
+  collectedAt: 2026-09-24T04:51:13Z
 timeline:
   created: 2014-11-15
   lastCommit: 2026-09-11
@@ -29,7 +29,7 @@ language:
 totalBytes: 1157167
 recent:
   last30d:
-    since: 2026-08-24
+    since: 2026-08-25
     release: 1
     mergedPR: 1
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 1
   last60d:
-    since: 2026-07-25
+    since: 2026-07-26
     release: 3
     mergedPR: 3
     openPR: 0
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 3
   last90d:
-    since: 2026-06-25
+    since: 2026-06-26
     release: 5
     mergedPR: 6
     openPR: 1
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 7
   last180d:
-    since: 2026-03-27
+    since: 2026-03-28
     release: 13
     mergedPR: 25
     openPR: 1
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 53
   last360d:
-    since: 2025-09-28
+    since: 2025-09-29
     release: 16
     mergedPR: 32
     openPR: 1
@@ -69,7 +69,7 @@ recent:
     openIssue: 0
     commit: 64
   last720d:
-    since: 2024-10-03
+    since: 2024-10-04
     release: 19
     mergedPR: 38
     openPR: 1
@@ -85,7 +85,7 @@ total:
   commit: 1949
 ---
 path: /home/runner/.x-repo/github.com/qiniu/qshell
-collectedAt: 2026-09-23T05:06:25Z
+collectedAt: 2026-09-24T04:51:18Z
 loc:
   Go:
     code: 34520
@@ -128,7 +128,7 @@ total:
   blanks: 7176
   files: 457
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/qiniu/qshell
   commit: 9a0117cc3b1a3974f8d1e9371dfdd57515612659
@@ -137,10 +137,6 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.1
 checks:
-  - name: Code-Review
-    score: 9
-    reason: Found 10/11 approved changesets -- score normalized to 9
-    details: null
   - name: Maintained
     score: 7
     reason: 9 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 7
@@ -150,9 +146,9 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
+  - name: Code-Review
+    score: 9
+    reason: Found 10/11 approved changesets -- score normalized to 9
     details: null
   - name: Token-Permissions
     score: 0
@@ -161,6 +157,10 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/release.yaml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/ut-check.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -188,11 +188,6 @@ checks:
     details:
       - 'Info: project has a license file: License:0'
       - 'Info: FSF or OSI recognized license: MIT License: License:0'
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
@@ -212,17 +207,22 @@ checks:
       - 'Warn: release artifact v2.19.11 does not have provenance: https://api.github.com/repos/qiniu/qshell/releases/362328060'
       - 'Warn: release artifact v2.19.10 does not have provenance: https://api.github.com/repos/qiniu/qshell/releases/351974193'
       - 'Warn: release artifact v2.19.9 does not have provenance: https://api.github.com/repos/qiniu/qshell/releases/346605641'
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
   - name: Pinned-Dependencies
     score: 1
     reason: dependency not pinned by hash detected -- score normalized to 1
     details:
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yaml:134: update your workflow using https://app.stepsecurity.io/secureworkflow/qiniu/qshell/release.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yaml:66: update your workflow using https://app.stepsecurity.io/secureworkflow/qiniu/qshell/release.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yaml:68: update your workflow using https://app.stepsecurity.io/secureworkflow/qiniu/qshell/release.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yaml:134: update your workflow using https://app.stepsecurity.io/secureworkflow/qiniu/qshell/release.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ut-check.yml:12: update your workflow using https://app.stepsecurity.io/secureworkflow/qiniu/qshell/ut-check.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ut-check.yml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/qiniu/qshell/ut-check.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: examples/sandbox/Dockerfile:1: pin your Docker image by updating m.daocloud.io/docker.io/library/ubuntu:22.04 to m.daocloud.io/docker.io/library/ubuntu:22.04@sha256:829f6df217bcbae2b371026e81711d1a787c61b2967ad09d015063663ebafbf7'
-      - 'Warn: containerImage not pinned by hash: examples/sandbox/Dockerfile.simple:1: pin your Docker image by updating m.daocloud.io/docker.io/library/ubuntu:22.04 to m.daocloud.io/docker.io/library/ubuntu:22.04@sha256:829f6df217bcbae2b371026e81711d1a787c61b2967ad09d015063663ebafbf7'
+      - 'Warn: containerImage not pinned by hash: examples/sandbox/Dockerfile:1: pin your Docker image by updating m.daocloud.io/docker.io/library/ubuntu:22.04 to m.daocloud.io/docker.io/library/ubuntu:22.04@sha256:b8b6ee6aa931ecd9d0d952abc34dc0e5f7c6a30c6bb71b079fe399fde0329c02'
+      - 'Warn: containerImage not pinned by hash: examples/sandbox/Dockerfile.simple:1: pin your Docker image by updating m.daocloud.io/docker.io/library/ubuntu:22.04 to m.daocloud.io/docker.io/library/ubuntu:22.04@sha256:b8b6ee6aa931ecd9d0d952abc34dc0e5f7c6a30c6bb71b079fe399fde0329c02'
       - 'Warn: downloadThenRun not pinned by hash: .github/workflows/ut-check.yml:22'
       - 'Info:   0 out of   5 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   1 out of   1 third-party GitHubAction dependencies pinned'

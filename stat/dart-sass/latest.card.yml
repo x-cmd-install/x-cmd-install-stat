@@ -7,7 +7,7 @@ about:
   latestVersion: "1.105.0"
   latestRelease: "1.105.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-23T06:28:03Z
+  collectedAt: 2026-09-24T05:52:39Z
 timeline:
   created: 2016-10-31
   lastCommit: 2026-09-22
@@ -20,7 +20,7 @@ popularity:
   fork: 381
   release: 328
   contributor: 71
-  pullRequest: 1576
+  pullRequest: 1577
   issue: 1239
 language:
   Dart: 2620487
@@ -30,23 +30,23 @@ language:
 totalBytes: 3914309
 recent:
   last30d:
-    since: 2026-08-24
+    since: 2026-08-25
     release: 3
-    mergedPR: 18
+    mergedPR: 17
     openPR: 1
     closedIssue: 5
     openIssue: 1
     commit: 21
   last60d:
-    since: 2026-07-25
-    release: 6
-    mergedPR: 36
+    since: 2026-07-26
+    release: 5
+    mergedPR: 37
     openPR: 1
     closedIssue: 7
     openIssue: 2
     commit: 42
   last90d:
-    since: 2026-06-25
+    since: 2026-06-26
     release: 11
     mergedPR: 55
     openPR: 1
@@ -54,39 +54,39 @@ recent:
     openIssue: 2
     commit: 69
   last180d:
-    since: 2026-03-27
+    since: 2026-03-28
     release: 14
-    mergedPR: 73
+    mergedPR: 74
     openPR: 2
     closedIssue: 14
     openIssue: 4
     commit: 81
   last360d:
-    since: 2025-09-28
+    since: 2025-09-29
     release: 27
-    mergedPR: 139
+    mergedPR: 140
     openPR: 3
     closedIssue: 34
     openIssue: 5
     commit: 138
   last720d:
-    since: 2024-10-03
+    since: 2024-10-04
     release: 63
-    mergedPR: 291
+    mergedPR: 292
     openPR: 4
     closedIssue: 125
     openIssue: 12
     commit: 320
 total:
   release: 328
-  mergedPR: 1451
+  mergedPR: 1452
   openPR: 7
   closedIssue: 1178
   openIssue: 61
   commit: 2867
 ---
 path: /home/runner/.x-repo/github.com/sass/dart-sass
-collectedAt: 2026-09-23T06:28:08Z
+collectedAt: 2026-09-24T05:52:44Z
 loc:
   Dart:
     code: 59460
@@ -129,10 +129,10 @@ total:
   blanks: 19140
   files: 675
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/sass/dart-sass
-  commit: 6180be0e2fce9b99142302822221ad74ba787bc0
+  commit: 288d4e202501ea1b943525c88e1d5e5cd225de62
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -154,18 +154,14 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
     details:
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/ci.yml:71'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/ci.yml:25'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/ci.yml:75'
       - 'Warn: jobLevel ''security-events'' permission set to ''write'': .github/workflows/ci.yml:18'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/ci.yml:19'
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/ci.yml:25'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:69'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:105'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/test.yml:49'
@@ -177,15 +173,19 @@ checks:
       - 'Info: found token with ''none'' permissions: .github/workflows/release.yml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/test-vendor.yml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/test.yml:1'
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
   - name: Pinned-Dependencies
     score: 6
     reason: dependency not pinned by hash detected -- score normalized to 6
     details:
+      - 'Warn: npmCommand not pinned by hash: .github/workflows/release.yml:275'
       - 'Warn: npmCommand not pinned by hash: .github/workflows/release.yml:153'
       - 'Warn: npmCommand not pinned by hash: .github/workflows/release.yml:204'
-      - 'Warn: npmCommand not pinned by hash: .github/workflows/release.yml:275'
-      - 'Warn: npmCommand not pinned by hash: .github/workflows/test.yml:238'
       - 'Warn: npmCommand not pinned by hash: .github/workflows/test.yml:200'
+      - 'Warn: npmCommand not pinned by hash: .github/workflows/test.yml:238'
       - 'Warn: npmCommand not pinned by hash: .github/workflows/test.yml:380'
       - 'Warn: npmCommand not pinned by hash: .github/workflows/test.yml:400'
       - 'Warn: npmCommand not pinned by hash: .github/workflows/test.yml:402'
@@ -200,41 +200,41 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''main'''
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact 1.105.0 not signed: https://api.github.com/repos/sass/dart-sass/releases/393978568'
+      - 'Warn: release artifact 1.104.1 not signed: https://api.github.com/repos/sass/dart-sass/releases/387496122'
+      - 'Warn: release artifact 1.104.0 not signed: https://api.github.com/repos/sass/dart-sass/releases/382388828'
+      - 'Warn: release artifact 1.103.1 not signed: https://api.github.com/repos/sass/dart-sass/releases/374068861'
+      - 'Warn: release artifact 1.103.0 not signed: https://api.github.com/repos/sass/dart-sass/releases/373422386'
+      - 'Warn: release artifact 1.105.0 does not have provenance: https://api.github.com/repos/sass/dart-sass/releases/393978568'
+      - 'Warn: release artifact 1.104.1 does not have provenance: https://api.github.com/repos/sass/dart-sass/releases/387496122'
+      - 'Warn: release artifact 1.104.0 does not have provenance: https://api.github.com/repos/sass/dart-sass/releases/382388828'
+      - 'Warn: release artifact 1.103.1 does not have provenance: https://api.github.com/repos/sass/dart-sass/releases/374068861'
+      - 'Warn: release artifact 1.103.0 does not have provenance: https://api.github.com/repos/sass/dart-sass/releases/373422386'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''main'''
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact 1.104.1 not signed: https://api.github.com/repos/sass/dart-sass/releases/387496122'
-      - 'Warn: release artifact 1.104.0 not signed: https://api.github.com/repos/sass/dart-sass/releases/382388828'
-      - 'Warn: release artifact 1.103.1 not signed: https://api.github.com/repos/sass/dart-sass/releases/374068861'
-      - 'Warn: release artifact 1.103.0 not signed: https://api.github.com/repos/sass/dart-sass/releases/373422386'
-      - 'Warn: release artifact 1.102.0 not signed: https://api.github.com/repos/sass/dart-sass/releases/359607129'
-      - 'Warn: release artifact 1.104.1 does not have provenance: https://api.github.com/repos/sass/dart-sass/releases/387496122'
-      - 'Warn: release artifact 1.104.0 does not have provenance: https://api.github.com/repos/sass/dart-sass/releases/382388828'
-      - 'Warn: release artifact 1.103.1 does not have provenance: https://api.github.com/repos/sass/dart-sass/releases/374068861'
-      - 'Warn: release artifact 1.103.0 does not have provenance: https://api.github.com/repos/sass/dart-sass/releases/373422386'
-      - 'Warn: release artifact 1.102.0 does not have provenance: https://api.github.com/repos/sass/dart-sass/releases/359607129'
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits

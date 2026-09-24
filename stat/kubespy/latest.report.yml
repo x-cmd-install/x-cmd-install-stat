@@ -2,12 +2,12 @@ about:
   description: "Tools for observing Kubernetes resources in real time, powered by Pulumi."
   license: Apache-2.0
   homepage: https://pulumi.com/
-  head: b83a882
+  head: dccc53b
   archived: false
   latestVersion: "v0.6.3"
   latestRelease: "v0.6.3"
   latestPrerelease: ""
-  collectedAt: 2026-09-23T06:18:50Z
+  collectedAt: 2026-09-24T05:49:31Z
 timeline:
   created: 2018-09-17
   lastCommit: 2026-09-23
@@ -20,7 +20,7 @@ popularity:
   fork: 93
   release: 8
   contributor: 38
-  pullRequest: 208
+  pullRequest: 212
   issue: 54
 language:
   Go: 38965
@@ -28,63 +28,63 @@ language:
 totalBytes: 39226
 recent:
   last30d:
-    since: 2026-08-24
+    since: 2026-08-25
     release: 0
-    mergedPR: 20
+    mergedPR: 24
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 22
+    commit: 26
   last60d:
-    since: 2026-07-25
+    since: 2026-07-26
     release: 0
-    mergedPR: 20
+    mergedPR: 24
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 22
+    commit: 26
   last90d:
-    since: 2026-06-25
+    since: 2026-06-26
     release: 0
-    mergedPR: 20
+    mergedPR: 24
     openPR: 0
     closedIssue: 1
     openIssue: 0
-    commit: 22
+    commit: 26
   last180d:
-    since: 2026-03-27
+    since: 2026-03-28
     release: 0
-    mergedPR: 22
+    mergedPR: 26
     openPR: 0
     closedIssue: 1
     openIssue: 0
-    commit: 22
+    commit: 26
   last360d:
-    since: 2025-09-28
+    since: 2025-09-29
     release: 0
-    mergedPR: 76
+    mergedPR: 80
     openPR: 0
     closedIssue: 3
     openIssue: 0
-    commit: 76
+    commit: 80
   last720d:
-    since: 2024-10-03
+    since: 2024-10-04
     release: 0
-    mergedPR: 149
+    mergedPR: 153
     openPR: 1
     closedIssue: 5
     openIssue: 4
-    commit: 149
+    commit: 153
 total:
   release: 8
-  mergedPR: 197
+  mergedPR: 201
   openPR: 1
   closedIssue: 41
   openIssue: 13
-  commit: 226
+  commit: 230
 ---
 path: /home/runner/.x-repo/github.com/pulumi/kubespy
-collectedAt: 2026-09-23T06:18:51Z
+collectedAt: 2026-09-24T05:49:35Z
 loc:
   Go:
     code: 1134
@@ -122,22 +122,26 @@ total:
   blanks: 295
   files: 30
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/pulumi/kubespy
-  commit: 8723eb50fff9658fb361cf671f759644b3688af4
+  commit: b83a88285fd02e123f83dcb23a3a4b2b33fc0cd4
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.6
 checks:
+  - name: Code-Review
+    score: -1
+    reason: Found no human activity in the last 30 changesets
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Code-Review
-    score: -1
-    reason: Found no human activity in the last 30 changesets
+  - name: Maintained
+    score: 10
+    reason: 22 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -149,10 +153,6 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Warn: topLevel permissions set to ''write-all'': .github/workflows/release.yml:1'
-  - name: Maintained
-    score: 10
-    reason: 15 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Pinned-Dependencies
     score: 2
     reason: dependency not pinned by hash detected -- score normalized to 2
@@ -174,6 +174,11 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: License
     score: 10
     reason: license file detected
@@ -194,16 +199,6 @@ checks:
       - 'Warn: release artifact v0.6.1 does not have provenance: https://api.github.com/repos/pulumi/kubespy/releases/76445086'
       - 'Warn: release artifact v0.6.0 does not have provenance: https://api.github.com/repos/pulumi/kubespy/releases/32379474'
       - 'Warn: release artifact v0.5.1 does not have provenance: https://api.github.com/repos/pulumi/kubespy/releases/23943454'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -212,10 +207,15 @@ checks:
       - 'Info: Found linked content: github.com/pulumi/.github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/pulumi/.github/SECURITY.md:1'
       - 'Info: Found text in security policy: github.com/pulumi/.github/SECURITY.md:1'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---
-{"id":150438382,"author":{"login":"pulumi-bot","id":30351955,"node_id":"MDQ6VXNlcjMwMzUxOTU1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCOQUXs4I94Hu","tag_name":"v0.6.3","target_commitish":"master","name":"v0.6.3","draft":false,"immutable":false,"prerelease":false,"created_at":"2024-04-09T16:43:38Z","updated_at":"2024-04-09T16:56:04Z","published_at":"2024-04-09T16:56:04Z","assets":[{"id":161171557,"node_id":"RA_kwDOCOQUXs4Jm0hl","name":"checksums.txt","label":"","uploader":{"login":"pulumi-bot","id":30351955,"node_id":"MDQ6VXNlcjMwMzUxOTU1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":606,"digest":null,"download_count":400,"created_at":"2024-04-09T16:56:03Z","updated_at":"2024-04-09T16:56:03Z"},{"id":161171551,"node_id":"RA_kwDOCOQUXs4Jm0hf","name":"kubespy-v0.6.3-darwin-amd64.tar.gz","label":"","uploader":{"login":"pulumi-bot","id":30351955,"node_id":"MDQ6VXNlcjMwMzUxOTU1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":27475546,"digest":null,"download_count":326,"created_at":"2024-04-09T16:56:01Z","updated_at":"2024-04-09T16:56:02Z"},{"id":161171552,"node_id":"RA_kwDOCOQUXs4Jm0hg","name":"kubespy-v0.6.3-darwin-arm64.tar.gz","label":"","uploader":{"login":"pulumi-bot","id":30351955,"node_id":"MDQ6VXNlcjMwMzUxOTU1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":26382516,"digest":null,"download_count":237,"created_at":"2024-04-09T16:56:01Z","updated_at":"2024-04-09T16:56:02Z"},{"id":161171556,"node_id":"RA_kwDOCOQUXs4Jm0hk","name":"kubespy-v0.6.3-linux-amd64.tar.gz","label":"","uploader":{"login":"pulumi-bot","id":30351955,"node_id":"MDQ6VXNlcjMwMzUxOTU1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":27778615,"digest":null,"download_count":2103,"created_at":"2024-04-09T16:56:02Z","updated_at":"2024-04-09T16:56:03Z"},{"id":161171555,"node_id":"RA_kwDOCOQUXs4Jm0hj","name":"kubespy-v0.6.3-linux-arm64.tar.gz","label":"","uploader":{"login":"pulumi-bot","id":30351955,"node_id":"MDQ6VXNlcjMwMzUxOTU1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":25796455,"digest":null,"download_count":360,"created_at":"2024-04-09T16:56:02Z","updated_at":"2024-04-09T16:56:03Z"},{"id":161171554,"node_id":"RA_kwDOCOQUXs4Jm0hi","name":"kubespy-v0.6.3-windows-amd64.tar.gz","label":"","uploader":{"login":"pulumi-bot","id":30351955,"node_id":"MDQ6VXNlcjMwMzUxOTU1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":28064130,"digest":null,"download_count":191,"created_at":"2024-04-09T16:56:01Z","updated_at":"2024-04-09T16:56:02Z"},{"id":161171553,"node_id":"RA_kwDOCOQUXs4Jm0hh","name":"kubespy-v0.6.3-windows-arm64.tar.gz","label":"","uploader":{"login":"pulumi-bot","id":30351955,"node_id":"MDQ6VXNlcjMwMzUxOTU1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":26084611,"digest":null,"download_count":84,"created_at":"2024-04-09T16:56:01Z","updated_at":"2024-04-09T16:56:02Z"}],"body":"\n"}
+{"id":150438382,"author":{"login":"pulumi-bot","id":30351955,"node_id":"MDQ6VXNlcjMwMzUxOTU1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCOQUXs4I94Hu","tag_name":"v0.6.3","target_commitish":"master","name":"v0.6.3","draft":false,"immutable":false,"prerelease":false,"created_at":"2024-04-09T16:43:38Z","updated_at":"2024-04-09T16:56:04Z","published_at":"2024-04-09T16:56:04Z","assets":[{"id":161171557,"node_id":"RA_kwDOCOQUXs4Jm0hl","name":"checksums.txt","label":"","uploader":{"login":"pulumi-bot","id":30351955,"node_id":"MDQ6VXNlcjMwMzUxOTU1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":606,"digest":null,"download_count":402,"created_at":"2024-04-09T16:56:03Z","updated_at":"2024-04-09T16:56:03Z"},{"id":161171551,"node_id":"RA_kwDOCOQUXs4Jm0hf","name":"kubespy-v0.6.3-darwin-amd64.tar.gz","label":"","uploader":{"login":"pulumi-bot","id":30351955,"node_id":"MDQ6VXNlcjMwMzUxOTU1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":27475546,"digest":null,"download_count":329,"created_at":"2024-04-09T16:56:01Z","updated_at":"2024-04-09T16:56:02Z"},{"id":161171552,"node_id":"RA_kwDOCOQUXs4Jm0hg","name":"kubespy-v0.6.3-darwin-arm64.tar.gz","label":"","uploader":{"login":"pulumi-bot","id":30351955,"node_id":"MDQ6VXNlcjMwMzUxOTU1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":26382516,"digest":null,"download_count":238,"created_at":"2024-04-09T16:56:01Z","updated_at":"2024-04-09T16:56:02Z"},{"id":161171556,"node_id":"RA_kwDOCOQUXs4Jm0hk","name":"kubespy-v0.6.3-linux-amd64.tar.gz","label":"","uploader":{"login":"pulumi-bot","id":30351955,"node_id":"MDQ6VXNlcjMwMzUxOTU1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":27778615,"digest":null,"download_count":2108,"created_at":"2024-04-09T16:56:02Z","updated_at":"2024-04-09T16:56:03Z"},{"id":161171555,"node_id":"RA_kwDOCOQUXs4Jm0hj","name":"kubespy-v0.6.3-linux-arm64.tar.gz","label":"","uploader":{"login":"pulumi-bot","id":30351955,"node_id":"MDQ6VXNlcjMwMzUxOTU1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":25796455,"digest":null,"download_count":361,"created_at":"2024-04-09T16:56:02Z","updated_at":"2024-04-09T16:56:03Z"},{"id":161171554,"node_id":"RA_kwDOCOQUXs4Jm0hi","name":"kubespy-v0.6.3-windows-amd64.tar.gz","label":"","uploader":{"login":"pulumi-bot","id":30351955,"node_id":"MDQ6VXNlcjMwMzUxOTU1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":28064130,"digest":null,"download_count":191,"created_at":"2024-04-09T16:56:01Z","updated_at":"2024-04-09T16:56:02Z"},{"id":161171553,"node_id":"RA_kwDOCOQUXs4Jm0hh","name":"kubespy-v0.6.3-windows-arm64.tar.gz","label":"","uploader":{"login":"pulumi-bot","id":30351955,"node_id":"MDQ6VXNlcjMwMzUxOTU1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":26084611,"digest":null,"download_count":84,"created_at":"2024-04-09T16:56:01Z","updated_at":"2024-04-09T16:56:02Z"}],"body":"\n"}

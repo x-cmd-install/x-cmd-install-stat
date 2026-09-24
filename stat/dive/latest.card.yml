@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.13.1"
   latestRelease: "v0.13.1"
   latestPrerelease: "v0.9.0"
-  collectedAt: 2026-09-23T05:49:55Z
+  collectedAt: 2026-09-24T05:29:33Z
 timeline:
   created: 2018-05-13
   lastCommit: 2025-05-16
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2025-03-29
   lastPrerelease: 2019-11-05
 popularity:
-  star: 54595
+  star: 54599
   watcher: 371
-  fork: 2002
+  fork: 2003
   release: 28
   contributor: 78
   pullRequest: 326
-  issue: 376
+  issue: 377
 language:
   Go: 298925
   Makefile: 1411
@@ -29,7 +29,7 @@ language:
 totalBytes: 300807
 recent:
   last30d:
-    since: 2026-08-24
+    since: 2026-08-25
     release: 0
     mergedPR: 0
     openPR: 2
@@ -37,55 +37,55 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-25
+    since: 2026-07-26
     release: 0
     mergedPR: 0
     openPR: 4
     closedIssue: 0
-    openIssue: 1
+    openIssue: 2
     commit: 0
   last90d:
-    since: 2026-06-25
+    since: 2026-06-26
     release: 0
     mergedPR: 0
     openPR: 6
     closedIssue: 0
-    openIssue: 1
+    openIssue: 2
     commit: 0
   last180d:
-    since: 2026-03-27
+    since: 2026-03-28
     release: 0
     mergedPR: 0
     openPR: 13
     closedIssue: 0
-    openIssue: 2
+    openIssue: 3
     commit: 0
   last360d:
-    since: 2025-09-28
+    since: 2025-09-29
     release: 0
     mergedPR: 0
-    openPR: 35
+    openPR: 33
     closedIssue: 2
     openIssue: 12
     commit: 0
   last720d:
-    since: 2024-10-03
+    since: 2024-10-04
     release: 2
     mergedPR: 21
     openPR: 42
     closedIssue: 14
-    openIssue: 30
+    openIssue: 31
     commit: 25
 total:
   release: 28
   mergedPR: 164
   openPR: 44
   closedIssue: 206
-  openIssue: 170
+  openIssue: 171
   commit: 508
 ---
 path: /home/runner/.x-repo/github.com/wagoodman/dive
-collectedAt: 2026-09-23T05:49:57Z
+collectedAt: 2026-09-24T05:29:34Z
 loc:
   Go:
     code: 9142
@@ -123,7 +123,7 @@ total:
   blanks: 1941
   files: 140
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/wagoodman/dive
   commit: d6c691947f8fda635c952a17ee3b7555379d58f0
@@ -136,15 +136,23 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Code-Review
-    score: 6
-    reason: Found 12/19 approved changesets -- score normalized to 6
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 6
+    reason: Found 12/19 approved changesets -- score normalized to 6
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -153,14 +161,6 @@ checks:
       - 'Warn: jobLevel ''packages'' permission set to ''write'': .github/workflows/release.yaml:85'
       - 'Warn: no topLevel permission defined: .github/workflows/release.yaml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/validations.yaml:1'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -173,17 +173,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 1
     reason: dependency not pinned by hash detected -- score normalized to 1
@@ -197,6 +197,10 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yaml:87: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/release.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yaml:109: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/release.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yaml:112: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/release.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:108: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:111: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:124: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:126: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:15: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:35: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:47: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
@@ -206,13 +210,9 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:76: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:86: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:89: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:108: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:111: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:124: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:126: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
-      - 'Warn: containerImage not pinned by hash: .data/Dockerfile.example:1: pin your Docker image by updating busybox:latest to busybox:latest@sha256:dc2d74b28e4cf8984fa52af1f39bc7c3d9c73760b41a74d629f5d11b1ab28616'
-      - 'Warn: containerImage not pinned by hash: .data/Dockerfile.test-image:1: pin your Docker image by updating busybox:latest to busybox:latest@sha256:dc2d74b28e4cf8984fa52af1f39bc7c3d9c73760b41a74d629f5d11b1ab28616'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating alpine:3.21 to alpine:3.21@sha256:48b0309ca019d89d40f670aa1bc06e426dc0931948452e8491e3d65087abc07d'
+      - 'Warn: containerImage not pinned by hash: .data/Dockerfile.example:1: pin your Docker image by updating busybox:latest to busybox:latest@sha256:fd7dc98638c8e305f4dc34e979f1c0fdfdcaeb0fbf8fcff77ae834b6da3d7e6e'
+      - 'Warn: containerImage not pinned by hash: .data/Dockerfile.test-image:1: pin your Docker image by updating busybox:latest to busybox:latest@sha256:fd7dc98638c8e305f4dc34e979f1c0fdfdcaeb0fbf8fcff77ae834b6da3d7e6e'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating alpine:3.21 to alpine:3.21@sha256:ce64758a109eb420d874a118f87920e625e12d3634e03b4a5573fd9f6e5d3507'
       - 'Info:   0 out of  13 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   2 out of  11 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 containerImage dependencies pinned'

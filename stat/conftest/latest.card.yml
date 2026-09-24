@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.70.1"
   latestRelease: "v0.70.1"
   latestPrerelease: "v0.5.0"
-  collectedAt: 2026-09-23T06:24:27Z
+  collectedAt: 2026-09-24T05:41:00Z
 timeline:
   created: 2019-03-28
   lastCommit: 2026-09-19
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-19
   lastPrerelease: 2019-05-04
 popularity:
-  star: 3265
+  star: 3266
   watcher: 23
   fork: 362
   release: 100
@@ -33,23 +33,23 @@ language:
 totalBytes: 408712
 recent:
   last30d:
-    since: 2026-08-24
+    since: 2026-08-25
     release: 2
-    mergedPR: 12
-    openPR: 8
+    mergedPR: 10
+    openPR: 7
     closedIssue: 0
     openIssue: 0
     commit: 15
   last60d:
-    since: 2026-07-25
+    since: 2026-07-26
     release: 3
-    mergedPR: 30
+    mergedPR: 29
     openPR: 8
     closedIssue: 2
     openIssue: 1
     commit: 38
   last90d:
-    since: 2026-06-25
+    since: 2026-06-26
     release: 3
     mergedPR: 43
     openPR: 8
@@ -57,15 +57,15 @@ recent:
     openIssue: 1
     commit: 50
   last180d:
-    since: 2026-03-27
+    since: 2026-03-28
     release: 6
-    mergedPR: 73
+    mergedPR: 72
     openPR: 10
     closedIssue: 6
     openIssue: 1
     commit: 76
   last360d:
-    since: 2025-09-28
+    since: 2025-09-29
     release: 12
     mergedPR: 146
     openPR: 12
@@ -73,7 +73,7 @@ recent:
     openIssue: 3
     commit: 147
   last720d:
-    since: 2024-10-03
+    since: 2024-10-04
     release: 21
     mergedPR: 257
     openPR: 14
@@ -89,7 +89,7 @@ total:
   commit: 1295
 ---
 path: /home/runner/.x-repo/github.com/open-policy-agent/conftest
-collectedAt: 2026-09-23T06:24:29Z
+collectedAt: 2026-09-24T05:41:01Z
 loc:
   Go:
     code: 11324
@@ -197,18 +197,22 @@ total:
   blanks: 2756
   files: 293
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/open-policy-agent/conftest
-  commit: 634260cf7073bfd636ba107dbfb1e64b4c06a8e0
+  commit: 636cfe39490de851bcc6956f8a7fdc3892020971
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
-score: 6.9
+score: 7
 checks:
-  - name: Maintained
+  - name: Code-Review
     score: 10
-    reason: 30 commit(s) and 5 issue activity found in the last 90 days -- score normalized to 10
+    reason: all changesets reviewed
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Security-Policy
     score: 9
@@ -218,25 +222,21 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Token-Permissions
-    score: 9
-    reason: detected GitHub workflow tokens with excessive permissions
+    score: 10
+    reason: GitHub workflow tokens follow principle of least privilege
     details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:67'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:15'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:32'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:81'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:22'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:41'
       - 'Info: found token with ''none'' permissions: .github/workflows/post_merge.yaml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/pr.yaml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/release.yaml:1'
+      - 'Info: found token with ''none'' permissions: .github/workflows/release.yaml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -274,21 +274,21 @@ checks:
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
+      - 'Warn: release artifact v0.70.1 not signed: https://api.github.com/repos/open-policy-agent/conftest/releases/392155998'
       - 'Warn: release artifact v0.70.0 not signed: https://api.github.com/repos/open-policy-agent/conftest/releases/387673485'
       - 'Warn: release artifact v0.69.0 not signed: https://api.github.com/repos/open-policy-agent/conftest/releases/364136651'
       - 'Warn: release artifact v0.68.2 not signed: https://api.github.com/repos/open-policy-agent/conftest/releases/309170097'
       - 'Warn: release artifact v0.68.1 not signed: https://api.github.com/repos/open-policy-agent/conftest/releases/309160746'
-      - 'Warn: release artifact v0.68.0 not signed: https://api.github.com/repos/open-policy-agent/conftest/releases/304476070'
+      - 'Warn: release artifact v0.70.1 does not have provenance: https://api.github.com/repos/open-policy-agent/conftest/releases/392155998'
       - 'Warn: release artifact v0.70.0 does not have provenance: https://api.github.com/repos/open-policy-agent/conftest/releases/387673485'
       - 'Warn: release artifact v0.69.0 does not have provenance: https://api.github.com/repos/open-policy-agent/conftest/releases/364136651'
       - 'Warn: release artifact v0.68.2 does not have provenance: https://api.github.com/repos/open-policy-agent/conftest/releases/309170097'
       - 'Warn: release artifact v0.68.1 does not have provenance: https://api.github.com/repos/open-policy-agent/conftest/releases/309160746'
-      - 'Warn: release artifact v0.68.0 does not have provenance: https://api.github.com/repos/open-policy-agent/conftest/releases/304476070'
   - name: Pinned-Dependencies
     score: 5
     reason: dependency not pinned by hash detected -- score normalized to 5
     details:
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating golang:1.27.1-alpine to golang:1.27.1-alpine@sha256:cf6fca6641884b8433441b2b0652976f975e1d0fdd26d177eaaf8596087f3125'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating golang:1.27.1-alpine to golang:1.27.1-alpine@sha256:8a5910f31396cd4d89662f56c68b3ae31d374308270a1c3bd96672ee5ed43414'
       - 'Warn: containerImage not pinned by hash: Dockerfile:16'
       - 'Warn: containerImage not pinned by hash: Dockerfile:20'
       - 'Warn: containerImage not pinned by hash: Dockerfile:24'
@@ -298,20 +298,20 @@ checks:
       - 'Warn: npmCommand not pinned by hash: Dockerfile:28'
       - 'Warn: goCommand not pinned by hash: Dockerfile:49'
       - 'Warn: pipCommand not pinned by hash: examples/docker/Dockerfile:11'
-      - 'Info:  13 out of  13 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:  13 out of  13 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   1 pipCommand dependencies pinned'
+      - 'Info:  16 out of  16 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:  14 out of  14 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   7 containerImage dependencies pinned'
       - 'Info:   0 out of   1 npmCommand dependencies pinned'
       - 'Info:   0 out of   1 goCommand dependencies pinned'
-  - name: SAST
-    score: 5
-    reason: SAST tool is not run on all commits -- score normalized to 5
-    details:
-      - 'Warn: 17 commits out of 30 are checked with a SAST tool'
+      - 'Info:   0 out of   1 pipCommand dependencies pinned'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/post_merge.yaml:10'
+  - name: SAST
+    score: 5
+    reason: SAST tool is not run on all commits -- score normalized to 5
+    details:
+      - 'Warn: 17 commits out of 30 are checked with a SAST tool'
 ---

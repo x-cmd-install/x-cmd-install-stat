@@ -7,7 +7,7 @@ about:
   latestVersion: "5.8.1"
   latestRelease: "5.8.1"
   latestPrerelease: ""
-  collectedAt: 2026-09-23T05:10:37Z
+  collectedAt: 2026-09-24T05:01:33Z
 timeline:
   created: 2016-08-08
   lastCommit: 2024-01-03
@@ -33,7 +33,7 @@ language:
 totalBytes: 454350
 recent:
   last30d:
-    since: 2026-08-24
+    since: 2026-08-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -41,7 +41,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-25
+    since: 2026-07-26
     release: 0
     mergedPR: 0
     openPR: 0
@@ -49,7 +49,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-25
+    since: 2026-06-26
     release: 0
     mergedPR: 0
     openPR: 0
@@ -57,7 +57,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-27
+    since: 2026-03-28
     release: 0
     mergedPR: 0
     openPR: 0
@@ -65,7 +65,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-28
+    since: 2025-09-29
     release: 0
     mergedPR: 0
     openPR: 0
@@ -73,7 +73,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-03
+    since: 2024-10-04
     release: 0
     mergedPR: 0
     openPR: 0
@@ -89,7 +89,7 @@ total:
   commit: 1139
 ---
 path: /home/runner/.x-repo/github.com/vercel/pkg
-collectedAt: 2026-09-23T05:10:42Z
+collectedAt: 2026-09-24T05:01:37Z
 loc:
   JavaScript:
     code: 16952
@@ -152,7 +152,7 @@ total:
   blanks: 4194
   files: 1373
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/vercel/pkg
   commit: 9066ceeb391d9c7ba6aba650109c2fa3f8e088eb
@@ -161,15 +161,6 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.8
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Maintained
     score: 0
     reason: project is archived
@@ -179,6 +170,15 @@ checks:
     score: 8
     reason: Found 24/27 approved changesets -- score normalized to 8
     details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -186,6 +186,14 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/close-stale.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -195,25 +203,17 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/vercel/pkg/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/close-stale.yml:10: update your workflow using https://app.stepsecurity.io/secureworkflow/vercel/pkg/close-stale.yml/main?enable=pin'
       - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: CII-Best-Practices
+  - name: Fuzzing
     score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: -1
     reason: no releases found

@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.32.0"
   latestRelease: "v0.32.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-23T06:54:18Z
+  collectedAt: 2026-09-24T06:08:20Z
 timeline:
   created: 2021-07-19
   lastCommit: 2026-09-21
@@ -30,23 +30,23 @@ language:
 totalBytes: 448362
 recent:
   last30d:
-    since: 2026-08-24
+    since: 2026-08-25
     release: 0
     mergedPR: 18
     openPR: 1
-    closedIssue: 1
+    closedIssue: 0
     openIssue: 0
     commit: 18
   last60d:
-    since: 2026-07-25
+    since: 2026-07-26
     release: 2
-    mergedPR: 40
+    mergedPR: 38
     openPR: 2
     closedIssue: 1
     openIssue: 0
     commit: 39
   last90d:
-    since: 2026-06-25
+    since: 2026-06-26
     release: 2
     mergedPR: 53
     openPR: 2
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 53
   last180d:
-    since: 2026-03-27
+    since: 2026-03-28
     release: 3
     mergedPR: 89
     openPR: 3
@@ -62,7 +62,7 @@ recent:
     openIssue: 1
     commit: 90
   last360d:
-    since: 2025-09-28
+    since: 2025-09-29
     release: 7
     mergedPR: 151
     openPR: 3
@@ -70,7 +70,7 @@ recent:
     openIssue: 3
     commit: 154
   last720d:
-    since: 2024-10-03
+    since: 2024-10-04
     release: 12
     mergedPR: 176
     openPR: 3
@@ -86,7 +86,7 @@ total:
   commit: 601
 ---
 path: /home/runner/.x-repo/github.com/tconbeer/sqlfmt
-collectedAt: 2026-09-23T06:54:19Z
+collectedAt: 2026-09-24T06:08:22Z
 loc:
   Python:
     code: 11355
@@ -124,10 +124,10 @@ total:
   blanks: 2613
   files: 218
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/tconbeer/sqlfmt
-  commit: f0f5d37747a0a9fe3c579eb86fe3842155afb252
+  commit: b05e2d0f883f217db06ef525015c94eb673e0da7
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -135,7 +135,7 @@ score: 4.2
 checks:
   - name: Code-Review
     score: 0
-    reason: Found 2/27 approved changesets -- score normalized to 0
+    reason: Found 2/29 approved changesets -- score normalized to 0
     details: null
   - name: Maintained
     score: 10
@@ -153,8 +153,8 @@ checks:
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
-      - 'Warn: jobLevel ''deployments'' permission set to ''write'': .github/workflows/publish.yml:17'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/publish.yml:16'
+      - 'Warn: jobLevel ''deployments'' permission set to ''write'': .github/workflows/publish.yml:17'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:14'
       - 'Warn: no topLevel permission defined: .github/workflows/primer.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/publish.yml:1'
@@ -165,14 +165,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -201,12 +193,20 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:37: update your workflow using https://app.stepsecurity.io/secureworkflow/tconbeer/sqlfmt/test.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:43: update your workflow using https://app.stepsecurity.io/secureworkflow/tconbeer/sqlfmt/test.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:48: update your workflow using https://app.stepsecurity.io/secureworkflow/tconbeer/sqlfmt/test.yml/main?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating python:3-slim to python:3-slim@sha256:cad9a2c871761c413caa6fdd6441c783451e740a48aaeba60ae62a8b53525ef6'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating python:3-slim to python:3-slim@sha256:caaf356f40667c496d405780745b9ac25771c189a51dfcc42430d531ea09f8a2'
       - 'Warn: pipCommand not pinned by hash: Dockerfile:4'
       - 'Info:   0 out of  10 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of  14 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   0 out of   1 pipCommand dependencies pinned'
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -218,10 +218,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -236,6 +232,10 @@ checks:
       - 'Warn: release artifact v0.30.0 does not have provenance: https://api.github.com/repos/tconbeer/sqlfmt/releases/317361184'
       - 'Warn: release artifact v0.29.0 does not have provenance: https://api.github.com/repos/tconbeer/sqlfmt/releases/276098529'
       - 'Warn: release artifact v0.28.2 does not have provenance: https://api.github.com/repos/tconbeer/sqlfmt/releases/257202193'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Packaging
     score: 10
     reason: packaging workflow detected

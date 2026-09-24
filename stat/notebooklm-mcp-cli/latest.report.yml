@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.11.7"
   latestRelease: "v0.11.7"
   latestPrerelease: ""
-  collectedAt: 2026-09-23T05:24:20Z
+  collectedAt: 2026-09-24T05:10:12Z
 timeline:
   created: 2025-12-23
   lastCommit: 2026-09-22
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-09-22
   lastPrerelease: 
 popularity:
-  star: 6144
+  star: 6152
   watcher: 43
-  fork: 932
+  fork: 933
   release: 150
   contributor: 58
   pullRequest: 165
@@ -27,7 +27,7 @@ language:
 totalBytes: 2274106
 recent:
   last30d:
-    since: 2026-08-24
+    since: 2026-08-25
     release: 10
     mergedPR: 0
     openPR: 0
@@ -35,15 +35,15 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-25
-    release: 22
+    since: 2026-07-26
+    release: 20
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-25
+    since: 2026-06-26
     release: 35
     mergedPR: 0
     openPR: 0
@@ -51,15 +51,15 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-27
-    release: 77
+    since: 2026-03-28
+    release: 76
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-28
+    since: 2025-09-29
     release: 100
     mergedPR: 0
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-03
+    since: 2024-10-04
     release: 100
     mergedPR: 0
     openPR: 0
@@ -83,7 +83,7 @@ total:
   commit: 811
 ---
 path: /home/runner/.x-repo/github.com/jacob-bd/notebooklm-mcp-cli
-collectedAt: 2026-09-23T05:24:22Z
+collectedAt: 2026-09-24T05:10:14Z
 loc:
   Python:
     code: 50067
@@ -113,4 +113,4 @@ total:
 ---
 
 ---
-{"id":394053624,"author":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQtfMFM4XfMf4","tag_name":"v0.11.7","target_commitish":"main","name":"v0.11.7","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-22T17:01:48Z","updated_at":"2026-09-22T19:32:06Z","published_at":"2026-09-22T19:30:39Z","assets":[{"id":582095842,"node_id":"RA_kwDOQtfMFM4ishPi","name":"notebooklm-mcp-0.11.7.mcpb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":2547,"digest":"sha256:4f59b79b30c6ed2afca3d08cbbb532a13fa2e3682acd01239979bbbf22a6114d","download_count":14,"created_at":"2026-09-22T19:32:06Z","updated_at":"2026-09-22T19:32:06Z"}],"body":"Patch release fixing verb commands that called Typer handlers directly and leaked unset option defaults.\n\n### Fixed\n- `nlm list artifacts` and `nlm status artifacts` raised `TypeError` because `limit` arrived as a Typer `OptionInfo` instead of a number. `nlm create notebook` always printed JSON, and `nlm set alias` skipped type detection, for the same reason. The URL and text add verbs now pass their unused defaults explicitly too (#333).\n\n### Verification\n- `nlm list artifacts` and `nlm status artifacts` reach the status service without a `TypeError`. `nlm studio status` was already fine.\n- Full suite, excluding the e2e marker: 1,624 passed, 38 skipped. Ruff lint and formatting clean.\n\nThanks to **@hkrathore** for the traceback and the call-site diagnosis.","mentions_count":1}
+{"id":394053624,"author":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQtfMFM4XfMf4","tag_name":"v0.11.7","target_commitish":"main","name":"v0.11.7","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-22T17:01:48Z","updated_at":"2026-09-22T19:32:06Z","published_at":"2026-09-22T19:30:39Z","assets":[{"id":582095842,"node_id":"RA_kwDOQtfMFM4ishPi","name":"notebooklm-mcp-0.11.7.mcpb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":2547,"digest":"sha256:4f59b79b30c6ed2afca3d08cbbb532a13fa2e3682acd01239979bbbf22a6114d","download_count":48,"created_at":"2026-09-22T19:32:06Z","updated_at":"2026-09-22T19:32:06Z"}],"body":"Patch release fixing verb commands that called Typer handlers directly and leaked unset option defaults.\n\n### Fixed\n- `nlm list artifacts` and `nlm status artifacts` raised `TypeError` because `limit` arrived as a Typer `OptionInfo` instead of a number. `nlm create notebook` always printed JSON, and `nlm set alias` skipped type detection, for the same reason. The URL and text add verbs now pass their unused defaults explicitly too (#333).\n\n### Verification\n- `nlm list artifacts` and `nlm status artifacts` reach the status service without a `TypeError`. `nlm studio status` was already fine.\n- Full suite, excluding the e2e marker: 1,624 passed, 38 skipped. Ruff lint and formatting clean.\n\nThanks to **@hkrathore** for the traceback and the call-site diagnosis.","mentions_count":1}

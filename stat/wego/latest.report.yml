@@ -7,7 +7,7 @@ about:
   latestVersion: "2.4"
   latestRelease: "2.4"
   latestPrerelease: ""
-  collectedAt: 2026-09-23T04:54:54Z
+  collectedAt: 2026-09-24T04:50:26Z
 timeline:
   created: 2014-11-21
   lastCommit: 2026-04-12
@@ -27,7 +27,7 @@ language:
 totalBytes: 124337
 recent:
   last30d:
-    since: 2026-08-24
+    since: 2026-08-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-25
+    since: 2026-07-26
     release: 0
     mergedPR: 0
     openPR: 2
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-25
+    since: 2026-06-26
     release: 0
     mergedPR: 0
     openPR: 3
@@ -51,7 +51,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-03-27
+    since: 2026-03-28
     release: 1
     mergedPR: 13
     openPR: 4
@@ -59,7 +59,7 @@ recent:
     openIssue: 2
     commit: 23
   last360d:
-    since: 2025-09-28
+    since: 2025-09-29
     release: 1
     mergedPR: 17
     openPR: 4
@@ -67,7 +67,7 @@ recent:
     openIssue: 4
     commit: 23
   last720d:
-    since: 2024-10-03
+    since: 2024-10-04
     release: 1
     mergedPR: 19
     openPR: 6
@@ -83,7 +83,7 @@ total:
   commit: 193
 ---
 path: /home/runner/.x-repo/github.com/schachmat/wego
-collectedAt: 2026-09-23T04:54:55Z
+collectedAt: 2026-09-24T04:50:27Z
 loc:
   Go:
     code: 3366
@@ -106,7 +106,7 @@ total:
   blanks: 447
   files: 18
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/schachmat/wego
   commit: 1237276becf689dc46ae5dffcb0337eacbd182ac
@@ -115,27 +115,15 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.7
 checks:
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
-  - name: Code-Review
-    score: 5
-    reason: Found 7/14 approved changesets -- score normalized to 5
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -147,6 +135,10 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/golangci-lint.yml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/schachmat/wego/golangci-lint.yml/master?enable=pin'
       - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -156,15 +148,18 @@ checks:
       - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/golangci-lint.yml:12'
       - 'Warn: topLevel ''checks'' permission set to ''write'': .github/workflows/golangci-lint.yml:14'
       - 'Info: no jobLevel write permissions found'
+  - name: Code-Review
+    score: 5
+    reason: Found 7/14 approved changesets -- score normalized to 5
+    details: null
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -179,6 +174,11 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: ISC License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: -1
     reason: no releases found

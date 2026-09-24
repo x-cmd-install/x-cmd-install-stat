@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.3.4"
   latestRelease: "v1.3.4"
   latestPrerelease: ""
-  collectedAt: 2026-09-23T05:08:33Z
+  collectedAt: 2026-09-24T04:48:34Z
 timeline:
   created: 2020-09-15
   lastCommit: 2026-09-13
@@ -27,7 +27,7 @@ language:
 totalBytes: 26344
 recent:
   last30d:
-    since: 2026-08-24
+    since: 2026-08-25
     release: 0
     mergedPR: 0
     openPR: 4
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-25
+    since: 2026-07-26
     release: 0
     mergedPR: 3
     openPR: 4
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 2
   last90d:
-    since: 2026-06-25
+    since: 2026-06-26
     release: 0
     mergedPR: 4
     openPR: 4
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 4
   last180d:
-    since: 2026-03-27
+    since: 2026-03-28
     release: 0
     mergedPR: 10
     openPR: 4
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 10
   last360d:
-    since: 2025-09-28
+    since: 2025-09-29
     release: 0
     mergedPR: 20
     openPR: 4
@@ -67,7 +67,7 @@ recent:
     openIssue: 1
     commit: 23
   last720d:
-    since: 2024-10-03
+    since: 2024-10-04
     release: 1
     mergedPR: 30
     openPR: 4
@@ -83,7 +83,7 @@ total:
   commit: 302
 ---
 path: /home/runner/.x-repo/github.com/wfxr/csview
-collectedAt: 2026-09-23T05:08:35Z
+collectedAt: 2026-09-24T04:48:35Z
 loc:
   Rust:
     code: 734
@@ -131,7 +131,7 @@ total:
   blanks: 337
   files: 21
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/wfxr/csview
   commit: cb2178a62d8532ed8ef390a655111b85db03a040
@@ -157,10 +157,6 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -169,11 +165,14 @@ checks:
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:13'
       - 'Warn: no topLevel permission defined: .github/workflows/CICD.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/CICD.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/wfxr/csview/CICD.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/CICD.yml:43: update your workflow using https://app.stepsecurity.io/secureworkflow/wfxr/csview/CICD.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/CICD.yml:46: update your workflow using https://app.stepsecurity.io/secureworkflow/wfxr/csview/CICD.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/CICD.yml:93: update your workflow using https://app.stepsecurity.io/secureworkflow/wfxr/csview/CICD.yml/master?enable=pin'
@@ -182,6 +181,7 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/CICD.yml:316: update your workflow using https://app.stepsecurity.io/secureworkflow/wfxr/csview/CICD.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/CICD.yml:322: update your workflow using https://app.stepsecurity.io/secureworkflow/wfxr/csview/CICD.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/CICD.yml:336: update your workflow using https://app.stepsecurity.io/secureworkflow/wfxr/csview/CICD.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/CICD.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/wfxr/csview/CICD.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/wfxr/csview/release.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/wfxr/csview/release.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:35: update your workflow using https://app.stepsecurity.io/secureworkflow/wfxr/csview/release.yml/master?enable=pin'
@@ -191,6 +191,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -199,11 +204,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected

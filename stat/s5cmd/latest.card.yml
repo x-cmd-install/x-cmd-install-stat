@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.3.0"
   latestRelease: "v2.3.0"
   latestPrerelease: "v2.1.0-beta.1"
-  collectedAt: 2026-09-23T05:45:52Z
+  collectedAt: 2026-09-24T05:21:16Z
 timeline:
   created: 2016-11-16
   lastCommit: 2025-06-13
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2024-12-16
   lastPrerelease: 2023-03-17
 popularity:
-  star: 4193
+  star: 4196
   watcher: 35
   fork: 347
   release: 19
@@ -30,7 +30,7 @@ language:
 totalBytes: 742639
 recent:
   last30d:
-    since: 2026-08-24
+    since: 2026-08-25
     release: 0
     mergedPR: 0
     openPR: 9
@@ -38,7 +38,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-25
+    since: 2026-07-26
     release: 0
     mergedPR: 0
     openPR: 9
@@ -46,7 +46,7 @@ recent:
     openIssue: 2
     commit: 0
   last90d:
-    since: 2026-06-25
+    since: 2026-06-26
     release: 0
     mergedPR: 0
     openPR: 10
@@ -54,7 +54,7 @@ recent:
     openIssue: 3
     commit: 0
   last180d:
-    since: 2026-03-27
+    since: 2026-03-28
     release: 0
     mergedPR: 0
     openPR: 18
@@ -62,7 +62,7 @@ recent:
     openIssue: 8
     commit: 0
   last360d:
-    since: 2025-09-28
+    since: 2025-09-29
     release: 0
     mergedPR: 0
     openPR: 31
@@ -70,7 +70,7 @@ recent:
     openIssue: 16
     commit: 0
   last720d:
-    since: 2024-10-03
+    since: 2024-10-04
     release: 1
     mergedPR: 6
     openPR: 45
@@ -86,7 +86,7 @@ total:
   commit: 548
 ---
 path: /home/runner/.x-repo/github.com/peak/s5cmd
-collectedAt: 2026-09-23T05:45:57Z
+collectedAt: 2026-09-24T05:21:19Z
 loc:
   Go:
     code: 405232
@@ -169,7 +169,7 @@ total:
   blanks: 53909
   files: 1275
 ---
-date: "2026-09-14"
+date: "2026-09-21"
 repo:
   name: github.com/peak/s5cmd
   commit: 54d6a8a955688f07e5acc40d61f9c42ceac6c33b
@@ -178,17 +178,13 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.8
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Code-Review
+  - name: Dangerous-Workflow
     score: 10
-    reason: all changesets reviewed
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -198,13 +194,17 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/docker.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/goreleaser.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
+  - name: Code-Review
     score: 10
-    reason: no binaries found in the repo
+    reason: all changesets reviewed
     details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Security-Policy
     score: 0
@@ -214,17 +214,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -250,10 +250,6 @@ checks:
       - 'Info:   0 out of  11 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   5 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -273,6 +269,10 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
