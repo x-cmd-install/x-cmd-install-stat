@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.13.2"
   latestRelease: "v1.13.2"
   latestPrerelease: "v1.6.0-beta.1"
-  collectedAt: 2026-09-24T04:43:28Z
+  collectedAt: 2026-09-25T04:57:43Z
 timeline:
   created: 2025-08-05
   lastCommit: 2026-09-23
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-09-23
   lastPrerelease: 2026-07-08
 popularity:
-  star: 70089
-  watcher: 286
-  fork: 4795
+  star: 70254
+  watcher: 285
+  fork: 4804
   release: 50
   contributor: 124
-  pullRequest: 1041
-  issue: 694
+  pullRequest: 1043
+  issue: 696
 language:
   TypeScript: 5035392
   JavaScript: 41764
@@ -31,63 +31,63 @@ language:
 totalBytes: 5086916
 recent:
   last30d:
-    since: 2026-08-25
+    since: 2026-08-26
     release: 5
-    mergedPR: 94
-    openPR: 31
+    mergedPR: 92
+    openPR: 33
     closedIssue: 49
     openIssue: 39
     commit: 105
   last60d:
-    since: 2026-07-26
+    since: 2026-07-27
     release: 9
-    mergedPR: 194
-    openPR: 41
-    closedIssue: 88
+    mergedPR: 185
+    openPR: 43
+    closedIssue: 86
     openIssue: 63
     commit: 195
   last90d:
-    since: 2026-06-26
+    since: 2026-06-27
     release: 12
     mergedPR: 274
-    openPR: 52
-    closedIssue: 132
-    openIssue: 70
+    openPR: 54
+    closedIssue: 131
+    openIssue: 72
     commit: 303
   last180d:
-    since: 2026-03-28
+    since: 2026-03-29
     release: 16
     mergedPR: 366
-    openPR: 82
+    openPR: 84
     closedIssue: 266
-    openIssue: 82
+    openIssue: 84
     commit: 373
   last360d:
-    since: 2025-09-29
-    release: 46
-    mergedPR: 621
-    openPR: 99
-    closedIssue: 565
-    openIssue: 121
+    since: 2025-09-30
+    release: 45
+    mergedPR: 619
+    openPR: 101
+    closedIssue: 563
+    openIssue: 123
     commit: 613
   last720d:
-    since: 2024-10-04
+    since: 2024-10-05
     release: 50
     mergedPR: 696
-    openPR: 99
+    openPR: 101
     closedIssue: 573
-    openIssue: 121
+    openIssue: 123
     commit: 913
 total:
   release: 50
   mergedPR: 696
-  openPR: 99
+  openPR: 101
   closedIssue: 573
-  openIssue: 121
+  openIssue: 123
   commit: 913
 ---
 path: /home/runner/.x-repo/github.com/Fission-AI/OpenSpec
-collectedAt: 2026-09-24T04:43:31Z
+collectedAt: 2026-09-25T04:57:46Z
 loc:
   TypeScript:
     code: 103292
@@ -147,4 +147,4 @@ total:
 ---
 
 ---
-{"id":395084204,"author":{"login":"openspec-release-bot[bot]","id":254190582,"node_id":"BOT_kgDODyaj9g","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOPYoUTM4XjIGs","tag_name":"v1.13.2","target_commitish":"db2309783547a14e150dbcbfc19120e4028446c3","name":"v1.13.2 - Verify and Windows archive fixes","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-23T21:33:22Z","updated_at":"2026-09-23T21:47:34Z","published_at":"2026-09-23T21:44:30Z","assets":[],"body":"## What's New in v1.13.2\n\nThis release makes `/opsx:verify` report what it actually checked, makes archive reliable on Windows, and fixes workflow guidance across several tools.\n\n### Improved\n\n- **Task guidance** - Each task group now includes its own tests and documentation updates instead of deferring them to a final group, and onboarding teaches the same rule.\n- **Approval prompts** - Fast-forward asks for clarification only when context is critically unclear, and onboarding asks you to approve the task breakdown before saving it.\n- **Scenario-loss messages** - When `openspec validate` or `openspec archive` flags a `MODIFIED` block that drops scenarios, it now also says what the block adds.\n- **Codex setup hint** - The setup hint is clearer for Codex CLI, IDE, and desktop app users.\n\n### Fixed\n\n- **Verify** - `/opsx:verify` no longer reports skipped checks as passing, and no longer tells agents to re-implement a requirement the change removed. Removed requirements pass once the behavior is gone, and renamed requirements are checked against their original behavior.\n- **Archive on Windows** - Archive no longer leaves `.openspec-archive.lock` behind, and it finishes instead of rolling back when Windows blocks renaming a change directory.\n- **Line endings** - Rewriting a CRLF spec, `.bashrc`, `.zshrc`, or `CLAUDE.md` keeps its existing line endings, so Windows users no longer get whole-file diffs.\n- **Archive task warnings** - Agent-driven archive uses schema-aware task progress, so custom task files and globs still trigger incomplete-task warnings.\n- **Artifact outputs** - Artifact output patterns with brace expansion or extglob now resolve, while literal filenames still work.\n- **`/opsx:update`** - Update can now fill a missing file under a glob artifact that is already partly written, instead of pointing you to a step that could not do it.\n- **Workflow schema labels** - Workflows no longer display a schema name that `openspec list --json` does not return.\n- **Kilo Code** - Commands are generated in `.kilo/command/`, where Kilo Code reads them. `openspec init` and legacy cleanup remove the files OpenSpec generated in `.kilocode/workflows/`, matched by their known file names (including copies you edited), and leave other files in place.\n- **Continue** - Continue commands no longer lead local models to call a tool named after the active workflow.\n- **Validation** - `validate --strict` no longer treats a Spanish or Portuguese Purpose starting with \"Todo\" as a placeholder.\n- **Codex update** - `openspec update --force` now exits non-zero when it cannot replace a legacy-only Codex install.\n\n## New Contributors\n\n* @xiazl1993 made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1146\n* @kikeprzn made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1769\n* @VeryComplexAndLongName made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1934\n* @philo-x made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1885\n* @guillaume-flambard made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1845\n* @Tyagiquamar made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1912\n* @runsonmypc made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1733\n* @kevin9327 made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1926\n\n**Full Changelog**: https://github.com/Fission-AI/OpenSpec/compare/v1.13.1...v1.13.2\n","reactions":{"total_count":2,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":2,"eyes":0},"mentions_count":8}
+{"id":395084204,"author":{"login":"openspec-release-bot[bot]","id":254190582,"node_id":"BOT_kgDODyaj9g","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOPYoUTM4XjIGs","tag_name":"v1.13.2","target_commitish":"db2309783547a14e150dbcbfc19120e4028446c3","name":"v1.13.2 - Verify and Windows archive fixes","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-23T21:33:22Z","updated_at":"2026-09-23T21:47:34Z","published_at":"2026-09-23T21:44:30Z","assets":[],"body":"## What's New in v1.13.2\n\nThis release makes `/opsx:verify` report what it actually checked, makes archive reliable on Windows, and fixes workflow guidance across several tools.\n\n### Improved\n\n- **Task guidance** - Each task group now includes its own tests and documentation updates instead of deferring them to a final group, and onboarding teaches the same rule.\n- **Approval prompts** - Fast-forward asks for clarification only when context is critically unclear, and onboarding asks you to approve the task breakdown before saving it.\n- **Scenario-loss messages** - When `openspec validate` or `openspec archive` flags a `MODIFIED` block that drops scenarios, it now also says what the block adds.\n- **Codex setup hint** - The setup hint is clearer for Codex CLI, IDE, and desktop app users.\n\n### Fixed\n\n- **Verify** - `/opsx:verify` no longer reports skipped checks as passing, and no longer tells agents to re-implement a requirement the change removed. Removed requirements pass once the behavior is gone, and renamed requirements are checked against their original behavior.\n- **Archive on Windows** - Archive no longer leaves `.openspec-archive.lock` behind, and it finishes instead of rolling back when Windows blocks renaming a change directory.\n- **Line endings** - Rewriting a CRLF spec, `.bashrc`, `.zshrc`, or `CLAUDE.md` keeps its existing line endings, so Windows users no longer get whole-file diffs.\n- **Archive task warnings** - Agent-driven archive uses schema-aware task progress, so custom task files and globs still trigger incomplete-task warnings.\n- **Artifact outputs** - Artifact output patterns with brace expansion or extglob now resolve, while literal filenames still work.\n- **`/opsx:update`** - Update can now fill a missing file under a glob artifact that is already partly written, instead of pointing you to a step that could not do it.\n- **Workflow schema labels** - Workflows no longer display a schema name that `openspec list --json` does not return.\n- **Kilo Code** - Commands are generated in `.kilo/command/`, where Kilo Code reads them. `openspec init` and legacy cleanup remove the files OpenSpec generated in `.kilocode/workflows/`, matched by their known file names (including copies you edited), and leave other files in place.\n- **Continue** - Continue commands no longer lead local models to call a tool named after the active workflow.\n- **Validation** - `validate --strict` no longer treats a Spanish or Portuguese Purpose starting with \"Todo\" as a placeholder.\n- **Codex update** - `openspec update --force` now exits non-zero when it cannot replace a legacy-only Codex install.\n\n## New Contributors\n\n* @xiazl1993 made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1146\n* @kikeprzn made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1769\n* @VeryComplexAndLongName made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1934\n* @philo-x made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1885\n* @guillaume-flambard made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1845\n* @Tyagiquamar made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1912\n* @runsonmypc made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1733\n* @kevin9327 made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1926\n\n**Full Changelog**: https://github.com/Fission-AI/OpenSpec/compare/v1.13.1...v1.13.2\n","reactions":{"total_count":7,"+1":1,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":0,"rocket":5,"eyes":0},"mentions_count":8}

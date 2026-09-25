@@ -2,25 +2,25 @@ about:
   description: "Distributed reliable key-value store for the most critical data of a distributed system"
   license: Apache-2.0
   homepage: https://etcd.io
-  head: b147d75
+  head: 1edd247
   archived: false
   latestVersion: "v3.7.2"
   latestRelease: "v3.7.2"
   latestPrerelease: "v3.7.0-rc.0"
-  collectedAt: 2026-09-24T04:50:47Z
+  collectedAt: 2026-09-25T04:52:27Z
 timeline:
   created: 2013-07-06
-  lastCommit: 2026-09-23
+  lastCommit: 2026-09-24
   lastVersion: 2026-09-22
   lastRelease: 2026-09-22
   lastPrerelease: 2026-06-01
 popularity:
-  star: 52307
+  star: 52310
   watcher: 1269
-  fork: 10510
+  fork: 10516
   release: 295
   contributor: 989
-  pullRequest: 14590
+  pullRequest: 14591
   issue: 7277
 language:
   Go: 5818802
@@ -32,63 +32,63 @@ language:
 totalBytes: 6061254
 recent:
   last30d:
-    since: 2026-08-25
+    since: 2026-08-26
     release: 3
     mergedPR: 44
-    openPR: 40
+    openPR: 36
     closedIssue: 5
-    openIssue: 21
-    commit: 46
+    openIssue: 19
+    commit: 48
   last60d:
-    since: 2026-07-26
+    since: 2026-07-27
     release: 3
-    mergedPR: 97
-    openPR: 75
-    closedIssue: 13
+    mergedPR: 93
+    openPR: 72
+    closedIssue: 10
     openIssue: 34
-    commit: 139
+    commit: 141
   last90d:
-    since: 2026-06-26
+    since: 2026-06-27
     release: 9
-    mergedPR: 179
-    openPR: 112
+    mergedPR: 180
+    openPR: 110
     closedIssue: 21
     openIssue: 52
-    commit: 266
+    commit: 268
   last180d:
-    since: 2026-03-28
+    since: 2026-03-29
     release: 20
-    mergedPR: 396
-    openPR: 175
-    closedIssue: 73
-    openIssue: 70
-    commit: 655
+    mergedPR: 394
+    openPR: 173
+    closedIssue: 71
+    openIssue: 69
+    commit: 657
   last360d:
-    since: 2025-09-29
+    since: 2025-09-30
     release: 34
-    mergedPR: 772
-    openPR: 202
-    closedIssue: 155
-    openIssue: 80
-    commit: 1373
+    mergedPR: 771
+    openPR: 200
+    closedIssue: 156
+    openIssue: 78
+    commit: 1375
   last720d:
-    since: 2024-10-04
+    since: 2024-10-05
     release: 56
-    mergedPR: 1858
-    openPR: 220
-    closedIssue: 501
-    openIssue: 106
-    commit: 3384
+    mergedPR: 1855
+    openPR: 217
+    closedIssue: 499
+    openIssue: 104
+    commit: 3375
 total:
   release: 295
-  mergedPR: 10680
-  openPR: 226
-  closedIssue: 7150
-  openIssue: 127
-  commit: 25239
+  mergedPR: 10681
+  openPR: 224
+  closedIssue: 7152
+  openIssue: 125
+  commit: 25241
 ---
 path: /home/runner/.x-repo/github.com/etcd-io/etcd
-collectedAt: 2026-09-24T04:50:58Z
+collectedAt: 2026-09-25T04:52:37Z
 loc:
   Go:
     code: 167103
@@ -147,8 +147,8 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 7892
-    blanks: 4289
+    comments: 7894
+    blanks: 4291
     files: 65
   Text:
     code: 0
@@ -157,23 +157,19 @@ loc:
     files: 3
 total:
   code: 181106
-  comments: 36817
-  blanks: 30997
+  comments: 36819
+  blanks: 30999
   files: 1286
 ---
-date: "2026-09-23T12:55:52Z"
+date: "2026-09-24T06:05:26Z"
 repo:
   name: github.com/etcd-io/etcd
-  commit: b147d754ff7eb459c2c3f68dad6806f92cda2542
+  commit: 1edd247ff4b4d7515f674429ef5db75cceb80b4d
 scorecard:
   version: v5.5.0
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 6.9
 checks:
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
   - name: Security-Policy
     score: 9
     reason: security policy file detected
@@ -184,13 +180,13 @@ checks:
       - 'Info: Found text in security policy: .github/SECURITY.md:1'
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 10 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 9 issue activity found in the last 90 days -- score normalized to 10
     details: null
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
+  - name: Dangerous-Workflow
+    score: 0
+    reason: dangerous workflow patterns detected
     details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+      - 'Warn: script injection with untrusted input ''github.event.pull_request.head.ref'': .github/workflows/bump-devcontainer-version.yml:32'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -209,11 +205,15 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/measure-testgrid-flakiness.yaml:8'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecards.yml:12'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/verify-released-assets.yaml:3'
-  - name: Dangerous-Workflow
-    score: 0
-    reason: dangerous workflow patterns detected
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
     details:
-      - 'Warn: script injection with untrusted input ''github.event.pull_request.head.ref'': .github/workflows/bump-devcontainer-version.yml:32'
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -222,20 +222,6 @@ checks:
     score: 5
     reason: 'badge detected: Passing'
     details: null
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v3.7.2 not signed: https://api.github.com/repos/etcd-io/etcd/releases/394127150'
-      - 'Warn: release artifact v3.6.15 not signed: https://api.github.com/repos/etcd-io/etcd/releases/394117946'
-      - 'Warn: release artifact v3.5.34 not signed: https://api.github.com/repos/etcd-io/etcd/releases/394107625'
-      - 'Warn: release artifact v3.7.1 not signed: https://api.github.com/repos/etcd-io/etcd/releases/358911174'
-      - 'Warn: release artifact v3.6.14 not signed: https://api.github.com/repos/etcd-io/etcd/releases/358906325'
-      - 'Warn: release artifact v3.7.2 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/394127150'
-      - 'Warn: release artifact v3.6.15 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/394117946'
-      - 'Warn: release artifact v3.5.34 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/394107625'
-      - 'Warn: release artifact v3.7.1 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/358911174'
-      - 'Warn: release artifact v3.6.14 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/358906325'
   - name: Pinned-Dependencies
     score: 6
     reason: dependency not pinned by hash detected -- score normalized to 6
@@ -258,11 +244,12 @@ checks:
     details:
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5932'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6222'
-  - name: Packaging
+  - name: SAST
     score: 10
-    reason: packaging workflow detected
+    reason: SAST tool is run on all commits
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/antithesis-test.yml:40'
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Info: all commits (30) are checked with a SAST tool'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -271,25 +258,38 @@ checks:
       - 'Info: GoBuiltInFuzzer integration found: server/etcdserver/api/v3rpc/validationfuzz_test.go:30'
       - 'Info: GoBuiltInFuzzer integration found: server/etcdserver/api/v3rpc/validationfuzz_test.go:76'
       - 'Info: GoBuiltInFuzzer integration found: server/etcdserver/api/v3rpc/validationfuzz_test.go:121'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: SAST
+  - name: Packaging
     score: 10
-    reason: SAST tool is run on all commits
+    reason: packaging workflow detected
     details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Info: all commits (30) are checked with a SAST tool'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/antithesis-test.yml:40'
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v3.7.2 not signed: https://api.github.com/repos/etcd-io/etcd/releases/394127150'
+      - 'Warn: release artifact v3.6.15 not signed: https://api.github.com/repos/etcd-io/etcd/releases/394117946'
+      - 'Warn: release artifact v3.5.34 not signed: https://api.github.com/repos/etcd-io/etcd/releases/394107625'
+      - 'Warn: release artifact v3.7.1 not signed: https://api.github.com/repos/etcd-io/etcd/releases/358911174'
+      - 'Warn: release artifact v3.6.14 not signed: https://api.github.com/repos/etcd-io/etcd/releases/358906325'
+      - 'Warn: release artifact v3.7.2 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/394127150'
+      - 'Warn: release artifact v3.6.15 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/394117946'
+      - 'Warn: release artifact v3.5.34 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/394107625'
+      - 'Warn: release artifact v3.7.1 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/358911174'
+      - 'Warn: release artifact v3.6.14 does not have provenance: https://api.github.com/repos/etcd-io/etcd/releases/358906325'
   - name: CI-Tests
     score: 10
-    reason: 16 out of 16 merged PRs checked by a CI test -- score normalized to 10
+    reason: 15 out of 15 merged PRs checked by a CI test -- score normalized to 10
     details: null
   - name: Contributors
     score: 10
@@ -297,4 +297,4 @@ checks:
     details:
       - 'Info: found contributions from: MicrosoftCopilot, NVIDIA, akiunlocks, authzed, bethanygovernment, boltdb, broadcom, cayleygraph, clouddragons, cncf-maintainers, cockroach labs, containerd, edgebit, etcd-io, fly.io, google, goraft, huawei, hyscale-lab, ibm, inmar intelligence, kubernetes, kubernetes-sigs, leptonai, microsoft, middlemost, nvidia, opencontainers, rclone, red hat, sequoia, sinatra, snowflake (@ex-googler), vmware, vmware by broadcom'
 ---
-{"id":394127150,"author":{"login":"ivanvc","id":27286,"node_id":"MDQ6VXNlcjI3Mjg2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAKtHts4Xfecu","tag_name":"v3.7.2","target_commitish":"main","name":"v3.7.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-22T21:09:23Z","updated_at":"2026-09-22T21:22:39Z","published_at":"2026-09-22T21:22:39Z","assets":[{"id":582270551,"node_id":"RA_kwDOAKtHts4itL5X","name":"etcd-v3.7.2-darwin-amd64.zip","label":"","uploader":{"login":"ivanvc","id":27286,"node_id":"MDQ6VXNlcjI3Mjg2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":24525691,"digest":"sha256:2965e00f6379339c0765177929a8e73ed0861df5a72ec97619dd836b1c95bd1c","download_count":47,"created_at":"2026-09-22T21:18:38Z","updated_at":"2026-09-22T21:18:43Z"},{"id":582270427,"node_id":"RA_kwDOAKtHts4itL3b","name":"etcd-v3.7.2-darwin-arm64.zip","label":"","uploader":{"login":"ivanvc","id":27286,"node_id":"MDQ6VXNlcjI3Mjg2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":22922539,"digest":"sha256:73b7cc4b55ee302943f644f3b9a1a42c919bb64f8f45b6dd03cb2e4c2a2c8960","download_count":60,"created_at":"2026-09-22T21:18:32Z","updated_at":"2026-09-22T21:18:37Z"},{"id":582270024,"node_id":"RA_kwDOAKtHts4itLxI","name":"etcd-v3.7.2-linux-amd64.tar.gz","label":"","uploader":{"login":"ivanvc","id":27286,"node_id":"MDQ6VXNlcjI3Mjg2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":23987958,"digest":"sha256:3a3679bc51a4ee9d30bccea1da7cd4fe62c6fc1d2ca1255068d2c53bf3026135","download_count":774,"created_at":"2026-09-22T21:18:21Z","updated_at":"2026-09-22T21:18:25Z"},{"id":582269861,"node_id":"RA_kwDOAKtHts4itLul","name":"etcd-v3.7.2-linux-arm64.tar.gz","label":"","uploader":{"login":"ivanvc","id":27286,"node_id":"MDQ6VXNlcjI3Mjg2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":21966764,"digest":"sha256:5e3ff99d428fabfcefdc95348f6560d1efe835f7b2d1ab3334fe0831076966b7","download_count":138,"created_at":"2026-09-22T21:18:14Z","updated_at":"2026-09-22T21:18:19Z"},{"id":582269646,"node_id":"RA_kwDOAKtHts4itLrO","name":"etcd-v3.7.2-linux-ppc64le.tar.gz","label":"","uploader":{"login":"ivanvc","id":27286,"node_id":"MDQ6VXNlcjI3Mjg2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":22143601,"digest":"sha256:39842713685c2d33e7642be0e831d4158e3fd7022138356676c947322c0f64d3","download_count":38,"created_at":"2026-09-22T21:18:08Z","updated_at":"2026-09-22T21:18:12Z"},{"id":582269412,"node_id":"RA_kwDOAKtHts4itLnk","name":"etcd-v3.7.2-linux-s390x.tar.gz","label":"","uploader":{"login":"ivanvc","id":27286,"node_id":"MDQ6VXNlcjI3Mjg2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":23679055,"digest":"sha256:580c1d706a495a12a2c18476db8e70789c0084f8ce93ae2fb19573775e304697","download_count":34,"created_at":"2026-09-22T21:18:01Z","updated_at":"2026-09-22T21:18:06Z"},{"id":582270250,"node_id":"RA_kwDOAKtHts4itL0q","name":"etcd-v3.7.2-windows-amd64.zip","label":"","uploader":{"login":"ivanvc","id":27286,"node_id":"MDQ6VXNlcjI3Mjg2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":24508798,"digest":"sha256:76989536a5f333642687fbd85603087c3deb4d316fd86fdfb63897b05f851cf4","download_count":150,"created_at":"2026-09-22T21:18:27Z","updated_at":"2026-09-22T21:18:31Z"},{"id":582270728,"node_id":"RA_kwDOAKtHts4itL8I","name":"SHA256SUMS","label":"","uploader":{"login":"ivanvc","id":27286,"node_id":"MDQ6VXNlcjI3Mjg2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":676,"digest":"sha256:90a2123114ae15025b1b868723a79ac0514bcd406bc8ad164de676dd193ba62b","download_count":158,"created_at":"2026-09-22T21:18:45Z","updated_at":"2026-09-22T21:18:45Z"}],"body":"Please check out [CHANGELOG](https://github.com/etcd-io/etcd/blob/main/CHANGELOG/CHANGELOG-3.7.md) for a full list of changes. And make sure to read [upgrade guide](https://etcd.io/docs/v3.7/upgrades/upgrade_3_7/) before upgrading etcd (there may be breaking changes).\r\n\r\nFor installation guides, please check out [play.etcd.io](http://play.etcd.io) and [operating etcd](https://etcd.io/docs/v3.7/op-guide/). Latest support status for common architectures and operating systems can be found at [supported platforms](https://etcd.io/docs/v3.7/op-guide/supported-platform/).\r\n\r\n###### Linux\r\n\r\n```sh\r\nETCD_VER=v3.7.2\r\n\r\n# choose either URL\r\nGOOGLE_URL=https://storage.googleapis.com/etcd\r\nGITHUB_URL=https://github.com/etcd-io/etcd/releases/download\r\nDOWNLOAD_URL=${GOOGLE_URL}\r\n\r\nrm -f /tmp/etcd-${ETCD_VER}-linux-amd64.tar.gz\r\nrm -rf /tmp/etcd-download-test && mkdir -p /tmp/etcd-download-test\r\n\r\ncurl -L ${DOWNLOAD_URL}/${ETCD_VER}/etcd-${ETCD_VER}-linux-amd64.tar.gz -o /tmp/etcd-${ETCD_VER}-linux-amd64.tar.gz\r\ntar xzvf /tmp/etcd-${ETCD_VER}-linux-amd64.tar.gz -C /tmp/etcd-download-test --strip-components=1 --no-same-owner\r\nrm -f /tmp/etcd-${ETCD_VER}-linux-amd64.tar.gz\r\n\r\n/tmp/etcd-download-test/etcd --version\r\n/tmp/etcd-download-test/etcdctl version\r\n/tmp/etcd-download-test/etcdutl version\r\n\r\n# start a local etcd server\r\n/tmp/etcd-download-test/etcd\r\n\r\n# write,read to etcd\r\n/tmp/etcd-download-test/etcdctl --endpoints=localhost:2379 put foo bar\r\n/tmp/etcd-download-test/etcdctl --endpoints=localhost:2379 get foo\r\n```\r\n\r\n###### macOS (Darwin)\r\n\r\n```sh\r\nETCD_VER=v3.7.2\r\n\r\n# choose either URL\r\nGOOGLE_URL=https://storage.googleapis.com/etcd\r\nGITHUB_URL=https://github.com/etcd-io/etcd/releases/download\r\nDOWNLOAD_URL=${GOOGLE_URL}\r\n\r\nrm -f /tmp/etcd-${ETCD_VER}-darwin-amd64.zip\r\nrm -rf /tmp/etcd-download-test && mkdir -p /tmp/etcd-download-test\r\n\r\ncurl -L ${DOWNLOAD_URL}/${ETCD_VER}/etcd-${ETCD_VER}-darwin-amd64.zip -o /tmp/etcd-${ETCD_VER}-darwin-amd64.zip\r\nunzip /tmp/etcd-${ETCD_VER}-darwin-amd64.zip -d /tmp && rm -f /tmp/etcd-${ETCD_VER}-darwin-amd64.zip\r\nmv /tmp/etcd-${ETCD_VER}-darwin-amd64/* /tmp/etcd-download-test && rm -rf mv /tmp/etcd-${ETCD_VER}-darwin-amd64\r\n\r\n/tmp/etcd-download-test/etcd --version\r\n/tmp/etcd-download-test/etcdctl version\r\n/tmp/etcd-download-test/etcdutl version\r\n```\r\n\r\n###### Docker\r\n\r\netcd uses [`gcr.io/etcd-development/etcd`](https://gcr.io/etcd-development/etcd) as a primary container registry, and [`quay.io/coreos/etcd`](https://quay.io/coreos/etcd) as secondary.\r\n\r\n```sh\r\nETCD_VER=v3.7.2\r\n\r\nrm -rf /tmp/etcd-data.tmp && mkdir -p /tmp/etcd-data.tmp && \\\r\n  docker rmi gcr.io/etcd-development/etcd:${ETCD_VER} || true && \\\r\n  docker run \\\r\n  -p 2379:2379 \\\r\n  -p 2380:2380 \\\r\n  --mount type=bind,source=/tmp/etcd-data.tmp,destination=/etcd-data \\\r\n  --name etcd-gcr-${ETCD_VER} \\\r\n  gcr.io/etcd-development/etcd:${ETCD_VER} \\\r\n  /usr/local/bin/etcd \\\r\n  --name s1 \\\r\n  --data-dir /etcd-data \\\r\n  --listen-client-urls http://0.0.0.0:2379 \\\r\n  --advertise-client-urls http://0.0.0.0:2379 \\\r\n  --listen-peer-urls http://0.0.0.0:2380 \\\r\n  --initial-advertise-peer-urls http://0.0.0.0:2380 \\\r\n  --initial-cluster s1=http://0.0.0.0:2380 \\\r\n  --initial-cluster-token tkn \\\r\n  --initial-cluster-state new \\\r\n  --log-level info \\\r\n  --logger zap \\\r\n  --log-outputs stderr\r\n\r\ndocker exec etcd-gcr-${ETCD_VER} /usr/local/bin/etcd --version\r\ndocker exec etcd-gcr-${ETCD_VER} /usr/local/bin/etcdctl version\r\ndocker exec etcd-gcr-${ETCD_VER} /usr/local/bin/etcdutl version\r\ndocker exec etcd-gcr-${ETCD_VER} /usr/local/bin/etcdctl endpoint health\r\ndocker exec etcd-gcr-${ETCD_VER} /usr/local/bin/etcdctl put foo bar\r\ndocker exec etcd-gcr-${ETCD_VER} /usr/local/bin/etcdctl get foo\r\n```\r\n"}
+{"id":394127150,"author":{"login":"ivanvc","id":27286,"node_id":"MDQ6VXNlcjI3Mjg2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAKtHts4Xfecu","tag_name":"v3.7.2","target_commitish":"main","name":"v3.7.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-22T21:09:23Z","updated_at":"2026-09-22T21:22:39Z","published_at":"2026-09-22T21:22:39Z","assets":[{"id":582270551,"node_id":"RA_kwDOAKtHts4itL5X","name":"etcd-v3.7.2-darwin-amd64.zip","label":"","uploader":{"login":"ivanvc","id":27286,"node_id":"MDQ6VXNlcjI3Mjg2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":24525691,"digest":"sha256:2965e00f6379339c0765177929a8e73ed0861df5a72ec97619dd836b1c95bd1c","download_count":91,"created_at":"2026-09-22T21:18:38Z","updated_at":"2026-09-22T21:18:43Z"},{"id":582270427,"node_id":"RA_kwDOAKtHts4itL3b","name":"etcd-v3.7.2-darwin-arm64.zip","label":"","uploader":{"login":"ivanvc","id":27286,"node_id":"MDQ6VXNlcjI3Mjg2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":22922539,"digest":"sha256:73b7cc4b55ee302943f644f3b9a1a42c919bb64f8f45b6dd03cb2e4c2a2c8960","download_count":99,"created_at":"2026-09-22T21:18:32Z","updated_at":"2026-09-22T21:18:37Z"},{"id":582270024,"node_id":"RA_kwDOAKtHts4itLxI","name":"etcd-v3.7.2-linux-amd64.tar.gz","label":"","uploader":{"login":"ivanvc","id":27286,"node_id":"MDQ6VXNlcjI3Mjg2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":23987958,"digest":"sha256:3a3679bc51a4ee9d30bccea1da7cd4fe62c6fc1d2ca1255068d2c53bf3026135","download_count":1810,"created_at":"2026-09-22T21:18:21Z","updated_at":"2026-09-22T21:18:25Z"},{"id":582269861,"node_id":"RA_kwDOAKtHts4itLul","name":"etcd-v3.7.2-linux-arm64.tar.gz","label":"","uploader":{"login":"ivanvc","id":27286,"node_id":"MDQ6VXNlcjI3Mjg2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":21966764,"digest":"sha256:5e3ff99d428fabfcefdc95348f6560d1efe835f7b2d1ab3334fe0831076966b7","download_count":272,"created_at":"2026-09-22T21:18:14Z","updated_at":"2026-09-22T21:18:19Z"},{"id":582269646,"node_id":"RA_kwDOAKtHts4itLrO","name":"etcd-v3.7.2-linux-ppc64le.tar.gz","label":"","uploader":{"login":"ivanvc","id":27286,"node_id":"MDQ6VXNlcjI3Mjg2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":22143601,"digest":"sha256:39842713685c2d33e7642be0e831d4158e3fd7022138356676c947322c0f64d3","download_count":56,"created_at":"2026-09-22T21:18:08Z","updated_at":"2026-09-22T21:18:12Z"},{"id":582269412,"node_id":"RA_kwDOAKtHts4itLnk","name":"etcd-v3.7.2-linux-s390x.tar.gz","label":"","uploader":{"login":"ivanvc","id":27286,"node_id":"MDQ6VXNlcjI3Mjg2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":23679055,"digest":"sha256:580c1d706a495a12a2c18476db8e70789c0084f8ce93ae2fb19573775e304697","download_count":40,"created_at":"2026-09-22T21:18:01Z","updated_at":"2026-09-22T21:18:06Z"},{"id":582270250,"node_id":"RA_kwDOAKtHts4itL0q","name":"etcd-v3.7.2-windows-amd64.zip","label":"","uploader":{"login":"ivanvc","id":27286,"node_id":"MDQ6VXNlcjI3Mjg2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":24508798,"digest":"sha256:76989536a5f333642687fbd85603087c3deb4d316fd86fdfb63897b05f851cf4","download_count":215,"created_at":"2026-09-22T21:18:27Z","updated_at":"2026-09-22T21:18:31Z"},{"id":582270728,"node_id":"RA_kwDOAKtHts4itL8I","name":"SHA256SUMS","label":"","uploader":{"login":"ivanvc","id":27286,"node_id":"MDQ6VXNlcjI3Mjg2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":676,"digest":"sha256:90a2123114ae15025b1b868723a79ac0514bcd406bc8ad164de676dd193ba62b","download_count":238,"created_at":"2026-09-22T21:18:45Z","updated_at":"2026-09-22T21:18:45Z"}],"body":"Please check out [CHANGELOG](https://github.com/etcd-io/etcd/blob/main/CHANGELOG/CHANGELOG-3.7.md) for a full list of changes. And make sure to read [upgrade guide](https://etcd.io/docs/v3.7/upgrades/upgrade_3_7/) before upgrading etcd (there may be breaking changes).\r\n\r\nFor installation guides, please check out [play.etcd.io](http://play.etcd.io) and [operating etcd](https://etcd.io/docs/v3.7/op-guide/). Latest support status for common architectures and operating systems can be found at [supported platforms](https://etcd.io/docs/v3.7/op-guide/supported-platform/).\r\n\r\n###### Linux\r\n\r\n```sh\r\nETCD_VER=v3.7.2\r\n\r\n# choose either URL\r\nGOOGLE_URL=https://storage.googleapis.com/etcd\r\nGITHUB_URL=https://github.com/etcd-io/etcd/releases/download\r\nDOWNLOAD_URL=${GOOGLE_URL}\r\n\r\nrm -f /tmp/etcd-${ETCD_VER}-linux-amd64.tar.gz\r\nrm -rf /tmp/etcd-download-test && mkdir -p /tmp/etcd-download-test\r\n\r\ncurl -L ${DOWNLOAD_URL}/${ETCD_VER}/etcd-${ETCD_VER}-linux-amd64.tar.gz -o /tmp/etcd-${ETCD_VER}-linux-amd64.tar.gz\r\ntar xzvf /tmp/etcd-${ETCD_VER}-linux-amd64.tar.gz -C /tmp/etcd-download-test --strip-components=1 --no-same-owner\r\nrm -f /tmp/etcd-${ETCD_VER}-linux-amd64.tar.gz\r\n\r\n/tmp/etcd-download-test/etcd --version\r\n/tmp/etcd-download-test/etcdctl version\r\n/tmp/etcd-download-test/etcdutl version\r\n\r\n# start a local etcd server\r\n/tmp/etcd-download-test/etcd\r\n\r\n# write,read to etcd\r\n/tmp/etcd-download-test/etcdctl --endpoints=localhost:2379 put foo bar\r\n/tmp/etcd-download-test/etcdctl --endpoints=localhost:2379 get foo\r\n```\r\n\r\n###### macOS (Darwin)\r\n\r\n```sh\r\nETCD_VER=v3.7.2\r\n\r\n# choose either URL\r\nGOOGLE_URL=https://storage.googleapis.com/etcd\r\nGITHUB_URL=https://github.com/etcd-io/etcd/releases/download\r\nDOWNLOAD_URL=${GOOGLE_URL}\r\n\r\nrm -f /tmp/etcd-${ETCD_VER}-darwin-amd64.zip\r\nrm -rf /tmp/etcd-download-test && mkdir -p /tmp/etcd-download-test\r\n\r\ncurl -L ${DOWNLOAD_URL}/${ETCD_VER}/etcd-${ETCD_VER}-darwin-amd64.zip -o /tmp/etcd-${ETCD_VER}-darwin-amd64.zip\r\nunzip /tmp/etcd-${ETCD_VER}-darwin-amd64.zip -d /tmp && rm -f /tmp/etcd-${ETCD_VER}-darwin-amd64.zip\r\nmv /tmp/etcd-${ETCD_VER}-darwin-amd64/* /tmp/etcd-download-test && rm -rf mv /tmp/etcd-${ETCD_VER}-darwin-amd64\r\n\r\n/tmp/etcd-download-test/etcd --version\r\n/tmp/etcd-download-test/etcdctl version\r\n/tmp/etcd-download-test/etcdutl version\r\n```\r\n\r\n###### Docker\r\n\r\netcd uses [`gcr.io/etcd-development/etcd`](https://gcr.io/etcd-development/etcd) as a primary container registry, and [`quay.io/coreos/etcd`](https://quay.io/coreos/etcd) as secondary.\r\n\r\n```sh\r\nETCD_VER=v3.7.2\r\n\r\nrm -rf /tmp/etcd-data.tmp && mkdir -p /tmp/etcd-data.tmp && \\\r\n  docker rmi gcr.io/etcd-development/etcd:${ETCD_VER} || true && \\\r\n  docker run \\\r\n  -p 2379:2379 \\\r\n  -p 2380:2380 \\\r\n  --mount type=bind,source=/tmp/etcd-data.tmp,destination=/etcd-data \\\r\n  --name etcd-gcr-${ETCD_VER} \\\r\n  gcr.io/etcd-development/etcd:${ETCD_VER} \\\r\n  /usr/local/bin/etcd \\\r\n  --name s1 \\\r\n  --data-dir /etcd-data \\\r\n  --listen-client-urls http://0.0.0.0:2379 \\\r\n  --advertise-client-urls http://0.0.0.0:2379 \\\r\n  --listen-peer-urls http://0.0.0.0:2380 \\\r\n  --initial-advertise-peer-urls http://0.0.0.0:2380 \\\r\n  --initial-cluster s1=http://0.0.0.0:2380 \\\r\n  --initial-cluster-token tkn \\\r\n  --initial-cluster-state new \\\r\n  --log-level info \\\r\n  --logger zap \\\r\n  --log-outputs stderr\r\n\r\ndocker exec etcd-gcr-${ETCD_VER} /usr/local/bin/etcd --version\r\ndocker exec etcd-gcr-${ETCD_VER} /usr/local/bin/etcdctl version\r\ndocker exec etcd-gcr-${ETCD_VER} /usr/local/bin/etcdutl version\r\ndocker exec etcd-gcr-${ETCD_VER} /usr/local/bin/etcdctl endpoint health\r\ndocker exec etcd-gcr-${ETCD_VER} /usr/local/bin/etcdctl put foo bar\r\ndocker exec etcd-gcr-${ETCD_VER} /usr/local/bin/etcdctl get foo\r\n```\r\n"}

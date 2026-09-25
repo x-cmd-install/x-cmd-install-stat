@@ -2,23 +2,23 @@ about:
   description: "TUI & website for reviewing git changes"
   license: MIT
   homepage: https://critique.work
-  head: 27298b2
+  head: 0ed0dc8
   archived: false
-  latestVersion: "critique@0.1.140"
-  latestRelease: "critique@0.1.140"
+  latestVersion: "critique@0.2.1"
+  latestRelease: "critique@0.2.1"
   latestPrerelease: ""
-  collectedAt: 2026-09-24T05:43:36Z
+  collectedAt: 2026-09-25T05:55:38Z
 timeline:
   created: 2025-10-08
-  lastCommit: 2026-09-02
-  lastVersion: 2026-04-25
-  lastRelease: 2026-04-25
+  lastCommit: 2026-09-24
+  lastVersion: 2026-09-24
+  lastRelease: 2026-09-24
   lastPrerelease: 
 popularity:
   star: 1270
   watcher: 5
   fork: 37
-  release: 44
+  release: 45
   contributor: 10
   pullRequest: 19
   issue: 29
@@ -28,63 +28,63 @@ language:
 totalBytes: 935698
 recent:
   last30d:
-    since: 2026-08-25
-    release: 0
+    since: 2026-08-26
+    release: 1
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 1
+    commit: 3
   last60d:
-    since: 2026-07-26
-    release: 0
+    since: 2026-07-27
+    release: 1
     mergedPR: 0
     openPR: 0
     closedIssue: 1
     openIssue: 0
-    commit: 6
+    commit: 8
   last90d:
-    since: 2026-06-26
-    release: 0
+    since: 2026-06-27
+    release: 1
     mergedPR: 0
     openPR: 0
     closedIssue: 1
     openIssue: 1
-    commit: 7
+    commit: 9
   last180d:
-    since: 2026-03-28
+    since: 2026-03-29
     release: 5
     mergedPR: 2
     openPR: 0
     closedIssue: 3
     openIssue: 5
-    commit: 22
+    commit: 24
   last360d:
-    since: 2025-09-29
-    release: 44
+    since: 2025-09-30
+    release: 45
     mergedPR: 10
     openPR: 1
     closedIssue: 20
     openIssue: 9
-    commit: 447
+    commit: 449
   last720d:
-    since: 2024-10-04
-    release: 44
+    since: 2024-10-05
+    release: 45
     mergedPR: 10
     openPR: 1
     closedIssue: 20
     openIssue: 9
-    commit: 464
+    commit: 466
 total:
-  release: 44
+  release: 45
   mergedPR: 10
   openPR: 1
   closedIssue: 20
   openIssue: 9
-  commit: 464
+  commit: 466
 ---
 path: /home/runner/.x-repo/github.com/remorses/critique
-collectedAt: 2026-09-24T05:43:40Z
+collectedAt: 2026-09-25T05:55:39Z
 loc:
   TypeScript:
     code: 13073
@@ -113,15 +113,15 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 1925
-    blanks: 721
+    comments: 1941
+    blanks: 733
     files: 8
 total:
-  code: 29265
-  comments: 4698
-  blanks: 3762
+  code: 29273
+  comments: 4714
+  blanks: 3774
   files: 126
 ---
 
 ---
-{"id":313586767,"author":{"login":"remorses","id":31321188,"node_id":"MDQ6VXNlcjMxMzIxMTg4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOP-qVg84SsPRP","tag_name":"critique@0.1.140","target_commitish":"main","name":"critique@0.1.140","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-04-25T13:41:58Z","updated_at":"2026-04-25T13:43:14Z","published_at":"2026-04-25T13:43:14Z","assets":[],"body":"1. **Fixed TypeScript syntax highlighting for boundary template-literal and docstring hunks** \u2014 diffs now keep syntax colors when a hunk starts or ends inside a multi-line string. This fixes cases like the shared `cli/src/database.ts` patch where later TypeScript lines were previously rendered as plain white text.\n\n2. **Fixed `--open` on Windows and clarified temp-file help text** \u2014 `critique --open` now launches the default browser correctly on Windows, and the `--pdf`, `review --pdf`, and `--image` help text now describes temp-file locations without assuming `/tmp`.\n\n3. **Hide generated artifacts from diff views by default** \u2014 critique now ignores both `snapshot.json` and Wrangler's generated `worker-configuration.d.ts` file the same way it already ignores lockfiles, keeping reviews focused on meaningful source changes.\n\nThanks @shanselman for #40.","mentions_count":1}
+{"id":395833788,"author":{"login":"remorses","id":31321188,"node_id":"MDQ6VXNlcjMxMzIxMTg4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOP-qVg84Xl_G8","tag_name":"critique@0.2.1","target_commitish":"main","name":"critique@0.2.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-24T15:19:55Z","updated_at":"2026-09-24T15:41:12Z","published_at":"2026-09-24T15:41:12Z","assets":[],"body":"1. **Review call-flow changes alongside line diffs** with experimental `--calldiff`. Changed call trees appear beneath their source files in the terminal, web previews, PDFs, and images. Only added calls and their parent functions appear.\n\n   ```bash\n   critique --calldiff\n   critique main HEAD --calldiff --web \"Call flow changes\"\n   ```\n\n   Set `CRITIQUE_CALLDIFF=1` to enable it by default. It does not support `--staged`, `--stdin`, or `--watch`. First use can install a Tree-sitter grammar through npm.\n\n2. **See the commits included in a diff before sharing it.** Summaries show commits, files, changed lines, the base, and uncommitted work. Direct comparisons of diverged branches identify reversed commits. The TUI also shows the list. JSON uploads include `commits` and `reversedCommits`, with the text summary sent to stderr.\n\n   ```bash\n   critique main HEAD --web \"Branch changes\"\n   critique main HEAD --web \"Branch changes\" --no-commit-list\n   ```\n\n3. **Stage hunks by content-based IDs that survive unrelated edits.** Duplicate hunks use `.1`, `.2`, and so on. Old line-number IDs are no longer accepted. List again when nearby edits merge hunks.\n\n   ```bash\n   critique hunks list\n   critique hunks add 'src/main.ts:@a1b2c3d4e5f6'\n   ```\n\n4. **Complete commands and options with Tab** using live shell completions.\n\n   ```bash\n   critique completions install\n   critique completions uninstall\n   ```\n\n5. **Select Catppuccin Latte** with `critique --theme catppuccin-latte` or the `t` theme picker. Thanks @dohzya for #46!\n\n6. **Keep experimental `review` out of the main command list.** Direct invocations still work.\n\n7. **Keep syntax highlighting in partial diffs** that start inside template literals, inline snapshots, and block comments. Bare closing backticks and quoted backtick fragments now render correctly too.\n\n8. **View large diffs and repos with external diff drivers reliably.** Larger diffs no longer hit the old process output limit, and external Git diff drivers no longer cause an empty `unknown +0-0` view.\n\n9. **Find correct navigation keys in the README.** The docs now show `p`, `t`, `q`, `gg`/`G`, and half-page scrolling. They also clarify that `--web` uploads rather than creating local HTML.\n\nFixes https://github.com/remorses/critique/issues/45\nFixes https://github.com/remorses/critique/issues/48","mentions_count":1}

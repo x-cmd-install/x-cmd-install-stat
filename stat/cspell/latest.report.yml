@@ -2,28 +2,28 @@ about:
   description: "A Spell Checker for Code!"
   license: MIT
   homepage: https://cspell.org
-  head: aa762bf
+  head: 7bb5c47
   archived: false
-  latestVersion: "v10.3.4-alpha.0"
-  latestRelease: "v10.3.3"
+  latestVersion: "v10.3.4"
+  latestRelease: "v10.3.4"
   latestPrerelease: "v10.3.4-alpha.0"
-  collectedAt: 2026-09-24T04:57:08Z
+  collectedAt: 2026-09-25T05:10:42Z
 timeline:
   created: 2017-01-15
-  lastCommit: 2026-09-22
-  lastVersion: 2026-09-17
-  lastRelease: 2026-09-16
+  lastCommit: 2026-09-24
+  lastVersion: 2026-09-24
+  lastRelease: 2026-09-24
   lastPrerelease: 2026-09-17
 popularity:
-  star: 1686
+  star: 1687
   watcher: 11
-  fork: 124
-  release: 259
+  fork: 123
+  release: 260
   contributor: 86
-  pullRequest: 8675
+  pullRequest: 8677
   issue: 499
 language:
-  TypeScript: 4920182
+  TypeScript: 4920174
   C++: 552959
   TeX: 112747
   JavaScript: 92437
@@ -41,66 +41,66 @@ language:
   HTML: 468
   R: 464
   C#: 439
-totalBytes: 5774236
+totalBytes: 5774228
 recent:
   last30d:
-    since: 2026-08-25
+    since: 2026-08-26
     release: 21
-    mergedPR: 191
+    mergedPR: 185
     openPR: 6
     closedIssue: 4
     openIssue: 0
-    commit: 206
+    commit: 209
   last60d:
-    since: 2026-07-26
-    release: 22
-    mergedPR: 273
+    since: 2026-07-27
+    release: 23
+    mergedPR: 275
     openPR: 6
     closedIssue: 5
     openIssue: 0
-    commit: 313
+    commit: 316
   last90d:
-    since: 2026-06-26
-    release: 22
-    mergedPR: 295
+    since: 2026-06-27
+    release: 23
+    mergedPR: 297
     openPR: 6
     closedIssue: 6
     openIssue: 1
-    commit: 329
+    commit: 332
   last180d:
-    since: 2026-03-28
-    release: 25
-    mergedPR: 399
+    since: 2026-03-29
+    release: 26
+    mergedPR: 400
     openPR: 6
     closedIssue: 9
     openIssue: 2
-    commit: 426
+    commit: 429
   last360d:
-    since: 2025-09-29
-    release: 37
-    mergedPR: 1136
+    since: 2025-09-30
+    release: 38
+    mergedPR: 1138
     openPR: 6
     closedIssue: 26
     openIssue: 6
-    commit: 1179
+    commit: 1182
   last720d:
-    since: 2024-10-04
-    release: 71
-    mergedPR: 2408
+    since: 2024-10-05
+    release: 72
+    mergedPR: 2396
     openPR: 6
     closedIssue: 61
     openIssue: 23
-    commit: 2537
+    commit: 2540
 total:
-  release: 259
-  mergedPR: 6763
+  release: 260
+  mergedPR: 6765
   openPR: 6
   closedIssue: 396
   openIssue: 103
-  commit: 7973
+  commit: 7976
 ---
 path: /home/runner/.x-repo/github.com/streetsidesoftware/cspell
-collectedAt: 2026-09-24T04:58:51Z
+collectedAt: 2026-09-25T05:11:42Z
 loc:
   Yaml:
     code: 152122
@@ -214,8 +214,8 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 52850
-    blanks: 43010
+    comments: 53136
+    blanks: 43240
     files: 273
   Text:
     code: 0
@@ -224,8 +224,8 @@ loc:
     files: 183
 total:
   code: 279949
-  comments: 252559
-  blanks: 61193
+  comments: 252845
+  blanks: 61423
   files: 2462
 ---
 date: "2026-09-21"
@@ -405,4 +405,4 @@ checks:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Warn: 14 commits out of 26 are checked with a SAST tool'
 ---
-{"id":388996587,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBLX0j84XL53r","tag_name":"v10.3.3","target_commitish":"main","name":"v10.3.3","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-16T11:30:01Z","updated_at":"2026-09-16T11:30:05Z","published_at":"2026-09-16T11:30:05Z","assets":[],"body":"## Fixes\n\n<details>\n<summary>fix: Add `--json` option to check text for use with AI (#9254)</summary>\n\n### fix: Add `--json` option to check text for use with AI (#9254)\nThis pull request adds support for a `--json` output mode to the `check` CLI command, enabling results to be emitted as structured JSON per file. It also introduces comprehensive test coverage for the new JSON output behavior, including error handling and exit code logic.\r\n\r\n**CLI Enhancements:**\r\n\r\n- Added a `--json` flag to the `check` command, allowing users to receive results in JSON format. This includes proper handling of multiple files and error cases, such as missing files. [[1]](diffhunk://#diff-de8ed463c6df180ecc865246357f10b77889b850f68e73245990c30978098f2fL11-R13) [[2]](diffhunk://#diff-de8ed463c6df180ecc865246357f10b77889b850f68e73245990c30978098f2fR25)\r\n- Updated the exit code logic to work with both standard and JSON output, respecting the `--no-exit-code` flag. [[1]](diffhunk://#diff-de8ed463c6df180ecc865246357f10b77889b850f68e73245990c30978098f2fR42-R52) [[2]](diffhunk://#diff-de8ed463c6df180ecc865246357f10b77889b850f68e73245990c30978098f2fL65-R114)\r\n\r\n**Implementation Details:**\r\n\r\n- Introduced separate processing functions: `processRequestAnsi` for standard output and `processRequestJSON` for JSON output, with the latter aggregating results and errors per file. [[1]](diffhunk://#diff-de8ed463c6df180ecc865246357f10b77889b850f68e73245990c30978098f2fR42-R52) [[2]](diffhunk://#diff-de8ed463c6df180ecc865246357f10b77889b850f68e73245990c30978098f2fL65-R114)\r\n- Added a helper function to detect missing files and report them as JSON errors.\r\n\r\n**Testing Improvements:**\r\n\r\n- Expanded CLI test coverage to include various `--json` scenarios, such as files with spelling errors, missing files, and the interaction with `--no-exit-code`. [[1]](diffhunk://#diff-c382f7d721027eac952154bf67a6dd35b0f86f9cbddefebff13b1ea568e1fcbaR226-R230) [[2]](diffhunk://#diff-c382f7d721027eac952154bf67a6dd35b0f86f9cbddefebff13b1ea568e1fcbaR287-R340)\r\n- Added utility functions and interfaces in tests to parse and validate the JSON output.\n\n---\n\n</details>\n\n<details>\n<summary>fix: Mark ParsedTags as read only. (#9253)</summary>\n\n### fix: Mark ParsedTags as read only. (#9253)\nThis pull request makes a small but important change to the `ParsedText` interface in several files, improving type safety by marking the `tags` property as a read-only type. This ensures that the `tags` associated with a parsed text segment cannot be modified after creation.\r\n\r\n- Updated the `tags` property in the `ParsedText` interface to use `Readonly<ParsedTags>` instead of `ParsedTags`, making the tags immutable in the following files:\r\n  - `packages/cspell-types/api/Parser/index.d.mts`\r\n  - `packages/cspell-types/api/index.d.mts`\r\n  - `packages/cspell-types/src/Parser/parser.ts`\n\n---\n\n</details>\n\n<details>\n<summary>fix: Make sure Parser and DocumentParser can be used together. (#9252)</summary>\n\n### fix: Make sure Parser and DocumentParser can be used together. (#9252)\nThis pull request enhances the parser interface definitions in the `cspell-types` package to provide better flexibility and clarity for parser implementations. The main changes introduce optional `parseDocument` and `parse` methods to both the `Parser` and `DocumentParser` interfaces, across both type declaration and source files.\r\n\r\n**Parser interface enhancements:**\r\n\r\n* Added an optional `parseDocument` method to the `Parser` interface, allowing parsers to optionally implement document-based parsing. (`packages/cspell-types/api/Parser/index.d.mts` [[1]](diffhunk://#diff-8e581864afed8f70400dbe392449ab40296a78133cee216ab4ad6ef2a38981f6R115-R119) `packages/cspell-types/api/index.d.mts` [[2]](diffhunk://#diff-14f40e062c024a63c555a8565984f3d45268e79b41d2dbea8960eab1473be840R1342-R1346) `packages/cspell-types/src/Parser/parser.ts` [[3]](diffhunk://#diff-d4bedbf21c899fa1f9dc91855211fc8dd4ed7d1b54a6433514b0ca86974bbea4R12-R17)\r\n* Added an optional `parse` method to the `DocumentParser` interface, enabling parsers to optionally implement content-and-filename-based parsing. (`packages/cspell-types/api/Parser/index.d.mts` [[1]](diffhunk://#diff-8e581864afed8f70400dbe392449ab40296a78133cee216ab4ad6ef2a38981f6R136-R141) `packages/cspell-types/api/index.d.mts` [[2]](diffhunk://#diff-14f40e062c024a63c555a8565984f3d45268e79b41d2dbea8960eab1473be840R1363-R1368) `packages/cspell-types/src/Parser/parser.ts` [[3]](diffhunk://#diff-d4bedbf21c899fa1f9dc91855211fc8dd4ed7d1b54a6433514b0ca86974bbea4R39-R45)\n\n---\n\n</details>\n"}
+{"id":389865063,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBLX0j84XPN5n","tag_name":"v10.3.4","target_commitish":"main","name":"v10.3.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-24T18:09:22Z","updated_at":"2026-09-24T18:09:26Z","published_at":"2026-09-24T18:09:26Z","assets":[],"body":"## Fixes\n\n<details>\n<summary>fix: Report errors (#9267)</summary>\n\n### fix: Report errors (#9267)\nThis pull request introduces improvements to error handling and debugging information in the spell-checking workflow. The main changes focus on providing more informative error messages and ensuring that errors encountered during document processing are surfaced promptly.\r\n\r\nError handling improvements:\r\n\r\n* In `processFile` (`packages/cspell/src/lint/processFile.ts`), the function now throws the first error from `r.errors` if any are present, ensuring that errors encountered during spell checking are not silently ignored.\r\n\r\nDebugging and diagnostics:\r\n\r\n* In `resolveParser` (`packages/cspell-lib/src/lib/Settings/CSpellSettingsServer.ts`), the assertion message has been enhanced to include a list of available parsers when a requested parser is not found, making it easier to diagnose configuration issues.\n\n---\n\n</details>\n\n<details>\n<summary>fix: ParsedTag can only be boolean values for now. (#9268)</summary>\n\n### fix: ParsedTag can only be boolean values for now. (#9268)\nThis pull request updates the `ParsedTag` type throughout the codebase to remove the possibility of a `string` value, restricting it to only `boolean` or `undefined`. This change is applied consistently across type definitions and source files.\r\n\r\nNote: The is possible because it has only been an experimental feature and isn't used.\r\n\r\n**Type definition changes:**\r\n\r\n* Updated the `ParsedTag` type in `packages/cspell-types/api/Parser/index.d.mts` to only allow `boolean` or `undefined`, removing support for `string`.\r\n* Updated the `ParsedTag` type in `packages/cspell-types/api/index.d.mts` to only allow `boolean` or `undefined`, removing support for `string`.\r\n* Updated the `ParsedTag` type in `packages/cspell-types/src/Parser/parser.ts` to only allow `boolean` or `undefined`, removing support for `string`.\n\n---\n\n</details>\n\n<details>\n<summary>fix: Fix Sponsor cards on npmjs (#9260)</summary>\n\n### fix: Fix Sponsor cards on npmjs (#9260)\n\n\n---\n\n</details>\n\n\n## Dictionary Updates\n\n<details>\n<summary>fix: Workflow Bot -- Update Dictionaries (main) (#9266)</summary>\n\n### fix: Workflow Bot -- Update Dictionaries (main) (#9266)\n# Update Dictionaries (main)\n\n\n\n\n\n## Summary\n\n```\n .../snapshots/dart-lang/sdk/report.yaml            |  6 +----\n .../snapshots/dart-lang/sdk/snapshot.txt           |  4 +--\n .../snapshots/gitbucket/gitbucket/report.yaml      |  3 +--\n .../snapshots/gitbucket/gitbucket/snapshot.txt     |  3 +--\n packages/cspell-bundled-dicts/package.json         |  6 ++---\n pnpm-lock.yaml                                     | 29 +++++++++++++---------\n 6 files changed, 24 insertions(+), 27 deletions(-)\n```\n\n---\n\n</details>\n"}

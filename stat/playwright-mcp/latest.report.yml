@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.0.82"
   latestRelease: "v0.0.82"
   latestPrerelease: ""
-  collectedAt: 2026-09-24T05:10:03Z
+  collectedAt: 2026-09-25T05:20:13Z
 timeline:
   created: 2025-03-21
   lastCommit: 2026-09-18
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-09-18
   lastPrerelease: 
 popularity:
-  star: 37527
+  star: 37550
   watcher: 152
-  fork: 3192
+  fork: 3197
   release: 72
   contributor: 65
   pullRequest: 838
-  issue: 893
+  issue: 895
 language:
   TypeScript: 23542
   JavaScript: 12309
@@ -30,63 +30,63 @@ language:
 totalBytes: 44977
 recent:
   last30d:
-    since: 2026-08-25
+    since: 2026-08-26
     release: 3
     mergedPR: 14
     openPR: 1
     closedIssue: 8
-    openIssue: 4
+    openIssue: 6
     commit: 13
   last60d:
-    since: 2026-07-26
+    since: 2026-07-27
     release: 4
     mergedPR: 21
     openPR: 1
-    closedIssue: 17
-    openIssue: 4
+    closedIssue: 14
+    openIssue: 6
     commit: 23
   last90d:
-    since: 2026-06-26
+    since: 2026-06-27
     release: 6
     mergedPR: 30
     openPR: 1
     closedIssue: 25
-    openIssue: 5
+    openIssue: 7
     commit: 30
   last180d:
-    since: 2026-03-28
+    since: 2026-03-29
     release: 14
     mergedPR: 88
     openPR: 1
-    closedIssue: 102
-    openIssue: 5
+    closedIssue: 101
+    openIssue: 7
     commit: 86
   last360d:
-    since: 2025-09-29
+    since: 2025-09-30
     release: 40
-    mergedPR: 189
+    mergedPR: 188
     openPR: 1
-    closedIssue: 340
-    openIssue: 5
+    closedIssue: 338
+    openIssue: 7
     commit: 197
   last720d:
-    since: 2024-10-04
+    since: 2024-10-05
     release: 72
     mergedPR: 555
     openPR: 1
     closedIssue: 888
-    openIssue: 5
+    openIssue: 7
     commit: 588
 total:
   release: 72
   mergedPR: 556
   openPR: 1
   closedIssue: 888
-  openIssue: 5
+  openIssue: 7
   commit: 588
 ---
 path: /home/runner/.x-repo/github.com/microsoft/playwright-mcp
-collectedAt: 2026-09-24T05:10:04Z
+collectedAt: 2026-09-25T05:20:14Z
 loc:
   Json:
     code: 1373
@@ -126,4 +126,4 @@ total:
 ---
 
 ---
-{"id":391841635,"author":{"login":"pavelfeldman","id":883973,"node_id":"MDQ6VXNlcjg4Mzk3Mw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOOMjd8M4XWwdj","tag_name":"v0.0.82","target_commitish":"main","name":"v0.0.82","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-18T23:29:48Z","updated_at":"2026-09-18T23:35:04Z","published_at":"2026-09-18T23:35:04Z","assets":[],"body":"## \u2728 Highlights\r\n\r\n- **\ud83c\udfac Smooth 60 fps, styleable videos** \u2014 `browser_start_video` (opt-in via `--caps=devtools`) takes `fps`, so `fps: 60` records smooth 60 fps videos instead of the default 25, and `cursor: true` renders an animated mouse cursor that travels to each action point and stays visible between actions. `browser_video_show_actions` takes a `style` with `point`, `highlight` and `title` CSS declarations; the action point marker and the target highlight are now only shown when styled. ([microsoft/playwright#42752](https://github.com/microsoft/playwright/pull/42752), [microsoft/playwright#42758](https://github.com/microsoft/playwright/pull/42758))\r\n- **\ud83e\uddf0 WebMCP tools become real MCP tools** \u2014 the tools a page registers through the [WebMCP](https://webmachinelearning.github.io/webmcp/) API now show up right in the tool list as `webmcp_<tool>`, with the page's own input schema and annotations, so an agent can call them directly and let the page do the work instead of driving its UI. The list follows the current tab, and clients get a `tools/list_changed` notification when it changes. This replaces `browser_webmcp_list` / `browser_webmcp_call` from v0.0.81, which are no longer exposed over MCP. Tool names, descriptions, schemas and results come from the page, so treat them as untrusted input. Pass `--no-webmcp` (config `webmcp: false`, env `PLAYWRIGHT_MCP_WEBMCP=false`) to opt out. WebMCP is experimental, see [WebMCP in Chrome](https://developer.chrome.com/docs/ai/webmcp) for how to enable it. ([microsoft/playwright#42671](https://github.com/microsoft/playwright/pull/42671))\r\n- **\ud83c\udf17 Switch between light and dark color scheme** ([microsoft/playwright#42243](https://github.com/microsoft/playwright/issues/42243)) \u2014 an agent working on a dark theme had no way to see it mid-session. The new **`browser_emulate_media`** tool emulates media features on the fly: `colorScheme`, `reducedMotion`, `forcedColors`, `contrast` and the `media` type (screen / print). Omitted parameters are left unchanged, `null` clears an override. ([microsoft/playwright#42668](https://github.com/microsoft/playwright/pull/42668))\r\n- **\ud83d\udcc1 Absolute paths in results** ([microsoft/playwright#42497](https://github.com/microsoft/playwright/issues/42497)) \u2014 links to snapshots, screenshots, console logs and downloads are relative to the workspace root, which a client without one cannot resolve. Pass `--file-paths=absolute` (config `filePaths: \"absolute\"`, env `PLAYWRIGHT_MCP_FILE_PATHS=absolute`) to get absolute paths instead. ([microsoft/playwright#42673](https://github.com/microsoft/playwright/pull/42673))\r\n\r\n## \ud83d\udc1b Fixes\r\n\r\n- `fix(mcp): keep upload modal and reject bad headers` \u2014 a failed `browser_file_upload` (e.g. a missing file) reports the error and keeps the file chooser open so it can be retried, and `browser_route` (opt-in via `--caps=network`) returns an error for a header that is not in the `Name: Value` form instead of setting a header named `\"\"`. ([microsoft/playwright#42713](https://github.com/microsoft/playwright/pull/42713))\r\n- `fix(chromium): bypass service workers on the storage state page` \u2014 `browser_storage_state` (opt-in via `--caps=storage`) no longer runs the site's own scripts, or fails when they redirect, for origins with an active service worker ([microsoft/playwright#42656](https://github.com/microsoft/playwright/issues/42656)). ([microsoft/playwright#42664](https://github.com/microsoft/playwright/pull/42664), [microsoft/playwright#42741](https://github.com/microsoft/playwright/pull/42741))\r\n\r\n## \ud83d\udce6 Upgrading\r\n\r\nConfigs that use `@playwright/mcp@latest` pick this release up on the next client restart. To pin it:\r\n\r\n```bash\r\nnpx @playwright/mcp@0.0.82\r\n```\r\n"}
+{"id":391841635,"author":{"login":"pavelfeldman","id":883973,"node_id":"MDQ6VXNlcjg4Mzk3Mw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOOMjd8M4XWwdj","tag_name":"v0.0.82","target_commitish":"main","name":"v0.0.82","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-18T23:29:48Z","updated_at":"2026-09-18T23:35:04Z","published_at":"2026-09-18T23:35:04Z","assets":[],"body":"## \u2728 Highlights\r\n\r\n- **\ud83c\udfac Smooth 60 fps, styleable videos** \u2014 `browser_start_video` (opt-in via `--caps=devtools`) takes `fps`, so `fps: 60` records smooth 60 fps videos instead of the default 25, and `cursor: true` renders an animated mouse cursor that travels to each action point and stays visible between actions. `browser_video_show_actions` takes a `style` with `point`, `highlight` and `title` CSS declarations; the action point marker and the target highlight are now only shown when styled. ([microsoft/playwright#42752](https://github.com/microsoft/playwright/pull/42752), [microsoft/playwright#42758](https://github.com/microsoft/playwright/pull/42758))\r\n- **\ud83e\uddf0 WebMCP tools become real MCP tools** \u2014 the tools a page registers through the [WebMCP](https://webmachinelearning.github.io/webmcp/) API now show up right in the tool list as `webmcp_<tool>`, with the page's own input schema and annotations, so an agent can call them directly and let the page do the work instead of driving its UI. The list follows the current tab, and clients get a `tools/list_changed` notification when it changes. This replaces `browser_webmcp_list` / `browser_webmcp_call` from v0.0.81, which are no longer exposed over MCP. Tool names, descriptions, schemas and results come from the page, so treat them as untrusted input. Pass `--no-webmcp` (config `webmcp: false`, env `PLAYWRIGHT_MCP_WEBMCP=false`) to opt out. WebMCP is experimental, see [WebMCP in Chrome](https://developer.chrome.com/docs/ai/webmcp) for how to enable it. ([microsoft/playwright#42671](https://github.com/microsoft/playwright/pull/42671))\r\n- **\ud83c\udf17 Switch between light and dark color scheme** ([microsoft/playwright#42243](https://github.com/microsoft/playwright/issues/42243)) \u2014 an agent working on a dark theme had no way to see it mid-session. The new **`browser_emulate_media`** tool emulates media features on the fly: `colorScheme`, `reducedMotion`, `forcedColors`, `contrast` and the `media` type (screen / print). Omitted parameters are left unchanged, `null` clears an override. ([microsoft/playwright#42668](https://github.com/microsoft/playwright/pull/42668))\r\n- **\ud83d\udcc1 Absolute paths in results** ([microsoft/playwright#42497](https://github.com/microsoft/playwright/issues/42497)) \u2014 links to snapshots, screenshots, console logs and downloads are relative to the workspace root, which a client without one cannot resolve. Pass `--file-paths=absolute` (config `filePaths: \"absolute\"`, env `PLAYWRIGHT_MCP_FILE_PATHS=absolute`) to get absolute paths instead. ([microsoft/playwright#42673](https://github.com/microsoft/playwright/pull/42673))\r\n\r\n## \ud83d\udc1b Fixes\r\n\r\n- `fix(mcp): keep upload modal and reject bad headers` \u2014 a failed `browser_file_upload` (e.g. a missing file) reports the error and keeps the file chooser open so it can be retried, and `browser_route` (opt-in via `--caps=network`) returns an error for a header that is not in the `Name: Value` form instead of setting a header named `\"\"`. ([microsoft/playwright#42713](https://github.com/microsoft/playwright/pull/42713))\r\n- `fix(chromium): bypass service workers on the storage state page` \u2014 `browser_storage_state` (opt-in via `--caps=storage`) no longer runs the site's own scripts, or fails when they redirect, for origins with an active service worker ([microsoft/playwright#42656](https://github.com/microsoft/playwright/issues/42656)). ([microsoft/playwright#42664](https://github.com/microsoft/playwright/pull/42664), [microsoft/playwright#42741](https://github.com/microsoft/playwright/pull/42741))\r\n\r\n## \ud83d\udce6 Upgrading\r\n\r\nConfigs that use `@playwright/mcp@latest` pick this release up on the next client restart. To pin it:\r\n\r\n```bash\r\nnpx @playwright/mcp@0.0.82\r\n```\r\n","reactions":{"total_count":3,"+1":1,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":0,"rocket":1,"eyes":0}}
