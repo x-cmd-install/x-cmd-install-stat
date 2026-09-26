@@ -2,25 +2,25 @@ about:
   description: "A simple CLI and TUI driven application that offers patch reporting for remote unix systems, written in Python"
   license: MIT
   homepage: https://exosphere.tools/
-  head: e206307
+  head: 77423f8
   archived: false
-  latestVersion: "v3.0.1"
-  latestRelease: "v3.0.1"
+  latestVersion: "v3.0.2"
+  latestRelease: "v3.0.2"
   latestPrerelease: "v0.9.9"
-  collectedAt: 2026-09-25T05:07:14Z
+  collectedAt: 2026-09-26T05:14:16Z
 timeline:
   created: 2025-04-12
-  lastCommit: 2026-09-21
-  lastVersion: 2026-08-30
-  lastRelease: 2026-08-30
+  lastCommit: 2026-09-26
+  lastVersion: 2026-09-26
+  lastRelease: 2026-09-26
   lastPrerelease: 2025-07-05
 popularity:
   star: 143
   watcher: 2
   fork: 2
-  release: 28
+  release: 29
   contributor: 1
-  pullRequest: 321
+  pullRequest: 323
   issue: 61
 language:
   Python: 1012758
@@ -29,63 +29,63 @@ language:
 totalBytes: 1028534
 recent:
   last30d:
-    since: 2026-08-26
-    release: 1
-    mergedPR: 13
+    since: 2026-08-27
+    release: 2
+    mergedPR: 14
     openPR: 0
     closedIssue: 1
     openIssue: 1
-    commit: 16
+    commit: 19
   last60d:
-    since: 2026-07-27
-    release: 1
-    mergedPR: 19
+    since: 2026-07-28
+    release: 2
+    mergedPR: 21
     openPR: 0
     closedIssue: 1
     openIssue: 2
-    commit: 39
+    commit: 42
   last90d:
-    since: 2026-06-27
-    release: 2
-    mergedPR: 47
+    since: 2026-06-28
+    release: 3
+    mergedPR: 44
     openPR: 0
     closedIssue: 1
     openIssue: 3
-    commit: 65
+    commit: 68
   last180d:
-    since: 2026-03-29
-    release: 5
-    mergedPR: 118
+    since: 2026-03-30
+    release: 6
+    mergedPR: 119
     openPR: 0
     closedIssue: 10
     openIssue: 3
-    commit: 216
+    commit: 219
   last360d:
-    since: 2025-09-30
-    release: 15
-    mergedPR: 219
+    since: 2025-10-01
+    release: 16
+    mergedPR: 220
     openPR: 0
     closedIssue: 23
     openIssue: 5
-    commit: 435
+    commit: 438
   last720d:
-    since: 2024-10-05
-    release: 28
-    mergedPR: 278
+    since: 2024-10-06
+    release: 29
+    mergedPR: 280
     openPR: 0
     closedIssue: 56
     openIssue: 5
-    commit: 1080
+    commit: 1083
 total:
-  release: 28
-  mergedPR: 278
+  release: 29
+  mergedPR: 280
   openPR: 0
   closedIssue: 56
   openIssue: 5
-  commit: 1080
+  commit: 1083
 ---
 path: /home/runner/.x-repo/github.com/mrdaemon/exosphere
-collectedAt: 2026-09-25T05:07:16Z
+collectedAt: 2026-09-26T05:14:19Z
 loc:
   Python:
     code: 23636
@@ -144,20 +144,20 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 1071
-    blanks: 511
-    files: 35
+    comments: 1090
+    blanks: 520
+    files: 36
   Text:
     code: 0
-    comments: 624
+    comments: 627
     blanks: 284
     files: 11
 total:
   code: 30122
-  comments: 3328
-  blanks: 8001
-  files: 186
+  comments: 3350
+  blanks: 8010
+  files: 187
 ---
 
 ---
-{"id":379214290,"author":{"login":"mrdaemon","id":461308,"node_id":"MDQ6VXNlcjQ2MTMwOA==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOOYeHI84WmlnS","tag_name":"v3.0.1","target_commitish":"main","name":"3.0.1 - Bugfix Release","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-08-29T21:42:04Z","updated_at":"2026-08-30T07:51:25Z","published_at":"2026-08-30T07:48:38Z","assets":[],"body":"_Exosphere: A simple CLI and TUI driven application that offers patch reporting for remote unix systems_\r\n\r\nA few minor edge case bugfixes, and documentation improvements that were long overdue and missed the window for 3.0.\r\n\r\nThe [CLI Command Reference](https://exosphere.readthedocs.io/en/stable/command_reference.html) section of the documentation, in particular, has been overhauled and looks much nicer now.\r\n\r\nSome minor refactoring of internals were also performed to improve code quality and internal API robustness.\r\n\r\nAs always, the latest version is available [on PyPI](https://pypi.org/project/exosphere-cli/), and you can update by following the [instructions in the documentation](https://exosphere.readthedocs.io/en/stable/installation.html#updating-exosphere).\r\n\r\n## Bug Fixes\r\n\r\n- Fixed issue during TUI app initialization where debug logs would be discarded and warnings would fail to display correctly.\r\n- Fixed Issue where `SystemError: buffer overflow` was encountered during CLI tasks on Python 3.14 in some specific circumstances, due to an upstream Fabric bug.\r\n- Exception system should now consistently report authentication failures within user facing UI elements, instead of sometimes showing the generic Paramiko message \"Private key file is encrypted\".\r\n\r\n## Documentation\r\n\r\n- Refresh README to cover 3.0+ project structure\r\n- Fix multiple grammar, structure and rendering issues\r\n- Update the Documentation index to be in sync with the README\r\n- Document cache file locking mechanics in the [appropriate section](https://exosphere.readthedocs.io/en/stable/cachefile.html#cache-locking-concurrent-instances)\r\n- Fix issue with CLI Command Reference linking to wrong section anchors for subcommands sharing a name\r\n- Improve presentation of string literal boxes throughout the documentation\r\n- Overhaul visual structure of the [CLI Command Reference](https://exosphere.readthedocs.io/en/stable/command_reference.html) section.\r\n\r\n\r\n## What's Changed\r\n* Docs: Fix minor grammar and render nits by @mrdaemon in https://github.com/mrdaemon/exosphere/pull/336\r\n* Migrate codebase to ruff 0.16+ by @mrdaemon in https://github.com/mrdaemon/exosphere/pull/361\r\n* Fix bug resulting in SystemError during CLI operations on Python 3.14 by @mrdaemon in https://github.com/mrdaemon/exosphere/pull/362\r\n* Update uv-build requirement from <0.12.0,>=0.7.19 to >=0.7.19,<0.13.0 by @dependabot[bot] in https://github.com/mrdaemon/exosphere/pull/354\r\n* Docs: Refresh documentation post 3.0 release by @mrdaemon in https://github.com/mrdaemon/exosphere/pull/365\r\n* Move general exception handling to Host object by @mrdaemon in https://github.com/mrdaemon/exosphere/pull/366\r\n\r\n**Full Changelog**: https://github.com/mrdaemon/exosphere/compare/v3.0.0...v3.0.1","mentions_count":2}
+{"id":397043703,"author":{"login":"mrdaemon","id":461308,"node_id":"MDQ6VXNlcjQ2MTMwOA==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOOYeHI84Xqmf3","tag_name":"v3.0.2","target_commitish":"main","name":"3.0.2 - Bugfix Release","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-09-26T02:31:01Z","updated_at":"2026-09-26T02:40:48Z","published_at":"2026-09-26T02:40:48Z","assets":[],"body":"_Exosphere: A simple CLI and TUI driven application that offers patch reporting for remote unix systems_\r\n\r\nA minor change in dependencies to prevent an incompatible version of a library from being used, as well as URL changes for docs and home page.\r\n\r\n## New website\r\n\r\nExosphere now has a mini-site at [exosphere.tools](https://exosphere.tools).\r\nThe documentation has been re-homed under [docs.exosphere.tools](https://docs.exosphere.tools) for consistency, although previous readthedocs links should still continue to function.\r\n\r\nA few internal changes also improve how this information is shared between the components that make use of it, to ease any further change of that kind.\r\n\r\n## Bug Fixes\r\n\r\n- Fixed an issue where Exosphere would pull an incompatible version of a dependency on install through `pipx` or `uv tool`, resulting in exit code changes.\r\n\r\n## What's Changed\r\n\r\n* Project: Change homepage and docs urls by @mrdaemon in https://github.com/mrdaemon/exosphere/pull/369\r\n* Update documentation URLs by @mrdaemon in https://github.com/mrdaemon/exosphere/pull/371\r\n* Docs: Update spellcheck words list by @mrdaemon in https://github.com/mrdaemon/exosphere/pull/372\r\n* Update lockfile dependencies by @mrdaemon in https://github.com/mrdaemon/exosphere/pull/377\r\n* Deps: restrict cyclopts to <5.0.0 by @mrdaemon in https://github.com/mrdaemon/exosphere/pull/385\r\n* 3.0.2 Release Prep by @mrdaemon in https://github.com/mrdaemon/exosphere/pull/386\r\n\r\n\r\n**Full Changelog**: https://github.com/mrdaemon/exosphere/compare/v3.0.1...v3.0.2","mentions_count":1}

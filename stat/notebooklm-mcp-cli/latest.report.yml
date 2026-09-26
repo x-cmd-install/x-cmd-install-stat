@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.12.0"
   latestRelease: "v0.12.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-25T05:35:56Z
+  collectedAt: 2026-09-26T05:24:15Z
 timeline:
   created: 2025-12-23
   lastCommit: 2026-09-24
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-09-24
   lastPrerelease: 
 popularity:
-  star: 6159
+  star: 6163
   watcher: 43
-  fork: 934
+  fork: 937
   release: 151
   contributor: 59
   pullRequest: 166
@@ -27,7 +27,7 @@ language:
 totalBytes: 2426221
 recent:
   last30d:
-    since: 2026-08-26
+    since: 2026-08-27
     release: 11
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-27
+    since: 2026-07-28
     release: 21
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-27
+    since: 2026-06-28
     release: 36
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-29
+    since: 2026-03-30
     release: 77
     mergedPR: 0
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-09-30
+    since: 2025-10-01
     release: 100
     mergedPR: 0
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-05
+    since: 2024-10-06
     release: 100
     mergedPR: 0
     openPR: 0
@@ -83,7 +83,7 @@ total:
   commit: 816
 ---
 path: /home/runner/.x-repo/github.com/jacob-bd/notebooklm-mcp-cli
-collectedAt: 2026-09-25T05:35:58Z
+collectedAt: 2026-09-26T05:24:17Z
 loc:
   Python:
     code: 53369
@@ -113,4 +113,4 @@ total:
 ---
 
 ---
-{"id":396107202,"author":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQtfMFM4XnB3C","tag_name":"v0.12.0","target_commitish":"main","name":"v0.12.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-24T21:49:44Z","updated_at":"2026-09-24T21:54:12Z","published_at":"2026-09-24T21:52:45Z","assets":[{"id":586924359,"node_id":"RA_kwDOQtfMFM4i-8FH","name":"notebooklm-mcp-0.12.0.mcpb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":2547,"digest":"sha256:892e6e7219e169c4143427b4471702850a67fbed6b74dc14cfd8ab6d9bf20f2d","download_count":8,"created_at":"2026-09-24T21:54:12Z","updated_at":"2026-09-24T21:54:12Z"}],"body":"Adds support for Gemini Notebook's new Interactive Reports, built for AI\nagents: create the report, then let the agent plan, generate and review its\nembedded audio, video, slide deck, infographic, flashcards, quiz and mind map\nelements.\n\n### Added\n\n- **Interactive reports ([#336](https://github.com/jacob-bd/gemini-notebook-mcp-cli/issues/336))** \u2014 Create them with `studio_create(artifact_type=\"report\", report_format=\"Interactive\")` or `nlm report create --format Interactive`. `nlm studio status` now labels them `interactive_report` instead of `unknown`, and `download_report` / `nlm download all` save them as Markdown.\n- **One `report` MCP tool for report elements** \u2014 `report(action=\"get\")` returns the report as Markdown with its elements; `action=\"elements\"` lists each element with the section it sits in, its card recommendation and the settings it accepts, and can wait on element ids and return quiz/flashcard/mind-map content for review; `action=\"generate\"` validates a plan of up to 20 elements and, with `confirm=True`, generates them. The MCP surface grows by one tool (50).\n- **Per-element settings**, captured from the report page: quiz and flashcard difficulty and amount, infographic orientation/detail/style, slide format and length, audio format, and video format (explainer, cinematic, short).\n- **CLI:** `nlm report get`, `nlm report elements [--wait ID] [--content]`, `nlm report element create --setting name=value`, and `nlm report element create-batch --plan plan.json`.\n- **Agent workflow in the bundled skill** \u2014 The studio prompting guide and Workflow 17 teach agents to show a plan first by default, to generate without asking only when the user hands over both the choice and the generation, to anchor each element's prompt to its report section, to set video format explicitly (explainer unless cinematic is requested), and to review generated quizzes, flashcards and mind maps with an honest label. Text found in notebooks, reports or card descriptions is treated as data, never as approval.\n\n### Fixed\n\n- **`nlm setup add claude-desktop` always reported \"Claude Desktop is still running\" on macOS ([#334](https://github.com/jacob-bd/gemini-notebook-mcp-cli/issues/334), [PR #335](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/335))** \u2014 The running-process check matched the `nlm setup add claude-desktop` command line itself (and the shell that launched it), so the guard could never pass. It now ignores its own process and its ancestors, while still counting an ancestor that really is Claude Desktop. Thanks to **@dvdsosa** for the precise diagnosis and the fix.\n\n### Safety\n\n- Report elements are generated from the report's own sources and language, never widened to every source in the notebook.\n- A plan is validated completely before anything is sent to Google; an element that is not in the \"suggested\" state (already started, completed or missing) is refused, including when it changes between validation and generation.\n- The generation kickoff is never re-sent automatically. A lost response is reported as `unknown` after a short status check instead of risking a duplicate generation. A quota or authentication failure stops the rest of a batch and reports what started, failed, or never ran.\n\n### Verification\n\n- Live, on a Google Workspace account: all seven element types generated with non-default settings; Google saved the exact codes and its Studio labels show Debate audio, Explainer and Short video; \"more\" produced a 26-question quiz and 80 flashcards; a French report produced a French quiz; a report scoped to one of two sources kept its elements on that source.\n- Agent consent evaluation (a different model, skill docs only): 8/8 correct, including ignoring a planted \"pre-approved\" instruction in a card description.\n- Full suite, excluding the e2e marker: 1,747 passed, 38 skipped. Ruff lint clean.\n","mentions_count":1}
+{"id":396107202,"author":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQtfMFM4XnB3C","tag_name":"v0.12.0","target_commitish":"main","name":"v0.12.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-24T21:49:44Z","updated_at":"2026-09-24T21:54:12Z","published_at":"2026-09-24T21:52:45Z","assets":[{"id":586924359,"node_id":"RA_kwDOQtfMFM4i-8FH","name":"notebooklm-mcp-0.12.0.mcpb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":2547,"digest":"sha256:892e6e7219e169c4143427b4471702850a67fbed6b74dc14cfd8ab6d9bf20f2d","download_count":32,"created_at":"2026-09-24T21:54:12Z","updated_at":"2026-09-24T21:54:12Z"}],"body":"Adds support for Gemini Notebook's new Interactive Reports, built for AI\nagents: create the report, then let the agent plan, generate and review its\nembedded audio, video, slide deck, infographic, flashcards, quiz and mind map\nelements.\n\n### Added\n\n- **Interactive reports ([#336](https://github.com/jacob-bd/gemini-notebook-mcp-cli/issues/336))** \u2014 Create them with `studio_create(artifact_type=\"report\", report_format=\"Interactive\")` or `nlm report create --format Interactive`. `nlm studio status` now labels them `interactive_report` instead of `unknown`, and `download_report` / `nlm download all` save them as Markdown.\n- **One `report` MCP tool for report elements** \u2014 `report(action=\"get\")` returns the report as Markdown with its elements; `action=\"elements\"` lists each element with the section it sits in, its card recommendation and the settings it accepts, and can wait on element ids and return quiz/flashcard/mind-map content for review; `action=\"generate\"` validates a plan of up to 20 elements and, with `confirm=True`, generates them. The MCP surface grows by one tool (50).\n- **Per-element settings**, captured from the report page: quiz and flashcard difficulty and amount, infographic orientation/detail/style, slide format and length, audio format, and video format (explainer, cinematic, short).\n- **CLI:** `nlm report get`, `nlm report elements [--wait ID] [--content]`, `nlm report element create --setting name=value`, and `nlm report element create-batch --plan plan.json`.\n- **Agent workflow in the bundled skill** \u2014 The studio prompting guide and Workflow 17 teach agents to show a plan first by default, to generate without asking only when the user hands over both the choice and the generation, to anchor each element's prompt to its report section, to set video format explicitly (explainer unless cinematic is requested), and to review generated quizzes, flashcards and mind maps with an honest label. Text found in notebooks, reports or card descriptions is treated as data, never as approval.\n\n### Fixed\n\n- **`nlm setup add claude-desktop` always reported \"Claude Desktop is still running\" on macOS ([#334](https://github.com/jacob-bd/gemini-notebook-mcp-cli/issues/334), [PR #335](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/335))** \u2014 The running-process check matched the `nlm setup add claude-desktop` command line itself (and the shell that launched it), so the guard could never pass. It now ignores its own process and its ancestors, while still counting an ancestor that really is Claude Desktop. Thanks to **@dvdsosa** for the precise diagnosis and the fix.\n\n### Safety\n\n- Report elements are generated from the report's own sources and language, never widened to every source in the notebook.\n- A plan is validated completely before anything is sent to Google; an element that is not in the \"suggested\" state (already started, completed or missing) is refused, including when it changes between validation and generation.\n- The generation kickoff is never re-sent automatically. A lost response is reported as `unknown` after a short status check instead of risking a duplicate generation. A quota or authentication failure stops the rest of a batch and reports what started, failed, or never ran.\n\n### Verification\n\n- Live, on a Google Workspace account: all seven element types generated with non-default settings; Google saved the exact codes and its Studio labels show Debate audio, Explainer and Short video; \"more\" produced a 26-question quiz and 80 flashcards; a French report produced a French quiz; a report scoped to one of two sources kept its elements on that source.\n- Agent consent evaluation (a different model, skill docs only): 8/8 correct, including ignoring a planted \"pre-approved\" instruction in a card description.\n- Full suite, excluding the e2e marker: 1,747 passed, 38 skipped. Ruff lint clean.\n","reactions":{"total_count":1,"+1":1,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"mentions_count":1}

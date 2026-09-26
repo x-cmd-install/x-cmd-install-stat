@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.19.0-ff8de3d6-nightly"
   latestRelease: "v2.18.2"
   latestPrerelease: "v2.19.0-ff8de3d6-nightly"
-  collectedAt: 2026-09-25T05:18:25Z
+  collectedAt: 2026-09-26T05:15:19Z
 timeline:
   created: 2016-12-21
   lastCommit: 2026-09-20
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-17
   lastPrerelease: 2026-09-21
 popularity:
-  star: 16069
+  star: 16067
   watcher: 111
   fork: 1111
   release: 602
@@ -32,15 +32,15 @@ language:
 totalBytes: 2900518
 recent:
   last30d:
-    since: 2026-08-26
+    since: 2026-08-27
     release: 7
     mergedPR: 120
     openPR: 7
-    closedIssue: 203
+    closedIssue: 202
     openIssue: 2
     commit: 126
   last60d:
-    since: 2026-07-27
+    since: 2026-07-28
     release: 8
     mergedPR: 186
     openPR: 7
@@ -48,35 +48,35 @@ recent:
     openIssue: 3
     commit: 206
   last90d:
-    since: 2026-06-27
+    since: 2026-06-28
     release: 10
     mergedPR: 227
     openPR: 8
-    closedIssue: 218
+    closedIssue: 217
     openIssue: 3
     commit: 264
   last180d:
-    since: 2026-03-29
+    since: 2026-03-30
     release: 17
-    mergedPR: 339
+    mergedPR: 334
     openPR: 8
-    closedIssue: 240
+    closedIssue: 237
     openIssue: 3
     commit: 527
   last360d:
-    since: 2025-09-30
+    since: 2025-10-01
     release: 29
-    mergedPR: 561
+    mergedPR: 555
     openPR: 8
-    closedIssue: 276
+    closedIssue: 275
     openIssue: 3
     commit: 1042
   last720d:
-    since: 2024-10-05
+    since: 2024-10-06
     release: 57
-    mergedPR: 1203
+    mergedPR: 1202
     openPR: 9
-    closedIssue: 375
+    closedIssue: 373
     openIssue: 5
     commit: 2218
 total:
@@ -88,7 +88,7 @@ total:
   commit: 8162
 ---
 path: /home/runner/.x-repo/github.com/goreleaser/goreleaser
-collectedAt: 2026-09-25T05:18:29Z
+collectedAt: 2026-09-26T05:15:28Z
 loc:
   Go:
     code: 90459
@@ -191,7 +191,7 @@ total:
   blanks: 16428
   files: 830
 ---
-date: "2026-09-20T23:15:35Z"
+date: "2026-09-25T21:26:42Z"
 repo:
   name: github.com/goreleaser/goreleaser
   commit: ff8de3d6c38984ba20ea48e13b54d0767f123d64
@@ -200,19 +200,6 @@ scorecard:
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 8.5
 checks:
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 29 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -221,6 +208,27 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+  - name: Code-Review
+    score: 3
+    reason: Found 8/21 approved changesets -- score normalized to 3
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 29 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -257,14 +265,6 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:9'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/sbom-scan.yml:6'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:9'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Code-Review
-    score: 3
-    reason: Found 8/21 approved changesets -- score normalized to 3
-    details: null
   - name: Pinned-Dependencies
     score: 9
     reason: dependency not pinned by hash detected -- score normalized to 9
@@ -284,45 +284,6 @@ checks:
     details:
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6225'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5932'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/build.yml:210'
-  - name: Branch-Protection
-    score: 3
-    reason: branch protection is not maximal on development and all release branches
-    details:
-      - 'Info: ''allow deletion'' disabled on branch ''main'''
-      - 'Info: ''force pushes'' disabled on branch ''main'''
-      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''main'''
-      - 'Warn: ''stale review dismissal'' is disabled on branch ''main'''
-      - 'Warn: branch ''main'' does not require approvers'
-      - 'Warn: codeowners review is not required on branch ''main'''
-      - 'Warn: ''last push approval'' is disabled on branch ''main'''
-      - 'Warn: ''up-to-date branches'' is disabled on branch ''main'''
-      - 'Info: status check found to merge onto on branch ''main'''
-      - 'Info: PRs are required in order to make changes on branch ''main'''
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE.md:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE.md:0'
-  - name: Signed-Releases
-    score: 8
-    reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
-    details:
-      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/goreleaser/goreleaser/releases/tag/v2.19.0-1750aefb-nightly'
-      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/goreleaser/goreleaser/releases/tag/v2.19.0-048a5869-nightly'
-      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/goreleaser/goreleaser/releases/tag/v2.18.2'
-      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/goreleaser/goreleaser/releases/tag/v2.19.0-e6d5fc59-nightly'
-      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/goreleaser/goreleaser/releases/tag/v2.19.0-b428c4cb-nightly'
-      - 'Warn: release artifact v2.19.0-1750aefb-nightly does not have provenance: https://api.github.com/repos/goreleaser/goreleaser/releases/392274021'
-      - 'Warn: release artifact v2.19.0-048a5869-nightly does not have provenance: https://api.github.com/repos/goreleaser/goreleaser/releases/391153097'
-      - 'Warn: release artifact v2.18.2 does not have provenance: https://api.github.com/repos/goreleaser/goreleaser/releases/390418833'
-      - 'Warn: release artifact v2.19.0-e6d5fc59-nightly does not have provenance: https://api.github.com/repos/goreleaser/goreleaser/releases/390371384'
-      - 'Warn: release artifact v2.19.0-b428c4cb-nightly does not have provenance: https://api.github.com/repos/goreleaser/goreleaser/releases/389574463'
   - name: SAST
     score: 9
     reason: SAST tool detected but not run on all commits
@@ -340,13 +301,52 @@ checks:
       - 'Info: GoBuiltInFuzzer integration found: internal/tmpl/fuzz_test.go:44'
       - 'Info: GoBuiltInFuzzer integration found: internal/tmpl/fuzz_test.go:56'
       - 'Info: GoBuiltInFuzzer integration found: internal/tmpl/fuzz_test.go:68'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/build.yml:210'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE.md:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE.md:0'
+  - name: Signed-Releases
+    score: 8
+    reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
+    details:
+      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/goreleaser/goreleaser/releases/tag/v2.19.0-ff8de3d6-nightly'
+      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/goreleaser/goreleaser/releases/tag/v2.19.0-1750aefb-nightly'
+      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/goreleaser/goreleaser/releases/tag/v2.19.0-048a5869-nightly'
+      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/goreleaser/goreleaser/releases/tag/v2.18.2'
+      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/goreleaser/goreleaser/releases/tag/v2.19.0-e6d5fc59-nightly'
+      - 'Warn: release artifact v2.19.0-ff8de3d6-nightly does not have provenance: https://api.github.com/repos/goreleaser/goreleaser/releases/392640059'
+      - 'Warn: release artifact v2.19.0-1750aefb-nightly does not have provenance: https://api.github.com/repos/goreleaser/goreleaser/releases/392274021'
+      - 'Warn: release artifact v2.19.0-048a5869-nightly does not have provenance: https://api.github.com/repos/goreleaser/goreleaser/releases/391153097'
+      - 'Warn: release artifact v2.18.2 does not have provenance: https://api.github.com/repos/goreleaser/goreleaser/releases/390418833'
+      - 'Warn: release artifact v2.19.0-e6d5fc59-nightly does not have provenance: https://api.github.com/repos/goreleaser/goreleaser/releases/390371384'
+  - name: Branch-Protection
+    score: 3
+    reason: branch protection is not maximal on development and all release branches
+    details:
+      - 'Info: ''allow deletion'' disabled on branch ''main'''
+      - 'Info: ''force pushes'' disabled on branch ''main'''
+      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''main'''
+      - 'Warn: ''stale review dismissal'' is disabled on branch ''main'''
+      - 'Warn: branch ''main'' does not require approvers'
+      - 'Warn: codeowners review is not required on branch ''main'''
+      - 'Warn: ''last push approval'' is disabled on branch ''main'''
+      - 'Warn: ''up-to-date branches'' is disabled on branch ''main'''
+      - 'Info: status check found to merge onto on branch ''main'''
+      - 'Info: PRs are required in order to make changes on branch ''main'''
   - name: CI-Tests
     score: 10
     reason: 29 out of 29 merged PRs checked by a CI test -- score normalized to 10
     details: null
   - name: Contributors
     score: 10
-    reason: project has 98 contributing companies or organizations
+    reason: project has 99 contributing companies or organizations
     details:
-      - 'Info: found contributions from: 6543-forks, Calciumdibromid, DevOpsDaysChicago, EddieHubCommunity, Kithara-Software, MV-Consulting, NVIDIAGameWorks, NixOS, UpCloudLtd, actions, alexandear-org, anglo-korean, anonaddy, arresteddevops, asciidoctor, caarlos0-graveyard, catppuccin, cdfoundation, chainguard-dev, chainguard-images, chezmoi, cloudcommunity, cloudflare @sourcectl, cloudnativetr, cncf, cube-lang, datanymizer, devopsdays, distroless, docker, docker-captains, dotenv-linter, dracula, eigr, electronic arts, falcosecurity, fluxcd, fosdem-testingautomation, fossasia, getstream, gincorp, git-chglog, github, go-acme, go-gitea, go-lo, golangci, goreleaser, hackclub, hashicorp, helm, hginsights, home-assistant, honk-ci, hubci, j-and-j-global, jaegertracing, jspc-bots, ko-build, kubernetes, kubernetes-nightly, kubernetes-sigs, kvtools, librenms, libwww-perl, litewrite, magefile, moby, mv-consulting, neard, nko3, nrdcg, one-developer, openvex, padfed, portapps, prometheus-community, protobom, qvl, remotestorage, repotracer, reviewdog, rpm-software-management, self employed, serde-ml, shenv, sigstore, sourcectl, taleshape.com, thefederationinfo, tiger data, trybash, unhosted, upcloudltd, vinyl-linux, vulcand, wolfi-dev, woodpecker-ci'
+      - 'Info: found contributions from: 6543-forks, Calciumdibromid, DevOpsDaysChicago, EddieHubCommunity, Kithara-Software, MV-Consulting, NVIDIAGameWorks, NixOS, UpCloudLtd, actions, alexandear-org, anglo-korean, anonaddy, arresteddevops, asciidoctor, caarlos0-graveyard, catppuccin, cdfoundation, chainguard-dev, chainguard-images, chezmoi, cloudcommunity, cloudflare @sourcectl, cloudnativetr, cncf, cube-lang, datanymizer, devopsdays, distroless, docker, docker-captains, dotenv-linter, dracula, eigr, electronic arts, falcosecurity, fluxcd, fosdem-testingautomation, fossasia, getstream, gincorp, git-chglog, github, go-acme, go-gitea, go-lo, golangci, goreleaser, hackclub, hashicorp, helm, hginsights, home-assistant, honk-ci, hubci, j-and-j-global, jaegertracing, jspc-bots, ko-build, kubernetes, kubernetes-nightly, kubernetes-sigs, kvtools, librenms, libwww-perl, litewrite, magefile, moby, mv-consulting, neard, nko3, nrdcg, one-developer, openvex, padfed, portapps, prometheus-community, protobom, qvl, remotestorage, repotracer, reviewdog, revive-lint, rpm-software-management, self employed, serde-ml, shenv, sigstore, sourcectl, taleshape.com, thefederationinfo, tiger data, trybash, unhosted, upcloudltd, vinyl-linux, vulcand, wolfi-dev, woodpecker-ci'
 ---

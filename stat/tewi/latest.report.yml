@@ -4,21 +4,21 @@ about:
   homepage: 
   head: a3a2787
   archived: false
-  latestVersion: "v2.5.0"
-  latestRelease: "v2.5.0"
+  latestVersion: "v2.6.0"
+  latestRelease: "v2.6.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-25T04:54:28Z
+  collectedAt: 2026-09-26T04:57:56Z
 timeline:
   created: 2024-10-04
   lastCommit: 2026-09-24
-  lastVersion: 2026-07-27
-  lastRelease: 2026-07-27
+  lastVersion: 2026-09-25
+  lastRelease: 2026-09-25
   lastPrerelease: 
 popularity:
   star: 165
   watcher: 1
   fork: 1
-  release: 24
+  release: 25
   contributor: 1
   pullRequest: 89
   issue: 91
@@ -30,15 +30,15 @@ language:
 totalBytes: 634140
 recent:
   last30d:
-    since: 2026-08-26
-    release: 0
+    since: 2026-08-27
+    release: 1
     mergedPR: 2
     openPR: 1
     closedIssue: 0
     openIssue: 0
     commit: 38
   last60d:
-    since: 2026-07-27
+    since: 2026-07-28
     release: 1
     mergedPR: 3
     openPR: 1
@@ -46,39 +46,39 @@ recent:
     openIssue: 0
     commit: 39
   last90d:
-    since: 2026-06-27
-    release: 2
+    since: 2026-06-28
+    release: 3
     mergedPR: 5
     openPR: 1
     closedIssue: 0
     openIssue: 0
     commit: 53
   last180d:
-    since: 2026-03-29
-    release: 3
+    since: 2026-03-30
+    release: 4
     mergedPR: 7
     openPR: 1
     closedIssue: 3
     openIssue: 0
     commit: 65
   last360d:
-    since: 2025-09-30
-    release: 12
+    since: 2025-10-01
+    release: 13
     mergedPR: 43
     openPR: 1
     closedIssue: 41
     openIssue: 2
     commit: 340
   last720d:
-    since: 2024-10-05
-    release: 24
+    since: 2024-10-06
+    release: 25
     mergedPR: 84
     openPR: 1
     closedIssue: 89
     openIssue: 2
-    commit: 573
+    commit: 571
 total:
-  release: 24
+  release: 25
   mergedPR: 84
   openPR: 1
   closedIssue: 89
@@ -86,7 +86,7 @@ total:
   commit: 574
 ---
 path: /home/runner/.x-repo/github.com/anlar/tewi
-collectedAt: 2026-09-25T04:54:30Z
+collectedAt: 2026-09-26T04:57:58Z
 loc:
   Python:
     code: 15058
@@ -146,4 +146,4 @@ total:
 ---
 
 ---
-{"id":360624043,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOM7gUDM4Vfq-r","tag_name":"v2.5.0","target_commitish":"master","name":"v2.5.0","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-07-27T18:18:56Z","updated_at":"2026-07-27T18:20:15Z","published_at":"2026-07-27T18:20:15Z","assets":[],"body":"## [2.5.0] - 2026-07-27 - Carrot Magnet\r\n\r\n### Added\r\n\r\n- Search presets to switch between predefined indexer and category combinations via `[search.preset.NAME]` config sections [#171](https://github.com/anlar/tewi/issues/171)\r\n- Filter torrents by name via `F` hotkey in torrent list (`Esc` to clear filter) [#111](https://github.com/anlar/tewi/issues/111)\r\n- Add torrent by a bare info hash, converted to a magnet link (Transmission, qBittorrent, Deluge)\r\n- Add `--search-timeout` CLI flag and `timeout` config option in `[search]` section to configure the HTTP request timeout used by search providers (default: 30 seconds)\r\n\r\n### Changed\r\n\r\n- Fix incorrect size display in compact search view where integer sizes with trailing zeros (e.g. 680 MB) were stripped to wrong values (e.g. 68 MB)\r\n- Bitmagnet: content details request timeout is now configurable via `--search-timeout` (previously hardcoded to 5 seconds)\r\n\r\n"}
+{"id":396002337,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOM7gUDM4XmoQh","tag_name":"v2.6.0","target_commitish":"master","name":"v2.6.0","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-09-24T19:17:37Z","updated_at":"2026-09-25T06:32:52Z","published_at":"2026-09-25T06:32:52Z","assets":[],"body":"## [2.6.0] - 2026-09-24 - Hop Collector\r\n\r\n### Added\r\n\r\n- Add `--print-completion` CLI flag to generate shell completion script for bash, zsh, or tcsh\r\n- Support `${VAR_NAME}` environment variable references in config file values, useful for keeping secrets (passwords, API keys) out of the config file\r\n- Ship a pre-generated bash completion script as a package data file\r\n- Display general up/down speed limits\r\n- Add multi-select for files tab (`space` to mark a file or folder, `V` to select/clear all, `Esc` to clear selection) for priority change actions [#163](https://github.com/anlar/tewi/issues/163)\r\n- Display torrent client connection status in header bar (handle lost connection to the daemon and show time since last connection) [#134](https://github.com/anlar/tewi/issues/134)\r\n\r\n### Changed\r\n\r\n- Replace dark/light theme toggle (`d` hotkey) with theme selector (`T` hotkey), with startup theme configurable via `--theme` CLI flag and `theme` config option in `[ui]` section (default: `textual-dark`), and `--list-themes` CLI flag to list available themes\r\n- Move development dependencies from extras to PEP 735 dependency groups (`dev`, `release`), with `build` and `twine` now declared for the release targets in `Makefile`\r\n- Use `Client.free_space()` instead of deprecated `Session.download_dir_free_space` to get free space in Transmission client\r\n- Show torrent comment in details panel as clickable link when it contains only an HTTP(S) URL\r\n- Use `uv run python` instead of bare `python` in `Makefile` targets\r\n- Pad torrent sizes in list to align them by separator\r\n- Don't print terminal title escape sequence before early CLI exits (e.g. `--print-completion`, `--version`), which corrupted the printed output\r\n- Improve torrent list rendering performance by skipping layout recalculation on label updates, sizing columns via CSS instead\r\n- Align uploaded size and hide if it is empty in torrents list\r\n- Fix search preset `indexers` option so a bare `prowlarr` or `jackett` entry enables all sub-indexers of that provider\r\n- Right-align numeric columns in torrent details files, peers, and trackers tabs\r\n\r\n"}
