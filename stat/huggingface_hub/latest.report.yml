@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.0.0"
   latestRelease: "v2.0.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-26T04:43:57Z
+  collectedAt: 2026-09-27T05:06:44Z
 timeline:
   created: 2020-12-22
   lastCommit: 2026-09-25
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-09-24
   lastPrerelease: 
 popularity:
-  star: 3935
+  star: 3939
   watcher: 74
-  fork: 1226
+  fork: 1228
   release: 194
   contributor: 406
-  pullRequest: 3167
-  issue: 1690
+  pullRequest: 3168
+  issue: 1693
 language:
   Python: 4972680
   Shell: 18355
@@ -30,63 +30,63 @@ language:
 totalBytes: 5008417
 recent:
   last30d:
-    since: 2026-08-27
-    release: 6
-    mergedPR: 106
-    openPR: 17
-    closedIssue: 41
-    openIssue: 7
+    since: 2026-08-28
+    release: 5
+    mergedPR: 105
+    openPR: 18
+    closedIssue: 39
+    openIssue: 10
     commit: 105
   last60d:
-    since: 2026-07-28
+    since: 2026-07-29
     release: 11
-    mergedPR: 165
+    mergedPR: 159
     openPR: 26
-    closedIssue: 82
-    openIssue: 13
+    closedIssue: 79
+    openIssue: 16
     commit: 163
   last90d:
-    since: 2026-06-28
+    since: 2026-06-29
     release: 15
-    mergedPR: 253
-    openPR: 33
-    closedIssue: 119
-    openIssue: 16
+    mergedPR: 244
+    openPR: 34
+    closedIssue: 114
+    openIssue: 19
     commit: 257
   last180d:
-    since: 2026-03-30
+    since: 2026-03-31
     release: 36
-    mergedPR: 514
-    openPR: 37
-    closedIssue: 203
-    openIssue: 27
+    mergedPR: 508
+    openPR: 38
+    closedIssue: 202
+    openIssue: 30
     commit: 520
   last360d:
-    since: 2025-10-01
+    since: 2025-10-02
     release: 64
-    mergedPR: 850
-    openPR: 44
+    mergedPR: 849
+    openPR: 45
     closedIssue: 347
-    openIssue: 51
+    openIssue: 54
     commit: 843
   last720d:
-    since: 2024-10-06
+    since: 2024-10-07
     release: 100
-    mergedPR: 1244
-    openPR: 48
+    mergedPR: 1243
+    openPR: 49
     closedIssue: 668
-    openIssue: 74
+    openIssue: 77
     commit: 1223
 total:
   release: 194
   mergedPR: 2586
-  openPR: 48
+  openPR: 49
   closedIssue: 1573
-  openIssue: 117
+  openIssue: 120
   commit: 2797
 ---
 path: /home/runner/.x-repo/github.com/huggingface/huggingface_hub
-collectedAt: 2026-09-26T04:44:02Z
+collectedAt: 2026-09-27T05:06:51Z
 loc:
   Python:
     code: 100609
@@ -267,4 +267,4 @@ checks:
     details:
       - 'Warn: 21 commits out of 30 are checked with a SAST tool'
 ---
-{"id":395571213,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOE0mels4Xk_AN","tag_name":"v2.0.0","target_commitish":"main","name":"[v2.0.0] The httpx2 release","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-24T12:00:38Z","updated_at":"2026-09-24T12:00:56Z","published_at":"2026-09-24T11:35:51Z","assets":[],"body":"See [MIGRATION GUIDE](https://huggingface.co/docs/huggingface_hub/main/en/concepts/migration_v2) in docs.\r\n\r\n## \ud83d\udc94 Breaking Change: HTTP stack moves to `httpx2`\r\n\r\nSee migration plan in https://github.com/huggingface/huggingface_hub/issues/4802 . \r\n\r\n`huggingface_hub` v2.0 replaces its HTTP dependency with [`httpx2`](https://httpx2.pydantic.dev/): clients and transport exceptions now come from `httpx2`/`httpcore2` instead of `httpx`/`httpcore`. Custom client factories (via `set_client_factory` / `set_async_client_factory`) and any `except` clauses catching transport errors must use `httpx2` types. For code that must support both v1.x (starting with v1.30.0) and v2.x, import the HTTP module from `huggingface_hub.utils`:\r\n\r\n```python\r\nfrom huggingface_hub.utils import get_session, httpx\r\n\r\ntry:\r\n    response = get_session().get(\"https://huggingface.co/api/models/gpt2\")\r\n    response.raise_for_status()\r\nexcept httpx.HTTPError:\r\n    ...\r\n```\r\n\r\nNote that `httpx2` uses the operating system's certificate trust store by default (custom CA bundles via `SSL_CERT_FILE` / `SSL_CERT_DIR` still work), logging configuration should target the `httpx2` and `httpcore2` loggers, and the `oauth` extra now requires `authlib>=1.8.0`.\r\n\r\n- [Release] Prepare huggingface_hub 2.0 by @Wauplin in #4994\r\n- https://github.com/huggingface/huggingface_hub/pull/4921\r\n\r\n## \ud83d\udc94 Breaking Change: deprecated APIs are removed\r\n\r\nThis release also removes all APIs deprecated in 1.x:\r\n\r\n- `upload_large_folder` / `HfApi.upload_large_folder` \u2192 use `upload_folder`\r\n- `duplicate_space` \u2192 use `duplicate_repo`\r\n- `request_space_storage` / `delete_space_storage` \u2192 use the volume APIs (`set_space_volumes`, `delete_space_volumes`)\r\n- `repo_type_and_id_from_hf_id` \u2192 use `parse_hf_uri`\r\n- `InferenceEndpointType.PROTECTED` \u2192 use `AUTHENTICATED` (`create_inference_endpoint(type=\"protected\")` now raises `ValueError`)\r\n- `list_models(model_name=...)` \u2192 use `list_models(search=...)`\r\n- `create_repo` / `duplicate_repo(space_storage=...)` \u2192 use `space_volumes`\r\n- `text_generation(stop_sequences=...)` \u2192 use `stop`\r\n- Boolean `InferenceClient(token=...)` \u2192 pass a token string or `None`\r\n\r\nOn the CLI side, the following entry points and options are gone: `huggingface-cli` (use `hf`), `hf repo` and `hf repo-files delete` (use `hf repos` and `hf repos delete-files`), `hf upload-large-folder` (use `hf upload`), `hf repos create/duplicate --storage` (use `--volume`), `hf jobs ps` and `hf jobs scheduled ps -f/--filter` (use `--status`/`--label`), and `hf skills add/update --claude` (Claude Code installation is now automatic).\r\n\r\nA migration guide covering all of this is available at https://github.com/huggingface/huggingface_hub/blob/main/docs/source/en/concepts/migration_v2.md.\r\n\r\n- [Release] Prepare huggingface_hub 2.0 by @Wauplin in #4994\r\n- https://github.com/huggingface/huggingface_hub/pull/4955\r\n- https://github.com/huggingface/huggingface_hub/pull/4971\r\n- https://github.com/huggingface/huggingface_hub/pull/4985\r\n\r\n## \ud83c\udfd7\ufe0f Internal\r\n\r\n- [CI] Support major (pre-)releases in release workflow by @Wauplin in #4991\r\n- Post-release: bump version to 1.34.0.dev0 by @huggingface-hub-bot[bot] in #4993\r\n","mentions_count":1}
+{"id":395571213,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOE0mels4Xk_AN","tag_name":"v2.0.0","target_commitish":"main","name":"[v2.0.0] The httpx2 release","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-24T12:00:38Z","updated_at":"2026-09-24T12:00:56Z","published_at":"2026-09-24T11:35:51Z","assets":[],"body":"See [MIGRATION GUIDE](https://huggingface.co/docs/huggingface_hub/main/en/concepts/migration_v2) in docs.\r\n\r\n## \ud83d\udc94 Breaking Change: HTTP stack moves to `httpx2`\r\n\r\nSee migration plan in https://github.com/huggingface/huggingface_hub/issues/4802 . \r\n\r\n`huggingface_hub` v2.0 replaces its HTTP dependency with [`httpx2`](https://httpx2.pydantic.dev/): clients and transport exceptions now come from `httpx2`/`httpcore2` instead of `httpx`/`httpcore`. Custom client factories (via `set_client_factory` / `set_async_client_factory`) and any `except` clauses catching transport errors must use `httpx2` types. For code that must support both v1.x (starting with v1.30.0) and v2.x, import the HTTP module from `huggingface_hub.utils`:\r\n\r\n```python\r\nfrom huggingface_hub.utils import get_session, httpx\r\n\r\ntry:\r\n    response = get_session().get(\"https://huggingface.co/api/models/gpt2\")\r\n    response.raise_for_status()\r\nexcept httpx.HTTPError:\r\n    ...\r\n```\r\n\r\nNote that `httpx2` uses the operating system's certificate trust store by default (custom CA bundles via `SSL_CERT_FILE` / `SSL_CERT_DIR` still work), logging configuration should target the `httpx2` and `httpcore2` loggers, and the `oauth` extra now requires `authlib>=1.8.0`.\r\n\r\n- [Release] Prepare huggingface_hub 2.0 by @Wauplin in #4994\r\n- https://github.com/huggingface/huggingface_hub/pull/4921\r\n\r\n## \ud83d\udc94 Breaking Change: deprecated APIs are removed\r\n\r\nThis release also removes all APIs deprecated in 1.x:\r\n\r\n- `upload_large_folder` / `HfApi.upload_large_folder` \u2192 use `upload_folder`\r\n- `duplicate_space` \u2192 use `duplicate_repo`\r\n- `request_space_storage` / `delete_space_storage` \u2192 use the volume APIs (`set_space_volumes`, `delete_space_volumes`)\r\n- `repo_type_and_id_from_hf_id` \u2192 use `parse_hf_uri`\r\n- `InferenceEndpointType.PROTECTED` \u2192 use `AUTHENTICATED` (`create_inference_endpoint(type=\"protected\")` now raises `ValueError`)\r\n- `list_models(model_name=...)` \u2192 use `list_models(search=...)`\r\n- `create_repo` / `duplicate_repo(space_storage=...)` \u2192 use `space_volumes`\r\n- `text_generation(stop_sequences=...)` \u2192 use `stop`\r\n- Boolean `InferenceClient(token=...)` \u2192 pass a token string or `None`\r\n\r\nOn the CLI side, the following entry points and options are gone: `huggingface-cli` (use `hf`), `hf repo` and `hf repo-files delete` (use `hf repos` and `hf repos delete-files`), `hf upload-large-folder` (use `hf upload`), `hf repos create/duplicate --storage` (use `--volume`), `hf jobs ps` and `hf jobs scheduled ps -f/--filter` (use `--status`/`--label`), and `hf skills add/update --claude` (Claude Code installation is now automatic).\r\n\r\nA migration guide covering all of this is available at https://github.com/huggingface/huggingface_hub/blob/main/docs/source/en/concepts/migration_v2.md.\r\n\r\n- [Release] Prepare huggingface_hub 2.0 by @Wauplin in #4994\r\n- https://github.com/huggingface/huggingface_hub/pull/4955\r\n- https://github.com/huggingface/huggingface_hub/pull/4971\r\n- https://github.com/huggingface/huggingface_hub/pull/4985\r\n\r\n## \ud83c\udfd7\ufe0f Internal\r\n\r\n- [CI] Support major (pre-)releases in release workflow by @Wauplin in #4991\r\n- Post-release: bump version to 1.34.0.dev0 by @huggingface-hub-bot[bot] in #4993\r\n","reactions":{"total_count":6,"+1":1,"-1":0,"laugh":1,"hooray":1,"confused":0,"heart":1,"rocket":1,"eyes":1},"mentions_count":1}
