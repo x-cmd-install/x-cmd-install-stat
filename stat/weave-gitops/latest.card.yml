@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.39.1-rc.1"
   latestRelease: "v0.39.1-rc.1"
   latestPrerelease: "v0.39.0-rc.2"
-  collectedAt: 2026-09-23T05:12:49Z
+  collectedAt: 2026-09-27T05:34:33Z
 timeline:
   created: 2021-02-26
   lastCommit: 2026-01-25
@@ -38,7 +38,7 @@ language:
 totalBytes: 14902005
 recent:
   last30d:
-    since: 2026-08-24
+    since: 2026-08-28
     release: 0
     mergedPR: 0
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-25
+    since: 2026-07-29
     release: 0
     mergedPR: 0
     openPR: 0
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-25
+    since: 2026-06-29
     release: 0
     mergedPR: 0
     openPR: 0
@@ -62,23 +62,23 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-03-27
+    since: 2026-03-31
     release: 0
     mergedPR: 0
-    openPR: 16
+    openPR: 15
     closedIssue: 0
     openIssue: 1
     commit: 0
   last360d:
-    since: 2025-09-28
+    since: 2025-10-02
     release: 1
-    mergedPR: 37
+    mergedPR: 36
     openPR: 62
     closedIssue: 3
     openIssue: 2
-    commit: 0
+    commit: 51
   last720d:
-    since: 2024-10-03
+    since: 2024-10-07
     release: 3
     mergedPR: 792
     openPR: 62
@@ -94,7 +94,7 @@ total:
   commit: 5160
 ---
 path: /home/runner/.x-repo/github.com/weaveworks/weave-gitops
-collectedAt: 2026-09-23T05:13:30Z
+collectedAt: 2026-09-27T05:35:06Z
 loc:
   Yaml:
     code: 57386
@@ -202,7 +202,7 @@ total:
   blanks: 23758
   files: 1948
 ---
-date: "2026-09-19T06:20:55Z"
+date: "2026-09-26T06:27:47Z"
 repo:
   name: github.com/weaveworks/weave-gitops
   commit: 936e848c4e001355fccdfee61c0d54e4a9917183
@@ -211,23 +211,31 @@ scorecard:
   commit: c22063e786c11f9dd714d777a687ff7c4599b600
 score: 5.5
 checks:
-  - name: Code-Review
-    score: 2
-    reason: Found 2/7 approved changesets -- score normalized to 2
-    details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Dependency-Update-Tool
     score: 10
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
+  - name: Code-Review
+    score: 2
+    reason: Found 2/7 approved changesets -- score normalized to 2
+    details: null
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: SECURITY.md:1'
+      - 'Info: Found linked content: SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
+      - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -243,57 +251,60 @@ checks:
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yaml:45'
       - 'Info: found token with ''none'' permissions: .github/workflows/repostats.yaml:11'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/upgrade-flux.yaml:9'
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: SECURITY.md:1'
-      - 'Info: Found linked content: SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
-      - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 5
     reason: 'badge detected: Passing'
     details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: SAST
+    score: 8
+    reason: SAST tool is not run on all commits -- score normalized to 8
+    details:
+      - 'Warn: 24 commits out of 29 are checked with a SAST tool'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
     details:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:127: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:128: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:140: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:141: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:156: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:157: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:178: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:179: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:198: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:199: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:167: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:168: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:216: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:220: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:230: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:231: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:239: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:257: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:279: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:283: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:302: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:325: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:330: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:344: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:346: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:113: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:114: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:140: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:141: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:167: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:168: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:178: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:179: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:198: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:199: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:279: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:283: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:302: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:49: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:50: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:62: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:65: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:113: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:114: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/ci.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yaml:58: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/release.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yaml:65: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/release.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yaml:99: update your workflow using https://app.stepsecurity.io/secureworkflow/weaveworks/weave-gitops/release.yaml/main?enable=pin'
@@ -304,15 +315,10 @@ checks:
       - 'Warn: pipCommand not pinned by hash: .github/workflows/release.yaml:74'
       - 'Info:  11 out of  35 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   8 out of  19 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   1 npmCommand dependencies pinned'
-      - 'Info:   1 out of   1 goCommand dependencies pinned'
-      - 'Info:   0 out of   3 pipCommand dependencies pinned'
       - 'Info:   7 out of   7 containerImage dependencies pinned'
-  - name: SAST
-    score: 8
-    reason: SAST tool is not run on all commits -- score normalized to 8
-    details:
-      - 'Warn: 24 commits out of 29 are checked with a SAST tool'
+      - 'Info:   0 out of   1 npmCommand dependencies pinned'
+      - 'Info:   0 out of   3 pipCommand dependencies pinned'
+      - 'Info:   1 out of   1 goCommand dependencies pinned'
   - name: Signed-Releases
     score: 4
     reason: 2 out of the last 4 releases have a total of 2 signed artifacts.
@@ -325,11 +331,15 @@ checks:
       - 'Warn: release artifact 0.39.0-rc.1 does not have provenance: https://api.github.com/repos/weaveworks/weave-gitops/releases/198450435'
       - 'Warn: release artifact v0.38.0 does not have provenance: https://api.github.com/repos/weaveworks/weave-gitops/releases/132873313'
       - 'Warn: release artifact v0.37.0 does not have provenance: https://api.github.com/repos/weaveworks/weave-gitops/releases/130995303'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/ci.yaml:206'
+      - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Vulnerabilities
     score: 0
     reason: 176 existing vulnerabilities detected
@@ -510,21 +520,11 @@ checks:
       - 'Warn: Project is vulnerable to: GHSA-rxv8-25v2-qmq8'
       - 'Warn: Project is vulnerable to: GHSA-wrjc-x8rr-h8h6'
       - 'Warn: Project is vulnerable to: GHSA-48c2-rrv3-qjmp'
-  - name: License
+  - name: Packaging
     score: 10
-    reason: license file detected
+    reason: packaging workflow detected
     details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/ci.yaml:206'
   - name: CI-Tests
     score: 9
     reason: 27 out of 29 merged PRs checked by a CI test -- score normalized to 9
