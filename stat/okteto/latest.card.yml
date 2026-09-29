@@ -2,15 +2,15 @@ about:
   description: "Develop your applications directly in your Kubernetes Cluster"
   license: Apache-2.0
   homepage: https://okteto.com
-  head: 6adc7ff
+  head: a06c777
   archived: false
   latestVersion: "3.23.1-beta.1"
   latestRelease: "3.23.1"
   latestPrerelease: "3.23.1-beta.1"
-  collectedAt: 2026-09-28T06:18:09Z
+  collectedAt: 2026-09-29T06:37:55Z
 timeline:
   created: 2018-08-07
-  lastCommit: 2026-09-25
+  lastCommit: 2026-09-28
   lastVersion: 2026-09-08
   lastRelease: 2026-09-08
   lastPrerelease: 2026-09-08
@@ -20,79 +20,79 @@ popularity:
   fork: 318
   release: 570
   contributor: 79
-  pullRequest: 3624
+  pullRequest: 3628
   issue: 1486
 language:
-  Go: 4879509
+  Go: 4883615
   Shell: 40330
   Dockerfile: 9003
   Makefile: 4235
   Go Template: 560
-totalBytes: 4933637
+totalBytes: 4937743
 recent:
   last30d:
-    since: 2026-08-29
+    since: 2026-08-30
     release: 4
-    mergedPR: 25
-    openPR: 2
+    mergedPR: 27
+    openPR: 4
     closedIssue: 0
     openIssue: 3
-    commit: 18
+    commit: 20
   last60d:
-    since: 2026-07-30
+    since: 2026-07-31
     release: 7
-    mergedPR: 44
-    openPR: 2
+    mergedPR: 45
+    openPR: 4
     closedIssue: 1
     openIssue: 3
-    commit: 37
+    commit: 39
   last90d:
-    since: 2026-06-30
-    release: 13
-    mergedPR: 76
-    openPR: 2
+    since: 2026-07-01
+    release: 12
+    mergedPR: 75
+    openPR: 4
     closedIssue: 1
     openIssue: 3
-    commit: 66
+    commit: 68
   last180d:
-    since: 2026-04-01
+    since: 2026-04-02
     release: 22
-    mergedPR: 158
-    openPR: 2
+    mergedPR: 159
+    openPR: 4
     closedIssue: 1
     openIssue: 3
-    commit: 142
+    commit: 144
   last360d:
-    since: 2025-10-03
+    since: 2025-10-04
     release: 62
-    mergedPR: 314
-    openPR: 2
+    mergedPR: 316
+    openPR: 4
     closedIssue: 3
     openIssue: 4
-    commit: 277
+    commit: 279
   last720d:
-    since: 2024-10-08
+    since: 2024-10-09
     release: 100
-    mergedPR: 553
-    openPR: 2
+    mergedPR: 555
+    openPR: 4
     closedIssue: 9
     openIssue: 4
     commit: 487
 total:
   release: 570
-  mergedPR: 3346
-  openPR: 2
+  mergedPR: 3348
+  openPR: 4
   closedIssue: 1448
   openIssue: 38
-  commit: 3311
+  commit: 3313
 ---
 path: /home/runner/.x-repo/github.com/okteto/okteto
-collectedAt: 2026-09-28T06:18:13Z
+collectedAt: 2026-09-29T06:37:58Z
 loc:
   Go:
-    code: 137841
-    comments: 15857
-    blanks: 16777
+    code: 137938
+    comments: 15867
+    blanks: 16792
     files: 799
   Json:
     code: 1565
@@ -180,15 +180,15 @@ loc:
     blanks: 0
     files: 1
 total:
-  code: 142404
-  comments: 17489
-  blanks: 17959
+  code: 142501
+  comments: 17499
+  blanks: 17974
   files: 898
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/okteto/okteto
-  commit: ad42c0823762a2255d4b4ad2e53fb4ec190010e7
+  commit: a06c777dcab3ccd1fdf230a572dd6a0cfad73f8c
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -202,15 +202,15 @@ checks:
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -233,21 +233,17 @@ checks:
     score: 5
     reason: 'badge detected: Passing'
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -270,6 +266,10 @@ checks:
       - 'Warn: release artifact 3.23.0 does not have provenance: https://api.github.com/repos/okteto/okteto/releases/381369470'
       - 'Warn: release artifact 3.23.0-beta.2 does not have provenance: https://api.github.com/repos/okteto/okteto/releases/381327556'
       - 'Warn: release artifact 3.23.0-beta.1 does not have provenance: https://api.github.com/repos/okteto/okteto/releases/378426754'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Pinned-Dependencies
     score: 2
     reason: dependency not pinned by hash detected -- score normalized to 2
@@ -291,10 +291,10 @@ checks:
       - 'Warn: containerImage not pinned by hash: samples/java-maven/Dockerfile:1'
       - 'Warn: containerImage not pinned by hash: samples/java-maven/Dockerfile:6'
       - 'Warn: containerImage not pinned by hash: samples/node.js/Dockerfile:1: pin your Docker image by updating node:14-slim to node:14-slim@sha256:198142146b4c47193348f6415da769bdb5035c16fcab051c38c256a6b48f2e1c'
-      - 'Warn: containerImage not pinned by hash: samples/php/Dockerfile:1: pin your Docker image by updating php:8 to php:8@sha256:df50257c90ad9a53052fb4e9c6fdba8262cf72ca9e9a048b7c89f74c8d23fc0d'
+      - 'Warn: containerImage not pinned by hash: samples/php/Dockerfile:1: pin your Docker image by updating php:8 to php:8@sha256:19642e172d3a542225225e202ddc2c11f67bdcbddf147b676c49338609b9290f'
       - 'Warn: containerImage not pinned by hash: samples/php/Dockerfile:7'
       - 'Warn: containerImage not pinned by hash: samples/php/Dockerfile:25'
-      - 'Warn: containerImage not pinned by hash: samples/python/Dockerfile:1: pin your Docker image by updating python:3-slim to python:3-slim@sha256:caaf356f40667c496d405780745b9ac25771c189a51dfcc42430d531ea09f8a2'
+      - 'Warn: containerImage not pinned by hash: samples/python/Dockerfile:1: pin your Docker image by updating python:3-slim to python:3-slim@sha256:51dafde81dbdb6ebde285137a295cf18a47ca95234fe388a343719cb97305b3d'
       - 'Warn: containerImage not pinned by hash: samples/ruby/Dockerfile:1: pin your Docker image by updating ruby:2 to ruby:2@sha256:2347de892e419c7160fc21dec721d5952736909f8c3fbb7f84cb4a07aaf9ce7d'
       - 'Warn: containerImage not pinned by hash: samples/ruby/Dockerfile:10'
       - 'Warn: containerImage not pinned by hash: samples/ruby/Dockerfile:25: pin your Docker image by updating ruby:2 to ruby:2@sha256:2347de892e419c7160fc21dec721d5952736909f8c3fbb7f84cb4a07aaf9ce7d'

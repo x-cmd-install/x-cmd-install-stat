@@ -7,7 +7,7 @@ about:
   latestVersion: "v4.0.4"
   latestRelease: "v4.0.4"
   latestPrerelease: "v4.0.0-rc.3"
-  collectedAt: 2026-09-28T06:24:37Z
+  collectedAt: 2026-09-29T06:45:35Z
 timeline:
   created: 2015-09-04
   lastCommit: 2026-09-09
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-03-02
   lastPrerelease: 2025-02-17
 popularity:
-  star: 6352
+  star: 6354
   watcher: 17
-  fork: 163
+  fork: 164
   release: 91
   contributor: 48
   pullRequest: 296
@@ -29,7 +29,7 @@ language:
 totalBytes: 679846
 recent:
   last30d:
-    since: 2026-08-29
+    since: 2026-08-30
     release: 0
     mergedPR: 1
     openPR: 0
@@ -37,15 +37,15 @@ recent:
     openIssue: 1
     commit: 2
   last60d:
-    since: 2026-07-30
+    since: 2026-07-31
     release: 0
     mergedPR: 3
-    openPR: 2
+    openPR: 1
     closedIssue: 3
     openIssue: 1
     commit: 6
   last90d:
-    since: 2026-06-30
+    since: 2026-07-01
     release: 0
     mergedPR: 4
     openPR: 2
@@ -53,7 +53,7 @@ recent:
     openIssue: 1
     commit: 13
   last180d:
-    since: 2026-04-01
+    since: 2026-04-02
     release: 0
     mergedPR: 5
     openPR: 2
@@ -61,7 +61,7 @@ recent:
     openIssue: 3
     commit: 14
   last360d:
-    since: 2025-10-03
+    since: 2025-10-04
     release: 4
     mergedPR: 9
     openPR: 3
@@ -69,7 +69,7 @@ recent:
     openIssue: 12
     commit: 44
   last720d:
-    since: 2024-10-08
+    since: 2024-10-09
     release: 12
     mergedPR: 53
     openPR: 3
@@ -85,7 +85,7 @@ total:
   commit: 2036
 ---
 path: /home/runner/.x-repo/github.com/Nukesor/pueue
-collectedAt: 2026-09-28T06:24:38Z
+collectedAt: 2026-09-29T06:45:37Z
 loc:
   Rust:
     code: 13100
@@ -133,7 +133,7 @@ total:
   blanks: 3767
   files: 194
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/Nukesor/pueue
   commit: 193ed2264338bd30a06e347b48183a8800bd178b
@@ -154,21 +154,21 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Maintained
+    score: 10
+    reason: 17 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
-    score: 10
-    reason: 17 commit(s) and 5 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/test-report.yml:34'
       - 'Warn: jobLevel ''checks'' permission set to ''write'': .github/workflows/test-report.yml:28'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/test-report.yml:34'
       - 'Warn: no topLevel permission defined: .github/workflows/clippy.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/coverage.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/format.yml:1'
@@ -233,22 +233,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE.APACHE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE.APACHE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''main'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -261,6 +256,11 @@ checks:
       - 'Warn: release artifact v4.0.3 does not have provenance: https://api.github.com/repos/Nukesor/pueue/releases/291795096'
       - 'Warn: release artifact v4.0.2 does not have provenance: https://api.github.com/repos/Nukesor/pueue/releases/271762483'
       - 'Warn: release artifact v4.0.1 does not have provenance: https://api.github.com/repos/Nukesor/pueue/releases/230450579'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''main'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

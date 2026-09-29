@@ -7,7 +7,7 @@ about:
   latestVersion: "v12.0.0"
   latestRelease: "v12.0.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-28T05:12:49Z
+  collectedAt: 2026-09-29T05:35:17Z
 timeline:
   created: 2013-03-22
   lastCommit: 2024-02-27
@@ -28,7 +28,7 @@ language:
 totalBytes: 12826
 recent:
   last30d:
-    since: 2026-08-29
+    since: 2026-08-30
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-30
+    since: 2026-07-31
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-30
+    since: 2026-07-01
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-01
+    since: 2026-04-02
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-03
+    since: 2025-10-04
     release: 0
     mergedPR: 0
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-08
+    since: 2024-10-09
     release: 0
     mergedPR: 0
     openPR: 1
@@ -84,7 +84,7 @@ total:
   commit: 318
 ---
 path: /home/runner/.x-repo/github.com/juliangruber/browser-run
-collectedAt: 2026-09-28T05:12:49Z
+collectedAt: 2026-09-29T05:35:18Z
 loc:
   Json:
     code: 13848
@@ -117,7 +117,7 @@ total:
   blanks: 144
   files: 21
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/juliangruber/browser-run
   commit: 3e071e0a6a784aa1ed0249b3fb5317ecdf80a88b
@@ -135,23 +135,13 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
-    details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
-      - 'Info: no jobLevel write permissions found'
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Pinned-Dependencies
     score: 3
@@ -161,20 +151,30 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:13: update your workflow using https://app.stepsecurity.io/secureworkflow/juliangruber/browser-run/ci.yml/main?enable=pin'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   1 out of   1 npmCommand dependencies pinned'
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
+      - 'Info: no jobLevel write permissions found'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 0
     reason: license file not detected
     details:
       - 'Warn: project does not have a license file'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: -1
     reason: no releases found

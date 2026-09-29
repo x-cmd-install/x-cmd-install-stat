@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-09-28T05:26:28Z
+  collectedAt: 2026-09-29T05:55:57Z
 timeline:
   created: 2009-03-27
   lastCommit: 2026-09-20
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 
   lastPrerelease: 
 popularity:
-  star: 12811
+  star: 12812
   watcher: 650
-  fork: 7319
+  fork: 7320
   release: 0
   contributor: 267
   pullRequest: 2457
@@ -46,7 +46,7 @@ language:
 totalBytes: 10727866
 recent:
   last30d:
-    since: 2026-08-29
+    since: 2026-08-30
     release: 0
     mergedPR: 8
     openPR: 9
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 10
   last60d:
-    since: 2026-07-30
+    since: 2026-07-31
     release: 0
     mergedPR: 18
     openPR: 15
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 22
   last90d:
-    since: 2026-06-30
+    since: 2026-07-01
     release: 0
     mergedPR: 27
     openPR: 20
@@ -70,7 +70,7 @@ recent:
     openIssue: 0
     commit: 33
   last180d:
-    since: 2026-04-01
+    since: 2026-04-02
     release: 0
     mergedPR: 53
     openPR: 31
@@ -78,7 +78,7 @@ recent:
     openIssue: 0
     commit: 52
   last360d:
-    since: 2025-10-03
+    since: 2025-10-04
     release: 0
     mergedPR: 81
     openPR: 42
@@ -86,13 +86,13 @@ recent:
     openIssue: 0
     commit: 77
   last720d:
-    since: 2024-10-08
+    since: 2024-10-09
     release: 0
-    mergedPR: 165
+    mergedPR: 164
     openPR: 53
     closedIssue: 0
     openIssue: 0
-    commit: 157
+    commit: 156
 total:
   release: 0
   mergedPR: 335
@@ -102,7 +102,7 @@ total:
   commit: 2742
 ---
 path: /home/runner/.x-repo/github.com/apache/zookeeper
-collectedAt: 2026-09-28T05:26:40Z
+collectedAt: 2026-09-29T05:56:09Z
 loc:
   Java:
     code: 126881
@@ -250,7 +250,7 @@ total:
   blanks: 35499
   files: 1432
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/apache/zookeeper
   commit: b9818714f4790347c27f37fd49739a91b46c8e5e
@@ -272,10 +272,6 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -286,6 +282,10 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/scripts.yaml:31'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/website.yaml:27'
       - 'Info: no jobLevel write permissions found'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -305,21 +305,26 @@ checks:
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   1 out of   1 npmCommand dependencies pinned'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: OSSFuzz integration found'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE.txt:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE.txt:0'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: OSSFuzz integration found'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -328,11 +333,6 @@ checks:
       - 'Info: Found linked content: github.com/apache/.github/.github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/apache/.github/.github/SECURITY.md:1'
       - 'Info: Found text in security policy: github.com/apache/.github/.github/SECURITY.md:1'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

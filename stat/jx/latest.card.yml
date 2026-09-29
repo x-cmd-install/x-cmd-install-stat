@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.17.112"
   latestRelease: "v3.17.111"
   latestPrerelease: "v3.17.112"
-  collectedAt: 2026-09-28T06:27:26Z
+  collectedAt: 2026-09-29T06:52:55Z
 timeline:
   created: 2018-01-05
   lastCommit: 2026-09-18
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2026-09-18
   lastPrerelease: 2026-09-18
 popularity:
-  star: 4691
+  star: 4692
   watcher: 118
   fork: 790
   release: 3700
   contributor: 40
-  pullRequest: 4874
+  pullRequest: 4875
   issue: 4187
 language:
   Go: 92981
@@ -31,63 +31,63 @@ language:
 totalBytes: 109503
 recent:
   last30d:
-    since: 2026-08-29
+    since: 2026-08-30
     release: 32
     mergedPR: 26
-    openPR: 7
+    openPR: 8
     closedIssue: 0
     openIssue: 1
     commit: 22
   last60d:
-    since: 2026-07-30
-    release: 51
-    mergedPR: 40
-    openPR: 7
+    since: 2026-07-31
+    release: 46
+    mergedPR: 36
+    openPR: 8
     closedIssue: 0
     openIssue: 2
     commit: 67
   last90d:
-    since: 2026-06-30
-    release: 87
+    since: 2026-07-01
+    release: 83
     mergedPR: 78
-    openPR: 7
+    openPR: 8
     closedIssue: 0
     openIssue: 4
     commit: 160
   last180d:
-    since: 2026-04-01
+    since: 2026-04-02
     release: 100
     mergedPR: 123
-    openPR: 8
+    openPR: 9
     closedIssue: 3
     openIssue: 5
     commit: 253
   last360d:
-    since: 2025-10-03
+    since: 2025-10-04
     release: 100
     mergedPR: 160
-    openPR: 8
+    openPR: 9
     closedIssue: 3
     openIssue: 6
     commit: 324
   last720d:
-    since: 2024-10-08
+    since: 2024-10-09
     release: 100
     mergedPR: 336
-    openPR: 8
+    openPR: 9
     closedIssue: 9
     openIssue: 6
-    commit: 684
+    commit: 682
 total:
   release: 3700
   mergedPR: 4321
-  openPR: 9
+  openPR: 10
   closedIssue: 4049
   openIssue: 138
   commit: 12995
 ---
 path: /home/runner/.x-repo/github.com/jenkins-x/jx
-collectedAt: 2026-09-28T06:27:34Z
+collectedAt: 2026-09-29T06:53:02Z
 loc:
   Go:
     code: 2553
@@ -135,7 +135,7 @@ total:
   blanks: 984
   files: 86
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/jenkins-x/jx
   commit: 57d19731f810cea02f552015354986debb395835
@@ -144,9 +144,13 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 6.9
 checks:
+  - name: Code-Review
+    score: 5
+    reason: Found 8/16 approved changesets -- score normalized to 5
+    details: null
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 5 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 4 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Security-Policy
     score: 10
@@ -156,17 +160,13 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Code-Review
-    score: 5
-    reason: Found 8/16 approved changesets -- score normalized to 5
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -193,10 +193,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Pinned-Dependencies
     score: 1
     reason: dependency not pinned by hash detected -- score normalized to 1
@@ -231,8 +227,8 @@ checks:
       - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating ghcr.io/jenkins-x/jx-cli-base-image:0.1.1 to ghcr.io/jenkins-x/jx-cli-base-image:0.1.1@sha256:89d6970207c066b2757cbed2d26da6f9d51f2b1fd32a20381f3abd6372dcb85e'
       - 'Warn: containerImage not pinned by hash: Dockerfile-boot:1: pin your Docker image by updating alpine:3.16.2 to alpine:3.16.2@sha256:65a2763f593ae85fab3b5406dc9e80f744ec5b449f269b699b5efd37a07ad32e'
       - 'Warn: containerImage not pinned by hash: Dockerfile-kubectl:1: pin your Docker image by updating alpine:3.16.2 to alpine:3.16.2@sha256:65a2763f593ae85fab3b5406dc9e80f744ec5b449f269b699b5efd37a07ad32e'
-      - 'Warn: containerImage not pinned by hash: Dockerfile-tfo-aws:1: pin your Docker image by updating amazon/aws-cli to amazon/aws-cli@sha256:f42bf088cb1456ba9e179ce71fdeb22cc46ff64ea1e3aeae8251ff81391f5bb1'
-      - 'Warn: containerImage not pinned by hash: Dockerfile-tfo-gcp:1: pin your Docker image by updating google/cloud-sdk:slim to google/cloud-sdk:slim@sha256:3a4f4f351ebe7f7449c9238286b2fd3ca6707da93e1085bcb4d60cd949302f1b'
+      - 'Warn: containerImage not pinned by hash: Dockerfile-tfo-aws:1: pin your Docker image by updating amazon/aws-cli to amazon/aws-cli@sha256:fdd8d1fcbea9c371678dee5a40df8b178c7a781b4586605756ee28114c97ead6'
+      - 'Warn: containerImage not pinned by hash: Dockerfile-tfo-gcp:1: pin your Docker image by updating google/cloud-sdk:slim to google/cloud-sdk:slim@sha256:cfca8415b7ce1abccf4c7a1a9c78b4da2c3718ac668806480a4471cb052e1ca9'
       - 'Warn: goCommand not pinned by hash: hack/generate.sh:11'
       - 'Warn: pipCommand not pinned by hash: run.sh:99'
       - 'Info:   0 out of   7 GitHub-owned GitHubAction dependencies pinned'
@@ -240,6 +236,10 @@ checks:
       - 'Info:   2 out of   7 containerImage dependencies pinned'
       - 'Info:   0 out of   1 goCommand dependencies pinned'
       - 'Info:   0 out of   1 pipCommand dependencies pinned'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.

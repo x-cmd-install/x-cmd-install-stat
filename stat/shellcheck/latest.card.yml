@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.11.0"
   latestRelease: "v0.11.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-28T06:11:33Z
+  collectedAt: 2026-09-29T06:33:18Z
 timeline:
   created: 2012-11-17
   lastCommit: 2026-09-26
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2025-08-04
   lastPrerelease: 
 popularity:
-  star: 40090
+  star: 40094
   watcher: 408
   fork: 1951
   release: 30
   contributor: 170
-  pullRequest: 465
+  pullRequest: 468
   issue: 3022
 language:
   Haskell: 863197
@@ -29,63 +29,63 @@ language:
 totalBytes: 894489
 recent:
   last30d:
-    since: 2026-08-29
+    since: 2026-08-30
     release: 0
     mergedPR: 0
-    openPR: 5
+    openPR: 8
     closedIssue: 5
     openIssue: 5
     commit: 1
   last60d:
-    since: 2026-07-30
+    since: 2026-07-31
     release: 0
     mergedPR: 1
-    openPR: 11
+    openPR: 14
     closedIssue: 10
-    openIssue: 12
+    openIssue: 10
     commit: 2
   last90d:
-    since: 2026-06-30
+    since: 2026-07-01
     release: 0
     mergedPR: 3
-    openPR: 11
-    closedIssue: 15
-    openIssue: 17
+    openPR: 14
+    closedIssue: 16
+    openIssue: 16
     commit: 9
   last180d:
-    since: 2026-04-01
+    since: 2026-04-02
     release: 0
     mergedPR: 13
-    openPR: 14
+    openPR: 17
     closedIssue: 28
-    openIssue: 44
+    openIssue: 39
     commit: 21
   last360d:
-    since: 2025-10-03
+    since: 2025-10-04
     release: 0
     mergedPR: 35
-    openPR: 15
-    closedIssue: 67
-    openIssue: 89
+    openPR: 18
+    closedIssue: 68
+    openIssue: 88
     commit: 48
   last720d:
-    since: 2024-10-08
+    since: 2024-10-09
     release: 1
     mergedPR: 65
-    openPR: 16
-    closedIssue: 153
-    openIssue: 212
+    openPR: 19
+    closedIssue: 154
+    openIssue: 209
     commit: 202
 total:
   release: 30
   mergedPR: 351
-  openPR: 24
-  closedIssue: 1912
-  openIssue: 1110
+  openPR: 27
+  closedIssue: 1926
+  openIssue: 1096
   commit: 2245
 ---
 path: /home/runner/.x-repo/github.com/koalaman/shellcheck
-collectedAt: 2026-09-28T06:11:35Z
+collectedAt: 2026-09-29T06:33:20Z
 loc:
   Haskell:
     code: 16445
@@ -133,10 +133,10 @@ total:
   blanks: 2985
   files: 65
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/koalaman/shellcheck
-  commit: 5fe4d422104829b4355ab0304e62f5b611d9c38d
+  commit: 4549614bc0bba15231f9fc20cb7146c91a8758aa
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -144,11 +144,7 @@ score: 4.8
 checks:
   - name: Code-Review
     score: 7
-    reason: Found 12/16 approved changesets -- score normalized to 7
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 9 commit(s) and 4 issue activity found in the last 90 days -- score normalized to 10
+    reason: Found 13/17 approved changesets -- score normalized to 7
     details: null
   - name: Dangerous-Workflow
     score: 10
@@ -159,16 +155,20 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 10
+    reason: 11 commit(s) and 10 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/build.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -231,11 +231,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: GNU General Public License v3.0: LICENSE:0'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -250,6 +245,11 @@ checks:
       - 'Warn: release artifact v0.9.0 does not have provenance: https://api.github.com/repos/koalaman/shellcheck/releases/85822156'
       - 'Warn: release artifact v0.8.0 does not have provenance: https://api.github.com/repos/koalaman/shellcheck/releases/52860623'
       - 'Warn: release artifact v0.7.2 does not have provenance: https://api.github.com/repos/koalaman/shellcheck/releases/41675109'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Pinned-Dependencies
     score: 1
     reason: dependency not pinned by hash detected -- score normalized to 1

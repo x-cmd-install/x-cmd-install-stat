@@ -2,15 +2,15 @@ about:
   description: "Apache Maven Daemon"
   license: Apache-2.0
   homepage: https://maven.apache.org/
-  head: 9697de7
+  head: 931b0b5
   archived: false
   latestVersion: "1.0.6"
   latestRelease: "1.0.6"
   latestPrerelease: "2.0.0-rc-3"
-  collectedAt: 2026-09-28T05:32:20Z
+  collectedAt: 2026-09-29T05:52:22Z
 timeline:
   created: 2019-09-21
-  lastCommit: 2026-09-27
+  lastCommit: 2026-09-28
   lastVersion: 2026-05-30
   lastRelease: 2026-05-30
   lastPrerelease: 2025-03-14
@@ -20,7 +20,7 @@ popularity:
   fork: 250
   release: 45
   contributor: 75
-  pullRequest: 1193
+  pullRequest: 1196
   issue: 595
 language:
   Java: 754991
@@ -31,63 +31,63 @@ language:
 totalBytes: 813838
 recent:
   last30d:
-    since: 2026-08-29
+    since: 2026-08-30
     release: 0
-    mergedPR: 32
+    mergedPR: 35
     openPR: 6
     closedIssue: 0
     openIssue: 3
-    commit: 19
+    commit: 21
   last60d:
-    since: 2026-07-30
+    since: 2026-07-31
     release: 0
-    mergedPR: 80
+    mergedPR: 83
     openPR: 7
     closedIssue: 0
     openIssue: 3
-    commit: 40
+    commit: 42
   last90d:
-    since: 2026-06-30
+    since: 2026-07-01
     release: 0
     mergedPR: 100
     openPR: 9
     closedIssue: 1
     openIssue: 3
-    commit: 67
+    commit: 69
   last180d:
-    since: 2026-04-01
+    since: 2026-04-02
     release: 1
-    mergedPR: 161
+    mergedPR: 164
     openPR: 10
     closedIssue: 2
     openIssue: 3
-    commit: 104
+    commit: 106
   last360d:
-    since: 2025-10-03
+    since: 2025-10-04
     release: 3
-    mergedPR: 249
+    mergedPR: 252
     openPR: 17
     closedIssue: 7
     openIssue: 16
-    commit: 153
+    commit: 155
   last720d:
-    since: 2024-10-08
+    since: 2024-10-09
     release: 6
-    mergedPR: 434
+    mergedPR: 436
     openPR: 18
-    closedIssue: 40
+    closedIssue: 39
     openIssue: 30
-    commit: 290
+    commit: 292
 total:
   release: 45
-  mergedPR: 962
+  mergedPR: 965
   openPR: 18
   closedIssue: 462
   openIssue: 133
-  commit: 1511
+  commit: 1513
 ---
 path: /home/runner/.x-repo/github.com/apache/maven-mvnd
-collectedAt: 2026-09-28T05:32:21Z
+collectedAt: 2026-09-29T05:52:23Z
 loc:
   Java:
     code: 14536
@@ -170,10 +170,10 @@ total:
   blanks: 3250
   files: 313
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/apache/maven-mvnd
-  commit: 062337d416f1a6b4f15ad4536ed563915311d351
+  commit: 931b0b507f9f78cea4803fd7fc129f6dd5124923
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -181,11 +181,7 @@ score: 3.6
 checks:
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Code-Review
-    score: 0
-    reason: Found 0/2 approved changesets -- score normalized to 0
+    reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Security-Policy
     score: 10
@@ -195,6 +191,19 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 0
+    reason: Found 0/1 approved changesets -- score normalized to 0
+    details: null
   - name: Binary-Artifacts
     score: 0
     reason: binaries present in source code
@@ -222,15 +231,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/release.yaml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/stale.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Pinned-Dependencies
     score: 2
     reason: dependency not pinned by hash detected -- score normalized to 2
@@ -306,124 +306,124 @@ checks:
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---
-  - NOTICE.txt
-  - LICENSE.txt
-  - mvnd-bash-completion.bash
-  - platform-linux-amd64
-  - mvnd-client.conf
-  - mvnd.cmd
-  - mvnd
-  - mvnd-daemon.conf
-  - mvnd.sh
-  - README.txt
-  - NOTICE
-  - org.eclipse.sisu.plexus-1.0.0.jar
-  - httpcore-4.4.16.jar
-  - org.eclipse.sisu.inject.license
-  - javax.annotation-api.license
-  - javax.inject.license
-  - plexus-utils.license
-  - jul-to-slf4j-1.7.36.jar
-  - jansi-2.4.3.jar
-  - plexus-sec-dispatcher-2.0.jar
-  - commons-cli-1.11.0.jar
-  - failureaccess.license
-  - error_prone_annotations.license
-  - slf4j-api.license
-  - guava.license
-  - jcl-over-slf4j-1.7.36.jar
-  - maven-resolver-spi-1.9.27.jar
-  - maven-resolver-impl-1.9.27.jar
-  - maven-model-3.9.16.jar
-  - maven-repository-metadata-3.9.16.jar
-  - guice.license
-  - commons-codec.license
-  - wagon-file-3.5.3.jar
-  - jansi.license
-  - maven-shared-utils-3.4.2.jar
-  - guice-5.1.0-classes.jar
-  - plexus-cipher.license
-  - mvnd-logging-1.0.6.jar
-  - asm.license
-  - slf4j-api-1.7.36.jar
-  - jcl-over-slf4j.license
-  - plexus-sec-dispatcher.license
-  - plexus-interpolation.license
-  - maven-settings-3.9.16.jar
-  - plexus-component-annotations-2.2.0.jar
-  - httpcore.license
-  - maven-resolver-transport-file-1.9.27.jar
-  - maven-core-3.9.16.jar
-  - plexus-component-annotations.license
-  - maven-resolver-named-locks-1.9.27.jar
-  - javax.inject-1.jar
-  - README.txt
-  - README.txt
-  - README.txt
-  - maven-artifact-3.9.16.jar
-  - aopalliance.license
-  - maven-resolver-connector-basic-1.9.27.jar
-  - maven-embedder-3.9.16.jar
-  - plexus-utils-3.6.1.jar
-  - plexus-interpolation-1.29.jar
-  - wagon-http-3.5.3.jar
-  - maven-resolver-transport-http-1.9.27.jar
-  - javax.annotation-api-1.3.2.jar
-  - org.eclipse.sisu.inject-1.0.0.jar
-  - maven-plugin-api-3.9.16.jar
-  - httpclient-4.5.14.jar
-  - maven-builder-support-3.9.16.jar
-  - maven-model-builder-3.9.16.jar
-  - wagon-http-shared-3.5.3.jar
-  - gson-2.13.2.jar
-  - httpclient.license
-  - wagon-provider-api-3.5.3.jar
-  - maven-resolver-provider-3.9.16.jar
-  - maven-compat-3.9.16.jar
-  - maven-settings-builder-3.9.16.jar
-  - jspecify-1.0.0.jar
-  - README.txt
-  - jansi.dll
-  - jansi.dll
-  - jansi.dll
-  - org.eclipse.sisu.plexus.license
-  - aopalliance-1.0.jar
-  - commons-codec-1.21.0.jar
-  - failureaccess-1.0.3.jar
-  - maven-resolver-util-1.9.27.jar
-  - guava-33.6.0-jre.jar
-  - mvnd-native-1.0.6.jar
-  - takari-smart-builder-1.1.0.jar
-  - plexus-interactivity-api-1.5.1.jar
-  - mvnd-common-1.0.6.jar
-  - mvnd-helper-agent-1.0.6.jar
-  - jline-terminal-jni-3.30.13.jar
-  - jline-terminal-ffm-3.30.13.jar
-  - jline-terminal-3.30.13.jar
-  - mvnd-client-1.0.6.jar
-  - mvnd-agent-1.0.6.jar
-  - mvnd-daemon-1.0.6.jar
-  - jline-native-3.30.13.jar
-  - plexus-cipher-2.0.jar
-  - error_prone_annotations-2.41.0.jar
-  - asm-9.9.1.jar
-  - gson.license
-  - commons-cli.license
-  - maven-resolver-transport-wagon-1.9.27.jar
-  - jspecify.license
-  - maven-resolver-api-1.9.27.jar
-  - plexus-classworlds-2.11.0.jar
-  - plexus-classworlds.license
-  - mvnyjp
-  - mvnDebug
-  - mvnDebug.cmd
-  - m2.conf
-  - mvn.cmd
-  - mvn
-  - simplelogger.properties
-  - java.util.logging.properties
-  - toolchains.xml
-  - settings.xml
-  - LICENSE
   - README.adoc
   - mvnd.properties
+  - mvnd.sh
+  - mvnd-bash-completion.bash
+  - mvnd
+  - mvnd-daemon.conf
+  - mvnd-client.conf
+  - mvnd.cmd
+  - platform-linux-amd64
+  - LICENSE
+  - toolchains.xml
+  - settings.xml
+  - simplelogger.properties
+  - java.util.logging.properties
+  - mvnDebug.cmd
+  - mvnDebug
+  - mvnyjp
+  - mvn
+  - m2.conf
+  - mvn.cmd
+  - README.txt
+  - guava.license
+  - maven-settings-builder-3.9.16.jar
+  - maven-builder-support-3.9.16.jar
+  - jcl-over-slf4j-1.7.36.jar
+  - maven-resolver-api-1.9.27.jar
+  - maven-shared-utils-3.4.2.jar
+  - maven-resolver-transport-file-1.9.27.jar
+  - plexus-component-annotations.license
+  - wagon-provider-api-3.5.3.jar
+  - maven-model-builder-3.9.16.jar
+  - README.txt
+  - README.txt
+  - README.txt
+  - maven-resolver-spi-1.9.27.jar
+  - maven-core-3.9.16.jar
+  - jansi-2.4.3.jar
+  - maven-resolver-named-locks-1.9.27.jar
+  - maven-embedder-3.9.16.jar
+  - wagon-file-3.5.3.jar
+  - jansi.dll
+  - jansi.dll
+  - jansi.dll
+  - README.txt
+  - commons-cli-1.11.0.jar
+  - error_prone_annotations.license
+  - jul-to-slf4j-1.7.36.jar
+  - maven-compat-3.9.16.jar
+  - plexus-interactivity-api-1.5.1.jar
+  - mvnd-daemon-1.0.6.jar
+  - mvnd-agent-1.0.6.jar
+  - takari-smart-builder-1.1.0.jar
+  - mvnd-client-1.0.6.jar
+  - mvnd-common-1.0.6.jar
+  - jline-terminal-jni-3.30.13.jar
+  - jline-native-3.30.13.jar
+  - jline-terminal-ffm-3.30.13.jar
+  - mvnd-native-1.0.6.jar
+  - jline-terminal-3.30.13.jar
+  - mvnd-helper-agent-1.0.6.jar
+  - jspecify.license
+  - maven-artifact-3.9.16.jar
+  - org.eclipse.sisu.plexus.license
+  - maven-settings-3.9.16.jar
+  - wagon-http-shared-3.5.3.jar
+  - httpcore.license
+  - jspecify-1.0.0.jar
+  - gson-2.13.2.jar
+  - maven-model-3.9.16.jar
+  - plexus-interpolation-1.29.jar
+  - javax.inject-1.jar
+  - gson.license
+  - plexus-cipher-2.0.jar
+  - commons-codec-1.21.0.jar
+  - javax.annotation-api-1.3.2.jar
+  - asm.license
+  - plexus-cipher.license
+  - maven-resolver-impl-1.9.27.jar
+  - commons-codec.license
+  - jcl-over-slf4j.license
+  - javax.annotation-api.license
+  - javax.inject.license
+  - httpclient-4.5.14.jar
+  - plexus-utils.license
+  - aopalliance.license
+  - asm-9.9.1.jar
+  - wagon-http-3.5.3.jar
+  - httpclient.license
+  - org.eclipse.sisu.plexus-1.0.0.jar
+  - slf4j-api-1.7.36.jar
+  - maven-resolver-provider-3.9.16.jar
+  - maven-resolver-transport-wagon-1.9.27.jar
+  - plexus-interpolation.license
+  - guice-5.1.0-classes.jar
+  - jansi.license
+  - slf4j-api.license
+  - failureaccess-1.0.3.jar
+  - plexus-sec-dispatcher.license
+  - maven-resolver-connector-basic-1.9.27.jar
+  - plexus-component-annotations-2.2.0.jar
+  - error_prone_annotations-2.41.0.jar
+  - maven-plugin-api-3.9.16.jar
+  - maven-resolver-transport-http-1.9.27.jar
+  - plexus-sec-dispatcher-2.0.jar
+  - org.eclipse.sisu.inject-1.0.0.jar
+  - maven-repository-metadata-3.9.16.jar
+  - plexus-utils-3.6.1.jar
+  - org.eclipse.sisu.inject.license
+  - commons-cli.license
+  - httpcore-4.4.16.jar
+  - failureaccess.license
+  - aopalliance-1.0.jar
+  - guice.license
+  - guava-33.6.0-jre.jar
+  - maven-resolver-util-1.9.27.jar
+  - mvnd-logging-1.0.6.jar
+  - NOTICE
+  - plexus-classworlds.license
+  - plexus-classworlds-2.11.0.jar
+  - NOTICE.txt
+  - LICENSE.txt

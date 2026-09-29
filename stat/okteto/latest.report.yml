@@ -2,15 +2,15 @@ about:
   description: "Develop your applications directly in your Kubernetes Cluster"
   license: Apache-2.0
   homepage: https://okteto.com
-  head: 6adc7ff
+  head: a06c777
   archived: false
   latestVersion: "3.23.1-beta.1"
   latestRelease: "3.23.1"
   latestPrerelease: "3.23.1-beta.1"
-  collectedAt: 2026-09-28T06:18:09Z
+  collectedAt: 2026-09-29T06:37:55Z
 timeline:
   created: 2018-08-07
-  lastCommit: 2026-09-25
+  lastCommit: 2026-09-28
   lastVersion: 2026-09-08
   lastRelease: 2026-09-08
   lastPrerelease: 2026-09-08
@@ -20,79 +20,79 @@ popularity:
   fork: 318
   release: 570
   contributor: 79
-  pullRequest: 3624
+  pullRequest: 3628
   issue: 1486
 language:
-  Go: 4879509
+  Go: 4883615
   Shell: 40330
   Dockerfile: 9003
   Makefile: 4235
   Go Template: 560
-totalBytes: 4933637
+totalBytes: 4937743
 recent:
   last30d:
-    since: 2026-08-29
+    since: 2026-08-30
     release: 4
-    mergedPR: 25
-    openPR: 2
+    mergedPR: 27
+    openPR: 4
     closedIssue: 0
     openIssue: 3
-    commit: 18
+    commit: 20
   last60d:
-    since: 2026-07-30
+    since: 2026-07-31
     release: 7
-    mergedPR: 44
-    openPR: 2
+    mergedPR: 45
+    openPR: 4
     closedIssue: 1
     openIssue: 3
-    commit: 37
+    commit: 39
   last90d:
-    since: 2026-06-30
-    release: 13
-    mergedPR: 76
-    openPR: 2
+    since: 2026-07-01
+    release: 12
+    mergedPR: 75
+    openPR: 4
     closedIssue: 1
     openIssue: 3
-    commit: 66
+    commit: 68
   last180d:
-    since: 2026-04-01
+    since: 2026-04-02
     release: 22
-    mergedPR: 158
-    openPR: 2
+    mergedPR: 159
+    openPR: 4
     closedIssue: 1
     openIssue: 3
-    commit: 142
+    commit: 144
   last360d:
-    since: 2025-10-03
+    since: 2025-10-04
     release: 62
-    mergedPR: 314
-    openPR: 2
+    mergedPR: 316
+    openPR: 4
     closedIssue: 3
     openIssue: 4
-    commit: 277
+    commit: 279
   last720d:
-    since: 2024-10-08
+    since: 2024-10-09
     release: 100
-    mergedPR: 553
-    openPR: 2
+    mergedPR: 555
+    openPR: 4
     closedIssue: 9
     openIssue: 4
     commit: 487
 total:
   release: 570
-  mergedPR: 3346
-  openPR: 2
+  mergedPR: 3348
+  openPR: 4
   closedIssue: 1448
   openIssue: 38
-  commit: 3311
+  commit: 3313
 ---
 path: /home/runner/.x-repo/github.com/okteto/okteto
-collectedAt: 2026-09-28T06:18:13Z
+collectedAt: 2026-09-29T06:37:58Z
 loc:
   Go:
-    code: 137841
-    comments: 15857
-    blanks: 16777
+    code: 137938
+    comments: 15867
+    blanks: 16792
     files: 799
   Json:
     code: 1565
@@ -180,15 +180,15 @@ loc:
     blanks: 0
     files: 1
 total:
-  code: 142404
-  comments: 17489
-  blanks: 17959
+  code: 142501
+  comments: 17499
+  blanks: 17974
   files: 898
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/okteto/okteto
-  commit: ad42c0823762a2255d4b4ad2e53fb4ec190010e7
+  commit: a06c777dcab3ccd1fdf230a572dd6a0cfad73f8c
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -202,15 +202,15 @@ checks:
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -233,21 +233,17 @@ checks:
     score: 5
     reason: 'badge detected: Passing'
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -270,6 +266,10 @@ checks:
       - 'Warn: release artifact 3.23.0 does not have provenance: https://api.github.com/repos/okteto/okteto/releases/381369470'
       - 'Warn: release artifact 3.23.0-beta.2 does not have provenance: https://api.github.com/repos/okteto/okteto/releases/381327556'
       - 'Warn: release artifact 3.23.0-beta.1 does not have provenance: https://api.github.com/repos/okteto/okteto/releases/378426754'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Pinned-Dependencies
     score: 2
     reason: dependency not pinned by hash detected -- score normalized to 2
@@ -291,10 +291,10 @@ checks:
       - 'Warn: containerImage not pinned by hash: samples/java-maven/Dockerfile:1'
       - 'Warn: containerImage not pinned by hash: samples/java-maven/Dockerfile:6'
       - 'Warn: containerImage not pinned by hash: samples/node.js/Dockerfile:1: pin your Docker image by updating node:14-slim to node:14-slim@sha256:198142146b4c47193348f6415da769bdb5035c16fcab051c38c256a6b48f2e1c'
-      - 'Warn: containerImage not pinned by hash: samples/php/Dockerfile:1: pin your Docker image by updating php:8 to php:8@sha256:df50257c90ad9a53052fb4e9c6fdba8262cf72ca9e9a048b7c89f74c8d23fc0d'
+      - 'Warn: containerImage not pinned by hash: samples/php/Dockerfile:1: pin your Docker image by updating php:8 to php:8@sha256:19642e172d3a542225225e202ddc2c11f67bdcbddf147b676c49338609b9290f'
       - 'Warn: containerImage not pinned by hash: samples/php/Dockerfile:7'
       - 'Warn: containerImage not pinned by hash: samples/php/Dockerfile:25'
-      - 'Warn: containerImage not pinned by hash: samples/python/Dockerfile:1: pin your Docker image by updating python:3-slim to python:3-slim@sha256:caaf356f40667c496d405780745b9ac25771c189a51dfcc42430d531ea09f8a2'
+      - 'Warn: containerImage not pinned by hash: samples/python/Dockerfile:1: pin your Docker image by updating python:3-slim to python:3-slim@sha256:51dafde81dbdb6ebde285137a295cf18a47ca95234fe388a343719cb97305b3d'
       - 'Warn: containerImage not pinned by hash: samples/ruby/Dockerfile:1: pin your Docker image by updating ruby:2 to ruby:2@sha256:2347de892e419c7160fc21dec721d5952736909f8c3fbb7f84cb4a07aaf9ce7d'
       - 'Warn: containerImage not pinned by hash: samples/ruby/Dockerfile:10'
       - 'Warn: containerImage not pinned by hash: samples/ruby/Dockerfile:25: pin your Docker image by updating ruby:2 to ruby:2@sha256:2347de892e419c7160fc21dec721d5952736909f8c3fbb7f84cb4a07aaf9ce7d'
@@ -315,4 +315,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---
-{"id":385037103,"author":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCJLt4c4W8zMv","tag_name":"3.23.1","target_commitish":"08ad7f3b687ccd106a4581923325db48d6b07c68","name":"Okteto CLI - 3.23.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-08T19:43:07Z","updated_at":"2026-09-08T20:20:25Z","published_at":"2026-09-08T20:20:25Z","assets":[{"id":551239323,"node_id":"RA_kwDOCJLt4c4g2z6b","name":"latest","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":7,"digest":"sha256:947ca8bdf5cec21d543a67385489ef90438a02cd83dc068bc1d7f56345db6ca7","download_count":7,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:21Z"},{"id":551239325,"node_id":"RA_kwDOCJLt4c4g2z6d","name":"okteto-Darwin-arm64","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":109383602,"digest":"sha256:008e084d64836ba570d9c2b11cdba80867fff0b24879e270bd563e4bd17ee324","download_count":58,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:24Z"},{"id":551239324,"node_id":"RA_kwDOCJLt4c4g2z6c","name":"okteto-Darwin-arm64.sha256","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":90,"digest":"sha256:f826a83d120ef212730dc52d5808431fc46b05051a3bbcf49949c66ab1db7eaf","download_count":10,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:21Z"},{"id":551239329,"node_id":"RA_kwDOCJLt4c4g2z6h","name":"okteto-Darwin-x86_64","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":115963344,"digest":"sha256:370cf01686a04cb5335f9e0656f7beb48ffd35e1f93dcca51bd0611a34308df9","download_count":28,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:24Z"},{"id":551239332,"node_id":"RA_kwDOCJLt4c4g2z6k","name":"okteto-Darwin-x86_64.sha256","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":91,"digest":"sha256:6c9957475243a465e9193543601b697ccb0ef6349bdc45f58484189cc6ed19bb","download_count":10,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:21Z"},{"id":551239334,"node_id":"RA_kwDOCJLt4c4g2z6m","name":"okteto-Linux-arm64","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":104988834,"digest":"sha256:04924abe12067bfb029afbcf9811a2afad3f3679ae42d6c24d71905c4107777e","download_count":13,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:24Z"},{"id":551239331,"node_id":"RA_kwDOCJLt4c4g2z6j","name":"okteto-Linux-arm64.sha256","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":89,"digest":"sha256:176b3c2c86f1739974b9878b263fe13696f9b1173b2cc5240bf4a95d9a88519f","download_count":9,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:21Z"},{"id":551239326,"node_id":"RA_kwDOCJLt4c4g2z6e","name":"okteto-Linux-x86_64","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":112365730,"digest":"sha256:b11800775b203039a8e454a131bd35b2c3fb7b326ea83bde54439a1414a3d071","download_count":64,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:25Z"},{"id":551239337,"node_id":"RA_kwDOCJLt4c4g2z6p","name":"okteto-Linux-x86_64.sha256","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":90,"digest":"sha256:5280d3de1ae6d42416d1dd240764f4b5f7f26e80156b1b4fb61421251867f926","download_count":35,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:21Z"},{"id":551239322,"node_id":"RA_kwDOCJLt4c4g2z6a","name":"okteto.exe","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":115406848,"digest":"sha256:2663ca79dfa218d41a2c95c5ea93575e778f0ff186c4119315198047008e831a","download_count":123,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:25Z"},{"id":551239327,"node_id":"RA_kwDOCJLt4c4g2z6f","name":"okteto.exe.sha256","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":81,"digest":"sha256:e729ec812b0a1d78a2130d79affabe2937108ab2ad2222ed7ac3fbf69d005b4d","download_count":47,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:21Z"}],"body":"<!-- Release notes generated using configuration in .github/release.yml at 3.23.1 -->\n\n\n\n**Full Changelog**: https://github.com/okteto/okteto/compare/3.23.0...3.23.1"}
+{"id":385037103,"author":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCJLt4c4W8zMv","tag_name":"3.23.1","target_commitish":"08ad7f3b687ccd106a4581923325db48d6b07c68","name":"Okteto CLI - 3.23.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-08T19:43:07Z","updated_at":"2026-09-08T20:20:25Z","published_at":"2026-09-08T20:20:25Z","assets":[{"id":551239323,"node_id":"RA_kwDOCJLt4c4g2z6b","name":"latest","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":7,"digest":"sha256:947ca8bdf5cec21d543a67385489ef90438a02cd83dc068bc1d7f56345db6ca7","download_count":8,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:21Z"},{"id":551239325,"node_id":"RA_kwDOCJLt4c4g2z6d","name":"okteto-Darwin-arm64","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":109383602,"digest":"sha256:008e084d64836ba570d9c2b11cdba80867fff0b24879e270bd563e4bd17ee324","download_count":61,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:24Z"},{"id":551239324,"node_id":"RA_kwDOCJLt4c4g2z6c","name":"okteto-Darwin-arm64.sha256","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":90,"digest":"sha256:f826a83d120ef212730dc52d5808431fc46b05051a3bbcf49949c66ab1db7eaf","download_count":13,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:21Z"},{"id":551239329,"node_id":"RA_kwDOCJLt4c4g2z6h","name":"okteto-Darwin-x86_64","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":115963344,"digest":"sha256:370cf01686a04cb5335f9e0656f7beb48ffd35e1f93dcca51bd0611a34308df9","download_count":30,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:24Z"},{"id":551239332,"node_id":"RA_kwDOCJLt4c4g2z6k","name":"okteto-Darwin-x86_64.sha256","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":91,"digest":"sha256:6c9957475243a465e9193543601b697ccb0ef6349bdc45f58484189cc6ed19bb","download_count":13,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:21Z"},{"id":551239334,"node_id":"RA_kwDOCJLt4c4g2z6m","name":"okteto-Linux-arm64","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":104988834,"digest":"sha256:04924abe12067bfb029afbcf9811a2afad3f3679ae42d6c24d71905c4107777e","download_count":14,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:24Z"},{"id":551239331,"node_id":"RA_kwDOCJLt4c4g2z6j","name":"okteto-Linux-arm64.sha256","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":89,"digest":"sha256:176b3c2c86f1739974b9878b263fe13696f9b1173b2cc5240bf4a95d9a88519f","download_count":12,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:21Z"},{"id":551239326,"node_id":"RA_kwDOCJLt4c4g2z6e","name":"okteto-Linux-x86_64","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":112365730,"digest":"sha256:b11800775b203039a8e454a131bd35b2c3fb7b326ea83bde54439a1414a3d071","download_count":65,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:25Z"},{"id":551239337,"node_id":"RA_kwDOCJLt4c4g2z6p","name":"okteto-Linux-x86_64.sha256","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":90,"digest":"sha256:5280d3de1ae6d42416d1dd240764f4b5f7f26e80156b1b4fb61421251867f926","download_count":39,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:21Z"},{"id":551239322,"node_id":"RA_kwDOCJLt4c4g2z6a","name":"okteto.exe","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":115406848,"digest":"sha256:2663ca79dfa218d41a2c95c5ea93575e778f0ff186c4119315198047008e831a","download_count":134,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:25Z"},{"id":551239327,"node_id":"RA_kwDOCJLt4c4g2z6f","name":"okteto.exe.sha256","label":"","uploader":{"login":"irespaldiza","id":11633327,"node_id":"MDQ6VXNlcjExNjMzMzI3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":81,"digest":"sha256:e729ec812b0a1d78a2130d79affabe2937108ab2ad2222ed7ac3fbf69d005b4d","download_count":50,"created_at":"2026-09-08T20:20:21Z","updated_at":"2026-09-08T20:20:21Z"}],"body":"<!-- Release notes generated using configuration in .github/release.yml at 3.23.1 -->\n\n\n\n**Full Changelog**: https://github.com/okteto/okteto/compare/3.23.0...3.23.1"}

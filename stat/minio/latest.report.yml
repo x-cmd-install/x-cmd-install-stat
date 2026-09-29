@@ -7,7 +7,7 @@ about:
   latestVersion: "RELEASE.2025-10-15T17-29-55Z"
   latestRelease: "RELEASE.2025-10-15T17-29-55Z"
   latestPrerelease: ""
-  collectedAt: 2026-09-28T06:03:39Z
+  collectedAt: 2026-09-29T06:21:31Z
 timeline:
   created: 2015-01-14
   lastCommit: 2026-02-12
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2025-10-16
   lastPrerelease: 
 popularity:
-  star: 61350
+  star: 61347
   watcher: 653
-  fork: 8034
+  fork: 8046
   release: 521
   contributor: 501
   pullRequest: 11183
@@ -32,7 +32,7 @@ language:
 totalBytes: 8877933
 recent:
   last30d:
-    since: 2026-08-29
+    since: 2026-08-30
     release: 0
     mergedPR: 0
     openPR: 0
@@ -40,7 +40,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-30
+    since: 2026-07-31
     release: 0
     mergedPR: 0
     openPR: 0
@@ -48,7 +48,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-06-30
+    since: 2026-07-01
     release: 0
     mergedPR: 0
     openPR: 0
@@ -56,7 +56,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-01
+    since: 2026-04-02
     release: 0
     mergedPR: 0
     openPR: 4
@@ -64,19 +64,19 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-03
+    since: 2025-10-04
     release: 1
     mergedPR: 12
     openPR: 15
-    closedIssue: 37
+    closedIssue: 36
     openIssue: 9
     commit: 17
   last720d:
-    since: 2024-10-08
+    since: 2024-10-09
     release: 21
     mergedPR: 220
     openPR: 35
-    closedIssue: 406
+    closedIssue: 404
     openIssue: 32
     commit: 277
 total:
@@ -88,7 +88,7 @@ total:
   commit: 12565
 ---
 path: /home/runner/.x-repo/github.com/minio/minio
-collectedAt: 2026-09-28T06:03:53Z
+collectedAt: 2026-09-29T06:21:49Z
 loc:
   Go:
     code: 269881
@@ -161,7 +161,7 @@ total:
   blanks: 37572
   files: 1137
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/minio/minio
   commit: 7aac2a2c5b7c882e68c1ce017d8256be2feea27f
@@ -170,10 +170,6 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 5.1
 checks:
-  - name: Code-Review
-    score: 7
-    reason: Found 23/30 approved changesets -- score normalized to 7
-    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -182,11 +178,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Maintained
-    score: 0
-    reason: project is archived
-    details:
-      - 'Warn: Repository is archived.'
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -195,6 +186,15 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Maintained
+    score: 0
+    reason: project is archived
+    details:
+      - 'Warn: Repository is archived.'
+  - name: Code-Review
+    score: 7
+    reason: Found 23/30 approved changesets -- score normalized to 7
     details: null
   - name: Token-Permissions
     score: 0
@@ -225,17 +225,17 @@ checks:
     score: 2
     reason: 'badge detected: InProgress'
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: GNU Affero General Public License v3.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
@@ -301,7 +301,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: Dockerfile.release:1: pin your Docker image by updating golang:1.24-alpine to golang:1.24-alpine@sha256:8bee1901f1e530bfb4a7850aa7a479d17ae3a18beb6e09064ed54cfd245b7191'
       - 'Warn: containerImage not pinned by hash: Dockerfile.release:37: pin your Docker image by updating registry.access.redhat.com/ubi9/ubi-micro:latest to registry.access.redhat.com/ubi9/ubi-micro:latest@sha256:7a0454cbd9bd847e8f6a63b6f0254a6efbeb6e0ed71a5d824a4f6cccbe626650'
       - 'Warn: containerImage not pinned by hash: Dockerfile.release.old_cpu:1: pin your Docker image by updating golang:1.24-alpine to golang:1.24-alpine@sha256:8bee1901f1e530bfb4a7850aa7a479d17ae3a18beb6e09064ed54cfd245b7191'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.release.old_cpu:35: pin your Docker image by updating registry.access.redhat.com/ubi8/ubi-micro:latest to registry.access.redhat.com/ubi8/ubi-micro:latest@sha256:474100da9b79cf73efde76dabac9f8a397dea30de3b4a59e5162665ad9e14b6e'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.release.old_cpu:35: pin your Docker image by updating registry.access.redhat.com/ubi8/ubi-micro:latest to registry.access.redhat.com/ubi8/ubi-micro:latest@sha256:b2df364e16af80aa65b010decd2c0fbf96923242eabc1ae6c327753c3dc72f0c'
       - 'Warn: downloadThenRun not pinned by hash: .github/workflows/multipart/migrate.sh:34'
       - 'Warn: downloadThenRun not pinned by hash: .github/workflows/multipart/migrate.sh:35'
       - 'Warn: downloadThenRun not pinned by hash: .github/workflows/multipart/migrate.sh:37'
@@ -1064,9 +1064,9 @@ checks:
       - 'Warn: goCommand not pinned by hash: .github/workflows/vulncheck.yml:28'
       - 'Info:   0 out of  34 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   8 containerImage dependencies pinned'
       - 'Info:   3 out of   9 goCommand dependencies pinned'
       - 'Info:   0 out of 754 downloadThenRun dependencies pinned'
-      - 'Info:   0 out of   8 containerImage dependencies pinned'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

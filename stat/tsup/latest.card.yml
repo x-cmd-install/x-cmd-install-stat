@@ -7,7 +7,7 @@ about:
   latestVersion: "v8.5.1"
   latestRelease: "v8.5.1"
   latestPrerelease: ""
-  collectedAt: 2026-09-28T05:17:27Z
+  collectedAt: 2026-09-29T05:43:30Z
 timeline:
   created: 2020-03-19
   lastCommit: 2026-05-05
@@ -29,7 +29,7 @@ language:
 totalBytes: 177754
 recent:
   last30d:
-    since: 2026-08-29
+    since: 2026-08-30
     release: 0
     mergedPR: 0
     openPR: 17
@@ -37,7 +37,7 @@ recent:
     openIssue: 2
     commit: 0
   last60d:
-    since: 2026-07-30
+    since: 2026-07-31
     release: 0
     mergedPR: 0
     openPR: 17
@@ -45,7 +45,7 @@ recent:
     openIssue: 2
     commit: 0
   last90d:
-    since: 2026-06-30
+    since: 2026-07-01
     release: 0
     mergedPR: 0
     openPR: 20
@@ -53,7 +53,7 @@ recent:
     openIssue: 5
     commit: 0
   last180d:
-    since: 2026-04-01
+    since: 2026-04-02
     release: 0
     mergedPR: 0
     openPR: 27
@@ -61,7 +61,7 @@ recent:
     openIssue: 7
     commit: 1
   last360d:
-    since: 2025-10-03
+    since: 2025-10-04
     release: 1
     mergedPR: 0
     openPR: 38
@@ -69,11 +69,11 @@ recent:
     openIssue: 16
     commit: 8
   last720d:
-    since: 2024-10-08
+    since: 2024-10-09
     release: 8
     mergedPR: 19
     openPR: 59
-    closedIssue: 17
+    closedIssue: 16
     openIssue: 79
     commit: 42
 total:
@@ -85,7 +85,7 @@ total:
   commit: 780
 ---
 path: /home/runner/.x-repo/github.com/egoist/tsup
-collectedAt: 2026-09-28T05:17:29Z
+collectedAt: 2026-09-29T05:43:31Z
 loc:
   TypeScript:
     code: 5668
@@ -123,7 +123,7 @@ total:
   blanks: 1633
   files: 59
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/egoist/tsup
   commit: b6bcae8504d018cfc94203f50f15a3ce43943332
@@ -136,23 +136,32 @@ checks:
     score: 4
     reason: Found 12/29 approved changesets -- score normalized to 4
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
     details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:14'
+      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/format.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/release-continuous.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -171,30 +180,25 @@ checks:
       - 'Info:   0 out of   6 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:14'
-      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/format.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/release-continuous.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: -1
     reason: no releases found
@@ -207,10 +211,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

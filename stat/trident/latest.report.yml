@@ -7,7 +7,7 @@ about:
   latestVersion: "v26.06.1"
   latestRelease: "v26.06.1"
   latestPrerelease: "v20.01.0-beta.1"
-  collectedAt: 2026-09-28T04:22:18Z
+  collectedAt: 2026-09-29T04:52:28Z
 timeline:
   created: 2016-12-22
   lastCommit: 2026-09-21
@@ -34,7 +34,7 @@ language:
 totalBytes: 20033074
 recent:
   last30d:
-    since: 2026-08-29
+    since: 2026-08-30
     release: 0
     mergedPR: 0
     openPR: 5
@@ -42,7 +42,7 @@ recent:
     openIssue: 8
     commit: 7
   last60d:
-    since: 2026-07-30
+    since: 2026-07-31
     release: 1
     mergedPR: 0
     openPR: 6
@@ -50,15 +50,15 @@ recent:
     openIssue: 13
     commit: 26
   last90d:
-    since: 2026-06-30
-    release: 2
+    since: 2026-07-01
+    release: 1
     mergedPR: 0
     openPR: 10
     closedIssue: 2
     openIssue: 20
     commit: 43
   last180d:
-    since: 2026-04-01
+    since: 2026-04-02
     release: 3
     mergedPR: 0
     openPR: 16
@@ -66,7 +66,7 @@ recent:
     openIssue: 35
     commit: 110
   last360d:
-    since: 2025-10-03
+    since: 2025-10-04
     release: 6
     mergedPR: 0
     openPR: 19
@@ -74,13 +74,13 @@ recent:
     openIssue: 61
     commit: 252
   last720d:
-    since: 2024-10-08
+    since: 2024-10-09
     release: 13
     mergedPR: 0
     openPR: 31
     closedIssue: 91
     openIssue: 119
-    commit: 483
+    commit: 481
 total:
   release: 75
   mergedPR: 4
@@ -90,7 +90,7 @@ total:
   commit: 1889
 ---
 path: /home/runner/.x-repo/github.com/NetApp/trident
-collectedAt: 2026-09-28T04:22:33Z
+collectedAt: 2026-09-29T04:52:41Z
 loc:
   Go:
     code: 2088752
@@ -153,15 +153,20 @@ total:
   blanks: 584630
   files: 6006
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/NetApp/trident
-  commit: 211afce836eedda13f8b547f2ab01fbb1c7e4f64
+  commit: 2782b255d2567085997e06f9c8493234d917a1cd
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.8
 checks:
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
@@ -170,11 +175,6 @@ checks:
     score: 0
     reason: Found 0/30 approved changesets -- score normalized to 0
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -183,9 +183,9 @@ checks:
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:40'
       - 'Info: jobLevel ''packages'' permission set to ''read'': .github/workflows/codeql.yml:36'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql.yml:39'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:40'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/backport-on-merge.yml:19'
       - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/changelog-label-check.yml:13'
       - 'Warn: no topLevel permission defined: .github/workflows/codeql.yml:1'
@@ -225,10 +225,6 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -243,6 +239,10 @@ checks:
       - 'Warn: release artifact v26.02.1 does not have provenance: https://api.github.com/repos/NetApp/trident/releases/318092824'
       - 'Warn: release artifact v26.02.0 does not have provenance: https://api.github.com/repos/NetApp/trident/releases/291163241'
       - 'Warn: release artifact v25.06.3 does not have provenance: https://api.github.com/repos/NetApp/trident/releases/261588961'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
@@ -276,4 +276,4 @@ checks:
       - 'Info:   0 out of   5 containerImage dependencies pinned'
       - 'Info:   0 out of   1 goCommand dependencies pinned'
 ---
-{"id":373344191,"author":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBJmq8s4WQMe_","tag_name":"v26.06.1","target_commitish":"4c655f64cffa82f9d90c80ea5672658b2bbb45f5","name":"v26.06.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-17T23:22:06Z","updated_at":"2026-08-19T21:05:58Z","published_at":"2026-08-19T21:05:58Z","assets":[{"id":521334219,"node_id":"RA_kwDOBJmq8s4fEu3L","name":"trident-installer-26.06.1.tar.gz","label":"","uploader":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":111017635,"digest":"sha256:606752c85238cb0d54121ecaf811bca0d5adea80247f9b55d2a12238d8e8bf04","download_count":2563,"created_at":"2026-08-19T20:52:37Z","updated_at":"2026-08-19T20:52:40Z"}],"body":"## Changes since v26.06.0\r\n\r\n### Trident\r\n\r\n**Fixes:**\r\n\r\n- **Kubernetes:** Fixed a race between CSI publish and volume move that could attach a volume using stale access information.\r\n- **Kubernetes:** Fixed a race where `NodeGetInfo` could return empty topology labels before node registration completed, causing topology-aware provisioning failures.\r\n- **Kubernetes:** Fixed a rare NVMe disconnect race that could tear down a shared subsystem while another pod was still attaching.\r\n- **Kubernetes:** Fixed NVMe PVC clone publish failures (and incorrect parent-namespace mapping) when creating clones of a mounted volume under concurrency.\r\n- **Kubernetes:** Fixed snapshot creation failures for PVCs on ONTAP-SAN-Economy backends using a `nameTemplate`.\r\n\r\n**Enhancements:**\r\n\r\n- Added optional `storageAPITimeout` (seconds) on ONTAP backend config to set REST and ZAPI API client timeouts per backend."}
+{"id":373344191,"author":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBJmq8s4WQMe_","tag_name":"v26.06.1","target_commitish":"4c655f64cffa82f9d90c80ea5672658b2bbb45f5","name":"v26.06.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-17T23:22:06Z","updated_at":"2026-08-19T21:05:58Z","published_at":"2026-08-19T21:05:58Z","assets":[{"id":521334219,"node_id":"RA_kwDOBJmq8s4fEu3L","name":"trident-installer-26.06.1.tar.gz","label":"","uploader":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":111017635,"digest":"sha256:606752c85238cb0d54121ecaf811bca0d5adea80247f9b55d2a12238d8e8bf04","download_count":2647,"created_at":"2026-08-19T20:52:37Z","updated_at":"2026-08-19T20:52:40Z"}],"body":"## Changes since v26.06.0\r\n\r\n### Trident\r\n\r\n**Fixes:**\r\n\r\n- **Kubernetes:** Fixed a race between CSI publish and volume move that could attach a volume using stale access information.\r\n- **Kubernetes:** Fixed a race where `NodeGetInfo` could return empty topology labels before node registration completed, causing topology-aware provisioning failures.\r\n- **Kubernetes:** Fixed a rare NVMe disconnect race that could tear down a shared subsystem while another pod was still attaching.\r\n- **Kubernetes:** Fixed NVMe PVC clone publish failures (and incorrect parent-namespace mapping) when creating clones of a mounted volume under concurrency.\r\n- **Kubernetes:** Fixed snapshot creation failures for PVCs on ONTAP-SAN-Economy backends using a `nameTemplate`.\r\n\r\n**Enhancements:**\r\n\r\n- Added optional `storageAPITimeout` (seconds) on ONTAP backend config to set REST and ZAPI API client timeouts per backend."}
