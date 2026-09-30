@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.4.0"
   latestRelease: "v2.4.0"
   latestPrerelease: "v2.4.0-rc.0"
-  collectedAt: 2026-09-29T06:52:26Z
+  collectedAt: 2026-09-30T06:35:37Z
 timeline:
   created: 2020-12-04
   lastCommit: 2026-09-28
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2026-09-20
   lastPrerelease: 2026-09-18
 popularity:
-  star: 10399
+  star: 10405
   watcher: 46
-  fork: 832
+  fork: 834
   release: 98
   contributor: 262
-  pullRequest: 3545
+  pullRequest: 3546
   issue: 1453
 language:
   Go: 4155569
@@ -32,63 +32,63 @@ language:
 totalBytes: 4336681
 recent:
   last30d:
-    since: 2026-08-30
+    since: 2026-08-31
     release: 2
-    mergedPR: 45
-    openPR: 11
+    mergedPR: 41
+    openPR: 12
     closedIssue: 7
     openIssue: 3
     commit: 66
   last60d:
-    since: 2026-07-31
+    since: 2026-08-01
     release: 3
-    mergedPR: 84
-    openPR: 12
+    mergedPR: 80
+    openPR: 13
     closedIssue: 11
     openIssue: 4
     commit: 107
   last90d:
-    since: 2026-07-01
+    since: 2026-07-02
     release: 4
-    mergedPR: 145
-    openPR: 14
+    mergedPR: 140
+    openPR: 15
     closedIssue: 19
     openIssue: 7
     commit: 170
   last180d:
-    since: 2026-04-02
+    since: 2026-04-03
     release: 10
-    mergedPR: 295
-    openPR: 20
+    mergedPR: 294
+    openPR: 21
     closedIssue: 43
     openIssue: 14
     commit: 362
   last360d:
-    since: 2025-10-04
+    since: 2025-10-05
     release: 14
     mergedPR: 494
-    openPR: 27
+    openPR: 28
     closedIssue: 78
     openIssue: 28
     commit: 607
   last720d:
-    since: 2024-10-09
+    since: 2024-10-10
     release: 29
     mergedPR: 1101
-    openPR: 41
-    closedIssue: 257
+    openPR: 42
+    closedIssue: 256
     openIssue: 118
-    commit: 2505
+    commit: 2503
 total:
   release: 98
   mergedPR: 2988
-  openPR: 58
+  openPR: 59
   closedIssue: 1157
   openIssue: 296
   commit: 6720
 ---
 path: /home/runner/.x-repo/github.com/containerd/nerdctl
-collectedAt: 2026-09-29T06:52:29Z
+collectedAt: 2026-09-30T06:35:41Z
 loc:
   Go:
     code: 97272
@@ -156,10 +156,10 @@ total:
   blanks: 17600
   files: 914
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/containerd/nerdctl
-  commit: bbc533ce69509508731f7993ef1cc078bcb99245
+  commit: 9b4160e9db10a9b91719a712c92b6974aa0e583b
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -171,7 +171,11 @@ checks:
     details: null
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 14 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 13 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Security-Policy
     score: 9
@@ -181,10 +185,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -253,11 +253,6 @@ checks:
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/ghcr-image-build-and-publish.yml:25'
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
@@ -265,15 +260,15 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/flaky-test-dashboard.yml:58: update your workflow using https://app.stepsecurity.io/secureworkflow/containerd/nerdctl/flaky-test-dashboard.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/workflow-flaky.yml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/containerd/nerdctl/workflow-flaky.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/workflow-flaky.yml:40: update your workflow using https://app.stepsecurity.io/secureworkflow/containerd/nerdctl/workflow-flaky.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/workflow-lint.yml:108: update your workflow using https://app.stepsecurity.io/secureworkflow/containerd/nerdctl/workflow-lint.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/workflow-lint.yml:116: update your workflow using https://app.stepsecurity.io/secureworkflow/containerd/nerdctl/workflow-lint.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/workflow-lint.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/containerd/nerdctl/workflow-lint.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/workflow-lint.yml:52: update your workflow using https://app.stepsecurity.io/secureworkflow/containerd/nerdctl/workflow-lint.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/workflow-lint.yml:99: update your workflow using https://app.stepsecurity.io/secureworkflow/containerd/nerdctl/workflow-lint.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/workflow-lint.yml:108: update your workflow using https://app.stepsecurity.io/secureworkflow/containerd/nerdctl/workflow-lint.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/workflow-lint.yml:116: update your workflow using https://app.stepsecurity.io/secureworkflow/containerd/nerdctl/workflow-lint.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/workflow-test.yml:132: update your workflow using https://app.stepsecurity.io/secureworkflow/containerd/nerdctl/workflow-test.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/workflow-test.yml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/containerd/nerdctl/workflow-test.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/workflow-test.yml:45: update your workflow using https://app.stepsecurity.io/secureworkflow/containerd/nerdctl/workflow-test.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/workflow-test.yml:63: update your workflow using https://app.stepsecurity.io/secureworkflow/containerd/nerdctl/workflow-test.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/workflow-test.yml:132: update your workflow using https://app.stepsecurity.io/secureworkflow/containerd/nerdctl/workflow-test.yml/main?enable=pin'
       - 'Warn: containerImage not pinned by hash: Dockerfile:56: pin your Docker image by updating golang:1.26-trixie to golang:1.26-trixie@sha256:bdca99a00bc16590cb1a0bb4e698f5fc5d6a64e4d5eef13d9f18a0ee08e5fa65'
       - 'Warn: containerImage not pinned by hash: Dockerfile:79'
       - 'Warn: containerImage not pinned by hash: Dockerfile:90'
@@ -288,11 +283,16 @@ checks:
       - 'Warn: containerImage not pinned by hash: docs/dev/auditing_dockerfile.md:37'
       - 'Warn: containerImage not pinned by hash: docs/dev/auditing_dockerfile.md:42'
       - 'Warn: containerImage not pinned by hash: docs/dev/auditing_dockerfile.md:47'
-      - 'Warn: containerImage not pinned by hash: examples/compose-multi-platform/Dockerfile:15: pin your Docker image by updating php:apache to php:apache@sha256:f988b6749b43c04ed0ae73b5b53920d5afdb4b92707c730f1eae2c5d065e694d'
+      - 'Warn: containerImage not pinned by hash: examples/compose-multi-platform/Dockerfile:15: pin your Docker image by updating php:apache to php:apache@sha256:70d80539dcacae817d9a1320518b95c86bb9568835ef3a7a024d57a4898c90e4'
       - 'Warn: chocoCommand not pinned by hash: .github/workflows/job-test-in-host.yml:225'
       - 'Info:  29 out of  29 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  16 out of  28 third-party GitHubAction dependencies pinned'
+      - 'Info:   1 out of  16 containerImage dependencies pinned'
       - 'Info:   1 out of   1 goCommand dependencies pinned'
       - 'Info:   0 out of   1 chocoCommand dependencies pinned'
-      - 'Info:   1 out of  16 containerImage dependencies pinned'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/ghcr-image-build-and-publish.yml:25'
 ---

@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.3.1"
   latestRelease: "v1.3.1"
   latestPrerelease: "v1.0.0-rc.6"
-  collectedAt: 2026-09-29T05:55:13Z
+  collectedAt: 2026-09-30T05:40:11Z
 timeline:
   created: 2021-08-14
   lastCommit: 2026-08-16
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-06-14
   lastPrerelease: 2024-08-21
 popularity:
-  star: 5424
-  watcher: 22
-  fork: 97
+  star: 5425
+  watcher: 21
+  fork: 98
   release: 42
   contributor: 31
-  pullRequest: 107
-  issue: 89
+  pullRequest: 108
+  issue: 90
 language:
   Rust: 179401
   Makefile: 348
@@ -29,63 +29,63 @@ language:
 totalBytes: 179842
 recent:
   last30d:
-    since: 2026-08-30
+    since: 2026-08-31
     release: 0
     mergedPR: 0
-    openPR: 2
+    openPR: 3
     closedIssue: 0
-    openIssue: 0
+    openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-31
+    since: 2026-08-01
     release: 0
     mergedPR: 1
-    openPR: 2
+    openPR: 3
     closedIssue: 0
-    openIssue: 1
+    openIssue: 2
     commit: 1
   last90d:
-    since: 2026-07-01
+    since: 2026-07-02
     release: 0
     mergedPR: 1
-    openPR: 3
+    openPR: 4
     closedIssue: 0
-    openIssue: 1
+    openIssue: 2
     commit: 1
   last180d:
-    since: 2026-04-02
+    since: 2026-04-03
     release: 1
     mergedPR: 3
-    openPR: 3
+    openPR: 4
     closedIssue: 1
-    openIssue: 2
+    openIssue: 3
     commit: 4
   last360d:
-    since: 2025-10-04
+    since: 2025-10-05
     release: 1
     mergedPR: 3
-    openPR: 7
+    openPR: 8
     closedIssue: 2
-    openIssue: 2
+    openIssue: 3
     commit: 4
   last720d:
-    since: 2024-10-09
+    since: 2024-10-10
     release: 4
     mergedPR: 8
-    openPR: 10
+    openPR: 11
     closedIssue: 7
-    openIssue: 16
+    openIssue: 17
     commit: 24
 total:
   release: 42
   mergedPR: 87
-  openPR: 10
+  openPR: 11
   closedIssue: 63
-  openIssue: 26
+  openIssue: 27
   commit: 308
 ---
 path: /home/runner/.x-repo/github.com/sachaos/viddy
-collectedAt: 2026-09-29T05:55:14Z
+collectedAt: 2026-09-30T05:40:12Z
 loc:
   Rust:
     code: 4905
@@ -113,7 +113,7 @@ total:
   blanks: 700
   files: 37
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/sachaos/viddy
   commit: b56efe0876f255ade025d6b77fb9f3f30099675b
@@ -122,15 +122,6 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3
 checks:
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Code-Review
     score: 1
     reason: Found 3/16 approved changesets -- score normalized to 1
@@ -143,6 +134,22 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/cd.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -166,17 +173,15 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:59: update your workflow using https://app.stepsecurity.io/secureworkflow/sachaos/viddy/ci.yml/master?enable=pin'
       - 'Info:   0 out of   5 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of  12 third-party GitHubAction dependencies pinned'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/cd.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -185,11 +190,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected

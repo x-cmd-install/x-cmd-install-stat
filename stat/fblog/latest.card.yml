@@ -7,7 +7,7 @@ about:
   latestVersion: "v4.17.0"
   latestRelease: "v4.17.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-29T06:28:35Z
+  collectedAt: 2026-09-30T06:17:07Z
 timeline:
   created: 2017-07-06
   lastCommit: 2026-09-02
@@ -28,7 +28,7 @@ language:
 totalBytes: 50843
 recent:
   last30d:
-    since: 2026-08-30
+    since: 2026-08-31
     release: 0
     mergedPR: 1
     openPR: 0
@@ -36,39 +36,39 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-31
+    since: 2026-08-01
     release: 0
-    mergedPR: 2
+    mergedPR: 1
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 3
+    commit: 0
   last90d:
-    since: 2026-07-01
+    since: 2026-07-02
     release: 0
     mergedPR: 2
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 3
+    commit: 0
   last180d:
-    since: 2026-04-02
+    since: 2026-04-03
     release: 0
     mergedPR: 6
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 9
+    commit: 0
   last360d:
-    since: 2025-10-04
+    since: 2025-10-05
     release: 1
     mergedPR: 16
     openPR: 0
     closedIssue: 3
     openIssue: 1
-    commit: 20
+    commit: 0
   last720d:
-    since: 2024-10-09
+    since: 2024-10-10
     release: 5
     mergedPR: 34
     openPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 404
 ---
 path: /home/runner/.x-repo/github.com/brocode/fblog
-collectedAt: 2026-09-29T06:28:36Z
+collectedAt: 2026-09-30T06:17:11Z
 loc:
   Rust:
     code: 1368
@@ -122,7 +122,7 @@ total:
   blanks: 252
   files: 18
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/brocode/fblog
   commit: 7a899abb5f77e63dccb33a9f3208ee23db302920
@@ -131,6 +131,18 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3.5
 checks:
+  - name: Code-Review
+    score: 2
+    reason: Found 3/12 approved changesets -- score normalized to 2
+    details: null
+  - name: Maintained
+    score: 5
+    reason: 6 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -140,26 +152,6 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 5
-    reason: 6 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5
-    details: null
-  - name: Code-Review
-    score: 2
-    reason: Found 3/12 approved changesets -- score normalized to 2
-    details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/dependabot-validate.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/rust.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -174,6 +166,14 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/rust.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/brocode/fblog/rust.yml/master?enable=pin'
       - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 third-party GitHubAction dependencies pinned'
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/dependabot-validate.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/rust.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected

@@ -7,7 +7,7 @@ about:
   latestVersion: "azure-cli-2.90.0"
   latestRelease: "azure-cli-2.90.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-29T06:54:03Z
+  collectedAt: 2026-09-30T06:37:35Z
 timeline:
   created: 2016-02-04
   lastCommit: 2026-09-29
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-09-01
   lastPrerelease: 
 popularity:
-  star: 4644
+  star: 4645
   watcher: 174
   fork: 3494
   release: 209
-  contributor: 3979
-  pullRequest: 15090
-  issue: 18608
+  contributor: 3977
+  pullRequest: 15094
+  issue: 18610
 language:
   Python: 116407310
   Shell: 76417
@@ -41,63 +41,63 @@ language:
 totalBytes: 116631303
 recent:
   last30d:
-    since: 2026-08-30
+    since: 2026-08-31
     release: 1
-    mergedPR: 53
-    openPR: 42
-    closedIssue: 8
-    openIssue: 26
+    mergedPR: 52
+    openPR: 46
+    closedIssue: 7
+    openIssue: 28
     commit: 81
   last60d:
-    since: 2026-07-31
+    since: 2026-08-01
     release: 3
-    mergedPR: 131
-    openPR: 65
-    closedIssue: 36
-    openIssue: 57
+    mergedPR: 130
+    openPR: 68
+    closedIssue: 35
+    openIssue: 59
     commit: 189
   last90d:
-    since: 2026-07-01
+    since: 2026-07-02
     release: 4
-    mergedPR: 179
-    openPR: 86
+    mergedPR: 178
+    openPR: 89
     closedIssue: 60
-    openIssue: 77
+    openIssue: 79
     commit: 254
   last180d:
-    since: 2026-04-02
+    since: 2026-04-03
     release: 7
-    mergedPR: 400
-    openPR: 143
+    mergedPR: 395
+    openPR: 147
     closedIssue: 131
-    openIssue: 138
+    openIssue: 140
     commit: 530
   last360d:
-    since: 2025-10-04
+    since: 2025-10-05
     release: 15
     mergedPR: 791
-    openPR: 182
+    openPR: 186
     closedIssue: 266
-    openIssue: 322
+    openIssue: 324
     commit: 908
   last720d:
-    since: 2024-10-09
+    since: 2024-10-10
     release: 28
-    mergedPR: 1720
-    openPR: 252
+    mergedPR: 1717
+    openPR: 256
     closedIssue: 758
-    openIssue: 773
-    commit: 1722
+    openIssue: 775
+    commit: 1718
 total:
   release: 209
   mergedPR: 12409
-  openPR: 408
+  openPR: 412
   closedIssue: 15021
-  openIssue: 3587
+  openIssue: 3589
   commit: 13858
 ---
 path: /home/runner/.x-repo/github.com/Azure/azure-cli
-collectedAt: 2026-09-29T07:00:03Z
+collectedAt: 2026-09-30T06:41:09Z
 loc:
   Yaml:
     code: 11176789
@@ -240,10 +240,10 @@ total:
   blanks: 366076
   files: 9085
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/Azure/azure-cli
-  commit: 77773bdbd8007cc2bef712247b2298b3de514574
+  commit: da4c0548a2725ea3d08b1d94b8e7fa1b0b07256e
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -255,7 +255,11 @@ checks:
     details: null
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 20 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 21 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Packaging
     score: -1
@@ -270,16 +274,12 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 8
     reason: detected GitHub workflow tokens with excessive permissions
     details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/AzdevLinter.yml:15'
       - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/AzdevLinter.yml:14'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/AzdevLinter.yml:15'
       - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/AzdevStyle.yml:14'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/AzdevStyle.yml:15'
       - 'Info: found token with ''none'' permissions: .github/workflows/BlockPRMerge.yml:1'
@@ -298,12 +298,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Binary-Artifacts
     score: 0
     reason: binaries present in source code
@@ -318,6 +312,12 @@ checks:
       - 'Warn: binary detected: src/azure-cli-core/azure/cli/core/tests/data/extension_test_pkg-1.4.1a1-py3-none-any.whl:1'
       - 'Warn: binary detected: src/azure-cli-core/azure/cli/core/tests/data/ml-2.0.0a1-py3-none-any.whl:1'
       - 'Warn: binary detected: src/azure-cli/azure/cli/command_modules/synapse/tests/latest/assets/wordcount.jar:1'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -428,8 +428,8 @@ checks:
       - 'Warn: pipCommand not pinned by hash: scripts/release/rpm/test_rpm_in_docker.sh:32'
       - 'Info:   6 out of   6 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   4 out of   4 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of  19 containerImage dependencies pinned'
-      - 'Info:   4 out of  41 pipCommand dependencies pinned'
       - 'Info:   0 out of   1 nugetCommand dependencies pinned'
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
+      - 'Info:   0 out of  19 containerImage dependencies pinned'
+      - 'Info:   4 out of  41 pipCommand dependencies pinned'
 ---

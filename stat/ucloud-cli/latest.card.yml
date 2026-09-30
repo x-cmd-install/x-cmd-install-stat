@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.3.10"
   latestRelease: "v0.3.10"
   latestPrerelease: ""
-  collectedAt: 2026-09-29T05:38:24Z
+  collectedAt: 2026-09-30T05:24:14Z
 timeline:
   created: 2018-08-30
   lastCommit: 2026-07-22
@@ -31,7 +31,7 @@ language:
 totalBytes: 1934361
 recent:
   last30d:
-    since: 2026-08-30
+    since: 2026-08-31
     release: 0
     mergedPR: 0
     openPR: 1
@@ -39,7 +39,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-31
+    since: 2026-08-01
     release: 0
     mergedPR: 0
     openPR: 1
@@ -47,7 +47,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-01
+    since: 2026-07-02
     release: 7
     mergedPR: 42
     openPR: 1
@@ -55,7 +55,7 @@ recent:
     openIssue: 0
     commit: 121
   last180d:
-    since: 2026-04-02
+    since: 2026-04-03
     release: 10
     mergedPR: 48
     openPR: 1
@@ -63,7 +63,7 @@ recent:
     openIssue: 1
     commit: 229
   last360d:
-    since: 2025-10-04
+    since: 2025-10-05
     release: 10
     mergedPR: 48
     openPR: 1
@@ -71,7 +71,7 @@ recent:
     openIssue: 1
     commit: 229
   last720d:
-    since: 2024-10-09
+    since: 2024-10-10
     release: 10
     mergedPR: 50
     openPR: 1
@@ -87,7 +87,7 @@ total:
   commit: 509
 ---
 path: /home/runner/.x-repo/github.com/ucloud/ucloud-cli
-collectedAt: 2026-09-29T05:38:26Z
+collectedAt: 2026-09-30T05:24:17Z
 loc:
   Go:
     code: 50618
@@ -135,7 +135,7 @@ total:
   blanks: 7158
   files: 850
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/ucloud/ucloud-cli
   commit: 713ed4871a3ae4187f42487e5fcc6ed51e79331c
@@ -176,6 +176,14 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -203,17 +211,9 @@ checks:
       - 'Warn: goCommand not pinned by hash: .github/workflows/release.yml:56'
       - 'Info:   0 out of  16 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
       - 'Info:   0 out of   2 goCommand dependencies pinned'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
+      - 'Info:   0 out of   1 containerImage dependencies pinned'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -225,10 +225,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -243,6 +239,10 @@ checks:
       - 'Warn: release artifact v0.3.8 does not have provenance: https://api.github.com/repos/ucloud/ucloud-cli/releases/354362035'
       - 'Warn: release artifact v0.3.7 does not have provenance: https://api.github.com/repos/ucloud/ucloud-cli/releases/353314434'
       - 'Warn: release artifact v0.3.6 does not have provenance: https://api.github.com/repos/ucloud/ucloud-cli/releases/351279814'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

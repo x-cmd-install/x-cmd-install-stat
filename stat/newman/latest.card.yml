@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-09-29T05:43:11Z
+  collectedAt: 2026-09-30T05:23:59Z
 timeline:
   created: 2014-03-05
   lastCommit: 2026-01-16
@@ -20,7 +20,7 @@ popularity:
   fork: 1229
   release: 0
   contributor: 124
-  pullRequest: 1917
+  pullRequest: 1918
   issue: 1391
 language:
   JavaScript: 337443
@@ -29,63 +29,63 @@ language:
 totalBytes: 342952
 recent:
   last30d:
-    since: 2026-08-30
+    since: 2026-08-31
     release: 0
     mergedPR: 0
-    openPR: 5
+    openPR: 6
     closedIssue: 0
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-31
+    since: 2026-08-01
     release: 0
     mergedPR: 0
-    openPR: 12
+    openPR: 13
     closedIssue: 1
     openIssue: 6
     commit: 0
   last90d:
-    since: 2026-07-01
+    since: 2026-07-02
     release: 0
     mergedPR: 0
-    openPR: 16
+    openPR: 17
     closedIssue: 1
     openIssue: 6
     commit: 0
   last180d:
-    since: 2026-04-02
+    since: 2026-04-03
     release: 0
     mergedPR: 0
-    openPR: 21
+    openPR: 22
     closedIssue: 1
     openIssue: 8
     commit: 0
   last360d:
-    since: 2025-10-04
+    since: 2025-10-05
     release: 0
     mergedPR: 1
-    openPR: 24
+    openPR: 25
     closedIssue: 7
     openIssue: 16
     commit: 2
   last720d:
-    since: 2024-10-09
+    since: 2024-10-10
     release: 0
     mergedPR: 1
-    openPR: 34
+    openPR: 35
     closedIssue: 11
     openIssue: 39
     commit: 3
 total:
   release: 0
   mergedPR: 1109
-  openPR: 85
+  openPR: 86
   closedIssue: 1135
   openIssue: 256
   commit: 4110
 ---
 path: /home/runner/.x-repo/github.com/postmanlabs/newman
-collectedAt: 2026-09-29T05:43:12Z
+collectedAt: 2026-09-30T05:24:01Z
 loc:
   Json:
     code: 21104
@@ -128,7 +128,7 @@ total:
   blanks: 1816
   files: 181
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/postmanlabs/newman
   commit: 942d1390f81ee4e2cb7d84913b181d5dafe8b2cc
@@ -142,18 +142,6 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
-  - name: Code-Review
-    score: 2
-    reason: Found 6/23 approved changesets -- score normalized to 2
-    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -162,28 +150,41 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Token-Permissions
+  - name: Maintained
     score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:28'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:29'
-      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/codeql-analysis.yml:1'
-      - 'Info: no jobLevel write permissions found'
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Code-Review
+    score: 2
+    reason: Found 6/23 approved changesets -- score normalized to 2
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:29'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:28'
+      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/codeql-analysis.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
+  - name: License
+    score: 10
+    reason: license file detected
     details:
-      - 'Warn: no fuzzer integrations found'
+      - 'Info: project has a license file: LICENSE.md:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE.md:0'
   - name: Pinned-Dependencies
     score: 1
     reason: dependency not pinned by hash detected -- score normalized to 1
@@ -208,16 +209,15 @@ checks:
       - 'Info:   0 out of   2 containerImage dependencies pinned'
       - 'Info:   2 out of   4 npmCommand dependencies pinned'
       - 'Info:   0 out of   4 downloadThenRun dependencies pinned'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE.md:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE.md:0'
   - name: Signed-Releases
     score: -1
     reason: no releases found
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: githubv4.Query: Resource not accessible by integration'

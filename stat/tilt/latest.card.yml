@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.37.7"
   latestRelease: "v0.37.7"
   latestPrerelease: ""
-  collectedAt: 2026-09-29T05:54:54Z
+  collectedAt: 2026-09-30T05:39:43Z
 timeline:
   created: 2018-08-07
   lastCommit: 2026-09-29
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-08-15
   lastPrerelease: 
 popularity:
-  star: 10075
+  star: 10078
   watcher: 45
   fork: 412
   release: 265
@@ -37,7 +37,7 @@ language:
 totalBytes: 5728618
 recent:
   last30d:
-    since: 2026-08-30
+    since: 2026-08-31
     release: 0
     mergedPR: 7
     openPR: 1
@@ -45,23 +45,23 @@ recent:
     openIssue: 0
     commit: 5
   last60d:
-    since: 2026-07-31
+    since: 2026-08-01
     release: 1
     mergedPR: 14
-    openPR: 5
+    openPR: 4
     closedIssue: 3
-    openIssue: 2
+    openIssue: 1
     commit: 17
   last90d:
-    since: 2026-07-01
+    since: 2026-07-02
     release: 3
     mergedPR: 33
-    openPR: 6
+    openPR: 5
     closedIssue: 4
     openIssue: 4
     commit: 43
   last180d:
-    since: 2026-04-02
+    since: 2026-04-03
     release: 7
     mergedPR: 70
     openPR: 10
@@ -69,7 +69,7 @@ recent:
     openIssue: 5
     commit: 78
   last360d:
-    since: 2025-10-04
+    since: 2025-10-05
     release: 12
     mergedPR: 139
     openPR: 11
@@ -77,11 +77,11 @@ recent:
     openIssue: 14
     commit: 150
   last720d:
-    since: 2024-10-09
+    since: 2024-10-10
     release: 22
     mergedPR: 218
     openPR: 11
-    closedIssue: 82
+    closedIssue: 81
     openIssue: 49
     commit: 240
 total:
@@ -93,7 +93,7 @@ total:
   commit: 5105
 ---
 path: /home/runner/.x-repo/github.com/tilt-dev/tilt
-collectedAt: 2026-09-29T05:55:13Z
+collectedAt: 2026-09-30T05:39:57Z
 loc:
   Go:
     code: 1897878
@@ -251,10 +251,10 @@ total:
   blanks: 268956
   files: 11119
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/tilt-dev/tilt
-  commit: 87962c4f1fb8d444f23df0004c4ed9ab7d391e58
+  commit: 9f48972fd201a27565380c093f2bac8001a7b130
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -264,22 +264,22 @@ checks:
     score: 10
     reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
     details: null
-  - name: Code-Review
-    score: 3
-    reason: Found 7/21 approved changesets -- score normalized to 3
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: -1
+    reason: no workflows found
+    details: null
   - name: Token-Permissions
     score: -1
     reason: No tokens found
     details: null
-  - name: Dangerous-Workflow
-    score: -1
-    reason: no workflows found
+  - name: Code-Review
+    score: 3
+    reason: Found 7/22 approved changesets -- score normalized to 3
     details: null
   - name: Security-Policy
     score: 9
@@ -299,18 +299,14 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Signed-Releases
     score: 0
@@ -326,6 +322,10 @@ checks:
       - 'Warn: release artifact v0.37.5 does not have provenance: https://api.github.com/repos/tilt-dev/tilt/releases/348280610'
       - 'Warn: release artifact v0.37.4 does not have provenance: https://api.github.com/repos/tilt-dev/tilt/releases/340267683'
       - 'Warn: release artifact v0.37.3 does not have provenance: https://api.github.com/repos/tilt-dev/tilt/releases/315796421'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
@@ -335,7 +335,6 @@ checks:
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
-      - 'Info: Possibly incomplete results: error parsing shell code: "foo(" must be followed by ): vendor/sigs.k8s.io/controller-runtime/Makefile:0'
       - 'Warn: containerImage not pinned by hash: .circleci/Dockerfile:2: pin your Docker image by updating cimg/go:1.27-node to cimg/go:1.27-node@sha256:36478d6e72796c30870b45eb009d8bb7aa9b71e9060029ec35b630333fd4e68a'
       - 'Warn: containerImage not pinned by hash: .circleci/Dockerfile.integration:2: pin your Docker image by updating cimg/go:1.27-node to cimg/go:1.27-node@sha256:36478d6e72796c30870b45eb009d8bb7aa9b71e9060029ec35b630333fd4e68a'
       - 'Warn: containerImage not pinned by hash: integration/analytics/Dockerfile:1: pin your Docker image by updating busybox to busybox@sha256:fd7dc98638c8e305f4dc34e979f1c0fdfdcaeb0fbf8fcff77ae834b6da3d7e6e'
@@ -383,8 +382,8 @@ checks:
       - 'Warn: goCommand not pinned by hash: vendor/github.com/agext/levenshtein/test.sh:5'
       - 'Warn: goCommand not pinned by hash: vendor/github.com/json-iterator/go/build.sh:10'
       - 'Warn: npmCommand not pinned by hash: vendor/github.com/smacker/go-tree-sitter/test_grammar_generate.sh:5'
-      - 'Info:   0 out of  40 containerImage dependencies pinned'
       - 'Info:   0 out of   5 goCommand dependencies pinned'
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
       - 'Info:   0 out of   1 npmCommand dependencies pinned'
+      - 'Info:   0 out of  40 containerImage dependencies pinned'
 ---

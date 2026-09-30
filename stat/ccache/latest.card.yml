@@ -7,7 +7,7 @@ about:
   latestVersion: "v4.14.1"
   latestRelease: "v4.14.1"
   latestPrerelease: "v3.0pre1"
-  collectedAt: 2026-09-29T07:05:17Z
+  collectedAt: 2026-09-30T06:58:29Z
 timeline:
   created: 2010-01-06
   lastCommit: 2026-09-27
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-27
   lastPrerelease: 2019-04-17
 popularity:
-  star: 2962
+  star: 2963
   watcher: 59
   fork: 599
   release: 105
@@ -32,15 +32,15 @@ language:
 totalBytes: 1930130
 recent:
   last30d:
-    since: 2026-08-30
+    since: 2026-08-31
     release: 1
-    mergedPR: 2
+    mergedPR: 1
     openPR: 8
     closedIssue: 3
     openIssue: 5
     commit: 19
   last60d:
-    since: 2026-07-31
+    since: 2026-08-01
     release: 2
     mergedPR: 9
     openPR: 11
@@ -48,7 +48,7 @@ recent:
     openIssue: 8
     commit: 64
   last90d:
-    since: 2026-07-01
+    since: 2026-07-02
     release: 2
     mergedPR: 11
     openPR: 12
@@ -56,15 +56,15 @@ recent:
     openIssue: 10
     commit: 93
   last180d:
-    since: 2026-04-02
+    since: 2026-04-03
     release: 6
-    mergedPR: 20
+    mergedPR: 19
     openPR: 12
     closedIssue: 28
     openIssue: 11
     commit: 138
   last360d:
-    since: 2025-10-04
+    since: 2025-10-05
     release: 11
     mergedPR: 46
     openPR: 15
@@ -72,7 +72,7 @@ recent:
     openIssue: 14
     commit: 335
   last720d:
-    since: 2024-10-09
+    since: 2024-10-10
     release: 17
     mergedPR: 74
     openPR: 16
@@ -88,7 +88,7 @@ total:
   commit: 5356
 ---
 path: /home/runner/.x-repo/github.com/ccache/ccache
-collectedAt: 2026-09-29T07:05:20Z
+collectedAt: 2026-09-30T06:58:32Z
 loc:
   Cpp:
     code: 29014
@@ -191,10 +191,10 @@ total:
   blanks: 16057
   files: 420
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/ccache/ccache
-  commit: b471bbde2923994781821e8d8893e7180ba45168
+  commit: 11e0ceb08e5a179cfc05d672bded44b050ec81de
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -203,6 +203,10 @@ checks:
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 18 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Code-Review
+    score: 1
+    reason: Found 4/30 approved changesets -- score normalized to 1
     details: null
   - name: Dangerous-Workflow
     score: 10
@@ -217,10 +221,6 @@ checks:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yaml:27'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/build.yaml:20'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yaml:21'
-  - name: Code-Review
-    score: 1
-    reason: Found 4/30 approved changesets -- score normalized to 1
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -230,6 +230,10 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: CII-Best-Practices
+    score: 5
+    reason: 'badge detected: Passing'
+    details: null
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -238,10 +242,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: CII-Best-Practices
-    score: 5
-    reason: 'badge detected: Passing'
-    details: null
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -261,16 +261,16 @@ checks:
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
     details:
+      - 'Info: signed release artifact: ccache-4.14.1-darwin.tar.gz.minisig: https://github.com/ccache/ccache/releases/tag/v4.14.1'
       - 'Info: signed release artifact: ccache-4.14-darwin.tar.gz.minisig: https://github.com/ccache/ccache/releases/tag/v4.14'
       - 'Info: signed release artifact: ccache-4.13.6-darwin.tar.gz.minisig: https://github.com/ccache/ccache/releases/tag/v4.13.6'
       - 'Info: signed release artifact: ccache-4.13.5-darwin.tar.gz.minisig: https://github.com/ccache/ccache/releases/tag/v4.13.5'
       - 'Info: signed release artifact: ccache-4.13.4-darwin.tar.gz.minisig: https://github.com/ccache/ccache/releases/tag/v4.13.4'
-      - 'Info: signed release artifact: ccache-4.13.3-darwin.tar.gz.minisig: https://github.com/ccache/ccache/releases/tag/v4.13.3'
+      - 'Warn: release artifact v4.14.1 does not have provenance: https://api.github.com/repos/ccache/ccache/releases/397569391'
       - 'Warn: release artifact v4.14 does not have provenance: https://api.github.com/repos/ccache/ccache/releases/375165040'
       - 'Warn: release artifact v4.13.6 does not have provenance: https://api.github.com/repos/ccache/ccache/releases/317339321'
       - 'Warn: release artifact v4.13.5 does not have provenance: https://api.github.com/repos/ccache/ccache/releases/313763226'
       - 'Warn: release artifact v4.13.4 does not have provenance: https://api.github.com/repos/ccache/ccache/releases/310861622'
-      - 'Warn: release artifact v4.13.3 does not have provenance: https://api.github.com/repos/ccache/ccache/releases/307982261'
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits
@@ -282,24 +282,34 @@ checks:
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
       - 'Info: Possibly incomplete results: error parsing shell code: invalid parameter name: .github/workflows/build.yaml:440'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:312: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:321: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:378: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:386: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:532: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:535: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:670: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build.yaml:684: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:738: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:155: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:166: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:834: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:847: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build.yaml:198: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:228: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:244: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:257: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:264: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:465: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:469: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:514: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:520: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:155: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:166: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:285: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:294: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:312: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:321: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:378: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:386: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:670: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build.yaml:684: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:738: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:805: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:807: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:339: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:348: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:412: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build.yaml:414: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:451: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
@@ -307,16 +317,6 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:765: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:770: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:788: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:465: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:469: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:514: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:520: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:805: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:807: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:834: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:847: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:339: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yaml:348: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/build.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql-analysis.yaml:34: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/codeql-analysis.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql-analysis.yaml:44: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/codeql-analysis.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql-analysis.yaml:57: update your workflow using https://app.stepsecurity.io/secureworkflow/ccache/ccache/codeql-analysis.yaml/master?enable=pin'

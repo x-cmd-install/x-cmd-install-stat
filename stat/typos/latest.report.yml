@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.50.3"
   latestRelease: "v1.50.3"
   latestPrerelease: ""
-  collectedAt: 2026-09-29T06:14:16Z
+  collectedAt: 2026-09-30T06:11:52Z
 timeline:
   created: 2019-04-16
   lastCommit: 2026-09-25
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-25
   lastPrerelease: 
 popularity:
-  star: 4160
+  star: 4163
   watcher: 7
   fork: 187
   release: 301
@@ -35,7 +35,7 @@ language:
 totalBytes: 20504411
 recent:
   last30d:
-    since: 2026-08-30
+    since: 2026-08-31
     release: 3
     mergedPR: 8
     openPR: 1
@@ -43,23 +43,23 @@ recent:
     openIssue: 0
     commit: 12
   last60d:
-    since: 2026-07-31
+    since: 2026-08-01
     release: 6
-    mergedPR: 18
+    mergedPR: 16
     openPR: 5
     closedIssue: 6
     openIssue: 2
     commit: 41
   last90d:
-    since: 2026-07-01
+    since: 2026-07-02
     release: 6
     mergedPR: 19
     openPR: 5
-    closedIssue: 8
+    closedIssue: 7
     openIssue: 3
     commit: 70
   last180d:
-    since: 2026-04-02
+    since: 2026-04-03
     release: 16
     mergedPR: 38
     openPR: 6
@@ -67,7 +67,7 @@ recent:
     openIssue: 8
     commit: 143
   last360d:
-    since: 2025-10-04
+    since: 2025-10-05
     release: 37
     mergedPR: 94
     openPR: 12
@@ -75,10 +75,10 @@ recent:
     openIssue: 26
     commit: 313
   last720d:
-    since: 2024-10-09
+    since: 2024-10-10
     release: 87
     mergedPR: 203
-    openPR: 17
+    openPR: 16
     closedIssue: 157
     openIssue: 51
     commit: 907
@@ -91,7 +91,7 @@ total:
   commit: 3030
 ---
 path: /home/runner/.x-repo/github.com/crate-ci/typos
-collectedAt: 2026-09-29T06:14:32Z
+collectedAt: 2026-09-30T06:12:07Z
 loc:
   Rust:
     code: 10543
@@ -169,14 +169,14 @@ total:
   blanks: 2463
   files: 167
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/crate-ci/typos
-  commit: 85949cbe0d5583635f56363749f17d6ae4f21d35
+  commit: 00f422f3b19c57bc6338715ebfe3316d38768461
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
-score: 6.1
+score: 6.3
 checks:
   - name: Maintained
     score: 10
@@ -184,15 +184,15 @@ checks:
     details: null
   - name: Code-Review
     score: 2
-    reason: Found 3/15 approved changesets -- score normalized to 2
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
+    reason: Found 4/15 approved changesets -- score normalized to 2
     details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Packaging
     score: -1
@@ -203,11 +203,11 @@ checks:
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
     details:
+      - 'Info: found token with ''none'' permissions: .github/workflows/audit.yml:24'
+      - 'Warn: jobLevel ''checks'' permission set to ''write'': .github/workflows/audit.yml:36'
       - 'Warn: jobLevel ''checks'' permission set to ''write'': .github/workflows/audit.yml:58'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/audit.yml:79'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/audit.yml:80'
-      - 'Info: found token with ''none'' permissions: .github/workflows/audit.yml:24'
-      - 'Warn: jobLevel ''checks'' permission set to ''write'': .github/workflows/audit.yml:36'
       - 'Info: found token with ''none'' permissions: .github/workflows/ci.yml:27'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/post-release.yml:33'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/post-release.yml:60'
@@ -236,47 +236,26 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE-APACHE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE-APACHE:0'
   - name: Pinned-Dependencies
-    score: 6
-    reason: dependency not pinned by hash detected -- score normalized to 6
+    score: 9
+    reason: dependency not pinned by hash detected -- score normalized to 9
     details:
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/maturin.yml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/maturin.yml:27: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/maturin.yml:31: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/maturin.yml:38: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/maturin.yml:49: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/maturin.yml:51: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/maturin.yml:55: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/maturin.yml:62: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/maturin.yml:73: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/maturin.yml:75: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/maturin.yml:79: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/maturin.yml:85: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/maturin.yml:96: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/maturin.yml:98: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/maturin.yml:102: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/maturin.yml:108: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/maturin.yml:116: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/maturin.yml:118: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/maturin.yml:123: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/maturin.yml:134: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/maturin.yml:138: update your workflow using https://app.stepsecurity.io/secureworkflow/crate-ci/typos/maturin.yml/main?enable=pin'
       - 'Warn: containerImage not pinned by hash: Dockerfile:3: pin your Docker image by updating rust:bullseye to rust:bullseye@sha256:4730e387a220a08a365c77da3096544dde214f9d796c16284d4be45438cad4a9'
       - 'Warn: containerImage not pinned by hash: Dockerfile:8: pin your Docker image by updating debian:bullseye-slim to debian:bullseye-slim@sha256:e5b6442dd2e9684cf5e87d8338b5968f3b348636fc0be6d7850a381e3731a2bd'
-      - 'Info:  23 out of  34 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:  18 out of  28 third-party GitHubAction dependencies pinned'
+      - 'Info:  34 out of  34 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:  24 out of  24 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE-APACHE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE-APACHE:0'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
@@ -285,20 +264,20 @@ checks:
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
+      - 'Warn: release artifact v1.50.3 not signed: https://api.github.com/repos/crate-ci/typos/releases/396844799'
       - 'Warn: release artifact v1.50.2 not signed: https://api.github.com/repos/crate-ci/typos/releases/389182420'
       - 'Warn: release artifact v1.50.1 not signed: https://api.github.com/repos/crate-ci/typos/releases/380675659'
       - 'Warn: release artifact v1.50.0 not signed: https://api.github.com/repos/crate-ci/typos/releases/378645790'
       - 'Warn: release artifact v1.49.1 not signed: https://api.github.com/repos/crate-ci/typos/releases/378067884'
-      - 'Warn: release artifact v1.49.0 not signed: https://api.github.com/repos/crate-ci/typos/releases/364340398'
+      - 'Warn: release artifact v1.50.3 does not have provenance: https://api.github.com/repos/crate-ci/typos/releases/396844799'
       - 'Warn: release artifact v1.50.2 does not have provenance: https://api.github.com/repos/crate-ci/typos/releases/389182420'
       - 'Warn: release artifact v1.50.1 does not have provenance: https://api.github.com/repos/crate-ci/typos/releases/380675659'
       - 'Warn: release artifact v1.50.0 does not have provenance: https://api.github.com/repos/crate-ci/typos/releases/378645790'
       - 'Warn: release artifact v1.49.1 does not have provenance: https://api.github.com/repos/crate-ci/typos/releases/378067884'
-      - 'Warn: release artifact v1.49.0 does not have provenance: https://api.github.com/repos/crate-ci/typos/releases/364340398'
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits
     details:
-      - 'Info: all commits (22) are checked with a SAST tool'
+      - 'Info: all commits (23) are checked with a SAST tool'
 ---
-{"id":396844799,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCtXHDs4Xp17_","tag_name":"v1.50.3","target_commitish":"main","name":"v1.50.3","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-09-25T18:41:06Z","updated_at":"2026-09-25T18:48:20Z","published_at":"2026-09-25T18:48:20Z","assets":[{"id":589002568,"node_id":"RA_kwDOCtXHDs4jG3dI","name":"typos-v1.50.3-aarch64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":3340464,"digest":"sha256:844d4121fb47a95604aa5566843bb9e3d6078040b3c8f22367709f563038f2c5","download_count":1206,"created_at":"2026-09-25T18:45:26Z","updated_at":"2026-09-25T18:45:26Z"},{"id":588999780,"node_id":"RA_kwDOCtXHDs4jG2xk","name":"typos-v1.50.3-aarch64-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":7144558,"digest":"sha256:456f9fe7aa6e7c1597879f5e951d7de2fab261a9ca05f16f324f896c806c55db","download_count":511,"created_at":"2026-09-25T18:43:49Z","updated_at":"2026-09-25T18:43:49Z"},{"id":589006772,"node_id":"RA_kwDOCtXHDs4jG4e0","name":"typos-v1.50.3-x86_64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":3453656,"digest":"sha256:7cc75e42fff1e3b66928de325b3ea1ec7e23ce35ffaa3561fdb0ede8e7275f6f","download_count":112,"created_at":"2026-09-25T18:48:07Z","updated_at":"2026-09-25T18:48:07Z"},{"id":589001623,"node_id":"RA_kwDOCtXHDs4jG3OX","name":"typos-v1.50.3-x86_64-pc-windows-msvc.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3243484,"digest":"sha256:b59f149d84e86aab535d52db029fa8d3ac5ecba9ae5c7f19cf07acb5aa0caaaf","download_count":508,"created_at":"2026-09-25T18:44:53Z","updated_at":"2026-09-25T18:44:53Z"},{"id":589000924,"node_id":"RA_kwDOCtXHDs4jG3Dc","name":"typos-v1.50.3-x86_64-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":8209929,"digest":"sha256:aca6b5d546307092b8d0a8e0a89dd80f9da51f2f7617c5e45c5607c1684ffbf2","download_count":11922,"created_at":"2026-09-25T18:44:27Z","updated_at":"2026-09-25T18:44:27Z"}],"body":"## [1.50.3] - 2026-09-25\n\n### Fixes\n\n- Don'y panicwhen case-converting non-ASCII corrections"}
+{"id":396844799,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCtXHDs4Xp17_","tag_name":"v1.50.3","target_commitish":"main","name":"v1.50.3","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-09-25T18:41:06Z","updated_at":"2026-09-25T18:48:20Z","published_at":"2026-09-25T18:48:20Z","assets":[{"id":589002568,"node_id":"RA_kwDOCtXHDs4jG3dI","name":"typos-v1.50.3-aarch64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":3340464,"digest":"sha256:844d4121fb47a95604aa5566843bb9e3d6078040b3c8f22367709f563038f2c5","download_count":1691,"created_at":"2026-09-25T18:45:26Z","updated_at":"2026-09-25T18:45:26Z"},{"id":588999780,"node_id":"RA_kwDOCtXHDs4jG2xk","name":"typos-v1.50.3-aarch64-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":7144558,"digest":"sha256:456f9fe7aa6e7c1597879f5e951d7de2fab261a9ca05f16f324f896c806c55db","download_count":857,"created_at":"2026-09-25T18:43:49Z","updated_at":"2026-09-25T18:43:49Z"},{"id":589006772,"node_id":"RA_kwDOCtXHDs4jG4e0","name":"typos-v1.50.3-x86_64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":3453656,"digest":"sha256:7cc75e42fff1e3b66928de325b3ea1ec7e23ce35ffaa3561fdb0ede8e7275f6f","download_count":180,"created_at":"2026-09-25T18:48:07Z","updated_at":"2026-09-25T18:48:07Z"},{"id":589001623,"node_id":"RA_kwDOCtXHDs4jG3OX","name":"typos-v1.50.3-x86_64-pc-windows-msvc.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3243484,"digest":"sha256:b59f149d84e86aab535d52db029fa8d3ac5ecba9ae5c7f19cf07acb5aa0caaaf","download_count":678,"created_at":"2026-09-25T18:44:53Z","updated_at":"2026-09-25T18:44:53Z"},{"id":589000924,"node_id":"RA_kwDOCtXHDs4jG3Dc","name":"typos-v1.50.3-x86_64-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":8209929,"digest":"sha256:aca6b5d546307092b8d0a8e0a89dd80f9da51f2f7617c5e45c5607c1684ffbf2","download_count":18803,"created_at":"2026-09-25T18:44:27Z","updated_at":"2026-09-25T18:44:27Z"}],"body":"## [1.50.3] - 2026-09-25\n\n### Fixes\n\n- Don'y panicwhen case-converting non-ASCII corrections"}

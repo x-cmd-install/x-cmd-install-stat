@@ -7,7 +7,7 @@ about:
   latestVersion: "v20240323"
   latestRelease: "v20240323"
   latestPrerelease: ""
-  collectedAt: 2026-09-29T06:32:26Z
+  collectedAt: 2026-09-30T06:25:22Z
 timeline:
   created: 2020-05-23
   lastCommit: 2024-03-23
@@ -28,7 +28,7 @@ language:
 totalBytes: 19724
 recent:
   last30d:
-    since: 2026-08-30
+    since: 2026-08-31
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-31
+    since: 2026-08-01
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-01
+    since: 2026-07-02
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-02
+    since: 2026-04-03
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-04
+    since: 2025-10-05
     release: 0
     mergedPR: 0
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-09
+    since: 2024-10-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 55
 ---
 path: /home/runner/.x-repo/github.com/txthinking/nico
-collectedAt: 2026-09-29T06:32:27Z
+collectedAt: 2026-09-30T06:25:23Z
 loc:
   Go:
     code: 537
@@ -107,7 +107,7 @@ total:
   blanks: 85
   files: 9
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/txthinking/nico
   commit: 3bb1aaf31a9c2aa370f1a98cb0999a9d3b920e92
@@ -116,10 +116,6 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 1.7
 checks:
-  - name: Dangerous-Workflow
-    score: -1
-    reason: no workflows found
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -129,6 +125,14 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
+  - name: Dangerous-Workflow
+    score: -1
+    reason: no workflows found
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: -1
     reason: No tokens found
@@ -137,28 +141,19 @@ checks:
     score: 0
     reason: Found 0/30 approved changesets -- score normalized to 0
     details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Pinned-Dependencies
-    score: -1
-    reason: no dependencies found
-    details: null
   - name: SAST
     score: 0
     reason: no SAST tool detected
     details:
       - 'Warn: no pull requests merged into dev branch'
+  - name: Pinned-Dependencies
+    score: -1
+    reason: no dependencies found
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -167,12 +162,22 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: GNU General Public License v3.0: LICENSE:0'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -187,9 +192,4 @@ checks:
       - 'Warn: release artifact v20230526 does not have provenance: https://api.github.com/repos/txthinking/nico/releases/104351077'
       - 'Warn: release artifact v20230309 does not have provenance: https://api.github.com/repos/txthinking/nico/releases/95036520'
       - 'Warn: release artifact v20230216 does not have provenance: https://api.github.com/repos/txthinking/nico/releases/92675905'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
 ---

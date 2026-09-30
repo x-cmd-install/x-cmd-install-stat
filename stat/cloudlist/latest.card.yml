@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.4.0"
   latestRelease: "v1.4.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-29T06:09:22Z
+  collectedAt: 2026-09-30T05:50:54Z
 timeline:
   created: 2020-10-25
   lastCommit: 2026-08-31
@@ -29,15 +29,15 @@ language:
 totalBytes: 562266
 recent:
   last30d:
-    since: 2026-08-30
+    since: 2026-08-31
     release: 0
-    mergedPR: 1
+    mergedPR: 0
     openPR: 1
     closedIssue: 0
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-07-31
+    since: 2026-08-01
     release: 0
     mergedPR: 3
     openPR: 1
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 3
   last90d:
-    since: 2026-07-01
+    since: 2026-07-02
     release: 0
     mergedPR: 3
     openPR: 1
@@ -53,15 +53,15 @@ recent:
     openIssue: 0
     commit: 3
   last180d:
-    since: 2026-04-02
+    since: 2026-04-03
     release: 0
     mergedPR: 8
     openPR: 2
-    closedIssue: 4
+    closedIssue: 3
     openIssue: 0
     commit: 15
   last360d:
-    since: 2025-10-04
+    since: 2025-10-05
     release: 2
     mergedPR: 32
     openPR: 3
@@ -69,7 +69,7 @@ recent:
     openIssue: 0
     commit: 65
   last720d:
-    since: 2024-10-09
+    since: 2024-10-10
     release: 5
     mergedPR: 103
     openPR: 3
@@ -85,7 +85,7 @@ total:
   commit: 919
 ---
 path: /home/runner/.x-repo/github.com/projectdiscovery/cloudlist
-collectedAt: 2026-09-29T06:09:23Z
+collectedAt: 2026-09-30T05:50:55Z
 loc:
   Go:
     code: 15351
@@ -118,7 +118,7 @@ total:
   blanks: 2946
   files: 107
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/projectdiscovery/cloudlist
   commit: a6caae6a889df8edde490d143dbf01277d414179
@@ -127,17 +127,17 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 6
 checks:
-  - name: Maintained
-    score: 5
-    reason: 6 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
+  - name: Maintained
+    score: 5
+    reason: 6 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -147,8 +147,8 @@ checks:
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:15'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:16'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:15'
       - 'Warn: no topLevel permission defined: .github/workflows/build-test.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/codeql-analysis.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/dockerhub-push.yml:1'
@@ -196,25 +196,17 @@ checks:
       - 'Info:   0 out of  14 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   8 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/dockerhub-push.yml:11'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE.md:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE.md:0'
-  - name: Security-Policy
+  - name: Packaging
     score: 10
-    reason: security policy file detected
+    reason: packaging workflow detected
     details:
-      - 'Info: security policy file detected: github.com/projectdiscovery/.github/SECURITY.md:1'
-      - 'Info: Found linked content: github.com/projectdiscovery/.github/SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/projectdiscovery/.github/SECURITY.md:1'
-      - 'Info: Found text in security policy: github.com/projectdiscovery/.github/SECURITY.md:1'
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/dockerhub-push.yml:11'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -229,6 +221,14 @@ checks:
       - 'Warn: release artifact v1.2.2 does not have provenance: https://api.github.com/repos/projectdiscovery/cloudlist/releases/210797337'
       - 'Warn: release artifact v1.2.1 does not have provenance: https://api.github.com/repos/projectdiscovery/cloudlist/releases/203691448'
       - 'Warn: release artifact v1.2.0 does not have provenance: https://api.github.com/repos/projectdiscovery/cloudlist/releases/199353904'
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: github.com/projectdiscovery/.github/SECURITY.md:1'
+      - 'Info: Found linked content: github.com/projectdiscovery/.github/SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/projectdiscovery/.github/SECURITY.md:1'
+      - 'Info: Found text in security policy: github.com/projectdiscovery/.github/SECURITY.md:1'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during GetBranch(main): error during branchesHandler.query: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'

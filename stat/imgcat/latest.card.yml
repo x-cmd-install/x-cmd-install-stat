@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.0.23"
   latestRelease: "v1.0.23"
   latestPrerelease: ""
-  collectedAt: 2026-09-29T05:46:52Z
+  collectedAt: 2026-09-30T05:36:28Z
 timeline:
   created: 2020-09-24
   lastCommit: 2026-06-18
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-06-18
   lastPrerelease: 
 popularity:
-  star: 419
+  star: 420
   watcher: 3
-  fork: 20
+  fork: 21
   release: 21
   contributor: 9
   pullRequest: 20
@@ -27,7 +27,7 @@ language:
 totalBytes: 10872
 recent:
   last30d:
-    since: 2026-08-30
+    since: 2026-08-31
     release: 0
     mergedPR: 0
     openPR: 1
@@ -35,7 +35,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-07-31
+    since: 2026-08-01
     release: 0
     mergedPR: 0
     openPR: 1
@@ -43,7 +43,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-07-01
+    since: 2026-07-02
     release: 0
     mergedPR: 0
     openPR: 1
@@ -51,7 +51,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-04-02
+    since: 2026-04-03
     release: 1
     mergedPR: 1
     openPR: 1
@@ -59,7 +59,7 @@ recent:
     openIssue: 1
     commit: 19
   last360d:
-    since: 2025-10-04
+    since: 2025-10-05
     release: 1
     mergedPR: 2
     openPR: 1
@@ -67,7 +67,7 @@ recent:
     openIssue: 1
     commit: 22
   last720d:
-    since: 2024-10-09
+    since: 2024-10-10
     release: 3
     mergedPR: 4
     openPR: 1
@@ -83,7 +83,7 @@ total:
   commit: 102
 ---
 path: /home/runner/.x-repo/github.com/danielgatis/imgcat
-collectedAt: 2026-09-29T05:46:53Z
+collectedAt: 2026-09-30T05:36:30Z
 loc:
   Go:
     code: 376
@@ -106,7 +106,7 @@ total:
   blanks: 137
   files: 7
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/danielgatis/imgcat
   commit: f71d99da85e614a4eefc0f114b927dc92573475e
@@ -115,20 +115,6 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 3
 checks:
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/goreleaser.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: Code-Review
     score: 1
     reason: Found 3/20 approved changesets -- score normalized to 1
@@ -136,6 +122,20 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/goreleaser.yml:1'
+      - 'Info: no jobLevel write permissions found'
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Pinned-Dependencies
     score: 0
@@ -158,22 +158,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/goreleaser.yml:9'
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -186,6 +181,11 @@ checks:
       - 'Warn: release artifact v1.0.22 does not have provenance: https://api.github.com/repos/danielgatis/imgcat/releases/227095702'
       - 'Warn: release artifact v1.0.21 does not have provenance: https://api.github.com/repos/danielgatis/imgcat/releases/211702495'
       - 'Warn: release artifact v1.0.20 does not have provenance: https://api.github.com/repos/danielgatis/imgcat/releases/103224996'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/goreleaser.yml:9'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches

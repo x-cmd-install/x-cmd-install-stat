@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.2.6"
   latestRelease: "v2.2.6"
   latestPrerelease: ""
-  collectedAt: 2026-09-29T06:36:20Z
+  collectedAt: 2026-09-30T06:28:51Z
 timeline:
   created: 2014-08-28
   lastCommit: 2026-09-28
@@ -34,15 +34,15 @@ language:
 totalBytes: 4616869
 recent:
   last30d:
-    since: 2026-08-30
+    since: 2026-08-31
     release: 0
-    mergedPR: 11
+    mergedPR: 8
     openPR: 2
     closedIssue: 0
     openIssue: 0
     commit: 8
   last60d:
-    since: 2026-07-31
+    since: 2026-08-01
     release: 0
     mergedPR: 24
     openPR: 3
@@ -50,7 +50,7 @@ recent:
     openIssue: 0
     commit: 20
   last90d:
-    since: 2026-07-01
+    since: 2026-07-02
     release: 0
     mergedPR: 71
     openPR: 4
@@ -58,7 +58,7 @@ recent:
     openIssue: 1
     commit: 89
   last180d:
-    since: 2026-04-02
+    since: 2026-04-03
     release: 0
     mergedPR: 102
     openPR: 4
@@ -66,7 +66,7 @@ recent:
     openIssue: 1
     commit: 189
   last360d:
-    since: 2025-10-04
+    since: 2025-10-05
     release: 0
     mergedPR: 158
     openPR: 4
@@ -74,13 +74,13 @@ recent:
     openIssue: 1
     commit: 369
   last720d:
-    since: 2024-10-09
+    since: 2024-10-10
     release: 1
     mergedPR: 181
     openPR: 4
     closedIssue: 41
     openIssue: 1
-    commit: 419
+    commit: 418
 total:
   release: 33
   mergedPR: 377
@@ -90,7 +90,7 @@ total:
   commit: 1947
 ---
 path: /home/runner/.x-repo/github.com/btraceio/btrace
-collectedAt: 2026-09-29T06:36:22Z
+collectedAt: 2026-09-30T06:28:56Z
 loc:
   Java:
     code: 85411
@@ -168,10 +168,10 @@ total:
   blanks: 23292
   files: 1041
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/btraceio/btrace
-  commit: a1b6b59c34768659116029041985b9c9546f8983
+  commit: ee8434e1b6552063b53b0c1cab948cc8fd17ba19
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -191,14 +191,25 @@ checks:
       - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Code-Review
     score: 0
-    reason: Found 0/14 approved changesets -- score normalized to 0
+    reason: Found 0/13 approved changesets -- score normalized to 0
     details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 8
+    reason: binaries present in source code
+    details:
+      - 'Warn: binary detected: btrace-dist/src/main/resources/libs/amd64/libbtrace.so:1'
+      - 'Warn: binary detected: gradle/wrapper/gradle-wrapper.jar:1'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:28'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:29'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:1045'
       - 'Warn: no topLevel permission defined: .github/workflows/codeql-analysis.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/continuous.yml:1'
       - 'Info: topLevel ''statuses'' permission set to ''read'': .github/workflows/dependency-auto-merge.yml:17'
@@ -212,16 +223,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/v2-protocol-tests.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/validate-renovate-config.yml:14'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 8
-    reason: binaries present in source code
-    details:
-      - 'Warn: binary detected: btrace-dist/src/main/resources/libs/amd64/libbtrace.so:1'
-      - 'Warn: binary detected: gradle/wrapper/gradle-wrapper.jar:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -260,14 +261,13 @@ checks:
       - 'Warn: containerImage not pinned by hash: docker/Dockerfile.distroless:4: pin your Docker image by updating gcr.io/distroless/java11-debian11 to gcr.io/distroless/java11-debian11@sha256:56ffee16297ae1d3484bd47575cacd8102e5ba2be425a7772b3f8ad0d48def3b'
       - 'Warn: containerImage not pinned by hash: docs/tutorials/demo/Dockerfile.k8s-sidecar-demo:10'
       - 'Warn: containerImage not pinned by hash: docs/tutorials/demo/Dockerfile.k8s-sidecar-demo:15: pin your Docker image by updating bellsoft/liberica-openjdk-debian:11.0.32.1-cds to bellsoft/liberica-openjdk-debian:11.0.32.1-cds@sha256:fde5f53b3688d1765206d90dbdb1a960fa97cc80a4e736a5a20a06d2167fe170'
-      - 'Warn: downloadThenRun not pinned by hash: .github/workflows/continuous.yml:122'
-      - 'Warn: downloadThenRun not pinned by hash: .github/workflows/release.yml:868'
-      - 'Warn: downloadThenRun not pinned by hash: .github/workflows/release.yml:306'
-      - 'Warn: downloadThenRun not pinned by hash: .github/workflows/v2-protocol-tests.yml:81'
-      - 'Info:  96 out of  96 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:  21 out of  21 third-party GitHubAction dependencies pinned'
+      - 'Warn: downloadThenRun not pinned by hash: .github/workflows/continuous.yml:145'
+      - 'Warn: downloadThenRun not pinned by hash: .github/workflows/release.yml:919'
+      - 'Warn: downloadThenRun not pinned by hash: .github/workflows/release.yml:336'
+      - 'Info: 103 out of 103 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:  24 out of  24 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   5 containerImage dependencies pinned'
-      - 'Info:   0 out of   4 downloadThenRun dependencies pinned'
+      - 'Info:   0 out of   3 downloadThenRun dependencies pinned'
   - name: Branch-Protection
     score: 2
     reason: branch protection is not maximal on development and all release branches
@@ -296,15 +296,15 @@ checks:
       - 'Info: PRs are required in order to make changes on branch ''develop'''
       - 'Warn: PRs are not required to make changes on branch ''release/2.2.4''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
       - 'Warn: PRs are not required to make changes on branch ''release/2.0.3''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/continuous.yml:180'
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits
     details:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Info: all commits (30) are checked with a SAST tool'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/continuous.yml:210'
 ---

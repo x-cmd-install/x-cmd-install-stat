@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.11.1"
   latestRelease: "v0.11.1"
   latestPrerelease: "v0.11.1-pre"
-  collectedAt: 2026-09-29T06:42:38Z
+  collectedAt: 2026-09-30T06:29:48Z
 timeline:
   created: 2018-11-19
   lastCommit: 2026-09-21
@@ -17,74 +17,74 @@ timeline:
 popularity:
   star: 2270
   watcher: 20
-  fork: 113
+  fork: 114
   release: 14
   contributor: 54
-  pullRequest: 143
-  issue: 92
+  pullRequest: 144
+  issue: 93
 language:
   Rust: 29755
   Dockerfile: 380
 totalBytes: 30135
 recent:
   last30d:
-    since: 2026-08-30
+    since: 2026-08-31
     release: 0
-    mergedPR: 8
-    openPR: 1
-    closedIssue: 0
-    openIssue: 1
-    commit: 5
-  last60d:
-    since: 2026-07-31
-    release: 0
-    mergedPR: 14
+    mergedPR: 6
     openPR: 2
     closedIssue: 0
-    openIssue: 1
-    commit: 13
+    openIssue: 2
+    commit: 0
+  last60d:
+    since: 2026-08-01
+    release: 0
+    mergedPR: 13
+    openPR: 3
+    closedIssue: 0
+    openIssue: 2
+    commit: 0
   last90d:
-    since: 2026-07-01
+    since: 2026-07-02
     release: 0
     mergedPR: 30
-    openPR: 3
+    openPR: 4
     closedIssue: 2
-    openIssue: 3
-    commit: 31
+    openIssue: 4
+    commit: 0
   last180d:
-    since: 2026-04-02
+    since: 2026-04-03
     release: 3
     mergedPR: 33
-    openPR: 7
+    openPR: 8
     closedIssue: 3
-    openIssue: 3
-    commit: 38
+    openIssue: 4
+    commit: 0
   last360d:
-    since: 2025-10-04
+    since: 2025-10-05
     release: 3
     mergedPR: 44
-    openPR: 10
+    openPR: 11
     closedIssue: 7
-    openIssue: 5
-    commit: 50
+    openIssue: 6
+    commit: 0
   last720d:
-    since: 2024-10-09
+    since: 2024-10-10
     release: 3
     mergedPR: 50
-    openPR: 11
+    openPR: 12
     closedIssue: 15
-    openIssue: 8
+    openIssue: 9
     commit: 94
 total:
   release: 14
   mergedPR: 120
-  openPR: 11
+  openPR: 12
   closedIssue: 71
-  openIssue: 21
+  openIssue: 22
   commit: 378
 ---
 path: /home/runner/.x-repo/github.com/sharkdp/vivid
-collectedAt: 2026-09-29T06:42:40Z
+collectedAt: 2026-09-30T06:29:49Z
 loc:
   Yaml:
     code: 4675
@@ -122,7 +122,7 @@ total:
   blanks: 1595
   files: 53
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/sharkdp/vivid
   commit: e9ff217369933ff35cb50947f537516a11e1bf99
@@ -135,6 +135,10 @@ checks:
     score: 3
     reason: Found 5/15 approved changesets -- score normalized to 3
     details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -142,10 +146,6 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Token-Permissions
     score: 0
@@ -169,10 +169,27 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE-APACHE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE-APACHE:0'
+  - name: Pinned-Dependencies
+    score: 7
+    reason: dependency not pinned by hash detected -- score normalized to 7
+    details:
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating rust:1.98-bullseye to rust:1.98-bullseye@sha256:4730e387a220a08a365c77da3096544dde214f9d796c16284d4be45438cad4a9'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:11: pin your Docker image by updating gcr.io/distroless/cc-debian10 to gcr.io/distroless/cc-debian10@sha256:ad23034798c17a50bb7f57330391dae444f0c02614ddc08c2b99c5d5284d4893'
+      - 'Info:   7 out of   7 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   7 out of   7 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   2 containerImage dependencies pinned'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -187,23 +204,6 @@ checks:
       - 'Warn: release artifact v0.11.0 does not have provenance: https://api.github.com/repos/sharkdp/vivid/releases/306361328'
       - 'Warn: release artifact v0.10.1 does not have provenance: https://api.github.com/repos/sharkdp/vivid/releases/161811234'
       - 'Warn: release artifact v0.10.0 does not have provenance: https://api.github.com/repos/sharkdp/vivid/releases/161806621'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-  - name: Pinned-Dependencies
-    score: 7
-    reason: dependency not pinned by hash detected -- score normalized to 7
-    details:
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating rust:1.98-bullseye to rust:1.98-bullseye@sha256:4730e387a220a08a365c77da3096544dde214f9d796c16284d4be45438cad4a9'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:11: pin your Docker image by updating gcr.io/distroless/cc-debian10 to gcr.io/distroless/cc-debian10@sha256:ad23034798c17a50bb7f57330391dae444f0c02614ddc08c2b99c5d5284d4893'
-      - 'Info:   7 out of   7 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   7 out of   7 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   2 containerImage dependencies pinned'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

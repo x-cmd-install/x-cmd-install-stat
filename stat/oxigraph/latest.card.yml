@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.5.11"
   latestRelease: "v0.5.11"
   latestPrerelease: "v0.5.3-post.1"
-  collectedAt: 2026-09-29T05:46:21Z
+  collectedAt: 2026-09-30T05:38:35Z
 timeline:
   created: 2018-05-16
   lastCommit: 2026-09-23
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-02
   lastPrerelease: 2025-12-19
 popularity:
-  star: 1965
+  star: 1967
   watcher: 32
   fork: 179
   release: 77
@@ -36,31 +36,31 @@ language:
 totalBytes: 3685912
 recent:
   last30d:
-    since: 2026-08-30
-    release: 2
-    mergedPR: 32
+    since: 2026-08-31
+    release: 1
+    mergedPR: 31
     openPR: 4
-    closedIssue: 2
+    closedIssue: 1
     openIssue: 5
     commit: 30
   last60d:
-    since: 2026-07-31
+    since: 2026-08-01
     release: 2
-    mergedPR: 79
+    mergedPR: 75
     openPR: 9
     closedIssue: 17
     openIssue: 15
     commit: 74
   last90d:
-    since: 2026-07-01
+    since: 2026-07-02
     release: 2
-    mergedPR: 104
+    mergedPR: 103
     openPR: 9
-    closedIssue: 26
+    closedIssue: 21
     openIssue: 19
     commit: 105
   last180d:
-    since: 2026-04-02
+    since: 2026-04-03
     release: 5
     mergedPR: 177
     openPR: 13
@@ -68,21 +68,21 @@ recent:
     openIssue: 28
     commit: 176
   last360d:
-    since: 2025-10-04
+    since: 2025-10-05
     release: 12
-    mergedPR: 279
+    mergedPR: 277
     openPR: 16
     closedIssue: 44
     openIssue: 42
     commit: 289
   last720d:
-    since: 2024-10-09
+    since: 2024-10-10
     release: 29
-    mergedPR: 530
+    mergedPR: 529
     openPR: 20
-    closedIssue: 89
+    closedIssue: 88
     openIssue: 67
-    commit: 599
+    commit: 596
 total:
   release: 77
   mergedPR: 1161
@@ -92,7 +92,7 @@ total:
   commit: 2406
 ---
 path: /home/runner/.x-repo/github.com/oxigraph/oxigraph
-collectedAt: 2026-09-29T05:46:24Z
+collectedAt: 2026-09-30T05:38:38Z
 loc:
   Rust:
     code: 78856
@@ -175,10 +175,10 @@ total:
   blanks: 8642
   files: 249
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/oxigraph/oxigraph
-  commit: 450d2fe0ea8b9aa457ad41dbf542582d1d443150
+  commit: e0f286b0ad0ab10f58c292377abf800b7f40301b
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -190,7 +190,7 @@ checks:
     details: null
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 11 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 13 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Dangerous-Workflow
     score: 10
@@ -204,13 +204,13 @@ checks:
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
     details:
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/artifacts.yml:136'
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/artifacts.yml:194'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/artifacts.yml:468'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/artifacts.yml:61'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/tests.yml:518'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/tests.yml:493'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/artifacts.yml:136'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/artifacts.yml:194'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/tests.yml:537'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/tests.yml:493'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/tests.yml:518'
       - 'Info: found token with ''none'' permissions: .github/workflows/artifacts.yml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/nightly.yml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/tests.yml:1'
@@ -226,6 +226,12 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE-APACHE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE-APACHE:0'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -242,12 +248,6 @@ checks:
       - 'Info: RustCargoFuzzer integration found: fuzz/fuzz_targets/sparql_update.rs:2'
       - 'Info: RustCargoFuzzer integration found: fuzz/fuzz_targets/sparql_update_eval.rs:3'
       - 'Info: RustCargoFuzzer integration found: fuzz/fuzz_targets/trig.rs:3'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE-APACHE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE-APACHE:0'
   - name: Pinned-Dependencies
     score: 8
     reason: dependency not pinned by hash detected -- score normalized to 8
@@ -258,8 +258,8 @@ checks:
       - 'Warn: npmCommand not pinned by hash: .github/workflows/tests.yml:344'
       - 'Info:  64 out of  64 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  28 out of  28 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   2 npmCommand dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
+      - 'Info:   0 out of   2 npmCommand dependencies pinned'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -292,7 +292,7 @@ checks:
     score: 10
     reason: packaging workflow detected
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/artifacts.yml:261'
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/artifacts.yml:316'
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits

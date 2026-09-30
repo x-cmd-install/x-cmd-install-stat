@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.7.20"
   latestRelease: "v0.7.20"
   latestPrerelease: "v0.5.4"
-  collectedAt: 2026-09-29T07:10:58Z
+  collectedAt: 2026-09-30T06:50:23Z
 timeline:
   created: 2017-08-01
   lastCommit: 2026-09-22
@@ -19,7 +19,7 @@ popularity:
   watcher: 36
   fork: 455
   release: 66
-  contributor: 509
+  contributor: 512
   pullRequest: 812
   issue: 300
 language:
@@ -31,7 +31,7 @@ language:
 totalBytes: 467525
 recent:
   last30d:
-    since: 2026-08-30
+    since: 2026-08-31
     release: 0
     mergedPR: 1
     openPR: 5
@@ -39,7 +39,7 @@ recent:
     openIssue: 0
     commit: 1
   last60d:
-    since: 2026-07-31
+    since: 2026-08-01
     release: 2
     mergedPR: 4
     openPR: 6
@@ -47,7 +47,7 @@ recent:
     openIssue: 1
     commit: 6
   last90d:
-    since: 2026-07-01
+    since: 2026-07-02
     release: 2
     mergedPR: 8
     openPR: 8
@@ -55,7 +55,7 @@ recent:
     openIssue: 2
     commit: 12
   last180d:
-    since: 2026-04-02
+    since: 2026-04-03
     release: 8
     mergedPR: 28
     openPR: 13
@@ -63,7 +63,7 @@ recent:
     openIssue: 2
     commit: 32
   last360d:
-    since: 2025-10-04
+    since: 2025-10-05
     release: 12
     mergedPR: 66
     openPR: 15
@@ -71,9 +71,9 @@ recent:
     openIssue: 2
     commit: 85
   last720d:
-    since: 2024-10-09
+    since: 2024-10-10
     release: 24
-    mergedPR: 160
+    mergedPR: 159
     openPR: 15
     closedIssue: 6
     openIssue: 2
@@ -87,7 +87,7 @@ total:
   commit: 1032
 ---
 path: /home/runner/.x-repo/github.com/kubernetes-sigs/aws-iam-authenticator
-collectedAt: 2026-09-29T07:11:04Z
+collectedAt: 2026-09-30T06:50:29Z
 loc:
   Go:
     code: 10177
@@ -140,15 +140,19 @@ total:
   blanks: 1970
   files: 132
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/kubernetes-sigs/aws-iam-authenticator
-  commit: 5ae0e8e3b6dea279c25278c8f4e701cd3f7bcbb7
+  commit: 6815fb70e9e48f713a14cb2fdf698a967290e56f
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 6.9
 checks:
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
@@ -156,14 +160,6 @@ checks:
   - name: Maintained
     score: 10
     reason: 22 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 9
@@ -173,10 +169,25 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/deps.yml:6'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/pr.yml:8'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
@@ -190,17 +201,10 @@ checks:
       - 'Info:   2 out of   2 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 containerImage dependencies pinned'
       - 'Info:   0 out of   2 goCommand dependencies pinned'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -223,18 +227,14 @@ checks:
       - 'Info: Found linked content: github.com/kubernetes-sigs/.github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/kubernetes-sigs/.github/SECURITY.md:1'
       - 'Info: Found text in security policy: github.com/kubernetes-sigs/.github/SECURITY.md:1'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/create-release.yml:13'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/create-release.yml:13'
 ---

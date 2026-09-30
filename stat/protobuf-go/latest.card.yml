@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.36.12"
   latestRelease: "v1.36.12"
   latestPrerelease: ""
-  collectedAt: 2026-09-29T06:05:49Z
+  collectedAt: 2026-09-30T05:54:29Z
 timeline:
   created: 2019-03-26
   lastCommit: 2026-09-16
@@ -28,7 +28,7 @@ language:
 totalBytes: 2931774
 recent:
   last30d:
-    since: 2026-08-30
+    since: 2026-08-31
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 1
   last60d:
-    since: 2026-07-31
+    since: 2026-08-01
     release: 1
     mergedPR: 0
     openPR: 1
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 7
   last90d:
-    since: 2026-07-01
+    since: 2026-07-02
     release: 1
     mergedPR: 0
     openPR: 1
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 9
   last180d:
-    since: 2026-04-02
+    since: 2026-04-03
     release: 1
     mergedPR: 0
     openPR: 1
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 10
   last360d:
-    since: 2025-10-04
+    since: 2025-10-05
     release: 2
     mergedPR: 0
     openPR: 1
@@ -68,13 +68,13 @@ recent:
     openIssue: 0
     commit: 37
   last720d:
-    since: 2024-10-09
+    since: 2024-10-10
     release: 14
     mergedPR: 0
     openPR: 1
     closedIssue: 0
     openIssue: 0
-    commit: 120
+    commit: 119
 total:
   release: 36
   mergedPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 1261
 ---
 path: /home/runner/.x-repo/github.com/protocolbuffers/protobuf-go
-collectedAt: 2026-09-29T06:05:51Z
+collectedAt: 2026-09-30T05:54:31Z
 loc:
   Go:
     code: 241284
@@ -122,7 +122,7 @@ total:
   blanks: 31513
   files: 622
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/protocolbuffers/protobuf-go
   commit: dcb66ef29d5e2a9420273f86407f493298804ec3
@@ -131,11 +131,10 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 5.4
 checks:
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -144,6 +143,17 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
+      - 'Info: no jobLevel write permissions found'
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Maintained
     score: 8
     reason: 10 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 8
@@ -151,16 +161,6 @@ checks:
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
-    details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
-      - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
     details: null
   - name: SAST
     score: 0
@@ -198,11 +198,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: BSD 3-Clause "New" or "Revised" License: LICENSE:0'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -217,4 +212,9 @@ checks:
       - 'Warn: release artifact v1.36.10 does not have provenance: https://api.github.com/repos/protocolbuffers/protobuf-go/releases/251672776'
       - 'Warn: release artifact v1.36.9 does not have provenance: https://api.github.com/repos/protocolbuffers/protobuf-go/releases/245789373'
       - 'Warn: release artifact v1.36.8 does not have provenance: https://api.github.com/repos/protocolbuffers/protobuf-go/releases/241237690'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
 ---

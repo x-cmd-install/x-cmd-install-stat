@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.43.1"
   latestRelease: "v0.43.1"
   latestPrerelease: "v0.43.0-rc2"
-  collectedAt: 2026-09-29T07:06:19Z
+  collectedAt: 2026-09-30T06:56:07Z
 timeline:
   created: 2014-06-26
   lastCommit: 2026-09-27
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-15
   lastPrerelease: 2026-07-29
 popularity:
-  star: 17145
+  star: 17144
   watcher: 514
   fork: 3175
   release: 135
@@ -32,7 +32,7 @@ language:
 totalBytes: 4049737
 recent:
   last30d:
-    since: 2026-08-30
+    since: 2026-08-31
     release: 1
     mergedPR: 10
     openPR: 14
@@ -40,31 +40,31 @@ recent:
     openIssue: 3
     commit: 28
   last60d:
-    since: 2026-07-31
+    since: 2026-08-01
     release: 2
     mergedPR: 21
-    openPR: 18
+    openPR: 15
     closedIssue: 7
     openIssue: 4
     commit: 64
   last90d:
-    since: 2026-07-01
+    since: 2026-07-02
     release: 4
-    mergedPR: 49
-    openPR: 22
+    mergedPR: 47
+    openPR: 20
     closedIssue: 7
     openIssue: 5
     commit: 116
   last180d:
-    since: 2026-04-02
+    since: 2026-04-03
     release: 9
-    mergedPR: 114
+    mergedPR: 113
     openPR: 23
     closedIssue: 23
     openIssue: 10
     commit: 245
   last360d:
-    since: 2025-10-04
+    since: 2025-10-05
     release: 17
     mergedPR: 272
     openPR: 29
@@ -72,7 +72,7 @@ recent:
     openIssue: 18
     commit: 483
   last720d:
-    since: 2024-10-09
+    since: 2024-10-10
     release: 43
     mergedPR: 549
     openPR: 31
@@ -88,7 +88,7 @@ total:
   commit: 16022
 ---
 path: /home/runner/.x-repo/github.com/ipfs/kubo
-collectedAt: 2026-09-29T07:06:29Z
+collectedAt: 2026-09-30T06:56:14Z
 loc:
   Go:
     code: 86688
@@ -156,18 +156,18 @@ total:
   blanks: 27142
   files: 849
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/ipfs/kubo
-  commit: 8f1a9621cf70ed611703850f05923f634a60898d
+  commit: 833e04a240d8c533509ddaaa3c202b39b0bb3024
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
-score: 5.8
+score: 5.9
 checks:
   - name: Code-Review
-    score: 1
-    reason: Found 1/8 approved changesets -- score normalized to 1
+    score: 3
+    reason: Found 3/10 approved changesets -- score normalized to 3
     details: null
   - name: Maintained
     score: 10
@@ -235,6 +235,27 @@ checks:
       - 'Warn: codeowners review is not required on branch ''master'''
       - 'Info: status check found to merge onto on branch ''master'''
       - 'Info: PRs are required in order to make changes on branch ''master'''
+  - name: SAST
+    score: 10
+    reason: SAST tool detected
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Info: SAST configuration detected: Hadolint'
+      - 'Warn: 8 commits out of 28 are checked with a SAST tool'
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v0.43.1 not signed: https://api.github.com/repos/ipfs/kubo/releases/388791012'
+      - 'Warn: release artifact v0.43.0 not signed: https://api.github.com/repos/ipfs/kubo/releases/364201411'
+      - 'Warn: release artifact v0.43.0-rc2 not signed: https://api.github.com/repos/ipfs/kubo/releases/362083613'
+      - 'Warn: release artifact v0.43.0-rc1 not signed: https://api.github.com/repos/ipfs/kubo/releases/358363134'
+      - 'Warn: release artifact v0.42.0 not signed: https://api.github.com/repos/ipfs/kubo/releases/335898142'
+      - 'Warn: release artifact v0.43.1 does not have provenance: https://api.github.com/repos/ipfs/kubo/releases/388791012'
+      - 'Warn: release artifact v0.43.0 does not have provenance: https://api.github.com/repos/ipfs/kubo/releases/364201411'
+      - 'Warn: release artifact v0.43.0-rc2 does not have provenance: https://api.github.com/repos/ipfs/kubo/releases/362083613'
+      - 'Warn: release artifact v0.43.0-rc1 does not have provenance: https://api.github.com/repos/ipfs/kubo/releases/358363134'
+      - 'Warn: release artifact v0.42.0 does not have provenance: https://api.github.com/repos/ipfs/kubo/releases/335898142'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -280,8 +301,6 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/golang-analysis.yml:61: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/golang-analysis.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/golint.yml:31: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/golint.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/golint.yml:32: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/golint.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/gotest.yml:216: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/gotest.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/gotest.yml:218: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/gotest.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/gotest.yml:34: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/gotest.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/gotest.yml:36: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/gotest.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/gotest.yml:54: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/gotest.yml/master?enable=pin'
@@ -298,9 +317,8 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/gotest.yml:142: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/gotest.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/gotest.yml:174: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/gotest.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/gotest.yml:176: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/gotest.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/interop.yml:49: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/interop.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/interop.yml:50: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/interop.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/interop.yml:54: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/interop.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/gotest.yml:216: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/gotest.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/gotest.yml:218: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/gotest.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/interop.yml:70: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/interop.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/interop.yml:73: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/interop.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/interop.yml:98: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/interop.yml/master?enable=pin'
@@ -312,6 +330,9 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/interop.yml:208: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/interop.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/interop.yml:240: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/interop.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/interop.yml:258: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/interop.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/interop.yml:49: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/interop.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/interop.yml:50: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/interop.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/interop.yml:54: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/interop.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/sharness.yml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/sharness.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/sharness.yml:30: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/sharness.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/sharness.yml:35: update your workflow using https://app.stepsecurity.io/secureworkflow/ipfs/kubo/sharness.yml/master?enable=pin'
@@ -340,27 +361,6 @@ checks:
       - 'Info:   2 out of  31 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   7 containerImage dependencies pinned'
       - 'Info:   1 out of   2 npmCommand dependencies pinned'
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v0.43.1 not signed: https://api.github.com/repos/ipfs/kubo/releases/388791012'
-      - 'Warn: release artifact v0.43.0 not signed: https://api.github.com/repos/ipfs/kubo/releases/364201411'
-      - 'Warn: release artifact v0.43.0-rc2 not signed: https://api.github.com/repos/ipfs/kubo/releases/362083613'
-      - 'Warn: release artifact v0.43.0-rc1 not signed: https://api.github.com/repos/ipfs/kubo/releases/358363134'
-      - 'Warn: release artifact v0.42.0 not signed: https://api.github.com/repos/ipfs/kubo/releases/335898142'
-      - 'Warn: release artifact v0.43.1 does not have provenance: https://api.github.com/repos/ipfs/kubo/releases/388791012'
-      - 'Warn: release artifact v0.43.0 does not have provenance: https://api.github.com/repos/ipfs/kubo/releases/364201411'
-      - 'Warn: release artifact v0.43.0-rc2 does not have provenance: https://api.github.com/repos/ipfs/kubo/releases/362083613'
-      - 'Warn: release artifact v0.43.0-rc1 does not have provenance: https://api.github.com/repos/ipfs/kubo/releases/358363134'
-      - 'Warn: release artifact v0.42.0 does not have provenance: https://api.github.com/repos/ipfs/kubo/releases/335898142'
-  - name: SAST
-    score: 10
-    reason: SAST tool detected
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Info: SAST configuration detected: Hadolint'
-      - 'Warn: 6 commits out of 28 are checked with a SAST tool'
   - name: Packaging
     score: 10
     reason: packaging workflow detected

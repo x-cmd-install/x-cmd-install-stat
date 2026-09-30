@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.119.0"
   latestRelease: "v0.119.0"
   latestPrerelease: "v2.0.0-beta.17"
-  collectedAt: 2026-09-29T05:55:39Z
+  collectedAt: 2026-09-30T05:42:22Z
 timeline:
   created: 2015-12-03
   lastCommit: 2026-09-24
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-09-25
   lastPrerelease: 2024-04-02
 popularity:
-  star: 2093
+  star: 2096
   watcher: 48
-  fork: 782
+  fork: 781
   release: 217
   contributor: 77
   pullRequest: 3940
@@ -29,15 +29,15 @@ language:
 totalBytes: 54990400
 recent:
   last30d:
-    since: 2026-08-30
+    since: 2026-08-31
     release: 4
-    mergedPR: 6
+    mergedPR: 5
     openPR: 2
     closedIssue: 0
     openIssue: 7
     commit: 19
   last60d:
-    since: 2026-07-31
+    since: 2026-08-01
     release: 5
     mergedPR: 7
     openPR: 3
@@ -45,7 +45,7 @@ recent:
     openIssue: 8
     commit: 43
   last90d:
-    since: 2026-07-01
+    since: 2026-07-02
     release: 7
     mergedPR: 9
     openPR: 3
@@ -53,15 +53,15 @@ recent:
     openIssue: 9
     commit: 85
   last180d:
-    since: 2026-04-02
+    since: 2026-04-03
     release: 17
-    mergedPR: 67
+    mergedPR: 65
     openPR: 5
     closedIssue: 4
     openIssue: 12
     commit: 410
   last360d:
-    since: 2025-10-04
+    since: 2025-10-05
     release: 24
     mergedPR: 92
     openPR: 6
@@ -69,13 +69,13 @@ recent:
     openIssue: 14
     commit: 806
   last720d:
-    since: 2024-10-09
-    release: 47
-    mergedPR: 857
+    since: 2024-10-10
+    release: 46
+    mergedPR: 849
     openPR: 6
     closedIssue: 48
     openIssue: 15
-    commit: 3535
+    commit: 3521
 total:
   release: 217
   mergedPR: 3694
@@ -85,7 +85,7 @@ total:
   commit: 6037
 ---
 path: /home/runner/.x-repo/github.com/cloudflare/cloudflare-go
-collectedAt: 2026-09-29T05:55:59Z
+collectedAt: 2026-09-30T05:42:41Z
 loc:
   Go:
     code: 805475
@@ -118,19 +118,20 @@ total:
   blanks: 155287
   files: 2285
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/cloudflare/cloudflare-go
-  commit: a45114730bf2f913c5adff8f3ed7bf7534feffb9
+  commit: 3da6607060703d3f757e22988e96f56f8cd9c04d
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 6
 checks:
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -139,15 +140,18 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -157,10 +161,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/detect-breaking-changes.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/semgrep.yml:13'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -175,11 +175,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 7
     reason: dependency not pinned by hash detected -- score normalized to 7
@@ -189,16 +184,23 @@ checks:
       - 'Warn: pipCommand not pinned by hash: .github/workflows/semgrep.yml:29'
       - 'Info:   8 out of  10 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 pipCommand dependencies pinned'
-  - name: Signed-Releases
+  - name: Fuzzing
     score: 0
-    reason: Project has not signed or included provenance with any releases.
+    reason: project is not fuzzed
     details:
-      - 'Warn: release artifact v0.118.0 not signed: https://api.github.com/repos/cloudflare/cloudflare-go/releases/380765372'
-      - 'Warn: release artifact v0.118.0 does not have provenance: https://api.github.com/repos/cloudflare/cloudflare-go/releases/380765372'
+      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v0.119.0 not signed: https://api.github.com/repos/cloudflare/cloudflare-go/releases/396935675'
+      - 'Warn: release artifact v0.118.0 not signed: https://api.github.com/repos/cloudflare/cloudflare-go/releases/380765372'
+      - 'Warn: release artifact v0.119.0 does not have provenance: https://api.github.com/repos/cloudflare/cloudflare-go/releases/396935675'
+      - 'Warn: release artifact v0.118.0 does not have provenance: https://api.github.com/repos/cloudflare/cloudflare-go/releases/380765372'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
