@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.2.0"
   latestRelease: "v1.2.0"
   latestPrerelease: "v0.1.4"
-  collectedAt: 2026-09-30T06:36:38Z
+  collectedAt: 2026-10-01T06:53:30Z
 timeline:
   created: 2022-02-12
   lastCommit: 2026-08-15
@@ -28,7 +28,7 @@ language:
 totalBytes: 345985
 recent:
   last30d:
-    since: 2026-08-31
+    since: 2026-09-01
     release: 0
     mergedPR: 0
     openPR: 1
@@ -36,39 +36,39 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-01
+    since: 2026-08-02
     release: 0
     mergedPR: 0
     openPR: 1
     closedIssue: 2
     openIssue: 0
-    commit: 0
+    commit: 3
   last90d:
-    since: 2026-07-02
+    since: 2026-07-03
     release: 0
     mergedPR: 0
     openPR: 1
     closedIssue: 3
     openIssue: 0
-    commit: 0
+    commit: 3
   last180d:
-    since: 2026-04-03
+    since: 2026-04-04
     release: 0
     mergedPR: 0
     openPR: 1
     closedIssue: 6
     openIssue: 0
-    commit: 0
+    commit: 7
   last360d:
-    since: 2025-10-05
+    since: 2025-10-06
     release: 1
     mergedPR: 0
     openPR: 1
     closedIssue: 6
     openIssue: 1
-    commit: 0
+    commit: 34
   last720d:
-    since: 2024-10-10
+    since: 2024-10-11
     release: 1
     mergedPR: 0
     openPR: 1
@@ -84,7 +84,7 @@ total:
   commit: 170
 ---
 path: /home/runner/.x-repo/github.com/trzsz/trzsz-go
-collectedAt: 2026-09-30T06:36:39Z
+collectedAt: 2026-10-01T06:53:31Z
 loc:
   Go:
     code: 10283
@@ -107,30 +107,37 @@ total:
   blanks: 1550
   files: 42
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/trzsz/trzsz-go
   commit: 665084211187c3034a819561a1b6650a45fed4c9
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 3.6
 checks:
   - name: Code-Review
     score: 0
     reason: Found 0/30 approved changesets -- score normalized to 0
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
+  - name: Maintained
+    score: 4
+    reason: 3 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 4
     details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Maintained
-    score: 4
-    reason: 3 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 4
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/gotest.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/publish.yml:1'
+      - 'Info: no jobLevel write permissions found'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: SAST
     score: 0
@@ -156,13 +163,6 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/publish.yml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/trzsz/trzsz-go/publish.yml/main?enable=pin'
       - 'Info:   0 out of  10 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 third-party GitHubAction dependencies pinned'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/gotest.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/publish.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -182,6 +182,14 @@ checks:
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -196,14 +204,6 @@ checks:
       - 'Warn: release artifact v1.1.7 does not have provenance: https://api.github.com/repos/trzsz/trzsz-go/releases/134971346'
       - 'Warn: release artifact v1.1.6 does not have provenance: https://api.github.com/repos/trzsz/trzsz-go/releases/126134618'
       - 'Warn: release artifact v1.1.5 does not have provenance: https://api.github.com/repos/trzsz/trzsz-go/releases/114399647'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: Packaging
     score: 10
     reason: packaging workflow detected

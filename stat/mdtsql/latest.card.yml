@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.2.0"
   latestRelease: "v0.2.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-30T06:34:37Z
+  collectedAt: 2026-10-01T06:54:05Z
 timeline:
   created: 2020-01-12
   lastCommit: 2026-06-01
@@ -28,7 +28,7 @@ language:
 totalBytes: 15192
 recent:
   last30d:
-    since: 2026-08-31
+    since: 2026-09-01
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-01
+    since: 2026-08-02
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-02
+    since: 2026-07-03
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-03
+    since: 2026-04-04
     release: 1
     mergedPR: 7
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 8
   last360d:
-    since: 2025-10-05
+    since: 2025-10-06
     release: 1
     mergedPR: 8
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 9
   last720d:
-    since: 2024-10-10
+    since: 2024-10-11
     release: 1
     mergedPR: 13
     openPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 95
 ---
 path: /home/runner/.x-repo/github.com/noborus/mdtsql
-collectedAt: 2026-09-30T06:34:37Z
+collectedAt: 2026-10-01T06:54:05Z
 loc:
   Go:
     code: 513
@@ -107,15 +107,19 @@ total:
   blanks: 158
   files: 14
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/noborus/mdtsql
   commit: 3517904b8b3d4f5fc1f84341cd000aec6c55b882
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
-score: 2.9
+score: 2.5
 checks:
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Code-Review
     score: 0
     reason: Found 0/12 approved changesets -- score normalized to 0
@@ -123,10 +127,6 @@ checks:
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -154,6 +154,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -162,17 +167,22 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -187,16 +197,6 @@ checks:
       - 'Warn: release artifact v0.0.6 does not have provenance: https://api.github.com/repos/noborus/mdtsql/releases/125361179'
       - 'Warn: release artifact v0.0.5 does not have provenance: https://api.github.com/repos/noborus/mdtsql/releases/96565260'
       - 'Warn: release artifact v0.0.4 does not have provenance: https://api.github.com/repos/noborus/mdtsql/releases/96564617'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:7'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

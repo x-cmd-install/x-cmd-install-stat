@@ -4,24 +4,24 @@ about:
   homepage: https://ecc.tools
   head: c70874f
   archived: false
-  latestVersion: "v2.2.1"
-  latestRelease: "v2.2.1"
+  latestVersion: "v2.2.2"
+  latestRelease: "v2.2.2"
   latestPrerelease: "v2.0.0-rc.1"
-  collectedAt: 2026-09-30T05:23:41Z
+  collectedAt: 2026-10-01T05:38:52Z
 timeline:
   created: 2026-01-18
   lastCommit: 2026-09-30
-  lastVersion: 2026-09-08
-  lastRelease: 2026-09-08
+  lastVersion: 2026-09-30
+  lastRelease: 2026-09-30
   lastPrerelease: 2026-05-25
 popularity:
-  star: 269737
-  watcher: 1352
-  fork: 40309
-  release: 17
+  star: 270290
+  watcher: 1358
+  fork: 40399
+  release: 18
   contributor: 393
-  pullRequest: 2309
-  issue: 813
+  pullRequest: 2317
+  issue: 818
 language:
   JavaScript: 8784754
   Rust: 1911228
@@ -36,63 +36,63 @@ language:
 totalBytes: 12448103
 recent:
   last30d:
-    since: 2026-08-31
-    release: 1
+    since: 2026-09-01
+    release: 2
     mergedPR: 106
-    openPR: 82
-    closedIssue: 38
-    openIssue: 45
+    openPR: 88
+    closedIssue: 37
+    openIssue: 50
     commit: 232
   last60d:
-    since: 2026-08-01
-    release: 2
-    mergedPR: 178
-    openPR: 117
+    since: 2026-08-02
+    release: 3
+    mergedPR: 175
+    openPR: 122
     closedIssue: 67
-    openIssue: 65
+    openIssue: 70
     commit: 477
   last90d:
-    since: 2026-07-02
-    release: 3
-    mergedPR: 261
-    openPR: 124
-    closedIssue: 103
-    openIssue: 73
+    since: 2026-07-03
+    release: 4
+    mergedPR: 258
+    openPR: 130
+    closedIssue: 102
+    openIssue: 78
     commit: 590
   last180d:
-    since: 2026-04-03
-    release: 6
+    since: 2026-04-04
+    release: 7
     mergedPR: 815
-    openPR: 128
-    closedIssue: 352
-    openIssue: 78
+    openPR: 134
+    closedIssue: 348
+    openIssue: 83
     commit: 1673
   last360d:
-    since: 2025-10-05
-    release: 17
+    since: 2025-10-06
+    release: 18
     mergedPR: 1133
-    openPR: 128
+    openPR: 134
     closedIssue: 734
-    openIssue: 78
+    openIssue: 83
     commit: 2616
   last720d:
-    since: 2024-10-10
-    release: 17
+    since: 2024-10-11
+    release: 18
     mergedPR: 1133
-    openPR: 128
+    openPR: 134
     closedIssue: 734
-    openIssue: 78
+    openIssue: 83
     commit: 3040
 total:
-  release: 17
+  release: 18
   mergedPR: 1136
-  openPR: 128
+  openPR: 134
   closedIssue: 735
-  openIssue: 78
+  openIssue: 83
   commit: 3040
 ---
 path: /home/runner/.x-repo/github.com/affaan-m/ECC
-collectedAt: 2026-09-30T05:23:47Z
+collectedAt: 2026-10-01T05:38:58Z
 loc:
   JavaScript:
     code: 196969
@@ -197,4 +197,4 @@ total:
 ---
 
 ---
-{"id":384945417,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQ77-1M4W8c0J","tag_name":"v2.2.1","target_commitish":"main","name":"v2.2.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-08T17:39:02Z","updated_at":"2026-09-08T17:52:08Z","published_at":"2026-09-08T17:52:08Z","assets":[],"body":"# ECC 2.2.1\n\nECC 2.2.1 is a bug and security patch for ECC 2.2. It keeps the published\n`v2.2.0` history immutable. These notes describe the prepared patch; publication\nand signing evidence are tracked separately in the release checklist.\n\n## Security and data protection\n\n- GateGuard and governance capture recognize destructive PowerShell commands,\n  including the native PowerShell tool path. Dynamic command handling prevents\n  later variable assignments from concealing earlier unresolved invocations\n  ([#2961](https://github.com/affaan-m/ECC/pull/2961)).\n- Relative GateGuard exemption globs stay within the project root. Explicit\n  absolute exemptions remain supported\n  ([#2921](https://github.com/affaan-m/ECC/issues/2921)).\n- Installer writes reject collisions with untracked user-owned files. Failed\n  installs refresh ownership hashes only for files they actually wrote, preserving the previous\n  ownership hashes of untouched managed files\n  ([#2964](https://github.com/affaan-m/ECC/issues/2964)).\n- Guided setup revalidates its preview before ownership filtering, so files\n  appearing between preview and apply cause a clear retry instead of a false\n  success. Existing identical user files stay outside ECC ownership.\n- Uninstall respects `ECC_DRY_RUN=1`, including legacy Codex paths, and rejects\n  invalid dry-run values instead of silently allowing deletion\n  ([#2952](https://github.com/affaan-m/ECC/issues/2952)).\n- Observer analysis retains observations on unsuccessful or unconfirmed\n  processing. Exit code zero alone no longer permits archival\n  ([#2971](https://github.com/affaan-m/ECC/pull/2971)).\n- The Yarn lockfile updates `toml` to 4.3.0, matching the npm lockfile and\n  removing the affected older resolution.\n\n## Hooks and installation\n\n- Manual Claude installs register ECC-owned hook entries in Claude settings.\n  Repair, consent changes, and uninstall reconcile those entries while\n  preserving unrelated settings. Atomic settings updates check directory\n  identity and retry detected concurrent edits\n  ([#2992](https://github.com/affaan-m/ECC/pull/2992)).\n- Direct hook entrypoints handle larger JSON payloads with bounded, UTF-8-safe\n  reads instead of silently truncating valid inputs. Existing production\n  wrapper limits remain unchanged\n  ([#2924](https://github.com/affaan-m/ECC/issues/2924)).\n- The Pi adapter selects an actual Node runtime instead of recursively\n  executing a compiled OMP host as Node\n  ([#2909](https://github.com/affaan-m/ECC/issues/2909)).\n- Installer listing and control-pane help avoid eager third-party dependency\n  loading. Features that require absent runtime packages report the missing\n  dependency explicitly\n  ([#2994](https://github.com/affaan-m/ECC/pull/2994)).\n- Autonomous harness setup documentation replaces nonexistent package names\n  and unsupported CLI flags with documented interfaces, and distinguishes\n  session scheduling from a durable external scheduler\n  ([#2957](https://github.com/affaan-m/ECC/issues/2957)).\n\n## Installer and release-surface hardening\n\n- Public and packaged install docs now consistently point at the published\n  `ecc-universal` commands instead of stale or unrelated package names.\n- The AdaL adapter docs use the correct `npx ecc-universal doctor --target adal`\n  command.\n- Claude setup preflights `git` before provider-specific work starts, so missing\n  prerequisites fail fast with the right action.\n- Guided setup dry runs use isolated HOME, config, XDG, temp, and Windows app\n  data roots to avoid ambient host state affecting review or tests.\n- The exact packed artifact now has stronger lifecycle coverage for Claude and\n  Kimi setup, update, doctor, repeat install, uninstall, and dry-run flows.\n- Identifier regression coverage blocks stale `ecc`, `ecc-install`, and other\n  mismatched release-path commands from creeping back into user-facing docs.\n\n## Current-main documentation included in this patch\n\n- The canonical It\u00f4 workflow now documents `ecc ito accept <ticket-id>` and the\n  `ito_accept` MCP tool.\n- Acceptance is explicitly bounded to buyer-authority routing. It routes the\n  active desk quote to human review and does not claim to place a trade.\n\n## Provenance boundary\n\n- `v2.2.1` is intended to be a signed annotated tag on exact green `main`.\n- `v2.2.0` remains the immutable historical unsigned exception. Do not move,\n  recreate, or reuse that tag.\n\n## Scope and limitations\n\n- Plugin dependency handling does not bundle or automatically install missing\n  modules. Database and schema-validation features require their declared\n  runtime dependencies.\n- Ownership protection covers untracked collisions and failed-install\n  checkpoints. Successful upgrades retain the existing contract for replacing\n  previously managed files. Back up intentional edits before upgrading.\n- This patch does not introduce new harness platforms or claim that every\n  open community issue is resolved.\n\n## Upgrade\n\nAfter the release workflow publishes 2.2.1 and verifies registry integrity,\ninstall or update the package, then run the same ECC command path you already\nuse. Until publication completes, the exact-version command below returns E404.\n\n```bash\nnpm install -g ecc-universal@2.2.1\necc doctor\n```\n\nFor first-time or guided terminal setup:\n\n```bash\nnpx ecc-universal setup\n```\n\nThe native Claude marketplace path remains supported:\n\n```text\n/plugin marketplace add https://github.com/affaan-m/ECC\n/plugin install ecc@ecc\n```\n","reactions":{"total_count":14,"+1":3,"-1":0,"laugh":0,"hooray":3,"confused":0,"heart":0,"rocket":8,"eyes":0}}
+{"id":400353375,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQ77-1M4X3Ohf","tag_name":"v2.2.2","target_commitish":"main","name":"v2.2.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-30T18:45:03Z","updated_at":"2026-09-30T19:05:42Z","published_at":"2026-09-30T19:04:52Z","assets":[],"body":"# ECC 2.2.2\n\nECC 2.2.2 adds `pi/core`, a curated Pi-native skills+prompts-only profile built for\ndownstream packagers that mirror GitHub Releases, plus a set of packaging, memory,\nhooks, and Windows compatibility fixes.\n\n## Pi core profile\n\n`pi/core/` is a self-contained package (`ecc-pi-core`) that downstream mirrors of the release\ntarball can copy directly: no build step, no extensions, no hooks, no runtime\ndownloads, and no network or SaaS dependencies.\n\n- 123 curated skills (language and framework patterns, testing/TDD, code review,\n  non-offensive security review, planning, refactoring, docs, and git/PR workflows)\n  and 24 prompt commands that are pure prompt workflows.\n- Generated deterministically from the explicit include/exclude lists in\n  `manifests/pi-core.json` by `scripts/build-pi-core.js` and committed, so the\n  release tarball contains it verbatim. `pi/core/CURATION.md` lists every excluded\n  skill and command with its reason; the `council` skill ships as `ecc-council`\n  inside pi/core to avoid catalog name clashes.\n- The build fails on safety violations: non-allowlisted URL hosts, pipe-to-shell\n  or fetch-and-run download forms, secrets or tokens, absolute per-user home\n  paths, symlinks, invalid SKILL.md frontmatter, and duplicate skill names.\n- CI rebuilds pi/core on every PR and verifies it is up to date, then installs\n  the Pi coding agent CLI and proves the profile loads fully offline\n  (`PI_OFFLINE=1`), asserting that every curated command actually registers.\n- The release workflow additionally verifies that `VERSION` matches the tag and\n  that pi/core is current before publishing.\n\nDownstream consumption: poll `/releases`, download\n`archive/refs/tags/vX.Y.Z.tar.gz`, pin its sha256, copy `pi/core/`, and load it\noffline with `pi --offline --skill pi/core/skills --prompt-template pi/core/commands`.\n\n## Packaging\n\n- The compiled OpenCode payload is explicitly included in the npm package, and\n  packing is verified from a clean state with lifecycle scripts enabled.\n\n## Memory and MCP\n\n- Incomplete memory reads are distinguished from missing records, and directory\n  traversal failures are classified.\n- The reserved `_meta` parameter is accepted on memory MCP ping requests.\n\n## Hooks and Windows compatibility\n\n- `hooks.json` stays within Claude Code's schema; stable hook metadata moved into\n  a validated sidecar.\n- The no-verify guard handles stuck optional values and long-option prefixes.\n- Windows linter paths and ESLint 9 are supported, and settings updates tolerate\n  missing Windows device IDs while retaining full-precision inode checks.\n\n## Workflow guidance, catalog, and dependency security\n\n- Epic sync filters issues by label; dependency bumps no longer document\n  auto-merge; naming and Boolean guidance is language-neutral; the `prp-pr`\n  command alias is distinguished; Rails skill discovery, invoice tax calculation\n  order, and framework documentation were corrected; Serply and Squish catalog\n  entries were removed.\n- `lru` updated to 0.18.2 (RUSTSEC-2026-0253) and `js-yaml` to 4.3.2\n  (GHSA-2883-xcg3-v3hh).\n\n","reactions":{"total_count":2,"+1":1,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":0,"rocket":0,"eyes":0}}

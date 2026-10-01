@@ -2,95 +2,95 @@ about:
   description: "Convert documentation websites, GitHub repositories, and PDFs into Claude AI skills with automatic conflict detection"
   license: MIT
   homepage: https://skillseekersweb.com/
-  head: 76d59ab
+  head: 5b5d8df
   archived: false
-  latestVersion: "v3.9.1"
-  latestRelease: "v3.9.1"
+  latestVersion: "v3.10.0"
+  latestRelease: "v3.10.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-30T05:27:38Z
+  collectedAt: 2026-10-01T05:37:31Z
 timeline:
   created: 2025-10-17
-  lastCommit: 2026-09-20
-  lastVersion: 2026-08-03
-  lastRelease: 2026-08-03
+  lastCommit: 2026-09-30
+  lastVersion: 2026-09-30
+  lastRelease: 2026-09-30
   lastPrerelease: 
 popularity:
-  star: 15049
+  star: 15067
   watcher: 72
-  fork: 1536
-  release: 34
+  fork: 1537
+  release: 35
   contributor: 54
   pullRequest: 171
   issue: 266
 language:
-  Python: 7078979
-  TypeScript: 548539
+  Python: 7078986
+  TypeScript: 548972
   Shell: 63308
   CSS: 5539
   JavaScript: 3938
   Dockerfile: 2169
   Go Template: 1668
   HTML: 297
-totalBytes: 7704437
+totalBytes: 7704877
 recent:
   last30d:
-    since: 2026-08-31
-    release: 0
+    since: 2026-09-01
+    release: 1
     mergedPR: 7
     openPR: 1
     closedIssue: 1
     openIssue: 2
-    commit: 44
+    commit: 47
   last60d:
-    since: 2026-08-01
-    release: 1
-    mergedPR: 20
+    since: 2026-08-02
+    release: 2
+    mergedPR: 18
     openPR: 1
     closedIssue: 3
     openIssue: 3
-    commit: 64
+    commit: 67
   last90d:
-    since: 2026-07-02
-    release: 2
+    since: 2026-07-03
+    release: 3
     mergedPR: 35
     openPR: 1
     closedIssue: 5
     openIssue: 3
-    commit: 104
+    commit: 107
   last180d:
-    since: 2026-04-03
-    release: 7
+    since: 2026-04-04
+    release: 8
     mergedPR: 71
     openPR: 1
     closedIssue: 27
     openIssue: 3
-    commit: 185
+    commit: 188
   last360d:
-    since: 2025-10-05
-    release: 34
+    since: 2025-10-06
+    release: 35
     mergedPR: 125
     openPR: 1
     closedIssue: 220
     openIssue: 46
-    commit: 824
+    commit: 827
   last720d:
-    since: 2024-10-10
-    release: 34
+    since: 2024-10-11
+    release: 35
     mergedPR: 125
     openPR: 1
     closedIssue: 220
     openIssue: 46
-    commit: 883
+    commit: 887
 total:
-  release: 34
+  release: 35
   mergedPR: 125
   openPR: 1
   closedIssue: 220
   openIssue: 46
-  commit: 883
+  commit: 887
 ---
 path: /home/runner/.x-repo/github.com/yusufkaraaslan/Skill_Seekers
-collectedAt: 2026-09-30T05:27:43Z
+collectedAt: 2026-10-01T05:37:34Z
 loc:
   Html:
     code: 245932
@@ -103,7 +103,7 @@ loc:
     blanks: 30976
     files: 510
   Tsx:
-    code: 11340
+    code: 11346
     comments: 259
     blanks: 909
     files: 74
@@ -164,8 +164,8 @@ loc:
     files: 21
   Markdown:
     code: 0
-    comments: 56001
-    blanks: 23983
+    comments: 56011
+    blanks: 23988
     files: 302
   Text:
     code: 0
@@ -173,11 +173,11 @@ loc:
     blanks: 76
     files: 17
 total:
-  code: 473223
-  comments: 164384
-  blanks: 560712
+  code: 473229
+  comments: 164394
+  blanks: 560717
   files: 3071
 ---
 
 ---
-{"id":363935646,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQEXZYc4VsTee","tag_name":"v3.9.1","target_commitish":"development","name":"v3.9.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-03T00:50:17Z","updated_at":"2026-08-03T00:52:12Z","published_at":"2026-08-03T00:52:12Z","assets":[],"body":"## [3.9.1] - 2026-08-02\n\n**Theme:** Documentation and project-infrastructure release. No runtime code changed \u2014 the package is functionally identical to 3.9.0.\n\n### Added\n- **Sponsorship program** (#442) \u2014 `SPONSORSHIP.md` (five tiers plus the rules), `SPONSORS.md`, and a `sponsors.json` single source of truth rendered into all 12 READMEs by `scripts/render_sponsors.py`. Adding a sponsor is one JSON edit instead of thirteen hand edits, and CI (`--check`) fails on drift. `.github/FUNDING.yml` gains GitHub Sponsors alongside Buy Me a Coffee.\n- **Sponsor URLs are policy-checked in code** \u2014 the renderer refuses any sponsor link carrying `utm_`/`ref`/`fbclid`/`gclid`-style parameters, enforcing rule 4 of the published policy. This immediately caught 24 UTM-tagged links already present across the READMEs; all sponsor links are now clean.\n\n### Changed\n- **README restructured into a lean landing page** \u2014 1,371 \u2192 424 lines, with the deep-dive material moved behind links to the `docs/` pages that already covered it. Mirrored across all 11 translations (~16,500 \u2192 ~5,100 lines total), each keeping its machine-translation notice and language switcher.\n- **Repo root decluttered** \u2014 `BULLETPROOF_QUICKSTART.md` \u2192 `docs/getting-started/`, the dated `DOCUMENTATION_AUDIT_REPORT_2026-05-30.md` \u2192 `docs/archive/historical/`, with every reference repointed.\n- **`QWEN.md` reduced from 719 to 64 lines** \u2014 it duplicated `AGENTS.md` while advertising three different version numbers at once (v3.6.0, 3.3.0, and \"17+ source types\" beside \"18 source types\"). It is now a pointer to `AGENTS.md` that keeps the essential commands and conventions inline and carries no hardcoded version.\n\n### Fixed\n- **Stale and incorrect README claims corrected against the codebase** \u2014 version badge 3.7.0 \u2192 3.9.0; the documented `scan --quick|--comprehensive|--enhance` flags do not exist and are now `create --preset quick|standard|comprehensive`; export targets \"16 formats\"/\"21 platforms\" \u2192 22; CLI reference \"all 20 commands\" \u2192 19; the `install-agent` table 15 \u2192 19 entries; workflow presets \"24+\" \u2192 68; and the dead `# skill-seekers list-configs` line removed.\n- **Three overlapping troubleshooting guides unified** \u2014 root `TROUBLESHOOTING.md` (485 lines), `docs/TROUBLESHOOTING.md` (1,102) and `docs/user-guide/06-troubleshooting.md` (108) shared only 2 of 22 headings, so none was a stale copy. `docs/TROUBLESHOOTING.md` is now the single comprehensive reference (1,398 lines) with the five sections that existed only at root merged in; the user-guide chapter stays as the short entry in the numbered series.\n- **92 broken relative links repaired across the docs tree** (109 \u2192 17) \u2014 targets relinked to their real locations, case/separator mismatches fixed (`integrations/cursor.md` \u2192 `CURSOR.md`, `advanced/api-reference.md` \u2192 `reference/API_REFERENCE.md`), and links to never-written docs unlinked rather than left as 404s. The remaining 17 are intentional (template placeholders, illustrative generated-output samples, archived snapshots).\n- **Version stamps refreshed in 28 docs files** (14 English + 14 zh-CN) from v3.6.0 to v3.9.0. Historical references in `MIGRATION_GUIDE.md` and \"added in vX.Y.Z\" notes are deliberately untouched.\n- **`test_cli_paths.py` no longer pins a version literal** \u2014 it asserted `\"3.9.0\"` and broke the moment the dev version moved, the same fragility already fixed in `test_package_structure.py`. It now tracks `skill_seekers.__version__`.\n- **The published MCP Docker image was broken and is now fixed** \u2014 `Dockerfile.mcp` installed the MCP SDK with a bare `pip install mcp`, bypassing the `mcp>=1.25,<2` pin in `pyproject.toml`. Once mcp 2.0.0 shipped, that resolved to 2.x, where `FastMCP` moved out of `mcp.server`, so the container died on startup with `cannot import name 'FastMCP'`. It now installs via the `[mcp]` extra so the pin applies. Verified by building the image and confirming the server answers `/health` in ~4s on mcp 1.29.0.\n- **Docker MCP image smoke test polls for readiness** \u2014 the PR-only `Test MCP image` job waited a fixed 10s before curling `/health`, then failed with no diagnostics. It now polls for up to 60s and dumps container logs on timeout. That log dump is what surfaced the broken-image bug above, which the old silent failure had masked for months.\n\n"}
+{"id":400344611,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQEXZYc4X3MYj","tag_name":"v3.10.0","target_commitish":"development","name":"v3.10.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-30T18:48:57Z","updated_at":"2026-09-30T18:53:11Z","published_at":"2026-09-30T18:53:11Z","assets":[],"body":"## [3.10.0] - 2026-09-30\n\n**Theme:** Seeker HUD (beta) \u2014 a local web UI for the whole toolchain \u2014 plus a path-traversal security fix, three machine-readable CLI commands, an opt-in SQLite skill search index, MiniMax video input, and PDF vector-figure extraction.\n\n> **The Seeker HUD web UI is in beta.** It ships in this release for early feedback: screens, `/api/*` routes, and the UI state stored under `~/.skill-seekers/ui/` may change between minor releases without a deprecation period. The CLI, the MCP server, and every existing platform adaptor are unaffected. Please report HUD issues on GitHub.\n\n### Security\n- **Path traversal in the `fetch_config` MCP tool (CWE-22)** (#462 reported by @Harmenszoon, fixed in PR #464 by @emecii) \u2014 the git-URL mode passed the raw `config_name` argument into `cache_dir / f\"temp_{name}\"`, and `clone_or_pull` both deletes that path (on `refresh` or a failed pull) and clones attacker-chosen content into it, so a crafted name could delete or overwrite directories outside the cache. The shared clone boundary now validates the cache name, and `fetch_config` validates `config_name` once for all three modes in both MCP servers (the named-source and API modes wrote `<destination>/<name>.json` from the raw name too). All name checks now go through one allowlist (`services/path_safety.validate_path_segment`: leading letter or digit, then letters, digits, `.`, `_`, `-`), which also rejects NUL bytes, whitespace and dot-files such as `.git`; the workflow, config-publisher and marketplace validators delegate to it. A failed pull on a cached clone now falls through to a fresh clone instead of deleting the cache and reporting an error.\n\n### Added\n- **Seeker HUD (beta) \u2014 a local web app for the whole toolchain.** `pip install \"skill-seekers[ui]\"` then `skill-seekers ui` opens a React + FastAPI interface on `http://127.0.0.1:8770` (loopback only) with Overview, Create, Skills, Configs, Workflows, Analyze, Environment, and job-history screens; every long-running action runs as a streamed job. The built frontend is bundled into the wheel, so no Node toolchain is needed to use it. The beta status is shown in the sidebar and the launcher banner and documented in `docs/guides/WEB_UI.md`; the HUD-specific entries below describe the screens in detail.\n- **MiniMax-M3 video input and thinking modes** (#468 by @octo-patch) \u2014 `AgentClient.call_with_video()` sends a local MP4/AVI/MOV/MKV clip as an OpenAI-compatible `video_url` part (MiniMax-M3 only, 50 MB inline cap enforced before the request), and `MINIMAX_THINKING=adaptive|disabled` (or a `thinking=` call argument) is carried in the request body. Both are registry-driven \u2014 `supports_video`, `video_models`, `video_max_bytes`, `thinking_modes`, `thinking_env` on the provider entry \u2014 so `_call_api` still never branches on a provider name. The thinking mode is validated once at client construction; under the Anthropic protocol it is ignored with a warning instead of silently dropped. No built-in pipeline calls the video path yet.\n- **Opt-in SQLite search index for generated skills** (#393, PR #463 by @emecii) \u2014 `skill-seekers create <source> --index` (or `\"index\": true` in a config file) writes `scripts/index.db` (FTS5 with BM25, LIKE-style fallback where FTS5 is unavailable) and a stdlib-only `scripts/search.py` that returns ranked `file#anchor` pointers, and appends a search-first block to SKILL.md. Off by default, Markdown untouched, zero new dependencies; the Claude packager already ships `scripts/`. Sections are split at headings outside fenced code blocks, `index.md` table-of-contents pages are skipped, anchors follow GitHub's rules, query tokens are quoted so `NOT`/`OR` are plain words, and nothing is installed when a skill has no indexable references. Enhancement and indexing now resolve the skill directory the same way the scrapers do, including a config-file `output_dir`.\n- **`skill-seekers doctor --json`** (#459 by @Whxuan0701) \u2014 machine-readable diagnostics for CI and agents: `version`, per-check results, pass/warn/fail `summary`, `healthy` and `exit_code`, as exactly one JSON document on stdout. Import-time noise from dependencies is forwarded to stderr, a crashing check is reported as `{\"error\": ...}`, and `verbose_detail` (which carries masked API-key fragments) is only populated with `--verbose`, matching the human report. The `doctor` command now has a section in the CLI reference.\n- **`skill-seekers quality <dir> --json`** (#458 by @Whxuan0701) \u2014 the quality report on stdout as exactly one JSON document, for pipelines. No default `quality_report.json` is written in this mode (`--output` still saves a copy), diagnostics and the threshold-gate reason go to stderr, errors are emitted as `{\"error\": ...}`, and `--report`/`--json` are mutually exclusive. The report file is now written before anything is printed, so a failed `--output` write cannot leave a complete report on stdout with a non-zero exit.\n- **`skill-seekers detect <source> [--json]`** (#457 by @Whxuan0701) \u2014 read-only preview of how `create` would classify and parse a source, for scripts, CI and agent workflows. Runs the same detect-and-validate stage as `create` (now shared as `SourceDetector.resolve`), reports `valid` / `validation_error`, always emits JSON on stdout under `--json` (errors included), and exits `2` for undetectable or unusable sources. Documented in the CLI reference, `AGENTS.md` and the docs index.\n- **Fluxion AI joins as a Bronze sponsor** \u2014 small logo in the README sponsor section across all 12 languages, captioned \"Sponsor \u2014 Bronze\" per rule 2, listed in `SPONSORS.md` with `since: September 2026`. Sponsorship active on GitHub Sponsors since 2026-09-16; link carries standard `utm_*` parameters only (rule 4) and the transparent PNG passed asset review (rule 6).\n- **Vector figures are extracted from PDF pages** (#434, PR #451 by @bferanmi806-sketch) \u2014 PDF image extraction relied on `page.get_images()` + `doc.extract_image(xref)`, which only see embedded raster objects, so vector-only diagrams reached neither the extracted assets nor the generated skill. Meaningful vector drawing clusters are now rendered as PNG assets alongside the raster path, with nearby labels kept in the clip. Entries in `extracted_images` carry `source` (`raster`/`vector`) and `bbox`, and pages gain `vector_figures_count` (`images_count` stays raster-only, so `total_images` keeps its meaning for the generated statistics).\n  - Detection is deliberately conservative and rejects page frames, separator rules, line-ruled tables and small decorative marks. A cluster made entirely of wide fill-only bands is page furniture \u2014 that is what a shaded code block, callout or admonition looks like \u2014 and is rejected, so ordinary docs PDFs do not emit PNGs of their own code samples.\n  - Figures are emitted in reading order rather than by area, so the `vectorN` suffix and the order in the generated reference markdown follow the page.\n  - `--min-image-size` now applies to vector figures on the same pixel basis as rasters; previously the flag silently did nothing for them.\n  - Raster/vector de-duplication compares **IoU**, not intersection-over-smaller-area. Under the latter, any fully contained raster scored 1.0, so a 30x30pt embedded logo deleted the entire architecture diagram enclosing it.\n  - Cost guardrails: clustering is skipped above `VECTOR_MAX_DRAWINGS` (2000) or `VECTOR_MAX_CLUSTERS` (400), and cluster membership is resolved through a coarse grid index instead of comparing every cluster against every drawing. A 3000-path page (scatter plot, map, CAD export) went from **56.3s and zero figures** to 0.17s \u2014 this path is on by default, so that cost was previously paid per page.\n- Sponsor entries in `sponsors.json` gain an optional `since` field and a `logo_svg` vector companion.\n- **Readability metrics in the quality checker** (#228, PR #441 by @bferanmi806-sketch) \u2014 `skill-seekers quality` now reports Flesch Reading Ease, Flesch-Kincaid Grade Level, average sentence length, and average paragraph length for SKILL.md prose, plus aggregated notes for over-long sentences and paragraphs. YAML frontmatter, fenced code, and inline code are excluded, and no new dependency is added. Scores use English-language formulas and may be inaccurate for other languages.\n  - Readability is reported as **info, never as warnings**: `quality_score` deducts 5 points per warning and `quality --threshold` exits non-zero in CI, so emitting warnings would have dropped scores by up to 10 points and failed existing quality gates on skills that had not changed. A regression test pins this contract.\n- Seeker HUD: skills are tagged by origin (`seeker` / `plugin \u00b7 <name>` / `manual`) with a filter; external skills are read-only except port/package (API returns 403 on mutation).\n- Seeker HUD: `GET /api/mcp/status` probes the stdio/HTTP transports; the Seeker MCP tab shows real status and copyable client config.\n- Seeker HUD: live skill search shared between the top bar and the grid; configs search; 25/50/100 paging on the skills, configs and workflows lists.\n- Seeker HUD: routed skill page at `/skills/<id>` with Overview, SKILL.md, Files, Installs, Enhance, Analysis, Export, and History tabs, replacing the skill drawer.\n- Seeker HUD: routed config page at `/configs/<id>` with Overview, JSON, Validate, Estimate, Sync, Push/Submit, and Generate tabs.\n- Seeker HUD: Workflows screen at `/workflows` (rows select `/workflows/<name>`) lists, views, copies, edits, validates, and deletes enhancement-workflow YAML.\n- Seeker HUD: Analyze screen at `/analyze` runs the C3.x codebase-analysis tools against a directory, skill, or owner/repo target and records manifests under `output/_analysis/`.\n- Seeker HUD: Environment screen at `/environment` adds Doctor, Servers (start/stop the MCP HTTP and embedding servers), and Agents (install/reinstall a skill) panels alongside the MCP tools catalogue.\n- Seeker HUD: twelve new job types \u2014 `upload`, `translate`, `update`, `quality`, `analyze`, `split`, `push`, `submit`, `sync-check`, `generate-config`, `install-agent`, `server` \u2014 back the new page actions; servers started from Environment run as jobs, and stopping the server cancels the job.\n- Seeker HUD: new `routes/` package (one module per screen, `register(app, ctx)`) and a shared `HudContext` carrying workspace/job-manager state into every route.\n\n### Changed\n- Sponsors: the RapidProxy (Silver) and Atlas Cloud placements were removed after those sponsorships lapsed (#470); Fluxion AI (Bronze) is the active sponsor.\n- Docs: zh-CN README translation polish (#450).\n- Seeker HUD: \"Library\" tab is now \"Configs\", \"MCP Tools\" is now \"Seeker MCP\".\n- Seeker HUD: externally-installed skills now report a checker-derived quality score (was a fixed 70), their real install path as source (was \"external install\"), and no default \"external\" tag.\n- Seeker HUD: opening a skill or config from any table, card, or job output now navigates to its routed page instead of opening a drawer; `/mcp` redirects to `/environment`, where the MCP tools catalogue is a collapsible panel rather than its own screen.\n\n### Fixed\n- **`skill-seekers-doctor` console script restored** (#456) \u2014 the entry point had shipped broken from v3.7.0 through v3.9.1; a test now checks that every declared `skill-seekers-*` console script resolves to a real function.\n- **Scheduled vector-database export workflow runs again** \u2014 the inline Python in `.github/workflows/vector-db-export.yml` was indented inside its `python3 -c \"...\"` string, so every scheduled export failed with `IndentationError` before touching an adaptor. The blocks now start at column 0.\n- Benchmark: the compare test is deterministic (#471).\n- **The default enhancement level set with `skill-seekers config` is honoured again** \u2014 `create` resolves the level as CLI `--enhance-level` \u2192 config-file `enhancement.level` \u2192 the user's `ai_enhancement.default_enhance_level` \u2192 the shipped default (2). It had been consumed by the old dispatcher until the unified `create` command (Feb 2026) and silently ignored since, while `skill-seekers config` kept displaying it. The fresh default is now 2 everywhere (it was 1 in the config manager and 2 on the CLI). The read is side-effect free: a plain `create` still never creates a config directory.\n- **Docs** \u2014 `HOW_TO_GUIDES.md` no longer tells you to run `skill-seekers-enhance` on a single `.md` file (it takes the skill directory), and `TROUBLESHOOTING.md` explains the `unrecognized arguments: --enhance-level` error seen on 3.4.0 and earlier (raised in #465; the call path was removed in 3.5.0 \u2014 upgrade). The `arguments/enhance.py` docstring no longer claims `enhance_skill_local.py` builds from the shared table; that worker has its own narrower parser.\n- Seeker HUD: installed-plugin scan no longer reads `~/.claude/plugins/{marketplaces,repos,data}/` (catalogue clones), which over-reported skills from plugins that were never installed.\n- Seeker HUD: MCP HTTP transport is reported live only when /health identifies Skill Seekers' own server (was any listener on the port); packaging an external skill no longer writes the archive into the plugin cache.\n- Seeker HUD: a `SKILL.md` nested inside a skill directory (e.g. vercel's `ai-sdk/upstream/`) no longer shows up as a separate skill; pressing Enter in the top-bar search no longer triggers the opened drawer's first action; the Seeker MCP status cards no longer overflow; the web API test fixture now owns its own `JobManager`, so test jobs stop leaking into `~/.skill-seekers/ui/`.\n- Seeker HUD: config sync-state paths are read and written through one sanitised `sync_state_path()` helper, closing a path-traversal read of arbitrary `*_sync.json` files via an unsanitised config `name`.\n- Seeker HUD: sync checks now detect and report unreachable pages (non-zero exit, `status: \"error\"`, unreachable-page count) instead of silently recording a down docs site as zero changes.\n- Seeker HUD: analysis runs are isolated per target by a hashed run directory, so concurrent runs no longer share state, and a stale previous run's leftover test output no longer falsely triggers the guides step. Running one tool now merges into the target's manifest instead of replacing it (a re-run clears only that tool's own output), and the manifest is written even when a tool exits non-zero, recording the failure alongside the results that survived.\n- Seeker HUD: uploads to the vector/RAG targets work again \u2014 the packager's `<name>-<target>.json` output was filtered out by an archive-only extension check, so every Chroma/Weaviate/Pinecone upload failed with \"produced no archive\".\n- Seeker HUD: `POST /api/environment/agents/{agent}/install` no longer accepts a caller-supplied `skill_dir`; the install source is always the workspace's own bootstrap output. Upload targets are derived from the adaptor registry, so `faiss`/`qdrant` are rejected up front instead of queueing a job that dies in argparse.\n- Seeker HUD: leaving a skill or config page with unsaved SKILL.md / JSON edits now asks for confirmation \u2014 the sidebar, header search and breadcrumbs used to discard the draft silently, since `BrowserRouter` has no `useBlocker`.\n- Seeker HUD: unmatched `/api/*` paths now 404 for every HTTP method, without widening the SPA catch-all route's accepted methods.\n- Seeker HUD: Doctor check levels are normalised (`pass`/`warn`/`fail` \u2192 `ok`/`warning`/`error`) so the status pill reflects real failures, and agent install paths resolve under the HUD's workspace root instead of the server process's working directory.\n\n- **Unified multi-source builds preserve readable source references** (#453) \u2014 converter-backed sources such as PDF and EPUB no longer leave their generated Markdown stranded in the scrape cache while the final skill contains only an index or raw JSON. Each source's `references/` tree and adjacent assets are copied into an indexed namespace, preventing same-name collisions and preserving relative asset links; visual video frames and `skip_scrape` reference locations are preserved too.\n  - Namespaces are `<scrape index>_<sanitized id>` (raw data JSON included), so URL/path ids are filesystem-safe and same-named inputs stay apart. Links in the synthesized SKILL.md are rewritten to the unified locations instead of pointing at the sub-skill's `references/*.md`.\n  - The builder now recreates the `references/` entries it owns on every build (source-type directories, `api/`, `codebase_analysis/`, `conflicts.md`); user files kept elsewhere under `references/` are left alone. A copy failure inside a cached sub-skill is logged and the build continues.\n  - The unified API-mode enhancement prompt reads references through the same bounded reader the platform adaptors use (200k chars total, 30k per file, keyed by relative path). Previously it inlined every reference file unbounded, which the full PDF/EPUB trees would have pushed past any model's context window.\n\n","mentions_count":5}

@@ -2,12 +2,12 @@ about:
   description: "🐶 Automated code review tool integrated with any code analysis tools regardless of programming language"
   license: MIT
   homepage: https://medium.com/@haya14busa/reviewdog-a-code-review-dog-who-keeps-your-codebase-healthy-d957c471938b#.8xctbaw5u
-  head: 5b5f3c6
+  head: ab9ac2c
   archived: false
   latestVersion: "v0.21.2"
   latestRelease: "v0.21.2"
   latestPrerelease: ""
-  collectedAt: 2026-09-30T06:27:42Z
+  collectedAt: 2026-10-01T06:40:17Z
 timeline:
   created: 2016-10-17
   lastCommit: 2026-09-30
@@ -19,8 +19,8 @@ popularity:
   watcher: 64
   fork: 501
   release: 46
-  contributor: 162
-  pullRequest: 2473
+  contributor: 163
+  pullRequest: 2474
   issue: 333
 language:
   Go: 534904
@@ -30,63 +30,63 @@ language:
 totalBytes: 557076
 recent:
   last30d:
-    since: 2026-08-31
+    since: 2026-09-01
     release: 2
-    mergedPR: 70
+    mergedPR: 67
     openPR: 4
     closedIssue: 2
     openIssue: 5
-    commit: 82
+    commit: 83
   last60d:
-    since: 2026-08-01
+    since: 2026-08-02
     release: 2
-    mergedPR: 119
+    mergedPR: 120
     openPR: 6
     closedIssue: 3
     openIssue: 5
-    commit: 139
+    commit: 140
   last90d:
-    since: 2026-07-02
+    since: 2026-07-03
     release: 2
-    mergedPR: 163
+    mergedPR: 164
     openPR: 6
     closedIssue: 3
     openIssue: 5
-    commit: 192
+    commit: 193
   last180d:
-    since: 2026-04-03
+    since: 2026-04-04
     release: 2
-    mergedPR: 291
+    mergedPR: 288
     openPR: 6
     closedIssue: 5
     openIssue: 6
-    commit: 321
+    commit: 322
   last360d:
-    since: 2025-10-05
+    since: 2025-10-06
     release: 2
     mergedPR: 506
     openPR: 6
     closedIssue: 6
     openIssue: 8
-    commit: 542
+    commit: 543
   last720d:
-    since: 2024-10-10
+    since: 2024-10-11
     release: 4
-    mergedPR: 797
+    mergedPR: 798
     openPR: 8
-    closedIssue: 19
+    closedIssue: 18
     openIssue: 18
     commit: 1708
 total:
   release: 46
-  mergedPR: 2287
+  mergedPR: 2288
   openPR: 9
   closedIssue: 210
   openIssue: 123
-  commit: 5843
+  commit: 5845
 ---
 path: /home/runner/.x-repo/github.com/reviewdog/reviewdog
-collectedAt: 2026-09-30T06:27:43Z
+collectedAt: 2026-10-01T06:40:18Z
 loc:
   Go:
     code: 17409
@@ -139,10 +139,10 @@ total:
   blanks: 2307
   files: 190
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/reviewdog/reviewdog
-  commit: 360c7b7d7d15a704006eb8449da18bc31120d1cf
+  commit: 5b5f3c6f4f9397700a5dd2d55d5cf08ce938f392
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -177,15 +177,15 @@ checks:
       - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/release_test.yml:20'
       - 'Warn: jobLevel ''checks'' permission set to ''write'': .github/workflows/reviewdog.yml:58'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yml:59'
+      - 'Warn: jobLevel ''checks'' permission set to ''write'': .github/workflows/reviewdog.yml:177'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yml:178'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yml:251'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/reviewdog.yml:252'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yml:195'
+      - 'Warn: jobLevel ''checks'' permission set to ''write'': .github/workflows/reviewdog.yml:194'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yml:227'
       - 'Warn: jobLevel ''checks'' permission set to ''write'': .github/workflows/reviewdog.yml:11'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yml:12'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yml:178'
-      - 'Warn: jobLevel ''checks'' permission set to ''write'': .github/workflows/reviewdog.yml:177'
-      - 'Warn: jobLevel ''checks'' permission set to ''write'': .github/workflows/reviewdog.yml:194'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yml:195'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yml:227'
       - 'Warn: no topLevel permission defined: .github/workflows/codeql-analysis.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/deploy-doghouse.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/depup.yml:1'
@@ -202,17 +202,17 @@ checks:
     score: 8
     reason: dependency not pinned by hash detected -- score normalized to 8
     details:
-      - 'Warn: containerImage not pinned by hash: proto/Dockerfile:1: pin your Docker image by updating golang:1.27.1 to golang:1.27.1@sha256:3680233e3204827fbdc66088528ae6d4b3d034f51d03a99d454f6de034888244'
+      - 'Warn: containerImage not pinned by hash: proto/Dockerfile:1: pin your Docker image by updating golang:1.27.1 to golang:1.27.1@sha256:e0174e51e81218523251d85d248a90d24c3d5e81543b4f07a5d66229397db190'
+      - 'Warn: npmCommand not pinned by hash: .github/workflows/reviewdog.yml:329'
       - 'Warn: goCommand not pinned by hash: .github/workflows/reviewdog.yml:25'
       - 'Warn: goCommand not pinned by hash: .github/workflows/reviewdog.yml:73'
       - 'Warn: goCommand not pinned by hash: .github/workflows/reviewdog.yml:273'
-      - 'Warn: npmCommand not pinned by hash: .github/workflows/reviewdog.yml:329'
       - 'Warn: npmCommand not pinned by hash: .github/workflows/reviewdog.yml:343'
       - 'Info:  40 out of  40 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  23 out of  23 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
-      - 'Info:   4 out of   7 goCommand dependencies pinned'
       - 'Info:   0 out of   2 npmCommand dependencies pinned'
+      - 'Info:   4 out of   7 goCommand dependencies pinned'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -228,6 +228,14 @@ checks:
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -253,12 +261,4 @@ checks:
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:14'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
 ---

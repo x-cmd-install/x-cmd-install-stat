@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.8.14"
   latestRelease: "v1.8.14"
   latestPrerelease: "v1.8.14-rc.1"
-  collectedAt: 2026-09-30T05:31:55Z
+  collectedAt: 2026-10-01T05:52:04Z
 timeline:
   created: 2017-10-25
   lastCommit: 2026-06-01
@@ -29,7 +29,7 @@ language:
 totalBytes: 910177
 recent:
   last30d:
-    since: 2026-08-31
+    since: 2026-09-01
     release: 0
     mergedPR: 0
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-01
+    since: 2026-08-02
     release: 0
     mergedPR: 0
     openPR: 0
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-02
+    since: 2026-07-03
     release: 0
     mergedPR: 0
     openPR: 0
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-03
+    since: 2026-04-04
     release: 2
     mergedPR: 0
     openPR: 0
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-05
+    since: 2025-10-06
     release: 15
     mergedPR: 0
     openPR: 0
@@ -69,7 +69,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-10
+    since: 2024-10-11
     release: 100
     mergedPR: 0
     openPR: 0
@@ -85,7 +85,7 @@ total:
   commit: 2406
 ---
 path: /home/runner/.x-repo/github.com/rancher/rke
-collectedAt: 2026-09-30T05:32:23Z
+collectedAt: 2026-10-01T05:52:38Z
 loc:
   Go:
     code: 22000
@@ -128,7 +128,7 @@ total:
   blanks: 2646
   files: 131
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/rancher/rke
   commit: 7159e9ad3fd5ff468f02c7f91571ce0df39118e8
@@ -137,33 +137,28 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4
 checks:
+  - name: Maintained
+    score: 0
+    reason: project is archived
+    details:
+      - 'Warn: Repository is archived.'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Code-Review
+    score: 0
+    reason: Found 0/30 approved changesets -- score normalized to 0
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
-    score: 0
-    reason: project is archived
-    details:
-      - 'Warn: Repository is archived.'
-  - name: Code-Review
-    score: 0
-    reason: Found 0/30 approved changesets -- score normalized to 0
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: SAST
-    score: 0
-    reason: no SAST tool detected
-    details:
-      - 'Warn: no pull requests merged into dev branch'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -180,6 +175,11 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/test-cni.yaml:1'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/update-readme.yml:8'
       - 'Warn: no topLevel permission defined: .github/workflows/workflow.yaml:1'
+  - name: SAST
+    score: 0
+    reason: no SAST tool detected
+    details:
+      - 'Warn: no pull requests merged into dev branch'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -195,6 +195,16 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Pinned-Dependencies
+    score: 8
+    reason: dependency not pinned by hash detected -- score normalized to 8
+    details:
+      - 'Warn: containerImage not pinned by hash: Dockerfile.dapper:1: pin your Docker image by updating registry.suse.com/bci/golang:1.23 to registry.suse.com/bci/golang:1.23@sha256:3a2abf9636e4854ab990c98b3bf4aa7a3629b0a1bb10e702f36731ef1a13bb91'
+      - 'Warn: downloadThenRun not pinned by hash: Dockerfile.dapper:8'
+      - 'Info:  17 out of  17 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   8 out of   8 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   1 containerImage dependencies pinned'
+      - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -203,10 +213,6 @@ checks:
       - 'Info: Found linked content: github.com/rancher-archives/.github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/rancher-archives/.github/SECURITY.md:1'
       - 'Info: Found text in security policy: github.com/rancher-archives/.github/SECURITY.md:1'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -221,14 +227,8 @@ checks:
       - 'Warn: release artifact v1.8.13 does not have provenance: https://api.github.com/repos/rancher-archives/rke/releases/303297104'
       - 'Warn: release artifact v1.8.13-rc.1 does not have provenance: https://api.github.com/repos/rancher-archives/rke/releases/301637143'
       - 'Warn: release artifact v1.8.12 does not have provenance: https://api.github.com/repos/rancher-archives/rke/releases/298589098'
-  - name: Pinned-Dependencies
-    score: 8
-    reason: dependency not pinned by hash detected -- score normalized to 8
-    details:
-      - 'Warn: containerImage not pinned by hash: Dockerfile.dapper:1: pin your Docker image by updating registry.suse.com/bci/golang:1.23 to registry.suse.com/bci/golang:1.23@sha256:3a2abf9636e4854ab990c98b3bf4aa7a3629b0a1bb10e702f36731ef1a13bb91'
-      - 'Warn: downloadThenRun not pinned by hash: Dockerfile.dapper:8'
-      - 'Info:  17 out of  17 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   8 out of   8 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
-      - 'Info:   0 out of   1 containerImage dependencies pinned'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
 ---

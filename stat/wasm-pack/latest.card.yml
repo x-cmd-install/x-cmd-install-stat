@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.15.0"
   latestRelease: "v0.15.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-30T06:34:22Z
+  collectedAt: 2026-10-01T06:59:23Z
 timeline:
   created: 2018-02-12
   lastCommit: 2026-08-12
@@ -28,7 +28,7 @@ language:
 totalBytes: 264046
 recent:
   last30d:
-    since: 2026-08-31
+    since: 2026-09-01
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-01
+    since: 2026-08-02
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-02
+    since: 2026-07-03
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-03
+    since: 2026-04-04
     release: 1
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-05
+    since: 2025-10-06
     release: 2
     mergedPR: 0
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-10
+    since: 2024-10-11
     release: 3
     mergedPR: 0
     openPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 1414
 ---
 path: /home/runner/.x-repo/github.com/rustwasm/wasm-pack
-collectedAt: 2026-09-30T06:34:23Z
+collectedAt: 2026-10-01T06:59:25Z
 loc:
   Rust:
     code: 7040
@@ -147,7 +147,7 @@ total:
   blanks: 2538
   files: 123
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/rustwasm/wasm-pack
   commit: e33b17ae4168f79fc510d33131948aa8de92a108
@@ -173,8 +173,8 @@ checks:
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/book.yml:10'
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:118'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:246'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:118'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/test.yml:13'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/approve.yml:3'
       - 'Warn: no topLevel permission defined: .github/workflows/book.yml:1'
@@ -225,6 +225,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -233,26 +238,12 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE-APACHE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE-APACHE:0'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:221'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -267,6 +258,15 @@ checks:
       - 'Warn: release artifact v0.13.1 does not have provenance: https://api.github.com/repos/wasm-bindgen/wasm-pack/releases/182538076'
       - 'Warn: release artifact v0.13.0 does not have provenance: https://api.github.com/repos/wasm-bindgen/wasm-pack/releases/163411671'
       - 'Warn: release artifact v0.12.1 does not have provenance: https://api.github.com/repos/wasm-bindgen/wasm-pack/releases/110122025'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:221'
   - name: SAST
     score: 2
     reason: SAST tool is not run on all commits -- score normalized to 2

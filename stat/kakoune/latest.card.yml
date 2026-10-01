@@ -7,7 +7,7 @@ about:
   latestVersion: "v2026.05.21"
   latestRelease: "v2026.05.21"
   latestPrerelease: "v20180409"
-  collectedAt: 2026-09-30T06:35:02Z
+  collectedAt: 2026-10-01T07:02:01Z
 timeline:
   created: 2011-11-03
   lastCommit: 2026-09-15
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-05-21
   lastPrerelease: 2018-04-09
 popularity:
-  star: 11079
+  star: 11080
   watcher: 111
   fork: 785
   release: 21
@@ -34,7 +34,7 @@ language:
 totalBytes: 2276210
 recent:
   last30d:
-    since: 2026-08-31
+    since: 2026-09-01
     release: 0
     mergedPR: 0
     openPR: 9
@@ -42,7 +42,7 @@ recent:
     openIssue: 6
     commit: 7
   last60d:
-    since: 2026-08-01
+    since: 2026-08-02
     release: 0
     mergedPR: 12
     openPR: 9
@@ -50,15 +50,15 @@ recent:
     openIssue: 8
     commit: 38
   last90d:
-    since: 2026-07-02
+    since: 2026-07-03
     release: 0
     mergedPR: 15
-    openPR: 14
+    openPR: 13
     closedIssue: 3
     openIssue: 9
     commit: 54
   last180d:
-    since: 2026-04-03
+    since: 2026-04-04
     release: 2
     mergedPR: 38
     openPR: 22
@@ -66,7 +66,7 @@ recent:
     openIssue: 15
     commit: 122
   last360d:
-    since: 2025-10-05
+    since: 2025-10-06
     release: 2
     mergedPR: 61
     openPR: 32
@@ -74,7 +74,7 @@ recent:
     openIssue: 27
     commit: 238
   last720d:
-    since: 2024-10-10
+    since: 2024-10-11
     release: 3
     mergedPR: 110
     openPR: 43
@@ -90,7 +90,7 @@ total:
   commit: 11124
 ---
 path: /home/runner/.x-repo/github.com/mawww/kakoune
-collectedAt: 2026-09-30T06:35:07Z
+collectedAt: 2026-10-01T07:02:07Z
 loc:
   Cpp:
     code: 24496
@@ -153,15 +153,19 @@ total:
   blanks: 10001
   files: 387
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/mawww/kakoune
   commit: f16dba30002c4a18a247968ad4d12043cce018a8
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 4.1
 checks:
+  - name: Code-Review
+    score: 7
+    reason: Found 10/14 approved changesets -- score normalized to 7
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -175,10 +179,6 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Code-Review
-    score: 7
-    reason: Found 10/14 approved changesets -- score normalized to 7
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -190,6 +190,10 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -199,10 +203,11 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/makefile.yml:45: update your workflow using https://app.stepsecurity.io/secureworkflow/mawww/kakoune/makefile.yml/master?enable=pin'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -211,11 +216,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected

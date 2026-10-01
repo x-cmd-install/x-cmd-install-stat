@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.14.0"
   latestRelease: "v1.14.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-30T03:05:17Z
+  collectedAt: 2026-10-01T03:11:43Z
 timeline:
   created: 2021-02-21
   lastCommit: 2026-07-27
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2025-12-06
   lastPrerelease: 
 popularity:
-  star: 2599
+  star: 2600
   watcher: 14
-  fork: 251
+  fork: 252
   release: 35
   contributor: 167
-  pullRequest: 311
+  pullRequest: 312
   issue: 360
 language:
   Python: 387092
@@ -28,63 +28,63 @@ language:
 totalBytes: 387556
 recent:
   last30d:
-    since: 2026-08-31
+    since: 2026-09-01
     release: 0
     mergedPR: 0
-    openPR: 3
+    openPR: 4
     closedIssue: 0
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-01
+    since: 2026-08-02
     release: 0
     mergedPR: 0
-    openPR: 6
+    openPR: 7
     closedIssue: 0
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-02
+    since: 2026-07-03
     release: 0
     mergedPR: 5
-    openPR: 7
+    openPR: 8
     closedIssue: 0
     openIssue: 1
     commit: 10
   last180d:
-    since: 2026-04-03
+    since: 2026-04-04
     release: 0
     mergedPR: 7
-    openPR: 7
+    openPR: 8
     closedIssue: 3
     openIssue: 3
     commit: 10
   last360d:
-    since: 2025-10-05
+    since: 2025-10-06
     release: 2
     mergedPR: 16
-    openPR: 10
+    openPR: 11
     closedIssue: 3
     openIssue: 14
     commit: 17
   last720d:
-    since: 2024-10-10
+    since: 2024-10-11
     release: 6
     mergedPR: 41
-    openPR: 15
+    openPR: 16
     closedIssue: 15
     openIssue: 43
     commit: 40
 total:
   release: 35
   mergedPR: 254
-  openPR: 25
+  openPR: 26
   closedIssue: 210
   openIssue: 150
   commit: 621
 ---
 path: /home/runner/.x-repo/github.com/python-lsp/python-lsp-server
-collectedAt: 2026-09-30T03:05:20Z
+collectedAt: 2026-10-01T03:11:44Z
 loc:
   Python:
     code: 9080
@@ -122,7 +122,7 @@ total:
   blanks: 2534
   files: 85
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/python-lsp/python-lsp-server
   commit: a3620069a607a63ed52569fde188e9301feae93a
@@ -131,10 +131,6 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 5.7
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -143,6 +139,19 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Code-Review
+    score: 7
+    reason: Found 22/30 approved changesets -- score normalized to 7
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Maintained
     score: 10
     reason: 10 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10
@@ -151,10 +160,16 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Code-Review
-    score: 7
-    reason: Found 22/30 approved changesets -- score normalized to 7
-    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/static.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/test-linux.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/test-mac.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/test-win.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -186,21 +201,6 @@ checks:
       - 'Warn: pipCommand not pinned by hash: .github/workflows/test-mac.yml:46'
       - 'Info:   0 out of  15 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of  10 pipCommand dependencies pinned'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/static.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/test-linux.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/test-mac.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/test-win.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected

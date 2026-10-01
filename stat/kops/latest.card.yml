@@ -2,12 +2,12 @@ about:
   description: "Kubernetes Operations (kOps) - Production Grade k8s Installation, Upgrades and Management"
   license: Apache-2.0
   homepage: https://kops.sigs.k8s.io/
-  head: b6724a9
+  head: 4dbb9bd
   archived: false
   latestVersion: "v1.37.0-beta.1"
   latestRelease: "v1.36.2"
   latestPrerelease: "v1.37.0-beta.1"
-  collectedAt: 2026-09-30T06:22:51Z
+  collectedAt: 2026-10-01T06:31:50Z
 timeline:
   created: 2016-06-27
   lastCommit: 2026-09-30
@@ -15,15 +15,15 @@ timeline:
   lastRelease: 2026-08-08
   lastPrerelease: 2026-08-29
 popularity:
-  star: 16683
+  star: 16684
   watcher: 304
-  fork: 4719
+  fork: 4720
   release: 239
   contributor: 1483
-  pullRequest: 13290
+  pullRequest: 13292
   issue: 5358
 language:
-  Go: 8577961
+  Go: 8582576
   HCL: 3973253
   Shell: 1016605
   Makefile: 42612
@@ -31,71 +31,71 @@ language:
   Go Template: 13538
   Python: 11551
   Dockerfile: 3573
-totalBytes: 13673666
+totalBytes: 13678281
 recent:
   last30d:
-    since: 2026-08-31
+    since: 2026-09-01
     release: 0
-    mergedPR: 40
-    openPR: 7
+    mergedPR: 37
+    openPR: 6
     closedIssue: 3
     openIssue: 1
-    commit: 71
+    commit: 72
   last60d:
-    since: 2026-08-01
+    since: 2026-08-02
     release: 2
-    mergedPR: 130
+    mergedPR: 128
     openPR: 12
     closedIssue: 7
     openIssue: 5
-    commit: 322
+    commit: 323
   last90d:
-    since: 2026-07-02
+    since: 2026-07-03
     release: 6
-    mergedPR: 236
-    openPR: 22
+    mergedPR: 231
+    openPR: 23
     closedIssue: 11
     openIssue: 6
-    commit: 524
+    commit: 525
   last180d:
-    since: 2026-04-03
+    since: 2026-04-04
     release: 10
     mergedPR: 532
     openPR: 35
     closedIssue: 27
     openIssue: 10
-    commit: 1140
+    commit: 1142
   last360d:
-    since: 2025-10-05
-    release: 19
+    since: 2025-10-06
+    release: 18
     mergedPR: 934
     openPR: 43
-    closedIssue: 77
+    closedIssue: 76
     openIssue: 16
-    commit: 1891
+    commit: 1893
   last720d:
-    since: 2024-10-10
+    since: 2024-10-11
     release: 34
-    mergedPR: 1395
+    mergedPR: 1390
     openPR: 44
-    closedIssue: 183
-    openIssue: 23
-    commit: 2754
+    closedIssue: 184
+    openIssue: 22
+    commit: 2756
 total:
   release: 239
-  mergedPR: 11658
+  mergedPR: 11659
   openPR: 44
-  closedIssue: 5270
-  openIssue: 88
-  commit: 24486
+  closedIssue: 5271
+  openIssue: 87
+  commit: 24488
 ---
 path: /home/runner/.x-repo/github.com/kubernetes/kops
-collectedAt: 2026-09-30T06:23:47Z
+collectedAt: 2026-10-01T06:33:11Z
 loc:
   Go:
-    code: 3270825
-    comments: 820244
-    blanks: 478522
+    code: 3270981
+    comments: 820246
+    blanks: 478526
     files: 13062
   Json:
     code: 141594
@@ -208,15 +208,15 @@ loc:
     blanks: 1279
     files: 78
 total:
-  code: 3609826
-  comments: 930361
-  blanks: 528810
+  code: 3609982
+  comments: 930363
+  blanks: 528814
   files: 14712
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/kubernetes/kops
-  commit: 636caf1aae51236eb08f78892ff8b1e5dbc1b3bf
+  commit: b6724a902655fb59efeec10e7906e7f4ea861559
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
@@ -226,24 +226,15 @@ checks:
     score: 10
     reason: all changesets reviewed
     details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 16 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Token-Permissions
-    score: 9
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/tag-release.yml:17'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/depsreview.yaml:9'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/e2e.yml:13'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:13'
-      - 'Warn: no topLevel permission defined: .github/workflows/tag-release.yml:1'
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 16 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -256,6 +247,15 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Token-Permissions
+    score: 9
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/tag-release.yml:17'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/depsreview.yaml:9'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/e2e.yml:13'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:13'
+      - 'Warn: no topLevel permission defined: .github/workflows/tag-release.yml:1'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -271,13 +271,13 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
+    details: null
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
   - name: Signed-Releases
     score: 0
@@ -293,11 +293,6 @@ checks:
       - 'Warn: release artifact v1.36.1 does not have provenance: https://api.github.com/repos/kubernetes/kops/releases/361043997'
       - 'Warn: release artifact v1.37.0-alpha.1 does not have provenance: https://api.github.com/repos/kubernetes/kops/releases/354460487'
       - 'Warn: release artifact v1.36.0 does not have provenance: https://api.github.com/repos/kubernetes/kops/releases/354459860'
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
   - name: Pinned-Dependencies
     score: 6
     reason: dependency not pinned by hash detected -- score normalized to 6
@@ -318,4 +313,9 @@ checks:
       - 'Info:   0 out of   4 containerImage dependencies pinned'
       - 'Info:   0 out of   2 pipCommand dependencies pinned'
       - 'Info:   0 out of   5 goCommand dependencies pinned'
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---

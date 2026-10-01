@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.11.2"
   latestRelease: "v1.11.2"
   latestPrerelease: "v0.7-pre"
-  collectedAt: 2026-09-30T05:44:49Z
+  collectedAt: 2026-10-01T05:57:25Z
 timeline:
   created: 2013-02-05
   lastCommit: 2026-09-29
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-29
   lastPrerelease: 2015-07-24
 popularity:
-  star: 3779
+  star: 3780
   watcher: 34
   fork: 210
   release: 84
@@ -30,7 +30,7 @@ language:
 totalBytes: 197663
 recent:
   last30d:
-    since: 2026-08-31
+    since: 2026-09-01
     release: 3
     mergedPR: 9
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 18
   last60d:
-    since: 2026-08-01
+    since: 2026-08-02
     release: 3
     mergedPR: 13
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 1
     commit: 23
   last90d:
-    since: 2026-07-02
+    since: 2026-07-03
     release: 3
     mergedPR: 22
     openPR: 0
@@ -54,7 +54,7 @@ recent:
     openIssue: 1
     commit: 30
   last180d:
-    since: 2026-04-03
+    since: 2026-04-04
     release: 5
     mergedPR: 47
     openPR: 0
@@ -62,7 +62,7 @@ recent:
     openIssue: 3
     commit: 63
   last360d:
-    since: 2025-10-05
+    since: 2025-10-06
     release: 11
     mergedPR: 84
     openPR: 1
@@ -70,7 +70,7 @@ recent:
     openIssue: 5
     commit: 135
   last720d:
-    since: 2024-10-10
+    since: 2024-10-11
     release: 15
     mergedPR: 103
     openPR: 2
@@ -86,7 +86,7 @@ total:
   commit: 1275
 ---
 path: /home/runner/.x-repo/github.com/x-motemen/ghq
-collectedAt: 2026-09-30T05:44:50Z
+collectedAt: 2026-10-01T05:57:26Z
 loc:
   Go:
     code: 5888
@@ -139,59 +139,64 @@ total:
   blanks: 934
   files: 45
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/x-motemen/ghq
-  commit: 2474201bccd2cd8c206127630d49b8ce2044dddf
+  commit: b9273dd116d09b423073b83e7c0d82ef508d985a
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
-score: 4.8
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+score: 5
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
+  - name: Code-Review
+    score: 2
+    reason: Found 1/5 approved changesets -- score normalized to 2
     details: null
-  - name: Maintained
+  - name: Binary-Artifacts
     score: 10
-    reason: 23 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 10
+    reason: no binaries found in the repo
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 8
-    reason: Found 5/6 approved changesets -- score normalized to 8
-    details: null
-  - name: Binary-Artifacts
+  - name: Maintained
     score: 10
-    reason: no binaries found in the repo
+    reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Pinned-Dependencies
     score: 10
     reason: all dependencies are pinned
     details:
-      - 'Info:  11 out of  11 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   6 out of   6 third-party GitHubAction dependencies pinned'
+      - 'Info:  16 out of  16 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   8 out of   8 third-party GitHubAction dependencies pinned'
   - name: Token-Permissions
-    score: 0
+    score: 8
     reason: detected GitHub workflow tokens with excessive permissions
     details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release-build.yaml:13'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:16'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release.yaml:25'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yaml:26'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yaml:60'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yaml:10'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yaml:23'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yaml:41'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yaml:60'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/tagpr.yaml:13'
+      - 'Info: jobLevel ''issues'' permission set to ''read'': .github/workflows/tagpr.yaml:15'
+      - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/tagpr.yaml:39'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/integration.yaml:7'
-      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yaml:7'
-      - 'Warn: topLevel ''packages'' permission set to ''write'': .github/workflows/release.yaml:8'
+      - 'Warn: no topLevel permission defined: .github/workflows/release-build.yaml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/release.yaml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yaml:5'
-      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/tagpr.yaml:8'
-      - 'Info: topLevel ''issues'' permission set to ''read'': .github/workflows/tagpr.yaml:10'
+      - 'Warn: no topLevel permission defined: .github/workflows/tagpr.yaml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yaml:10'
       - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/test.yaml:11'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -219,16 +224,16 @@ checks:
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
+      - 'Warn: release artifact v1.11.2 not signed: https://api.github.com/repos/x-motemen/ghq/releases/399353866'
+      - 'Warn: release artifact v1.11.1 not signed: https://api.github.com/repos/x-motemen/ghq/releases/399134727'
+      - 'Warn: release artifact v1.11.0 not signed: https://api.github.com/repos/x-motemen/ghq/releases/399073511'
       - 'Warn: release artifact v1.10.1 not signed: https://api.github.com/repos/x-motemen/ghq/releases/307867897'
       - 'Warn: release artifact v1.10.0 not signed: https://api.github.com/repos/x-motemen/ghq/releases/306955773'
-      - 'Warn: release artifact v1.9.4 not signed: https://api.github.com/repos/x-motemen/ghq/releases/287123267'
-      - 'Warn: release artifact v1.9.3 not signed: https://api.github.com/repos/x-motemen/ghq/releases/286344557'
-      - 'Warn: release artifact v1.9.2 not signed: https://api.github.com/repos/x-motemen/ghq/releases/286186006'
+      - 'Warn: release artifact v1.11.2 does not have provenance: https://api.github.com/repos/x-motemen/ghq/releases/399353866'
+      - 'Warn: release artifact v1.11.1 does not have provenance: https://api.github.com/repos/x-motemen/ghq/releases/399134727'
+      - 'Warn: release artifact v1.11.0 does not have provenance: https://api.github.com/repos/x-motemen/ghq/releases/399073511'
       - 'Warn: release artifact v1.10.1 does not have provenance: https://api.github.com/repos/x-motemen/ghq/releases/307867897'
       - 'Warn: release artifact v1.10.0 does not have provenance: https://api.github.com/repos/x-motemen/ghq/releases/306955773'
-      - 'Warn: release artifact v1.9.4 does not have provenance: https://api.github.com/repos/x-motemen/ghq/releases/287123267'
-      - 'Warn: release artifact v1.9.3 does not have provenance: https://api.github.com/repos/x-motemen/ghq/releases/286344557'
-      - 'Warn: release artifact v1.9.2 does not have provenance: https://api.github.com/repos/x-motemen/ghq/releases/286186006'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches

@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.10.10"
   latestRelease: "v0.10.10"
   latestPrerelease: "v0.10.2"
-  collectedAt: 2026-09-30T05:45:11Z
+  collectedAt: 2026-10-01T06:01:54Z
 timeline:
   created: 2019-06-04
   lastCommit: 2026-09-17
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2025-11-09
   lastPrerelease: 2024-01-15
 popularity:
-  star: 9865
+  star: 9864
   watcher: 47
-  fork: 218
+  fork: 219
   release: 12
   contributor: 34
   pullRequest: 103
@@ -29,7 +29,7 @@ language:
 totalBytes: 152945
 recent:
   last30d:
-    since: 2026-08-31
+    since: 2026-09-01
     release: 0
     mergedPR: 2
     openPR: 11
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 5
   last60d:
-    since: 2026-08-01
+    since: 2026-08-02
     release: 0
     mergedPR: 2
     openPR: 11
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 5
   last90d:
-    since: 2026-07-02
+    since: 2026-07-03
     release: 0
     mergedPR: 2
     openPR: 11
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 5
   last180d:
-    since: 2026-04-03
+    since: 2026-04-04
     release: 0
     mergedPR: 2
     openPR: 11
@@ -61,7 +61,7 @@ recent:
     openIssue: 2
     commit: 5
   last360d:
-    since: 2025-10-05
+    since: 2025-10-06
     release: 1
     mergedPR: 6
     openPR: 13
@@ -69,9 +69,9 @@ recent:
     openIssue: 10
     commit: 13
   last720d:
-    since: 2024-10-10
+    since: 2024-10-11
     release: 3
-    mergedPR: 15
+    mergedPR: 14
     openPR: 14
     closedIssue: 13
     openIssue: 31
@@ -85,7 +85,7 @@ total:
   commit: 469
 ---
 path: /home/runner/.x-repo/github.com/phiresky/ripgrep-all
-collectedAt: 2026-09-30T05:45:12Z
+collectedAt: 2026-10-01T06:01:55Z
 loc:
   Rust:
     code: 3569
@@ -123,7 +123,7 @@ total:
   blanks: 625
   files: 36
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/phiresky/ripgrep-all
   commit: fce1a28683142b3dbd6ea2f7b719d89c90aee227
@@ -140,15 +140,19 @@ checks:
     score: 5
     reason: 7 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5
     details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -156,10 +160,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -197,6 +197,11 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE.md:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -209,18 +214,13 @@ checks:
       - 'Warn: release artifact v0.10.9 does not have provenance: https://api.github.com/repos/phiresky/ripgrep-all/releases/217851381'
       - 'Warn: release artifact v0.10.6 does not have provenance: https://api.github.com/repos/phiresky/ripgrep-all/releases/137131703'
       - 'Warn: release artifact v0.10.5 does not have provenance: https://api.github.com/repos/phiresky/ripgrep-all/releases/137131137'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 24 are checked with a SAST tool'
 ---
-  - rga
   - rga-fzf-open
-  - rga-preproc
+  - rga
   - rga-fzf
+  - rga-preproc

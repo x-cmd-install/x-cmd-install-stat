@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.39.0"
   latestRelease: "v1.39.0"
   latestPrerelease: "v1.33.0-beta.0"
-  collectedAt: 2026-09-30T05:24:15Z
+  collectedAt: 2026-10-01T05:42:00Z
 timeline:
   created: 2016-04-15
   lastCommit: 2026-09-26
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2026-09-02
   lastPrerelease: 2024-03-26
 popularity:
-  star: 32165
+  star: 32164
   watcher: 474
-  fork: 5334
+  fork: 5337
   release: 155
   contributor: 1522
-  pullRequest: 13081
+  pullRequest: 13084
   issue: 10670
 language:
   Go: 4238774
@@ -45,63 +45,63 @@ language:
 totalBytes: 8281432
 recent:
   last30d:
-    since: 2026-08-31
+    since: 2026-09-01
     release: 1
-    mergedPR: 77
-    openPR: 48
+    mergedPR: 73
+    openPR: 49
     closedIssue: 23
-    openIssue: 35
+    openIssue: 32
     commit: 187
   last60d:
-    since: 2026-08-01
+    since: 2026-08-02
     release: 1
-    mergedPR: 151
-    openPR: 73
+    mergedPR: 150
+    openPR: 75
     closedIssue: 36
     openIssue: 49
     commit: 398
   last90d:
-    since: 2026-07-02
+    since: 2026-07-03
     release: 1
-    mergedPR: 212
+    mergedPR: 208
     openPR: 85
     closedIssue: 48
-    openIssue: 57
+    openIssue: 56
     commit: 541
   last180d:
-    since: 2026-04-03
+    since: 2026-04-04
     release: 1
     mergedPR: 386
-    openPR: 115
+    openPR: 117
     closedIssue: 91
     openIssue: 110
     commit: 932
   last360d:
-    since: 2025-10-05
+    since: 2025-10-06
     release: 3
-    mergedPR: 891
-    openPR: 137
-    closedIssue: 299
+    mergedPR: 881
+    openPR: 139
+    closedIssue: 291
     openIssue: 158
     commit: 1714
   last720d:
-    since: 2024-10-10
+    since: 2024-10-11
     release: 6
-    mergedPR: 1645
-    openPR: 141
+    mergedPR: 1644
+    openPR: 143
     closedIssue: 802
     openIssue: 205
-    commit: 3143
+    commit: 3136
 total:
   release: 155
   mergedPR: 9799
-  openPR: 143
+  openPR: 145
   closedIssue: 10196
   openIssue: 474
   commit: 28364
 ---
 path: /home/runner/.x-repo/github.com/kubernetes/minikube
-collectedAt: 2026-09-30T05:24:42Z
+collectedAt: 2026-10-01T05:42:37Z
 loc:
   Yaml:
     code: 154911
@@ -219,18 +219,22 @@ total:
   blanks: 36896
   files: 1766
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/kubernetes/minikube
-  commit: 9250d0fad52df4239b60a69e12f01ef5e9cc4b61
+  commit: 39ac29da339bbb70b778a9b606c5bcdb97c1fb7b
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.8
 checks:
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 20 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 21 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Security-Policy
     score: 10
@@ -240,10 +244,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
   - name: Dangerous-Workflow
     score: 0
     reason: dangerous workflow patterns detected
@@ -273,11 +273,11 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/go-housekeeping.yml:13'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/hide-minikube-bot-comments.yml:4'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/leaderboard.yml:11'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/lint.yml:21'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/minikube-image-benchmark.yml:11'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/sbom.yml:7'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/smoke-test.yml:30'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/sync-minikube.yml:11'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yml:21'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/time-to-k8s-public-chart.yml:11'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/time-to-k8s.yml:10'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/translations.yml:11'
@@ -359,7 +359,6 @@ checks:
     score: 8
     reason: dependency not pinned by hash detected -- score normalized to 8
     details:
-      - 'Info: Possibly incomplete results: error parsing shell code: reached ) without matching (( with )): test.sh:0'
       - 'Warn: containerImage not pinned by hash: deploy/addons/auto-pause/Dockerfile:1: pin your Docker image by updating golang:1.26.5 to golang:1.26.5@sha256:705e964a93a2fd2e75c7d59bb7d781b57e30f12293ffde5175c69229e18fb678'
       - 'Warn: containerImage not pinned by hash: deploy/images/gvisor/Dockerfile:17: pin your Docker image by updating golang:1.26.5 to golang:1.26.5@sha256:705e964a93a2fd2e75c7d59bb7d781b57e30f12293ffde5175c69229e18fb678'
       - 'Warn: containerImage not pinned by hash: deploy/images/gvisor/Dockerfile:25: pin your Docker image by updating alpine:3.23 to alpine:3.23@sha256:85fe1e81d6758c208f3e1eed4338a1997e19d4be002d4dd32d3100c9a8c010a0'
@@ -375,14 +374,14 @@ checks:
       - 'Warn: goCommand not pinned by hash: hack/yearly-leaderboard.sh:29'
       - 'Warn: downloadThenRun not pinned by hash: .github/workflows/functional_test.yml:204'
       - 'Warn: goCommand not pinned by hash: .github/workflows/go-housekeeping.yml:39'
-      - 'Warn: goCommand not pinned by hash: .github/workflows/lint.yml:78'
-      - 'Warn: npmCommand not pinned by hash: .github/workflows/lint.yml:108'
-      - 'Info: 172 out of 172 GitHub-owned GitHubAction dependencies pinned'
+      - 'Warn: goCommand not pinned by hash: .github/workflows/test.yml:124'
+      - 'Warn: npmCommand not pinned by hash: .github/workflows/test.yml:145'
+      - 'Info: 174 out of 174 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  64 out of  64 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   1 npmCommand dependencies pinned'
       - 'Info:   0 out of   7 containerImage dependencies pinned'
       - 'Info:   0 out of   2 downloadThenRun dependencies pinned'
       - 'Info:   4 out of  11 goCommand dependencies pinned'
+      - 'Info:   0 out of   1 npmCommand dependencies pinned'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.

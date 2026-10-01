@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.7.1"
   latestRelease: "v0.7.1"
   latestPrerelease: "v0.6.1"
-  collectedAt: 2026-09-30T05:53:03Z
+  collectedAt: 2026-10-01T06:13:29Z
 timeline:
   created: 2012-09-08
   lastCommit: 2025-05-31
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2022-04-13
   lastPrerelease: 2021-01-26
 popularity:
-  star: 14522
+  star: 14520
   watcher: 88
   fork: 335
   release: 30
@@ -29,7 +29,7 @@ language:
 totalBytes: 73825
 recent:
   last30d:
-    since: 2026-08-31
+    since: 2026-09-01
     release: 0
     mergedPR: 0
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-01
+    since: 2026-08-02
     release: 0
     mergedPR: 0
     openPR: 0
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-02
+    since: 2026-07-03
     release: 0
     mergedPR: 0
     openPR: 0
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-03
+    since: 2026-04-04
     release: 0
     mergedPR: 0
     openPR: 1
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-05
+    since: 2025-10-06
     release: 0
     mergedPR: 0
     openPR: 2
@@ -69,7 +69,7 @@ recent:
     openIssue: 2
     commit: 0
   last720d:
-    since: 2024-10-10
+    since: 2024-10-11
     release: 0
     mergedPR: 1
     openPR: 2
@@ -85,7 +85,7 @@ total:
   commit: 223
 ---
 path: /home/runner/.x-repo/github.com/tomnomnom/gron
-collectedAt: 2026-09-30T05:53:04Z
+collectedAt: 2026-10-01T06:13:30Z
 loc:
   Json:
     code: 28496
@@ -128,23 +128,15 @@ total:
   blanks: 409
   files: 33
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/tomnomnom/gron
   commit: 88a6234ea2d0c487090988182ad9a7cdf6def924
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 3.1
 checks:
-  - name: Code-Review
-    score: 6
-    reason: Found 11/18 approved changesets -- score normalized to 6
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -160,6 +152,14 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/build.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Code-Review
+    score: 6
+    reason: Found 11/18 approved changesets -- score normalized to 6
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -177,6 +177,12 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -190,22 +196,6 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -220,6 +210,16 @@ checks:
       - 'Warn: release artifact v0.6.0 does not have provenance: https://api.github.com/repos/tomnomnom/gron/releases/11790072'
       - 'Warn: release artifact v0.5.2 does not have provenance: https://api.github.com/repos/tomnomnom/gron/releases/10387360'
       - 'Warn: release artifact v0.5.1 does not have provenance: https://api.github.com/repos/tomnomnom/gron/releases/9074576'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

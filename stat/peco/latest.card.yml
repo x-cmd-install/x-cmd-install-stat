@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.6.0"
   latestRelease: "v0.6.0"
   latestPrerelease: "v0.3.0-RC1"
-  collectedAt: 2026-09-30T06:36:46Z
+  collectedAt: 2026-10-01T06:54:08Z
 timeline:
   created: 2014-06-06
   lastCommit: 2026-09-19
@@ -30,7 +30,7 @@ language:
 totalBytes: 596795
 recent:
   last30d:
-    since: 2026-08-31
+    since: 2026-09-01
     release: 0
     mergedPR: 5
     openPR: 3
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 7
   last60d:
-    since: 2026-08-01
+    since: 2026-08-02
     release: 0
     mergedPR: 8
     openPR: 3
@@ -46,7 +46,7 @@ recent:
     openIssue: 0
     commit: 10
   last90d:
-    since: 2026-07-02
+    since: 2026-07-03
     release: 0
     mergedPR: 14
     openPR: 3
@@ -54,15 +54,15 @@ recent:
     openIssue: 0
     commit: 17
   last180d:
-    since: 2026-04-03
+    since: 2026-04-04
     release: 0
-    mergedPR: 31
+    mergedPR: 30
     openPR: 4
     closedIssue: 3
     openIssue: 1
     commit: 33
   last360d:
-    since: 2025-10-05
+    since: 2025-10-06
     release: 1
     mergedPR: 269
     openPR: 4
@@ -70,13 +70,13 @@ recent:
     openIssue: 1
     commit: 324
   last720d:
-    since: 2024-10-10
+    since: 2024-10-11
     release: 1
     mergedPR: 270
     openPR: 4
     closedIssue: 8
     openIssue: 1
-    commit: 604
+    commit: 603
 total:
   release: 49
   mergedPR: 575
@@ -86,7 +86,7 @@ total:
   commit: 2019
 ---
 path: /home/runner/.x-repo/github.com/peco/peco
-collectedAt: 2026-09-30T06:36:47Z
+collectedAt: 2026-10-01T06:54:09Z
 loc:
   Go:
     code: 15442
@@ -114,7 +114,7 @@ total:
   blanks: 3292
   files: 99
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/peco/peco
   commit: 0eb0e1c4ef6f730f4da0fe65d78fe5bfce742203
@@ -123,6 +123,10 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 5.4
 checks:
+  - name: Code-Review
+    score: 0
+    reason: Found 0/2 approved changesets -- score normalized to 0
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
@@ -130,10 +134,6 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Code-Review
-    score: 0
-    reason: Found 0/2 approved changesets -- score normalized to 0
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -178,10 +178,12 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -196,18 +198,16 @@ checks:
       - 'Warn: release artifact v0.5.10 does not have provenance: https://api.github.com/repos/peco/peco/releases/44263022'
       - 'Warn: release artifact v0.5.8 does not have provenance: https://api.github.com/repos/peco/peco/releases/28699645'
       - 'Warn: release artifact v0.5.7 does not have provenance: https://api.github.com/repos/peco/peco/releases/22731667'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 9
     reason: SAST tool detected but not run on all commits
     details:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Warn: 29 commits out of 30 are checked with a SAST tool'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Packaging
     score: 10
     reason: packaging workflow detected

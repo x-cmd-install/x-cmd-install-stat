@@ -7,7 +7,7 @@ about:
   latestVersion: "release-1.15.0"
   latestRelease: "release-1.15.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-30T04:17:02Z
+  collectedAt: 2026-10-01T04:28:59Z
 timeline:
   created: 2008-10-03
   lastCommit: 2026-09-29
@@ -33,7 +33,7 @@ language:
 totalBytes: 2907045
 recent:
   last30d:
-    since: 2026-08-31
+    since: 2026-09-01
     release: 1
     mergedPR: 6
     openPR: 1
@@ -41,7 +41,7 @@ recent:
     openIssue: 0
     commit: 21
   last60d:
-    since: 2026-08-01
+    since: 2026-08-02
     release: 1
     mergedPR: 9
     openPR: 7
@@ -49,7 +49,7 @@ recent:
     openIssue: 0
     commit: 22
   last90d:
-    since: 2026-07-02
+    since: 2026-07-03
     release: 1
     mergedPR: 9
     openPR: 7
@@ -57,7 +57,7 @@ recent:
     openIssue: 0
     commit: 22
   last180d:
-    since: 2026-04-03
+    since: 2026-04-04
     release: 1
     mergedPR: 10
     openPR: 10
@@ -65,31 +65,31 @@ recent:
     openIssue: 0
     commit: 26
   last360d:
-    since: 2025-10-05
+    since: 2025-10-06
     release: 1
     mergedPR: 13
     openPR: 16
-    closedIssue: 1
-    openIssue: 6
+    closedIssue: 2
+    openIssue: 5
     commit: 29
   last720d:
-    since: 2024-10-10
+    since: 2024-10-11
     release: 1
     mergedPR: 20
     openPR: 18
-    closedIssue: 3
-    openIssue: 16
+    closedIssue: 4
+    openIssue: 15
     commit: 31
 total:
   release: 13
   mergedPR: 286
   openPR: 33
-  closedIssue: 214
-  openIssue: 165
+  closedIssue: 215
+  openIssue: 164
   commit: 3142
 ---
 path: /home/runner/.x-repo/github.com/hercules-team/augeas
-collectedAt: 2026-09-30T04:17:04Z
+collectedAt: 2026-10-01T04:29:00Z
 loc:
   C:
     code: 26443
@@ -277,4 +277,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 26 are checked with a SAST tool'
 ---
-{"id":399564270,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDN5rDOF9Dd7g","tag_name":"release-1.15.0","target_commitish":"master","name":"Release release-1.15.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-29T22:02:50Z","updated_at":"2026-09-29T22:46:10Z","published_at":"2026-09-29T22:46:10Z","assets":[{"id":599342011,"node_id":"RA_kwDN5rDOI7k7uw","name":"augeas-1.15.0.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":2667596,"digest":"sha256:95b2b5c4c10c964024c694d6349024e8033dcfa1aaba88884ea09394908d30ff","download_count":16,"created_at":"2026-09-29T22:08:41Z","updated_at":"2026-09-29T22:08:42Z"},{"id":599404948,"node_id":"RA_kwDN5rDOI7oxlA","name":"augeas-1.15.0.tar.gz.sig","label":"","uploader":{"login":"lutter","id":23697,"node_id":"MDQ6VXNlcjIzNjk3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":119,"digest":"sha256:f4b75809bce9ecef5007f107001774f645fd334f6f331905fcb1f2357360b3e7","download_count":2,"created_at":"2026-09-29T22:43:52Z","updated_at":"2026-09-29T22:43:52Z"}],"body":"### General changes/additions\r\n\r\n* fa.c: set an error when parse_regexp() fails without setting a specific one, instead of returning NULL with the status left at       REG_NOERROR, which callers read as success  (addresses CVE-2025-2588) (#854) Alexander Bokovoy\r\n* Cast to 'unsigned char' before calling ctype functions like isspace()  and toupper(), which is undefined behavior for negative char values,  e.g. for a non-ASCII byte in a path expression or a lens file name   (#886) rootvector2\r\n* Fix aug_preview(), which failed with \"Lens not found\" whenever spans  were enabled; it now finds the file node by walking up from the  matched node rather than by looking the path up again (#899)`  George Hansper\r\n* Make ATTRIBUTE_FALLTHROUGH work on clang as well as gcc (#836)   Richard Barnes\r\n* Fix gcc 14 warnings, notably the transposed reallocarray() arguments  in augprint.c (#842) rwmjones\r\n* Miscellaneous gcc 16 fixes, mostly const-correctness now that gcc 16  passes the constness of the argument through strchr() and friends    (#881) rwmjones\r\n* Fix some compiler warnings in lens.c, augmatch.c (#818) George Hansper\r\n* src/Makefile.am: fix a race when building liblexer_la-lexer.lo  Andrew Kovac\r\n* gnulib: fetch the submodule over https; git.savannah.gnu.org no   longer serves the unauthenticated git:// protocol, so a fresh clone   could not initialize .gnulib\r\n* build: set DISTCHECK_CONFIGURE_FLAGS so 'make distcheck' does not   build gnulib's own test suite, which tests gnulib against the local   libc rather than testing augeas\r\n* build: man/Makefile.am listed the files to distribute with a wildcard   over the source directory and never cleaned the man pages it   generates, so what a release tarball contained depended on the state   of the tree it was built from, and 'make distcheck' failed from a    clean checkout. The pages are now listed explicitly, built at dist    time and shipped - building from a tarball no longer needs pod2man\r\n* tests: cover aug_preview() with spans enabled, the case #899 fixed      (#859) Alexis Mousset\r\n* tests: add tests around embedded quotes to      tests/test-augtool/quoted-strings.sh (#826) George Hansper\r\n* tests: ignore 'nobody' groups in test-preserve.sh so the suite passes     in an unprivileged namespace (#858) Patrycja\r\n* tests: use AM_CPPFLAGS rather than the obsolete INCLUDES\r\n* ci: get the build workflow running again; it pinned ubuntu-20.04, a      runner image GitHub has retired, so every run failed before it started\r\n* ci: fix the release workflow, which used '::set-output' and two      actions GitHub has archived, and so could not have produced a release\r\n* ci: populate the .gnulib submodule from an actions cache, or with a      shallow fetch of the pinned revision, so that bootstrap does not      clone all of gnulib's history on every run\r\n* Remove the Travis configuration; CI moved to GitHub Actions in 1.13.0      and travis-ci.org has since shut down\r\n* README: point the build badge at GitHub Actions rather than the      shut-down travis-ci.org, and the fuzzing badge at issues.oss-fuzz.com\r\n\r\n### Lens changes/additions\r\n\r\n* Aptsources: parse all the option types apt allows, not just arch=    and trusted= (#865) Sunil Mohan Adapa\r\n* Aptsources822: new lens for Deb822 style apt sources, which use the    .sources extension; Aptsources is limited to *.list (#801)\r\n      James Valleroy\r\n* Aptsources822: add the Snapshot field, make a multi-line Signed-By  readable, allow the file to be created (#896) George Hansper\r\n* Chrony: add support for leapseclist (#843) Cosmin Tupangiu\r\n* Crypttab: support the link-volume-key option used by systemd v256    (#880) rwmjones\r\n* Fstab: allow a comma after the last option (#838) Cosmin Tupangiu\r\n* IPRoute2: also read /usr/share/iproute2, the fallback directory   iproute2 6.5.0 added for stateless configuration, and exclude the    README files that explain it (#875) Tim Wiederhake, (#902)    George Hansper\r\n* Iptables: support the ipset module's --match-set (#861) Will Harvey\r\n* Iptables: more consistent naming, fix the failing tests (#897)      George Hansper\r\n* Multipath: support all possible values for find_multipaths (#835)     rwmjones\r\n* Nginx: include /etc/nginx/snippets (#864) Mark C.\r\n* Ntp: parse 'tos minclock', and add /etc/ntpsec/ntp.conf to the filter     (#821) Fran\u00e7ois-R\u00e9gis Degott\r\n* Pg_Hba, Postgresql, Rsyslog: add the /usr/local paths that source      installations use (#888) Showta Ishizaki\r\n* Simplevars: read the subdirectories of /etc/zabbix (#815) smgrol\r\n* Simplevars: fix the path of OpenBSD's wsconsctl.conf, which has read      /etc/wsconsctlctl.conf since it was added and so never matched      anything (#887) Showta Ishizaki\r\n* Simplevars: take over /etc/adduser.conf from Shellvars; of the     systems that ship the file only FreeBSD treats it as a shell script,      and the perl that OpenBSD's and Debian's adduser(8) write either      fails to parse or silently vanishes from the tree (#893)      Showta Ishizaki\r\n* Systemd: allow the '+' (fullprivileges) command flag (#841)      Cosmin Tupangiu\r\n* Tmpfiles: permit the '$' type modifier in /usr/lib/tmpfiles.d/*.conf      (#850) rwmjones"}
+{"id":399564270,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDN5rDOF9Dd7g","tag_name":"release-1.15.0","target_commitish":"master","name":"Release release-1.15.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-29T22:02:50Z","updated_at":"2026-09-29T22:46:10Z","published_at":"2026-09-29T22:46:10Z","assets":[{"id":599342011,"node_id":"RA_kwDN5rDOI7k7uw","name":"augeas-1.15.0.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":2667596,"digest":"sha256:95b2b5c4c10c964024c694d6349024e8033dcfa1aaba88884ea09394908d30ff","download_count":228,"created_at":"2026-09-29T22:08:41Z","updated_at":"2026-09-29T22:08:42Z"},{"id":599404948,"node_id":"RA_kwDN5rDOI7oxlA","name":"augeas-1.15.0.tar.gz.sig","label":"","uploader":{"login":"lutter","id":23697,"node_id":"MDQ6VXNlcjIzNjk3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":119,"digest":"sha256:f4b75809bce9ecef5007f107001774f645fd334f6f331905fcb1f2357360b3e7","download_count":2,"created_at":"2026-09-29T22:43:52Z","updated_at":"2026-09-29T22:43:52Z"}],"body":"### General changes/additions\r\n\r\n* fa.c: set an error when parse_regexp() fails without setting a specific one, instead of returning NULL with the status left at       REG_NOERROR, which callers read as success  (addresses CVE-2025-2588) (#854) Alexander Bokovoy\r\n* Cast to 'unsigned char' before calling ctype functions like isspace()  and toupper(), which is undefined behavior for negative char values,  e.g. for a non-ASCII byte in a path expression or a lens file name   (#886) rootvector2\r\n* Fix aug_preview(), which failed with \"Lens not found\" whenever spans  were enabled; it now finds the file node by walking up from the  matched node rather than by looking the path up again (#899)`  George Hansper\r\n* Make ATTRIBUTE_FALLTHROUGH work on clang as well as gcc (#836)   Richard Barnes\r\n* Fix gcc 14 warnings, notably the transposed reallocarray() arguments  in augprint.c (#842) rwmjones\r\n* Miscellaneous gcc 16 fixes, mostly const-correctness now that gcc 16  passes the constness of the argument through strchr() and friends    (#881) rwmjones\r\n* Fix some compiler warnings in lens.c, augmatch.c (#818) George Hansper\r\n* src/Makefile.am: fix a race when building liblexer_la-lexer.lo  Andrew Kovac\r\n* gnulib: fetch the submodule over https; git.savannah.gnu.org no   longer serves the unauthenticated git:// protocol, so a fresh clone   could not initialize .gnulib\r\n* build: set DISTCHECK_CONFIGURE_FLAGS so 'make distcheck' does not   build gnulib's own test suite, which tests gnulib against the local   libc rather than testing augeas\r\n* build: man/Makefile.am listed the files to distribute with a wildcard   over the source directory and never cleaned the man pages it   generates, so what a release tarball contained depended on the state   of the tree it was built from, and 'make distcheck' failed from a    clean checkout. The pages are now listed explicitly, built at dist    time and shipped - building from a tarball no longer needs pod2man\r\n* tests: cover aug_preview() with spans enabled, the case #899 fixed      (#859) Alexis Mousset\r\n* tests: add tests around embedded quotes to      tests/test-augtool/quoted-strings.sh (#826) George Hansper\r\n* tests: ignore 'nobody' groups in test-preserve.sh so the suite passes     in an unprivileged namespace (#858) Patrycja\r\n* tests: use AM_CPPFLAGS rather than the obsolete INCLUDES\r\n* ci: get the build workflow running again; it pinned ubuntu-20.04, a      runner image GitHub has retired, so every run failed before it started\r\n* ci: fix the release workflow, which used '::set-output' and two      actions GitHub has archived, and so could not have produced a release\r\n* ci: populate the .gnulib submodule from an actions cache, or with a      shallow fetch of the pinned revision, so that bootstrap does not      clone all of gnulib's history on every run\r\n* Remove the Travis configuration; CI moved to GitHub Actions in 1.13.0      and travis-ci.org has since shut down\r\n* README: point the build badge at GitHub Actions rather than the      shut-down travis-ci.org, and the fuzzing badge at issues.oss-fuzz.com\r\n\r\n### Lens changes/additions\r\n\r\n* Aptsources: parse all the option types apt allows, not just arch=    and trusted= (#865) Sunil Mohan Adapa\r\n* Aptsources822: new lens for Deb822 style apt sources, which use the    .sources extension; Aptsources is limited to *.list (#801)\r\n      James Valleroy\r\n* Aptsources822: add the Snapshot field, make a multi-line Signed-By  readable, allow the file to be created (#896) George Hansper\r\n* Chrony: add support for leapseclist (#843) Cosmin Tupangiu\r\n* Crypttab: support the link-volume-key option used by systemd v256    (#880) rwmjones\r\n* Fstab: allow a comma after the last option (#838) Cosmin Tupangiu\r\n* IPRoute2: also read /usr/share/iproute2, the fallback directory   iproute2 6.5.0 added for stateless configuration, and exclude the    README files that explain it (#875) Tim Wiederhake, (#902)    George Hansper\r\n* Iptables: support the ipset module's --match-set (#861) Will Harvey\r\n* Iptables: more consistent naming, fix the failing tests (#897)      George Hansper\r\n* Multipath: support all possible values for find_multipaths (#835)     rwmjones\r\n* Nginx: include /etc/nginx/snippets (#864) Mark C.\r\n* Ntp: parse 'tos minclock', and add /etc/ntpsec/ntp.conf to the filter     (#821) Fran\u00e7ois-R\u00e9gis Degott\r\n* Pg_Hba, Postgresql, Rsyslog: add the /usr/local paths that source      installations use (#888) Showta Ishizaki\r\n* Simplevars: read the subdirectories of /etc/zabbix (#815) smgrol\r\n* Simplevars: fix the path of OpenBSD's wsconsctl.conf, which has read      /etc/wsconsctlctl.conf since it was added and so never matched      anything (#887) Showta Ishizaki\r\n* Simplevars: take over /etc/adduser.conf from Shellvars; of the     systems that ship the file only FreeBSD treats it as a shell script,      and the perl that OpenBSD's and Debian's adduser(8) write either      fails to parse or silently vanishes from the tree (#893)      Showta Ishizaki\r\n* Systemd: allow the '+' (fullprivileges) command flag (#841)      Cosmin Tupangiu\r\n* Tmpfiles: permit the '$' type modifier in /usr/lib/tmpfiles.d/*.conf      (#850) rwmjones"}

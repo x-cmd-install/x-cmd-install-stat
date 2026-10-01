@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.10.0"
   latestRelease: "v0.10.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-30T07:01:14Z
+  collectedAt: 2026-10-01T07:16:28Z
 timeline:
   created: 2012-03-02
   lastCommit: 2026-06-30
@@ -27,7 +27,7 @@ language:
 totalBytes: 353238
 recent:
   last30d:
-    since: 2026-08-31
+    since: 2026-09-01
     release: 0
     mergedPR: 0
     openPR: 6
@@ -35,7 +35,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-08-01
+    since: 2026-08-02
     release: 0
     mergedPR: 0
     openPR: 7
@@ -43,7 +43,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-07-02
+    since: 2026-07-03
     release: 0
     mergedPR: 0
     openPR: 10
@@ -51,23 +51,23 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-04-03
+    since: 2026-04-04
     release: 0
     mergedPR: 3
     openPR: 14
     closedIssue: 0
     openIssue: 1
-    commit: 0
+    commit: 5
   last360d:
-    since: 2025-10-05
+    since: 2025-10-06
     release: 0
     mergedPR: 16
     openPR: 14
     closedIssue: 0
     openIssue: 2
-    commit: 0
+    commit: 16
   last720d:
-    since: 2024-10-10
+    since: 2024-10-11
     release: 4
     mergedPR: 52
     openPR: 14
@@ -83,7 +83,7 @@ total:
   commit: 900
 ---
 path: /home/runner/.x-repo/github.com/shelljs/shelljs
-collectedAt: 2026-09-30T07:01:16Z
+collectedAt: 2026-10-01T07:16:30Z
 loc:
   JavaScript:
     code: 8856
@@ -111,7 +111,7 @@ total:
   blanks: 1955
   files: 103
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/shelljs/shelljs
   commit: f364da6625945414440bb15210f102ba5fc10ed9
@@ -120,23 +120,25 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 4.1
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Code-Review
     score: 2
     reason: Found 5/22 approved changesets -- score normalized to 2
     details: null
-  - name: Maintained
-    score: 0
-    reason: 1 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -145,16 +147,6 @@ checks:
       - 'Info: Found linked content: .github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: .github/SECURITY.md:1'
       - 'Info: Found text in security policy: .github/SECURITY.md:1'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
-      - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -166,6 +158,14 @@ checks:
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 npmCommand dependencies pinned'
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 0
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected

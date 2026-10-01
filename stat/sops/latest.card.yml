@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.13.3"
   latestRelease: "v3.13.3"
   latestPrerelease: "v3.8.0-rc.1"
-  collectedAt: 2026-09-30T06:01:20Z
+  collectedAt: 2026-10-01T06:20:02Z
 timeline:
   created: 2015-08-13
   lastCommit: 2026-09-21
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-07-23
   lastPrerelease: 2023-08-25
 popularity:
-  star: 23250
+  star: 23259
   watcher: 121
   fork: 1089
   release: 38
@@ -30,7 +30,7 @@ language:
 totalBytes: 780499
 recent:
   last30d:
-    since: 2026-08-31
+    since: 2026-09-01
     release: 0
     mergedPR: 0
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-01
+    since: 2026-08-02
     release: 0
     mergedPR: 0
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-02
+    since: 2026-07-03
     release: 1
     mergedPR: 0
     openPR: 0
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-03
+    since: 2026-04-04
     release: 4
     mergedPR: 0
     openPR: 0
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-05
+    since: 2025-10-06
     release: 6
     mergedPR: 0
     openPR: 0
@@ -70,7 +70,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-10
+    since: 2024-10-11
     release: 13
     mergedPR: 0
     openPR: 0
@@ -86,7 +86,7 @@ total:
   commit: 2710
 ---
 path: /home/runner/.x-repo/github.com/mozilla/sops
-collectedAt: 2026-09-30T06:01:43Z
+collectedAt: 2026-10-01T06:20:19Z
 loc:
   Go:
     code: 21441
@@ -164,7 +164,7 @@ total:
   blanks: 2934
   files: 124
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/mozilla/sops
   commit: 86bc0b08c13b3db3496f85270f8c061e0120927a
@@ -173,21 +173,21 @@ scorecard:
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
 score: 8
 checks:
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Binary-Artifacts
+  - name: Maintained
     score: 10
-    reason: no binaries found in the repo
+    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Token-Permissions
     score: 9
@@ -208,14 +208,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Security-Policy
+  - name: Fuzzing
     score: 0
-    reason: security policy file not detected
+    reason: project is not fuzzed
     details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
+      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 7
     reason: dependency not pinned by hash detected -- score normalized to 7
@@ -227,17 +224,20 @@ checks:
       - 'Info:  11 out of  11 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
       - 'Info:   0 out of   1 pipCommand dependencies pinned'
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Mozilla Public License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'

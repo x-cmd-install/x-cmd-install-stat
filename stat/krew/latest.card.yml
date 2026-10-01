@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.5.0"
   latestRelease: "v0.5.0"
   latestPrerelease: "v0.1.0-alpha.1"
-  collectedAt: 2026-09-30T04:04:11Z
+  collectedAt: 2026-10-01T04:14:57Z
 timeline:
   created: 2018-07-12
   lastCommit: 2026-09-18
@@ -16,7 +16,7 @@ timeline:
   lastPrerelease: 2018-07-30
 popularity:
   star: 7042
-  watcher: 57
+  watcher: 56
   fork: 414
   release: 16
   contributor: 489
@@ -32,7 +32,7 @@ language:
 totalBytes: 362297
 recent:
   last30d:
-    since: 2026-08-31
+    since: 2026-09-01
     release: 0
     mergedPR: 1
     openPR: 1
@@ -40,7 +40,7 @@ recent:
     openIssue: 1
     commit: 1
   last60d:
-    since: 2026-08-01
+    since: 2026-08-02
     release: 0
     mergedPR: 2
     openPR: 2
@@ -48,7 +48,7 @@ recent:
     openIssue: 1
     commit: 1
   last90d:
-    since: 2026-07-02
+    since: 2026-07-03
     release: 0
     mergedPR: 2
     openPR: 2
@@ -56,7 +56,7 @@ recent:
     openIssue: 1
     commit: 1
   last180d:
-    since: 2026-04-03
+    since: 2026-04-04
     release: 0
     mergedPR: 2
     openPR: 2
@@ -64,7 +64,7 @@ recent:
     openIssue: 2
     commit: 4
   last360d:
-    since: 2025-10-05
+    since: 2025-10-06
     release: 1
     mergedPR: 9
     openPR: 2
@@ -72,7 +72,7 @@ recent:
     openIssue: 4
     commit: 8
   last720d:
-    since: 2024-10-10
+    since: 2024-10-11
     release: 2
     mergedPR: 15
     openPR: 2
@@ -88,7 +88,7 @@ total:
   commit: 509
 ---
 path: /home/runner/.x-repo/github.com/kubernetes-sigs/krew
-collectedAt: 2026-09-30T04:04:13Z
+collectedAt: 2026-10-01T04:14:58Z
 loc:
   Go:
     code: 8017
@@ -156,7 +156,7 @@ total:
   blanks: 2046
   files: 193
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/kubernetes-sigs/krew
   commit: 4da38b6e174f7cd300a016bf2518ab20d33b90e0
@@ -169,25 +169,25 @@ checks:
     score: 9
     reason: Found 27/30 approved changesets -- score normalized to 9
     details: null
-  - name: Maintained
-    score: 1
-    reason: 2 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 1
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Maintained
+    score: 1
+    reason: 2 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 1
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -232,6 +232,10 @@ checks:
       - 'Warn: release artifact v0.4.4 does not have provenance: https://api.github.com/repos/kubernetes-sigs/krew/releases/112178584'
       - 'Warn: release artifact v0.4.3 does not have provenance: https://api.github.com/repos/kubernetes-sigs/krew/releases/58737979'
       - 'Warn: release artifact v0.4.2 does not have provenance: https://api.github.com/repos/kubernetes-sigs/krew/releases/51326202'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -240,10 +244,6 @@ checks:
       - 'Info: Found linked content: github.com/kubernetes-sigs/.github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/kubernetes-sigs/.github/SECURITY.md:1'
       - 'Info: Found text in security policy: github.com/kubernetes-sigs/.github/SECURITY.md:1'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

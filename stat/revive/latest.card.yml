@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.17.0"
   latestRelease: "v1.17.0"
   latestPrerelease: ""
-  collectedAt: 2026-09-30T06:26:45Z
+  collectedAt: 2026-10-01T06:44:25Z
 timeline:
   created: 2017-07-04
   lastCommit: 2026-09-24
@@ -29,7 +29,7 @@ language:
 totalBytes: 706577
 recent:
   last30d:
-    since: 2026-08-31
+    since: 2026-09-01
     release: 1
     mergedPR: 0
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-01
+    since: 2026-08-02
     release: 2
     mergedPR: 0
     openPR: 0
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-02
+    since: 2026-07-03
     release: 2
     mergedPR: 0
     openPR: 0
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-03
+    since: 2026-04-04
     release: 2
     mergedPR: 0
     openPR: 0
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-05
+    since: 2025-10-06
     release: 5
     mergedPR: 0
     openPR: 0
@@ -69,7 +69,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-10
+    since: 2024-10-11
     release: 15
     mergedPR: 0
     openPR: 0
@@ -85,7 +85,7 @@ total:
   commit: 1440
 ---
 path: /home/runner/.x-repo/github.com/mgechev/revive
-collectedAt: 2026-09-30T06:26:46Z
+collectedAt: 2026-10-01T06:44:26Z
 loc:
   Go:
     code: 30579
@@ -128,26 +128,26 @@ total:
   blanks: 7020
   files: 646
 ---
-date: "2026-09-21"
+date: "2026-09-28"
 repo:
   name: github.com/mgechev/revive
-  commit: 08595dcfc9f4a094a855cad4915602c62426adfc
+  commit: 7ff27d13643f674bc27ef4343a76a3730994144c
 scorecard:
   version: v5.5.1-0.20260908181711-f92023a3f778
   commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
-score: 5.4
+score: 5.5
 checks:
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 10 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 9 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Code-Review
-    score: 4
-    reason: Found 11/24 approved changesets -- score normalized to 4
+    score: 2
+    reason: Found 6/25 approved changesets -- score normalized to 2
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -170,6 +170,20 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Pinned-Dependencies
+    score: 6
+    reason: dependency not pinned by hash detected -- score normalized to 6
+    details:
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating golang:1.27.1 to golang:1.27.1@sha256:e0174e51e81218523251d85d248a90d24c3d5e81543b4f07a5d66229397db190'
+      - 'Warn: goCommand not pinned by hash: .github/workflows/lint-md.yaml:39'
+      - 'Warn: goCommand not pinned by hash: .github/workflows/lint-md.yaml:44'
+      - 'Warn: npmCommand not pinned by hash: .github/workflows/lint-md.yaml:56'
+      - 'Warn: npmCommand not pinned by hash: .github/workflows/renovate.yaml:32'
+      - 'Info:  17 out of  17 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:  10 out of  10 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   2 goCommand dependencies pinned'
+      - 'Info:   0 out of   2 npmCommand dependencies pinned'
+      - 'Info:   0 out of   1 containerImage dependencies pinned'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -178,55 +192,46 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Pinned-Dependencies
-    score: 6
-    reason: dependency not pinned by hash detected -- score normalized to 6
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
     details:
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating golang:1.27.1 to golang:1.27.1@sha256:3680233e3204827fbdc66088528ae6d4b3d034f51d03a99d454f6de034888244'
-      - 'Warn: goCommand not pinned by hash: .github/workflows/lint-md.yaml:39'
-      - 'Warn: goCommand not pinned by hash: .github/workflows/lint-md.yaml:44'
-      - 'Warn: npmCommand not pinned by hash: .github/workflows/lint-md.yaml:56'
-      - 'Warn: npmCommand not pinned by hash: .github/workflows/renovate.yaml:32'
-      - 'Info:  17 out of  17 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:  10 out of  10 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   1 containerImage dependencies pinned'
-      - 'Info:   0 out of   2 goCommand dependencies pinned'
-      - 'Info:   0 out of   2 npmCommand dependencies pinned'
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Fuzzing
+  - name: Signed-Releases
     score: 0
-    reason: project is not fuzzed
+    reason: Project has not signed or included provenance with any releases.
     details:
-      - 'Warn: no fuzzer integrations found'
+      - 'Warn: release artifact v1.17.0 not signed: https://api.github.com/repos/revive-lint/revive/releases/394808987'
+      - 'Warn: release artifact v1.16.0 not signed: https://api.github.com/repos/revive-lint/revive/releases/374544485'
+      - 'Warn: release artifact v1.15.0 not signed: https://api.github.com/repos/revive-lint/revive/releases/293869686'
+      - 'Warn: release artifact v1.14.0 not signed: https://api.github.com/repos/revive-lint/revive/releases/285030039'
+      - 'Warn: release artifact v1.13.0 not signed: https://api.github.com/repos/revive-lint/revive/releases/262394255'
+      - 'Warn: release artifact v1.17.0 does not have provenance: https://api.github.com/repos/revive-lint/revive/releases/394808987'
+      - 'Warn: release artifact v1.16.0 does not have provenance: https://api.github.com/repos/revive-lint/revive/releases/374544485'
+      - 'Warn: release artifact v1.15.0 does not have provenance: https://api.github.com/repos/revive-lint/revive/releases/293869686'
+      - 'Warn: release artifact v1.14.0 does not have provenance: https://api.github.com/repos/revive-lint/revive/releases/285030039'
+      - 'Warn: release artifact v1.13.0 does not have provenance: https://api.github.com/repos/revive-lint/revive/releases/262394255'
   - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
+    score: 3
+    reason: branch protection is not maximal on development and all release branches
     details:
-      - 'Warn: branch protection not enabled for branch ''master'''
+      - 'Info: ''allow deletion'' disabled on branch ''master'''
+      - 'Info: ''force pushes'' disabled on branch ''master'''
+      - 'Info: ''branch protection settings apply to administrators'' is required to merge on branch ''master'''
+      - 'Warn: could not determine whether codeowners review is allowed'
+      - 'Warn: no status checks found to merge onto branch ''master'''
+      - 'Warn: PRs are not required to make changes on branch ''master''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:12'
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v1.16.0 not signed: https://api.github.com/repos/mgechev/revive/releases/374544485'
-      - 'Warn: release artifact v1.15.0 not signed: https://api.github.com/repos/mgechev/revive/releases/293869686'
-      - 'Warn: release artifact v1.14.0 not signed: https://api.github.com/repos/mgechev/revive/releases/285030039'
-      - 'Warn: release artifact v1.13.0 not signed: https://api.github.com/repos/mgechev/revive/releases/262394255'
-      - 'Warn: release artifact v1.12.0 not signed: https://api.github.com/repos/mgechev/revive/releases/243135912'
-      - 'Warn: release artifact v1.16.0 does not have provenance: https://api.github.com/repos/mgechev/revive/releases/374544485'
-      - 'Warn: release artifact v1.15.0 does not have provenance: https://api.github.com/repos/mgechev/revive/releases/293869686'
-      - 'Warn: release artifact v1.14.0 does not have provenance: https://api.github.com/repos/mgechev/revive/releases/285030039'
-      - 'Warn: release artifact v1.13.0 does not have provenance: https://api.github.com/repos/mgechev/revive/releases/262394255'
-      - 'Warn: release artifact v1.12.0 does not have provenance: https://api.github.com/repos/mgechev/revive/releases/243135912'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
