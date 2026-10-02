@@ -2,12 +2,12 @@ about:
   description: "Programmatic access to Gemini Notebook - via command-line interface (CLI), Model Context Protocol (MCP) server, and AI agent skills."
   license: MIT
   homepage: 
-  head: b0808be
+  head: 2728217
   archived: false
-  latestVersion: "v0.14.0"
-  latestRelease: "v0.14.0"
+  latestVersion: "v0.15.0"
+  latestRelease: "v0.15.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-01T06:14:36Z
+  collectedAt: 2026-10-02T06:00:48Z
 timeline:
   created: 2025-12-23
   lastCommit: 2026-10-01
@@ -15,35 +15,35 @@ timeline:
   lastRelease: 2026-10-01
   lastPrerelease: 
 popularity:
-  star: 6197
+  star: 6203
   watcher: 44
-  fork: 941
-  release: 153
+  fork: 939
+  release: 154
   contributor: 59
-  pullRequest: 166
+  pullRequest: 173
   issue: 166
 language:
-  Python: 3071993
-totalBytes: 3071993
+  Python: 3160759
+totalBytes: 3160759
 recent:
   last30d:
-    since: 2026-09-01
-    release: 12
+    since: 2026-09-02
+    release: 13
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-02
-    release: 22
+    since: 2026-08-03
+    release: 23
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-03
+    since: 2026-07-04
     release: 36
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-04
+    since: 2026-04-05
     release: 75
     mergedPR: 0
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-06
+    since: 2025-10-07
     release: 100
     mergedPR: 0
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-11
+    since: 2024-10-12
     release: 100
     mergedPR: 0
     openPR: 0
@@ -75,23 +75,23 @@ recent:
     openIssue: 0
     commit: 0
 total:
-  release: 153
-  mergedPR: 122
-  openPR: 0
-  closedIssue: 165
-  openIssue: 1
-  commit: 877
+  release: 154
+  mergedPR: 124
+  openPR: 5
+  closedIssue: 166
+  openIssue: 0
+  commit: 887
 ---
 path: /home/runner/.x-repo/github.com/jacob-bd/notebooklm-mcp-cli
-collectedAt: 2026-10-01T06:14:38Z
+collectedAt: 2026-10-02T06:00:51Z
 loc:
   Python:
-    code: 66658
-    comments: 2840
-    blanks: 13140
-    files: 277
+    code: 68529
+    comments: 2851
+    blanks: 13659
+    files: 298
   Json:
-    code: 79
+    code: 83
     comments: 0
     blanks: 0
     files: 1
@@ -102,15 +102,15 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 8940
-    blanks: 3917
+    comments: 9045
+    blanks: 3960
     files: 36
 total:
-  code: 69102
-  comments: 12353
-  blanks: 17430
-  files: 315
+  code: 70983
+  comments: 12472
+  blanks: 17992
+  files: 336
 ---
 
 ---
-{"id":400589114,"author":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQtfMFM4X4IE6","tag_name":"v0.14.0","target_commitish":"main","name":"v0.14.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-01T01:59:43Z","updated_at":"2026-10-01T02:03:46Z","published_at":"2026-10-01T02:01:56Z","assets":[{"id":602230793,"node_id":"RA_kwDOQtfMFM4j5VAJ","name":"notebooklm-mcp-0.14.0.mcpb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":2576,"digest":"sha256:5073944d36836f902f6795f58876095e07ccd49f2febb12e7cebf6338216eff5","download_count":1,"created_at":"2026-10-01T02:03:46Z","updated_at":"2026-10-01T02:03:46Z"}],"body":"> \ud83d\udd12 **New: Protected login storage (recommended)**\n> Your saved Google login can now be encrypted, with its key kept in your computer's OS keystore instead of a plain file. We highly recommend everyone switch on a personal computer:\n>\n>     nlm auth storage set protected\n>\n> Optional: nothing changes unless you turn it on. Servers, cron, Docker and SSH setups can keep the plain file.\n> [How it works](https://github.com/jacob-bd/gemini-notebook-mcp-cli/blob/main/docs/AUTHENTICATION.md#protected-storage)\n\n### Added\n\n- **Protected mode credential storage (`nlm auth storage`)** \u2014 Secure your saved Google login on personal computers by encrypting credentials at rest using AES-256-GCM (`credentials.enc`) with the encryption key stored in your operating system's native keystore (macOS Keychain, Windows Credential Manager, Linux SecretService).\n  - Optional: File mode remains the default, and upgrading changes nothing until enabled.\n  - Subcommands: `nlm auth storage status`, `set protected|file`, `resolve file|protected`, and `relocate`.\n  - `set` shows a picker in a terminal when you have several saved logins, so you choose which ones to switch; `--all` switches every one. Without a terminal it acts on the default profile and lists any profiles still in the other mode.\n  - Conflict detection and interactive resolution for divergent file vs protected credentials.\n  - Fast MCP hot-path with in-memory caching (no keychain access on ordinary tool calls) and revision checks.\n  - Safe multi-process token rotation with single-flight reloads and compare-and-save semantics.\n  - Told once, never nagged: a one-time CLI tip (terminal only), a one-time MCP notice, and an optional `[y/N]` question after `nlm login` and in `nlm setup` (asked once per profile, default No). `nlm doctor` lists each profile as plain or protected.\n  - When you turn it on, `nlm` lists leftover plain login backups and offers to delete them (default No). The `backups/` folder of setup-wizard backups is never touched.\n\n### Changed\n\n- **Token rotation rate limiting** \u2014 Rotation cooldown is now tracked per credential file (`cookies.json` in file mode, `credentials.enc` in protected mode) instead of one shared per-process key.\n- **Environment cookies are ephemeral** \u2014 When `NOTEBOOKLM_COOKIES` is set, credentials are used for the active process only. They are never written to profile caches or OS keystores, and cannot trigger or overwrite saved-profile headless recovery.\n\n### Downgrade Warning\n\n- **Downgrading to older versions:** Older versions of `notebooklm-mcp-cli` do not understand `credentials.enc`. Before downgrading to a version prior to this release, run `nlm auth storage set file` on every protected profile to restore standard JSON files.\n\n"}
+{"id":401248351,"author":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQtfMFM4X6pBf","tag_name":"v0.15.0","target_commitish":"main","name":"v0.15.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-01T18:39:20Z","updated_at":"2026-10-01T18:43:38Z","published_at":"2026-10-01T18:39:28Z","assets":[{"id":603895828,"node_id":"RA_kwDOQtfMFM4j_rgU","name":"notebooklm-mcp-0.15.0.mcpb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":2606,"digest":"sha256:6e108ada9a57d24c71aa7b3e11ac50d780f526929a92d4ff7f59590b4d1aa699","download_count":9,"created_at":"2026-10-01T18:43:37Z","updated_at":"2026-10-01T18:43:38Z"}],"body":"> \ud83d\udd12 **Choose how your login is stored before you sign in**\n> New logins now ask \"Protected (recommended) or plain file?\" *before* the browser opens, so a protected login never starts life as a plain file. `nlm setup` also gets a \"Credential protection\" menu item to protect or restore saved logins at any time.\n\n### Added\n\n- **Credential protection in `nlm setup`.** New main-menu item. Offers \"Protect saved logins\" when any login is plain, and \"Restore protected logins to plain files\" only when something is protected. With several logins you get the same checkbox picker as `nlm auth storage set`. The existing startup question stays.\n- **`nlm login` asks plain vs protected first (new profiles only).** Only in a real terminal on a desktop with a working keystore; SSH, containers and headless Linux stay on plain files without asking. If you type a name protected mode can't use (like `john@work.com` or `my work`), the question offers a working name instead (`john-work.com`, `my-work`) and lets you keep your original name as a plain file, all before the browser opens. Picking \"protected\" means no protection prompts or tips afterwards. Picking \"plain\" is respected: that profile is never nudged again.\n- **`nlm login --storage protected|file`.** Skips the question for a new profile (for scripts). Fails loudly instead of silently downgrading when the keystore is unavailable, and refuses to change the mode of an existing profile (use `nlm auth storage set`).\n- **MCP `profile` tool.** `action=list` shows saved accounts with email, storage mode and which is active; `action=status` shows storage details; `action=switch` changes the account for every later tool call until the MCP server restarts. `make_default=true` also saves it as your default for the CLI and future sessions. Built for apps with no CLI, like Claude CoWork.\n- **MCP `alias` tool, and aliases work everywhere.** Any tool's `notebook_id` now accepts an alias set with `nlm alias set` or the new tool.\n- **MCP `chat_save_to_note`** (CLI: `nlm chats to-note`) and **`pipeline` action `create`** (CLI: `nlm pipeline create`).\n- **`server_info` lists saved profiles** with email, storage mode and storage problems, plus which profile is active. Metadata only: it never opens the OS keystore.\n- **Active-account note.** While a profile switch is active and several profiles exist, every MCP tool result carries `active_profile_note` naming the account in use, because apps like Claude Desktop share one MCP server across chats.\n- **CLI-to-MCP parity test.** Every CLI command must map to an MCP tool or be on the deliberate CLI-only list, so gaps can't creep back.\n\n### Fixed\n\n- The one-time MCP \"protect your login\" notice no longer appears for a protected or already-answered active profile (it could after a profile switch).\n- The root `auth.json` backup and storage migrations always follow the saved default profile, never a temporary session switch.\n- `nlm auth storage set` and the wizard no longer list leftover empty profile folders.\n- Pressing Ctrl+C (or a failed or timed-out sign-in) during `nlm login` now closes the automation Chrome window it opened, instead of leaving it running for the next login to reuse.\n\n### Changed\n\n- Existing profiles behave as before: the after-login \"Protect\u2026?\" question still appears for plain profiles that never answered.\n- Deliberately CLI-only (unsafe or interactive over MCP): `login`, `setup`, `skill`, profile delete/rename, `auth storage set/resolve/relocate`, `config`, `chat start`.\n\n### Removed\n\n- Nothing removed.\n"}
