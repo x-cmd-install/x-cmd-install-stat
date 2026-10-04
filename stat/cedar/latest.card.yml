@@ -7,7 +7,7 @@ about:
   latestVersion: "cedar-policy-cli-v4.13.0"
   latestRelease: "cedar-policy-cli-v4.13.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-03T05:48:21Z
+  collectedAt: 2026-10-04T06:33:36Z
 timeline:
   created: 2023-04-25
   lastCommit: 2026-09-30
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-15
   lastPrerelease: 
 popularity:
-  star: 1760
+  star: 1762
   watcher: 16
   fork: 177
   release: 82
@@ -30,47 +30,47 @@ language:
 totalBytes: 8072908
 recent:
   last30d:
-    since: 2026-09-03
+    since: 2026-09-04
     release: 3
     mergedPR: 22
     openPR: 9
     closedIssue: 0
     openIssue: 10
-    commit: 26
+    commit: 20
   last60d:
-    since: 2026-08-04
+    since: 2026-08-05
     release: 3
-    mergedPR: 57
+    mergedPR: 55
     openPR: 12
     closedIssue: 3
-    openIssue: 16
-    commit: 54
+    openIssue: 15
+    commit: 51
   last90d:
-    since: 2026-07-05
+    since: 2026-07-06
     release: 6
-    mergedPR: 99
+    mergedPR: 98
     openPR: 13
     closedIssue: 6
     openIssue: 19
-    commit: 94
+    commit: 78
   last180d:
-    since: 2026-04-06
+    since: 2026-04-07
     release: 15
-    mergedPR: 232
+    mergedPR: 230
     openPR: 15
     closedIssue: 13
     openIssue: 24
-    commit: 213
+    commit: 202
   last360d:
-    since: 2025-10-08
+    since: 2025-10-09
     release: 41
-    mergedPR: 587
+    mergedPR: 583
     openPR: 17
     closedIssue: 28
     openIssue: 44
-    commit: 483
+    commit: 473
   last720d:
-    since: 2024-10-13
+    since: 2024-10-14
     release: 51
     mergedPR: 1017
     openPR: 22
@@ -86,7 +86,7 @@ total:
   commit: 1534
 ---
 path: /home/runner/.x-repo/github.com/cedar-policy/cedar
-collectedAt: 2026-10-03T05:48:26Z
+collectedAt: 2026-10-04T06:33:46Z
 loc:
   Rust:
     code: 180595
@@ -139,7 +139,7 @@ total:
   blanks: 18671
   files: 543
 ---
-date: "2026-10-03T00:20:49Z"
+date: "2026-10-04T01:02:48Z"
 repo:
   name: github.com/cedar-policy/cedar
   commit: 2cfa86bab4776d587e96e8da43a37fc44622411a
@@ -165,6 +165,10 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
@@ -172,10 +176,6 @@ checks:
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -188,9 +188,9 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/cargo_audit.yml:9'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/cedar-policy-cli-release.yml:18'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/ci.yml:9'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/comment_pr.yml:3'
       - 'Info: topLevel ''actions'' permission set to ''read'': .github/workflows/comment_pr.yml:5'
       - 'Info: topLevel ''statuses'' permission set to ''read'': .github/workflows/comment_pr.yml:6'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/comment_pr.yml:3'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/mirror_release_tags.yml:16'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/nightly_build.yml:8'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/nightly_build_downstream.yml:8'
@@ -205,13 +205,13 @@ checks:
     reason: dependency not pinned by hash detected -- score normalized to 5
     details:
       - 'Info: Possibly incomplete results: error parsing shell code: invalid parameter name: .github/workflows/cedar-policy-cli-release.yml:79'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build_downstream_deps.yml:39: update your workflow using https://app.stepsecurity.io/secureworkflow/cedar-policy/cedar/build_downstream_deps.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build_downstream_deps.yml:67: update your workflow using https://app.stepsecurity.io/secureworkflow/cedar-policy/cedar/build_downstream_deps.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build_downstream_deps.yml:32: update your workflow using https://app.stepsecurity.io/secureworkflow/cedar-policy/cedar/build_downstream_deps.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build_downstream_deps.yml:46: update your workflow using https://app.stepsecurity.io/secureworkflow/cedar-policy/cedar/build_downstream_deps.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build_downstream_deps.yml:53: update your workflow using https://app.stepsecurity.io/secureworkflow/cedar-policy/cedar/build_downstream_deps.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build_downstream_deps.yml:60: update your workflow using https://app.stepsecurity.io/secureworkflow/cedar-policy/cedar/build_downstream_deps.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build_downstream_deps.yml:32: update your workflow using https://app.stepsecurity.io/secureworkflow/cedar-policy/cedar/build_downstream_deps.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build_downstream_deps.yml:53: update your workflow using https://app.stepsecurity.io/secureworkflow/cedar-policy/cedar/build_downstream_deps.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build_downstream_deps.yml:67: update your workflow using https://app.stepsecurity.io/secureworkflow/cedar-policy/cedar/build_downstream_deps.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build_downstream_deps.yml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/cedar-policy/cedar/build_downstream_deps.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build_downstream_deps.yml:39: update your workflow using https://app.stepsecurity.io/secureworkflow/cedar-policy/cedar/build_downstream_deps.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build_downstream_deps.yml:46: update your workflow using https://app.stepsecurity.io/secureworkflow/cedar-policy/cedar/build_downstream_deps.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/nightly_build_downstream.yml:46: update your workflow using https://app.stepsecurity.io/secureworkflow/cedar-policy/cedar/nightly_build_downstream.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/publish_wasm.yml:120: update your workflow using https://app.stepsecurity.io/secureworkflow/cedar-policy/cedar/publish_wasm.yml/main?enable=pin'
       - 'Warn: npmCommand not pinned by hash: .github/workflows/build_and_test.yml:178'
@@ -223,13 +223,13 @@ checks:
       - 'Info:   8 out of  17 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 npmCommand dependencies pinned'
       - 'Info:   0 out of   2 downloadThenRun dependencies pinned'
-  - name: CII-Best-Practices
-    score: 2
-    reason: 'badge detected: InProgress'
-    details: null
   - name: Vulnerabilities
     score: 10
     reason: 0 existing vulnerabilities detected
+    details: null
+  - name: CII-Best-Practices
+    score: 2
+    reason: 'badge detected: InProgress'
     details: null
   - name: Signed-Releases
     score: 0
@@ -241,23 +241,23 @@ checks:
     score: 10
     reason: packaging workflow detected
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/publish.yml:233'
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/publish.yml:201'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: SAST
+    score: 8
+    reason: SAST tool is not run on all commits -- score normalized to 8
+    details:
+      - 'Warn: 26 commits out of 30 are checked with a SAST tool'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: SAST
-    score: 8
-    reason: SAST tool is not run on all commits -- score normalized to 8
-    details:
-      - 'Warn: 26 commits out of 30 are checked with a SAST tool'
   - name: Branch-Protection
     score: 6
     reason: branch protection is not maximal on development and all release branches

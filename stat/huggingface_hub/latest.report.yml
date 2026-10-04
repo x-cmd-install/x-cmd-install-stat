@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.1.1"
   latestRelease: "v2.1.1"
   latestPrerelease: ""
-  collectedAt: 2026-10-03T05:04:50Z
+  collectedAt: 2026-10-04T05:37:36Z
 timeline:
   created: 2020-12-22
   lastCommit: 2026-10-02
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-10-01
   lastPrerelease: 
 popularity:
-  star: 3954
+  star: 3956
   watcher: 75
-  fork: 1244
+  fork: 1245
   release: 196
   contributor: 412
-  pullRequest: 3213
-  issue: 1709
+  pullRequest: 3216
+  issue: 1710
 language:
   Python: 5021062
   Shell: 18355
@@ -30,63 +30,63 @@ language:
 totalBytes: 5056799
 recent:
   last30d:
-    since: 2026-09-03
-    release: 7
-    mergedPR: 130
-    openPR: 22
+    since: 2026-09-04
+    release: 6
+    mergedPR: 129
+    openPR: 25
     closedIssue: 49
     openIssue: 7
     commit: 132
   last60d:
-    since: 2026-08-04
+    since: 2026-08-05
     release: 12
-    mergedPR: 183
-    openPR: 30
-    closedIssue: 96
+    mergedPR: 181
+    openPR: 33
+    closedIssue: 92
     openIssue: 12
     commit: 190
   last90d:
-    since: 2026-07-05
+    since: 2026-07-06
     release: 16
-    mergedPR: 258
-    openPR: 38
+    mergedPR: 255
+    openPR: 41
     closedIssue: 125
     openIssue: 14
     commit: 263
   last180d:
-    since: 2026-04-06
+    since: 2026-04-07
     release: 37
-    mergedPR: 518
-    openPR: 41
-    closedIssue: 212
+    mergedPR: 515
+    openPR: 44
+    closedIssue: 211
     openIssue: 23
     commit: 524
   last360d:
-    since: 2025-10-08
+    since: 2025-10-09
     release: 66
-    mergedPR: 877
-    openPR: 49
-    closedIssue: 365
+    mergedPR: 875
+    openPR: 52
+    closedIssue: 364
     openIssue: 48
     commit: 876
   last720d:
-    since: 2024-10-13
+    since: 2024-10-14
     release: 100
-    mergedPR: 1273
-    openPR: 53
-    closedIssue: 687
+    mergedPR: 1271
+    openPR: 56
+    closedIssue: 688
     openIssue: 72
     commit: 1252
 total:
   release: 196
   mergedPR: 2622
-  openPR: 53
-  closedIssue: 1594
+  openPR: 56
+  closedIssue: 1595
   openIssue: 115
   commit: 2833
 ---
 path: /home/runner/.x-repo/github.com/huggingface/huggingface_hub
-collectedAt: 2026-10-03T05:04:58Z
+collectedAt: 2026-10-04T05:37:42Z
 loc:
   Python:
     code: 101591
@@ -278,4 +278,4 @@ checks:
     details:
       - 'Warn: 18 commits out of 29 are checked with a SAST tool'
 ---
-{"id":400837731,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOE0mels4X5Exj","tag_name":"v2.1.0","target_commitish":"main","name":"[v2.1.0] Better Jobs tooling, ZeroGPU quota tracking, and revamped Model Catalog","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-01T12:10:24Z","updated_at":"2026-10-01T12:47:17Z","published_at":"2026-10-01T12:12:05Z","assets":[],"body":"## \ud83d\udcca Jobs: retries, rescheduling, and port exposure\r\n\r\nHugging Face Jobs get a batch of quality-of-life improvements this release. Jobs can now retry automatically on failure with the new `attempts` parameter, and you can start a fresh Job from an existing Job's saved spec (including secrets and hardware settings) with `rerun_job` / `hf jobs rerun`. Scheduled Jobs can be rescheduled \u2014 change the cron expression or preset without recreating the Job \u2014 via `update_scheduled_job_schedule` / `hf jobs scheduled reschedule`. Finally, you can now expose ports on Jobs: use `expose` for token-protected access and `expose_public` for unauthenticated access, both at creation time and on a running Job with `update_job_expose` / `hf jobs expose`.\r\n\r\n```bash\r\n# Retry a job up to 2 times on failure, and rerun it later from its saved spec\r\n>>> hf jobs run --attempts 3 --detach python:3.12 python train.py\r\n>>> hf jobs rerun <job_id>\r\n\r\n# Reschedule a scheduled job to run every day at 9:00\r\n>>> hf jobs scheduled reschedule <scheduled_job_id> \"0 9 * * 1\"\r\n\r\n# Expose ports on a running Job (8000 token-protected, 9000 public)\r\n>>> hf jobs expose <job_id> 8000 --public 9000\r\n```\r\n\r\n- [Jobs] Add rerun and retry attempts by @Wauplin in #5025\r\n- [Jobs] Allow rescheduling scheduled jobs by @Wauplin in #5026\r\n- [Jobs] Manage public and private exposed ports by @Wauplin in #5027\r\n\r\n\ud83d\udcda **Documentation:** [Jobs guide](https://huggingface.co/docs/huggingface_hub/main/en/guides/jobs)\r\n\r\n## \ud83e\udd17 Track your ZeroGPU quota\r\n\r\nThe Hub now exposes a ZeroGPU quota endpoint, and `huggingface_hub` wraps it with a new `HfApi.get_zero_gpu_quota()` method returning a `ZeroGpuQuota` dataclass (values in GPU-seconds). This is particularly useful for apps, MCP servers and agents built on top of ZeroGPU Spaces: check how much quota is left and when it resets, and warn your users before they hit the daily limit. The same information is available from the CLI with `hf spaces zero-gpu-quota`, which also prints a hint to purchase credits when the quota is running low.\r\n\r\n```python\r\n>>> from huggingface_hub import get_zero_gpu_quota\r\n>>> quota = get_zero_gpu_quota()\r\nZeroGpuQuota(base=2400, remaining=1810, resets_at=datetime.datetime(2026, 9, 30, 9, 12, 3, tzinfo=datetime.timezone.utc), overquota_used=0)\r\n```\r\n\r\n```bash\r\n>>> hf spaces zero-gpu quota\r\n\u2713 ZeroGPU quota (in GPU-seconds)\r\n  remaining: 1810\r\n  base: 2400\r\n  resets_at: 2026-09-30T18:12:03+00:00\r\n  overquota_used: 0\r\n```\r\n\r\n- [Spaces] Add get_zero_gpu_quota and hf spaces zero-gpu-quota by @Wauplin in #5040\r\n- [CLI] Rename 'hf spaces zero-gpu-quota' to 'hf spaces zero-gpu quota'- #5055 **[Shipped as part of v2.1.1]**\r\n\r\n\ud83d\udcda **Documentation:** [Manage your Space guide](https://huggingface.co/docs/huggingface_hub/main/en/guides/manage-spaces)\r\n\r\n## \u26a1 `HfFileSystem.get_file` downloads Xet files with `hf_xet`\r\n\r\n`HfFileSystem.get_file` now downloads Xet-backed files through `hf_xet` (the same code path as `hf_hub_download`) when writing to a local path, letting `hf_xet` write directly to disk instead of going through Python. It reuses the Xet hash already returned by `info()` (part of the tree listing), so no extra HTTP call is needed. This mostly benefits non-streaming `datasets` loads from `hf://buckets/...` paths: benchmarks on HF Jobs show `get_file` dropping from ~120s to ~7s on a 2 GB parquet file, and `load_dataset(\"hf://buckets/...\")` from ~130s to ~17s. The classic HTTP path is still used for non-Xet files, when `hf_xet` is not installed, or when writing to a file-like object. As a side effect, a missing remote file no longer leaves an empty local file behind.\r\n\r\n- [HfFileSystem] Download Xet files with hf_xet in get_file by @hanouticelina in #4990\r\n\r\n## \ud83e\udde0 Inference Endpoints: Model Catalog migrates to the new v1 API\r\n\r\nThe catalog methods now use the new `/api/v1/catalog` API. [`list_inference_catalog`](https://huggingface.co/docs/huggingface_hub/main/en/guides/inference_endpoints) returns `InferenceCatalogModel` dataclasses with their tested deployment *recipes* (hardware + engine combinations), and takes server-side filters (`accelerator`, `engine`, `license`, `task`, `search`, `limit`). `create_inference_endpoint_from_catalog` can deploy an exact recipe with the new `recipe_id` and `gguf_file` arguments. The CLI follows suit: `hf endpoints catalog ls` prints one row per recipe and supports the filters, while `hf endpoints catalog deploy` gains `--recipe` and `--gguf-file`.\r\n\r\n```bash\r\n>>> hf endpoints catalog ls --engine vllm --task text-generation --search llama --limit 10\r\nREPO_ID                             TASK               LICENSE    ACCELERATOR ENGINE   GGUF_FILE                     RECIPE_ID\r\n----------------------------------- ------------------ ---------- ----------- -------- ----------------------------- -------------------------\r\nmeta-llama/Llama-3.1-8B-Instruct    text-generation    Llama 3.1  gpu         vllm                                   sizzling-biryani-g4xsi1ac\r\nbartowski/QwQ-32B-Preview-GGUF      text-generation    Apache 2.0 gpu         llamacpp QwQ-32B-Preview-Q8_0.gguf     baked-orange-m863gx7d\r\n```\r\n\r\n- [Endpoints] Migrate catalog to the new /api/v1 API by @Wauplin in #4928\r\n\r\n\ud83d\udcda **Documentation:** [Inference Endpoints guide](https://huggingface.co/docs/huggingface_hub/main/en/guides/inference_endpoints)\r\n\r\n## \ud83d\udd12 Sandboxes require scoped credentials\r\n\r\nSandbox security is tightened in this release. Pooled sandboxes with missing, empty or malformed capability tokens are now refused instead of silently substituting the host-management credential, and the client is pinned to `sbx-server` 0.7.0, which removes host-token acceptance on per-sandbox routes entirely. Older pool hosts that do not provide scoped tokens must be upgraded/recycled: new clients cannot reach legacy hosts and legacy clients cannot reach new sandboxes (documented, accepted breaking change). The sandbox concepts and guides have been updated to describe the strict behavior, including how to safely use `proxy_headers` with external HTTP clients (disable redirects!).\r\n\r\n- [Sandbox] Require scoped credentials for pooled sandboxes by @Wauplin in #4782\r\n- [Sandbox] Bump sbx-server to 0.7.0 by @Wauplin in #5028\r\n\r\n## \ud83d\udc94 Breaking Change\r\n\r\n- [Buckets] Make include/exclude patterns case-sensitive on all platforms by @Wauplin in #5007\r\n\r\n> [!NOTE]\r\n> The Inference Endpoints catalog migration (#4928) and the Sandbox credential changes (#4782, #5028) are breaking changes detailed in their highlight sections above.\r\n\r\n## \ud83d\udda5\ufe0f CLI\r\n\r\n- [CLI] Escape control characters in listings and table output by @Wauplin in #5029\r\n- [CLI] Suggest `hf auth login` when `hf auth whoami` fails by @moon-bot-app[bot] in #5033\r\n- [CLI] Align `hf auth whoami` not-logged-in message with `hf auth token` by @Wauplin in #5034\r\n- [CLI] Raise if a bare --secrets NAME is not set locally in hf jobs by @Wauplin in #5044\r\n- [CLI] Hint to use --global after local 'hf skills add/update' by @Wauplin in #5024\r\n- [CLI] nit: update `hf upload` help text by @davanstrien in #5046\r\n\r\n## \ud83d\udd27 Other QoL Improvements\r\n\r\n- [HfApi] Support resource_group_id in duplicate_repo by @Wauplin in #5038\r\n- [Repos] Warn when duplicated repo files are still being copied by @Wauplin in #5041\r\n- Support secrets on Job-triggered webhooks by @moon-bot-app[bot] in #5009\r\n- [HfApi] Add `visibility` to `create_bucket` by @hanouticelina in #5053\r\n\r\n## \ud83d\udc1b Bug and typo fixes\r\n\r\n- [Buckets] Fix copy_files treating lexical siblings as an existing destination directory by @AnishPatel526 in #5001\r\n- [HTTP] Fix repo_id in errors for query strings and download URLs by @Wauplin in #5008\r\n- Fix scalar tags splitting into single-character list in card front matter by @zeenat28-ui in #5017\r\n- [datasets sql] Run the DuckDB CLI subprocess with UTF-8 encoding by @825pranav in #5020\r\n- [Auth] Store token names as UTF-8 instead of locale encoding by @Evolian-o in #5021\r\n- [Dataclasses] Accept bare typing.List/Dict/Set in @strict validation by @anishmehta24 in #5032\r\n- [Utils] Retry the first pagination page as well by @Wauplin in #5035\r\n\r\n## \ud83d\udcd6 Documentation\r\n\r\n- [docs] xet caching and concurrency updates by @cbensimon in #4883\r\n- [Spaces] Update docs for cpu-basic gating and dev mode by @Wauplin in #5037\r\n- [docs] Fix hf.cos typo in repository guide link by @pratikgx in #5016\r\n- [Docs] Fix links in i18n issue template by @pratikgx in #5051\r\n- [Docs] Fix duplicated words in docstring and comments by @Ad1th in #5052\r\n\r\n## \ud83c\udfd7\ufe0f Internal\r\n\r\n- Post-release: bump version to 2.1.0.dev0 by @huggingface-hub-bot[bot] in #4999\r\n- [CI] Bump doc-builder workflows pin to 63ec6f1 by @Wauplin in #5010\r\n- [Tests] Reduce redundant Hub calls in repo settings and move tests by @Wauplin in #5036\r\n","mentions_count":12}
+{"id":400837731,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOE0mels4X5Exj","tag_name":"v2.1.0","target_commitish":"main","name":"[v2.1.0] Better Jobs tooling, ZeroGPU quota tracking, and revamped Model Catalog","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-01T12:10:24Z","updated_at":"2026-10-01T12:47:17Z","published_at":"2026-10-01T12:12:05Z","assets":[],"body":"## \ud83d\udcca Jobs: retries, rescheduling, and port exposure\r\n\r\nHugging Face Jobs get a batch of quality-of-life improvements this release. Jobs can now retry automatically on failure with the new `attempts` parameter, and you can start a fresh Job from an existing Job's saved spec (including secrets and hardware settings) with `rerun_job` / `hf jobs rerun`. Scheduled Jobs can be rescheduled \u2014 change the cron expression or preset without recreating the Job \u2014 via `update_scheduled_job_schedule` / `hf jobs scheduled reschedule`. Finally, you can now expose ports on Jobs: use `expose` for token-protected access and `expose_public` for unauthenticated access, both at creation time and on a running Job with `update_job_expose` / `hf jobs expose`.\r\n\r\n```bash\r\n# Retry a job up to 2 times on failure, and rerun it later from its saved spec\r\n>>> hf jobs run --attempts 3 --detach python:3.12 python train.py\r\n>>> hf jobs rerun <job_id>\r\n\r\n# Reschedule a scheduled job to run every day at 9:00\r\n>>> hf jobs scheduled reschedule <scheduled_job_id> \"0 9 * * 1\"\r\n\r\n# Expose ports on a running Job (8000 token-protected, 9000 public)\r\n>>> hf jobs expose <job_id> 8000 --public 9000\r\n```\r\n\r\n- [Jobs] Add rerun and retry attempts by @Wauplin in #5025\r\n- [Jobs] Allow rescheduling scheduled jobs by @Wauplin in #5026\r\n- [Jobs] Manage public and private exposed ports by @Wauplin in #5027\r\n\r\n\ud83d\udcda **Documentation:** [Jobs guide](https://huggingface.co/docs/huggingface_hub/main/en/guides/jobs)\r\n\r\n## \ud83e\udd17 Track your ZeroGPU quota\r\n\r\nThe Hub now exposes a ZeroGPU quota endpoint, and `huggingface_hub` wraps it with a new `HfApi.get_zero_gpu_quota()` method returning a `ZeroGpuQuota` dataclass (values in GPU-seconds). This is particularly useful for apps, MCP servers and agents built on top of ZeroGPU Spaces: check how much quota is left and when it resets, and warn your users before they hit the daily limit. The same information is available from the CLI with `hf spaces zero-gpu-quota`, which also prints a hint to purchase credits when the quota is running low.\r\n\r\n```python\r\n>>> from huggingface_hub import get_zero_gpu_quota\r\n>>> quota = get_zero_gpu_quota()\r\nZeroGpuQuota(base=2400, remaining=1810, resets_at=datetime.datetime(2026, 9, 30, 9, 12, 3, tzinfo=datetime.timezone.utc), overquota_used=0)\r\n```\r\n\r\n```bash\r\n>>> hf spaces zero-gpu quota\r\n\u2713 ZeroGPU quota (in GPU-seconds)\r\n  remaining: 1810\r\n  base: 2400\r\n  resets_at: 2026-09-30T18:12:03+00:00\r\n  overquota_used: 0\r\n```\r\n\r\n- [Spaces] Add get_zero_gpu_quota and hf spaces zero-gpu-quota by @Wauplin in #5040\r\n- [CLI] Rename 'hf spaces zero-gpu-quota' to 'hf spaces zero-gpu quota'- #5055 **[Shipped as part of v2.1.1]**\r\n\r\n\ud83d\udcda **Documentation:** [Manage your Space guide](https://huggingface.co/docs/huggingface_hub/main/en/guides/manage-spaces)\r\n\r\n## \u26a1 `HfFileSystem.get_file` downloads Xet files with `hf_xet`\r\n\r\n`HfFileSystem.get_file` now downloads Xet-backed files through `hf_xet` (the same code path as `hf_hub_download`) when writing to a local path, letting `hf_xet` write directly to disk instead of going through Python. It reuses the Xet hash already returned by `info()` (part of the tree listing), so no extra HTTP call is needed. This mostly benefits non-streaming `datasets` loads from `hf://buckets/...` paths: benchmarks on HF Jobs show `get_file` dropping from ~120s to ~7s on a 2 GB parquet file, and `load_dataset(\"hf://buckets/...\")` from ~130s to ~17s. The classic HTTP path is still used for non-Xet files, when `hf_xet` is not installed, or when writing to a file-like object. As a side effect, a missing remote file no longer leaves an empty local file behind.\r\n\r\n- [HfFileSystem] Download Xet files with hf_xet in get_file by @hanouticelina in #4990\r\n\r\n## \ud83e\udde0 Inference Endpoints: Model Catalog migrates to the new v1 API\r\n\r\nThe catalog methods now use the new `/api/v1/catalog` API. [`list_inference_catalog`](https://huggingface.co/docs/huggingface_hub/main/en/guides/inference_endpoints) returns `InferenceCatalogModel` dataclasses with their tested deployment *recipes* (hardware + engine combinations), and takes server-side filters (`accelerator`, `engine`, `license`, `task`, `search`, `limit`). `create_inference_endpoint_from_catalog` can deploy an exact recipe with the new `recipe_id` and `gguf_file` arguments. The CLI follows suit: `hf endpoints catalog ls` prints one row per recipe and supports the filters, while `hf endpoints catalog deploy` gains `--recipe` and `--gguf-file`.\r\n\r\n```bash\r\n>>> hf endpoints catalog ls --engine vllm --task text-generation --search llama --limit 10\r\nREPO_ID                             TASK               LICENSE    ACCELERATOR ENGINE   GGUF_FILE                     RECIPE_ID\r\n----------------------------------- ------------------ ---------- ----------- -------- ----------------------------- -------------------------\r\nmeta-llama/Llama-3.1-8B-Instruct    text-generation    Llama 3.1  gpu         vllm                                   sizzling-biryani-g4xsi1ac\r\nbartowski/QwQ-32B-Preview-GGUF      text-generation    Apache 2.0 gpu         llamacpp QwQ-32B-Preview-Q8_0.gguf     baked-orange-m863gx7d\r\n```\r\n\r\n- [Endpoints] Migrate catalog to the new /api/v1 API by @Wauplin in #4928\r\n\r\n\ud83d\udcda **Documentation:** [Inference Endpoints guide](https://huggingface.co/docs/huggingface_hub/main/en/guides/inference_endpoints)\r\n\r\n## \ud83d\udd12 Sandboxes require scoped credentials\r\n\r\nSandbox security is tightened in this release. Pooled sandboxes with missing, empty or malformed capability tokens are now refused instead of silently substituting the host-management credential, and the client is pinned to `sbx-server` 0.7.0, which removes host-token acceptance on per-sandbox routes entirely. Older pool hosts that do not provide scoped tokens must be upgraded/recycled: new clients cannot reach legacy hosts and legacy clients cannot reach new sandboxes (documented, accepted breaking change). The sandbox concepts and guides have been updated to describe the strict behavior, including how to safely use `proxy_headers` with external HTTP clients (disable redirects!).\r\n\r\n- [Sandbox] Require scoped credentials for pooled sandboxes by @Wauplin in #4782\r\n- [Sandbox] Bump sbx-server to 0.7.0 by @Wauplin in #5028\r\n\r\n## \ud83d\udc94 Breaking Change\r\n\r\n- [Buckets] Make include/exclude patterns case-sensitive on all platforms by @Wauplin in #5007\r\n\r\n> [!NOTE]\r\n> The Inference Endpoints catalog migration (#4928) and the Sandbox credential changes (#4782, #5028) are breaking changes detailed in their highlight sections above.\r\n\r\n## \ud83d\udda5\ufe0f CLI\r\n\r\n- [CLI] Escape control characters in listings and table output by @Wauplin in #5029\r\n- [CLI] Suggest `hf auth login` when `hf auth whoami` fails by @moon-bot-app[bot] in #5033\r\n- [CLI] Align `hf auth whoami` not-logged-in message with `hf auth token` by @Wauplin in #5034\r\n- [CLI] Raise if a bare --secrets NAME is not set locally in hf jobs by @Wauplin in #5044\r\n- [CLI] Hint to use --global after local 'hf skills add/update' by @Wauplin in #5024\r\n- [CLI] nit: update `hf upload` help text by @davanstrien in #5046\r\n\r\n## \ud83d\udd27 Other QoL Improvements\r\n\r\n- [HfApi] Support resource_group_id in duplicate_repo by @Wauplin in #5038\r\n- [Repos] Warn when duplicated repo files are still being copied by @Wauplin in #5041\r\n- Support secrets on Job-triggered webhooks by @moon-bot-app[bot] in #5009\r\n- [HfApi] Add `visibility` to `create_bucket` by @hanouticelina in #5053\r\n\r\n## \ud83d\udc1b Bug and typo fixes\r\n\r\n- [Buckets] Fix copy_files treating lexical siblings as an existing destination directory by @AnishPatel526 in #5001\r\n- [HTTP] Fix repo_id in errors for query strings and download URLs by @Wauplin in #5008\r\n- Fix scalar tags splitting into single-character list in card front matter by @zeenat28-ui in #5017\r\n- [datasets sql] Run the DuckDB CLI subprocess with UTF-8 encoding by @825pranav in #5020\r\n- [Auth] Store token names as UTF-8 instead of locale encoding by @Evolian-o in #5021\r\n- [Dataclasses] Accept bare typing.List/Dict/Set in @strict validation by @anishmehta24 in #5032\r\n- [Utils] Retry the first pagination page as well by @Wauplin in #5035\r\n\r\n## \ud83d\udcd6 Documentation\r\n\r\n- [docs] xet caching and concurrency updates by @cbensimon in #4883\r\n- [Spaces] Update docs for cpu-basic gating and dev mode by @Wauplin in #5037\r\n- [docs] Fix hf.cos typo in repository guide link by @pratikgx in #5016\r\n- [Docs] Fix links in i18n issue template by @pratikgx in #5051\r\n- [Docs] Fix duplicated words in docstring and comments by @Ad1th in #5052\r\n\r\n## \ud83c\udfd7\ufe0f Internal\r\n\r\n- Post-release: bump version to 2.1.0.dev0 by @huggingface-hub-bot[bot] in #4999\r\n- [CI] Bump doc-builder workflows pin to 63ec6f1 by @Wauplin in #5010\r\n- [Tests] Reduce redundant Hub calls in repo settings and move tests by @Wauplin in #5036\r\n","reactions":{"total_count":1,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":1,"eyes":0},"mentions_count":12}

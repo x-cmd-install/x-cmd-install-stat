@@ -7,7 +7,7 @@ about:
   latestVersion: "1.19.2"
   latestRelease: "1.18.4"
   latestPrerelease: "1.19.2"
-  collectedAt: 2026-10-03T06:27:25Z
+  collectedAt: 2026-10-04T07:05:36Z
 timeline:
   created: 2016-05-19
   lastCommit: 2026-09-29
@@ -20,7 +20,7 @@ popularity:
   fork: 526
   release: 185
   contributor: 274
-  pullRequest: 2963
+  pullRequest: 2964
   issue: 3816
 language:
   C: 4875346
@@ -31,63 +31,63 @@ language:
 totalBytes: 5340739
 recent:
   last30d:
-    since: 2026-09-03
+    since: 2026-09-04
     release: 3
     mergedPR: 24
-    openPR: 5
+    openPR: 6
     closedIssue: 6
-    openIssue: 9
-    commit: 41
+    openIssue: 8
+    commit: 0
   last60d:
-    since: 2026-08-04
+    since: 2026-08-05
     release: 6
-    mergedPR: 57
+    mergedPR: 55
     openPR: 13
     closedIssue: 19
     openIssue: 16
-    commit: 100
+    commit: 0
   last90d:
-    since: 2026-07-05
+    since: 2026-07-06
     release: 6
     mergedPR: 64
-    openPR: 18
+    openPR: 19
     closedIssue: 23
     openIssue: 23
-    commit: 126
+    commit: 0
   last180d:
-    since: 2026-04-06
+    since: 2026-04-07
     release: 14
-    mergedPR: 147
-    openPR: 25
-    closedIssue: 66
+    mergedPR: 143
+    openPR: 26
+    closedIssue: 64
     openIssue: 37
-    commit: 339
+    commit: 0
   last360d:
-    since: 2025-10-08
+    since: 2025-10-09
     release: 20
-    mergedPR: 233
-    openPR: 30
+    mergedPR: 229
+    openPR: 31
     closedIssue: 141
     openIssue: 63
-    commit: 477
+    commit: 0
   last720d:
-    since: 2024-10-13
+    since: 2024-10-14
     release: 25
     mergedPR: 336
-    openPR: 37
-    closedIssue: 286
+    openPR: 38
+    closedIssue: 285
     openIssue: 170
     commit: 707
 total:
   release: 185
   mergedPR: 1787
-  openPR: 79
+  openPR: 80
   closedIssue: 2872
   openIssue: 944
   commit: 8733
 ---
 path: /home/runner/.x-repo/github.com/flatpak/flatpak
-collectedAt: 2026-10-03T06:27:36Z
+collectedAt: 2026-10-04T07:05:46Z
 loc:
   C:
     code: 89800
@@ -295,4 +295,4 @@ checks:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Info: all commits (7) are checked with a SAST tool'
 ---
-{"id":398257468,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOA4eFkM4XvO08","tag_name":"1.18.4","target_commitish":"main","name":"1.18.4","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-09-28T12:58:52Z","updated_at":"2026-09-28T13:46:49Z","published_at":"2026-09-28T13:04:40Z","assets":[{"id":595430859,"node_id":"RA_kwDOA4eFkM4jfY3L","name":"flatpak-1.18.4.tar.xz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":1363232,"digest":"sha256:b899a7a00c48d2c626cb8ec33fe556720b376c25805d7222430c0fdca4c6ac8d","download_count":844,"created_at":"2026-09-28T13:04:39Z","updated_at":"2026-09-28T13:04:40Z"},{"id":595430821,"node_id":"RA_kwDOA4eFkM4jfY2l","name":"flatpak-1.18.4.tar.xz.sha256sum","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":88,"digest":"sha256:031c640a557762b12922e1c337b6e90c57e33cb092818fc39e6cc7732e79998e","download_count":14,"created_at":"2026-09-28T13:04:38Z","updated_at":"2026-09-28T13:04:39Z"}],"body":"Security fixes:\r\n\r\n* Prevent privileged overwrite of arbitrary files with an empty file or a\r\n  symlink to /run/host/monitor/resolv.conf when a malicious app is installed\r\n  (CVE-2026-97024, GHSA-8xgq-v545-vgvf; thanks to Sebastian Wick)\r\n\r\n* Prevent privileged deletion of arbitrary files when a malicious app\r\n  is installed\r\n  (CVE-2026-97023, GHSA-5p67-xh8x-rq54; thanks to Sebastian Wick)\r\n\r\n* When downloading apps or runtimes from an OCI repository that requires\r\n  authentication, don't make the authentication token visible to other users\r\n  (CVE-2026-97025, GHSA-7rvf-rqr3-43j4; thanks to AISLE in cooperation\r\n  with Red Hat)\r\n\r\n* Restrict permissions on temporary repository directories in\r\n  /var/tmp/flatpak-cache-*\r\n  (CVE-2026-97026, GHSA-r9w3-qx54-qvc8; thanks to AISLE in cooperation\r\n  with Red Hat)\r\n\r\n* Filter .desktop and D-Bus .service files against an allowlist of fields,\r\n  preventing denial of service and unintended interactions with host services\r\n  (CVE-2026-97027, GHSA-v64f-hrwr-j4vh; thanks to Markus G\u00f6llnitz)\r\n\r\n* Prevent apps from sending signals to a process group that includes a\r\n  parent process outside the app, causing denial of service by killing\r\n  the desktop environment\r\n  (CVE-2026-97029, GHSA-f3p8-vr7v-gxf2; thanks to Guthrie Armstrong,\r\n  Coalition, Inc.)\r\n\r\nBug fixes:\r\n\r\n* Update Meson wrap subprojects for projects that are normally taken from\r\n  the host system:\r\n  - xdg-dbus-proxy 0.1.9 (CVE-2026-93676, CVE-2026-94422)\r\n\r\n* Improve hardening against symlink traversal, related to\r\n  CVE-2026-97023 and CVE-2026-97024\r\n\r\nInternal changes:\r\n\r\n* Add CVE IDs and reporter credits to 1.18.1's NEWS entry\r\n\r\n* Remove unnecessary U+200E LEFT-TO-RIGHT MARK from some older NEWS entries","reactions":{"total_count":1,"+1":1,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0}}
+{"id":398257468,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOA4eFkM4XvO08","tag_name":"1.18.4","target_commitish":"main","name":"1.18.4","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-09-28T12:58:52Z","updated_at":"2026-09-28T13:46:49Z","published_at":"2026-09-28T13:04:40Z","assets":[{"id":595430859,"node_id":"RA_kwDOA4eFkM4jfY3L","name":"flatpak-1.18.4.tar.xz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":1363232,"digest":"sha256:b899a7a00c48d2c626cb8ec33fe556720b376c25805d7222430c0fdca4c6ac8d","download_count":929,"created_at":"2026-09-28T13:04:39Z","updated_at":"2026-09-28T13:04:40Z"},{"id":595430821,"node_id":"RA_kwDOA4eFkM4jfY2l","name":"flatpak-1.18.4.tar.xz.sha256sum","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":88,"digest":"sha256:031c640a557762b12922e1c337b6e90c57e33cb092818fc39e6cc7732e79998e","download_count":16,"created_at":"2026-09-28T13:04:38Z","updated_at":"2026-09-28T13:04:39Z"}],"body":"Security fixes:\r\n\r\n* Prevent privileged overwrite of arbitrary files with an empty file or a\r\n  symlink to /run/host/monitor/resolv.conf when a malicious app is installed\r\n  (CVE-2026-97024, GHSA-8xgq-v545-vgvf; thanks to Sebastian Wick)\r\n\r\n* Prevent privileged deletion of arbitrary files when a malicious app\r\n  is installed\r\n  (CVE-2026-97023, GHSA-5p67-xh8x-rq54; thanks to Sebastian Wick)\r\n\r\n* When downloading apps or runtimes from an OCI repository that requires\r\n  authentication, don't make the authentication token visible to other users\r\n  (CVE-2026-97025, GHSA-7rvf-rqr3-43j4; thanks to AISLE in cooperation\r\n  with Red Hat)\r\n\r\n* Restrict permissions on temporary repository directories in\r\n  /var/tmp/flatpak-cache-*\r\n  (CVE-2026-97026, GHSA-r9w3-qx54-qvc8; thanks to AISLE in cooperation\r\n  with Red Hat)\r\n\r\n* Filter .desktop and D-Bus .service files against an allowlist of fields,\r\n  preventing denial of service and unintended interactions with host services\r\n  (CVE-2026-97027, GHSA-v64f-hrwr-j4vh; thanks to Markus G\u00f6llnitz)\r\n\r\n* Prevent apps from sending signals to a process group that includes a\r\n  parent process outside the app, causing denial of service by killing\r\n  the desktop environment\r\n  (CVE-2026-97029, GHSA-f3p8-vr7v-gxf2; thanks to Guthrie Armstrong,\r\n  Coalition, Inc.)\r\n\r\nBug fixes:\r\n\r\n* Update Meson wrap subprojects for projects that are normally taken from\r\n  the host system:\r\n  - xdg-dbus-proxy 0.1.9 (CVE-2026-93676, CVE-2026-94422)\r\n\r\n* Improve hardening against symlink traversal, related to\r\n  CVE-2026-97023 and CVE-2026-97024\r\n\r\nInternal changes:\r\n\r\n* Add CVE IDs and reporter credits to 1.18.1's NEWS entry\r\n\r\n* Remove unnecessary U+200E LEFT-TO-RIGHT MARK from some older NEWS entries","reactions":{"total_count":1,"+1":1,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0}}

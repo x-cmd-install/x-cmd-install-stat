@@ -7,7 +7,7 @@ about:
   latestVersion: "early-access"
   latestRelease: "v1.26.0"
   latestPrerelease: "early-access"
-  collectedAt: 2026-10-03T05:06:29Z
+  collectedAt: 2026-10-04T05:39:19Z
 timeline:
   created: 2020-11-28
   lastCommit: 2026-09-05
@@ -32,15 +32,15 @@ language:
 totalBytes: 6858617
 recent:
   last30d:
-    since: 2026-09-03
+    since: 2026-09-04
     release: 1
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 4
-    commit: 1
+    commit: 0
   last60d:
-    since: 2026-08-04
+    since: 2026-08-05
     release: 2
     mergedPR: 1
     openPR: 0
@@ -48,23 +48,23 @@ recent:
     openIssue: 4
     commit: 26
   last90d:
-    since: 2026-07-05
+    since: 2026-07-06
     release: 2
-    mergedPR: 6
+    mergedPR: 5
     openPR: 1
     closedIssue: 7
     openIssue: 5
-    commit: 33
+    commit: 32
   last180d:
-    since: 2026-04-06
+    since: 2026-04-07
     release: 4
     mergedPR: 13
     openPR: 1
     closedIssue: 22
     openIssue: 11
-    commit: 101
+    commit: 98
   last360d:
-    since: 2025-10-08
+    since: 2025-10-09
     release: 7
     mergedPR: 40
     openPR: 1
@@ -72,7 +72,7 @@ recent:
     openIssue: 23
     commit: 248
   last720d:
-    since: 2024-10-13
+    since: 2024-10-14
     release: 13
     mergedPR: 85
     openPR: 2
@@ -88,7 +88,7 @@ total:
   commit: 3021
 ---
 path: /home/runner/.x-repo/github.com/jreleaser/jreleaser
-collectedAt: 2026-10-03T05:06:32Z
+collectedAt: 2026-10-04T05:39:21Z
 loc:
   Java:
     code: 107697
@@ -156,7 +156,7 @@ total:
   blanks: 29263
   files: 1891
 ---
-date: "2026-09-26T06:24:58Z"
+date: "2026-10-03T06:51:43Z"
 repo:
   name: github.com/jreleaser/jreleaser
   commit: 99949bedac822a701e1c34950b71c164e98df18a
@@ -165,23 +165,19 @@ scorecard:
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 6.9
 checks:
+  - name: Code-Review
+    score: 0
+    reason: Found 2/28 approved changesets -- score normalized to 0
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 13 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Dependency-Update-Tool
     score: 10
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 21 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Code-Review
-    score: 0
-    reason: Found 2/28 approved changesets -- score normalized to 0
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -211,6 +207,14 @@ checks:
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/step-update-wiki.yml:26'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/trigger-early-access.yml:7'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Pinned-Dependencies
     score: -1
     reason: 'internal error: internal error: invalid Dockerfile: LABEL must have two arguments'
@@ -221,10 +225,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 5
     reason: 'badge detected: Passing'
@@ -233,27 +233,6 @@ checks:
     score: 10
     reason: 0 existing vulnerabilities detected
     details: null
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:81'
-  - name: SAST
-    score: 8
-    reason: SAST tool detected but not run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 2 commits out of 4 are checked with a SAST tool'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''main'''
   - name: Signed-Releases
     score: 10
     reason: 5 out of the last 5 releases have a total of 10 signed artifacts.
@@ -268,6 +247,17 @@ checks:
       - 'Info: provenance for release artifact: jreleaser-all-1.25.0.intoto.jsonl: https://github.com/jreleaser/jreleaser/releases/tag/v1.25.0'
       - 'Info: provenance for release artifact: jreleaser-all-1.24.0.intoto.jsonl: https://github.com/jreleaser/jreleaser/releases/tag/v1.24.0'
       - 'Info: provenance for release artifact: jreleaser-all-1.23.0.intoto.jsonl: https://github.com/jreleaser/jreleaser/releases/tag/v1.23.0'
+  - name: SAST
+    score: 8
+    reason: SAST tool detected but not run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: 2 commits out of 4 are checked with a SAST tool'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''main'''
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -276,6 +266,16 @@ checks:
       - 'Info: Found linked content: github.com/jreleaser/.github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/jreleaser/.github/SECURITY.md:1'
       - 'Info: Found text in security policy: github.com/jreleaser/.github/SECURITY.md:1'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:81'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: CI-Tests
     score: 5
     reason: 2 out of 4 merged PRs checked by a CI test -- score normalized to 5

@@ -7,7 +7,7 @@ about:
   latestVersion: "8.10.2"
   latestRelease: "8.10.2"
   latestPrerelease: "8.10-rc2"
-  collectedAt: 2026-10-03T03:51:39Z
+  collectedAt: 2026-10-04T04:23:11Z
 timeline:
   created: 2009-03-21
   lastCommit: 2026-09-30
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-09-17
   lastPrerelease: 2026-07-20
 popularity:
-  star: 76574
+  star: 76579
   watcher: 2484
   fork: 24828
   release: 155
   contributor: 847
-  pullRequest: 8336
-  issue: 7090
+  pullRequest: 8338
+  issue: 7091
 language:
   C: 9340938
   Tcl: 4005500
@@ -35,63 +35,63 @@ language:
 totalBytes: 13774231
 recent:
   last30d:
-    since: 2026-09-03
+    since: 2026-09-04
     release: 5
     mergedPR: 37
     openPR: 72
     closedIssue: 7
     openIssue: 16
-    commit: 53
+    commit: 37
   last60d:
-    since: 2026-08-04
+    since: 2026-08-05
     release: 13
-    mergedPR: 92
-    openPR: 116
-    closedIssue: 15
+    mergedPR: 90
+    openPR: 117
+    closedIssue: 14
     openIssue: 30
-    commit: 110
+    commit: 92
   last90d:
-    since: 2026-07-05
+    since: 2026-07-06
     release: 23
-    mergedPR: 159
-    openPR: 146
+    mergedPR: 158
+    openPR: 147
     closedIssue: 30
-    openIssue: 39
-    commit: 203
+    openIssue: 40
+    commit: 188
   last180d:
-    since: 2026-04-06
+    since: 2026-04-07
     release: 36
-    mergedPR: 317
-    openPR: 212
-    closedIssue: 81
+    mergedPR: 316
+    openPR: 214
+    closedIssue: 80
     openIssue: 77
-    commit: 407
+    commit: 396
   last360d:
-    since: 2025-10-08
+    since: 2025-10-09
     release: 54
-    mergedPR: 607
-    openPR: 265
+    mergedPR: 605
+    openPR: 267
     closedIssue: 146
-    openIssue: 126
-    commit: 750
+    openIssue: 127
+    commit: 729
   last720d:
-    since: 2024-10-13
+    since: 2024-10-14
     release: 82
-    mergedPR: 964
-    openPR: 317
+    mergedPR: 963
+    openPR: 319
     closedIssue: 269
     openIssue: 277
     commit: 1053
 total:
   release: 155
   mergedPR: 4831
-  openPR: 717
+  openPR: 719
   closedIssue: 4817
-  openIssue: 2273
+  openIssue: 2274
   commit: 13319
 ---
 path: /home/runner/.x-repo/github.com/redis/redis
-collectedAt: 2026-10-03T03:51:58Z
+collectedAt: 2026-10-04T04:23:34Z
 loc:
   C:
     code: 226777
@@ -415,4 +415,4 @@ checks:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Warn: 29 commits out of 30 are checked with a SAST tool'
 ---
-{"id":390823002,"author":{"login":"sundb","id":965798,"node_id":"MDQ6VXNlcjk2NTc5OA==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAAJhcs4XS3xa","tag_name":"8.10.2","target_commitish":"8.10","name":"","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-17T15:06:00Z","updated_at":"2026-09-17T15:08:27Z","published_at":"2026-09-17T15:06:56Z","assets":[{"id":570499719,"node_id":"RA_kwDOAAJhcs4iASKH","name":"redis-full.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":21645437,"digest":"sha256:ae6973de9b6ad8e6cf21b1e764abccab59200689af6aabce10d4cf6bbb2e253f","download_count":1215,"created_at":"2026-09-17T15:08:26Z","updated_at":"2026-09-17T15:08:27Z"}],"body":"Update urgency: `SECURITY`: There are security fixes in the release.\r\n\r\n### Security fixes\r\n\r\n- #15673 Commands queued in a transaction could still access keys whose ACL permissions were revoked before the transaction was executed\r\n- #15722 The cluster bus protocol has no authentication of its own unless `tls-cluster` is enabled, so any host able to reach a node's bus port could join the cluster and threaten it. A cluster node now warns at startup when its bus port is left unauthenticated, and the new `cluster-bus-port-protected-mode` option (default `no`) makes refusing to run in that state an explicit choice: set it to `yes` and the node starts only when `tls-cluster` authenticates the bus\r\n- TimeSeries: Prevented Redis from crashing when adding samples to a compressed Time Series key restored from a malformed RDB payload\r\n- RedisSearch: KNN queries on indexes with very long vector field names could cause the server to crash\r\n- Vector Sets: Deeply nested JSON used in Vector Set queries could cause the server to crash","reactions":{"total_count":7,"+1":6,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":0,"rocket":0,"eyes":0}}
+{"id":390823002,"author":{"login":"sundb","id":965798,"node_id":"MDQ6VXNlcjk2NTc5OA==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAAJhcs4XS3xa","tag_name":"8.10.2","target_commitish":"8.10","name":"","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-17T15:06:00Z","updated_at":"2026-09-17T15:08:27Z","published_at":"2026-09-17T15:06:56Z","assets":[{"id":570499719,"node_id":"RA_kwDOAAJhcs4iASKH","name":"redis-full.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":21645437,"digest":"sha256:ae6973de9b6ad8e6cf21b1e764abccab59200689af6aabce10d4cf6bbb2e253f","download_count":1278,"created_at":"2026-09-17T15:08:26Z","updated_at":"2026-09-17T15:08:27Z"}],"body":"Update urgency: `SECURITY`: There are security fixes in the release.\r\n\r\n### Security fixes\r\n\r\n- #15673 Commands queued in a transaction could still access keys whose ACL permissions were revoked before the transaction was executed\r\n- #15722 The cluster bus protocol has no authentication of its own unless `tls-cluster` is enabled, so any host able to reach a node's bus port could join the cluster and threaten it. A cluster node now warns at startup when its bus port is left unauthenticated, and the new `cluster-bus-port-protected-mode` option (default `no`) makes refusing to run in that state an explicit choice: set it to `yes` and the node starts only when `tls-cluster` authenticates the bus\r\n- TimeSeries: Prevented Redis from crashing when adding samples to a compressed Time Series key restored from a malformed RDB payload\r\n- RedisSearch: KNN queries on indexes with very long vector field names could cause the server to crash\r\n- Vector Sets: Deeply nested JSON used in Vector Set queries could cause the server to crash","reactions":{"total_count":7,"+1":6,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":0,"rocket":0,"eyes":0}}
