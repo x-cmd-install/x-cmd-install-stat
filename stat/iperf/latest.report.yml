@@ -7,7 +7,7 @@ about:
   latestVersion: "3.22"
   latestRelease: "3.22"
   latestPrerelease: ""
-  collectedAt: 2026-10-04T05:39:11Z
+  collectedAt: 2026-10-05T05:23:09Z
 timeline:
   created: 2014-02-25
   lastCommit: 2026-10-02
@@ -34,7 +34,7 @@ language:
 totalBytes: 1315859
 recent:
   last30d:
-    since: 2026-09-04
+    since: 2026-09-05
     release: 1
     mergedPR: 2
     openPR: 5
@@ -42,7 +42,7 @@ recent:
     openIssue: 4
     commit: 8
   last60d:
-    since: 2026-08-05
+    since: 2026-08-06
     release: 1
     mergedPR: 2
     openPR: 10
@@ -50,23 +50,23 @@ recent:
     openIssue: 5
     commit: 8
   last90d:
-    since: 2026-07-06
+    since: 2026-07-07
     release: 1
     mergedPR: 2
-    openPR: 14
+    openPR: 13
     closedIssue: 1
     openIssue: 9
-    commit: 11
+    commit: 9
   last180d:
-    since: 2026-04-07
+    since: 2026-04-08
     release: 2
-    mergedPR: 15
+    mergedPR: 14
     openPR: 22
     closedIssue: 5
     openIssue: 15
-    commit: 33
+    commit: 25
   last360d:
-    since: 2025-10-09
+    since: 2025-10-10
     release: 3
     mergedPR: 37
     openPR: 26
@@ -74,7 +74,7 @@ recent:
     openIssue: 25
     commit: 77
   last720d:
-    since: 2024-10-14
+    since: 2024-10-15
     release: 6
     mergedPR: 91
     openPR: 40
@@ -90,7 +90,7 @@ total:
   commit: 1775
 ---
 path: /home/runner/.x-repo/github.com/esnet/iperf
-collectedAt: 2026-10-04T05:39:13Z
+collectedAt: 2026-10-05T05:23:12Z
 loc:
   C:
     code: 14108
@@ -258,4 +258,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 27 are checked with a SAST tool'
 ---
-{"id":399448208,"author":{"login":"swlars","id":89053414,"node_id":"MDQ6VXNlcjg5MDUzNDE0","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAQY0f84XzxiQ","tag_name":"3.22","target_commitish":"master","name":"iperf-3.22","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-29T18:57:54Z","updated_at":"2026-09-29T23:04:26Z","published_at":"2026-09-29T19:17:54Z","assets":[{"id":599003316,"node_id":"RA_kwDOAQY0f84jtBC0","name":"iperf-3.22.tar.gz","label":null,"uploader":{"login":"swlars","id":89053414,"node_id":"MDQ6VXNlcjg5MDUzNDE0","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gzip","state":"uploaded","size":849295,"digest":"sha256:1c0d0fb02c52626111d6e132db80edfbf27bbaff8bd9245df2a371dcb0b35a92","download_count":775,"created_at":"2026-09-29T19:12:58Z","updated_at":"2026-09-29T19:13:02Z"},{"id":599004608,"node_id":"RA_kwDOAQY0f84jtBXA","name":"iperf-3.22.tar.gz.sha256","label":null,"uploader":{"login":"swlars","id":89053414,"node_id":"MDQ6VXNlcjg5MDUzNDE0","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":84,"digest":"sha256:aa9c31ca8c4d619191ed78afd31d2854949d4725c25693f486c92892c9b41feb","download_count":30,"created_at":"2026-09-29T19:13:36Z","updated_at":"2026-09-29T19:13:37Z"}],"body":"iperf-3.22 2026-09-29\r\n---------------------\r\n\r\n* Security notes\r\n\r\n    * Thanks to Claude and Ada Logics for finding and reporting two\r\n      potential security vulnerabilities. One is a remote\r\n      use-after-free in iperf_server_api.c (ANT-2026-E5BA80X9 /\r\n      CVE-2026-101283) and the other is a heap buffer overflow in\r\n      iperf_auth.c (ANT-2026-FXH14FHV / CVE-2026-101276).\r\n\r\n    * Thanks to Justin Stitt for reporting and fixing a heap-buffer\r\n      overflow was fixed in iperf_auth.c (PR #2027).\r\n\r\n    * Thanks to Ravindu Lakmina Munaweera (Github: @Ravi-lk) for\r\n      reporting and fixing a DOS infinite-loop (CVE-2026-102253).\r\n\r\n    * Thanks to Dirk M\u00fcller for finding and reporting an issue with\r\n      test parameters (PR #2039, CVE-2026-71217).\r\n\r\n    * The iperf-3.18 release notes were updated to reflect that a code\r\n      change in that version addresses CVE-2026-71218.\r\n\r\n* Notable user-visible changes\r\n\r\n    * Attempting to set zero parallel streams is no longer allowed (PR\r\n      #2048).\r\n\r\n    * Zerocopy and rx-copy are now allowed in the case of reverse\r\n      direction tests and the server (sending side) supports these\r\n      features but the client (receiving side) does not (#2045,\r\n      PR #2044).\r\n\r\n    * The limit on GSO_MAX_DG_IN_BF was fixed to limit the number of segments\r\n      to the maximum allowed (#2032 / PR #2033). This change unbreaks\r\n      GSO for small message sizes.\r\n\r\n* Notable developer-visible changes\r\n\r\n    * In iperf_auth.c, in addition to fixing the heap buffer overflow, the\r\n      return value of several functions is checked (PR #2046, PR #2040).\r\n\r\n    * Several file descriptor leaks have been fixed (PR #2034).\r\n\r\n    * In iperf_tcp, connections now timeout to prevent a race condition in\r\n      accepting new connections to avoid a deadlock (#2029, PR #2030).\r\n\r\n    * Periodic timers are now cancelled at the end of a test (#2018,\r\n      PR #2021).\r\n\r\n    * DSCP/TOS is now correctly set in the first UDP/TCP stream packet\r\n      (#510, #830, PR #2047).","reactions":{"total_count":12,"+1":5,"-1":0,"laugh":0,"hooray":2,"confused":0,"heart":2,"rocket":3,"eyes":0},"mentions_count":1}
+{"id":399448208,"author":{"login":"swlars","id":89053414,"node_id":"MDQ6VXNlcjg5MDUzNDE0","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAQY0f84XzxiQ","tag_name":"3.22","target_commitish":"master","name":"iperf-3.22","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-29T18:57:54Z","updated_at":"2026-09-29T23:04:26Z","published_at":"2026-09-29T19:17:54Z","assets":[{"id":599003316,"node_id":"RA_kwDOAQY0f84jtBC0","name":"iperf-3.22.tar.gz","label":null,"uploader":{"login":"swlars","id":89053414,"node_id":"MDQ6VXNlcjg5MDUzNDE0","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gzip","state":"uploaded","size":849295,"digest":"sha256:1c0d0fb02c52626111d6e132db80edfbf27bbaff8bd9245df2a371dcb0b35a92","download_count":875,"created_at":"2026-09-29T19:12:58Z","updated_at":"2026-09-29T19:13:02Z"},{"id":599004608,"node_id":"RA_kwDOAQY0f84jtBXA","name":"iperf-3.22.tar.gz.sha256","label":null,"uploader":{"login":"swlars","id":89053414,"node_id":"MDQ6VXNlcjg5MDUzNDE0","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":84,"digest":"sha256:aa9c31ca8c4d619191ed78afd31d2854949d4725c25693f486c92892c9b41feb","download_count":49,"created_at":"2026-09-29T19:13:36Z","updated_at":"2026-09-29T19:13:37Z"}],"body":"iperf-3.22 2026-09-29\r\n---------------------\r\n\r\n* Security notes\r\n\r\n    * Thanks to Claude and Ada Logics for finding and reporting two\r\n      potential security vulnerabilities. One is a remote\r\n      use-after-free in iperf_server_api.c (ANT-2026-E5BA80X9 /\r\n      CVE-2026-101283) and the other is a heap buffer overflow in\r\n      iperf_auth.c (ANT-2026-FXH14FHV / CVE-2026-101276).\r\n\r\n    * Thanks to Justin Stitt for reporting and fixing a heap-buffer\r\n      overflow was fixed in iperf_auth.c (PR #2027).\r\n\r\n    * Thanks to Ravindu Lakmina Munaweera (Github: @Ravi-lk) for\r\n      reporting and fixing a DOS infinite-loop (CVE-2026-102253).\r\n\r\n    * Thanks to Dirk M\u00fcller for finding and reporting an issue with\r\n      test parameters (PR #2039, CVE-2026-71217).\r\n\r\n    * The iperf-3.18 release notes were updated to reflect that a code\r\n      change in that version addresses CVE-2026-71218.\r\n\r\n* Notable user-visible changes\r\n\r\n    * Attempting to set zero parallel streams is no longer allowed (PR\r\n      #2048).\r\n\r\n    * Zerocopy and rx-copy are now allowed in the case of reverse\r\n      direction tests and the server (sending side) supports these\r\n      features but the client (receiving side) does not (#2045,\r\n      PR #2044).\r\n\r\n    * The limit on GSO_MAX_DG_IN_BF was fixed to limit the number of segments\r\n      to the maximum allowed (#2032 / PR #2033). This change unbreaks\r\n      GSO for small message sizes.\r\n\r\n* Notable developer-visible changes\r\n\r\n    * In iperf_auth.c, in addition to fixing the heap buffer overflow, the\r\n      return value of several functions is checked (PR #2046, PR #2040).\r\n\r\n    * Several file descriptor leaks have been fixed (PR #2034).\r\n\r\n    * In iperf_tcp, connections now timeout to prevent a race condition in\r\n      accepting new connections to avoid a deadlock (#2029, PR #2030).\r\n\r\n    * Periodic timers are now cancelled at the end of a test (#2018,\r\n      PR #2021).\r\n\r\n    * DSCP/TOS is now correctly set in the first UDP/TCP stream packet\r\n      (#510, #830, PR #2047).","reactions":{"total_count":12,"+1":5,"-1":0,"laugh":0,"hooray":2,"confused":0,"heart":2,"rocket":3,"eyes":0},"mentions_count":1}

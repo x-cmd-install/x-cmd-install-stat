@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.25.0"
   latestRelease: "v2.25.0"
   latestPrerelease: "v2.0.0-beta3"
-  collectedAt: 2026-10-04T06:05:07Z
+  collectedAt: 2026-10-05T05:55:03Z
 timeline:
   created: 2018-01-23
   lastCommit: 2026-10-01
@@ -17,7 +17,7 @@ timeline:
 popularity:
   star: 15896
   watcher: 185
-  fork: 1704
+  fork: 1705
   release: 201
   contributor: 442
   pullRequest: 5888
@@ -45,7 +45,7 @@ language:
 totalBytes: 9967308
 recent:
   last30d:
-    since: 2026-09-04
+    since: 2026-09-05
     release: 1
     mergedPR: 10
     openPR: 4
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 11
   last60d:
-    since: 2026-08-05
+    since: 2026-08-06
     release: 1
     mergedPR: 15
     openPR: 14
@@ -61,7 +61,7 @@ recent:
     openIssue: 2
     commit: 18
   last90d:
-    since: 2026-07-06
+    since: 2026-07-07
     release: 2
     mergedPR: 21
     openPR: 15
@@ -69,25 +69,25 @@ recent:
     openIssue: 5
     commit: 24
   last180d:
-    since: 2026-04-07
+    since: 2026-04-08
     release: 8
-    mergedPR: 66
+    mergedPR: 64
     openPR: 30
     closedIssue: 9
     openIssue: 17
-    commit: 69
+    commit: 64
   last360d:
-    since: 2025-10-09
+    since: 2025-10-10
     release: 15
     mergedPR: 135
     openPR: 52
     closedIssue: 14
     openIssue: 34
-    commit: 134
+    commit: 122
   last720d:
-    since: 2024-10-14
+    since: 2024-10-15
     release: 21
-    mergedPR: 308
+    mergedPR: 306
     openPR: 65
     closedIssue: 50
     openIssue: 86
@@ -101,7 +101,7 @@ total:
   commit: 9252
 ---
 path: /home/runner/.x-repo/github.com/GoogleContainerTools/skaffold
-collectedAt: 2026-10-04T06:05:30Z
+collectedAt: 2026-10-05T05:55:20Z
 loc:
   Go:
     code: 2255325
@@ -279,7 +279,7 @@ total:
   blanks: 357509
   files: 13953
 ---
-date: "2026-10-01T14:43:42Z"
+date: "2026-10-04T08:29:13Z"
 repo:
   name: github.com/GoogleContainerTools/skaffold
   commit: 8365e5145ba92f7d00ecb80597842c575f957cb3
@@ -288,14 +288,6 @@ scorecard:
   commit: c22063e786c11f9dd714d777a687ff7c4599b600
 score: 7.2
 checks:
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Maintained
     score: 10
     reason: 24 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 10
@@ -308,22 +300,30 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
     details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:23'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:22'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:23'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/scorecards.yml:21'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/scorecards.yml:22'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/codeql-analysis.yml:11'
@@ -353,6 +353,11 @@ checks:
     details:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
@@ -387,11 +392,6 @@ checks:
       - 'Warn: release artifact v2.23.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/345534770'
       - 'Warn: release artifact v2.22.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/336055187'
       - 'Warn: release artifact v2.21.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/326280646'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Vulnerabilities
     score: 0
     reason: 154 existing vulnerabilities detected
@@ -403,6 +403,7 @@ checks:
       - 'Warn: Project is vulnerable to: GHSA-p47f-322f-whfh'
       - 'Warn: Project is vulnerable to: GHSA-pr98-23f8-jwxv'
       - 'Warn: Project is vulnerable to: GHSA-qqpg-mvqg-649v'
+      - 'Warn: Project is vulnerable to: GHSA-7hhh-6rmp-j9qf'
       - 'Warn: Project is vulnerable to: GHSA-h46c-h94j-95f3'
       - 'Warn: Project is vulnerable to: GHSA-r7wm-3cxj-wff9'
       - 'Warn: Project is vulnerable to: GHSA-3wrr-7qpf-2prh'
@@ -549,7 +550,6 @@ checks:
       - 'Warn: Project is vulnerable to: PYSEC-2018-66 / GHSA-562c-5r94-xh97'
       - 'Warn: Project is vulnerable to: PYSEC-2019-179 / GHSA-5wv5-4vpf-pj6m'
       - 'Warn: Project is vulnerable to: PYSEC-2023-62 / GHSA-m2qf-hxjv-5gpq'
-      - 'Warn: Project is vulnerable to: CVE-2025-8556'
   - name: CI-Tests
     score: 10
     reason: 30 out of 30 merged PRs checked by a CI test -- score normalized to 10
@@ -584,7 +584,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: deploy/docs-v2/Dockerfile:31: pin your Docker image by updating alpine:3.10 to alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
       - 'Warn: containerImage not pinned by hash: deploy/docs-v2/Dockerfile:37: pin your Docker image by updating alpine:3.10 to alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
       - 'Warn: containerImage not pinned by hash: deploy/docs-v2/Dockerfile:43: pin your Docker image by updating node:20-bookworm to node:20-bookworm@sha256:8f693eaa7e0a8e71560c9a82b55fd54c2ae920a2ba5d2cde28bac7d1c01c9ba5'
-      - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:16: pin your Docker image by updating gcr.io/k8s-skaffold/build_deps:latest to gcr.io/k8s-skaffold/build_deps:latest@sha256:b0be6ee37754dc33ab0cd648e50fd328aeca0be66bb792c53fdf554987a4bd28'
+      - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:16: pin your Docker image by updating gcr.io/k8s-skaffold/build_deps:latest to gcr.io/k8s-skaffold/build_deps:latest@sha256:113db9fd993741fd15581c4535a27708a0ebc6c0c8e64e21c2e8ab8d8323708c'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:19'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:24'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:18: pin your Docker image by updating mirror.gcr.io/library/docker:28.1.1 to mirror.gcr.io/library/docker:28.1.1@sha256:eceba5b0fc2fcf83a74c298391c2ed9e1adbdaf04ee173611bd6282ec973e7ba'
@@ -600,7 +600,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:88: pin your Docker image by updating mirror.gcr.io/library/alpine:3.21.2 to mirror.gcr.io/library/alpine:3.21.2@sha256:56fa17d2a7e7f168a043a2712e63aed1f8543aeafdcee47c58dcffe38ed51099'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:97: pin your Docker image by updating mirror.gcr.io/library/alpine:3.21.2 to mirror.gcr.io/library/alpine:3.21.2@sha256:56fa17d2a7e7f168a043a2712e63aed1f8543aeafdcee47c58dcffe38ed51099'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:110: pin your Docker image by updating mirror.gcr.io/library/alpine:3.21.2 to mirror.gcr.io/library/alpine:3.21.2@sha256:56fa17d2a7e7f168a043a2712e63aed1f8543aeafdcee47c58dcffe38ed51099'
-      - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:121: pin your Docker image by updating mirror.gcr.io/library/ubuntu:24.04 to mirror.gcr.io/library/ubuntu:24.04@sha256:008173c23f95b170204355c12626cb5a965d779a7e1283b09e9cffbb1bf33ca3'
+      - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:121: pin your Docker image by updating mirror.gcr.io/library/ubuntu:24.04 to mirror.gcr.io/library/ubuntu:24.04@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:160'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.lts:19: pin your Docker image by updating alpine:3.10 to alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.lts:27: pin your Docker image by updating alpine:3.10 to alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'

@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.14.0"
   latestRelease: "v1.14.0"
   latestPrerelease: "v1.6.0-beta.1"
-  collectedAt: 2026-10-04T05:55:36Z
+  collectedAt: 2026-10-05T05:34:57Z
 timeline:
   created: 2025-08-05
   lastCommit: 2026-10-02
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-09-30
   lastPrerelease: 2026-07-08
 popularity:
-  star: 70999
+  star: 71056
   watcher: 287
-  fork: 4868
+  fork: 4871
   release: 51
   contributor: 132
-  pullRequest: 1076
-  issue: 724
+  pullRequest: 1080
+  issue: 725
 language:
   TypeScript: 5230163
   JavaScript: 43215
@@ -31,63 +31,63 @@ language:
 totalBytes: 5283239
 recent:
   last30d:
-    since: 2026-09-04
+    since: 2026-09-05
     release: 4
-    mergedPR: 94
-    openPR: 24
-    closedIssue: 64
-    openIssue: 36
-    commit: 133
+    mergedPR: 92
+    openPR: 26
+    closedIssue: 63
+    openIssue: 37
+    commit: 118
   last60d:
-    since: 2026-08-05
-    release: 9
-    mergedPR: 185
-    openPR: 34
-    closedIssue: 106
-    openIssue: 58
-    commit: 222
+    since: 2026-08-06
+    release: 8
+    mergedPR: 181
+    openPR: 38
+    closedIssue: 103
+    openIssue: 57
+    commit: 188
   last90d:
-    since: 2026-07-06
+    since: 2026-07-07
     release: 12
-    mergedPR: 299
-    openPR: 39
-    closedIssue: 145
-    openIssue: 69
-    commit: 349
+    mergedPR: 297
+    openPR: 43
+    closedIssue: 143
+    openIssue: 70
+    commit: 332
   last180d:
-    since: 2026-04-07
+    since: 2026-04-08
     release: 17
     mergedPR: 405
-    openPR: 57
-    closedIssue: 279
-    openIssue: 77
-    commit: 420
+    openPR: 61
+    closedIssue: 278
+    openIssue: 78
+    commit: 402
   last360d:
-    since: 2025-10-09
-    release: 41
-    mergedPR: 641
-    openPR: 66
-    closedIssue: 588
-    openIssue: 118
-    commit: 652
+    since: 2025-10-10
+    release: 40
+    mergedPR: 638
+    openPR: 70
+    closedIssue: 584
+    openIssue: 119
+    commit: 623
   last720d:
-    since: 2024-10-14
+    since: 2024-10-15
     release: 51
     mergedPR: 743
-    openPR: 66
+    openPR: 70
     closedIssue: 606
-    openIssue: 118
+    openIssue: 119
     commit: 961
 total:
   release: 51
   mergedPR: 743
-  openPR: 66
+  openPR: 70
   closedIssue: 606
-  openIssue: 118
+  openIssue: 119
   commit: 961
 ---
 path: /home/runner/.x-repo/github.com/Fission-AI/OpenSpec
-collectedAt: 2026-10-04T05:55:38Z
+collectedAt: 2026-10-05T05:35:00Z
 loc:
   TypeScript:
     code: 107103
@@ -147,4 +147,4 @@ total:
 ---
 
 ---
-{"id":400493878,"author":{"login":"openspec-release-bot[bot]","id":254190582,"node_id":"BOT_kgDODyaj9g","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOPYoUTM4X3w02","tag_name":"v1.14.0","target_commitish":"94ca9c1eb15d1b49c06c988419b75c3d95f8b2b5","name":"v1.14.0 - Ten new tools, archived changes","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-30T22:39:18Z","updated_at":"2026-09-30T23:09:04Z","published_at":"2026-09-30T22:52:17Z","assets":[],"body":"## What's New in v1.14.0\n\nThis release adds ten new tools, lets you browse archived changes, and makes apply, archive, and store-backed changes more reliable.\n\n### New\n\n- **Ten new tools** - `openspec init` and `openspec update` now support Amp (`amp`), AtomCode (`atomcode`), Code Studio (`codestudio`), DeepSeek Harness (`dsh`), EasyCode (`easycode`), GigaCode (`gigacode`), Grok Build (`grok`), GSD (`gsd`), Veai (`veai`), and Warp (`warp`).\n- **Archived changes** - `openspec list --archived` and `--all` list archived changes, with JSON output and sorting, and `openspec view` shows them in their own section.\n- **Workflow status in `openspec view`** - The dashboard shows each active change's schema and which artifacts are done, ready, blocked, or skipped.\n- **`openspec version`** - Shows the installed version and install type. Add `--check` and `--json` for structured update information that tools can read.\n- **Nix overlay** - The flake exposes OpenSpec through `overlays.default`, so other flakes can consume it.\n\n### Improved\n\n- **Unrecognized change metadata** - `status`, `validate`, and `archive` now name keys in `.openspec.yaml` that OpenSpec ignores, such as `skip_design`, instead of dropping them silently. `validate --strict` fails on them.\n- **`show --json`** - Requirements and scenarios now include their `name`, so JSON readers can cite a requirement without parsing the markdown.\n- **Agent guidance** - Proposals are steered toward durable, behavior-based capability names. Specs guidance explains the 500-character requirement hint without splitting existing requirements. Agents keep project documentation out of `config.yaml` context.\n- **`project.md` migration** - `openspec init` guides an AI-assisted move from a legacy `project.md` to `config.yaml`.\n- **Malformed rules** - When a `rules:` list item is not a string, the warning names the item, what YAML parsed it as, and how to quote it.\n- **Legacy cleanup warning** - Cleanup now says the listed files are deleted entirely and asks you to back up custom content first.\n- **IBM Bob** - Bob appears by its full product name. Existing `bob` selections and paths keep working.\n\n### Fixed\n\n- **Store-backed apply** - For a change stored in a store, `openspec status --json` now allows edits in the project that declares the store, so apply no longer stops before the first task.\n- **Apply task updates** - `openspec instructions apply --json` gives each task its `sourcePath` and `line`, and apply checks that exact checkbox before marking it done.\n- **Archive after a failed sync** - Archive and bulk archive stop when the spec sync reports a blocking condition, instead of archiving the change with the main specs unchanged.\n- **Archive without the sync skill** - The archive skill merges delta specs itself when the sync skill is not installed, instead of pointing the agent at a skill that does not exist.\n- **Store-only repositories** - `openspec init` at the root of a store-only repository installs integrations without changing its store config or creating local planning folders.\n- **zsh uninstall** - `openspec completion uninstall zsh` restores `.zshrc` exactly, including blank lines at the top of the file.\n- **`openspec view` alignment** - Progress bars stay aligned for change names up to 48 characters.\n\n## New Contributors\n\n* @Ajithkumar08 made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1759\n* @Yi-111-a made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1987\n* @nhconganhmedia made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1974\n* @flcrom made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1969\n* @caseyg made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1722\n* @fresh-fx59 made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1961\n* @jeanduplessis made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/420\n* @Columpio made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/848\n* @Million-mo made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/807\n* @DarkskyX15 made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1672\n* @hu-qi made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1211\n* @MS8AT made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1937\n* @ZEDce made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/399\n* @jmuchovej made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1439\n* @Storm-Chaser made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1082\n* @redknox made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1352\n* @Code-Studio-Team made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/883\n* @0x6d6e647a made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1349\n* @huiq777 made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/2016\n\n**Full Changelog**: https://github.com/Fission-AI/OpenSpec/compare/v1.13.2...v1.14.0\n","reactions":{"total_count":9,"+1":1,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":2,"rocket":6,"eyes":0},"mentions_count":19}
+{"id":400493878,"author":{"login":"openspec-release-bot[bot]","id":254190582,"node_id":"BOT_kgDODyaj9g","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOPYoUTM4X3w02","tag_name":"v1.14.0","target_commitish":"94ca9c1eb15d1b49c06c988419b75c3d95f8b2b5","name":"v1.14.0 - Ten new tools, archived changes","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-30T22:39:18Z","updated_at":"2026-09-30T23:09:04Z","published_at":"2026-09-30T22:52:17Z","assets":[],"body":"## What's New in v1.14.0\n\nThis release adds ten new tools, lets you browse archived changes, and makes apply, archive, and store-backed changes more reliable.\n\n### New\n\n- **Ten new tools** - `openspec init` and `openspec update` now support Amp (`amp`), AtomCode (`atomcode`), Code Studio (`codestudio`), DeepSeek Harness (`dsh`), EasyCode (`easycode`), GigaCode (`gigacode`), Grok Build (`grok`), GSD (`gsd`), Veai (`veai`), and Warp (`warp`).\n- **Archived changes** - `openspec list --archived` and `--all` list archived changes, with JSON output and sorting, and `openspec view` shows them in their own section.\n- **Workflow status in `openspec view`** - The dashboard shows each active change's schema and which artifacts are done, ready, blocked, or skipped.\n- **`openspec version`** - Shows the installed version and install type. Add `--check` and `--json` for structured update information that tools can read.\n- **Nix overlay** - The flake exposes OpenSpec through `overlays.default`, so other flakes can consume it.\n\n### Improved\n\n- **Unrecognized change metadata** - `status`, `validate`, and `archive` now name keys in `.openspec.yaml` that OpenSpec ignores, such as `skip_design`, instead of dropping them silently. `validate --strict` fails on them.\n- **`show --json`** - Requirements and scenarios now include their `name`, so JSON readers can cite a requirement without parsing the markdown.\n- **Agent guidance** - Proposals are steered toward durable, behavior-based capability names. Specs guidance explains the 500-character requirement hint without splitting existing requirements. Agents keep project documentation out of `config.yaml` context.\n- **`project.md` migration** - `openspec init` guides an AI-assisted move from a legacy `project.md` to `config.yaml`.\n- **Malformed rules** - When a `rules:` list item is not a string, the warning names the item, what YAML parsed it as, and how to quote it.\n- **Legacy cleanup warning** - Cleanup now says the listed files are deleted entirely and asks you to back up custom content first.\n- **IBM Bob** - Bob appears by its full product name. Existing `bob` selections and paths keep working.\n\n### Fixed\n\n- **Store-backed apply** - For a change stored in a store, `openspec status --json` now allows edits in the project that declares the store, so apply no longer stops before the first task.\n- **Apply task updates** - `openspec instructions apply --json` gives each task its `sourcePath` and `line`, and apply checks that exact checkbox before marking it done.\n- **Archive after a failed sync** - Archive and bulk archive stop when the spec sync reports a blocking condition, instead of archiving the change with the main specs unchanged.\n- **Archive without the sync skill** - The archive skill merges delta specs itself when the sync skill is not installed, instead of pointing the agent at a skill that does not exist.\n- **Store-only repositories** - `openspec init` at the root of a store-only repository installs integrations without changing its store config or creating local planning folders.\n- **zsh uninstall** - `openspec completion uninstall zsh` restores `.zshrc` exactly, including blank lines at the top of the file.\n- **`openspec view` alignment** - Progress bars stay aligned for change names up to 48 characters.\n\n## New Contributors\n\n* @Ajithkumar08 made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1759\n* @Yi-111-a made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1987\n* @nhconganhmedia made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1974\n* @flcrom made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1969\n* @caseyg made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1722\n* @fresh-fx59 made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1961\n* @jeanduplessis made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/420\n* @Columpio made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/848\n* @Million-mo made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/807\n* @DarkskyX15 made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1672\n* @hu-qi made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1211\n* @MS8AT made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1937\n* @ZEDce made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/399\n* @jmuchovej made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1439\n* @Storm-Chaser made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1082\n* @redknox made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1352\n* @Code-Studio-Team made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/883\n* @0x6d6e647a made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/1349\n* @huiq777 made their first contribution in https://github.com/Fission-AI/OpenSpec/pull/2016\n\n**Full Changelog**: https://github.com/Fission-AI/OpenSpec/compare/v1.13.2...v1.14.0\n","reactions":{"total_count":10,"+1":2,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":2,"rocket":6,"eyes":0},"mentions_count":19}

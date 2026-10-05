@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.22.0"
   latestRelease: "v0.22.0"
   latestPrerelease: "v0.10.0rc3"
-  collectedAt: 2026-10-04T06:49:07Z
+  collectedAt: 2026-10-05T06:36:47Z
 timeline:
   created: 2024-09-19
   lastCommit: 2026-10-03
@@ -30,7 +30,7 @@ language:
 totalBytes: 1287328
 recent:
   last30d:
-    since: 2026-09-04
+    since: 2026-09-05
     release: 2
     mergedPR: 30
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 1
     commit: 31
   last60d:
-    since: 2026-08-05
+    since: 2026-08-06
     release: 3
     mergedPR: 46
     openPR: 0
@@ -46,15 +46,15 @@ recent:
     openIssue: 2
     commit: 54
   last90d:
-    since: 2026-07-06
+    since: 2026-07-07
     release: 4
-    mergedPR: 58
+    mergedPR: 53
     openPR: 0
     closedIssue: 3
     openIssue: 3
     commit: 60
   last180d:
-    since: 2026-04-07
+    since: 2026-04-08
     release: 11
     mergedPR: 132
     openPR: 0
@@ -62,21 +62,21 @@ recent:
     openIssue: 5
     commit: 135
   last360d:
-    since: 2025-10-09
+    since: 2025-10-10
     release: 41
-    mergedPR: 249
+    mergedPR: 248
     openPR: 0
-    closedIssue: 27
+    closedIssue: 26
     openIssue: 7
     commit: 246
   last720d:
-    since: 2024-10-14
+    since: 2024-10-15
     release: 68
-    mergedPR: 408
+    mergedPR: 407
     openPR: 0
     closedIssue: 68
     openIssue: 13
-    commit: 427
+    commit: 426
 total:
   release: 70
   mergedPR: 432
@@ -86,7 +86,7 @@ total:
   commit: 494
 ---
 path: /home/runner/.x-repo/github.com/Azure/co-op-translator
-collectedAt: 2026-10-04T06:49:19Z
+collectedAt: 2026-10-05T06:36:59Z
 loc:
   Python:
     code: 29952
@@ -149,7 +149,7 @@ total:
   blanks: 55050
   files: 1142
 ---
-date: "2026-10-03T13:45:11Z"
+date: "2026-10-05T05:15:50Z"
 repo:
   name: github.com/Azure/co-op-translator
   commit: 2daee1c0174328c36c725636717e7f73666ce959
@@ -158,10 +158,6 @@ scorecard:
   commit: c22063e786c11f9dd714d777a687ff7c4599b600
 score: 5.8
 checks:
-  - name: Code-Review
-    score: 0
-    reason: Found 1/27 approved changesets -- score normalized to 0
-    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 9 issue activity found in the last 90 days -- score normalized to 10
@@ -197,6 +193,10 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/python-publish.yml:8'
       - 'Info: found token with ''none'' permissions: .github/workflows/scorecard.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Code-Review
+    score: 0
+    reason: Found 1/27 approved changesets -- score normalized to 0
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -205,16 +205,12 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
     details:
-      - 'Warn: containerImage not pinned by hash: Dockerfile:3: pin your Docker image by updating python:3.13-slim to python:3.13-slim@sha256:bb2988715db2cf7ace7b53f38f3cffbef7c7046a656bee66245eb0ed386e2e81'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:41: pin your Docker image by updating python:3.13-slim to python:3.13-slim@sha256:bb2988715db2cf7ace7b53f38f3cffbef7c7046a656bee66245eb0ed386e2e81'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:3: pin your Docker image by updating python:3.13-slim to python:3.13-slim@sha256:3dd7cc108ec1493442514f5c2a871af6af0ec31d768ff6e378a93340c3b3db5f'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:41: pin your Docker image by updating python:3.13-slim to python:3.13-slim@sha256:3dd7cc108ec1493442514f5c2a871af6af0ec31d768ff6e378a93340c3b3db5f'
       - 'Warn: pipCommand not pinned by hash: Dockerfile:20'
       - 'Warn: pipCommand not pinned by hash: Dockerfile:60-61'
       - 'Warn: pipCommand not pinned by hash: .devcontainer/setup.sh:1'
@@ -229,6 +225,12 @@ checks:
       - 'Info:   7 out of   7 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of  10 pipCommand dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
+  - name: SAST
+    score: 10
+    reason: SAST tool is run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Info: all commits (29) are checked with a SAST tool'
   - name: Vulnerabilities
     score: 0
     reason: 25 existing vulnerabilities detected
@@ -258,33 +260,31 @@ checks:
       - 'Warn: Project is vulnerable to: PYSEC-2025-183'
       - 'Warn: Project is vulnerable to: PYSEC-2026-175'
       - 'Warn: Project is vulnerable to: PYSEC-2026-177'
-  - name: SAST
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
+  - name: Dependency-Update-Tool
     score: 10
-    reason: SAST tool is run on all commits
+    reason: update tool detected
     details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Info: all commits (29) are checked with a SAST tool'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
+      - 'Info: detected update tool: Dependabot: :0'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker-publish.yml:18'
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: :0'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches

@@ -7,7 +7,7 @@ about:
   latestVersion: "bin-v2.0.2"
   latestRelease: "bin-v2.0.2"
   latestPrerelease: ""
-  collectedAt: 2026-10-04T06:30:16Z
+  collectedAt: 2026-10-05T06:19:06Z
 timeline:
   created: 2026-04-04
   lastCommit: 2026-10-04
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-10-04
   lastPrerelease: 
 popularity:
-  star: 109617
-  watcher: 251
-  fork: 6341
+  star: 109866
+  watcher: 252
+  fork: 6357
   release: 44
   contributor: 80
-  pullRequest: 626
-  issue: 484
+  pullRequest: 628
+  issue: 486
 language:
   Go: 5171497
   JavaScript: 3080903
@@ -36,63 +36,63 @@ language:
 totalBytes: 11390461
 recent:
   last30d:
-    since: 2026-09-04
-    release: 13
-    mergedPR: 34
-    openPR: 17
-    closedIssue: 56
+    since: 2026-09-05
+    release: 11
+    mergedPR: 33
+    openPR: 19
+    closedIssue: 50
     openIssue: 28
     commit: 294
   last60d:
-    since: 2026-08-05
+    since: 2026-08-06
     release: 27
     mergedPR: 61
-    openPR: 21
-    closedIssue: 137
-    openIssue: 31
+    openPR: 23
+    closedIssue: 135
+    openIssue: 33
     commit: 603
   last90d:
-    since: 2026-07-06
+    since: 2026-07-07
     release: 28
     mergedPR: 66
-    openPR: 32
-    closedIssue: 185
-    openIssue: 40
+    openPR: 34
+    closedIssue: 183
+    openIssue: 42
     commit: 632
   last180d:
-    since: 2026-04-07
+    since: 2026-04-08
     release: 41
-    mergedPR: 105
-    openPR: 47
-    closedIssue: 401
-    openIssue: 67
+    mergedPR: 99
+    openPR: 49
+    closedIssue: 400
+    openIssue: 69
     commit: 730
   last360d:
-    since: 2025-10-09
+    since: 2025-10-10
     release: 44
     mergedPR: 119
-    openPR: 47
+    openPR: 49
     closedIssue: 417
-    openIssue: 67
+    openIssue: 69
     commit: 825
   last720d:
-    since: 2024-10-14
+    since: 2024-10-15
     release: 44
     mergedPR: 119
-    openPR: 47
+    openPR: 49
     closedIssue: 417
-    openIssue: 67
+    openIssue: 69
     commit: 957
 total:
   release: 44
   mergedPR: 119
-  openPR: 47
+  openPR: 49
   closedIssue: 417
-  openIssue: 67
+  openIssue: 69
   commit: 957
 ---
 path: /home/runner/.x-repo/github.com/JuliusBrussee/caveman
-collectedAt: 2026-10-04T06:30:20Z
+collectedAt: 2026-10-05T06:19:09Z
 loc:
   Go:
     code: 118376
@@ -361,4 +361,4 @@ checks:
     details:
       - 'Info: found contributions from: anthropics, caveman, fastinfer, freelance, supabase, vambe ai'
 ---
-{"id":402840698,"author":{"login":"JuliusBrussee","id":104168679,"node_id":"U_kgDOBjV85w","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOR5h10c4YAtx6","tag_name":"v3.1.0","target_commitish":"main","name":"Caveman 3.1.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-03T00:43:50Z","updated_at":"2026-10-04T04:30:46Z","published_at":"2026-10-04T04:30:46Z","assets":[],"body":"\nThree skills replace six intensity levels, the reviewed fix stack lands, and the repo maintenance that piled up since 3.0.0 comes with it. 106 commits over `main`.\n\n### The skill, rethought for current models\n\n`/caveman` is the voice. `/ultracave` strips the grammar. `/megacave` speaks classical Chinese. Each is a self-contained `skills/<id>/SKILL.md` in the same shape: thesis, persistence, why, numbered rules with bad/good pairs, when to break the rules, pre-send check. Simplified Technical English (ASD-STE100) is the floor under all three instead of a competing register. The tool-call silence ban becomes one status line per phase (#1127, #1154), and the host harness outranks the skill on when to speak (#1125). `/caveman lite|full|ultra|wenyan*` keep working as aliases; stored sessions migrate on read.\n\nHooks: mode ids are now `caveman`, `ultracave`, `megacave` (+ one-shots, `off`); legacy values map on every read path; the SessionStart hook injects the active skill whole; per-turn reinforcement is derived from the skill's thesis line; statusline renders `[CAVEMAN]`, `[ULTRACAVE]`, `[MEGACAVE]`; an outdated statusline copy pinned to a plugin-cache path now triggers the repair nudge. The always-on rule copies (IDE rules, opencode AGENTS.md, OpenClaw, extension, cavecrew agents, Codex/Gemini stubs, Codex plugin mirror) are regenerated or hand-synced with a drift test. Design record: `docs/technical/three-skills-refactor.md`.\n\nEvals were rerun on `claude-opus-5-5` with host settings isolated: vs a plain `Answer concisely.` control, median output reduction is caveman 3%, ultracave 35%, megacave 9% (n=10, single run, length only). README and HONEST-NUMBERS cite exactly that. **Owner decision:** the default voice adds little over \"be concise\" on this model; ultracave carries the savings.\n\n### Fix stack (PRs #1163 #1157 #1158 #1159 #1160 #1161 #1162, merged as one)\n\nProxy session-marker correlation and silent CCR failures (#1105 #1110 #1149 #1113); engine JSON elision, non-finite cells, shrink sentinel (#1151 #1095); CLI dangling hooks, shrink hook permissions, Codex TOML, Remote Control, opencode OAuth, watermark locks (#1137 #1138 #1133 #1134 #1101 #1119 #1116 #1132); statusline nudge path (#1147); Codex SessionStart honors defaultMode (#185 #1139); caveman-compress streaming/ceiling/pairing (#1131 #1107). #1164 (Pi recovery proof, Pi 1.0.0) is **not** here: it must wait for a `caveman-mcp` binary release.\n\n### Maintenance\n\n- `maintenance/2026-09-20`: `/caveman status`, `defaultMode: \"manual\"`.\n- Contributor PRs merged: #1078 (C++ parse gate), #1076 (GDScript elision), #1156 (syslog severities), #1108 (delete dead `proxy/routing`), #1084 (Grok Build install, closes #547), #1062 (eval snapshot contract).\n- Daily-triage remnants cherry-picked: Python encoding fixes, merge scope check, the conformance pin-bump chain (#978 #1096 #1097 #1098 #1099 #1100 #1109 #1118).\n- Dependabot: #1144 #1143 #1141 #1140 merged. #1142 (TypeScript 7, @types/node 26) reverted: its own CI was red.\n- Pins bumped to v3.1.0 everywhere the shim-security test checks, plus the Gemini and Codex plugin manifests.\n\n"}
+{"id":402840698,"author":{"login":"JuliusBrussee","id":104168679,"node_id":"U_kgDOBjV85w","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOR5h10c4YAtx6","tag_name":"v3.1.0","target_commitish":"main","name":"Caveman 3.1.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-03T00:43:50Z","updated_at":"2026-10-04T04:30:46Z","published_at":"2026-10-04T04:30:46Z","assets":[],"body":"\nThree skills replace six intensity levels, the reviewed fix stack lands, and the repo maintenance that piled up since 3.0.0 comes with it. 106 commits over `main`.\n\n### The skill, rethought for current models\n\n`/caveman` is the voice. `/ultracave` strips the grammar. `/megacave` speaks classical Chinese. Each is a self-contained `skills/<id>/SKILL.md` in the same shape: thesis, persistence, why, numbered rules with bad/good pairs, when to break the rules, pre-send check. Simplified Technical English (ASD-STE100) is the floor under all three instead of a competing register. The tool-call silence ban becomes one status line per phase (#1127, #1154), and the host harness outranks the skill on when to speak (#1125). `/caveman lite|full|ultra|wenyan*` keep working as aliases; stored sessions migrate on read.\n\nHooks: mode ids are now `caveman`, `ultracave`, `megacave` (+ one-shots, `off`); legacy values map on every read path; the SessionStart hook injects the active skill whole; per-turn reinforcement is derived from the skill's thesis line; statusline renders `[CAVEMAN]`, `[ULTRACAVE]`, `[MEGACAVE]`; an outdated statusline copy pinned to a plugin-cache path now triggers the repair nudge. The always-on rule copies (IDE rules, opencode AGENTS.md, OpenClaw, extension, cavecrew agents, Codex/Gemini stubs, Codex plugin mirror) are regenerated or hand-synced with a drift test. Design record: `docs/technical/three-skills-refactor.md`.\n\nEvals were rerun on `claude-opus-5-5` with host settings isolated: vs a plain `Answer concisely.` control, median output reduction is caveman 3%, ultracave 35%, megacave 9% (n=10, single run, length only). README and HONEST-NUMBERS cite exactly that. **Owner decision:** the default voice adds little over \"be concise\" on this model; ultracave carries the savings.\n\n### Fix stack (PRs #1163 #1157 #1158 #1159 #1160 #1161 #1162, merged as one)\n\nProxy session-marker correlation and silent CCR failures (#1105 #1110 #1149 #1113); engine JSON elision, non-finite cells, shrink sentinel (#1151 #1095); CLI dangling hooks, shrink hook permissions, Codex TOML, Remote Control, opencode OAuth, watermark locks (#1137 #1138 #1133 #1134 #1101 #1119 #1116 #1132); statusline nudge path (#1147); Codex SessionStart honors defaultMode (#185 #1139); caveman-compress streaming/ceiling/pairing (#1131 #1107). #1164 (Pi recovery proof, Pi 1.0.0) is **not** here: it must wait for a `caveman-mcp` binary release.\n\n### Maintenance\n\n- `maintenance/2026-09-20`: `/caveman status`, `defaultMode: \"manual\"`.\n- Contributor PRs merged: #1078 (C++ parse gate), #1076 (GDScript elision), #1156 (syslog severities), #1108 (delete dead `proxy/routing`), #1084 (Grok Build install, closes #547), #1062 (eval snapshot contract).\n- Daily-triage remnants cherry-picked: Python encoding fixes, merge scope check, the conformance pin-bump chain (#978 #1096 #1097 #1098 #1099 #1100 #1109 #1118).\n- Dependabot: #1144 #1143 #1141 #1140 merged. #1142 (TypeScript 7, @types/node 26) reverted: its own CI was red.\n- Pins bumped to v3.1.0 everywhere the shim-security test checks, plus the Gemini and Codex plugin manifests.\n\n","reactions":{"total_count":5,"+1":3,"-1":0,"laugh":0,"hooray":2,"confused":0,"heart":0,"rocket":0,"eyes":0}}

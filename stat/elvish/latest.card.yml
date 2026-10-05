@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.21.0"
   latestRelease: "v0.21.0"
   latestPrerelease: "v0.19.1"
-  collectedAt: 2026-10-04T07:10:27Z
+  collectedAt: 2026-10-05T06:56:36Z
 timeline:
   created: 2013-06-16
   lastCommit: 2025-07-14
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2024-08-14
   lastPrerelease: 2023-03-05
 popularity:
-  star: 6385
+  star: 6384
   watcher: 104
   fork: 333
   release: 10
@@ -37,7 +37,7 @@ language:
 totalBytes: 1968334
 recent:
   last30d:
-    since: 2026-09-04
+    since: 2026-09-05
     release: 0
     mergedPR: 0
     openPR: 1
@@ -45,7 +45,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-08-05
+    since: 2026-08-06
     release: 0
     mergedPR: 0
     openPR: 1
@@ -53,7 +53,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-07-06
+    since: 2026-07-07
     release: 0
     mergedPR: 0
     openPR: 1
@@ -61,7 +61,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-04-07
+    since: 2026-04-08
     release: 0
     mergedPR: 0
     openPR: 1
@@ -69,7 +69,7 @@ recent:
     openIssue: 1
     commit: 0
   last360d:
-    since: 2025-10-09
+    since: 2025-10-10
     release: 0
     mergedPR: 0
     openPR: 6
@@ -77,12 +77,12 @@ recent:
     openIssue: 4
     commit: 0
   last720d:
-    since: 2024-10-14
+    since: 2024-10-15
     release: 0
     mergedPR: 7
     openPR: 14
     closedIssue: 12
-    openIssue: 39
+    openIssue: 37
     commit: 39
 total:
   release: 10
@@ -93,7 +93,7 @@ total:
   commit: 6764
 ---
 path: /home/runner/.x-repo/github.com/elves/elvish
-collectedAt: 2026-10-04T07:10:33Z
+collectedAt: 2026-10-05T06:56:39Z
 loc:
   Go:
     code: 52308
@@ -186,18 +186,22 @@ total:
   blanks: 12706
   files: 852
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/elves/elvish
   commit: 26a8bd5c4ee1eb5c0a2d53578d0368de2b8b3274
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 4.6
 checks:
   - name: Code-Review
     score: 2
     reason: Found 6/26 approved changesets -- score normalized to 2
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Security-Policy
     score: 9
@@ -210,10 +214,6 @@ checks:
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -233,12 +233,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: BSD 2-Clause "Simplified" License: LICENSE:0'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -251,6 +245,12 @@ checks:
       - 'Info: GoBuiltInFuzzer integration found: pkg/parse/fuzz_test.go:10'
       - 'Info: GoBuiltInFuzzer integration found: pkg/parse/fuzz_test.go:19'
       - 'Info: GoBuiltInFuzzer integration found: pkg/ui/styledown/fuzz_test.go:11'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: BSD 2-Clause "Simplified" License: LICENSE:0'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -285,29 +285,29 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker.yml:27: update your workflow using https://app.stepsecurity.io/secureworkflow/elves/elvish/docker.yml/main?enable=pin'
       - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating golang:1.22-alpine3.19 to golang:1.22-alpine3.19@sha256:6f73a1b8b608dad4866b9f746ac6888ffdb112f75ef59ed97c43b5f734368718'
       - 'Warn: containerImage not pinned by hash: Dockerfile:7: pin your Docker image by updating alpine:3.19 to alpine:3.19@sha256:6baf43584bcb78f2e5847d1de515f23499913ac9f12bdf834811a3145eb11ca1'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/ci.yml:181'
       - 'Warn: goCommand not pinned by hash: .github/workflows/ci.yml:157'
       - 'Warn: goCommand not pinned by hash: .github/workflows/ci.yml:158'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/ci.yml:161'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/ci.yml:181'
       - 'Info:   0 out of  22 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   6 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
-      - 'Info:   1 out of   3 goCommand dependencies pinned'
       - 'Info:   0 out of   2 pipCommand dependencies pinned'
+      - 'Info:   1 out of   3 goCommand dependencies pinned'
   - name: Signed-Releases
     score: -1
     reason: no releases found
     details: null
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker.yml:7'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''main'''
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker.yml:7'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

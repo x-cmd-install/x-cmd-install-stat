@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.27.0"
   latestRelease: "v1.27.0"
   latestPrerelease: "v1.26.0"
-  collectedAt: 2026-10-04T06:35:14Z
+  collectedAt: 2026-10-05T06:23:32Z
 timeline:
   created: 2016-08-19
   lastCommit: 2026-09-15
@@ -34,7 +34,7 @@ language:
 totalBytes: 7788090
 recent:
   last30d:
-    since: 2026-09-04
+    since: 2026-09-05
     release: 0
     mergedPR: 4
     openPR: 4
@@ -42,23 +42,23 @@ recent:
     openIssue: 2
     commit: 4
   last60d:
-    since: 2026-08-05
+    since: 2026-08-06
     release: 0
-    mergedPR: 32
+    mergedPR: 30
     openPR: 5
     closedIssue: 1
     openIssue: 3
     commit: 22
   last90d:
-    since: 2026-07-06
+    since: 2026-07-07
     release: 0
-    mergedPR: 106
+    mergedPR: 105
     openPR: 6
     closedIssue: 22
     openIssue: 8
     commit: 97
   last180d:
-    since: 2026-04-07
+    since: 2026-04-08
     release: 5
     mergedPR: 283
     openPR: 7
@@ -66,7 +66,7 @@ recent:
     openIssue: 10
     commit: 282
   last360d:
-    since: 2025-10-09
+    since: 2025-10-10
     release: 7
     mergedPR: 321
     openPR: 7
@@ -74,7 +74,7 @@ recent:
     openIssue: 10
     commit: 320
   last720d:
-    since: 2024-10-14
+    since: 2024-10-15
     release: 10
     mergedPR: 412
     openPR: 8
@@ -90,7 +90,7 @@ total:
   commit: 2167
 ---
 path: /home/runner/.x-repo/github.com/fission/fission
-collectedAt: 2026-10-04T06:35:19Z
+collectedAt: 2026-10-05T06:23:39Z
 loc:
   Go:
     code: 156289
@@ -188,7 +188,7 @@ total:
   blanks: 29224
   files: 1609
 ---
-date: "2026-09-27T18:46:26Z"
+date: "2026-10-04T19:45:24Z"
 repo:
   name: github.com/fission/fission
   commit: 254f4435e41d7bd244a62d53bdc099e995fdbe37
@@ -197,19 +197,15 @@ scorecard:
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 7.5
 checks:
+  - name: Code-Review
+    score: 0
+    reason: Found 2/27 approved changesets -- score normalized to 0
+    details: null
   - name: Dependency-Update-Tool
     score: 10
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 20 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Code-Review
-    score: 0
-    reason: Found 2/27 approved changesets -- score normalized to 0
-    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -218,9 +214,9 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
+  - name: Maintained
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: 30 commit(s) and 19 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Token-Permissions
     score: 10
@@ -243,13 +239,23 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/tlc.yaml:24'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/upgrade_test.yaml:58'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
+  - name: Dangerous-Workflow
     score: 10
-    reason: no binaries found in the repo
+    reason: no dangerous workflow patterns detected
     details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: CII-Best-Practices
     score: 5
     reason: 'badge detected: Passing'
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Pinned-Dependencies
     score: 10
@@ -258,33 +264,6 @@ checks:
       - 'Info:  39 out of  39 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  40 out of  40 third-party GitHubAction dependencies pinned'
       - 'Info:   5 out of   5 containerImage dependencies pinned'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/benchmark.yaml:115'
-  - name: SAST
-    score: 10
-    reason: SAST tool is run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Info: all commits (30) are checked with a SAST tool'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: GoBuiltInFuzzer integration found: pkg/fetcher/credentials_test.go:68'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/router/asyncinvoke/envelope_test.go:53'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/router/asyncinvoke/envelope_test.go:220'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/statestore/receipt_test.go:16'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/statestore/receipt_test.go:31'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/statesvc/auth_fuzz_test.go:18'
   - name: Vulnerabilities
     score: 4
     reason: 6 existing vulnerabilities detected
@@ -295,19 +274,12 @@ checks:
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6179'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6180'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-36p3-wjmg-h94x'
-  - name: Branch-Protection
-    score: 3
-    reason: branch protection is not maximal on development and all release branches
+  - name: SAST
+    score: 10
+    reason: SAST tool is run on all commits
     details:
-      - 'Info: ''allow deletion'' disabled on branch ''main'''
-      - 'Info: ''force pushes'' disabled on branch ''main'''
-      - 'Info: ''branch protection settings apply to administrators'' is required to merge on branch ''main'''
-      - 'Warn: ''stale review dismissal'' is disabled on branch ''main'''
-      - 'Warn: branch ''main'' does not require approvers'
-      - 'Warn: codeowners review is not required on branch ''main'''
-      - 'Warn: ''last push approval'' is disabled on branch ''main'''
-      - 'Warn: no status checks found to merge onto branch ''main'''
-      - 'Info: PRs are required in order to make changes on branch ''main'''
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Info: all commits (30) are checked with a SAST tool'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -322,6 +294,34 @@ checks:
       - 'Warn: release artifact v1.25.0 does not have provenance: https://api.github.com/repos/fission/fission/releases/334866224'
       - 'Warn: release artifact v1.24.0 does not have provenance: https://api.github.com/repos/fission/fission/releases/329550744'
       - 'Warn: release artifact v1.23.0 does not have provenance: https://api.github.com/repos/fission/fission/releases/322755085'
+  - name: Branch-Protection
+    score: 3
+    reason: branch protection is not maximal on development and all release branches
+    details:
+      - 'Info: ''allow deletion'' disabled on branch ''main'''
+      - 'Info: ''force pushes'' disabled on branch ''main'''
+      - 'Info: ''branch protection settings apply to administrators'' is required to merge on branch ''main'''
+      - 'Warn: ''stale review dismissal'' is disabled on branch ''main'''
+      - 'Warn: branch ''main'' does not require approvers'
+      - 'Warn: codeowners review is not required on branch ''main'''
+      - 'Warn: ''last push approval'' is disabled on branch ''main'''
+      - 'Warn: no status checks found to merge onto branch ''main'''
+      - 'Info: PRs are required in order to make changes on branch ''main'''
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: GoBuiltInFuzzer integration found: pkg/fetcher/credentials_test.go:68'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/router/asyncinvoke/envelope_test.go:53'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/router/asyncinvoke/envelope_test.go:220'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/statestore/receipt_test.go:16'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/statestore/receipt_test.go:31'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/statesvc/auth_fuzz_test.go:18'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/benchmark.yaml:115'
   - name: CI-Tests
     score: 10
     reason: 30 out of 30 merged PRs checked by a CI test -- score normalized to 10

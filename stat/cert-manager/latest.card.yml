@@ -2,25 +2,25 @@ about:
   description: "Automatically provision and manage TLS certificates in Kubernetes"
   license: Apache-2.0
   homepage: https://cert-manager.io
-  head: def0e82
+  head: d17acec
   archived: false
   latestVersion: "v1.20.4"
   latestRelease: "v1.20.4"
   latestPrerelease: "v1.21.0-beta.0"
-  collectedAt: 2026-10-04T06:10:53Z
+  collectedAt: 2026-10-05T05:57:01Z
 timeline:
   created: 2017-05-24
-  lastCommit: 2026-10-03
+  lastCommit: 2026-10-04
   lastVersion: 2026-09-16
   lastRelease: 2026-09-16
   lastPrerelease: 2026-07-01
 popularity:
-  star: 14104
+  star: 14106
   watcher: 144
-  fork: 2461
+  fork: 2460
   release: 257
   contributor: 538
-  pullRequest: 5259
+  pullRequest: 5263
   issue: 3832
 language:
   Go: 6041202
@@ -32,63 +32,63 @@ language:
 totalBytes: 6314193
 recent:
   last30d:
-    since: 2026-09-04
+    since: 2026-09-05
     release: 2
     mergedPR: 85
-    openPR: 26
+    openPR: 23
     closedIssue: 8
-    openIssue: 13
-    commit: 81
+    openIssue: 12
+    commit: 89
   last60d:
-    since: 2026-08-05
+    since: 2026-08-06
     release: 2
-    mergedPR: 202
+    mergedPR: 206
     openPR: 41
     closedIssue: 26
     openIssue: 26
-    commit: 289
+    commit: 297
   last90d:
-    since: 2026-07-06
+    since: 2026-07-07
     release: 4
-    mergedPR: 285
+    mergedPR: 279
     openPR: 49
     closedIssue: 37
     openIssue: 34
-    commit: 388
+    commit: 396
   last180d:
-    since: 2026-04-07
+    since: 2026-04-08
     release: 10
-    mergedPR: 464
+    mergedPR: 467
     openPR: 65
     closedIssue: 56
     openIssue: 51
-    commit: 749
+    commit: 757
   last360d:
-    since: 2025-10-09
+    since: 2025-10-10
     release: 24
-    mergedPR: 807
+    mergedPR: 808
     openPR: 88
     closedIssue: 126
     openIssue: 85
-    commit: 1424
+    commit: 1432
   last720d:
-    since: 2024-10-14
+    since: 2024-10-15
     release: 48
-    mergedPR: 1227
+    mergedPR: 1225
     openPR: 98
-    closedIssue: 297
+    closedIssue: 296
     openIssue: 121
-    commit: 2335
+    commit: 2338
 total:
   release: 257
-  mergedPR: 4235
+  mergedPR: 4239
   openPR: 102
   closedIssue: 3672
   openIssue: 160
-  commit: 11470
+  commit: 11478
 ---
 path: /home/runner/.x-repo/github.com/cert-manager/cert-manager
-collectedAt: 2026-10-04T06:11:04Z
+collectedAt: 2026-10-05T05:57:15Z
 loc:
   Go:
     code: 181494
@@ -141,10 +141,10 @@ total:
   blanks: 24835
   files: 1163
 ---
-date: "2026-10-03T14:46:10Z"
+date: "2026-10-04T20:49:08Z"
 repo:
   name: github.com/cert-manager/cert-manager
-  commit: def0e82d4f2bd20f00ad3a865c3f5dea11ea0cc1
+  commit: d17acec07e126f299b9010657c4d55efc81e0ccd
 scorecard:
   version: v5.5.0
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
@@ -155,20 +155,22 @@ checks:
     reason: update tool detected
     details:
       - 'Info: detected update tool: RenovateBot: .github/renovate.json5:1'
-  - name: Token-Permissions
-    score: 10
-    reason: GitHub workflow tokens follow principle of least privilege
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
     details:
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/govulncheck.yaml:14'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecards.yml:11'
-      - 'Info: no jobLevel write permissions found'
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 8 issue activity found in the last 90 days -- score normalized to 10
     details: null
-  - name: Code-Review
+  - name: Dangerous-Workflow
     score: 10
-    reason: all changesets reviewed
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Security-Policy
     score: 9
@@ -178,15 +180,13 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
+  - name: Token-Permissions
     score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
+    reason: GitHub workflow tokens follow principle of least privilege
     details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/govulncheck.yaml:14'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecards.yml:11'
+      - 'Info: no jobLevel write permissions found'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -201,23 +201,6 @@ checks:
     score: 5
     reason: 'badge detected: Passing'
     details: null
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Vulnerabilities
-    score: 8
-    reason: 2 existing vulnerabilities detected
-    details:
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5932'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6443'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -232,6 +215,21 @@ checks:
       - 'Warn: release artifact v1.21.1 does not have provenance: https://api.github.com/repos/cert-manager/cert-manager/releases/361831037'
       - 'Warn: release artifact v1.21.0 does not have provenance: https://api.github.com/repos/cert-manager/cert-manager/releases/351202071'
       - 'Warn: release artifact v1.21.0-beta.0 does not have provenance: https://api.github.com/repos/cert-manager/cert-manager/releases/347297019'
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
+  - name: Vulnerabilities
+    score: 8
+    reason: 2 existing vulnerabilities detected
+    details:
+      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5932'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6443'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -247,13 +245,15 @@ checks:
       - 'Info: GoBuiltInFuzzer integration found: pkg/controller/certificates/revisionmanager/fuzz_test.go:37'
       - 'Info: GoBuiltInFuzzer integration found: pkg/controller/certificates/trigger/fuzz_test.go:50'
       - 'Info: GoBuiltInFuzzer integration found: pkg/util/pki/subject_test.go:183'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: CI-Tests
     score: 10
-    reason: 17 out of 17 merged PRs checked by a CI test -- score normalized to 10
+    reason: 18 out of 18 merged PRs checked by a CI test -- score normalized to 10
     details: null
   - name: Contributors
     score: 10
