@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.9.23"
   latestRelease: "v0.9.23"
   latestPrerelease: ""
-  collectedAt: 2026-10-05T05:57:24Z
+  collectedAt: 2026-10-06T06:37:51Z
 timeline:
   created: 2017-11-10
   lastCommit: 2026-06-26
@@ -34,7 +34,7 @@ language:
 totalBytes: 19837223
 recent:
   last30d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 0
     mergedPR: 0
     openPR: 0
@@ -42,7 +42,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 0
     mergedPR: 0
     openPR: 0
@@ -50,7 +50,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-07
+    since: 2026-07-08
     release: 0
     mergedPR: 0
     openPR: 0
@@ -58,7 +58,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-08
+    since: 2026-04-09
     release: 0
     mergedPR: 0
     openPR: 7
@@ -66,7 +66,7 @@ recent:
     openIssue: 1
     commit: 161
   last360d:
-    since: 2025-10-10
+    since: 2025-10-11
     release: 0
     mergedPR: 0
     openPR: 17
@@ -74,13 +74,13 @@ recent:
     openIssue: 2
     commit: 637
   last720d:
-    since: 2024-10-15
+    since: 2024-10-16
     release: 1
     mergedPR: 3
     openPR: 18
     closedIssue: 10
     openIssue: 18
-    commit: 4102
+    commit: 4085
 total:
   release: 12
   mergedPR: 7
@@ -90,7 +90,7 @@ total:
   commit: 20985
 ---
 path: /home/runner/.x-repo/github.com/facebook/pyre-check
-collectedAt: 2026-10-05T05:58:31Z
+collectedAt: 2026-10-06T06:39:10Z
 loc:
   OCaml:
     code: 322650
@@ -188,33 +188,33 @@ total:
   blanks: 66361
   files: 1608
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/facebook/pyre-check
   commit: d5614e0a75f539443225fce3c3c55a77cfbfb72c
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 4.9
 checks:
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
   - name: Maintained
     score: 0
     reason: project is archived
     details:
       - 'Warn: Repository is archived.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -223,25 +223,19 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/pysa.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/tests.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
   - name: SAST
     score: 0
     reason: no SAST tool detected
     details:
       - 'Warn: no pull requests merged into dev branch'
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Pinned-Dependencies
     score: 3
     reason: dependency not pinned by hash detected -- score normalized to 3
@@ -256,23 +250,21 @@ checks:
       - 'Info:   1 out of   1 third-party GitHubAction dependencies pinned'
       - 'Info:   1 out of   1 containerImage dependencies pinned'
       - 'Info:   0 out of   6 pipCommand dependencies pinned'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Security-Policy
-    score: 9
-    reason: security policy file detected
+  - name: License
+    score: 10
+    reason: license file detected
     details:
-      - 'Info: security policy file detected: github.com/facebook/.github/SECURITY.md:1'
-      - 'Info: Found linked content: github.com/facebook/.github/SECURITY.md:1'
-      - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
-      - 'Info: Found text in security policy: github.com/facebook/.github/SECURITY.md:1'
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Branch-Protection
     score: 3
     reason: branch protection is not maximal on development and all release branches
@@ -285,4 +277,12 @@ checks:
       - 'Warn: ''up-to-date branches'' is disabled on branch ''main'''
       - 'Info: status check found to merge onto on branch ''main'''
       - 'Warn: PRs are not required to make changes on branch ''main''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
+  - name: Security-Policy
+    score: 9
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: github.com/facebook/.github/SECURITY.md:1'
+      - 'Info: Found linked content: github.com/facebook/.github/SECURITY.md:1'
+      - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
+      - 'Info: Found text in security policy: github.com/facebook/.github/SECURITY.md:1'
 ---

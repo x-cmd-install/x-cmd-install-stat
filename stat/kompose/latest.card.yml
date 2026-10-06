@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.38.0"
   latestRelease: "v1.38.0"
   latestPrerelease: "v0.0.1-beta.2"
-  collectedAt: 2026-10-05T06:59:50Z
+  collectedAt: 2026-10-06T07:43:45Z
 timeline:
   created: 2016-06-27
   lastCommit: 2026-09-30
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2026-01-15
   lastPrerelease: 2016-08-05
 popularity:
-  star: 10630
+  star: 10633
   watcher: 128
   fork: 819
   release: 54
-  contributor: 725
-  pullRequest: 1292
+  contributor: 728
+  pullRequest: 1294
   issue: 841
 language:
   Go: 485935
@@ -30,7 +30,7 @@ language:
 totalBytes: 555310
 recent:
   last30d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 0
     mergedPR: 4
     openPR: 6
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 6
   last60d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 0
     mergedPR: 4
     openPR: 13
@@ -46,7 +46,7 @@ recent:
     openIssue: 0
     commit: 6
   last90d:
-    since: 2026-07-07
+    since: 2026-07-08
     release: 0
     mergedPR: 4
     openPR: 13
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 6
   last180d:
-    since: 2026-04-08
+    since: 2026-04-09
     release: 0
     mergedPR: 6
     openPR: 13
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 7
   last360d:
-    since: 2025-10-10
+    since: 2025-10-11
     release: 1
     mergedPR: 18
     openPR: 13
@@ -70,7 +70,7 @@ recent:
     openIssue: 2
     commit: 21
   last720d:
-    since: 2024-10-15
+    since: 2024-10-16
     release: 4
     mergedPR: 45
     openPR: 13
@@ -86,7 +86,7 @@ total:
   commit: 1818
 ---
 path: /home/runner/.x-repo/github.com/kubernetes/kompose
-collectedAt: 2026-10-05T06:59:55Z
+collectedAt: 2026-10-06T07:43:49Z
 loc:
   Json:
     code: 29471
@@ -169,19 +169,20 @@ total:
   blanks: 5473
   files: 500
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/kubernetes/kompose
-  commit: 43b9d898f27e74d6240c7ec81ef787c1922ab741
+  commit: 59af0f0e641e3a4e4b4c7696dc65acf5c8c8df77
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
-score: 5
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+score: 5.4
 checks:
-  - name: Maintained
-    score: 2
-    reason: 3 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 2
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
@@ -190,11 +191,10 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 6
+    reason: 8 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 6
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -219,21 +219,17 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -248,6 +244,10 @@ checks:
       - 'Warn: release artifact v1.36.0 does not have provenance: https://api.github.com/repos/kubernetes/kompose/releases/218642532'
       - 'Warn: release artifact v1.35.0 does not have provenance: https://api.github.com/repos/kubernetes/kompose/releases/190438948'
       - 'Warn: release artifact v1.34.0 does not have provenance: https://api.github.com/repos/kubernetes/kompose/releases/158522291'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Pinned-Dependencies
     score: 5
     reason: dependency not pinned by hash detected -- score normalized to 5
@@ -263,9 +263,9 @@ checks:
       - 'Warn: npmCommand not pinned by hash: script/test/fixtures/nginx-node-redis/node/Dockerfile:5'
       - 'Warn: npmCommand not pinned by hash: script/test/fixtures/nginx-node-redis/node/Dockerfile:10'
       - 'Info:   9 out of   9 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   0 out of   8 containerImage dependencies pinned'
       - 'Info:   0 out of   2 npmCommand dependencies pinned'
       - 'Info:   2 out of   2 goCommand dependencies pinned'
+      - 'Info:   0 out of   8 containerImage dependencies pinned'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

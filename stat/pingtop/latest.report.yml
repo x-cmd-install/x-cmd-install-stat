@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-10-05T05:27:14Z
+  collectedAt: 2026-10-06T06:11:01Z
 timeline:
   created: 2019-04-01
   lastCommit: 2026-07-13
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 
   lastPrerelease: 
 popularity:
-  star: 538
+  star: 539
   watcher: 9
   fork: 39
   release: 0
@@ -27,7 +27,7 @@ language:
 totalBytes: 87532
 recent:
   last30d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 0
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-07
+    since: 2026-07-08
     release: 0
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-08
+    since: 2026-04-09
     release: 0
     mergedPR: 6
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 25
   last360d:
-    since: 2025-10-10
+    since: 2025-10-11
     release: 0
     mergedPR: 14
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 45
   last720d:
-    since: 2024-10-15
+    since: 2024-10-16
     release: 0
     mergedPR: 15
     openPR: 0
@@ -83,7 +83,7 @@ total:
   commit: 182
 ---
 path: /home/runner/.x-repo/github.com/laixintao/pingtop
-collectedAt: 2026-10-05T05:27:14Z
+collectedAt: 2026-10-06T06:11:01Z
 loc:
   Python:
     code: 2095
@@ -106,15 +106,30 @@ total:
   blanks: 494
   files: 23
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/laixintao/pingtop
   commit: 7f783ea73ea9b6cee6e5749b9786a07fafc7e073
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 4.1
 checks:
+  - name: Token-Permissions
+    score: 9
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:13'
+      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
+      - 'Info: no jobLevel write permissions found'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Code-Review
     score: 3
     reason: Found 5/16 approved changesets -- score normalized to 3
@@ -124,25 +139,10 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Maintained
     score: 1
     reason: 2 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 1
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Token-Permissions
-    score: 9
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:13'
-      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -169,16 +169,16 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches

@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.12.6"
   latestRelease: "v2.12.6"
   latestPrerelease: "v2.12.0-rc2"
-  collectedAt: 2026-10-05T05:34:23Z
+  collectedAt: 2026-10-06T06:16:35Z
 timeline:
   created: 2016-10-09
   lastCommit: 2026-10-03
@@ -33,7 +33,7 @@ language:
 totalBytes: 3749828
 recent:
   last30d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 0
     mergedPR: 1
     openPR: 0
@@ -41,7 +41,7 @@ recent:
     openIssue: 0
     commit: 7
   last60d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 1
     mergedPR: 1
     openPR: 1
@@ -49,7 +49,7 @@ recent:
     openIssue: 0
     commit: 20
   last90d:
-    since: 2026-07-07
+    since: 2026-07-08
     release: 1
     mergedPR: 3
     openPR: 2
@@ -57,7 +57,7 @@ recent:
     openIssue: 0
     commit: 27
   last180d:
-    since: 2026-04-08
+    since: 2026-04-09
     release: 2
     mergedPR: 11
     openPR: 5
@@ -65,7 +65,7 @@ recent:
     openIssue: 0
     commit: 88
   last360d:
-    since: 2025-10-10
+    since: 2025-10-11
     release: 11
     mergedPR: 28
     openPR: 8
@@ -73,13 +73,13 @@ recent:
     openIssue: 0
     commit: 286
   last720d:
-    since: 2024-10-15
+    since: 2024-10-16
     release: 24
     mergedPR: 38
     openPR: 8
     closedIssue: 0
     openIssue: 0
-    commit: 515
+    commit: 512
 total:
   release: 69
   mergedPR: 267
@@ -89,7 +89,7 @@ total:
   commit: 9074
 ---
 path: /home/runner/.x-repo/github.com/macports/macports-base
-collectedAt: 2026-10-05T05:34:42Z
+collectedAt: 2026-10-06T06:16:47Z
 loc:
   C:
     code: 490684
@@ -282,28 +282,32 @@ total:
   blanks: 200428
   files: 3893
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/macports/macports-base
-  commit: cea797f853cf004e11f90f889034e4a628800d5f
+  commit: 604c4f8f6472ba177cfa1d739243be833db2c75f
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 4
 checks:
   - name: Code-Review
     score: 0
     reason: Found 2/30 approved changesets -- score normalized to 0
     details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -312,10 +316,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/mirror.yml:8'
       - 'Info: no jobLevel write permissions found'
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -334,6 +334,10 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: BSD 3-Clause "New" or "Revised" License: LICENSE:0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Binary-Artifacts
     score: 4
     reason: binaries present in source code
@@ -349,10 +353,6 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -379,6 +379,11 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/mirror.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/macports/macports-base/mirror.yml/master?enable=pin'
       - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 3 are checked with a SAST tool'
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -393,9 +398,4 @@ checks:
       - 'Warn: release artifact v2.12.4 does not have provenance: https://api.github.com/repos/macports/macports-base/releases/298203956'
       - 'Warn: release artifact v2.12.3 does not have provenance: https://api.github.com/repos/macports/macports-base/releases/294673883'
       - 'Warn: release artifact v2.12.2 does not have provenance: https://api.github.com/repos/macports/macports-base/releases/291541681'
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 3 are checked with a SAST tool'
 ---

@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.15.0"
   latestRelease: "v1.15.0"
   latestPrerelease: "v0.0.2"
-  collectedAt: 2026-10-05T06:47:57Z
+  collectedAt: 2026-10-06T07:41:36Z
 timeline:
   created: 2024-10-21
   lastCommit: 2026-10-05
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-10-04
   lastPrerelease: 2024-10-22
 popularity:
-  star: 39818
+  star: 39849
   watcher: 193
-  fork: 4603
+  fork: 4611
   release: 43
   contributor: 93
-  pullRequest: 721
-  issue: 629
+  pullRequest: 724
+  issue: 643
 language:
   TypeScript: 1841896
   Python: 1382633
@@ -34,63 +34,63 @@ language:
 totalBytes: 3302134
 recent:
   last30d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 1
-    mergedPR: 44
-    openPR: 12
+    mergedPR: 43
+    openPR: 15
     closedIssue: 21
-    openIssue: 21
+    openIssue: 35
     commit: 48
   last60d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 1
-    mergedPR: 79
-    openPR: 15
+    mergedPR: 78
+    openPR: 18
     closedIssue: 37
-    openIssue: 25
+    openIssue: 39
     commit: 90
   last90d:
-    since: 2026-07-07
+    since: 2026-07-08
     release: 5
-    mergedPR: 213
-    openPR: 16
+    mergedPR: 192
+    openPR: 19
     closedIssue: 86
-    openIssue: 48
+    openIssue: 62
     commit: 135
   last180d:
-    since: 2026-04-08
+    since: 2026-04-09
     release: 9
-    mergedPR: 331
-    openPR: 16
-    closedIssue: 168
-    openIssue: 73
+    mergedPR: 327
+    openPR: 19
+    closedIssue: 167
+    openIssue: 87
     commit: 332
   last360d:
-    since: 2025-10-10
+    since: 2025-10-11
     release: 26
     mergedPR: 523
-    openPR: 18
+    openPR: 21
     closedIssue: 429
-    openIssue: 111
+    openIssue: 125
     commit: 609
   last720d:
-    since: 2024-10-15
+    since: 2024-10-16
     release: 43
     mergedPR: 550
-    openPR: 18
+    openPR: 21
     closedIssue: 518
-    openIssue: 111
+    openIssue: 125
     commit: 1019
 total:
   release: 43
   mergedPR: 550
-  openPR: 18
+  openPR: 21
   closedIssue: 518
-  openIssue: 111
+  openIssue: 125
   commit: 1019
 ---
 path: /home/runner/.x-repo/github.com/lfnovo/open-notebook
-collectedAt: 2026-10-05T06:47:59Z
+collectedAt: 2026-10-06T07:41:38Z
 loc:
   Python:
     code: 29856
@@ -175,4 +175,4 @@ total:
 ---
 
 ---
-{"id":403258069,"author":{"login":"lfnovo","id":579178,"node_id":"MDQ6VXNlcjU3OTE3OA==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDONDsQ184YCTrV","tag_name":"v1.15.0","target_commitish":"main","name":"v1.15.0 \u2014 Quiet Green, new providers and sturdier ingestion","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-04T21:31:01Z","updated_at":"2026-10-05T01:20:26Z","published_at":"2026-10-04T23:45:47Z","assets":[],"body":"**We recommend all users upgrade.** v1.15.0 brings the new \"Quiet Green\" visual identity, three new provider options (SiliconFlow, Z.ai, MiniMax text-to-speech), and the latest Esperanto, content-core and podcast-creator releases. Behind them is a long list of fixes to failures that used to be silent: podcasts that never appeared, sources stuck as \"Processing...\", workers that stalled, answers cut short. Validated through the full release process: backend and frontend suites, a fresh-install and an upgrade-from-1.14.0 test against the published images, and an end-to-end pass over the running app (API and UI), including podcasts on OpenAI, Anthropic, Gemini and DeepSeek.\n\n## \ud83d\udd12 Security\n\n- **Credential encryption now uses PBKDF2-HMAC-SHA256 (600k iterations) with versioned ciphertext.** New keys are written in the new `pbkdf2v1:` format, and existing keys keep decrypting. A one-shot `POST /api/credentials/migrate-encryption` upgrades stored keys (idempotent, fail-closed per record). See the downgrade note below (#1317, #1360)\n- Dependency security update: `next` 16.3.8 (critical RCE advisory in `next/og`; Open Notebook doesn't use `next/og`), `axios`, `postcss`, `brace-expansion`, and Python `anyio`, `pyjwt`, `tornado`, `urllib3`, `virtualenv`. Security floors are now pinned so a future lock can't resolve back to vulnerable versions (#1404, #1414)\n- The `pillow` override is gone: podcast-creator no longer pulls in moviepy, and content-core now requires `pillow >= 12.3.0` itself (#1440)\n\n## \u2728 New features\n\n- **\"Quiet Green\" visual identity.** A new design foundation co-designed with the community in Discussion #1202 (a token system for color, type, radius and shadow; Bricolage Grotesque, Instrument Sans and Spline Sans Mono), applied screen by screen: app shell, notebook workspace, sources library, dialogs, models, settings, podcasts and search. Works in light and dark themes (#1202)\n- **New providers:** **SiliconFlow** (hosted DeepSeek, Qwen, GLM and Kimi; mainland-China accounts set the credential's Base URL to `https://api.siliconflow.cn/v1`) and **Z.ai** (the GLM family), both with connection test and model discovery (#1409, #1437)\n- **MiniMax text-to-speech.** MiniMax voices can now be used in podcast speaker profiles (`speech-2.8-hd`, `speech-2.8-turbo`), and MiniMax moves to `MiniMax-M3` with a 1M-token context. Region-specific keys can set `MINIMAX_BASE_URL` / the credential Base URL (#1438)\n- **OpenDocument uploads:** `.odt`, `.ods` (one table per sheet) and `.odp` (one block per slide), plus `.htm` files (#1439)\n- **YouTube when YouTube blocks your server:** set `CCORE_YOUTUBE_PROXY` (a residential proxy) or `CCORE_YOUTUBE_COOKIES_FILE` (a browser `cookies.txt`) on the worker to get transcripts through. `CCORE_AUDIO_SEGMENT_MINUTES` controls how long audio is split before transcription (#1439)\n- **Podcasts in your language again:** episode profiles' `language` setting is honored for outlines and transcripts (#1334)\n- Podcasts sound more natural, with a short (~400 ms) pause between speaker turns, and audio combining no longer cuts off the end of a turn (#1446)\n- Podcast failures now explain themselves: a wrong speaker name, a voice the TTS model doesn't support, or a truncated response each get a specific hint (#1334)\n- The search page explains what text and vector search each cover; a \"New Source\" button sits on the empty sources state; the \"API Keys\" settings page is now \"Models\" (#1295, #1165, #1313)\n\n## \ud83d\udc1b Notable fixes\n\n- **Podcasts work on a fresh install.** The seeded speaker profiles ship without a voice model, and any unconfigured profile used to fail *every* podcast with `validation errors for SpeakerConfig`, even one generated with a fully configured profile (#1450)\n- **Podcasts work with models that don't support JSON schema output** (DeepSeek, older vLLM / llama.cpp servers). Outlines and transcripts use schema-validated output and fall back to plain JSON when an endpoint rejects it. Prompts no longer show the model a placeholder skeleton it could copy back, which used to abort episodes mid-generation (#1446, #1334)\n- **Failed sources fail once, with a clear reason.** An unreachable or missing page, a malformed URL, a corrupted file or a YouTube video without a transcript now fails on the first attempt with a specific message, instead of being retried up to 15 times (#1433)\n- **The worker no longer stalls** when a source or transformation is deleted before or while it's processed. Database failures are no longer misreported as \"not found\", so they stay retryable (#1363, #1364)\n- **Context-length errors aren't retried** for ~25 minutes in background jobs anymore; they fail immediately with an explanation (#1275)\n- **Ask answers are no longer truncated.** Its three stages were capped at 2000 output tokens; they now share the 8192 budget chat uses (#1221)\n- **An empty model reply is an error, not an answer**, in chat, source chat, Ask and transformations. A failed chat turn no longer leaves the question in the history, so retrying doesn't duplicate it (#1392)\n- **Source chat:** the streamed reply no longer repeats earlier answers, no longer drops or corrupts tokens across network chunks, and the context badge survives a page refresh (#1393, #1289)\n- **Transformations no longer run on sources with no text** and save an invented insight (#1394)\n- A partially failed embedding job no longer leaves a source looking embedded while search sees only part of it (#1390)\n- Vector search always returns results by descending similarity; text hits on insights open their parent source (#1306, #1339, #1345)\n- The YouTube transcript language preference in Settings is honored again (#1287)\n- Remote Crawl4AI servers that require a bearer token work again (`CRAWL4AI_API_TOKEN`) (#1269)\n- Clearing a notebook or transformation description now persists (#1396)\n- Passwords with non-ASCII characters work for API authentication (#1290)\n- Note editor follows the dark theme and shows list markers; long voice-model names no longer overflow profile cards; sidebar footer actions are aligned (#1294, #1300, #1259, #1288)\n- The Anthropic connection test no longer reports retired model ids as a permissions error (#1303)\n- `ESPERANTO_SSL_*` settings now apply to connection tests and model discovery (#1214)\n\n## \u26a0\ufe0f Behavior changes for self-hosters\n\n1. **Model calls now time out after 180 seconds by default.** Esperanto 2.28 enforces `ESPERANTO_LLM_TIMEOUT` on every provider. Before, most providers used their SDK default and **Ollama waited indefinitely**. If you run slow local models, raise it on the API and worker, e.g. `ESPERANTO_LLM_TIMEOUT=420`. Keep it under 600: the web UI gives up on a request after 10 minutes.\n2. **Back up your database before migrating credential encryption.** Versions before v1.15.0 can't read the new `pbkdf2v1:` format. Upgrading is safe (old keys keep working), but after you run the encryption migration, rolling back needs that backup.\n3. **Podcast outline and transcript default to 8192 output tokens** (were 3000 / 5000). If your outline or transcript model has a lower output limit (some older or local models stop at 4096), set the episode profile's **Max output tokens** below it.\n4. **Sources that used to \"complete\" with empty content now fail.** content-core 2.2 raises on extraction errors, so a page that couldn't be fetched shows up as a failed source with its reason instead of an empty one.\n5. **API: a database failure while loading a single record returns 500**, not 404, so clients can tell an outage from a missing record.\n6. **API passwords must be sent as UTF-8.** Clients that sent non-ASCII passwords as Latin-1 bytes need to switch.\n\n## \ud83d\ude4f Thanks\n\nThis release is mostly community work. Thank you:\n\n- **@alefbt**: podcast language instruction and the copyable-skeleton fix, with failure hints that actually match the failure (#1334)\n- **@GF-2025**: diagnosed and fixed the worker stalling on deleted sources (#1364)\n- **@SomSamantray**: versioned PBKDF2 credential encryption (#1360)\n- **@justadityaraj**: UTF-8 passwords, search results that open the right record, and insights after long generations (#1344, #1345, #1346)\n- **@Alphaxiaoteng**: dark-theme markdown editor, list markers, Anthropic connection test and vector search ordering (#1294, #1300, #1303, #1306)\n- **@hydraxman**: insight search hits and Anthropic-compatible podcast models (#1339, #1350)\n- **@pacocartones**: source chat stream parsing and surfaced retry warnings (#1289, #1342)\n- **@AugustoSandim**: search coverage docs and the \"Models\" settings rename (#1295, #1313)\n- **@bitsandbots**: auth docs, `allowedDevOrigins` support and quieter KaTeX warnings (#1189, #1190, #1208)\n- **@mvanhorn**: OpenAI-compatible base URL guidance and the Write Note editor (#1251, #1286)\n- **@gblue1223**: batched embedding inserts over one connection (#1293)\n- **@Creepyrishi**: no more retrying context-length errors (#1275)\n- **@dalexsys**: `ESPERANTO_SSL_*` for connection tests and discovery (#1214)\n- **@dyzur**, **@zivkidd1**: Ask's loading state no longer gets stuck (#1146, #1235)\n- **@thomaspockrandt**: \"New Source\" on the empty state (#1165)\n- **@fyshark**: source dialog action overlap (#1195)\n- **@Msparihar**: long voice-model badges (#1259)\n- **@Sure-Will**: sidebar footer alignment (#1288)\n- **@Dessalines39394**: the README star-history chart (#1262)\n- **@jeffersongoncalves**: SHA-pinned GitHub Actions and Dependabot (#1271)\n- **@Ercaner1988**: the Docker-to-native Windows migration guide (#1374)\n\nAnd thanks to everyone who reported issues, shared logs and reproduced bugs. Many of the fixes above started with a precise report.\n\n","mentions_count":22}
+{"id":403258069,"author":{"login":"lfnovo","id":579178,"node_id":"MDQ6VXNlcjU3OTE3OA==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDONDsQ184YCTrV","tag_name":"v1.15.0","target_commitish":"main","name":"v1.15.0 \u2014 Quiet Green, new providers and sturdier ingestion","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-04T21:31:01Z","updated_at":"2026-10-05T01:20:26Z","published_at":"2026-10-04T23:45:47Z","assets":[],"body":"**We recommend all users upgrade.** v1.15.0 brings the new \"Quiet Green\" visual identity, three new provider options (SiliconFlow, Z.ai, MiniMax text-to-speech), and the latest Esperanto, content-core and podcast-creator releases. Behind them is a long list of fixes to failures that used to be silent: podcasts that never appeared, sources stuck as \"Processing...\", workers that stalled, answers cut short. Validated through the full release process: backend and frontend suites, a fresh-install and an upgrade-from-1.14.0 test against the published images, and an end-to-end pass over the running app (API and UI), including podcasts on OpenAI, Anthropic, Gemini and DeepSeek.\n\n## \ud83d\udd12 Security\n\n- **Credential encryption now uses PBKDF2-HMAC-SHA256 (600k iterations) with versioned ciphertext.** New keys are written in the new `pbkdf2v1:` format, and existing keys keep decrypting. A one-shot `POST /api/credentials/migrate-encryption` upgrades stored keys (idempotent, fail-closed per record). See the downgrade note below (#1317, #1360)\n- Dependency security update: `next` 16.3.8 (critical RCE advisory in `next/og`; Open Notebook doesn't use `next/og`), `axios`, `postcss`, `brace-expansion`, and Python `anyio`, `pyjwt`, `tornado`, `urllib3`, `virtualenv`. Security floors are now pinned so a future lock can't resolve back to vulnerable versions (#1404, #1414)\n- The `pillow` override is gone: podcast-creator no longer pulls in moviepy, and content-core now requires `pillow >= 12.3.0` itself (#1440)\n\n## \u2728 New features\n\n- **\"Quiet Green\" visual identity.** A new design foundation co-designed with the community in Discussion #1202 (a token system for color, type, radius and shadow; Bricolage Grotesque, Instrument Sans and Spline Sans Mono), applied screen by screen: app shell, notebook workspace, sources library, dialogs, models, settings, podcasts and search. Works in light and dark themes (#1202)\n- **New providers:** **SiliconFlow** (hosted DeepSeek, Qwen, GLM and Kimi; mainland-China accounts set the credential's Base URL to `https://api.siliconflow.cn/v1`) and **Z.ai** (the GLM family), both with connection test and model discovery (#1409, #1437)\n- **MiniMax text-to-speech.** MiniMax voices can now be used in podcast speaker profiles (`speech-2.8-hd`, `speech-2.8-turbo`), and MiniMax moves to `MiniMax-M3` with a 1M-token context. Region-specific keys can set `MINIMAX_BASE_URL` / the credential Base URL (#1438)\n- **OpenDocument uploads:** `.odt`, `.ods` (one table per sheet) and `.odp` (one block per slide), plus `.htm` files (#1439)\n- **YouTube when YouTube blocks your server:** set `CCORE_YOUTUBE_PROXY` (a residential proxy) or `CCORE_YOUTUBE_COOKIES_FILE` (a browser `cookies.txt`) on the worker to get transcripts through. `CCORE_AUDIO_SEGMENT_MINUTES` controls how long audio is split before transcription (#1439)\n- **Podcasts in your language again:** episode profiles' `language` setting is honored for outlines and transcripts (#1334)\n- Podcasts sound more natural, with a short (~400 ms) pause between speaker turns, and audio combining no longer cuts off the end of a turn (#1446)\n- Podcast failures now explain themselves: a wrong speaker name, a voice the TTS model doesn't support, or a truncated response each get a specific hint (#1334)\n- The search page explains what text and vector search each cover; a \"New Source\" button sits on the empty sources state; the \"API Keys\" settings page is now \"Models\" (#1295, #1165, #1313)\n\n## \ud83d\udc1b Notable fixes\n\n- **Podcasts work on a fresh install.** The seeded speaker profiles ship without a voice model, and any unconfigured profile used to fail *every* podcast with `validation errors for SpeakerConfig`, even one generated with a fully configured profile (#1450)\n- **Podcasts work with models that don't support JSON schema output** (DeepSeek, older vLLM / llama.cpp servers). Outlines and transcripts use schema-validated output and fall back to plain JSON when an endpoint rejects it. Prompts no longer show the model a placeholder skeleton it could copy back, which used to abort episodes mid-generation (#1446, #1334)\n- **Failed sources fail once, with a clear reason.** An unreachable or missing page, a malformed URL, a corrupted file or a YouTube video without a transcript now fails on the first attempt with a specific message, instead of being retried up to 15 times (#1433)\n- **The worker no longer stalls** when a source or transformation is deleted before or while it's processed. Database failures are no longer misreported as \"not found\", so they stay retryable (#1363, #1364)\n- **Context-length errors aren't retried** for ~25 minutes in background jobs anymore; they fail immediately with an explanation (#1275)\n- **Ask answers are no longer truncated.** Its three stages were capped at 2000 output tokens; they now share the 8192 budget chat uses (#1221)\n- **An empty model reply is an error, not an answer**, in chat, source chat, Ask and transformations. A failed chat turn no longer leaves the question in the history, so retrying doesn't duplicate it (#1392)\n- **Source chat:** the streamed reply no longer repeats earlier answers, no longer drops or corrupts tokens across network chunks, and the context badge survives a page refresh (#1393, #1289)\n- **Transformations no longer run on sources with no text** and save an invented insight (#1394)\n- A partially failed embedding job no longer leaves a source looking embedded while search sees only part of it (#1390)\n- Vector search always returns results by descending similarity; text hits on insights open their parent source (#1306, #1339, #1345)\n- The YouTube transcript language preference in Settings is honored again (#1287)\n- Remote Crawl4AI servers that require a bearer token work again (`CRAWL4AI_API_TOKEN`) (#1269)\n- Clearing a notebook or transformation description now persists (#1396)\n- Passwords with non-ASCII characters work for API authentication (#1290)\n- Note editor follows the dark theme and shows list markers; long voice-model names no longer overflow profile cards; sidebar footer actions are aligned (#1294, #1300, #1259, #1288)\n- The Anthropic connection test no longer reports retired model ids as a permissions error (#1303)\n- `ESPERANTO_SSL_*` settings now apply to connection tests and model discovery (#1214)\n\n## \u26a0\ufe0f Behavior changes for self-hosters\n\n1. **Model calls now time out after 180 seconds by default.** Esperanto 2.28 enforces `ESPERANTO_LLM_TIMEOUT` on every provider. Before, most providers used their SDK default and **Ollama waited indefinitely**. If you run slow local models, raise it on the API and worker, e.g. `ESPERANTO_LLM_TIMEOUT=420`. Keep it under 600: the web UI gives up on a request after 10 minutes.\n2. **Back up your database before migrating credential encryption.** Versions before v1.15.0 can't read the new `pbkdf2v1:` format. Upgrading is safe (old keys keep working), but after you run the encryption migration, rolling back needs that backup.\n3. **Podcast outline and transcript default to 8192 output tokens** (were 3000 / 5000). If your outline or transcript model has a lower output limit (some older or local models stop at 4096), set the episode profile's **Max output tokens** below it.\n4. **Sources that used to \"complete\" with empty content now fail.** content-core 2.2 raises on extraction errors, so a page that couldn't be fetched shows up as a failed source with its reason instead of an empty one.\n5. **API: a database failure while loading a single record returns 500**, not 404, so clients can tell an outage from a missing record.\n6. **API passwords must be sent as UTF-8.** Clients that sent non-ASCII passwords as Latin-1 bytes need to switch.\n\n## \ud83d\ude4f Thanks\n\nThis release is mostly community work. Thank you:\n\n- **@alefbt**: podcast language instruction and the copyable-skeleton fix, with failure hints that actually match the failure (#1334)\n- **@GF-2025**: diagnosed and fixed the worker stalling on deleted sources (#1364)\n- **@SomSamantray**: versioned PBKDF2 credential encryption (#1360)\n- **@justadityaraj**: UTF-8 passwords, search results that open the right record, and insights after long generations (#1344, #1345, #1346)\n- **@Alphaxiaoteng**: dark-theme markdown editor, list markers, Anthropic connection test and vector search ordering (#1294, #1300, #1303, #1306)\n- **@hydraxman**: insight search hits and Anthropic-compatible podcast models (#1339, #1350)\n- **@pacocartones**: source chat stream parsing and surfaced retry warnings (#1289, #1342)\n- **@AugustoSandim**: search coverage docs and the \"Models\" settings rename (#1295, #1313)\n- **@bitsandbots**: auth docs, `allowedDevOrigins` support and quieter KaTeX warnings (#1189, #1190, #1208)\n- **@mvanhorn**: OpenAI-compatible base URL guidance and the Write Note editor (#1251, #1286)\n- **@gblue1223**: batched embedding inserts over one connection (#1293)\n- **@Creepyrishi**: no more retrying context-length errors (#1275)\n- **@dalexsys**: `ESPERANTO_SSL_*` for connection tests and discovery (#1214)\n- **@dyzur**, **@zivkidd1**: Ask's loading state no longer gets stuck (#1146, #1235)\n- **@thomaspockrandt**: \"New Source\" on the empty state (#1165)\n- **@fyshark**: source dialog action overlap (#1195)\n- **@Msparihar**: long voice-model badges (#1259)\n- **@Sure-Will**: sidebar footer alignment (#1288)\n- **@Dessalines39394**: the README star-history chart (#1262)\n- **@jeffersongoncalves**: SHA-pinned GitHub Actions and Dependabot (#1271)\n- **@Ercaner1988**: the Docker-to-native Windows migration guide (#1374)\n\nAnd thanks to everyone who reported issues, shared logs and reproduced bugs. Many of the fixes above started with a precise report.\n\n","reactions":{"total_count":3,"+1":0,"-1":0,"laugh":0,"hooray":3,"confused":0,"heart":0,"rocket":0,"eyes":0},"mentions_count":22}

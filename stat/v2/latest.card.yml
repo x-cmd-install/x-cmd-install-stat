@@ -7,7 +7,7 @@ about:
   latestVersion: "2.3.3"
   latestRelease: "2.3.3"
   latestPrerelease: "2.0.0-rc1"
-  collectedAt: 2026-10-05T06:38:09Z
+  collectedAt: 2026-10-06T07:25:54Z
 timeline:
   created: 2017-11-20
   lastCommit: 2026-10-03
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-07-24
   lastPrerelease: 2018-01-05
 popularity:
-  star: 9769
+  star: 9768
   watcher: 66
   fork: 942
   release: 82
@@ -36,7 +36,7 @@ language:
 totalBytes: 2759242
 recent:
   last30d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 0
     mergedPR: 7
     openPR: 9
@@ -44,7 +44,7 @@ recent:
     openIssue: 4
     commit: 6
   last60d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 0
     mergedPR: 19
     openPR: 12
@@ -52,15 +52,15 @@ recent:
     openIssue: 10
     commit: 16
   last90d:
-    since: 2026-07-07
+    since: 2026-07-08
     release: 1
-    mergedPR: 46
+    mergedPR: 44
     openPR: 13
     closedIssue: 7
     openIssue: 20
     commit: 46
   last180d:
-    since: 2026-04-08
+    since: 2026-04-09
     release: 4
     mergedPR: 185
     openPR: 17
@@ -68,21 +68,21 @@ recent:
     openIssue: 29
     commit: 193
   last360d:
-    since: 2025-10-10
+    since: 2025-10-11
     release: 10
-    mergedPR: 461
+    mergedPR: 460
     openPR: 17
     closedIssue: 66
     openIssue: 53
     commit: 488
   last720d:
-    since: 2024-10-15
+    since: 2024-10-16
     release: 22
-    mergedPR: 1054
+    mergedPR: 1053
     openPR: 17
-    closedIssue: 206
+    closedIssue: 205
     openIssue: 109
-    commit: 1189
+    commit: 1186
 total:
   release: 82
   mergedPR: 2354
@@ -92,7 +92,7 @@ total:
   commit: 3062
 ---
 path: /home/runner/.x-repo/github.com/miniflux/v2
-collectedAt: 2026-10-05T06:38:17Z
+collectedAt: 2026-10-06T07:25:58Z
 loc:
   Go:
     code: 66562
@@ -170,15 +170,23 @@ total:
   blanks: 13578
   files: 555
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/miniflux/v2
-  commit: 4e6d7f93b2e9c036bd7a0b5299d0bd70f36718b4
+  commit: c52bdef6e9811f7c20cebc034a6c0ec6799dc6df
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
-score: 6.7
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+score: 6.9
 checks:
+  - name: Code-Review
+    score: 5
+    reason: Found 10/20 approved changesets -- score normalized to 5
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10
@@ -191,14 +199,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Code-Review
-    score: 3
-    reason: Found 8/23 approved changesets -- score normalized to 3
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -207,8 +207,8 @@ checks:
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:31'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:30'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:31'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/build_binaries.yml:3'
       - 'Warn: no topLevel permission defined: .github/workflows/codeberg_mirror.yml:1'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/codeql-analysis.yml:3'
@@ -223,6 +223,12 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -231,12 +237,6 @@ checks:
       - 'Info: GoBuiltInFuzzer integration found: internal/reader/parser/parser_test.go:32'
       - 'Info: GoBuiltInFuzzer integration found: internal/reader/sanitizer/sanitizer_test.go:42'
       - 'Info: GoBuiltInFuzzer integration found: internal/reader/xml/decoder_test.go:225'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
@@ -255,6 +255,11 @@ checks:
       - 'Warn: release artifact 2.3.1 does not have provenance: https://api.github.com/repos/miniflux/v2/releases/331776084'
       - 'Warn: release artifact 2.3.0 does not have provenance: https://api.github.com/repos/miniflux/v2/releases/323549380'
       - 'Warn: release artifact 2.2.19 does not have provenance: https://api.github.com/repos/miniflux/v2/releases/305352154'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker.yml:14'
   - name: Pinned-Dependencies
     score: 6
     reason: dependency not pinned by hash detected -- score normalized to 6
@@ -263,7 +268,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: packaging/docker/alpine/Dockerfile:1: pin your Docker image by updating docker.io/library/golang:alpine3.23 to docker.io/library/golang:alpine3.23@sha256:0908ac9b9319e09d7c238aabe914e0395c51d63c4e3d0ae8c554fda9158a5769'
       - 'Warn: containerImage not pinned by hash: packaging/docker/alpine/Dockerfile:7: pin your Docker image by updating docker.io/library/alpine:3.24 to docker.io/library/alpine:3.24@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6'
       - 'Warn: containerImage not pinned by hash: packaging/docker/distroless/Dockerfile:1: pin your Docker image by updating docker.io/library/golang:trixie to docker.io/library/golang:trixie@sha256:3b77fc618ec235a1ab412de7737f120dd507c57e8d87de4cbb7994fb94275ed5'
-      - 'Warn: containerImage not pinned by hash: packaging/docker/distroless/Dockerfile:6: pin your Docker image by updating gcr.io/distroless/base-debian13:nonroot to gcr.io/distroless/base-debian13:nonroot@sha256:0896741ba5bafd3ac87ea025a5f578952f2d238ddc3614cb368acc983a687aa2'
+      - 'Warn: containerImage not pinned by hash: packaging/docker/distroless/Dockerfile:6: pin your Docker image by updating gcr.io/distroless/base-debian13:nonroot to gcr.io/distroless/base-debian13:nonroot@sha256:a0d70d6a97cd697d9362bc2aae4a6560dd65817e365d0043b07325a97975dc91'
       - 'Warn: containerImage not pinned by hash: packaging/rpm/Dockerfile:1: pin your Docker image by updating golang:1 to golang:1@sha256:e0174e51e81218523251d85d248a90d24c3d5e81543b4f07a5d66229397db190'
       - 'Warn: containerImage not pinned by hash: packaging/rpm/Dockerfile:7: pin your Docker image by updating rockylinux:9 to rockylinux:9@sha256:d7be1c094cc5845ee815d4632fe377514ee6ebcf8efaed6892889657e5ddaaa6'
       - 'Warn: npmCommand not pinned by hash: .github/workflows/linters.yml:18'
@@ -276,10 +281,5 @@ checks:
     reason: SAST tool detected but not run on all commits
     details:
       - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 23 commits out of 30 are checked with a SAST tool'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker.yml:14'
+      - 'Warn: 22 commits out of 30 are checked with a SAST tool'
 ---

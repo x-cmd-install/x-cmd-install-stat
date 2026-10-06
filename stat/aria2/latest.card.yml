@@ -7,7 +7,7 @@ about:
   latestVersion: "release-1.37.0"
   latestRelease: "release-1.37.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-05T05:26:17Z
+  collectedAt: 2026-10-06T06:10:55Z
 timeline:
   created: 2010-11-27
   lastCommit: 2026-06-25
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2023-11-15
   lastPrerelease: 
 popularity:
-  star: 42956
+  star: 42961
   watcher: 738
   fork: 3945
   release: 24
@@ -32,23 +32,23 @@ language:
 totalBytes: 6015930
 recent:
   last30d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 0
     mergedPR: 0
     openPR: 2
     closedIssue: 0
-    openIssue: 4
+    openIssue: 3
     commit: 0
   last60d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 0
     mergedPR: 0
-    openPR: 4
+    openPR: 3
     closedIssue: 0
-    openIssue: 22
+    openIssue: 21
     commit: 0
   last90d:
-    since: 2026-07-07
+    since: 2026-07-08
     release: 0
     mergedPR: 0
     openPR: 9
@@ -56,7 +56,7 @@ recent:
     openIssue: 25
     commit: 0
   last180d:
-    since: 2026-04-08
+    since: 2026-04-09
     release: 0
     mergedPR: 2
     openPR: 14
@@ -64,7 +64,7 @@ recent:
     openIssue: 32
     commit: 2
   last360d:
-    since: 2025-10-10
+    since: 2025-10-11
     release: 0
     mergedPR: 5
     openPR: 18
@@ -72,7 +72,7 @@ recent:
     openIssue: 48
     commit: 5
   last720d:
-    since: 2024-10-15
+    since: 2024-10-16
     release: 0
     mergedPR: 6
     openPR: 21
@@ -88,7 +88,7 @@ total:
   commit: 5447
 ---
 path: /home/runner/.x-repo/github.com/aria2/aria2
-collectedAt: 2026-10-05T05:26:32Z
+collectedAt: 2026-10-06T06:11:07Z
 loc:
   Cpp:
     code: 93732
@@ -181,13 +181,13 @@ total:
   blanks: 28188
   files: 1272
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/aria2/aria2
   commit: 9e7273583f83e881e3ec067b523ba88724088d2f
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 3.3
 checks:
   - name: Code-Review
@@ -236,6 +236,10 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -244,16 +248,12 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/android.yml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/aria2/aria2/android.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/android.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/aria2/aria2/android.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/aria2/aria2/build.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.android:13: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:b8b6ee6aa931ecd9d0d952abc34dc0e5f7c6a30c6bb71b079fe399fde0329c02'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.mingw:12: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:b8b6ee6aa931ecd9d0d952abc34dc0e5f7c6a30c6bb71b079fe399fde0329c02'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.android:13: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.mingw:12: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401'
       - 'Warn: containerImage not pinned by hash: Dockerfile.raspberrypi:1: pin your Docker image by updating ubuntu:trusty to ubuntu:trusty@sha256:64483f3496c1373bfd55348e88694d1c4d0c9b660dee6bfef5e12f43b9933b30'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 containerImage dependencies pinned'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.

@@ -7,7 +7,7 @@ about:
   latestVersion: "0.11.128"
   latestRelease: "0.11.128"
   latestPrerelease: "0.11.78"
-  collectedAt: 2026-10-05T06:00:21Z
+  collectedAt: 2026-10-06T06:50:17Z
 timeline:
   created: 2020-02-26
   lastCommit: 2026-10-03
@@ -29,7 +29,7 @@ language:
 totalBytes: 1060898
 recent:
   last30d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 2
     mergedPR: 0
     openPR: 0
@@ -37,23 +37,23 @@ recent:
     openIssue: 1
     commit: 4
   last60d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 12
-    mergedPR: 13
+    mergedPR: 12
     openPR: 2
     closedIssue: 0
     openIssue: 2
     commit: 41
   last90d:
-    since: 2026-07-07
-    release: 20
+    since: 2026-07-08
+    release: 19
     mergedPR: 16
     openPR: 2
     closedIssue: 0
     openIssue: 3
     commit: 46
   last180d:
-    since: 2026-04-08
+    since: 2026-04-09
     release: 36
     mergedPR: 20
     openPR: 2
@@ -61,7 +61,7 @@ recent:
     openIssue: 4
     commit: 78
   last360d:
-    since: 2025-10-10
+    since: 2025-10-11
     release: 78
     mergedPR: 35
     openPR: 3
@@ -69,7 +69,7 @@ recent:
     openIssue: 8
     commit: 164
   last720d:
-    since: 2024-10-15
+    since: 2024-10-16
     release: 100
     mergedPR: 64
     openPR: 3
@@ -85,7 +85,7 @@ total:
   commit: 1221
 ---
 path: /home/runner/.x-repo/github.com/alexellis/arkade
-collectedAt: 2026-10-05T06:00:25Z
+collectedAt: 2026-10-06T06:50:19Z
 loc:
   Go:
     code: 320944
@@ -143,28 +143,24 @@ total:
   blanks: 46496
   files: 1278
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/alexellis/arkade
-  commit: 0a0a800fd7554d4eddb1856f9ef8a21214e95bab
+  commit: 90173cc580b31cd46ec01d807b37dc6f9b9fb55f
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 3.8
 checks:
-  - name: Code-Review
-    score: 0
-    reason: Found 0/18 approved changesets -- score normalized to 0
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -177,6 +173,10 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/e2e-url-checker.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/publish.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Code-Review
+    score: 0
+    reason: Found 0/19 approved changesets -- score normalized to 0
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -198,17 +198,21 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/publish.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/alexellis/arkade/publish.yml/master?enable=pin'
       - 'Info:   0 out of   6 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -217,28 +221,24 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
+      - 'Warn: release artifact 0.11.128 not signed: https://api.github.com/repos/alexellis/arkade/releases/402429409'
+      - 'Warn: release artifact 0.11.127 not signed: https://api.github.com/repos/alexellis/arkade/releases/402408269'
       - 'Warn: release artifact 0.11.126 not signed: https://api.github.com/repos/alexellis/arkade/releases/378911265'
       - 'Warn: release artifact 0.11.125 not signed: https://api.github.com/repos/alexellis/arkade/releases/378500798'
       - 'Warn: release artifact 0.11.124 not signed: https://api.github.com/repos/alexellis/arkade/releases/374862868'
-      - 'Warn: release artifact 0.11.123 not signed: https://api.github.com/repos/alexellis/arkade/releases/374609373'
-      - 'Warn: release artifact 0.11.122 not signed: https://api.github.com/repos/alexellis/arkade/releases/373550488'
+      - 'Warn: release artifact 0.11.128 does not have provenance: https://api.github.com/repos/alexellis/arkade/releases/402429409'
+      - 'Warn: release artifact 0.11.127 does not have provenance: https://api.github.com/repos/alexellis/arkade/releases/402408269'
       - 'Warn: release artifact 0.11.126 does not have provenance: https://api.github.com/repos/alexellis/arkade/releases/378911265'
       - 'Warn: release artifact 0.11.125 does not have provenance: https://api.github.com/repos/alexellis/arkade/releases/378500798'
       - 'Warn: release artifact 0.11.124 does not have provenance: https://api.github.com/repos/alexellis/arkade/releases/374862868'
-      - 'Warn: release artifact 0.11.123 does not have provenance: https://api.github.com/repos/alexellis/arkade/releases/374609373'
-      - 'Warn: release artifact 0.11.122 does not have provenance: https://api.github.com/repos/alexellis/arkade/releases/373550488'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
-      - 'Warn: 0 commits out of 20 are checked with a SAST tool'
+      - 'Warn: 0 commits out of 18 are checked with a SAST tool'
 ---
-{"id":402429409,"author":{"login":"alexellis","id":6358735,"node_id":"MDQ6VXNlcjYzNTg3MzU=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDODn8jl84X_JXh","tag_name":"0.11.128","target_commitish":"master","name":"Document why mc uses BinaryTemplate","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-03T08:53:20Z","updated_at":"2026-10-03T09:14:12Z","published_at":"2026-10-03T09:12:48Z","assets":[{"id":607511871,"node_id":"RA_kwDODn8jl84kNeU_","name":"arkade","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":14962850,"digest":"sha256:8494b22b294c811707498fb64728a7f4b2c2cce2ffccd0b6d85f1573e3eae0b7","download_count":1687,"created_at":"2026-10-03T09:13:49Z","updated_at":"2026-10-03T09:13:51Z"},{"id":607511887,"node_id":"RA_kwDODn8jl84kNeVP","name":"arkade-arm64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":13893794,"digest":"sha256:5782d431a0c564cb0a61721141fcbd08e78d7d0b59f505556b2a13facc203f00","download_count":111,"created_at":"2026-10-03T09:13:51Z","updated_at":"2026-10-03T09:13:52Z"},{"id":607511917,"node_id":"RA_kwDODn8jl84kNeVt","name":"arkade-arm64.sha256","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":83,"digest":"sha256:a757f30a04dca9e8360f5cef46b2e1fdabe5cf61bdace46c874e48747cb2c25f","download_count":10,"created_at":"2026-10-03T09:13:52Z","updated_at":"2026-10-03T09:13:52Z"},{"id":607511931,"node_id":"RA_kwDODn8jl84kNeV7","name":"arkade-armhf","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":14352546,"digest":"sha256:bd7c4f7e9ac828ce6f3a17ee130822b15ebb6645c5d80fe97438331f7fea9d1f","download_count":4,"created_at":"2026-10-03T09:13:53Z","updated_at":"2026-10-03T09:13:54Z"},{"id":607511951,"node_id":"RA_kwDODn8jl84kNeWP","name":"arkade-armhf.sha256","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":83,"digest":"sha256:8cf74e8b306f79c9e2b411bb1e3b2bc08318619d6a8a7a68b34530c5c2d66751","download_count":4,"created_at":"2026-10-03T09:13:54Z","updated_at":"2026-10-03T09:13:54Z"},{"id":607511963,"node_id":"RA_kwDODn8jl84kNeWb","name":"arkade-darwin","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":15289600,"digest":"sha256:22b88aa511eafe200fb0a4538b642457468ec450c23fc639b8f26afd0fbcb8f1","download_count":2,"created_at":"2026-10-03T09:13:55Z","updated_at":"2026-10-03T09:13:56Z"},{"id":607512006,"node_id":"RA_kwDODn8jl84kNeXG","name":"arkade-darwin-arm64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":14207442,"digest":"sha256:8dfae6e9732be7dafac9e0f9ec5e6f2a07fb8bcc3a9ffdfab6ceae54d9d4658e","download_count":8,"created_at":"2026-10-03T09:13:56Z","updated_at":"2026-10-03T09:13:57Z"},{"id":607512036,"node_id":"RA_kwDODn8jl84kNeXk","name":"arkade-darwin-arm64.sha256","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":90,"digest":"sha256:af767365419b2500e708681637f2171aca96b832fa4213377055971d12a2a5df","download_count":3,"created_at":"2026-10-03T09:13:57Z","updated_at":"2026-10-03T09:13:58Z"},{"id":607512052,"node_id":"RA_kwDODn8jl84kNeX0","name":"arkade-darwin.sha256","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":84,"digest":"sha256:e1f94def5b084737f566ed7054592ff77defb9248cacf30f4b4135a5230dab80","download_count":5,"created_at":"2026-10-03T09:13:58Z","updated_at":"2026-10-03T09:13:58Z"},{"id":607512077,"node_id":"RA_kwDODn8jl84kNeYN","name":"arkade.exe","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":15490560,"digest":"sha256:bf7dda2789a2c28bcf17f263731d7c551e2dce4e48348b107d9e422a46721f5b","download_count":8,"created_at":"2026-10-03T09:13:58Z","updated_at":"2026-10-03T09:13:59Z"},{"id":607512127,"node_id":"RA_kwDODn8jl84kNeY_","name":"arkade.exe.sha256","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":81,"digest":"sha256:5edf46fb866c4e227a806ad135f466ff3f61cdf2fcdd5414df59eb87a06fc39f","download_count":3,"created_at":"2026-10-03T09:14:00Z","updated_at":"2026-10-03T09:14:00Z"},{"id":607512149,"node_id":"RA_kwDODn8jl84kNeZV","name":"arkade.sha256","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":77,"digest":"sha256:105a2416088cc83fd90438e0e00ebcbffa2e5cdc44fa2857321ade323d64a08c","download_count":14,"created_at":"2026-10-03T09:14:00Z","updated_at":"2026-10-03T09:14:00Z"}],"body":"Changelog for 0.11.128:\n\nCommits\n90173cc580b31cd46ec01d807b37dc6f9b9fb55f Document why mc uses BinaryTemplate by @alexellis\ne49d18b29dd6d56e798079a684bb45c7f40f6cf2 Fix mc download after MinIO retired dl.min.io by @alexellis\n25311ba40d7650a4e3011e844d169e85499d394d Bump dependencies to latest patch versions by @alexellis\n\nChanges: https://github.com/alexellis/arkade/compare/0.11.127...0.11.128\n\nGenerated by [Derek](https://github.com/alexellis/derek/)\n","mentions_count":1}
+{"id":402429409,"author":{"login":"alexellis","id":6358735,"node_id":"MDQ6VXNlcjYzNTg3MzU=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDODn8jl84X_JXh","tag_name":"0.11.128","target_commitish":"master","name":"Document why mc uses BinaryTemplate","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-03T08:53:20Z","updated_at":"2026-10-03T09:14:12Z","published_at":"2026-10-03T09:12:48Z","assets":[{"id":607511871,"node_id":"RA_kwDODn8jl84kNeU_","name":"arkade","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":14962850,"digest":"sha256:8494b22b294c811707498fb64728a7f4b2c2cce2ffccd0b6d85f1573e3eae0b7","download_count":4983,"created_at":"2026-10-03T09:13:49Z","updated_at":"2026-10-03T09:13:51Z"},{"id":607511887,"node_id":"RA_kwDODn8jl84kNeVP","name":"arkade-arm64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":13893794,"digest":"sha256:5782d431a0c564cb0a61721141fcbd08e78d7d0b59f505556b2a13facc203f00","download_count":269,"created_at":"2026-10-03T09:13:51Z","updated_at":"2026-10-03T09:13:52Z"},{"id":607511917,"node_id":"RA_kwDODn8jl84kNeVt","name":"arkade-arm64.sha256","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":83,"digest":"sha256:a757f30a04dca9e8360f5cef46b2e1fdabe5cf61bdace46c874e48747cb2c25f","download_count":10,"created_at":"2026-10-03T09:13:52Z","updated_at":"2026-10-03T09:13:52Z"},{"id":607511931,"node_id":"RA_kwDODn8jl84kNeV7","name":"arkade-armhf","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":14352546,"digest":"sha256:bd7c4f7e9ac828ce6f3a17ee130822b15ebb6645c5d80fe97438331f7fea9d1f","download_count":5,"created_at":"2026-10-03T09:13:53Z","updated_at":"2026-10-03T09:13:54Z"},{"id":607511951,"node_id":"RA_kwDODn8jl84kNeWP","name":"arkade-armhf.sha256","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":83,"digest":"sha256:8cf74e8b306f79c9e2b411bb1e3b2bc08318619d6a8a7a68b34530c5c2d66751","download_count":4,"created_at":"2026-10-03T09:13:54Z","updated_at":"2026-10-03T09:13:54Z"},{"id":607511963,"node_id":"RA_kwDODn8jl84kNeWb","name":"arkade-darwin","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":15289600,"digest":"sha256:22b88aa511eafe200fb0a4538b642457468ec450c23fc639b8f26afd0fbcb8f1","download_count":3,"created_at":"2026-10-03T09:13:55Z","updated_at":"2026-10-03T09:13:56Z"},{"id":607512006,"node_id":"RA_kwDODn8jl84kNeXG","name":"arkade-darwin-arm64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":14207442,"digest":"sha256:8dfae6e9732be7dafac9e0f9ec5e6f2a07fb8bcc3a9ffdfab6ceae54d9d4658e","download_count":13,"created_at":"2026-10-03T09:13:56Z","updated_at":"2026-10-03T09:13:57Z"},{"id":607512036,"node_id":"RA_kwDODn8jl84kNeXk","name":"arkade-darwin-arm64.sha256","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":90,"digest":"sha256:af767365419b2500e708681637f2171aca96b832fa4213377055971d12a2a5df","download_count":3,"created_at":"2026-10-03T09:13:57Z","updated_at":"2026-10-03T09:13:58Z"},{"id":607512052,"node_id":"RA_kwDODn8jl84kNeX0","name":"arkade-darwin.sha256","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":84,"digest":"sha256:e1f94def5b084737f566ed7054592ff77defb9248cacf30f4b4135a5230dab80","download_count":6,"created_at":"2026-10-03T09:13:58Z","updated_at":"2026-10-03T09:13:58Z"},{"id":607512077,"node_id":"RA_kwDODn8jl84kNeYN","name":"arkade.exe","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":15490560,"digest":"sha256:bf7dda2789a2c28bcf17f263731d7c551e2dce4e48348b107d9e422a46721f5b","download_count":14,"created_at":"2026-10-03T09:13:58Z","updated_at":"2026-10-03T09:13:59Z"},{"id":607512127,"node_id":"RA_kwDODn8jl84kNeY_","name":"arkade.exe.sha256","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":81,"digest":"sha256:5edf46fb866c4e227a806ad135f466ff3f61cdf2fcdd5414df59eb87a06fc39f","download_count":3,"created_at":"2026-10-03T09:14:00Z","updated_at":"2026-10-03T09:14:00Z"},{"id":607512149,"node_id":"RA_kwDODn8jl84kNeZV","name":"arkade.sha256","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"binary/octet-stream","state":"uploaded","size":77,"digest":"sha256:105a2416088cc83fd90438e0e00ebcbffa2e5cdc44fa2857321ade323d64a08c","download_count":17,"created_at":"2026-10-03T09:14:00Z","updated_at":"2026-10-03T09:14:00Z"}],"body":"Changelog for 0.11.128:\n\nCommits\n90173cc580b31cd46ec01d807b37dc6f9b9fb55f Document why mc uses BinaryTemplate by @alexellis\ne49d18b29dd6d56e798079a684bb45c7f40f6cf2 Fix mc download after MinIO retired dl.min.io by @alexellis\n25311ba40d7650a4e3011e844d169e85499d394d Bump dependencies to latest patch versions by @alexellis\n\nChanges: https://github.com/alexellis/arkade/compare/0.11.127...0.11.128\n\nGenerated by [Derek](https://github.com/alexellis/derek/)\n","mentions_count":1}

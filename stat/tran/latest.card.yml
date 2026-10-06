@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.1.43"
   latestRelease: "v0.1.43"
   latestPrerelease: ""
-  collectedAt: 2026-10-05T06:03:29Z
+  collectedAt: 2026-10-06T06:43:46Z
 timeline:
   created: 2022-01-26
   lastCommit: 2025-07-08
@@ -32,7 +32,7 @@ language:
 totalBytes: 178340
 recent:
   last30d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 0
     mergedPR: 0
     openPR: 0
@@ -40,7 +40,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 0
     mergedPR: 0
     openPR: 0
@@ -48,7 +48,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-07
+    since: 2026-07-08
     release: 0
     mergedPR: 0
     openPR: 0
@@ -56,7 +56,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-08
+    since: 2026-04-09
     release: 0
     mergedPR: 0
     openPR: 0
@@ -64,7 +64,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-10
+    since: 2025-10-11
     release: 0
     mergedPR: 0
     openPR: 1
@@ -72,7 +72,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-15
+    since: 2024-10-16
     release: 0
     mergedPR: 1
     openPR: 2
@@ -88,7 +88,7 @@ total:
   commit: 263
 ---
 path: /home/runner/.x-repo/github.com/abdfnx/tran
-collectedAt: 2026-10-05T06:03:29Z
+collectedAt: 2026-10-06T06:43:47Z
 loc:
   Go:
     code: 5391
@@ -146,13 +146,13 @@ total:
   blanks: 1632
   files: 79
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/abdfnx/tran
   commit: 3d27d9b833b0958a211424733ab0dadaf5934feb
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 4.6
 checks:
   - name: Maintained
@@ -163,14 +163,6 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Security-Policy
-    score: 4
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: .github/SECURITY.md:1'
-      - 'Warn: no linked content found'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: .github/SECURITY.md:1'
-      - 'Info: Found text in security policy: .github/SECURITY.md:1'
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
@@ -179,6 +171,14 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Security-Policy
+    score: 4
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: .github/SECURITY.md:1'
+      - 'Warn: no linked content found'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: .github/SECURITY.md:1'
+      - 'Info: Found text in security policy: .github/SECURITY.md:1'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -204,20 +204,38 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v0.1.43 not signed: https://api.github.com/repos/abdfnx/tran/releases/73597722'
+      - 'Warn: release artifact v0.1.42 not signed: https://api.github.com/repos/abdfnx/tran/releases/73420288'
+      - 'Warn: release artifact v0.1.41 not signed: https://api.github.com/repos/abdfnx/tran/releases/73284761'
+      - 'Warn: release artifact v0.1.4 not signed: https://api.github.com/repos/abdfnx/tran/releases/73283947'
+      - 'Warn: release artifact v0.1.31 not signed: https://api.github.com/repos/abdfnx/tran/releases/64469121'
+      - 'Warn: release artifact v0.1.43 does not have provenance: https://api.github.com/repos/abdfnx/tran/releases/73597722'
+      - 'Warn: release artifact v0.1.42 does not have provenance: https://api.github.com/repos/abdfnx/tran/releases/73420288'
+      - 'Warn: release artifact v0.1.41 does not have provenance: https://api.github.com/repos/abdfnx/tran/releases/73284761'
+      - 'Warn: release artifact v0.1.4 does not have provenance: https://api.github.com/repos/abdfnx/tran/releases/73283947'
+      - 'Warn: release artifact v0.1.31 does not have provenance: https://api.github.com/repos/abdfnx/tran/releases/64469121'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:73: update your workflow using https://app.stepsecurity.io/secureworkflow/abdfnx/tran/ci.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:89: update your workflow using https://app.stepsecurity.io/secureworkflow/abdfnx/tran/ci.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:92: update your workflow using https://app.stepsecurity.io/secureworkflow/abdfnx/tran/ci.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:97: update your workflow using https://app.stepsecurity.io/secureworkflow/abdfnx/tran/ci.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:113: update your workflow using https://app.stepsecurity.io/secureworkflow/abdfnx/tran/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/abdfnx/tran/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/abdfnx/tran/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:38: update your workflow using https://app.stepsecurity.io/secureworkflow/abdfnx/tran/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:41: update your workflow using https://app.stepsecurity.io/secureworkflow/abdfnx/tran/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:59: update your workflow using https://app.stepsecurity.io/secureworkflow/abdfnx/tran/ci.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:73: update your workflow using https://app.stepsecurity.io/secureworkflow/abdfnx/tran/ci.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:89: update your workflow using https://app.stepsecurity.io/secureworkflow/abdfnx/tran/ci.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:92: update your workflow using https://app.stepsecurity.io/secureworkflow/abdfnx/tran/ci.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:97: update your workflow using https://app.stepsecurity.io/secureworkflow/abdfnx/tran/ci.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:113: update your workflow using https://app.stepsecurity.io/secureworkflow/abdfnx/tran/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:27: update your workflow using https://app.stepsecurity.io/secureworkflow/abdfnx/tran/codeql.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:30: update your workflow using https://app.stepsecurity.io/secureworkflow/abdfnx/tran/codeql.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:37: update your workflow using https://app.stepsecurity.io/secureworkflow/abdfnx/tran/codeql.yml/main?enable=pin'
@@ -242,29 +260,11 @@ checks:
       - 'Info:   0 out of   3 containerImage dependencies pinned'
       - 'Info:   0 out of   2 downloadThenRun dependencies pinned'
       - 'Info:   0 out of   1 goCommand dependencies pinned'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v0.1.43 not signed: https://api.github.com/repos/abdfnx/tran/releases/73597722'
-      - 'Warn: release artifact v0.1.42 not signed: https://api.github.com/repos/abdfnx/tran/releases/73420288'
-      - 'Warn: release artifact v0.1.41 not signed: https://api.github.com/repos/abdfnx/tran/releases/73284761'
-      - 'Warn: release artifact v0.1.4 not signed: https://api.github.com/repos/abdfnx/tran/releases/73283947'
-      - 'Warn: release artifact v0.1.31 not signed: https://api.github.com/repos/abdfnx/tran/releases/64469121'
-      - 'Warn: release artifact v0.1.43 does not have provenance: https://api.github.com/repos/abdfnx/tran/releases/73597722'
-      - 'Warn: release artifact v0.1.42 does not have provenance: https://api.github.com/repos/abdfnx/tran/releases/73420288'
-      - 'Warn: release artifact v0.1.41 does not have provenance: https://api.github.com/repos/abdfnx/tran/releases/73284761'
-      - 'Warn: release artifact v0.1.4 does not have provenance: https://api.github.com/repos/abdfnx/tran/releases/73283947'
-      - 'Warn: release artifact v0.1.31 does not have provenance: https://api.github.com/repos/abdfnx/tran/releases/64469121'
   - name: SAST
     score: 7
     reason: SAST tool detected but not run on all commits

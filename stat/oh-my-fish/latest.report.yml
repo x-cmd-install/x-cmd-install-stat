@@ -7,7 +7,7 @@ about:
   latestVersion: "v8"
   latestRelease: "v8"
   latestPrerelease: ""
-  collectedAt: 2026-10-05T06:44:57Z
+  collectedAt: 2026-10-06T07:22:39Z
 timeline:
   created: 2015-09-03
   lastCommit: 2026-09-30
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-04-07
   lastPrerelease: 
 popularity:
-  star: 11397
+  star: 11396
   watcher: 125
   fork: 806
   release: 7
@@ -28,7 +28,7 @@ language:
 totalBytes: 103606
 recent:
   last30d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 0
     mergedPR: 1
     openPR: 1
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 1
   last60d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 0
     mergedPR: 3
     openPR: 5
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 4
   last90d:
-    since: 2026-07-07
+    since: 2026-07-08
     release: 0
     mergedPR: 3
     openPR: 5
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 4
   last180d:
-    since: 2026-04-08
+    since: 2026-04-09
     release: 0
     mergedPR: 4
     openPR: 5
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 12
   last360d:
-    since: 2025-10-10
+    since: 2025-10-11
     release: 1
     mergedPR: 5
     openPR: 5
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 13
   last720d:
-    since: 2024-10-15
+    since: 2024-10-16
     release: 1
     mergedPR: 11
     openPR: 5
@@ -84,7 +84,7 @@ total:
   commit: 1817
 ---
 path: /home/runner/.x-repo/github.com/oh-my-fish/oh-my-fish
-collectedAt: 2026-10-05T06:44:58Z
+collectedAt: 2026-10-06T07:22:39Z
 loc:
   Fish:
     code: 2700
@@ -117,37 +117,31 @@ total:
   blanks: 3450
   files: 138
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/oh-my-fish/oh-my-fish
-  commit: 634c94b4d5e1c0737eac2e35b75022b7ea3910c9
+  commit: 043699af326b1d4fcfaf1b2e591d830d1d53506a
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
-score: 4.7
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+score: 4.8
 checks:
   - name: Code-Review
     score: 5
-    reason: Found 10/19 approved changesets -- score normalized to 5
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
+    reason: Found 11/20 approved changesets -- score normalized to 5
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/build.yml:1'
-      - 'Info: no jobLevel write permissions found'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Maintained
-    score: 2
-    reason: 3 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 2
+    score: 3
+    reason: 4 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 3
     details: null
   - name: Security-Policy
     score: 10
@@ -157,6 +151,12 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/build.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -165,6 +165,15 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Pinned-Dependencies
+    score: 0
+    reason: dependency not pinned by hash detected -- score normalized to 0
+    details:
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:56: update your workflow using https://app.stepsecurity.io/secureworkflow/oh-my-fish/oh-my-fish/build.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:40: update your workflow using https://app.stepsecurity.io/secureworkflow/oh-my-fish/oh-my-fish/build.yml/master?enable=pin'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating ohmyfish/fish:4.8.1 to ohmyfish/fish:4.8.1@sha256:79492a4fdfa89d040600edc3c634acb6570fbff49191d2dc29bbbe64167de5b5'
+      - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   0 out of   1 containerImage dependencies pinned'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -176,15 +185,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Pinned-Dependencies
-    score: 0
-    reason: dependency not pinned by hash detected -- score normalized to 0
-    details:
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:40: update your workflow using https://app.stepsecurity.io/secureworkflow/oh-my-fish/oh-my-fish/build.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:56: update your workflow using https://app.stepsecurity.io/secureworkflow/oh-my-fish/oh-my-fish/build.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating ohmyfish/fish:4.8.1 to ohmyfish/fish:4.8.1@sha256:79492a4fdfa89d040600edc3c634acb6570fbff49191d2dc29bbbe64167de5b5'
-      - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   0 out of   1 containerImage dependencies pinned'
   - name: Signed-Releases
     score: -1
     reason: no releases found

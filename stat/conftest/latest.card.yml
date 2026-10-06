@@ -2,25 +2,25 @@ about:
   description: "Write tests against structured configuration data using the Open Policy Agent Rego query language"
   license: NOASSERTION
   homepage: https://conftest.dev
-  head: 8345c40
+  head: 8f7ac01
   archived: false
-  latestVersion: "v0.71.0"
-  latestRelease: "v0.71.0"
+  latestVersion: "v0.71.1"
+  latestRelease: "v0.71.1"
   latestPrerelease: "v0.5.0"
-  collectedAt: 2026-10-05T06:36:31Z
+  collectedAt: 2026-10-06T07:29:44Z
 timeline:
   created: 2019-03-28
-  lastCommit: 2026-09-30
-  lastVersion: 2026-09-30
-  lastRelease: 2026-09-30
+  lastCommit: 2026-10-06
+  lastVersion: 2026-10-06
+  lastRelease: 2026-10-06
   lastPrerelease: 2019-05-04
 popularity:
   star: 3279
   watcher: 23
   fork: 364
-  release: 101
+  release: 102
   contributor: 142
-  pullRequest: 1052
+  pullRequest: 1055
   issue: 381
 language:
   Go: 355254
@@ -33,63 +33,63 @@ language:
 totalBytes: 410120
 recent:
   last30d:
-    since: 2026-09-05
-    release: 3
-    mergedPR: 14
+    since: 2026-09-06
+    release: 4
+    mergedPR: 16
     openPR: 4
     closedIssue: 0
     openIssue: 0
-    commit: 18
+    commit: 20
   last60d:
-    since: 2026-08-06
-    release: 3
+    since: 2026-08-07
+    release: 4
     mergedPR: 28
     openPR: 5
     closedIssue: 1
     openIssue: 1
-    commit: 34
+    commit: 36
   last90d:
-    since: 2026-07-07
-    release: 4
-    mergedPR: 43
+    since: 2026-07-08
+    release: 5
+    mergedPR: 45
     openPR: 5
     closedIssue: 2
     openIssue: 1
-    commit: 50
+    commit: 52
   last180d:
-    since: 2026-04-08
-    release: 6
-    mergedPR: 72
+    since: 2026-04-09
+    release: 7
+    mergedPR: 74
     openPR: 7
     closedIssue: 6
     openIssue: 1
-    commit: 78
+    commit: 80
   last360d:
-    since: 2025-10-10
-    release: 12
-    mergedPR: 144
+    since: 2025-10-11
+    release: 13
+    mergedPR: 146
     openPR: 9
     closedIssue: 14
     openIssue: 3
-    commit: 145
+    commit: 147
   last720d:
-    since: 2024-10-15
-    release: 22
-    mergedPR: 262
+    since: 2024-10-16
+    release: 23
+    mergedPR: 264
     openPR: 11
     closedIssue: 44
     openIssue: 6
-    commit: 283
+    commit: 285
 total:
-  release: 101
-  mergedPR: 848
+  release: 102
+  mergedPR: 850
   openPR: 12
   closedIssue: 355
   openIssue: 26
-  commit: 1304
+  commit: 1306
 ---
 path: /home/runner/.x-repo/github.com/open-policy-agent/conftest
-collectedAt: 2026-10-05T06:36:32Z
+collectedAt: 2026-10-06T07:29:45Z
 loc:
   Go:
     code: 11375
@@ -197,15 +197,23 @@ total:
   blanks: 2750
   files: 293
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/open-policy-agent/conftest
-  commit: 8345c40e21f3e6ab1159f4e15585b5f7d6aa32a7
+  commit: 8f7ac015cb51d81992f2ffbe2b0c1451fd05d1c5
 scorecard:
   version: v5.5.1-0.20260928043300-ac4b58443938
   commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 7
 checks:
+  - name: Code-Review
+    score: 8
+    reason: Found 14/17 approved changesets -- score normalized to 8
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Security-Policy
     score: 9
     reason: security policy file detected
@@ -214,29 +222,21 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Code-Review
-    score: 8
-    reason: Found 16/19 approved changesets -- score normalized to 8
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
     details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:80'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:22'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:40'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:80'
       - 'Info: found token with ''none'' permissions: .github/workflows/post_merge.yaml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/pr.yaml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/release.yaml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -260,16 +260,16 @@ checks:
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
+      - 'Warn: release artifact v0.71.1 not signed: https://api.github.com/repos/open-policy-agent/conftest/releases/404313278'
       - 'Warn: release artifact v0.71.0 not signed: https://api.github.com/repos/open-policy-agent/conftest/releases/399644700'
       - 'Warn: release artifact v0.70.1 not signed: https://api.github.com/repos/open-policy-agent/conftest/releases/392155998'
       - 'Warn: release artifact v0.70.0 not signed: https://api.github.com/repos/open-policy-agent/conftest/releases/387673485'
       - 'Warn: release artifact v0.69.0 not signed: https://api.github.com/repos/open-policy-agent/conftest/releases/364136651'
-      - 'Warn: release artifact v0.68.2 not signed: https://api.github.com/repos/open-policy-agent/conftest/releases/309170097'
+      - 'Warn: release artifact v0.71.1 does not have provenance: https://api.github.com/repos/open-policy-agent/conftest/releases/404313278'
       - 'Warn: release artifact v0.71.0 does not have provenance: https://api.github.com/repos/open-policy-agent/conftest/releases/399644700'
       - 'Warn: release artifact v0.70.1 does not have provenance: https://api.github.com/repos/open-policy-agent/conftest/releases/392155998'
       - 'Warn: release artifact v0.70.0 does not have provenance: https://api.github.com/repos/open-policy-agent/conftest/releases/387673485'
       - 'Warn: release artifact v0.69.0 does not have provenance: https://api.github.com/repos/open-policy-agent/conftest/releases/364136651'
-      - 'Warn: release artifact v0.68.2 does not have provenance: https://api.github.com/repos/open-policy-agent/conftest/releases/309170097'
   - name: Branch-Protection
     score: 4
     reason: branch protection is not maximal on development and all release branches
@@ -300,10 +300,10 @@ checks:
       - 'Warn: pipCommand not pinned by hash: examples/docker/Dockerfile:11'
       - 'Info:  16 out of  16 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  15 out of  15 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   1 pipCommand dependencies pinned'
       - 'Info:   0 out of   7 containerImage dependencies pinned'
       - 'Info:   0 out of   1 npmCommand dependencies pinned'
       - 'Info:   0 out of   1 goCommand dependencies pinned'
-      - 'Info:   0 out of   1 pipCommand dependencies pinned'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
@@ -313,5 +313,5 @@ checks:
     score: 7
     reason: SAST tool is not run on all commits -- score normalized to 7
     details:
-      - 'Warn: 19 commits out of 27 are checked with a SAST tool'
+      - 'Warn: 21 commits out of 27 are checked with a SAST tool'
 ---

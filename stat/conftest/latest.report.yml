@@ -2,25 +2,25 @@ about:
   description: "Write tests against structured configuration data using the Open Policy Agent Rego query language"
   license: NOASSERTION
   homepage: https://conftest.dev
-  head: 8345c40
+  head: 8f7ac01
   archived: false
-  latestVersion: "v0.71.0"
-  latestRelease: "v0.71.0"
+  latestVersion: "v0.71.1"
+  latestRelease: "v0.71.1"
   latestPrerelease: "v0.5.0"
-  collectedAt: 2026-10-05T06:36:31Z
+  collectedAt: 2026-10-06T07:29:44Z
 timeline:
   created: 2019-03-28
-  lastCommit: 2026-09-30
-  lastVersion: 2026-09-30
-  lastRelease: 2026-09-30
+  lastCommit: 2026-10-06
+  lastVersion: 2026-10-06
+  lastRelease: 2026-10-06
   lastPrerelease: 2019-05-04
 popularity:
   star: 3279
   watcher: 23
   fork: 364
-  release: 101
+  release: 102
   contributor: 142
-  pullRequest: 1052
+  pullRequest: 1055
   issue: 381
 language:
   Go: 355254
@@ -33,63 +33,63 @@ language:
 totalBytes: 410120
 recent:
   last30d:
-    since: 2026-09-05
-    release: 3
-    mergedPR: 14
+    since: 2026-09-06
+    release: 4
+    mergedPR: 16
     openPR: 4
     closedIssue: 0
     openIssue: 0
-    commit: 18
+    commit: 20
   last60d:
-    since: 2026-08-06
-    release: 3
+    since: 2026-08-07
+    release: 4
     mergedPR: 28
     openPR: 5
     closedIssue: 1
     openIssue: 1
-    commit: 34
+    commit: 36
   last90d:
-    since: 2026-07-07
-    release: 4
-    mergedPR: 43
+    since: 2026-07-08
+    release: 5
+    mergedPR: 45
     openPR: 5
     closedIssue: 2
     openIssue: 1
-    commit: 50
+    commit: 52
   last180d:
-    since: 2026-04-08
-    release: 6
-    mergedPR: 72
+    since: 2026-04-09
+    release: 7
+    mergedPR: 74
     openPR: 7
     closedIssue: 6
     openIssue: 1
-    commit: 78
+    commit: 80
   last360d:
-    since: 2025-10-10
-    release: 12
-    mergedPR: 144
+    since: 2025-10-11
+    release: 13
+    mergedPR: 146
     openPR: 9
     closedIssue: 14
     openIssue: 3
-    commit: 145
+    commit: 147
   last720d:
-    since: 2024-10-15
-    release: 22
-    mergedPR: 262
+    since: 2024-10-16
+    release: 23
+    mergedPR: 264
     openPR: 11
     closedIssue: 44
     openIssue: 6
-    commit: 283
+    commit: 285
 total:
-  release: 101
-  mergedPR: 848
+  release: 102
+  mergedPR: 850
   openPR: 12
   closedIssue: 355
   openIssue: 26
-  commit: 1304
+  commit: 1306
 ---
 path: /home/runner/.x-repo/github.com/open-policy-agent/conftest
-collectedAt: 2026-10-05T06:36:32Z
+collectedAt: 2026-10-06T07:29:45Z
 loc:
   Go:
     code: 11375
@@ -197,15 +197,23 @@ total:
   blanks: 2750
   files: 293
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/open-policy-agent/conftest
-  commit: 8345c40e21f3e6ab1159f4e15585b5f7d6aa32a7
+  commit: 8f7ac015cb51d81992f2ffbe2b0c1451fd05d1c5
 scorecard:
   version: v5.5.1-0.20260928043300-ac4b58443938
   commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 7
 checks:
+  - name: Code-Review
+    score: 8
+    reason: Found 14/17 approved changesets -- score normalized to 8
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Security-Policy
     score: 9
     reason: security policy file detected
@@ -214,29 +222,21 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Code-Review
-    score: 8
-    reason: Found 16/19 approved changesets -- score normalized to 8
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
     details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:80'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:22'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:40'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:80'
       - 'Info: found token with ''none'' permissions: .github/workflows/post_merge.yaml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/pr.yaml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/release.yaml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -260,16 +260,16 @@ checks:
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
+      - 'Warn: release artifact v0.71.1 not signed: https://api.github.com/repos/open-policy-agent/conftest/releases/404313278'
       - 'Warn: release artifact v0.71.0 not signed: https://api.github.com/repos/open-policy-agent/conftest/releases/399644700'
       - 'Warn: release artifact v0.70.1 not signed: https://api.github.com/repos/open-policy-agent/conftest/releases/392155998'
       - 'Warn: release artifact v0.70.0 not signed: https://api.github.com/repos/open-policy-agent/conftest/releases/387673485'
       - 'Warn: release artifact v0.69.0 not signed: https://api.github.com/repos/open-policy-agent/conftest/releases/364136651'
-      - 'Warn: release artifact v0.68.2 not signed: https://api.github.com/repos/open-policy-agent/conftest/releases/309170097'
+      - 'Warn: release artifact v0.71.1 does not have provenance: https://api.github.com/repos/open-policy-agent/conftest/releases/404313278'
       - 'Warn: release artifact v0.71.0 does not have provenance: https://api.github.com/repos/open-policy-agent/conftest/releases/399644700'
       - 'Warn: release artifact v0.70.1 does not have provenance: https://api.github.com/repos/open-policy-agent/conftest/releases/392155998'
       - 'Warn: release artifact v0.70.0 does not have provenance: https://api.github.com/repos/open-policy-agent/conftest/releases/387673485'
       - 'Warn: release artifact v0.69.0 does not have provenance: https://api.github.com/repos/open-policy-agent/conftest/releases/364136651'
-      - 'Warn: release artifact v0.68.2 does not have provenance: https://api.github.com/repos/open-policy-agent/conftest/releases/309170097'
   - name: Branch-Protection
     score: 4
     reason: branch protection is not maximal on development and all release branches
@@ -300,10 +300,10 @@ checks:
       - 'Warn: pipCommand not pinned by hash: examples/docker/Dockerfile:11'
       - 'Info:  16 out of  16 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  15 out of  15 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   1 pipCommand dependencies pinned'
       - 'Info:   0 out of   7 containerImage dependencies pinned'
       - 'Info:   0 out of   1 npmCommand dependencies pinned'
       - 'Info:   0 out of   1 goCommand dependencies pinned'
-      - 'Info:   0 out of   1 pipCommand dependencies pinned'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
@@ -313,6 +313,6 @@ checks:
     score: 7
     reason: SAST tool is not run on all commits -- score normalized to 7
     details:
-      - 'Warn: 19 commits out of 27 are checked with a SAST tool'
+      - 'Warn: 21 commits out of 27 are checked with a SAST tool'
 ---
-{"id":399644700,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCp_e9c4X0hgc","tag_name":"v0.71.0","target_commitish":"master","name":"v0.71.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-30T01:15:00Z","updated_at":"2026-09-30T01:41:59Z","published_at":"2026-09-30T01:41:59Z","assets":[{"id":599706413,"node_id":"RA_kwDOCp_e9c4jvsst","name":"checksums.txt","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":2496,"digest":"sha256:ce0cae8bc5d96977607174c8a69d530614b636d60ce84cd1e40256f356cb7dda","download_count":1868,"created_at":"2026-09-30T01:28:29Z","updated_at":"2026-09-30T01:28:29Z"},{"id":599706112,"node_id":"RA_kwDOCp_e9c4jvsoA","name":"conftest_0.71.0_Darwin_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":21811760,"digest":"sha256:78051b6ef0422082ba237f0df10a636737878941927880a68893469663b9e724","download_count":529,"created_at":"2026-09-30T01:28:20Z","updated_at":"2026-09-30T01:28:21Z"},{"id":599706346,"node_id":"RA_kwDOCp_e9c4jvsrq","name":"conftest_0.71.0_Darwin_arm64.tar.gz.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":262030,"digest":"sha256:310a75984f9f70299c06be85a21ffd2a20e79b38340beef7446a9f5a8f2515e3","download_count":6,"created_at":"2026-09-30T01:28:27Z","updated_at":"2026-09-30T01:28:28Z"},{"id":599706110,"node_id":"RA_kwDOCp_e9c4jvsn-","name":"conftest_0.71.0_Darwin_x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":23574867,"digest":"sha256:97a49726a9de43e5c56072b49c4ae3fa449d7a75a80a32c4b27c1467fa42c812","download_count":186,"created_at":"2026-09-30T01:28:20Z","updated_at":"2026-09-30T01:28:22Z"},{"id":599706376,"node_id":"RA_kwDOCp_e9c4jvssI","name":"conftest_0.71.0_Darwin_x86_64.tar.gz.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":262193,"digest":"sha256:0e0cf372f580d6590630d3707339b94000d0b516d697554dd5629d128b7cf60e","download_count":5,"created_at":"2026-09-30T01:28:28Z","updated_at":"2026-09-30T01:28:28Z"},{"id":599706230,"node_id":"RA_kwDOCp_e9c4jvsp2","name":"conftest_0.71.0_Linux_arm64.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/vnd.debian.binary-package","state":"uploaded","size":20559858,"digest":"sha256:2cf3c64b1743c24c6ec2b83098985d1cedd3e8a5b3f5093f0de95bf8f23d8c50","download_count":33,"created_at":"2026-09-30T01:28:24Z","updated_at":"2026-09-30T01:28:25Z"},{"id":599706288,"node_id":"RA_kwDOCp_e9c4jvsqw","name":"conftest_0.71.0_Linux_arm64.rpm","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-rpm","state":"uploaded","size":20556531,"digest":"sha256:ff48106c97a29c91469f0bf1e2bb31363781ee0401344cd9cfe40ada4b9806f5","download_count":46,"created_at":"2026-09-30T01:28:26Z","updated_at":"2026-09-30T01:28:28Z"},{"id":599706184,"node_id":"RA_kwDOCp_e9c4jvspI","name":"conftest_0.71.0_Linux_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":20559912,"digest":"sha256:542f255081cfab9919cba327d3c4014fd46d6ee3f0441c634b14b1465e9469d9","download_count":1178,"created_at":"2026-09-30T01:28:22Z","updated_at":"2026-09-30T01:28:23Z"},{"id":599706391,"node_id":"RA_kwDOCp_e9c4jvssX","name":"conftest_0.71.0_Linux_arm64.tar.gz.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":261867,"digest":"sha256:f6d4af3929eb9a4616daf9aac646eca6cca1186f5803ef8cfd67299bbc0a07b4","download_count":6,"created_at":"2026-09-30T01:28:28Z","updated_at":"2026-09-30T01:28:28Z"},{"id":599706232,"node_id":"RA_kwDOCp_e9c4jvsp4","name":"conftest_0.71.0_Linux_ppc64le.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/vnd.debian.binary-package","state":"uploaded","size":20569548,"digest":"sha256:1d8374b88f46693edd6339277a55f6f86397a806e5efcb323b5e0780c1242c60","download_count":26,"created_at":"2026-09-30T01:28:24Z","updated_at":"2026-09-30T01:28:25Z"},{"id":599706283,"node_id":"RA_kwDOCp_e9c4jvsqr","name":"conftest_0.71.0_Linux_ppc64le.rpm","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-rpm","state":"uploaded","size":20586067,"digest":"sha256:0f71c2cf85a1297a2960b40f0d0ac81cf63d279f86e07e154c8c455a056e4a08","download_count":26,"created_at":"2026-09-30T01:28:26Z","updated_at":"2026-09-30T01:28:27Z"},{"id":599706116,"node_id":"RA_kwDOCp_e9c4jvsoE","name":"conftest_0.71.0_Linux_ppc64le.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":20571642,"digest":"sha256:3c5e351d456f67febbe286f7a5a34168d287f54e3c6a828a603490bb468da86a","download_count":26,"created_at":"2026-09-30T01:28:20Z","updated_at":"2026-09-30T01:28:21Z"},{"id":599706341,"node_id":"RA_kwDOCp_e9c4jvsrl","name":"conftest_0.71.0_Linux_ppc64le.tar.gz.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":262193,"digest":"sha256:272f3df26ede0dcc9084e8a27df6032afe51545e9ef3a433648a6779f1dfd872","download_count":5,"created_at":"2026-09-30T01:28:27Z","updated_at":"2026-09-30T01:28:27Z"},{"id":599706224,"node_id":"RA_kwDOCp_e9c4jvspw","name":"conftest_0.71.0_Linux_s390x.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/vnd.debian.binary-package","state":"uploaded","size":22096438,"digest":"sha256:6b177674580f29b5b2b24d6a67d61b0ee3b014c8d40f2830268d597a00ee07cf","download_count":5,"created_at":"2026-09-30T01:28:24Z","updated_at":"2026-09-30T01:28:25Z"},{"id":599706272,"node_id":"RA_kwDOCp_e9c4jvsqg","name":"conftest_0.71.0_Linux_s390x.rpm","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-rpm","state":"uploaded","size":22102457,"digest":"sha256:c546802dc0bdc088e01da19afec3561b9df5e5b023e317f1db87548431664a69","download_count":5,"created_at":"2026-09-30T01:28:25Z","updated_at":"2026-09-30T01:28:27Z"},{"id":599706190,"node_id":"RA_kwDOCp_e9c4jvspO","name":"conftest_0.71.0_Linux_s390x.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":22096711,"digest":"sha256:9c3078136e3423b3d4b1efe4cbd21bb98a226a9f7392779ca9e09484bdd81dfb","download_count":5,"created_at":"2026-09-30T01:28:22Z","updated_at":"2026-09-30T01:28:24Z"},{"id":599706415,"node_id":"RA_kwDOCp_e9c4jvssv","name":"conftest_0.71.0_Linux_s390x.tar.gz.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":261867,"digest":"sha256:70a2c4f093b06afaa01f4acb58375f2ebb93da9c5b631ee1c859bd780334bff5","download_count":5,"created_at":"2026-09-30T01:28:29Z","updated_at":"2026-09-30T01:28:29Z"},{"id":599706242,"node_id":"RA_kwDOCp_e9c4jvsqC","name":"conftest_0.71.0_Linux_x86_64.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/vnd.debian.binary-package","state":"uploaded","size":22867734,"digest":"sha256:dd11cf7f3e14cec7836669b48df6b4637a20d90aeb9883f177027a5f72f1fe0d","download_count":124,"created_at":"2026-09-30T01:28:24Z","updated_at":"2026-09-30T01:28:25Z"},{"id":599706285,"node_id":"RA_kwDOCp_e9c4jvsqt","name":"conftest_0.71.0_Linux_x86_64.rpm","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-rpm","state":"uploaded","size":22868332,"digest":"sha256:8a3d77d9e4fe4235ec56a280e634de1a8a1ce2c56e76275fa68be76b4c284c44","download_count":52,"created_at":"2026-09-30T01:28:26Z","updated_at":"2026-09-30T01:28:27Z"},{"id":599706185,"node_id":"RA_kwDOCp_e9c4jvspJ","name":"conftest_0.71.0_Linux_x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":22869914,"digest":"sha256:765dfefdf0730693d7541ea0147e10d530a54ed257bbfec055ff34c837ffdf72","download_count":25118,"created_at":"2026-09-30T01:28:22Z","updated_at":"2026-09-30T01:28:23Z"},{"id":599706407,"node_id":"RA_kwDOCp_e9c4jvssn","name":"conftest_0.71.0_Linux_x86_64.tar.gz.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":262030,"digest":"sha256:92f434907a6e79d595cb0fc92e43be3b37fb97e49c72a41e2a988e0daa2560d6","download_count":379,"created_at":"2026-09-30T01:28:29Z","updated_at":"2026-09-30T01:28:29Z"},{"id":599706182,"node_id":"RA_kwDOCp_e9c4jvspG","name":"conftest_0.71.0_Windows_arm64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":20760830,"digest":"sha256:1f08ff44251605a8f9938094ae1372d003c7aca2eacad3e9d311b8a1b43b834e","download_count":58,"created_at":"2026-09-30T01:28:22Z","updated_at":"2026-09-30T01:28:23Z"},{"id":599706387,"node_id":"RA_kwDOCp_e9c4jvssT","name":"conftest_0.71.0_Windows_arm64.zip.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":265466,"digest":"sha256:f01cf28382c5cfd7f888f88d0e4e7362d26be05ef96cb4e19c8a450761718ecf","download_count":5,"created_at":"2026-09-30T01:28:28Z","updated_at":"2026-09-30T01:28:28Z"},{"id":599706111,"node_id":"RA_kwDOCp_e9c4jvsn_","name":"conftest_0.71.0_Windows_x86_64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":23451815,"digest":"sha256:a9228097e6f827dac7fee48f5cf0baa42ebd88454560de26bbb531d65ae0f448","download_count":416,"created_at":"2026-09-30T01:28:20Z","updated_at":"2026-09-30T01:28:22Z"},{"id":599706355,"node_id":"RA_kwDOCp_e9c4jvsrz","name":"conftest_0.71.0_Windows_x86_64.zip.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":265631,"digest":"sha256:a5397e65619f7da3a9eaea07cbe0debc3e88ecdec7b4c9ac9bb72895482a2da5","download_count":5,"created_at":"2026-09-30T01:28:27Z","updated_at":"2026-09-30T01:28:28Z"}],"body":"## Changelog\n### New Features\n* 636cfe39490de851bcc6956f8a7fdc3892020971: feat: Add parser for CODEOWNER files (#1404) (@apnsngr)\n### Bug Fixes\n* 96fc461afcf81542eec87924f4fc70fbd172410c: fix(docs): unbreak Netlify build on the Noble image (#1433) (@boranx)\n* 8345c40e21f3e6ab1159f4e15585b5f7d6aa32a7: fix: emit a single TAP plan across all files (#1435) (@behappymia)\n### OPA Changes\n* b254dd7828556d131c0bffd74ab6008358f87245: build(deps): bump github.com/open-policy-agent/opa from 1.20.2 to 1.21.0 (#1434) (@dependabot[bot])\n### Other Changes\n* a766df63c7f72642af16664b6b56b6361b70379a: build(deps): bump alpine from 3.24.1 to 3.24.2 (#1430) (@dependabot[bot])\n* b4bcb74f527dc8d43cdd1db48d58f0e94624e1da: build(deps): bump docker/build-push-action from 7.3.0 to 7.4.0 (#1432) (@dependabot[bot])\n* 6febea03f622afcd184732aa1c41edaa0f90222f: build(deps): bump github.com/magiconair/properties (#1431) (@dependabot[bot])\n* e0275ea26dc8691e337a9f5e0d3fe99b4200af8c: chore: run goreleaser in parallel with docker builds (#1427) (@jalseth)\n* 722d53f59d7bcc6bd14f11f85eb47a8a88cd7108: ci: Add SPDX formatted SBOM to the release workflow (#1428) (@jalseth)\n* f1484a6ea54834cf9aca880e4674a5c9bc85c4e6: refactor(outputter): Standardize how totals are accumulated (#1429) (@jalseth)\n\n","mentions_count":5}
+{"id":404313278,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCp_e9c4YGVS-","tag_name":"v0.71.1","target_commitish":"master","name":"v0.71.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-06T04:17:14Z","updated_at":"2026-10-06T04:53:53Z","published_at":"2026-10-06T04:53:53Z","assets":[{"id":614476987,"node_id":"RA_kwDOCp_e9c4koCy7","name":"checksums.txt","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":2496,"digest":"sha256:5e5d7e2c0e88b3437cb659a921e0b88e997e4e0a49d01be52a9569136f01dbf9","download_count":22,"created_at":"2026-10-06T04:30:14Z","updated_at":"2026-10-06T04:30:14Z"},{"id":614476647,"node_id":"RA_kwDOCp_e9c4koCtn","name":"conftest_0.71.1_Darwin_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":21812513,"digest":"sha256:e1cc50d2590b6c5e3da6912666a71264bae82d60bdd62d7ae2b99971ccc8eedd","download_count":6,"created_at":"2026-10-06T04:30:05Z","updated_at":"2026-10-06T04:30:07Z"},{"id":614476943,"node_id":"RA_kwDOCp_e9c4koCyP","name":"conftest_0.71.1_Darwin_arm64.tar.gz.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":262030,"digest":"sha256:f165d6f01a6e5d499a2dc1c069a263e26ff77fb8b5d6e48d9f07b7a073a680d3","download_count":1,"created_at":"2026-10-06T04:30:13Z","updated_at":"2026-10-06T04:30:13Z"},{"id":614476639,"node_id":"RA_kwDOCp_e9c4koCtf","name":"conftest_0.71.1_Darwin_x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":23577122,"digest":"sha256:a309853b5763c18486768157442d440248ee683b20a2aa1f6b28214e818bd780","download_count":3,"created_at":"2026-10-06T04:30:05Z","updated_at":"2026-10-06T04:30:07Z"},{"id":614476957,"node_id":"RA_kwDOCp_e9c4koCyd","name":"conftest_0.71.1_Darwin_x86_64.tar.gz.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":262193,"digest":"sha256:4624447d192e9f5d8f9de507034e0d7a3c6f886b159077f5e2f24c38e5aa6680","download_count":1,"created_at":"2026-10-06T04:30:13Z","updated_at":"2026-10-06T04:30:14Z"},{"id":614476818,"node_id":"RA_kwDOCp_e9c4koCwS","name":"conftest_0.71.1_Linux_arm64.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/vnd.debian.binary-package","state":"uploaded","size":20560072,"digest":"sha256:3ade58cd6305f68f86c59bc5ddd7f3149316420817d42436d133a13947704476","download_count":9,"created_at":"2026-10-06T04:30:09Z","updated_at":"2026-10-06T04:30:10Z"},{"id":614476882,"node_id":"RA_kwDOCp_e9c4koCxS","name":"conftest_0.71.1_Linux_arm64.rpm","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-rpm","state":"uploaded","size":20557119,"digest":"sha256:5d2d0779813d5d0dc7df875928b762f7e889242fee5e0df6655b3200f0e7a1d4","download_count":6,"created_at":"2026-10-06T04:30:11Z","updated_at":"2026-10-06T04:30:12Z"},{"id":614476733,"node_id":"RA_kwDOCp_e9c4koCu9","name":"conftest_0.71.1_Linux_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":20560012,"digest":"sha256:218c682e110ae7e826dc14a746a6f9b43eb782643dbe730b771fd305634e3f47","download_count":21,"created_at":"2026-10-06T04:30:07Z","updated_at":"2026-10-06T04:30:08Z"},{"id":614476960,"node_id":"RA_kwDOCp_e9c4koCyg","name":"conftest_0.71.1_Linux_arm64.tar.gz.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":261867,"digest":"sha256:ea2fd526c82074c2e2a93567ae22e9d268576b56783b953ab615e32b93cb4961","download_count":1,"created_at":"2026-10-06T04:30:13Z","updated_at":"2026-10-06T04:30:14Z"},{"id":614476816,"node_id":"RA_kwDOCp_e9c4koCwQ","name":"conftest_0.71.1_Linux_ppc64le.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/vnd.debian.binary-package","state":"uploaded","size":20569584,"digest":"sha256:1275bab6530ce6c7ca884b1d11ea1b150403d1a0ee42c6635f24a06ed6e12b08","download_count":2,"created_at":"2026-10-06T04:30:09Z","updated_at":"2026-10-06T04:30:10Z"},{"id":614476928,"node_id":"RA_kwDOCp_e9c4koCyA","name":"conftest_0.71.1_Linux_ppc64le.rpm","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-rpm","state":"uploaded","size":20586283,"digest":"sha256:867b1c2d67df6cfdbf46cbc89748d61e899f87f4095910c9ffe96ed48c9a32b1","download_count":2,"created_at":"2026-10-06T04:30:12Z","updated_at":"2026-10-06T04:30:13Z"},{"id":614476743,"node_id":"RA_kwDOCp_e9c4koCvH","name":"conftest_0.71.1_Linux_ppc64le.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":20572712,"digest":"sha256:2e5516bbd1391d0504952e8bfb3d6fb7a8df6480db0102d5a2164b32ef7898f5","download_count":2,"created_at":"2026-10-06T04:30:07Z","updated_at":"2026-10-06T04:30:08Z"},{"id":614476979,"node_id":"RA_kwDOCp_e9c4koCyz","name":"conftest_0.71.1_Linux_ppc64le.tar.gz.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":262193,"digest":"sha256:f49dc8475668a95f8abca242edb93babacee7905ffabe2a4fb503e58461335b5","download_count":1,"created_at":"2026-10-06T04:30:14Z","updated_at":"2026-10-06T04:30:14Z"},{"id":614476805,"node_id":"RA_kwDOCp_e9c4koCwF","name":"conftest_0.71.1_Linux_s390x.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/vnd.debian.binary-package","state":"uploaded","size":22096206,"digest":"sha256:8049ab0eebf8ddb0d69ae1f8689fb9b8d3bbc31ee4a827511b712ffc281dca89","download_count":1,"created_at":"2026-10-06T04:30:09Z","updated_at":"2026-10-06T04:30:10Z"},{"id":614476875,"node_id":"RA_kwDOCp_e9c4koCxL","name":"conftest_0.71.1_Linux_s390x.rpm","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-rpm","state":"uploaded","size":22102296,"digest":"sha256:8b5b3c925a9f17b9cbafa77d39369990d099a4873cdc47f2ca61ba2cd031d70a","download_count":1,"created_at":"2026-10-06T04:30:10Z","updated_at":"2026-10-06T04:30:12Z"},{"id":614476637,"node_id":"RA_kwDOCp_e9c4koCtd","name":"conftest_0.71.1_Linux_s390x.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":22096364,"digest":"sha256:2b980cd86bd03f067e97d9fd198384bb2fe9a7e820ec8faa3e5663cdb1df5af6","download_count":1,"created_at":"2026-10-06T04:30:05Z","updated_at":"2026-10-06T04:30:07Z"},{"id":614476941,"node_id":"RA_kwDOCp_e9c4koCyN","name":"conftest_0.71.1_Linux_s390x.tar.gz.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":261867,"digest":"sha256:365bdc45c9d6ee77cb3b1153efd2d236103c4c21b29c23d4fba220bd1da9d367","download_count":1,"created_at":"2026-10-06T04:30:13Z","updated_at":"2026-10-06T04:30:13Z"},{"id":614476820,"node_id":"RA_kwDOCp_e9c4koCwU","name":"conftest_0.71.1_Linux_x86_64.deb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/vnd.debian.binary-package","state":"uploaded","size":22866330,"digest":"sha256:a53e3212d911a87bb4654b0508dfe638ad7aa321e3ecff8de9428e69763dbdd8","download_count":16,"created_at":"2026-10-06T04:30:09Z","updated_at":"2026-10-06T04:30:12Z"},{"id":614476885,"node_id":"RA_kwDOCp_e9c4koCxV","name":"conftest_0.71.1_Linux_x86_64.rpm","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-rpm","state":"uploaded","size":22867260,"digest":"sha256:1d7f38a97ec0d5db3e627958742163a1b74ce9b48eb2061431b00f5a005ebf24","download_count":7,"created_at":"2026-10-06T04:30:11Z","updated_at":"2026-10-06T04:30:12Z"},{"id":614476638,"node_id":"RA_kwDOCp_e9c4koCte","name":"conftest_0.71.1_Linux_x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":22868063,"digest":"sha256:c3f6b2a753bd56e377a1e51a95ae3e057f926f2e9139f7d5b5dfbbaf810f7985","download_count":634,"created_at":"2026-10-06T04:30:05Z","updated_at":"2026-10-06T04:30:07Z"},{"id":614476940,"node_id":"RA_kwDOCp_e9c4koCyM","name":"conftest_0.71.1_Linux_x86_64.tar.gz.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":262030,"digest":"sha256:5ddeaec93cba58073034049204afd8ba98f360e60ca4cbd535f4c2d8a3ee51a2","download_count":16,"created_at":"2026-10-06T04:30:13Z","updated_at":"2026-10-06T04:30:13Z"},{"id":614476744,"node_id":"RA_kwDOCp_e9c4koCvI","name":"conftest_0.71.1_Windows_arm64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":20762096,"digest":"sha256:a96dd3eea3034b8d6f4fbccd721e5a296dbf5c302af0e32b0bd16ecb2fab69f0","download_count":2,"created_at":"2026-10-06T04:30:07Z","updated_at":"2026-10-06T04:30:08Z"},{"id":614476970,"node_id":"RA_kwDOCp_e9c4koCyq","name":"conftest_0.71.1_Windows_arm64.zip.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":265466,"digest":"sha256:3d18497b347631b10a483b9d5a448080db75856b3ec68713a622abbda6e4d3d5","download_count":1,"created_at":"2026-10-06T04:30:14Z","updated_at":"2026-10-06T04:30:14Z"},{"id":614476742,"node_id":"RA_kwDOCp_e9c4koCvG","name":"conftest_0.71.1_Windows_x86_64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":23452528,"digest":"sha256:34d623334b5e7ed4465bf62a4cb3b092684859cd3d224bbd390925a0852b922a","download_count":4,"created_at":"2026-10-06T04:30:07Z","updated_at":"2026-10-06T04:30:08Z"},{"id":614476965,"node_id":"RA_kwDOCp_e9c4koCyl","name":"conftest_0.71.1_Windows_x86_64.zip.sbom.json","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/json","state":"uploaded","size":265631,"digest":"sha256:d8477010b49b8119f2779238f72ed91aa92251dd2081bb18b61fbb63974853d8","download_count":1,"created_at":"2026-10-06T04:30:13Z","updated_at":"2026-10-06T04:30:14Z"}],"body":"## Changelog\n### OPA Changes\n* 00e9bc64cd35b1e9f5831ab12ff02f2054aca933: build(deps): bump github.com/open-policy-agent/opa from 1.21.0 to 1.21.1 (#1439) (@dependabot[bot])\n### Other Changes\n* 8f7ac015cb51d81992f2ffbe2b0c1451fd05d1c5: build(deps): bump github.com/moby/buildkit from 0.33.0 to 0.33.1 (#1440) (@dependabot[bot])\n\n","mentions_count":1}

@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.8.2"
   latestRelease: "v3.8.2"
   latestPrerelease: ""
-  collectedAt: 2026-10-05T05:56:34Z
+  collectedAt: 2026-10-06T06:41:44Z
 timeline:
   created: 2014-11-14
   lastCommit: 2026-01-13
@@ -15,20 +15,20 @@ timeline:
   lastRelease: 2025-09-04
   lastPrerelease: 
 popularity:
-  star: 14188
+  star: 14193
   watcher: 178
-  fork: 1620
+  fork: 1625
   release: 13
   contributor: 27
   pullRequest: 333
-  issue: 320
+  issue: 321
 language:
   Go: 597268
   Dockerfile: 451
 totalBytes: 597719
 recent:
   last30d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 0
     mergedPR: 0
     openPR: 1
@@ -36,7 +36,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 0
     mergedPR: 1
     openPR: 4
@@ -44,7 +44,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-07-07
+    since: 2026-07-08
     release: 0
     mergedPR: 5
     openPR: 4
@@ -52,7 +52,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-04-08
+    since: 2026-04-09
     release: 0
     mergedPR: 12
     openPR: 6
@@ -60,7 +60,7 @@ recent:
     openIssue: 1
     commit: 0
   last360d:
-    since: 2025-10-10
+    since: 2025-10-11
     release: 0
     mergedPR: 28
     openPR: 10
@@ -68,23 +68,23 @@ recent:
     openIssue: 2
     commit: 6
   last720d:
-    since: 2024-10-15
+    since: 2024-10-16
     release: 4
     mergedPR: 62
     openPR: 11
-    closedIssue: 39
+    closedIssue: 38
     openIssue: 2
     commit: 115
 total:
   release: 13
   mergedPR: 193
   openPR: 11
-  closedIssue: 306
+  closedIssue: 307
   openIssue: 14
   commit: 607
 ---
 path: /home/runner/.x-repo/github.com/OJ/gobuster
-collectedAt: 2026-10-05T05:56:35Z
+collectedAt: 2026-10-06T06:41:47Z
 loc:
   Go:
     code: 9375
@@ -112,13 +112,13 @@ total:
   blanks: 994
   files: 57
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/OJ/gobuster
   commit: c77583fbb8824058d74d38240896eff610683c8e
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 3.7
 checks:
   - name: Code-Review
@@ -169,6 +169,12 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -199,18 +205,12 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/vhs.yml:37: update your workflow using https://app.stepsecurity.io/secureworkflow/OJ/gobuster/vhs.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/yamllint.yml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/OJ/gobuster/yamllint.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/yamllint.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/OJ/gobuster/yamllint.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:2: pin your Docker image by updating golang:latest to golang:latest@sha256:3680233e3204827fbdc66088528ae6d4b3d034f51d03a99d454f6de034888244'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:2: pin your Docker image by updating golang:latest to golang:latest@sha256:e0174e51e81218523251d85d248a90d24c3d5e81543b4f07a5d66229397db190'
       - 'Warn: containerImage not pinned by hash: Dockerfile:10: pin your Docker image by updating alpine:latest to alpine:latest@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6'
       - 'Info:   0 out of  13 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of  13 third-party GitHubAction dependencies pinned'
       - 'Info:   1 out of   1 goCommand dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -230,15 +230,15 @@ checks:
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''master'''
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker.yml:12'
   - name: SAST
     score: 10
     reason: SAST tool detected
     details:
       - 'Info: SAST configuration detected: Hadolint'
       - 'Warn: 0 commits out of 28 are checked with a SAST tool'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker.yml:12'
 ---

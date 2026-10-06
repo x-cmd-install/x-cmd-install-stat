@@ -7,7 +7,7 @@ about:
   latestVersion: "v7.12.0"
   latestRelease: "v7.12.0"
   latestPrerelease: "v2.0.0-beta.17"
-  collectedAt: 2026-10-05T05:47:15Z
+  collectedAt: 2026-10-06T06:26:17Z
 timeline:
   created: 2015-12-03
   lastCommit: 2026-10-01
@@ -15,11 +15,11 @@ timeline:
   lastRelease: 2026-10-01
   lastPrerelease: 2024-04-02
 popularity:
-  star: 2097
+  star: 2098
   watcher: 48
   fork: 778
   release: 218
-  contributor: 78
+  contributor: 79
   pullRequest: 3941
   issue: 408
 language:
@@ -29,7 +29,7 @@ language:
 totalBytes: 56228451
 recent:
   last30d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 3
     mergedPR: 4
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 34
   last60d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 6
     mergedPR: 8
     openPR: 0
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 61
   last90d:
-    since: 2026-07-07
+    since: 2026-07-08
     release: 8
     mergedPR: 10
     openPR: 0
@@ -53,7 +53,7 @@ recent:
     openIssue: 1
     commit: 88
   last180d:
-    since: 2026-04-08
+    since: 2026-04-09
     release: 17
     mergedPR: 66
     openPR: 1
@@ -61,7 +61,7 @@ recent:
     openIssue: 4
     commit: 428
   last360d:
-    since: 2025-10-10
+    since: 2025-10-11
     release: 25
     mergedPR: 92
     openPR: 1
@@ -69,13 +69,13 @@ recent:
     openIssue: 6
     commit: 753
   last720d:
-    since: 2024-10-15
+    since: 2024-10-16
     release: 47
-    mergedPR: 818
+    mergedPR: 807
     openPR: 1
     closedIssue: 56
     openIssue: 7
-    commit: 3495
+    commit: 3484
 total:
   release: 218
   mergedPR: 3695
@@ -85,7 +85,7 @@ total:
   commit: 6061
 ---
 path: /home/runner/.x-repo/github.com/cloudflare/cloudflare-go
-collectedAt: 2026-10-05T05:47:36Z
+collectedAt: 2026-10-06T06:26:41Z
 loc:
   Go:
     code: 824052
@@ -118,13 +118,13 @@ total:
   blanks: 159256
   files: 2344
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/cloudflare/cloudflare-go
-  commit: 3da6607060703d3f757e22988e96f56f8cd9c04d
+  commit: 05ca1e4fc7c7f02ffd8257ea199c985e1ec618e8
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 6
 checks:
   - name: Packaging
@@ -132,6 +132,14 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -140,17 +148,9 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -189,10 +189,6 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -201,6 +197,10 @@ checks:
       - 'Warn: release artifact v0.118.0 not signed: https://api.github.com/repos/cloudflare/cloudflare-go/releases/380765372'
       - 'Warn: release artifact v0.119.0 does not have provenance: https://api.github.com/repos/cloudflare/cloudflare-go/releases/396935675'
       - 'Warn: release artifact v0.118.0 does not have provenance: https://api.github.com/repos/cloudflare/cloudflare-go/releases/380765372'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
