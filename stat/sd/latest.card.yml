@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.1.0"
   latestRelease: "v1.1.0"
   latestPrerelease: "1.0.0-beta.0"
-  collectedAt: 2026-10-06T06:08:22Z
+  collectedAt: 2026-10-07T05:43:03Z
 timeline:
   created: 2018-12-23
   lastCommit: 2026-02-25
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-02-25
   lastPrerelease: 2023-11-05
 popularity:
-  star: 7380
+  star: 7385
   watcher: 33
   fork: 172
   release: 12
@@ -31,7 +31,7 @@ language:
 totalBytes: 71852
 recent:
   last30d:
-    since: 2026-09-06
+    since: 2026-09-07
     release: 0
     mergedPR: 0
     openPR: 3
@@ -39,7 +39,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-07
+    since: 2026-08-08
     release: 0
     mergedPR: 0
     openPR: 7
@@ -47,7 +47,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-08
+    since: 2026-07-09
     release: 0
     mergedPR: 0
     openPR: 12
@@ -55,7 +55,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-09
+    since: 2026-04-10
     release: 0
     mergedPR: 0
     openPR: 13
@@ -63,7 +63,7 @@ recent:
     openIssue: 3
     commit: 0
   last360d:
-    since: 2025-10-11
+    since: 2025-10-12
     release: 1
     mergedPR: 3
     openPR: 16
@@ -71,7 +71,7 @@ recent:
     openIssue: 7
     commit: 8
   last720d:
-    since: 2024-10-16
+    since: 2024-10-17
     release: 1
     mergedPR: 4
     openPR: 17
@@ -87,7 +87,7 @@ total:
   commit: 336
 ---
 path: /home/runner/.x-repo/github.com/chmln/sd
-collectedAt: 2026-10-06T06:08:23Z
+collectedAt: 2026-10-07T05:43:04Z
 loc:
   Rust:
     code: 1700
@@ -135,13 +135,13 @@ total:
   blanks: 534
   files: 28
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/chmln/sd
   commit: 44febdf86343c653255ae4f20f5e1882dad6be17
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 3.2
 checks:
   - name: Code-Review
@@ -165,6 +165,13 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/publish.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -176,13 +183,6 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:65: update your workflow using https://app.stepsecurity.io/secureworkflow/chmln/sd/test.yml/master?enable=pin'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 third-party GitHubAction dependencies pinned'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/publish.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected

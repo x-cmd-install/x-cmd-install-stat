@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.22.0"
   latestRelease: "v0.22.0"
   latestPrerelease: "v0.16.0-beta.0"
-  collectedAt: 2026-10-06T06:17:47Z
+  collectedAt: 2026-10-07T05:53:04Z
 timeline:
   created: 2018-06-15
   lastCommit: 2026-10-05
@@ -19,9 +19,9 @@ popularity:
   watcher: 13
   fork: 484
   release: 100
-  contributor: 545
+  contributor: 546
   pullRequest: 987
-  issue: 490
+  issue: 491
 language:
   Go: 682344
   Shell: 15876
@@ -31,63 +31,63 @@ language:
 totalBytes: 721624
 recent:
   last30d:
-    since: 2026-09-06
+    since: 2026-09-07
     release: 0
-    mergedPR: 4
+    mergedPR: 3
     openPR: 2
     closedIssue: 0
-    openIssue: 1
+    openIssue: 2
     commit: 3
   last60d:
-    since: 2026-08-07
+    since: 2026-08-08
     release: 2
     mergedPR: 13
     openPR: 2
     closedIssue: 1
-    openIssue: 1
+    openIssue: 2
     commit: 14
   last90d:
-    since: 2026-07-08
+    since: 2026-07-09
     release: 2
-    mergedPR: 22
+    mergedPR: 21
     openPR: 4
     closedIssue: 2
-    openIssue: 2
+    openIssue: 3
     commit: 21
   last180d:
-    since: 2026-04-09
+    since: 2026-04-10
     release: 5
     mergedPR: 62
     openPR: 10
     closedIssue: 11
-    openIssue: 9
+    openIssue: 10
     commit: 67
   last360d:
-    since: 2025-10-11
+    since: 2025-10-12
     release: 9
     mergedPR: 123
     openPR: 13
     closedIssue: 22
-    openIssue: 12
+    openIssue: 13
     commit: 133
   last720d:
-    since: 2024-10-16
+    since: 2024-10-17
     release: 23
     mergedPR: 237
     openPR: 14
-    closedIssue: 67
-    openIssue: 16
+    closedIssue: 66
+    openIssue: 17
     commit: 482
 total:
   release: 100
   mergedPR: 751
   openPR: 15
   closedIssue: 463
-  openIssue: 27
+  openIssue: 28
   commit: 1613
 ---
 path: /home/runner/.x-repo/github.com/kubernetes-sigs/controller-tools
-collectedAt: 2026-10-06T06:17:51Z
+collectedAt: 2026-10-07T05:53:08Z
 loc:
   Yaml:
     code: 24399
@@ -135,23 +135,15 @@ total:
   blanks: 4266
   files: 316
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/kubernetes-sigs/controller-tools
-  commit: 81948cd0719e647ede06fcda465df28be5b6eeea
+  commit: 22864febb1bce165d21f2c91ad8349722b689052
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 5.9
 checks:
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 9 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -160,6 +152,14 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 9 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -170,9 +170,9 @@ checks:
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/pr-gh-workflow-approve.yaml:19'
+      - 'Warn: topLevel ''checks'' permission set to ''write'': .github/workflows/golangci-lint.yml:14'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/golangci-lint.yml:10'
       - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/golangci-lint.yml:12'
-      - 'Warn: topLevel ''checks'' permission set to ''write'': .github/workflows/golangci-lint.yml:14'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/pr-dependabot.yaml:14'
       - 'Info: found token with ''none'' permissions: .github/workflows/pr-gh-workflow-approve.yaml:1'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yaml:10'
@@ -203,10 +203,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -215,6 +211,10 @@ checks:
       - 'Info: Found linked content: github.com/kubernetes-sigs/.github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/kubernetes-sigs/.github/SECURITY.md:1'
       - 'Info: Found text in security policy: github.com/kubernetes-sigs/.github/SECURITY.md:1'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.

@@ -7,7 +7,7 @@ about:
   latestVersion: "v4.20.1"
   latestRelease: "v4.20.1"
   latestPrerelease: "v4.15.0-beta.1"
-  collectedAt: 2026-10-06T06:44:36Z
+  collectedAt: 2026-10-07T06:21:01Z
 timeline:
   created: 2018-01-19
   lastCommit: 2026-09-09
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-09
   lastPrerelease: 2021-08-04
 popularity:
-  star: 18954
+  star: 18953
   watcher: 88
   fork: 1620
   release: 57
@@ -31,31 +31,31 @@ language:
 totalBytes: 578636
 recent:
   last30d:
-    since: 2026-09-06
+    since: 2026-09-07
     release: 2
     mergedPR: 1
-    openPR: 14
+    openPR: 13
     closedIssue: 0
     openIssue: 3
     commit: 0
   last60d:
-    since: 2026-08-07
+    since: 2026-08-08
     release: 2
     mergedPR: 5
     openPR: 19
     closedIssue: 0
-    openIssue: 5
+    openIssue: 3
     commit: 9
   last90d:
-    since: 2026-07-08
+    since: 2026-07-09
     release: 2
     mergedPR: 6
-    openPR: 27
+    openPR: 26
     closedIssue: 0
-    openIssue: 7
+    openIssue: 6
     commit: 9
   last180d:
-    since: 2026-04-09
+    since: 2026-04-10
     release: 2
     mergedPR: 12
     openPR: 37
@@ -63,7 +63,7 @@ recent:
     openIssue: 8
     commit: 13
   last360d:
-    since: 2025-10-11
+    since: 2025-10-12
     release: 3
     mergedPR: 22
     openPR: 53
@@ -71,7 +71,7 @@ recent:
     openIssue: 22
     commit: 24
   last720d:
-    since: 2024-10-16
+    since: 2024-10-17
     release: 6
     mergedPR: 42
     openPR: 85
@@ -87,7 +87,7 @@ total:
   commit: 1446
 ---
 path: /home/runner/.x-repo/github.com/golang-migrate/migrate
-collectedAt: 2026-10-06T06:44:37Z
+collectedAt: 2026-10-07T06:21:03Z
 loc:
   Go:
     code: 18807
@@ -130,22 +130,26 @@ total:
   blanks: 3707
   files: 378
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/golang-migrate/migrate
   commit: 504568a3cbd23b8754760f55a3d89aec1b0c4963
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
-score: 5.5
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+score: 5.4
 checks:
   - name: Maintained
-    score: 10
-    reason: 11 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
+    score: 9
+    reason: 9 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 9
     details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Code-Review
+    score: 8
+    reason: Found 15/18 approved changesets -- score normalized to 8
     details: null
   - name: Security-Policy
     score: 10
@@ -155,10 +159,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Code-Review
-    score: 8
-    reason: Found 15/18 approved changesets -- score normalized to 8
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -216,18 +216,6 @@ checks:
       - 'Info:   0 out of   8 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of  11 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   5 containerImage dependencies pinned'
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v4.20.1 not signed: https://api.github.com/repos/golang-migrate/migrate/releases/385260585'
-      - 'Warn: release artifact v4.19.1 not signed: https://api.github.com/repos/golang-migrate/migrate/releases/266160898'
-      - 'Warn: release artifact v4.19.0 not signed: https://api.github.com/repos/golang-migrate/migrate/releases/243553225'
-      - 'Warn: release artifact v4.18.3 not signed: https://api.github.com/repos/golang-migrate/migrate/releases/214419650'
-      - 'Warn: release artifact v4.20.1 does not have provenance: https://api.github.com/repos/golang-migrate/migrate/releases/385260585'
-      - 'Warn: release artifact v4.19.1 does not have provenance: https://api.github.com/repos/golang-migrate/migrate/releases/266160898'
-      - 'Warn: release artifact v4.19.0 does not have provenance: https://api.github.com/repos/golang-migrate/migrate/releases/243553225'
-      - 'Warn: release artifact v4.18.3 does not have provenance: https://api.github.com/repos/golang-migrate/migrate/releases/214419650'
   - name: Branch-Protection
     score: 3
     reason: branch protection is not maximal on development and all release branches
@@ -241,14 +229,26 @@ checks:
       - 'Warn: ''last push approval'' is disabled on branch ''master'''
       - 'Warn: no status checks found to merge onto branch ''master'''
       - 'Info: PRs are required in order to make changes on branch ''master'''
-  - name: SAST
-    score: 2
-    reason: SAST tool is not run on all commits -- score normalized to 2
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
     details:
-      - 'Warn: 7 commits out of 30 are checked with a SAST tool'
+      - 'Warn: release artifact v4.20.1 not signed: https://api.github.com/repos/golang-migrate/migrate/releases/385260585'
+      - 'Warn: release artifact v4.19.1 not signed: https://api.github.com/repos/golang-migrate/migrate/releases/266160898'
+      - 'Warn: release artifact v4.19.0 not signed: https://api.github.com/repos/golang-migrate/migrate/releases/243553225'
+      - 'Warn: release artifact v4.18.3 not signed: https://api.github.com/repos/golang-migrate/migrate/releases/214419650'
+      - 'Warn: release artifact v4.20.1 does not have provenance: https://api.github.com/repos/golang-migrate/migrate/releases/385260585'
+      - 'Warn: release artifact v4.19.1 does not have provenance: https://api.github.com/repos/golang-migrate/migrate/releases/266160898'
+      - 'Warn: release artifact v4.19.0 does not have provenance: https://api.github.com/repos/golang-migrate/migrate/releases/243553225'
+      - 'Warn: release artifact v4.18.3 does not have provenance: https://api.github.com/repos/golang-migrate/migrate/releases/214419650'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/ci.yaml:52'
+  - name: SAST
+    score: 2
+    reason: SAST tool is not run on all commits -- score normalized to 2
+    details:
+      - 'Warn: 7 commits out of 30 are checked with a SAST tool'
 ---

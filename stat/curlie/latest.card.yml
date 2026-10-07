@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.8.2"
   latestRelease: "v1.8.2"
   latestPrerelease: ""
-  collectedAt: 2026-10-06T07:43:10Z
+  collectedAt: 2026-10-07T07:11:29Z
 timeline:
   created: 2018-05-26
   lastCommit: 2025-12-07
@@ -17,7 +17,7 @@ timeline:
 popularity:
   star: 3730
   watcher: 26
-  fork: 114
+  fork: 115
   release: 19
   contributor: 27
   pullRequest: 44
@@ -28,7 +28,7 @@ language:
 totalBytes: 21529
 recent:
   last30d:
-    since: 2026-09-06
+    since: 2026-09-07
     release: 0
     mergedPR: 0
     openPR: 1
@@ -36,7 +36,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-08-07
+    since: 2026-08-08
     release: 0
     mergedPR: 0
     openPR: 1
@@ -44,7 +44,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-07-08
+    since: 2026-07-09
     release: 0
     mergedPR: 0
     openPR: 1
@@ -52,7 +52,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-04-09
+    since: 2026-04-10
     release: 0
     mergedPR: 0
     openPR: 2
@@ -60,7 +60,7 @@ recent:
     openIssue: 2
     commit: 0
   last360d:
-    since: 2025-10-11
+    since: 2025-10-12
     release: 0
     mergedPR: 1
     openPR: 2
@@ -68,7 +68,7 @@ recent:
     openIssue: 4
     commit: 1
   last720d:
-    since: 2024-10-16
+    since: 2024-10-17
     release: 1
     mergedPR: 6
     openPR: 2
@@ -84,7 +84,7 @@ total:
   commit: 91
 ---
 path: /home/runner/.x-repo/github.com/rs/curlie
-collectedAt: 2026-10-06T07:43:11Z
+collectedAt: 2026-10-07T07:11:30Z
 loc:
   Go:
     code: 929
@@ -112,7 +112,7 @@ total:
   blanks: 117
   files: 16
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/rs/curlie
   commit: 5dfcbb17ea673b66a3faab66d2ff5f24145f45a8
@@ -125,18 +125,24 @@ checks:
     score: 5
     reason: Found 16/27 approved changesets -- score normalized to 5
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
+  - name: Token-Permissions
+    score: 10
+    reason: GitHub workflow tokens follow principle of least privilege
+    details:
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:18'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -149,12 +155,6 @@ checks:
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
-  - name: Token-Permissions
-    score: 10
-    reason: GitHub workflow tokens follow principle of least privilege
-    details:
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:18'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -178,6 +178,11 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:21'
   - name: Signed-Releases
     score: 1
     reason: 1 out of the last 5 releases have a total of 1 signed artifacts.
@@ -192,11 +197,6 @@ checks:
       - 'Warn: release artifact v1.7.1 does not have provenance: https://api.github.com/repos/rs/curlie/releases/102221753'
       - 'Warn: release artifact v1.6.9 does not have provenance: https://api.github.com/repos/rs/curlie/releases/63533318'
       - 'Warn: release artifact v1.6.8 does not have provenance: https://api.github.com/repos/rs/curlie/releases/63529692'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:21'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches

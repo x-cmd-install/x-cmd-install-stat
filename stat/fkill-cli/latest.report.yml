@@ -7,7 +7,7 @@ about:
   latestVersion: "v9.0.0"
   latestRelease: "v9.0.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-06T06:54:38Z
+  collectedAt: 2026-10-07T06:32:25Z
 timeline:
   created: 2015-06-20
   lastCommit: 2025-11-09
@@ -27,7 +27,7 @@ language:
 totalBytes: 15283
 recent:
   last30d:
-    since: 2026-09-06
+    since: 2026-09-07
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-07
+    since: 2026-08-08
     release: 0
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-08
+    since: 2026-07-09
     release: 0
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-09
+    since: 2026-04-10
     release: 0
     mergedPR: 0
     openPR: 1
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-11
+    since: 2025-10-12
     release: 1
     mergedPR: 0
     openPR: 1
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 3
   last720d:
-    since: 2024-10-16
+    since: 2024-10-17
     release: 1
     mergedPR: 0
     openPR: 1
@@ -83,7 +83,7 @@ total:
   commit: 103
 ---
 path: /home/runner/.x-repo/github.com/sindresorhus/fkill-cli
-collectedAt: 2026-10-06T06:54:38Z
+collectedAt: 2026-10-07T06:32:26Z
 loc:
   JavaScript:
     code: 390
@@ -111,19 +111,28 @@ total:
   blanks: 97
   files: 7
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/sindresorhus/fkill-cli
   commit: 2afe64c9110612ef377d0aa8fdcf8c0ba8d940a1
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 3
 checks:
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Code-Review
     score: 2
     reason: Found 7/30 approved changesets -- score normalized to 2
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -131,21 +140,6 @@ checks:
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
-      - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
     details: null
   - name: Pinned-Dependencies
     score: 0
@@ -156,15 +150,16 @@ checks:
       - 'Warn: npmCommand not pinned by hash: .github/workflows/main.yml:25'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 npmCommand dependencies pinned'
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
@@ -175,6 +170,11 @@ checks:
     score: -1
     reason: no releases found
     details: null
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''main'''
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -183,15 +183,15 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''main'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 7 are checked with a SAST tool'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
 ---
 {"id":260910449,"author":{"login":"sindresorhus","id":170270,"node_id":"MDQ6VXNlcjE3MDI3MA==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAkCXKc4PjS1x","tag_name":"v9.0.0","target_commitish":"main","name":"","draft":false,"immutable":false,"prerelease":false,"created_at":"2025-11-09T09:57:24Z","updated_at":"2025-11-09T09:58:46Z","published_at":"2025-11-09T09:58:46Z","assets":[],"body":"### Breaking\r\n\r\n- Require Node.js 20  eecb553\r\n\r\n### Improvements\r\n\r\n- Add smart-case support  72e590d\r\n\r\n---\r\n\r\nhttps://github.com/sindresorhus/fkill-cli/compare/v8.0.0...v9.0.0"}

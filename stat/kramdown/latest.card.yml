@@ -7,7 +7,7 @@ about:
   latestVersion: "REL_1_5_0"
   latestRelease: "REL_1_5_0"
   latestPrerelease: ""
-  collectedAt: 2026-10-06T07:46:41Z
+  collectedAt: 2026-10-07T07:23:59Z
 timeline:
   created: 2008-11-30
   lastCommit: 2026-01-19
@@ -30,7 +30,7 @@ language:
 totalBytes: 442665
 recent:
   last30d:
-    since: 2026-09-06
+    since: 2026-09-07
     release: 0
     mergedPR: 0
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-08-07
+    since: 2026-08-08
     release: 0
     mergedPR: 0
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-07-08
+    since: 2026-07-09
     release: 0
     mergedPR: 0
     openPR: 1
@@ -54,7 +54,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-04-09
+    since: 2026-04-10
     release: 0
     mergedPR: 0
     openPR: 1
@@ -62,7 +62,7 @@ recent:
     openIssue: 2
     commit: 0
   last360d:
-    since: 2025-10-11
+    since: 2025-10-12
     release: 0
     mergedPR: 0
     openPR: 1
@@ -70,7 +70,7 @@ recent:
     openIssue: 5
     commit: 4
   last720d:
-    since: 2024-10-16
+    since: 2024-10-17
     release: 0
     mergedPR: 0
     openPR: 3
@@ -86,7 +86,7 @@ total:
   commit: 1147
 ---
 path: /home/runner/.x-repo/github.com/gettalong/kramdown
-collectedAt: 2026-10-06T07:46:42Z
+collectedAt: 2026-10-07T07:24:01Z
 loc:
   Ruby:
     code: 7926
@@ -139,15 +139,24 @@ total:
   blanks: 3425
   files: 493
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/gettalong/kramdown
   commit: 12b3d2e752793d4128b6355c338b23fefa674ee0
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 2.5
 checks:
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Token-Permissions
+    score: -1
+    reason: No tokens found
+    details: null
   - name: Code-Review
     score: 0
     reason: Found 0/30 approved changesets -- score normalized to 0
@@ -159,15 +168,6 @@ checks:
   - name: Dangerous-Workflow
     score: -1
     reason: no workflows found
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Token-Permissions
-    score: -1
-    reason: No tokens found
     details: null
   - name: SAST
     score: 0
@@ -205,6 +205,11 @@ checks:
       - 'Warn: release artifact REL_1_4_0 not signed: https://api.github.com/repos/gettalong/kramdown/releases/380646'
       - 'Warn: release artifact REL_1_5_0 does not have provenance: https://api.github.com/repos/gettalong/kramdown/releases/653829'
       - 'Warn: release artifact REL_1_4_0 does not have provenance: https://api.github.com/repos/gettalong/kramdown/releases/380646'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Security-Policy
     score: 9
     reason: security policy file detected
@@ -213,9 +218,4 @@ checks:
       - 'Info: Found linked content: github.com/gettalong/.github/SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: github.com/gettalong/.github/SECURITY.md:1'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
 ---

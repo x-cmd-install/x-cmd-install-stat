@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.26"
   latestRelease: "v1.26"
   latestPrerelease: ""
-  collectedAt: 2026-10-06T06:28:14Z
+  collectedAt: 2026-10-07T06:12:05Z
 timeline:
   created: 2017-08-21
   lastCommit: 2026-08-11
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-01-14
   lastPrerelease: 
 popularity:
-  star: 2889
+  star: 2890
   watcher: 40
   fork: 283
   release: 42
@@ -28,7 +28,7 @@ language:
 totalBytes: 137732
 recent:
   last30d:
-    since: 2026-09-06
+    since: 2026-09-07
     release: 0
     mergedPR: 0
     openPR: 1
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-07
+    since: 2026-08-08
     release: 0
     mergedPR: 0
     openPR: 2
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-08
+    since: 2026-07-09
     release: 0
     mergedPR: 0
     openPR: 2
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 3
   last180d:
-    since: 2026-04-09
+    since: 2026-04-10
     release: 0
     mergedPR: 0
     openPR: 3
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 3
   last360d:
-    since: 2025-10-11
+    since: 2025-10-12
     release: 1
     mergedPR: 1
     openPR: 11
@@ -68,7 +68,7 @@ recent:
     openIssue: 2
     commit: 4
   last720d:
-    since: 2024-10-16
+    since: 2024-10-17
     release: 2
     mergedPR: 7
     openPR: 15
@@ -84,7 +84,7 @@ total:
   commit: 473
 ---
 path: /home/runner/.x-repo/github.com/justjanne/powerline-go
-collectedAt: 2026-10-06T06:28:15Z
+collectedAt: 2026-10-07T06:12:05Z
 loc:
   Go:
     code: 5444
@@ -112,26 +112,26 @@ total:
   blanks: 806
   files: 68
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/justjanne/powerline-go
   commit: 093f92f9eb4721ee0034a79e7b1e54f25623fb92
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 3.9
 checks:
-  - name: Code-Review
-    score: 7
-    reason: Found 11/14 approved changesets -- score normalized to 7
-    details: null
   - name: Maintained
     score: 4
     reason: 3 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 4
     details: null
-  - name: Binary-Artifacts
+  - name: Code-Review
+    score: 7
+    reason: Found 11/14 approved changesets -- score normalized to 7
+    details: null
+  - name: Dangerous-Workflow
     score: 10
-    reason: no binaries found in the repo
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -140,10 +140,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/build.yml:1'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:7'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -156,6 +152,10 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/justjanne/powerline-go/release.yml/main?enable=pin'
       - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -185,16 +185,6 @@ checks:
       - 'Warn: release artifact v1.24 does not have provenance: https://api.github.com/repos/justjanne/powerline-go/releases/104229349'
       - 'Warn: release artifact v1.23 does not have provenance: https://api.github.com/repos/justjanne/powerline-go/releases/101198786'
       - 'Warn: release artifact v1.22.1 does not have provenance: https://api.github.com/repos/justjanne/powerline-go/releases/64935731'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''main'''
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 27 are checked with a SAST tool'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -208,4 +198,14 @@ checks:
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/build.yml:8'
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 27 are checked with a SAST tool'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''main'''
 ---

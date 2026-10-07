@@ -7,7 +7,7 @@ about:
   latestVersion: "v5.0.0"
   latestRelease: "v5.0.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-06T06:27:43Z
+  collectedAt: 2026-10-07T06:18:13Z
 timeline:
   created: 2014-07-04
   lastCommit: 2026-10-01
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-09-17
   lastPrerelease: 
 popularity:
-  star: 31715
+  star: 31719
   watcher: 658
-  fork: 5802
+  fork: 5803
   release: 270
   contributor: 124
   pullRequest: 9523
@@ -32,39 +32,39 @@ language:
 totalBytes: 6257949
 recent:
   last30d:
-    since: 2026-09-06
+    since: 2026-09-07
     release: 1
-    mergedPR: 142
+    mergedPR: 138
     openPR: 9
-    closedIssue: 59
-    openIssue: 24
+    closedIssue: 55
+    openIssue: 23
     commit: 177
   last60d:
-    since: 2026-08-07
+    since: 2026-08-08
     release: 3
-    mergedPR: 263
+    mergedPR: 262
     openPR: 11
     closedIssue: 108
     openIssue: 40
     commit: 345
   last90d:
-    since: 2026-07-08
+    since: 2026-07-09
     release: 6
-    mergedPR: 384
+    mergedPR: 382
     openPR: 11
     closedIssue: 154
     openIssue: 51
     commit: 571
   last180d:
-    since: 2026-04-09
+    since: 2026-04-10
     release: 6
-    mergedPR: 473
+    mergedPR: 472
     openPR: 15
-    closedIssue: 254
+    closedIssue: 252
     openIssue: 61
     commit: 937
   last360d:
-    since: 2025-10-11
+    since: 2025-10-12
     release: 15
     mergedPR: 710
     openPR: 15
@@ -72,13 +72,13 @@ recent:
     openIssue: 66
     commit: 1314
   last720d:
-    since: 2024-10-16
+    since: 2024-10-17
     release: 41
-    mergedPR: 1686
+    mergedPR: 1680
     openPR: 16
-    closedIssue: 1237
+    closedIssue: 1235
     openIssue: 69
-    commit: 2105
+    commit: 2101
 total:
   release: 270
   mergedPR: 8370
@@ -88,7 +88,7 @@ total:
   commit: 13819
 ---
 path: /home/runner/.x-repo/github.com/jumpserver/jumpserver
-collectedAt: 2026-10-06T06:27:56Z
+collectedAt: 2026-10-07T06:18:28Z
 loc:
   Python:
     code: 114185
@@ -176,18 +176,26 @@ total:
   blanks: 28184
   files: 1893
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/jumpserver/jumpserver
-  commit: 0629220c3c638415c700df9faa70460dce88f24b
+  commit: dd2060c49a414f89e8456f3dee0019144b614a2e
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 6.3
 checks:
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 23 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 22 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Security-Policy
     score: 9
@@ -197,14 +205,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -232,17 +232,17 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: GNU General Public License v3.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
@@ -266,11 +266,6 @@ checks:
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/build-ansible-executor.yml:34'
-  - name: SAST
-    score: 8
-    reason: SAST tool is not run on all commits -- score normalized to 8
-    details:
-      - 'Warn: 25 commits out of 30 are checked with a SAST tool'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -309,8 +304,8 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release-drafter.yml:57: update your workflow using https://app.stepsecurity.io/secureworkflow/jumpserver/jumpserver/release-drafter.yml/dev?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/translate-readme.yml:40: update your workflow using https://app.stepsecurity.io/secureworkflow/jumpserver/jumpserver/translate-readme.yml/dev?enable=pin'
       - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating jumpserver/core-base:20260908_003939 to jumpserver/core-base:20260908_003939@sha256:9ffa6f211bd99d74b318c602b72861051fd74593520a5afe4b7d3fafa0ac6a9d'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:23: pin your Docker image by updating python:3.14-slim-trixie to python:3.14-slim-trixie@sha256:51dafde81dbdb6ebde285137a295cf18a47ca95234fe388a343719cb97305b3d'
-      - 'Warn: containerImage not pinned by hash: Dockerfile-base:1: pin your Docker image by updating python:3.14-slim-trixie to python:3.14-slim-trixie@sha256:51dafde81dbdb6ebde285137a295cf18a47ca95234fe388a343719cb97305b3d'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:23: pin your Docker image by updating python:3.14-slim-trixie to python:3.14-slim-trixie@sha256:f85c5697265c178cc6887276c55fe16cf3d14ca35c3df6a5eab3b360534a55d2'
+      - 'Warn: containerImage not pinned by hash: Dockerfile-base:1: pin your Docker image by updating python:3.14-slim-trixie to python:3.14-slim-trixie@sha256:f85c5697265c178cc6887276c55fe16cf3d14ca35c3df6a5eab3b360534a55d2'
       - 'Warn: containerImage not pinned by hash: Dockerfile-ee:2: pin your Docker image by updating jumpserver/gmssl:3.1.1-trixie to jumpserver/gmssl:3.1.1-trixie@sha256:280b6fff5780ecf797051ded9bbac035eea3e15868d3e05c9bc1efc1cb9815a1'
       - 'Warn: containerImage not pinned by hash: Dockerfile-ee:4'
       - 'Warn: containerImage not pinned by hash: Dockerfile-ee:5: pin your Docker image by updating jumpserver/core:dev-ce to jumpserver/core:dev-ce@sha256:5bc547fd5d70c003cc4ee981e2c9bbc3bd8af0efc1233c0a96c46c3087f00811'
@@ -322,4 +317,9 @@ checks:
       - 'Info:   2 out of  24 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   6 containerImage dependencies pinned'
       - 'Info:   0 out of   4 pipCommand dependencies pinned'
+  - name: SAST
+    score: 8
+    reason: SAST tool is not run on all commits -- score normalized to 8
+    details:
+      - 'Warn: 26 commits out of 30 are checked with a SAST tool'
 ---

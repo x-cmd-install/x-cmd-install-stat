@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.21.6"
   latestRelease: "v0.21.6"
   latestPrerelease: ""
-  collectedAt: 2026-10-06T06:59:13Z
+  collectedAt: 2026-10-07T06:26:14Z
 timeline:
   created: 2017-03-02
   lastCommit: 2026-09-29
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-22
   lastPrerelease: 
 popularity:
-  star: 10134
+  star: 10136
   watcher: 116
   fork: 405
   release: 96
@@ -30,7 +30,7 @@ language:
 totalBytes: 708075
 recent:
   last30d:
-    since: 2026-09-06
+    since: 2026-09-07
     release: 2
     mergedPR: 0
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 58
   last60d:
-    since: 2026-08-07
+    since: 2026-08-08
     release: 2
     mergedPR: 0
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 1
     commit: 58
   last90d:
-    since: 2026-07-08
+    since: 2026-07-09
     release: 2
     mergedPR: 0
     openPR: 0
@@ -54,15 +54,15 @@ recent:
     openIssue: 1
     commit: 58
   last180d:
-    since: 2026-04-09
+    since: 2026-04-10
     release: 2
     mergedPR: 0
-    openPR: 2
+    openPR: 1
     closedIssue: 8
     openIssue: 1
     commit: 59
   last360d:
-    since: 2025-10-11
+    since: 2025-10-12
     release: 16
     mergedPR: 0
     openPR: 3
@@ -70,11 +70,11 @@ recent:
     openIssue: 4
     commit: 80
   last720d:
-    since: 2024-10-16
+    since: 2024-10-17
     release: 31
     mergedPR: 4
     openPR: 7
-    closedIssue: 53
+    closedIssue: 52
     openIssue: 13
     commit: 136
 total:
@@ -86,7 +86,7 @@ total:
   commit: 1244
 ---
 path: /home/runner/.x-repo/github.com/xo/usql
-collectedAt: 2026-10-06T06:59:15Z
+collectedAt: 2026-10-07T06:26:16Z
 loc:
   Go:
     code: 21889
@@ -134,13 +134,13 @@ total:
   blanks: 3966
   files: 268
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/xo/usql
   commit: c3541c24db3359f10893e5f995a9ac13dc6a2036
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 3.4
 checks:
   - name: Code-Review
@@ -151,10 +151,6 @@ checks:
     score: 10
     reason: 30 commit(s) and 16 issue activity found in the last 90 days -- score normalized to 10
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -164,11 +160,10 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: SAST
-    score: 0
-    reason: no SAST tool detected
-    details:
-      - 'Warn: no pull requests merged into dev branch'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -177,6 +172,11 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: SAST
+    score: 0
+    reason: no SAST tool detected
+    details:
+      - 'Warn: no pull requests merged into dev branch'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -219,17 +219,22 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''main'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -244,9 +249,4 @@ checks:
       - 'Warn: release artifact v0.21.4 does not have provenance: https://api.github.com/repos/xo/usql/releases/301742194'
       - 'Warn: release artifact v0.21.3 does not have provenance: https://api.github.com/repos/xo/usql/releases/301472112'
       - 'Warn: release artifact v0.21.2 does not have provenance: https://api.github.com/repos/xo/usql/releases/301468482'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''main'''
 ---

@@ -2,12 +2,12 @@ about:
   description: "Storage orchestrator for containers"
   license: Apache-2.0
   homepage: 
-  head: 2fedfbd
+  head: 0af98c9
   archived: false
   latestVersion: "v26.06.1"
   latestRelease: "v26.06.1"
   latestPrerelease: "v20.01.0-beta.1"
-  collectedAt: 2026-10-06T05:29:03Z
+  collectedAt: 2026-10-07T04:58:19Z
 timeline:
   created: 2016-12-22
   lastCommit: 2026-10-06
@@ -19,11 +19,11 @@ popularity:
   watcher: 78
   fork: 282
   release: 75
-  contributor: 91
+  contributor: 92
   pullRequest: 154
   issue: 1035
 language:
-  Go: 20022040
+  Go: 20055833
   Go Template: 77087
   Python: 51596
   Makefile: 27310
@@ -31,76 +31,76 @@ language:
   Shell: 6579
   Dockerfile: 4904
   templ: 376
-totalBytes: 20200729
+totalBytes: 20234522
 recent:
   last30d:
-    since: 2026-09-06
+    since: 2026-09-07
     release: 0
     mergedPR: 0
     openPR: 2
     closedIssue: 0
     openIssue: 4
-    commit: 0
+    commit: 21
   last60d:
-    since: 2026-08-07
+    since: 2026-08-08
     release: 1
     mergedPR: 0
     openPR: 6
     closedIssue: 1
     openIssue: 11
-    commit: 0
+    commit: 38
   last90d:
-    since: 2026-07-08
+    since: 2026-07-09
     release: 1
     mergedPR: 0
     openPR: 10
     closedIssue: 2
     openIssue: 19
-    commit: 0
+    commit: 54
   last180d:
-    since: 2026-04-09
+    since: 2026-04-10
     release: 3
     mergedPR: 0
     openPR: 16
-    closedIssue: 11
-    openIssue: 35
-    commit: 0
+    closedIssue: 10
+    openIssue: 33
+    commit: 116
   last360d:
-    since: 2025-10-11
+    since: 2025-10-12
     release: 6
     mergedPR: 0
     openPR: 19
     closedIssue: 37
     openIssue: 59
-    commit: 0
+    commit: 253
   last720d:
-    since: 2024-10-16
+    since: 2024-10-17
     release: 13
     mergedPR: 0
     openPR: 31
     closedIssue: 90
-    openIssue: 117
-    commit: 481
+    openIssue: 116
+    commit: 483
 total:
   release: 75
   mergedPR: 4
   openPR: 51
   closedIssue: 800
   openIssue: 235
-  commit: 1902
+  commit: 1905
 ---
 path: /home/runner/.x-repo/github.com/NetApp/trident
-collectedAt: 2026-10-06T05:29:20Z
+collectedAt: 2026-10-07T04:58:31Z
 loc:
   Go:
-    code: 2092274
-    comments: 553695
-    blanks: 580214
+    code: 2092878
+    comments: 553725
+    blanks: 580258
     files: 5877
   Yaml:
-    code: 961520
-    comments: 118
-    blanks: 422
+    code: 961523
+    comments: 119
+    blanks: 423
     files: 73
   Json:
     code: 172614
@@ -148,9 +148,9 @@ loc:
     blanks: 3655
     files: 9
 total:
-  code: 3228141
-  comments: 558126
-  blanks: 585237
+  code: 3228748
+  comments: 558157
+  blanks: 585282
   files: 6013
 ---
 date: "2026-10-05"
@@ -276,4 +276,4 @@ checks:
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
 ---
-{"id":373344191,"author":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBJmq8s4WQMe_","tag_name":"v26.06.1","target_commitish":"4c655f64cffa82f9d90c80ea5672658b2bbb45f5","name":"v26.06.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-17T23:22:06Z","updated_at":"2026-08-19T21:05:58Z","published_at":"2026-08-19T21:05:58Z","assets":[{"id":521334219,"node_id":"RA_kwDOBJmq8s4fEu3L","name":"trident-installer-26.06.1.tar.gz","label":"","uploader":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":111017635,"digest":"sha256:606752c85238cb0d54121ecaf811bca0d5adea80247f9b55d2a12238d8e8bf04","download_count":3171,"created_at":"2026-08-19T20:52:37Z","updated_at":"2026-08-19T20:52:40Z"}],"body":"## Changes since v26.06.0\r\n\r\n### Trident\r\n\r\n**Fixes:**\r\n\r\n- **Kubernetes:** Fixed a race between CSI publish and volume move that could attach a volume using stale access information.\r\n- **Kubernetes:** Fixed a race where `NodeGetInfo` could return empty topology labels before node registration completed, causing topology-aware provisioning failures.\r\n- **Kubernetes:** Fixed a rare NVMe disconnect race that could tear down a shared subsystem while another pod was still attaching.\r\n- **Kubernetes:** Fixed NVMe PVC clone publish failures (and incorrect parent-namespace mapping) when creating clones of a mounted volume under concurrency.\r\n- **Kubernetes:** Fixed snapshot creation failures for PVCs on ONTAP-SAN-Economy backends using a `nameTemplate`.\r\n\r\n**Enhancements:**\r\n\r\n- Added optional `storageAPITimeout` (seconds) on ONTAP backend config to set REST and ZAPI API client timeouts per backend."}
+{"id":373344191,"author":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBJmq8s4WQMe_","tag_name":"v26.06.1","target_commitish":"4c655f64cffa82f9d90c80ea5672658b2bbb45f5","name":"v26.06.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-17T23:22:06Z","updated_at":"2026-08-19T21:05:58Z","published_at":"2026-08-19T21:05:58Z","assets":[{"id":521334219,"node_id":"RA_kwDOBJmq8s4fEu3L","name":"trident-installer-26.06.1.tar.gz","label":"","uploader":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":111017635,"digest":"sha256:606752c85238cb0d54121ecaf811bca0d5adea80247f9b55d2a12238d8e8bf04","download_count":3276,"created_at":"2026-08-19T20:52:37Z","updated_at":"2026-08-19T20:52:40Z"}],"body":"## Changes since v26.06.0\r\n\r\n### Trident\r\n\r\n**Fixes:**\r\n\r\n- **Kubernetes:** Fixed a race between CSI publish and volume move that could attach a volume using stale access information.\r\n- **Kubernetes:** Fixed a race where `NodeGetInfo` could return empty topology labels before node registration completed, causing topology-aware provisioning failures.\r\n- **Kubernetes:** Fixed a rare NVMe disconnect race that could tear down a shared subsystem while another pod was still attaching.\r\n- **Kubernetes:** Fixed NVMe PVC clone publish failures (and incorrect parent-namespace mapping) when creating clones of a mounted volume under concurrency.\r\n- **Kubernetes:** Fixed snapshot creation failures for PVCs on ONTAP-SAN-Economy backends using a `nameTemplate`.\r\n\r\n**Enhancements:**\r\n\r\n- Added optional `storageAPITimeout` (seconds) on ONTAP backend config to set REST and ZAPI API client timeouts per backend."}

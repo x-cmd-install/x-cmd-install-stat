@@ -7,7 +7,7 @@ about:
   latestVersion: "1.2.9"
   latestRelease: "1.2.9"
   latestPrerelease: ""
-  collectedAt: 2026-10-06T06:54:16Z
+  collectedAt: 2026-10-07T06:12:52Z
 timeline:
   created: 2018-11-25
   lastCommit: 2025-09-27
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2020-12-26
   lastPrerelease: 
 popularity:
-  star: 1867
+  star: 1866
   watcher: 16
   fork: 151
   release: 3
@@ -28,7 +28,7 @@ language:
 totalBytes: 23009
 recent:
   last30d:
-    since: 2026-09-06
+    since: 2026-09-07
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-07
+    since: 2026-08-08
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-08
+    since: 2026-07-09
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-09
+    since: 2026-04-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-11
+    since: 2025-10-12
     release: 0
     mergedPR: 0
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 1
     commit: 0
   last720d:
-    since: 2024-10-16
+    since: 2024-10-17
     release: 0
     mergedPR: 1
     openPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 198
 ---
 path: /home/runner/.x-repo/github.com/joelibaceta/video-to-ascii
-collectedAt: 2026-10-06T06:54:23Z
+collectedAt: 2026-10-07T06:12:58Z
 loc:
   Python:
     code: 542
@@ -127,13 +127,13 @@ total:
   blanks: 345
   files: 26
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/joelibaceta/video-to-ascii
   commit: b04a494e6e1be429d18af2400425cea93f896377
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 3.4
 checks:
   - name: Dangerous-Workflow
@@ -153,20 +153,25 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/lint_python.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -175,30 +180,25 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Pinned-Dependencies
-    score: 0
-    reason: dependency not pinned by hash detected -- score normalized to 0
-    details:
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/lint_python.yml:7: update your workflow using https://app.stepsecurity.io/secureworkflow/joelibaceta/video-to-ascii/lint_python.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/lint_python.yml:8: update your workflow using https://app.stepsecurity.io/secureworkflow/joelibaceta/video-to-ascii/lint_python.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating python:3 to python:3@sha256:be8ccd085666c34273c9dc5607c9842f8b2e3116128aae45148ce164c07ce09d'
-      - 'Warn: pipCommand not pinned by hash: Dockerfile:5'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/lint_python.yml:10'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/lint_python.yml:17'
-      - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   0 out of   1 containerImage dependencies pinned'
-      - 'Info:   0 out of   3 pipCommand dependencies pinned'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Pinned-Dependencies
+    score: 0
+    reason: dependency not pinned by hash detected -- score normalized to 0
+    details:
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/lint_python.yml:7: update your workflow using https://app.stepsecurity.io/secureworkflow/joelibaceta/video-to-ascii/lint_python.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/lint_python.yml:8: update your workflow using https://app.stepsecurity.io/secureworkflow/joelibaceta/video-to-ascii/lint_python.yml/master?enable=pin'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating python:3 to python:3@sha256:1eb6b7d4b76454b1de8317863ac3213b678c337b27e604a4e3fb70bddbb2bad7'
+      - 'Warn: pipCommand not pinned by hash: Dockerfile:5'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/lint_python.yml:10'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/lint_python.yml:17'
+      - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   0 out of   3 pipCommand dependencies pinned'
+      - 'Info:   0 out of   1 containerImage dependencies pinned'
   - name: Signed-Releases
     score: -1
     reason: no releases found

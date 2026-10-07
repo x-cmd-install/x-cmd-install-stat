@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-10-06T07:25:41Z
+  collectedAt: 2026-10-07T07:03:35Z
 timeline:
   created: 
   lastCommit: 
@@ -24,7 +24,7 @@ popularity:
   issue: 0
 recent:
   last30d:
-    since: 2026-09-06
+    since: 2026-09-07
     release: 0
     mergedPR: 0
     openPR: 0
@@ -32,7 +32,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-07
+    since: 2026-08-08
     release: 0
     mergedPR: 0
     openPR: 0
@@ -40,7 +40,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-08
+    since: 2026-07-09
     release: 0
     mergedPR: 0
     openPR: 0
@@ -48,7 +48,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-09
+    since: 2026-04-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -56,7 +56,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-11
+    since: 2025-10-12
     release: 0
     mergedPR: 0
     openPR: 0
@@ -64,7 +64,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-16
+    since: 2024-10-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -83,38 +83,42 @@ graphqlErrors:
   - Could not resolve to a Repository with the name 'docsifyjs/docsify-cli#readme'.
 ---
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/docsifyjs/docsify-cli
   commit: 2ad4dcaa28299b242da1e9b2261544e93440281e
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 4.3
 checks:
   - name: Code-Review
     score: 3
     reason: Found 4/11 approved changesets -- score normalized to 3
     details: null
-  - name: Maintained
-    score: 3
-    reason: 4 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 3
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 3
+    reason: 4 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 3
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/docsify-cli.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Pinned-Dependencies
     score: 3
     reason: dependency not pinned by hash detected -- score normalized to 3
@@ -123,10 +127,6 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/docsify-cli.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/docsifyjs/docsify-cli/docsify-cli.yml/master?enable=pin'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   1 out of   1 npmCommand dependencies pinned'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -136,16 +136,16 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches

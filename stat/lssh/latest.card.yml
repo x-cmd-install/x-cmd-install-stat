@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.10.0"
   latestRelease: "v0.10.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-06T07:24:08Z
+  collectedAt: 2026-10-07T06:52:19Z
 timeline:
   created: 2017-01-02
   lastCommit: 2026-04-26
@@ -30,15 +30,15 @@ language:
 totalBytes: 1755714
 recent:
   last30d:
-    since: 2026-09-06
+    since: 2026-09-07
     release: 0
     mergedPR: 0
     openPR: 0
     closedIssue: 0
-    openIssue: 1
+    openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-07
+    since: 2026-08-08
     release: 0
     mergedPR: 0
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 2
     commit: 0
   last90d:
-    since: 2026-07-08
+    since: 2026-07-09
     release: 0
     mergedPR: 0
     openPR: 2
@@ -54,7 +54,7 @@ recent:
     openIssue: 2
     commit: 0
   last180d:
-    since: 2026-04-09
+    since: 2026-04-10
     release: 2
     mergedPR: 3
     openPR: 5
@@ -62,7 +62,7 @@ recent:
     openIssue: 3
     commit: 55
   last360d:
-    since: 2025-10-11
+    since: 2025-10-12
     release: 6
     mergedPR: 19
     openPR: 5
@@ -70,7 +70,7 @@ recent:
     openIssue: 3
     commit: 146
   last720d:
-    since: 2024-10-16
+    since: 2024-10-17
     release: 6
     mergedPR: 19
     openPR: 5
@@ -86,7 +86,7 @@ total:
   commit: 999
 ---
 path: /home/runner/.x-repo/github.com/blacknon/lssh
-collectedAt: 2026-10-06T07:24:32Z
+collectedAt: 2026-10-07T06:52:39Z
 loc:
   Go:
     code: 1550894
@@ -194,40 +194,32 @@ total:
   blanks: 220035
   files: 5062
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/blacknon/lssh
   commit: ea86bba28b91f9c9eddfe2b686c6b8314d1dd3eb
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 3.2
 checks:
-  - name: Code-Review
-    score: 0
-    reason: Found 0/2 approved changesets -- score normalized to 0
-    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: SECURITY.md:1'
-      - 'Info: Found linked content: SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
-      - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
+  - name: Code-Review
+    score: 0
+    reason: Found 0/2 approved changesets -- score normalized to 0
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -236,6 +228,14 @@ checks:
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yaml:11'
       - 'Warn: no topLevel permission defined: .github/workflows/test.yaml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: SECURITY.md:1'
+      - 'Info: Found linked content: SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
+      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -246,21 +246,17 @@ checks:
     details:
       - 'Warn: binary detected: vendor/github.com/1password/onepassword-sdk-go/internal/wasm/core.wasm:1'
       - 'Warn: binary detected: vendor/github.com/extism/go-sdk/extism-runtime.wasm:1'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE.md:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE.md:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -275,6 +271,15 @@ checks:
       - 'Warn: release artifact v0.8.0 does not have provenance: https://api.github.com/repos/blacknon/lssh/releases/306701068'
       - 'Warn: release artifact v0.7.1 does not have provenance: https://api.github.com/repos/blacknon/lssh/releases/305661343'
       - 'Warn: release artifact v0.7.0 does not have provenance: https://api.github.com/repos/blacknon/lssh/releases/305392384'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 29 are checked with a SAST tool'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -291,23 +296,18 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yaml:27: update your workflow using https://app.stepsecurity.io/secureworkflow/blacknon/lssh/test.yaml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yaml:30: update your workflow using https://app.stepsecurity.io/secureworkflow/blacknon/lssh/test.yaml/master?enable=pin'
       - 'Warn: containerImage not pinned by hash: demo-telnet-provider/client/Dockerfile:1: pin your Docker image by updating golang:1.25.1-bookworm to golang:1.25.1-bookworm@sha256:c423747fbd96fd8f0b1102d947f51f9b266060217478e5f9bf86f145969562ee'
-      - 'Warn: containerImage not pinned by hash: demo-telnet-provider/client/Dockerfile:9: pin your Docker image by updating debian:bookworm-slim to debian:bookworm-slim@sha256:3783cc01769c7b2b1b83a5c5ad96c815348e28ed7da68e2e3687004faa906251'
+      - 'Warn: containerImage not pinned by hash: demo-telnet-provider/client/Dockerfile:9: pin your Docker image by updating debian:bookworm-slim to debian:bookworm-slim@sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587'
       - 'Warn: containerImage not pinned by hash: demo-telnet-provider/images/telnetd/Dockerfile:1: pin your Docker image by updating golang:1.25.1-bookworm to golang:1.25.1-bookworm@sha256:c423747fbd96fd8f0b1102d947f51f9b266060217478e5f9bf86f145969562ee'
-      - 'Warn: containerImage not pinned by hash: demo-telnet-provider/images/telnetd/Dockerfile:8: pin your Docker image by updating debian:bookworm-slim to debian:bookworm-slim@sha256:3783cc01769c7b2b1b83a5c5ad96c815348e28ed7da68e2e3687004faa906251'
+      - 'Warn: containerImage not pinned by hash: demo-telnet-provider/images/telnetd/Dockerfile:8: pin your Docker image by updating debian:bookworm-slim to debian:bookworm-slim@sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587'
       - 'Warn: containerImage not pinned by hash: demo/client/Dockerfile:1: pin your Docker image by updating golang:1.25.1-bookworm to golang:1.25.1-bookworm@sha256:c423747fbd96fd8f0b1102d947f51f9b266060217478e5f9bf86f145969562ee'
-      - 'Warn: containerImage not pinned by hash: demo/client/Dockerfile:16: pin your Docker image by updating debian:bookworm-slim to debian:bookworm-slim@sha256:3783cc01769c7b2b1b83a5c5ad96c815348e28ed7da68e2e3687004faa906251'
-      - 'Warn: containerImage not pinned by hash: demo/images/http-proxy/Dockerfile:1: pin your Docker image by updating debian:bookworm-slim to debian:bookworm-slim@sha256:3783cc01769c7b2b1b83a5c5ad96c815348e28ed7da68e2e3687004faa906251'
-      - 'Warn: containerImage not pinned by hash: demo/images/socks-proxy/Dockerfile:1: pin your Docker image by updating debian:bookworm-slim to debian:bookworm-slim@sha256:3783cc01769c7b2b1b83a5c5ad96c815348e28ed7da68e2e3687004faa906251'
-      - 'Warn: containerImage not pinned by hash: demo/images/sshd/Dockerfile:1: pin your Docker image by updating debian:bookworm-slim to debian:bookworm-slim@sha256:3783cc01769c7b2b1b83a5c5ad96c815348e28ed7da68e2e3687004faa906251'
+      - 'Warn: containerImage not pinned by hash: demo/client/Dockerfile:16: pin your Docker image by updating debian:bookworm-slim to debian:bookworm-slim@sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587'
+      - 'Warn: containerImage not pinned by hash: demo/images/http-proxy/Dockerfile:1: pin your Docker image by updating debian:bookworm-slim to debian:bookworm-slim@sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587'
+      - 'Warn: containerImage not pinned by hash: demo/images/socks-proxy/Dockerfile:1: pin your Docker image by updating debian:bookworm-slim to debian:bookworm-slim@sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587'
+      - 'Warn: containerImage not pinned by hash: demo/images/sshd/Dockerfile:1: pin your Docker image by updating debian:bookworm-slim to debian:bookworm-slim@sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587'
       - 'Warn: goCommand not pinned by hash: vendor/github.com/ChrisTrenkamp/goxpath/coverage.sh:3'
       - 'Warn: goCommand not pinned by hash: .github/workflows/release.yaml:59'
       - 'Info:   0 out of  10 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   9 containerImage dependencies pinned'
       - 'Info:   0 out of   2 goCommand dependencies pinned'
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 29 are checked with a SAST tool'
+      - 'Info:   0 out of   9 containerImage dependencies pinned'
 ---

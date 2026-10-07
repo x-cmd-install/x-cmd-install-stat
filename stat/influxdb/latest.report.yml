@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.9.13"
   latestRelease: "v3.9.13"
   latestPrerelease: "v1.8.5rc1"
-  collectedAt: 2026-10-06T07:04:53Z
+  collectedAt: 2026-10-07T06:36:07Z
 timeline:
   created: 2013-09-26
   lastCommit: 2026-09-18
@@ -17,10 +17,10 @@ timeline:
 popularity:
   star: 31759
   watcher: 701
-  fork: 3718
+  fork: 3720
   release: 107
   contributor: 533
-  pullRequest: 12878
+  pullRequest: 12879
   issue: 14276
 language:
   Rust: 14365852
@@ -31,63 +31,63 @@ language:
 totalBytes: 14900000
 recent:
   last30d:
-    since: 2026-09-06
+    since: 2026-09-07
     release: 6
     mergedPR: 32
     openPR: 17
     closedIssue: 13
-    openIssue: 10
+    openIssue: 9
     commit: 25
   last60d:
-    since: 2026-08-07
+    since: 2026-08-08
     release: 6
     mergedPR: 45
-    openPR: 21
+    openPR: 22
     closedIssue: 17
     openIssue: 22
     commit: 26
   last90d:
-    since: 2026-07-08
+    since: 2026-07-09
     release: 6
     mergedPR: 76
-    openPR: 23
+    openPR: 24
     closedIssue: 22
     openIssue: 27
     commit: 47
   last180d:
-    since: 2026-04-09
+    since: 2026-04-10
     release: 10
-    mergedPR: 154
-    openPR: 32
+    mergedPR: 153
+    openPR: 33
     closedIssue: 43
     openIssue: 40
     commit: 98
   last360d:
-    since: 2025-10-11
+    since: 2025-10-12
     release: 13
     mergedPR: 404
-    openPR: 46
+    openPR: 47
     closedIssue: 143
     openIssue: 70
     commit: 202
   last720d:
-    since: 2024-10-16
+    since: 2024-10-17
     release: 21
-    mergedPR: 1127
-    openPR: 65
-    closedIssue: 589
-    openIssue: 209
-    commit: 578
+    mergedPR: 1125
+    openPR: 66
+    closedIssue: 587
+    openIssue: 208
+    commit: 577
 total:
   release: 107
   mergedPR: 11128
-  openPR: 103
+  openPR: 104
   closedIssue: 12208
   openIssue: 2068
   commit: 49927
 ---
 path: /home/runner/.x-repo/github.com/influxdata/influxdb
-collectedAt: 2026-10-06T07:05:31Z
+collectedAt: 2026-10-07T06:36:33Z
 loc:
   Rust:
     code: 316774
@@ -145,20 +145,38 @@ total:
   blanks: 48461
   files: 1206
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/influxdata/influxdb
   commit: 06200ef96ba82c5f6727e5038a83af8e722c6875
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
-score: 6.7
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+score: 6.6
 checks:
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/semantic.yml:1'
+      - 'Info: no jobLevel write permissions found'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Maintained
+    score: 7
+    reason: 7 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 7
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -167,31 +185,13 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 8
-    reason: 7 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 8
-    details: null
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/semantic.yml:1'
-      - 'Info: no jobLevel write permissions found'
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
+    details: null
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
     details: null
   - name: License
     score: 10
@@ -212,7 +212,7 @@ checks:
     details:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/semantic.yml:10: update your workflow using https://app.stepsecurity.io/secureworkflow/influxdata/influxdb/semantic.yml/main?enable=pin'
       - 'Warn: containerImage not pinned by hash: Dockerfile:3: pin your Docker image by updating rust:1.92-slim-bookworm to rust:1.92-slim-bookworm@sha256:f1f73538ebe623fd3673a35aff3df358ae1084c64c55646516e5b17b321b6c9b'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:64: pin your Docker image by updating debian:bookworm-slim to debian:bookworm-slim@sha256:3783cc01769c7b2b1b83a5c5ad96c815348e28ed7da68e2e3687004faa906251'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:64: pin your Docker image by updating debian:bookworm-slim to debian:bookworm-slim@sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587'
       - 'Warn: containerImage not pinned by hash: docker/Dockerfile.ci:14'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 containerImage dependencies pinned'

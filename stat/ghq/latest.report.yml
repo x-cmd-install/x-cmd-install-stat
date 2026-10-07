@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.11.2"
   latestRelease: "v1.11.2"
   latestPrerelease: "v0.7-pre"
-  collectedAt: 2026-10-06T06:23:20Z
+  collectedAt: 2026-10-07T05:57:42Z
 timeline:
   created: 2013-02-05
   lastCommit: 2026-09-29
@@ -30,7 +30,7 @@ language:
 totalBytes: 197663
 recent:
   last30d:
-    since: 2026-09-06
+    since: 2026-09-07
     release: 3
     mergedPR: 8
     openPR: 3
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 14
   last60d:
-    since: 2026-08-07
+    since: 2026-08-08
     release: 3
     mergedPR: 13
     openPR: 3
@@ -46,7 +46,7 @@ recent:
     openIssue: 1
     commit: 22
   last90d:
-    since: 2026-07-08
+    since: 2026-07-09
     release: 3
     mergedPR: 20
     openPR: 3
@@ -54,15 +54,15 @@ recent:
     openIssue: 1
     commit: 25
   last180d:
-    since: 2026-04-09
-    release: 5
-    mergedPR: 44
+    since: 2026-04-10
+    release: 4
+    mergedPR: 43
     openPR: 3
-    closedIssue: 6
+    closedIssue: 5
     openIssue: 3
     commit: 52
   last360d:
-    since: 2025-10-11
+    since: 2025-10-12
     release: 11
     mergedPR: 84
     openPR: 4
@@ -70,7 +70,7 @@ recent:
     openIssue: 5
     commit: 134
   last720d:
-    since: 2024-10-16
+    since: 2024-10-17
     release: 15
     mergedPR: 103
     openPR: 5
@@ -86,7 +86,7 @@ total:
   commit: 1275
 ---
 path: /home/runner/.x-repo/github.com/x-motemen/ghq
-collectedAt: 2026-10-06T06:23:20Z
+collectedAt: 2026-10-07T05:57:43Z
 loc:
   Go:
     code: 5888
@@ -139,7 +139,7 @@ total:
   blanks: 934
   files: 45
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/x-motemen/ghq
   commit: b9273dd116d09b423073b83e7c0d82ef508d985a
@@ -151,6 +151,10 @@ checks:
   - name: Code-Review
     score: 2
     reason: Found 1/5 approved changesets -- score normalized to 2
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -164,10 +168,6 @@ checks:
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
     details: null
   - name: Pinned-Dependencies
     score: 10
@@ -183,10 +183,10 @@ checks:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:16'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release.yaml:25'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yaml:26'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yaml:60'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yaml:10'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yaml:23'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yaml:41'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yaml:60'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/tagpr.yaml:13'
       - 'Info: jobLevel ''issues'' permission set to ''read'': .github/workflows/tagpr.yaml:15'
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/tagpr.yaml:39'
@@ -220,6 +220,11 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -234,15 +239,10 @@ checks:
       - 'Warn: release artifact v1.11.0 does not have provenance: https://api.github.com/repos/x-motemen/ghq/releases/399073511'
       - 'Warn: release artifact v1.10.1 does not have provenance: https://api.github.com/repos/x-motemen/ghq/releases/307867897'
       - 'Warn: release artifact v1.10.0 does not have provenance: https://api.github.com/repos/x-motemen/ghq/releases/306955773'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---
-{"id":399353866,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAHp63s4XzagK","tag_name":"v1.11.2","target_commitish":"master","name":"v1.11.2","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-09-29T16:59:55Z","updated_at":"2026-09-29T17:02:23Z","published_at":"2026-09-29T17:02:23Z","assets":[{"id":598741428,"node_id":"RA_kwDOAHp63s4jsBG0","name":"ghq_darwin_amd64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":4315419,"digest":"sha256:abfe6b378ec8b59dd441a7eb13bc0f0f5b38b76dbdc78bd034df826302004639","download_count":39,"created_at":"2026-09-29T17:02:21Z","updated_at":"2026-09-29T17:02:22Z"},{"id":598741463,"node_id":"RA_kwDOAHp63s4jsBHX","name":"ghq_darwin_arm64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3966930,"digest":"sha256:8317f8ea5671bccb31e7747eb0a892a77a472dbc7c988f9d47cdfc969a59e242","download_count":476,"created_at":"2026-09-29T17:02:22Z","updated_at":"2026-09-29T17:02:22Z"},{"id":598741424,"node_id":"RA_kwDOAHp63s4jsBGw","name":"ghq_linux_amd64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":4277326,"digest":"sha256:efa5c1de4e763565b71649229449d8123ceb7131a8d0ed25755aaee73969cdf1","download_count":736,"created_at":"2026-09-29T17:02:21Z","updated_at":"2026-09-29T17:02:21Z"},{"id":598741476,"node_id":"RA_kwDOAHp63s4jsBHk","name":"ghq_linux_arm64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3831612,"digest":"sha256:0a083c5d5b214dd0f4f693cf8839b15f6b5cc4e2d91b0cb4abb8748dcdb353c9","download_count":197,"created_at":"2026-09-29T17:02:22Z","updated_at":"2026-09-29T17:02:23Z"},{"id":598741479,"node_id":"RA_kwDOAHp63s4jsBHn","name":"ghq_windows_amd64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":4391174,"digest":"sha256:7ab0e759ac9f117f0b5eeea0985c58e693ecb8d2e29b7bcfbce657caac31bce8","download_count":265,"created_at":"2026-09-29T17:02:22Z","updated_at":"2026-09-29T17:02:23Z"},{"id":598741425,"node_id":"RA_kwDOAHp63s4jsBGx","name":"ghq_windows_arm64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3913122,"digest":"sha256:9d0bef6da668fd9f1a2db3261eb2f7086f779aa3b0040fea39e1ea028bc25a35","download_count":23,"created_at":"2026-09-29T17:02:21Z","updated_at":"2026-09-29T17:02:22Z"},{"id":598741427,"node_id":"RA_kwDOAHp63s4jsBGz","name":"SHASUMS","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":378,"digest":"sha256:b19439d61d6deeda64911a300d9ef11987fa5553c99b2931ede7302425ed2697","download_count":52,"created_at":"2026-09-29T17:02:21Z","updated_at":"2026-09-29T17:02:21Z"}],"body":"<!-- Release notes generated using configuration in .github/release.yml at ef51a0969e05f5f71a73a293dc35f4ecb5673b25 -->\n\n## What's Changed\n* Restore release asset compatibility by @Songmu in https://github.com/x-motemen/ghq/pull/555\n\n\n**Full Changelog**: https://github.com/x-motemen/ghq/compare/v1.11.1...v1.11.2","mentions_count":1}
+{"id":399353866,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAHp63s4XzagK","tag_name":"v1.11.2","target_commitish":"master","name":"v1.11.2","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-09-29T16:59:55Z","updated_at":"2026-09-29T17:02:23Z","published_at":"2026-09-29T17:02:23Z","assets":[{"id":598741428,"node_id":"RA_kwDOAHp63s4jsBG0","name":"ghq_darwin_amd64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":4315419,"digest":"sha256:abfe6b378ec8b59dd441a7eb13bc0f0f5b38b76dbdc78bd034df826302004639","download_count":44,"created_at":"2026-09-29T17:02:21Z","updated_at":"2026-09-29T17:02:22Z"},{"id":598741463,"node_id":"RA_kwDOAHp63s4jsBHX","name":"ghq_darwin_arm64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3966930,"digest":"sha256:8317f8ea5671bccb31e7747eb0a892a77a472dbc7c988f9d47cdfc969a59e242","download_count":554,"created_at":"2026-09-29T17:02:22Z","updated_at":"2026-09-29T17:02:22Z"},{"id":598741424,"node_id":"RA_kwDOAHp63s4jsBGw","name":"ghq_linux_amd64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":4277326,"digest":"sha256:efa5c1de4e763565b71649229449d8123ceb7131a8d0ed25755aaee73969cdf1","download_count":944,"created_at":"2026-09-29T17:02:21Z","updated_at":"2026-09-29T17:02:21Z"},{"id":598741476,"node_id":"RA_kwDOAHp63s4jsBHk","name":"ghq_linux_arm64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3831612,"digest":"sha256:0a083c5d5b214dd0f4f693cf8839b15f6b5cc4e2d91b0cb4abb8748dcdb353c9","download_count":243,"created_at":"2026-09-29T17:02:22Z","updated_at":"2026-09-29T17:02:23Z"},{"id":598741479,"node_id":"RA_kwDOAHp63s4jsBHn","name":"ghq_windows_amd64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":4391174,"digest":"sha256:7ab0e759ac9f117f0b5eeea0985c58e693ecb8d2e29b7bcfbce657caac31bce8","download_count":278,"created_at":"2026-09-29T17:02:22Z","updated_at":"2026-09-29T17:02:23Z"},{"id":598741425,"node_id":"RA_kwDOAHp63s4jsBGx","name":"ghq_windows_arm64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3913122,"digest":"sha256:9d0bef6da668fd9f1a2db3261eb2f7086f779aa3b0040fea39e1ea028bc25a35","download_count":24,"created_at":"2026-09-29T17:02:21Z","updated_at":"2026-09-29T17:02:22Z"},{"id":598741427,"node_id":"RA_kwDOAHp63s4jsBGz","name":"SHASUMS","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":378,"digest":"sha256:b19439d61d6deeda64911a300d9ef11987fa5553c99b2931ede7302425ed2697","download_count":56,"created_at":"2026-09-29T17:02:21Z","updated_at":"2026-09-29T17:02:21Z"}],"body":"<!-- Release notes generated using configuration in .github/release.yml at ef51a0969e05f5f71a73a293dc35f4ecb5673b25 -->\n\n## What's Changed\n* Restore release asset compatibility by @Songmu in https://github.com/x-motemen/ghq/pull/555\n\n\n**Full Changelog**: https://github.com/x-motemen/ghq/compare/v1.11.1...v1.11.2","mentions_count":1}

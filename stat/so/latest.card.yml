@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.4.10"
   latestRelease: "v0.4.10"
   latestPrerelease: ""
-  collectedAt: 2026-10-06T06:46:39Z
+  collectedAt: 2026-10-07T06:13:55Z
 timeline:
   created: 2020-05-30
   lastCommit: 2025-06-30
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2024-08-23
   lastPrerelease: 
 popularity:
-  star: 1423
+  star: 1421
   watcher: 11
   fork: 42
   release: 16
@@ -29,7 +29,7 @@ language:
 totalBytes: 114954
 recent:
   last30d:
-    since: 2026-09-06
+    since: 2026-09-07
     release: 0
     mergedPR: 0
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-07
+    since: 2026-08-08
     release: 0
     mergedPR: 0
     openPR: 0
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-08
+    since: 2026-07-09
     release: 0
     mergedPR: 0
     openPR: 0
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-09
+    since: 2026-04-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-11
+    since: 2025-10-12
     release: 0
     mergedPR: 0
     openPR: 4
@@ -69,7 +69,7 @@ recent:
     openIssue: 1
     commit: 0
   last720d:
-    since: 2024-10-16
+    since: 2024-10-17
     release: 0
     mergedPR: 1
     openPR: 4
@@ -85,7 +85,7 @@ total:
   commit: 207
 ---
 path: /home/runner/.x-repo/github.com/samtay/so
-collectedAt: 2026-10-06T06:46:39Z
+collectedAt: 2026-10-07T06:13:57Z
 loc:
   Rust:
     code: 2919
@@ -128,32 +128,36 @@ total:
   blanks: 2363
   files: 35
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/samtay/so
   commit: 4969956b4aab1bb3aa8705627f71a1ad269ffe31
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 2.9
 checks:
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Code-Review
-    score: 1
-    reason: Found 3/16 approved changesets -- score normalized to 1
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Code-Review
+    score: 1
+    reason: Found 3/16 approved changesets -- score normalized to 1
+    details: null
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -162,10 +166,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yaml:4'
       - 'Info: no jobLevel write permissions found'
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -190,11 +190,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -209,10 +204,11 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -227,6 +223,10 @@ checks:
       - 'Warn: release artifact v0.4.8 does not have provenance: https://api.github.com/repos/samtay/so/releases/74948337'
       - 'Warn: release artifact v0.4.7 does not have provenance: https://api.github.com/repos/samtay/so/releases/74937337'
       - 'Warn: release artifact v0.4.6 does not have provenance: https://api.github.com/repos/samtay/so/releases/60168464'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
