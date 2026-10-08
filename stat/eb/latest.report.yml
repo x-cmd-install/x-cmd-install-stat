@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.5.0"
   latestRelease: "v0.5.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-07T06:35:14Z
+  collectedAt: 2026-10-08T06:38:32Z
 timeline:
   created: 2019-07-11
   lastCommit: 2026-07-15
@@ -28,7 +28,7 @@ language:
 totalBytes: 11802
 recent:
   last30d:
-    since: 2026-09-07
+    since: 2026-09-08
     release: 0
     mergedPR: 0
     openPR: 1
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-08
+    since: 2026-08-09
     release: 0
     mergedPR: 0
     openPR: 2
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-09
+    since: 2026-07-10
     release: 0
     mergedPR: 6
     openPR: 3
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 12
   last180d:
-    since: 2026-04-10
+    since: 2026-04-11
     release: 0
     mergedPR: 7
     openPR: 3
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 12
   last360d:
-    since: 2025-10-12
+    since: 2025-10-13
     release: 0
     mergedPR: 8
     openPR: 3
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 12
   last720d:
-    since: 2024-10-17
+    since: 2024-10-18
     release: 0
     mergedPR: 20
     openPR: 7
@@ -84,7 +84,7 @@ total:
   commit: 534
 ---
 path: /home/runner/.x-repo/github.com/rye/eb
-collectedAt: 2026-10-07T06:35:15Z
+collectedAt: 2026-10-08T06:38:32Z
 loc:
   Rust:
     code: 336
@@ -112,13 +112,13 @@ total:
   blanks: 239
   files: 12
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/rye/eb
   commit: 350ad87efaceea6cafc0f950299cdfbc98c79ca5
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 4.8
 checks:
   - name: Code-Review
@@ -129,27 +129,19 @@ checks:
     score: 10
     reason: 21 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
-  - name: Binary-Artifacts
+  - name: Dangerous-Workflow
     score: 10
-    reason: no binaries found in the repo
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
+  - name: Binary-Artifacts
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: no binaries found in the repo
     details: null
-  - name: Pinned-Dependencies
-    score: 7
-    reason: dependency not pinned by hash detected -- score normalized to 7
-    details:
-      - 'Warn: downloadThenRun not pinned by hash: .github/workflows/test.yml:74'
-      - 'Info:   8 out of   8 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   1 out of   1 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -158,6 +150,14 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Pinned-Dependencies
+    score: 7
+    reason: dependency not pinned by hash detected -- score normalized to 7
+    details:
+      - 'Warn: downloadThenRun not pinned by hash: .github/workflows/test.yml:74'
+      - 'Info:   8 out of   8 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   1 out of   1 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected

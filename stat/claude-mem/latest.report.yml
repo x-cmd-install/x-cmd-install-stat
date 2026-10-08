@@ -7,7 +7,7 @@ about:
   latestVersion: "v13.34.2"
   latestRelease: "v13.34.2"
   latestPrerelease: "v13.10.3-community-edge.0"
-  collectedAt: 2026-10-07T07:02:56Z
+  collectedAt: 2026-10-08T07:04:25Z
 timeline:
   created: 2025-08-31
   lastCommit: 2026-10-06
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-10-06
   lastPrerelease: 2026-07-09
 popularity:
-  star: 97305
-  watcher: 308
-  fork: 8572
+  star: 97923
+  watcher: 313
+  fork: 8612
   release: 360
-  contributor: 221
-  pullRequest: 2134
-  issue: 2165
+  contributor: 222
+  pullRequest: 2144
+  issue: 2171
 language:
   TypeScript: 12425214
   JavaScript: 6739083
@@ -32,63 +32,63 @@ language:
 totalBytes: 21449573
 recent:
   last30d:
-    since: 2026-09-07
+    since: 2026-09-08
     release: 36
     mergedPR: 447
-    openPR: 47
-    closedIssue: 99
-    openIssue: 15
+    openPR: 53
+    closedIssue: 93
+    openIssue: 21
     commit: 0
   last60d:
-    since: 2026-08-08
-    release: 56
-    mergedPR: 545
-    openPR: 59
-    closedIssue: 259
-    openIssue: 27
+    since: 2026-08-09
+    release: 55
+    mergedPR: 541
+    openPR: 67
+    closedIssue: 256
+    openIssue: 33
     commit: 0
   last90d:
-    since: 2026-07-09
-    release: 65
-    mergedPR: 673
-    openPR: 69
-    closedIssue: 400
-    openIssue: 28
+    since: 2026-07-10
+    release: 64
+    mergedPR: 670
+    openPR: 77
+    closedIssue: 396
+    openIssue: 34
     commit: 0
   last180d:
-    since: 2026-04-10
+    since: 2026-04-11
     release: 100
-    mergedPR: 843
-    openPR: 74
-    closedIssue: 1281
-    openIssue: 29
+    mergedPR: 840
+    openPR: 82
+    closedIssue: 1264
+    openIssue: 35
     commit: 0
   last360d:
-    since: 2025-10-12
-    release: 100
-    mergedPR: 1135
-    openPR: 74
-    closedIssue: 2135
-    openIssue: 29
-    commit: 0
-  last720d:
-    since: 2024-10-17
+    since: 2025-10-13
     release: 100
     mergedPR: 1136
-    openPR: 74
+    openPR: 82
+    closedIssue: 2135
+    openIssue: 35
+    commit: 0
+  last720d:
+    since: 2024-10-18
+    release: 100
+    mergedPR: 1137
+    openPR: 82
     closedIssue: 2136
-    openIssue: 29
+    openIssue: 35
     commit: 3217
 total:
   release: 360
-  mergedPR: 1136
-  openPR: 74
+  mergedPR: 1137
+  openPR: 82
   closedIssue: 2136
-  openIssue: 29
+  openIssue: 35
   commit: 3217
 ---
 path: /home/runner/.x-repo/github.com/thedotmack/claude-mem
-collectedAt: 2026-10-07T07:03:43Z
+collectedAt: 2026-10-08T07:04:56Z
 loc:
   TypeScript:
     code: 242045
@@ -168,4 +168,4 @@ total:
 ---
 
 ---
-{"id":405016916,"author":{"login":"thedotmack","id":683968,"node_id":"MDQ6VXNlcjY4Mzk2OA==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOPng1J84YJBFU","tag_name":"v13.34.2","target_commitish":"main","name":"v13.34.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-06T18:17:29Z","updated_at":"2026-10-06T18:17:47Z","published_at":"2026-10-06T18:17:47Z","assets":[],"body":"This patch removes a worker regression that broke prompt-cache reuse for observer sessions on the providers that share the OpenAI-compatible HTTP observer loop, such as OpenRouter and Gemini.\n\n## What was wrong\n\nSince v13.29.0 (PR #3151), the worker pruned the observer's conversation history before every request. Once a tool-use exchange fell out of the most recent eight messages, its payload was replaced in place with a short stub marked `pruned=\"true\"`. That kept each request smaller, but it also rewrote messages the provider had already received. From the fifth observation of a session onward, every request changed an earlier message, so the conversation no longer started with the same bytes as the request before it. Providers that cache a prompt by its prefix could not reuse the cached conversation and had to read the rewritten part again as new input.\n\n## What changed\n\nThe shared HTTP provider no longer prunes history. The import and both per-turn calls are gone: the one before each observation request and the one before each summary request. Within a generation, a message that has been sent is now sent again unchanged, so each request extends the previous one and the summary request still sees the original tool payloads.\n\n## What stays the same\n\nRequests are still bounded by the limits that were already in place:\n\n- The observer conversation is still recycled into a new generation when it reaches its size budget, which comes from the observer context window (`CLAUDE_MEM_OBSERVER_CONTEXT_WINDOW`) and the last reported context token count.\n- A context-overflow error from a provider still recycles the conversation and continues.\n- The output cap (`CLAUDE_MEM_OBSERVER_MAX_OUTPUT_TOKENS`) and the cleanup after a rejected request are unchanged.\n- Model routing, retries, and billing behavior are unchanged.\n\nBecause old payloads are no longer shrunk, a generation reaches its size budget in fewer turns than it did in v13.29.0 through v13.34.1, and long sessions recycle more often. The effect on provider cost has not been measured in production, so this release makes no claim about savings.\n\n## Validation\n\n- `tests/history-pruning.test.ts` passes (9 tests). Its two new regression tests keep a deep copy of every request as it was sent. The first runs 40 observations and a summary and checks that each request begins with the previous request's messages, unchanged. The second drains 200 events across several bounded generations, checks the same thing within each generation, and confirms that request size stays under the bound.\n- 880 of the 881 tests in the 63 test files that cover the shared provider, the individual providers, and observer recycling pass. The one failure is a socket-timing assertion in `tests/worker/field-deadline-wire.test.ts`. It fails the same way on unmodified v13.34.1 and exercises the field-compression path, which this release does not change.\n- Root and viewer type checks, the postinstall allowlist guard, and the version-consistency and plugin-distribution tests on the built tree pass. `build-and-sync` succeeded, including a verified local worker restart on v13.34.2, and the built worker bundle no longer contains the pruning code.\n","reactions":{"total_count":1,"+1":1,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0}}
+{"id":405016916,"author":{"login":"thedotmack","id":683968,"node_id":"MDQ6VXNlcjY4Mzk2OA==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOPng1J84YJBFU","tag_name":"v13.34.2","target_commitish":"main","name":"v13.34.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-06T18:17:29Z","updated_at":"2026-10-06T18:17:47Z","published_at":"2026-10-06T18:17:47Z","assets":[],"body":"This patch removes a worker regression that broke prompt-cache reuse for observer sessions on the providers that share the OpenAI-compatible HTTP observer loop, such as OpenRouter and Gemini.\n\n## What was wrong\n\nSince v13.29.0 (PR #3151), the worker pruned the observer's conversation history before every request. Once a tool-use exchange fell out of the most recent eight messages, its payload was replaced in place with a short stub marked `pruned=\"true\"`. That kept each request smaller, but it also rewrote messages the provider had already received. From the fifth observation of a session onward, every request changed an earlier message, so the conversation no longer started with the same bytes as the request before it. Providers that cache a prompt by its prefix could not reuse the cached conversation and had to read the rewritten part again as new input.\n\n## What changed\n\nThe shared HTTP provider no longer prunes history. The import and both per-turn calls are gone: the one before each observation request and the one before each summary request. Within a generation, a message that has been sent is now sent again unchanged, so each request extends the previous one and the summary request still sees the original tool payloads.\n\n## What stays the same\n\nRequests are still bounded by the limits that were already in place:\n\n- The observer conversation is still recycled into a new generation when it reaches its size budget, which comes from the observer context window (`CLAUDE_MEM_OBSERVER_CONTEXT_WINDOW`) and the last reported context token count.\n- A context-overflow error from a provider still recycles the conversation and continues.\n- The output cap (`CLAUDE_MEM_OBSERVER_MAX_OUTPUT_TOKENS`) and the cleanup after a rejected request are unchanged.\n- Model routing, retries, and billing behavior are unchanged.\n\nBecause old payloads are no longer shrunk, a generation reaches its size budget in fewer turns than it did in v13.29.0 through v13.34.1, and long sessions recycle more often. The effect on provider cost has not been measured in production, so this release makes no claim about savings.\n\n## Validation\n\n- `tests/history-pruning.test.ts` passes (9 tests). Its two new regression tests keep a deep copy of every request as it was sent. The first runs 40 observations and a summary and checks that each request begins with the previous request's messages, unchanged. The second drains 200 events across several bounded generations, checks the same thing within each generation, and confirms that request size stays under the bound.\n- 880 of the 881 tests in the 63 test files that cover the shared provider, the individual providers, and observer recycling pass. The one failure is a socket-timing assertion in `tests/worker/field-deadline-wire.test.ts`. It fails the same way on unmodified v13.34.1 and exercises the field-compression path, which this release does not change.\n- Root and viewer type checks, the postinstall allowlist guard, and the version-consistency and plugin-distribution tests on the built tree pass. `build-and-sync` succeeded, including a verified local worker restart on v13.34.2, and the built worker bundle no longer contains the pruning code.\n","reactions":{"total_count":6,"+1":6,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0}}

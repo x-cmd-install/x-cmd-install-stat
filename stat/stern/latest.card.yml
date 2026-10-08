@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.34.0"
   latestRelease: "v1.34.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-07T06:19:04Z
+  collectedAt: 2026-10-08T06:18:12Z
 timeline:
   created: 2020-10-21
   lastCommit: 2026-09-14
@@ -31,7 +31,7 @@ language:
 totalBytes: 176673
 recent:
   last30d:
-    since: 2026-09-07
+    since: 2026-09-08
     release: 0
     mergedPR: 0
     openPR: 0
@@ -39,15 +39,15 @@ recent:
     openIssue: 1
     commit: 2
   last60d:
-    since: 2026-08-08
+    since: 2026-08-09
     release: 0
-    mergedPR: 3
+    mergedPR: 2
     openPR: 2
     closedIssue: 1
     openIssue: 1
     commit: 3
   last90d:
-    since: 2026-07-09
+    since: 2026-07-10
     release: 0
     mergedPR: 3
     openPR: 5
@@ -55,7 +55,7 @@ recent:
     openIssue: 1
     commit: 4
   last180d:
-    since: 2026-04-10
+    since: 2026-04-11
     release: 1
     mergedPR: 12
     openPR: 6
@@ -63,7 +63,7 @@ recent:
     openIssue: 1
     commit: 12
   last360d:
-    since: 2025-10-12
+    since: 2025-10-13
     release: 2
     mergedPR: 15
     openPR: 7
@@ -71,7 +71,7 @@ recent:
     openIssue: 4
     commit: 15
   last720d:
-    since: 2024-10-17
+    since: 2024-10-18
     release: 4
     mergedPR: 27
     openPR: 9
@@ -87,7 +87,7 @@ total:
   commit: 320
 ---
 path: /home/runner/.x-repo/github.com/stern/stern
-collectedAt: 2026-10-07T06:19:05Z
+collectedAt: 2026-10-08T06:18:13Z
 loc:
   Go:
     code: 5638
@@ -130,23 +130,15 @@ total:
   blanks: 889
   files: 46
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/stern/stern
   commit: 96b3c3a15a46e42080ec8413d9f4a636d765709d
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 4.1
 checks:
-  - name: Maintained
-    score: 3
-    reason: 4 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 3
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
@@ -154,6 +146,14 @@ checks:
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
+    details: null
+  - name: Maintained
+    score: 3
+    reason: 4 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 3
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Packaging
     score: -1
@@ -180,17 +180,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -205,6 +205,10 @@ checks:
       - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -219,10 +223,6 @@ checks:
       - 'Warn: release artifact v1.33.0 does not have provenance: https://api.github.com/repos/stern/stern/releases/245330163'
       - 'Warn: release artifact v1.32.0 does not have provenance: https://api.github.com/repos/stern/stern/releases/195739576'
       - 'Warn: release artifact v1.31.0 does not have provenance: https://api.github.com/repos/stern/stern/releases/178640231'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

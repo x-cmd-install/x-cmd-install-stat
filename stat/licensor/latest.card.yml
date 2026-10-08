@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.1.0"
   latestRelease: "v2.1.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-07T06:02:43Z
+  collectedAt: 2026-10-08T06:10:15Z
 timeline:
   created: 2019-09-19
   lastCommit: 2023-01-30
@@ -27,7 +27,7 @@ language:
 totalBytes: 50999
 recent:
   last30d:
-    since: 2026-09-07
+    since: 2026-09-08
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-08
+    since: 2026-08-09
     release: 0
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-09
+    since: 2026-07-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-10
+    since: 2026-04-11
     release: 0
     mergedPR: 0
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-12
+    since: 2025-10-13
     release: 0
     mergedPR: 0
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-17
+    since: 2024-10-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -83,7 +83,7 @@ total:
   commit: 98
 ---
 path: /home/runner/.x-repo/github.com/raftario/licensor
-collectedAt: 2026-10-07T06:02:44Z
+collectedAt: 2026-10-08T06:10:15Z
 loc:
   Rust:
     code: 1041
@@ -116,27 +116,15 @@ total:
   blanks: 197
   files: 18
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/raftario/licensor
   commit: a7c74793e529667f58c2ea6bfcd0c6c08e9a1ed6
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 2.6
 checks:
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
-  - name: Code-Review
-    score: 1
-    reason: Found 3/25 approved changesets -- score normalized to 1
-    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -146,6 +134,25 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 1
+    reason: Found 3/25 approved changesets -- score normalized to 1
+    details: null
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/build.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/check.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -166,13 +173,6 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/check.yml:42: update your workflow using https://app.stepsecurity.io/secureworkflow/raftario/licensor/check.yml/master?enable=pin'
       - 'Info:   0 out of   5 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   9 third-party GitHubAction dependencies pinned'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/build.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/check.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -185,22 +185,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -215,6 +210,11 @@ checks:
       - 'Warn: release artifact v1.0.2 does not have provenance: https://api.github.com/repos/raftario/licensor/releases/20139311'
       - 'Warn: release artifact v1.0.1 does not have provenance: https://api.github.com/repos/raftario/licensor/releases/20126685'
       - 'Warn: release artifact v1.0.0 does not have provenance: https://api.github.com/repos/raftario/licensor/releases/20126533'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

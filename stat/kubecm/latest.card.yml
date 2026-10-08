@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.35.1"
   latestRelease: "v0.35.1"
   latestPrerelease: ""
-  collectedAt: 2026-10-07T05:50:42Z
+  collectedAt: 2026-10-08T05:57:51Z
 timeline:
   created: 2019-07-23
   lastCommit: 2026-09-15
@@ -29,7 +29,7 @@ language:
 totalBytes: 333742
 recent:
   last30d:
-    since: 2026-09-07
+    since: 2026-09-08
     release: 0
     mergedPR: 1
     openPR: 1
@@ -37,7 +37,7 @@ recent:
     openIssue: 1
     commit: 1
   last60d:
-    since: 2026-08-08
+    since: 2026-08-09
     release: 0
     mergedPR: 2
     openPR: 2
@@ -45,15 +45,15 @@ recent:
     openIssue: 1
     commit: 2
   last90d:
-    since: 2026-07-09
+    since: 2026-07-10
     release: 0
     mergedPR: 4
-    openPR: 3
+    openPR: 2
     closedIssue: 2
     openIssue: 1
     commit: 5
   last180d:
-    since: 2026-04-10
+    since: 2026-04-11
     release: 0
     mergedPR: 6
     openPR: 4
@@ -61,15 +61,15 @@ recent:
     openIssue: 1
     commit: 6
   last360d:
-    since: 2025-10-12
+    since: 2025-10-13
     release: 5
-    mergedPR: 32
+    mergedPR: 31
     openPR: 7
     closedIssue: 14
     openIssue: 3
     commit: 31
   last720d:
-    since: 2024-10-17
+    since: 2024-10-18
     release: 11
     mergedPR: 78
     openPR: 7
@@ -85,7 +85,7 @@ total:
   commit: 614
 ---
 path: /home/runner/.x-repo/github.com/sunny0826/kubecm
-collectedAt: 2026-10-07T05:50:46Z
+collectedAt: 2026-10-08T05:57:53Z
 loc:
   Go:
     code: 10372
@@ -138,26 +138,18 @@ total:
   blanks: 2437
   files: 142
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/sunny0826/kubecm
   commit: 836ce650dc76c5f4c7682726a01cf5741d9764e0
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 5.8
 checks:
   - name: Code-Review
     score: 9
     reason: Found 10/11 approved changesets -- score normalized to 9
-    details: null
-  - name: Maintained
-    score: 4
-    reason: 5 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 4
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
     details: null
   - name: Security-Policy
     score: 10
@@ -167,12 +159,24 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Maintained
+    score: 4
+    reason: 5 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 4
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:32'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:33'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:32'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/e2e-test.yaml:23'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/e2e-test.yaml:41'
       - 'Warn: no topLevel permission defined: .github/workflows/codeql-analysis.yml:1'
@@ -181,10 +185,6 @@ checks:
       - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/issue-metrics.yml:9'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yaml:10'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 5
     reason: 'badge detected: Passing'
@@ -227,10 +227,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -250,6 +246,10 @@ checks:
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yaml:15'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 7
     reason: SAST tool detected but not run on all commits

@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.14.1"
   latestRelease: "v1.14.1"
   latestPrerelease: "v4.0.0-alpha3"
-  collectedAt: 2026-10-07T06:39:40Z
+  collectedAt: 2026-10-08T06:45:31Z
 timeline:
   created: 2016-11-23
   lastCommit: 2026-08-13
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2025-12-27
   lastPrerelease: 2025-12-27
 popularity:
-  star: 8708
+  star: 8710
   watcher: 64
   fork: 330
   release: 28
@@ -29,7 +29,7 @@ language:
 totalBytes: 398623
 recent:
   last30d:
-    since: 2026-09-07
+    since: 2026-09-08
     release: 0
     mergedPR: 0
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-08-08
+    since: 2026-08-09
     release: 0
     mergedPR: 0
     openPR: 0
@@ -45,7 +45,7 @@ recent:
     openIssue: 2
     commit: 1
   last90d:
-    since: 2026-07-09
+    since: 2026-07-10
     release: 0
     mergedPR: 1
     openPR: 0
@@ -53,7 +53,7 @@ recent:
     openIssue: 2
     commit: 3
   last180d:
-    since: 2026-04-10
+    since: 2026-04-11
     release: 0
     mergedPR: 1
     openPR: 0
@@ -61,7 +61,7 @@ recent:
     openIssue: 2
     commit: 3
   last360d:
-    since: 2025-10-12
+    since: 2025-10-13
     release: 2
     mergedPR: 1
     openPR: 0
@@ -69,7 +69,7 @@ recent:
     openIssue: 7
     commit: 6
   last720d:
-    since: 2024-10-17
+    since: 2024-10-18
     release: 5
     mergedPR: 9
     openPR: 0
@@ -85,7 +85,7 @@ total:
   commit: 754
 ---
 path: /home/runner/.x-repo/github.com/vi/websocat
-collectedAt: 2026-10-07T06:39:41Z
+collectedAt: 2026-10-08T06:45:32Z
 loc:
   Rust:
     code: 10308
@@ -118,18 +118,18 @@ total:
   blanks: 2084
   files: 50
 ---
-date: "2026-09-28"
+date: "2026-10-05"
 repo:
   name: github.com/vi/websocat
   commit: 3a3574cd2f5d17857d87f3982e72c3ede159dde0
 scorecard:
-  version: v5.5.1-0.20260908181711-f92023a3f778
-  commit: f92023a3f77879f96e0c9c1305f289d755be4bb6
+  version: v5.5.1-0.20260928043300-ac4b58443938
+  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
 score: 3.3
 checks:
-  - name: Code-Review
-    score: 3
-    reason: Found 9/23 approved changesets -- score normalized to 3
+  - name: Maintained
+    score: 6
+    reason: 4 commit(s) and 4 issue activity found in the last 90 days -- score normalized to 6
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -139,6 +139,15 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Code-Review
+    score: 3
+    reason: Found 9/23 approved changesets -- score normalized to 3
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -147,15 +156,6 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/container-image-buildah.yml:44'
       - 'Warn: topLevel ''packages'' permission set to ''write'': .github/workflows/container-image-buildah.yml:45'
       - 'Info: no jobLevel write permissions found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
-    score: 6
-    reason: 4 commit(s) and 4 issue activity found in the last 90 days -- score normalized to 6
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -168,17 +168,36 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Fuzzing
+  - name: Branch-Protection
     score: 0
-    reason: project is not fuzzed
+    reason: branch protection not enabled on development/release branches
     details:
-      - 'Warn: no fuzzer integrations found'
+      - 'Warn: branch protection not enabled for branch ''master'''
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v4.0.0-alpha3 not signed: https://api.github.com/repos/vi/websocat/releases/272961734'
+      - 'Warn: release artifact v1.14.1 not signed: https://api.github.com/repos/vi/websocat/releases/272969627'
+      - 'Warn: release artifact v4.0.0-alpha2 not signed: https://api.github.com/repos/vi/websocat/releases/206040795'
+      - 'Warn: release artifact v1.14.0 not signed: https://api.github.com/repos/vi/websocat/releases/184903643'
+      - 'Warn: release artifact v4.0.0-alpha1 not signed: https://api.github.com/repos/vi/websocat/releases/184747202'
+      - 'Warn: release artifact v4.0.0-alpha3 does not have provenance: https://api.github.com/repos/vi/websocat/releases/272961734'
+      - 'Warn: release artifact v1.14.1 does not have provenance: https://api.github.com/repos/vi/websocat/releases/272969627'
+      - 'Warn: release artifact v4.0.0-alpha2 does not have provenance: https://api.github.com/repos/vi/websocat/releases/206040795'
+      - 'Warn: release artifact v1.14.0 does not have provenance: https://api.github.com/repos/vi/websocat/releases/184903643'
+      - 'Warn: release artifact v4.0.0-alpha1 does not have provenance: https://api.github.com/repos/vi/websocat/releases/184747202'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -198,29 +217,10 @@ checks:
       - 'Warn: containerImage not pinned by hash: Dockerfile:2: pin your Docker image by updating rust:1.87.0-alpine3.20 to rust:1.87.0-alpine3.20@sha256:126b44382fa926ce41eecac3ef4628de508f0df8556fe43e8d64cdcd1cbbe40b'
       - 'Warn: containerImage not pinned by hash: Dockerfile:22: pin your Docker image by updating alpine:3.20 to alpine:3.20@sha256:d9e853e87e55526f6b2917df91a2115c36dd7c696a35be12163d44e6e2a4b6bc'
       - 'Warn: containerImage not pinned by hash: Dockerfile.debian:2: pin your Docker image by updating rust:1.87.0-bookworm to rust:1.87.0-bookworm@sha256:251cec8da4689d180f124ef00024c2f83f79d9bf984e43c180a598119e326b84'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.debian:24: pin your Docker image by updating debian:bookworm to debian:bookworm@sha256:f37a335e82bca302e955fa39f9dfe28f1be618f016f8a2b56318e5a5111afc26'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.debian:24: pin your Docker image by updating debian:bookworm to debian:bookworm@sha256:2c037a04925515fdd6ea85ea14a682d0e79931f5e9f5d07b6dbfc6ba12f9e858'
       - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   9 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 containerImage dependencies pinned'
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v4.0.0-alpha3 not signed: https://api.github.com/repos/vi/websocat/releases/272961734'
-      - 'Warn: release artifact v1.14.1 not signed: https://api.github.com/repos/vi/websocat/releases/272969627'
-      - 'Warn: release artifact v4.0.0-alpha2 not signed: https://api.github.com/repos/vi/websocat/releases/206040795'
-      - 'Warn: release artifact v1.14.0 not signed: https://api.github.com/repos/vi/websocat/releases/184903643'
-      - 'Warn: release artifact v4.0.0-alpha1 not signed: https://api.github.com/repos/vi/websocat/releases/184747202'
-      - 'Warn: release artifact v4.0.0-alpha3 does not have provenance: https://api.github.com/repos/vi/websocat/releases/272961734'
-      - 'Warn: release artifact v1.14.1 does not have provenance: https://api.github.com/repos/vi/websocat/releases/272969627'
-      - 'Warn: release artifact v4.0.0-alpha2 does not have provenance: https://api.github.com/repos/vi/websocat/releases/206040795'
-      - 'Warn: release artifact v1.14.0 does not have provenance: https://api.github.com/repos/vi/websocat/releases/184903643'
-      - 'Warn: release artifact v4.0.0-alpha1 does not have provenance: https://api.github.com/repos/vi/websocat/releases/184747202'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
