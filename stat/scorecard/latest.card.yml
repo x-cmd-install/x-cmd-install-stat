@@ -2,25 +2,25 @@ about:
   description: "OpenSSF Scorecard - Security health metrics for Open Source"
   license: Apache-2.0
   homepage: https://scorecard.dev
-  head: 612883b
+  head: b7acea6
   archived: false
   latestVersion: "v5.5.0"
   latestRelease: "v5.5.0"
   latestPrerelease: "v5.0.0-rc2"
-  collectedAt: 2026-10-09T07:23:13Z
+  collectedAt: 2026-10-10T06:58:36Z
 timeline:
   created: 2020-10-09
-  lastCommit: 2026-10-08
+  lastCommit: 2026-10-09
   lastVersion: 2026-04-23
   lastRelease: 2026-04-23
   lastPrerelease: 2024-05-07
 popularity:
-  star: 5744
+  star: 5746
   watcher: 70
-  fork: 740
+  fork: 741
   release: 48
   contributor: 211
-  pullRequest: 3928
+  pullRequest: 3930
   issue: 1273
 language:
   Go: 2690677
@@ -31,63 +31,63 @@ language:
 totalBytes: 2726846
 recent:
   last30d:
-    since: 2026-09-09
+    since: 2026-09-10
     release: 0
     mergedPR: 22
     openPR: 24
-    closedIssue: 4
+    closedIssue: 3
     openIssue: 8
-    commit: 25
+    commit: 26
   last60d:
-    since: 2026-08-10
+    since: 2026-08-11
     release: 0
-    mergedPR: 25
+    mergedPR: 26
     openPR: 37
     closedIssue: 8
     openIssue: 16
-    commit: 29
+    commit: 30
   last90d:
-    since: 2026-07-11
+    since: 2026-07-12
     release: 0
-    mergedPR: 36
-    openPR: 50
+    mergedPR: 37
+    openPR: 51
     closedIssue: 8
     openIssue: 23
-    commit: 40
+    commit: 41
   last180d:
-    since: 2026-04-12
+    since: 2026-04-13
     release: 1
-    mergedPR: 51
+    mergedPR: 49
     openPR: 56
     closedIssue: 10
     openIssue: 37
-    commit: 59
+    commit: 60
   last360d:
-    since: 2025-10-14
+    since: 2025-10-15
     release: 2
-    mergedPR: 137
-    openPR: 60
+    mergedPR: 138
+    openPR: 61
     closedIssue: 19
     openIssue: 47
-    commit: 141
+    commit: 142
   last720d:
-    since: 2024-10-19
+    since: 2024-10-20
     release: 7
-    mergedPR: 357
-    openPR: 60
+    mergedPR: 358
+    openPR: 61
     closedIssue: 71
     openIssue: 82
-    commit: 361
+    commit: 362
 total:
   release: 48
-  mergedPR: 3021
-  openPR: 60
+  mergedPR: 3022
+  openPR: 61
   closedIssue: 882
   openIssue: 391
-  commit: 3131
+  commit: 3132
 ---
 path: /home/runner/.x-repo/github.com/ossf/scorecard
-collectedAt: 2026-10-09T07:23:48Z
+collectedAt: 2026-10-10T06:59:09Z
 loc:
   Go:
     code: 79082
@@ -165,18 +165,27 @@ total:
   blanks: 11625
   files: 864
 ---
-date: "2026-10-08T15:37:56Z"
+date: "2026-10-10T02:00:40Z"
 repo:
   name: github.com/ossf/scorecard
-  commit: 612883be5e1732969147316d83431347e755ae05
+  commit: b7acea69f1c50ffe22604a7979365989c533ccf7
 scorecard:
   version: v5.5.0
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
-score: 8.5
+score: 8.3
 checks:
   - name: Code-Review
     score: 4
-    reason: Found 8/17 approved changesets -- score normalized to 4
+    reason: Found 7/16 approved changesets -- score normalized to 4
+    details: null
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Security-Policy
     score: 10
@@ -186,42 +195,29 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Token-Permissions
     score: 9
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:45'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:46'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/docker.yml:33'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/docker.yml:68'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/docker.yml:33'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/goreleaser.yaml:74'
       - 'Info: jobLevel permissions set to ''read-all'': .github/workflows/goreleaser.yaml:85'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:139'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:361'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:91'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:168'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:217'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:256'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:298'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:326'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:361'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:37'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:91'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:139'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/main.yml:326'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/osps-baseline.yml:13'
       - 'Warn: jobLevel ''security-events'' permission set to ''write'': .github/workflows/osps-baseline.yml:14'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/publishimage.yml:32'
@@ -243,6 +239,10 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/security-insights.yml:28'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/stale.yml:20'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/verify.yml:19'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Pinned-Dependencies
     score: 9
     reason: dependency not pinned by hash detected -- score normalized to 9
@@ -257,12 +257,17 @@ checks:
     reason: 'badge detected: Passing'
     details: null
   - name: Vulnerabilities
-    score: 4
-    reason: 6 existing vulnerabilities detected
+    score: 0
+    reason: 11 existing vulnerabilities detected
     details:
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2022-0635'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2022-0646'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5932'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6603'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6610'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6611'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6612'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6617'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6225'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-4529'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5694'
@@ -272,27 +277,18 @@ checks:
     details:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Info: all commits (30) are checked with a SAST tool'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: OSSFuzz integration found'
-      - 'Info: GoBuiltInFuzzer integration found: checks/raw/fuzzing_test.go:177'
-  - name: Signed-Releases
-    score: 10
-    reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
-    details:
-      - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ossf/scorecard/releases/tag/v5.5.0'
-      - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ossf/scorecard/releases/tag/v5.4.0'
-      - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ossf/scorecard/releases/tag/v5.3.0'
-      - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ossf/scorecard/releases/tag/v5.2.1'
-      - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ossf/scorecard/releases/tag/v5.2.0'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: OSSFuzz integration found'
+      - 'Info: GoBuiltInFuzzer integration found: checks/raw/fuzzing_test.go:177'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
@@ -312,6 +308,15 @@ checks:
       - 'Info: ''up-to-date branches'' is required to merge on branch ''main'''
       - 'Info: status check found to merge onto on branch ''main'''
       - 'Info: PRs are required in order to make changes on branch ''main'''
+  - name: Signed-Releases
+    score: 10
+    reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
+    details:
+      - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ossf/scorecard/releases/tag/v5.5.0'
+      - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ossf/scorecard/releases/tag/v5.4.0'
+      - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ossf/scorecard/releases/tag/v5.3.0'
+      - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ossf/scorecard/releases/tag/v5.2.1'
+      - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/ossf/scorecard/releases/tag/v5.2.0'
   - name: CI-Tests
     score: 10
     reason: 30 out of 30 merged PRs checked by a CI test -- score normalized to 10

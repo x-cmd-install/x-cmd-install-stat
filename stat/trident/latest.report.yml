@@ -2,15 +2,15 @@ about:
   description: "Storage orchestrator for containers"
   license: Apache-2.0
   homepage: 
-  head: ba00d71
+  head: 7ef18ba
   archived: false
   latestVersion: "v26.06.2"
   latestRelease: "v26.06.2"
   latestPrerelease: "v20.01.0-beta.1"
-  collectedAt: 2026-10-09T05:11:44Z
+  collectedAt: 2026-10-10T04:57:00Z
 timeline:
   created: 2016-12-22
-  lastCommit: 2026-10-08
+  lastCommit: 2026-10-09
   lastVersion: 2026-10-08
   lastRelease: 2026-10-08
   lastPrerelease: 2019-12-20
@@ -21,9 +21,9 @@ popularity:
   release: 76
   contributor: 93
   pullRequest: 154
-  issue: 1036
+  issue: 1038
 language:
-  Go: 20160925
+  Go: 20195253
   Go Template: 77087
   Python: 51596
   Makefile: 27310
@@ -31,71 +31,71 @@ language:
   Shell: 6579
   Dockerfile: 4904
   templ: 376
-totalBytes: 20339614
+totalBytes: 20373942
 recent:
   last30d:
-    since: 2026-09-09
+    since: 2026-09-10
     release: 1
     mergedPR: 0
     openPR: 2
     closedIssue: 0
-    openIssue: 4
-    commit: 26
+    openIssue: 5
+    commit: 29
   last60d:
-    since: 2026-08-10
+    since: 2026-08-11
     release: 2
     mergedPR: 0
     openPR: 6
     closedIssue: 2
-    openIssue: 11
-    commit: 43
+    openIssue: 12
+    commit: 46
   last90d:
-    since: 2026-07-11
+    since: 2026-07-12
     release: 2
     mergedPR: 0
     openPR: 10
     closedIssue: 3
-    openIssue: 17
-    commit: 59
+    openIssue: 19
+    commit: 62
   last180d:
-    since: 2026-04-12
+    since: 2026-04-13
     release: 4
     mergedPR: 0
     openPR: 16
-    closedIssue: 11
-    openIssue: 33
-    commit: 121
+    closedIssue: 10
+    openIssue: 35
+    commit: 124
   last360d:
-    since: 2025-10-14
+    since: 2025-10-15
     release: 7
     mergedPR: 0
     openPR: 19
     closedIssue: 38
-    openIssue: 59
-    commit: 258
+    openIssue: 61
+    commit: 261
   last720d:
-    since: 2024-10-19
+    since: 2024-10-20
     release: 14
     mergedPR: 0
     openPR: 31
     closedIssue: 91
-    openIssue: 116
-    commit: 488
+    openIssue: 118
+    commit: 491
 total:
   release: 76
   mergedPR: 4
   openPR: 51
   closedIssue: 801
-  openIssue: 235
-  commit: 1910
+  openIssue: 237
+  commit: 1913
 ---
 path: /home/runner/.x-repo/github.com/NetApp/trident
-collectedAt: 2026-10-09T05:11:56Z
+collectedAt: 2026-10-10T04:57:11Z
 loc:
   Go:
-    code: 2095095
-    comments: 553953
-    blanks: 580636
+    code: 2095906
+    comments: 553979
+    blanks: 580737
     files: 5882
   Yaml:
     code: 961523
@@ -148,9 +148,9 @@ loc:
     blanks: 3655
     files: 9
 total:
-  code: 3230965
-  comments: 558385
-  blanks: 585660
+  code: 3231776
+  comments: 558411
+  blanks: 585761
   files: 6018
 ---
 date: "2026-10-05"
@@ -276,4 +276,4 @@ checks:
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
 ---
-{"id":407212643,"author":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBJmq8s4YRZJj","tag_name":"v26.06.2","target_commitish":"9e8c1cd69f9a3461d68bb0a50069e14670258d75","name":"v26.06.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-08T18:48:24Z","updated_at":"2026-10-08T20:46:01Z","published_at":"2026-10-08T20:46:01Z","assets":[{"id":622854005,"node_id":"RA_kwDOBJmq8s4lH_91","name":"trident-installer-26.06.2.tar.gz","label":"","uploader":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":113401352,"digest":"sha256:338a2a7194452a769bfa1871f8a11b06a0f8ed76da7b642a2f53fc9bc12a7ec3","download_count":34,"created_at":"2026-10-08T19:57:39Z","updated_at":"2026-10-08T19:57:42Z"}],"body":"## Changes since v26.06.1\r\n\r\n### Trident\r\n\r\n**Fixes:**\r\n\r\n- **Kubernetes:** Fixed ONTAP-NAS export policy rules being silently deleted when the Trident controller restarted, or a `TridentBackendConfig` was otherwise updated, while `enableConcurrency` was set to `true`, which could strand already-mounted volumes (Issues [#1166](https://github.com/NetApp/trident/issues/1166), [#1179](https://github.com/NetApp/trident/issues/1179)).\r\n- **Kubernetes:** Fixed backend updates running a per-volume orphan scan for non-material changes such as credentials and QoS, which could block CSI operations for hours on large backends. The scan now runs only when the SVM or storage prefix changes.\r\n- **Kubernetes:** Fixed credentials appearing in Trident's debug logs, including CSI gRPC request dumps, the startup environment dump, and `TridentBackendConfig` specifications logged by the CRD controller. The startup environment dump now logs values only for Trident's own `TRIDENT_*` variables and lists other variables by name."}
+{"id":407212643,"author":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBJmq8s4YRZJj","tag_name":"v26.06.2","target_commitish":"9e8c1cd69f9a3461d68bb0a50069e14670258d75","name":"v26.06.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-08T18:48:24Z","updated_at":"2026-10-08T20:46:01Z","published_at":"2026-10-08T20:46:01Z","assets":[{"id":622854005,"node_id":"RA_kwDOBJmq8s4lH_91","name":"trident-installer-26.06.2.tar.gz","label":"","uploader":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":113401352,"digest":"sha256:338a2a7194452a769bfa1871f8a11b06a0f8ed76da7b642a2f53fc9bc12a7ec3","download_count":120,"created_at":"2026-10-08T19:57:39Z","updated_at":"2026-10-08T19:57:42Z"}],"body":"## Changes since v26.06.1\r\n\r\n### Trident\r\n\r\n**Fixes:**\r\n\r\n- **Kubernetes:** Fixed ONTAP-NAS export policy rules being silently deleted when the Trident controller restarted, or a `TridentBackendConfig` was otherwise updated, while `enableConcurrency` was set to `true`, which could strand already-mounted volumes (Issues [#1166](https://github.com/NetApp/trident/issues/1166), [#1179](https://github.com/NetApp/trident/issues/1179)).\r\n- **Kubernetes:** Fixed backend updates running a per-volume orphan scan for non-material changes such as credentials and QoS, which could block CSI operations for hours on large backends. The scan now runs only when the SVM or storage prefix changes.\r\n- **Kubernetes:** Fixed credentials appearing in Trident's debug logs, including CSI gRPC request dumps, the startup environment dump, and `TridentBackendConfig` specifications logged by the CRD controller. The startup environment dump now logs values only for Trident's own `TRIDENT_*` variables and lists other variables by name."}
