@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.9.0"
   latestRelease: "v1.9.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-10T06:49:21Z
+  collectedAt: 2026-10-11T06:47:39Z
 timeline:
   created: 2026-04-08
   lastCommit: 2026-10-06
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-10-06
   lastPrerelease: 
 popularity:
-  star: 6064
+  star: 6072
   watcher: 41
   fork: 692
   release: 25
@@ -34,7 +34,7 @@ language:
 totalBytes: 1721577
 recent:
   last30d:
-    since: 2026-09-10
+    since: 2026-09-11
     release: 4
     mergedPR: 0
     openPR: 0
@@ -42,15 +42,15 @@ recent:
     openIssue: 2
     commit: 5
   last60d:
-    since: 2026-08-11
+    since: 2026-08-12
     release: 8
     mergedPR: 0
     openPR: 0
-    closedIssue: 25
+    closedIssue: 23
     openIssue: 5
     commit: 9
   last90d:
-    since: 2026-07-12
+    since: 2026-07-13
     release: 12
     mergedPR: 0
     openPR: 0
@@ -58,7 +58,7 @@ recent:
     openIssue: 8
     commit: 13
   last180d:
-    since: 2026-04-13
+    since: 2026-04-14
     release: 25
     mergedPR: 0
     openPR: 0
@@ -66,7 +66,7 @@ recent:
     openIssue: 19
     commit: 39
   last360d:
-    since: 2025-10-15
+    since: 2025-10-16
     release: 25
     mergedPR: 0
     openPR: 0
@@ -74,7 +74,7 @@ recent:
     openIssue: 19
     commit: 39
   last720d:
-    since: 2024-10-20
+    since: 2024-10-21
     release: 25
     mergedPR: 0
     openPR: 0
@@ -90,7 +90,7 @@ total:
   commit: 44
 ---
 path: /home/runner/.x-repo/github.com/google/agents-cli
-collectedAt: 2026-10-10T06:49:22Z
+collectedAt: 2026-10-11T06:47:40Z
 loc:
   Python:
     code: 28962
@@ -180,4 +180,4 @@ total:
 ---
 
 ---
-{"id":404802242,"author":{"login":"pwkowalski","id":214988617,"node_id":"U_kgDODNB3SQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOR9TwcM4YIMrC","tag_name":"v1.9.0","target_commitish":"main","name":"Release v1.9.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-06T14:00:41Z","updated_at":"2026-10-06T14:08:23Z","published_at":"2026-10-06T14:08:23Z","assets":[{"id":615708026,"node_id":"RA_kwDOR9TwcM4ksvV6","name":"google_agents_cli-1.9.0-py3-none-any.whl","label":"","uploader":{"login":"pwkowalski","id":214988617,"node_id":"U_kgDODNB3SQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":1435302,"digest":"sha256:45b38ffe57f9361449a6b6366d466eb4b6874cbea153f31178c5b1c1ee25ef9f","download_count":1,"created_at":"2026-10-06T14:08:22Z","updated_at":"2026-10-06T14:08:23Z"},{"id":615708022,"node_id":"RA_kwDOR9TwcM4ksvV2","name":"google_agents_cli-1.9.0.tar.gz","label":"","uploader":{"login":"pwkowalski","id":214988617,"node_id":"U_kgDODNB3SQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":1168723,"digest":"sha256:2df8bda19946979adabdd0df33e45bcf1375dc05d6719fefc7e731675a346c6b","download_count":1,"created_at":"2026-10-06T14:08:22Z","updated_at":"2026-10-06T14:08:23Z"}],"body":"Release v1.9.0\n\n- **Usage telemetry is now on by default.** Each command writes one log entry to your own Google Cloud project with the command name, exit code, error class, duration, and CLI, Python and OS versions, never arguments or file contents. Its purpose is to provide users with analytics regarding their tool use, process efficiency, and help diagnose potential issues. The request also sends Google the CLI, Python and OS versions, CPU architecture and command name for usage analytics; no sensitive data is sent. Opt out with `AGENTS_CLI_TELEMETRY=0` or `DO_NOT_TRACK=1`. `agents-cli info` now always shows whether telemetry is on.\n- `agents-cli deploy --key` encrypts an Agent Runtime agent with a customer-managed Cloud KMS key (CMEK), so deploys work in projects that enforce `constraints/gcp.restrictNonCmekServices`. The key can only be set when the agent is created, and `deploy --list` shows it in a new Encryption column.\n  - https://github.com/google/agents-cli/issues/83\n- `agents-cli deploy --dry-run` checks an Agent Runtime deployment against Google Cloud: enabled APIs, the target engine, IAM permissions, `actAs` on the service account, and secrets. A definite problem exits with code 1, and a check that cannot run only warns. A dry run now makes read-only network calls. A real deploy is unchanged.\n- `agents-cli deploy` reports unsupported flags in one format, `<flag> is only supported for <targets> deployments (current target: <target>)`, and names only the flags you passed. An empty value for such a flag, such as `--key \"\"` on Cloud Run, is now rejected instead of ignored. Scripts that match the old error text may need updating.\n- New ADK Python projects set `GOOGLE_GENAI_USE_ENTERPRISE=true` instead of the deprecated `GOOGLE_GENAI_USE_VERTEXAI`. Existing projects keep working: `agents-cli deploy` to Agent Runtime respects whichever name your `.env` sets. Go projects keep the old name.\n- New ADK Go projects enable the `gofmt` and `goimports` formatters, so `agents-cli lint` reports formatting issues and `lint --fix` fixes them.\n- Re-applying the Terraform generated by this release, for example with `agents-cli infra single-project` or `infra cicd`, no longer replaces the BigQuery log sink tables once logs have arrived. The replacement deleted every exported log. `completions_view` also gains a `service_version` column with the deployment revision. Run `agents-cli scaffold upgrade` to get this in an existing project.\n- Scaffolded ADK projects no longer append a duplicate `JSONRPC 0.3` interface to the agent card on every request to `.well-known/agent-card.json`.\n  - https://github.com/google/agents-cli/issues/84\n- A tool that exists but cannot run, such as `uv.exe` blocked by AppLocker on Windows, now fails with a clear error naming the tool and the OS reason instead of a `PermissionError` traceback.\n  - https://github.com/google/agents-cli/issues/61\n- Installed extensions no longer print a warning on every command. A notice appears only when a command overridden by an extension runs.\n  - https://github.com/google/agents-cli/issues/91"}
+{"id":404802242,"author":{"login":"pwkowalski","id":214988617,"node_id":"U_kgDODNB3SQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOR9TwcM4YIMrC","tag_name":"v1.9.0","target_commitish":"main","name":"Release v1.9.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-06T14:00:41Z","updated_at":"2026-10-06T14:08:23Z","published_at":"2026-10-06T14:08:23Z","assets":[{"id":615708026,"node_id":"RA_kwDOR9TwcM4ksvV6","name":"google_agents_cli-1.9.0-py3-none-any.whl","label":"","uploader":{"login":"pwkowalski","id":214988617,"node_id":"U_kgDODNB3SQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":1435302,"digest":"sha256:45b38ffe57f9361449a6b6366d466eb4b6874cbea153f31178c5b1c1ee25ef9f","download_count":1,"created_at":"2026-10-06T14:08:22Z","updated_at":"2026-10-06T14:08:23Z"},{"id":615708022,"node_id":"RA_kwDOR9TwcM4ksvV2","name":"google_agents_cli-1.9.0.tar.gz","label":"","uploader":{"login":"pwkowalski","id":214988617,"node_id":"U_kgDODNB3SQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":1168723,"digest":"sha256:2df8bda19946979adabdd0df33e45bcf1375dc05d6719fefc7e731675a346c6b","download_count":2,"created_at":"2026-10-06T14:08:22Z","updated_at":"2026-10-06T14:08:23Z"}],"body":"Release v1.9.0\n\n- **Usage telemetry is now on by default.** Each command writes one log entry to your own Google Cloud project with the command name, exit code, error class, duration, and CLI, Python and OS versions, never arguments or file contents. Its purpose is to provide users with analytics regarding their tool use, process efficiency, and help diagnose potential issues. The request also sends Google the CLI, Python and OS versions, CPU architecture and command name for usage analytics; no sensitive data is sent. Opt out with `AGENTS_CLI_TELEMETRY=0` or `DO_NOT_TRACK=1`. `agents-cli info` now always shows whether telemetry is on.\n- `agents-cli deploy --key` encrypts an Agent Runtime agent with a customer-managed Cloud KMS key (CMEK), so deploys work in projects that enforce `constraints/gcp.restrictNonCmekServices`. The key can only be set when the agent is created, and `deploy --list` shows it in a new Encryption column.\n  - https://github.com/google/agents-cli/issues/83\n- `agents-cli deploy --dry-run` checks an Agent Runtime deployment against Google Cloud: enabled APIs, the target engine, IAM permissions, `actAs` on the service account, and secrets. A definite problem exits with code 1, and a check that cannot run only warns. A dry run now makes read-only network calls. A real deploy is unchanged.\n- `agents-cli deploy` reports unsupported flags in one format, `<flag> is only supported for <targets> deployments (current target: <target>)`, and names only the flags you passed. An empty value for such a flag, such as `--key \"\"` on Cloud Run, is now rejected instead of ignored. Scripts that match the old error text may need updating.\n- New ADK Python projects set `GOOGLE_GENAI_USE_ENTERPRISE=true` instead of the deprecated `GOOGLE_GENAI_USE_VERTEXAI`. Existing projects keep working: `agents-cli deploy` to Agent Runtime respects whichever name your `.env` sets. Go projects keep the old name.\n- New ADK Go projects enable the `gofmt` and `goimports` formatters, so `agents-cli lint` reports formatting issues and `lint --fix` fixes them.\n- Re-applying the Terraform generated by this release, for example with `agents-cli infra single-project` or `infra cicd`, no longer replaces the BigQuery log sink tables once logs have arrived. The replacement deleted every exported log. `completions_view` also gains a `service_version` column with the deployment revision. Run `agents-cli scaffold upgrade` to get this in an existing project.\n- Scaffolded ADK projects no longer append a duplicate `JSONRPC 0.3` interface to the agent card on every request to `.well-known/agent-card.json`.\n  - https://github.com/google/agents-cli/issues/84\n- A tool that exists but cannot run, such as `uv.exe` blocked by AppLocker on Windows, now fails with a clear error naming the tool and the OS reason instead of a `PermissionError` traceback.\n  - https://github.com/google/agents-cli/issues/61\n- Installed extensions no longer print a warning on every command. A notice appears only when a command overridden by an extension runs.\n  - https://github.com/google/agents-cli/issues/91"}
