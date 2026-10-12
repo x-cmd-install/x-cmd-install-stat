@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.38.1"
   latestRelease: "v0.38.1"
   latestPrerelease: ""
-  collectedAt: 2026-10-11T04:24:22Z
+  collectedAt: 2026-10-12T04:40:18Z
 timeline:
   created: 2020-04-07
   lastCommit: 2025-03-20
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2025-03-19
   lastPrerelease: 
 popularity:
-  star: 3243
+  star: 3245
   watcher: 74
   fork: 374
   release: 121
@@ -40,7 +40,7 @@ language:
 totalBytes: 12254309
 recent:
   last30d:
-    since: 2026-09-11
+    since: 2026-09-12
     release: 0
     mergedPR: 0
     openPR: 0
@@ -48,7 +48,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-12
+    since: 2026-08-13
     release: 0
     mergedPR: 0
     openPR: 0
@@ -56,7 +56,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-13
+    since: 2026-07-14
     release: 0
     mergedPR: 0
     openPR: 2
@@ -64,7 +64,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-14
+    since: 2026-04-15
     release: 0
     mergedPR: 0
     openPR: 2
@@ -72,7 +72,7 @@ recent:
     openIssue: 1
     commit: 0
   last360d:
-    since: 2025-10-16
+    since: 2025-10-17
     release: 0
     mergedPR: 0
     openPR: 2
@@ -80,13 +80,13 @@ recent:
     openIssue: 3
     commit: 0
   last720d:
-    since: 2024-10-21
+    since: 2024-10-22
     release: 5
-    mergedPR: 122
-    openPR: 23
+    mergedPR: 116
+    openPR: 22
     closedIssue: 4
     openIssue: 9
-    commit: 107
+    commit: 103
 total:
   release: 121
   mergedPR: 8379
@@ -96,7 +96,7 @@ total:
   commit: 8394
 ---
 path: /home/runner/.x-repo/github.com/determined-ai/determined
-collectedAt: 2026-10-11T04:24:45Z
+collectedAt: 2026-10-12T04:40:37Z
 loc:
   Go:
     code: 249139
@@ -239,20 +239,19 @@ total:
   blanks: 83826
   files: 3386
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/determined-ai/determined
   commit: c1e9c6d7b821ef246d612bb9922f7fb1b58dcf2e
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.8
 checks:
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 8
+    reason: Found 26/29 approved changesets -- score normalized to 8
+    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
@@ -261,10 +260,11 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Code-Review
-    score: 8
-    reason: Found 26/29 approved changesets -- score normalized to 8
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -308,6 +308,18 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: GoBuiltInFuzzer integration found: master/pkg/syncx/mapx/mapx_test.go:14'
+      - 'Info: TypeScriptPropertyBasedTesting integration found: webui/react/src/utils/asValueObject.test.ts:1'
+      - 'Info: TypeScriptPropertyBasedTesting integration found: webui/react/src/utils/mergeAbortControllers.test.ts:3'
+      - 'Info: TypeScriptPropertyBasedTesting integration found: webui/react/src/utils/table.test.ts:2'
+      - 'Info: TypeScriptPropertyBasedTesting integration found: webui/react/src/utils/asValueObject.test.ts:1'
+      - 'Info: TypeScriptPropertyBasedTesting integration found: webui/react/src/utils/mergeAbortControllers.test.ts:3'
+      - 'Info: TypeScriptPropertyBasedTesting integration found: webui/react/src/utils/table.test.ts:2'
+      - 'Info: TypeScriptPropertyBasedTesting integration found: webui/react/src/hooks/useTypedParams.test.tsx:2'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -316,18 +328,6 @@ checks:
       - 'Info: Found linked content: github.com/determined-ai/.github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/determined-ai/.github/SECURITY.md:1'
       - 'Info: Found text in security policy: github.com/determined-ai/.github/SECURITY.md:1'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: TypeScriptPropertyBasedTesting integration found: webui/react/src/utils/asValueObject.test.ts:1'
-      - 'Info: TypeScriptPropertyBasedTesting integration found: webui/react/src/utils/mergeAbortControllers.test.ts:3'
-      - 'Info: TypeScriptPropertyBasedTesting integration found: webui/react/src/utils/table.test.ts:2'
-      - 'Info: TypeScriptPropertyBasedTesting integration found: webui/react/src/utils/asValueObject.test.ts:1'
-      - 'Info: TypeScriptPropertyBasedTesting integration found: webui/react/src/utils/mergeAbortControllers.test.ts:3'
-      - 'Info: TypeScriptPropertyBasedTesting integration found: webui/react/src/utils/table.test.ts:2'
-      - 'Info: TypeScriptPropertyBasedTesting integration found: webui/react/src/hooks/useTypedParams.test.tsx:2'
-      - 'Info: GoBuiltInFuzzer integration found: master/pkg/syncx/mapx/mapx_test.go:14'
   - name: Branch-Protection
     score: 1
     reason: branch protection is not maximal on development and all release branches
@@ -425,11 +425,11 @@ checks:
       - 'Warn: pipCommand not pinned by hash: .github/workflows/lint-python.yml:51'
       - 'Info:   0 out of  32 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of  11 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   5 containerImage dependencies pinned'
-      - 'Info:   0 out of  15 pipCommand dependencies pinned'
       - 'Info:   0 out of   2 npmCommand dependencies pinned'
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
       - 'Info:  19 out of  19 goCommand dependencies pinned'
+      - 'Info:   0 out of   5 containerImage dependencies pinned'
+      - 'Info:   0 out of  15 pipCommand dependencies pinned'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

@@ -7,7 +7,7 @@ about:
   latestVersion: "nightly-7d65d62c-1791077604"
   latestRelease: "0.14.9"
   latestPrerelease: "nightly-7d65d62c-1791077604"
-  collectedAt: 2026-10-11T05:41:45Z
+  collectedAt: 2026-10-12T05:55:12Z
 timeline:
   created: 2019-08-28
   lastCommit: 2026-10-03
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-08-27
   lastPrerelease: 2026-10-04
 popularity:
-  star: 14093
+  star: 14096
   watcher: 53
-  fork: 393
+  fork: 394
   release: 73
   contributor: 88
   pullRequest: 1694
@@ -29,39 +29,39 @@ language:
 totalBytes: 1417805
 recent:
   last30d:
-    since: 2026-09-11
+    since: 2026-09-12
     release: 3
-    mergedPR: 19
+    mergedPR: 18
     openPR: 1
     closedIssue: 2
     openIssue: 4
-    commit: 22
+    commit: 13
   last60d:
-    since: 2026-08-12
+    since: 2026-08-13
     release: 5
-    mergedPR: 63
+    mergedPR: 57
     openPR: 1
-    closedIssue: 7
+    closedIssue: 5
     openIssue: 4
-    commit: 63
+    commit: 53
   last90d:
-    since: 2026-07-13
+    since: 2026-07-14
     release: 8
-    mergedPR: 91
+    mergedPR: 90
     openPR: 2
     closedIssue: 12
     openIssue: 4
-    commit: 92
+    commit: 80
   last180d:
-    since: 2026-04-14
+    since: 2026-04-15
     release: 14
     mergedPR: 184
     openPR: 3
     closedIssue: 17
     openIssue: 6
-    commit: 189
+    commit: 183
   last360d:
-    since: 2025-10-16
+    since: 2025-10-17
     release: 20
     mergedPR: 342
     openPR: 4
@@ -69,7 +69,7 @@ recent:
     openIssue: 9
     commit: 345
   last720d:
-    since: 2024-10-21
+    since: 2024-10-22
     release: 23
     mergedPR: 513
     openPR: 5
@@ -85,7 +85,7 @@ total:
   commit: 2657
 ---
 path: /home/runner/.x-repo/github.com/ClementTsang/bottom
-collectedAt: 2026-10-11T05:41:52Z
+collectedAt: 2026-10-12T05:55:17Z
 loc:
   Rust:
     code: 32174
@@ -148,15 +148,23 @@ total:
   blanks: 6518
   files: 303
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/ClementTsang/bottom
   commit: 7d65d62c8310f592727e6a142007f761504c2c8b
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 6.2
 checks:
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 16 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Code-Review
     score: 0
     reason: Found 2/28 approved changesets -- score normalized to 0
@@ -164,14 +172,6 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 17 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Token-Permissions
     score: 10
@@ -218,11 +218,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -231,6 +226,11 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
@@ -241,6 +241,11 @@ checks:
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/post_release.yml:82'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -255,11 +260,6 @@ checks:
       - 'Warn: release artifact nightly-03dd52bf-1790816830 does not have provenance: https://api.github.com/repos/ClementTsang/bottom/releases/400565850'
       - 'Warn: release artifact 0.14.9 does not have provenance: https://api.github.com/repos/ClementTsang/bottom/releases/377665124'
       - 'Warn: release artifact 0.14.8 does not have provenance: https://api.github.com/repos/ClementTsang/bottom/releases/370102558'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/post_release.yml:82'
   - name: SAST
     score: 9
     reason: SAST tool is not run on all commits -- score normalized to 9

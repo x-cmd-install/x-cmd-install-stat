@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-10-11T06:19:12Z
+  collectedAt: 2026-10-12T06:36:53Z
 timeline:
   created: 2015-05-16
   lastCommit: 2026-10-10
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 
   lastPrerelease: 
 popularity:
-  star: 11304
+  star: 11305
   watcher: 292
   fork: 1912
   release: 0
   contributor: 602
   pullRequest: 1445
-  issue: 62333
+  issue: 62334
 language:
   Dart: 172858846
   C++: 25303788
@@ -46,63 +46,63 @@ language:
 totalBytes: 203631209
 recent:
   last30d:
-    since: 2026-09-11
+    since: 2026-09-12
     release: 0
     mergedPR: 0
-    openPR: 18
-    closedIssue: 117
+    openPR: 17
+    closedIssue: 115
     openIssue: 131
     commit: 525
   last60d:
-    since: 2026-08-12
+    since: 2026-08-13
     release: 0
     mergedPR: 0
     openPR: 23
-    closedIssue: 227
+    closedIssue: 220
     openIssue: 212
     commit: 1042
   last90d:
-    since: 2026-07-13
+    since: 2026-07-14
     release: 0
     mergedPR: 0
     openPR: 23
-    closedIssue: 347
-    openIssue: 289
+    closedIssue: 340
+    openIssue: 290
     commit: 1553
   last180d:
-    since: 2026-04-14
+    since: 2026-04-15
     release: 0
     mergedPR: 0
     openPR: 29
-    closedIssue: 701
+    closedIssue: 695
     openIssue: 500
     commit: 2968
   last360d:
-    since: 2025-10-16
+    since: 2025-10-17
     release: 0
     mergedPR: 0
     openPR: 32
-    closedIssue: 1592
+    closedIssue: 1587
     openIssue: 927
     commit: 5733
   last720d:
-    since: 2024-10-21
+    since: 2024-10-22
     release: 0
     mergedPR: 1
     openPR: 32
-    closedIssue: 2973
-    openIssue: 1765
-    commit: 12308
+    closedIssue: 2967
+    openIssue: 1767
+    commit: 12284
 total:
   release: 0
   mergedPR: 184
   openPR: 32
-  closedIssue: 53934
-  openIssue: 8399
+  closedIssue: 53933
+  openIssue: 8401
   commit: 116058
 ---
 path: /home/runner/.x-repo/github.com/dart-lang/sdk
-collectedAt: 2026-10-11T06:23:04Z
+collectedAt: 2026-10-12T06:40:46Z
 loc:
   Dart:
     code: 4705299
@@ -260,7 +260,7 @@ total:
   blanks: 659568
   files: 28984
 ---
-date: "2026-10-11T00:08:56Z"
+date: "2026-10-12T00:09:01Z"
 repo:
   name: github.com/dart-lang/sdk
   commit: b6d773b62e2e5c823f5e8caade4ce7df152e4787
@@ -273,28 +273,37 @@ checks:
     score: -1
     reason: no pull request found
     details: null
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 22 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
   - name: Dependency-Update-Tool
     score: 10
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Maintained
+  - name: Token-Permissions
     score: 10
-    reason: 30 commit(s) and 23 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
+    reason: GitHub workflow tokens follow principle of least privilege
+    details:
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/scorecards-analysis.yml:20'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/scorecards-analysis.yml:21'
+      - 'Warn: jobLevel ''security-events'' permission set to ''write'': .github/workflows/third-party-deps-scan.yml:21'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/third-party-deps-scan.yml:22'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/third-party-deps-scan.yml:57'
+      - 'Warn: jobLevel ''security-events'' permission set to ''write'': .github/workflows/third-party-deps-scan.yml:55'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/third-party-deps-scan.yml:56'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecards-analysis.yml:11'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/third-party-deps-scan.yml:12'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -303,19 +312,10 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Token-Permissions
+  - name: Dangerous-Workflow
     score: 10
-    reason: GitHub workflow tokens follow principle of least privilege
-    details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/scorecards-analysis.yml:21'
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/scorecards-analysis.yml:20'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/third-party-deps-scan.yml:57'
-      - 'Warn: jobLevel ''security-events'' permission set to ''write'': .github/workflows/third-party-deps-scan.yml:55'
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/third-party-deps-scan.yml:56'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/third-party-deps-scan.yml:22'
-      - 'Warn: jobLevel ''security-events'' permission set to ''write'': .github/workflows/third-party-deps-scan.yml:21'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecards-analysis.yml:11'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/third-party-deps-scan.yml:12'
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: CII-Best-Practices
     score: 2
     reason: 'badge detected: InProgress'
@@ -337,12 +337,11 @@ checks:
       - 'Warn: ''up-to-date branches'' is disabled on branch ''main'''
       - 'Warn: no status checks found to merge onto branch ''main'''
       - 'Warn: PRs are not required to make changes on branch ''main''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
-  - name: License
-    score: 10
-    reason: license file detected
+  - name: SAST
+    score: 0
+    reason: no SAST tool detected
     details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: BSD 3-Clause "New" or "Revised" License: LICENSE:0'
+      - 'Warn: no pull requests merged into dev branch'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -350,11 +349,12 @@ checks:
       - 'Info: OSSFuzz integration found'
       - 'Info: CppLibFuzzer integration found: runtime/vm/libfuzzer/dart_libfuzzer.cc:85'
       - 'Info: CppLibFuzzer integration found: runtime/vm/libfuzzer/dart_libfuzzer.cc:85'
-  - name: SAST
-    score: 0
-    reason: no SAST tool detected
+  - name: License
+    score: 10
+    reason: license file detected
     details:
-      - 'Warn: no pull requests merged into dev branch'
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: BSD 3-Clause "New" or "Revised" License: LICENSE:0'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo

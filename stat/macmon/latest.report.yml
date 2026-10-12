@@ -2,97 +2,97 @@ about:
   description: "🦀🌡️ Real-time system monitor for Apple Silicon Macs (M1–M5). No sudo. TUI, JSON/Prometheus metrics server, and Rust library."
   license: MIT
   homepage: https://docs.rs/macmon
-  head: 3f73817
+  head: aaba88c
   archived: false
   latestVersion: "dev"
   latestRelease: "v0.9.0"
   latestPrerelease: "dev"
-  collectedAt: 2026-10-11T05:36:11Z
+  collectedAt: 2026-10-12T05:48:15Z
 timeline:
   created: 2024-06-16
-  lastCommit: 2026-10-11
+  lastCommit: 2026-10-12
   lastVersion: 2026-10-07
   lastRelease: 2026-10-07
   lastPrerelease: 2026-10-07
 popularity:
-  star: 1942
+  star: 1946
   watcher: 12
   fork: 85
   release: 23
   contributor: 18
-  pullRequest: 44
+  pullRequest: 50
   issue: 50
 language:
-  Rust: 444540
+  Rust: 530186
   Python: 71226
   Shell: 4331
   Makefile: 1193
-totalBytes: 521290
+totalBytes: 606936
 recent:
   last30d:
-    since: 2026-09-11
+    since: 2026-09-12
     release: 2
-    mergedPR: 10
-    openPR: 2
+    mergedPR: 14
+    openPR: 4
     closedIssue: 2
     openIssue: 1
-    commit: 20
+    commit: 28
   last60d:
-    since: 2026-08-12
+    since: 2026-08-13
     release: 2
-    mergedPR: 10
-    openPR: 2
+    mergedPR: 14
+    openPR: 4
     closedIssue: 3
     openIssue: 1
-    commit: 20
+    commit: 28
   last90d:
-    since: 2026-07-13
+    since: 2026-07-14
     release: 5
-    mergedPR: 10
-    openPR: 2
+    mergedPR: 14
+    openPR: 4
     closedIssue: 4
     openIssue: 2
-    commit: 37
+    commit: 45
   last180d:
-    since: 2026-04-14
+    since: 2026-04-15
     release: 7
-    mergedPR: 14
-    openPR: 3
+    mergedPR: 18
+    openPR: 5
     closedIssue: 8
     openIssue: 3
-    commit: 53
+    commit: 61
   last360d:
-    since: 2025-10-16
+    since: 2025-10-17
     release: 8
-    mergedPR: 18
-    openPR: 3
+    mergedPR: 22
+    openPR: 5
     closedIssue: 23
     openIssue: 3
-    commit: 70
+    commit: 78
   last720d:
-    since: 2024-10-21
-    release: 17
-    mergedPR: 23
-    openPR: 3
+    since: 2024-10-22
+    release: 16
+    mergedPR: 27
+    openPR: 5
     closedIssue: 36
     openIssue: 6
-    commit: 111
+    commit: 118
 total:
   release: 23
-  mergedPR: 24
-  openPR: 3
+  mergedPR: 28
+  openPR: 5
   closedIssue: 43
   openIssue: 7
-  commit: 137
+  commit: 145
 ---
 path: /home/runner/.x-repo/github.com/vladkens/macmon
-collectedAt: 2026-10-11T05:36:12Z
+collectedAt: 2026-10-12T05:48:15Z
 loc:
   Rust:
-    code: 9817
-    comments: 432
-    blanks: 1425
-    files: 22
+    code: 11381
+    comments: 532
+    blanks: 1575
+    files: 24
   Python:
     code: 1750
     comments: 16
@@ -125,15 +125,15 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 770
-    blanks: 338
-    files: 9
+    comments: 1062
+    blanks: 381
+    files: 12
 total:
-  code: 12666
-  comments: 2054
-  blanks: 2002
-  files: 43
+  code: 14230
+  comments: 2581
+  blanks: 2198
+  files: 48
 ---
 
 ---
-{"id":406134520,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOMKBR7c4YNR74","tag_name":"v0.9.0","target_commitish":"7df49f55d9a1b9072e31fc8ba991abda84593563","name":null,"draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-07T20:21:52Z","updated_at":"2026-10-07T20:25:16Z","published_at":"2026-10-07T20:25:16Z","assets":[{"id":619724766,"node_id":"RA_kwDOMKBR7c4k8D_e","name":"macmon-v0.9.0.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":861140,"digest":"sha256:539d8a39dc4c3823d68410de1c270289790826d983b005b91b2a4441008108bb","download_count":510,"created_at":"2026-10-07T20:25:14Z","updated_at":"2026-10-07T20:25:15Z"}],"body":"\n### Features\n\n- Restored power readings on supported Macs running macOS 27 without requiring sudo\n- Redesigned the TUI and added a sortable, filterable process list with CPU, GPU, memory, and power usage\n- Added `stress ane` for Neural Engine load testing and included ANE workloads in `stress all`\n- Added `stress all --pulse [SECONDS]` to alternate all workloads between busy and idle periods\n- Added `find-clpc` to diagnose CPU, GPU, and ANE power counters, with optional comparison against Apple's `powermetrics`\n\n### Fixes\n\n- Fixed CPU and GPU frequency detection on M6 Macs (#79, by @johntdavies)\n\n### Breaking Changes\n\n- Changed `cpu_temp_avg` and `gpu_temp_avg` in `TempMetrics` from `f32` to `Option<f32>`; unavailable temperatures now appear as `null` in JSON instead of `0.0`. Unavailable temperature metrics are omitted from Prometheus output (#81, by @omar16100)\n\n**Full Changelog**: https://github.com/vladkens/macmon/compare/v0.8.2...v0.9.0\n\n\n","reactions":{"total_count":4,"+1":1,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":1,"rocket":1,"eyes":0},"mentions_count":2}
+{"id":406134520,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOMKBR7c4YNR74","tag_name":"v0.9.0","target_commitish":"7df49f55d9a1b9072e31fc8ba991abda84593563","name":null,"draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-07T20:21:52Z","updated_at":"2026-10-07T20:25:16Z","published_at":"2026-10-07T20:25:16Z","assets":[{"id":619724766,"node_id":"RA_kwDOMKBR7c4k8D_e","name":"macmon-v0.9.0.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":861140,"digest":"sha256:539d8a39dc4c3823d68410de1c270289790826d983b005b91b2a4441008108bb","download_count":604,"created_at":"2026-10-07T20:25:14Z","updated_at":"2026-10-07T20:25:15Z"}],"body":"\n### Features\n\n- Restored power readings on supported Macs running macOS 27 without requiring sudo\n- Redesigned the TUI and added a sortable, filterable process list with CPU, GPU, memory, and power usage\n- Added `stress ane` for Neural Engine load testing and included ANE workloads in `stress all`\n- Added `stress all --pulse [SECONDS]` to alternate all workloads between busy and idle periods\n- Added `find-clpc` to diagnose CPU, GPU, and ANE power counters, with optional comparison against Apple's `powermetrics`\n\n### Fixes\n\n- Fixed CPU and GPU frequency detection on M6 Macs (#79, by @johntdavies)\n\n### Breaking Changes\n\n- Changed `cpu_temp_avg` and `gpu_temp_avg` in `TempMetrics` from `f32` to `Option<f32>`; unavailable temperatures now appear as `null` in JSON instead of `0.0`. Unavailable temperature metrics are omitted from Prometheus output (#81, by @omar16100)\n\n**Full Changelog**: https://github.com/vladkens/macmon/compare/v0.8.2...v0.9.0\n\n\n","reactions":{"total_count":4,"+1":1,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":1,"rocket":1,"eyes":0},"mentions_count":2}

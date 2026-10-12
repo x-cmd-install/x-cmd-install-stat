@@ -7,7 +7,7 @@ about:
   latestVersion: "docker-v29.9.0"
   latestRelease: "docker-v29.9.0"
   latestPrerelease: "docker-v29.9.0-rc.2"
-  collectedAt: 2026-10-11T05:39:08Z
+  collectedAt: 2026-10-12T05:56:41Z
 timeline:
   created: 2013-01-18
   lastCommit: 2026-10-09
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-10-08
   lastPrerelease: 2026-10-07
 popularity:
-  star: 72168
+  star: 72179
   watcher: 2855
-  fork: 19236
+  fork: 19239
   release: 321
   contributor: 2330
-  pullRequest: 29371
-  issue: 23680
+  pullRequest: 29374
+  issue: 23681
 language:
   Go: 11670883
   Shell: 161367
@@ -37,63 +37,63 @@ language:
 totalBytes: 11986750
 recent:
   last30d:
-    since: 2026-09-11
+    since: 2026-09-12
     release: 9
-    mergedPR: 148
-    openPR: 65
+    mergedPR: 147
+    openPR: 66
     closedIssue: 20
     openIssue: 30
     commit: 243
   last60d:
-    since: 2026-08-12
+    since: 2026-08-13
     release: 17
-    mergedPR: 311
+    mergedPR: 305
     openPR: 96
     closedIssue: 36
-    openIssue: 64
+    openIssue: 65
     commit: 717
   last90d:
-    since: 2026-07-13
+    since: 2026-07-14
     release: 23
-    mergedPR: 471
-    openPR: 142
+    mergedPR: 465
+    openPR: 144
     closedIssue: 55
-    openIssue: 99
+    openIssue: 98
     commit: 1085
   last180d:
-    since: 2026-04-14
+    since: 2026-04-15
     release: 40
-    mergedPR: 827
-    openPR: 210
-    closedIssue: 123
-    openIssue: 148
+    mergedPR: 822
+    openPR: 213
+    closedIssue: 122
+    openIssue: 149
     commit: 1875
   last360d:
-    since: 2025-10-16
+    since: 2025-10-17
     release: 76
-    mergedPR: 1561
-    openPR: 264
-    closedIssue: 260
-    openIssue: 219
+    mergedPR: 1557
+    openPR: 267
+    closedIssue: 259
+    openIssue: 220
     commit: 3585
   last720d:
-    since: 2024-10-21
+    since: 2024-10-22
     release: 100
-    mergedPR: 3126
-    openPR: 361
+    mergedPR: 3119
+    openPR: 363
     closedIssue: 548
-    openIssue: 448
-    commit: 8116
+    openIssue: 449
+    commit: 8097
 total:
   release: 321
   mergedPR: 23361
-  openPR: 636
+  openPR: 638
   closedIssue: 20379
-  openIssue: 3301
+  openIssue: 3302
   commit: 58371
 ---
 path: /home/runner/.x-repo/github.com/moby/moby
-collectedAt: 2026-10-11T05:39:38Z
+collectedAt: 2026-10-12T05:57:12Z
 loc:
   Go:
     code: 1977433
@@ -448,4 +448,4 @@ checks:
       - 'Info:   9 out of  12 goCommand dependencies pinned'
       - 'Info:   0 out of   2 pipCommand dependencies pinned'
 ---
-{"id":407240945,"author":{"login":"vvoland","id":5046555,"node_id":"MDQ6VXNlcjUwNDY1NTU=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAHVdb84YRgDx","tag_name":"docker-v29.9.0","target_commitish":"master","name":"v29.9.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-08T20:35:02Z","updated_at":"2026-10-08T21:34:57Z","published_at":"2026-10-08T21:34:57Z","assets":[],"body":"## 29.9.0\r\n\r\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\r\n\r\n- [docker/cli, 29.9.0 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.9.0)\r\n- [moby/moby, 29.9.0 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.9.0)\r\n\r\n### Security\r\n\r\nThe Go runtime update fixes the following security vulnerabilities in Docker Engine:\r\n\r\n- **CVE-2026-97032**: An HTTP/2 client could crash the daemon by changing the HPACK header table size while sending requests. [golang/go#81867](https://go.dev/issue/81867)\r\n- **CVE-2026-78659**: An HTTP/2 client could exhaust daemon memory by declaring a large number of fields in a `Trailer` header, bypassing the header size limits. [golang/go#81857](https://go.dev/issue/81857)\r\n- **CVE-2026-78663**: An HTTP/2 client could bypass the connection-level flow control limit by resetting streams, making the daemon buffer more request data than the limit allows. [golang/go#81743](https://go.dev/issue/81743)\r\n- **CVE-2026-78669**: An HTTP/2 client could cause excessive daemon CPU use by opening many streams and repeatedly changing the initial window size. [golang/go#81742](https://go.dev/issue/81742)\r\n- **CVE-2026-56857**: On Windows, the daemon could create a directory outside its data root if someone with write access to the data root had placed a junction there. [golang/go#81739](https://go.dev/issue/81739)\r\n\r\nThe `golang.org/x/net` update to v0.60.0 applies the same HTTP/2 fixes to the deprecated `/grpc` endpoint and to the gRPC server that BuildKit runs for frontend containers, such as images referenced by a `# syntax=` directive.\r\n\r\n### Bug fixes and enhancements\r\n\r\n- containerd image store: Add the `lazy-pull` daemon feature to control whether `docker pull` skips downloading layer content that the snapshotter already provides. Lazy pulls are enabled by default for known remote snapshotters (`nydus`, `overlaybd`, `soci`, `stargz`). [moby/moby#53877](https://github.com/moby/moby/pull/53877)\r\n- containerd image store: Fix pulls skipping required layer blobs when unpacked layers already exist, leaving images runnable but incomplete for export or push. [moby/moby#53615](https://github.com/moby/moby/pull/53615)\r\n- Fix `docker container create --name` reporting a misleading validation error mentioning invalid characters instead of invalid name length. [moby/moby#53484](https://github.com/moby/moby/pull/53484)\r\n- Fix a connection leak to the RootlessKit API socket on every `GET /version` request in rootless mode. [moby/moby#53836](https://github.com/moby/moby/pull/53836)\r\n- Improve Windows service registration and unregistration cleanup, including making service unregistration (`--unregister-service`) idempotent. [moby/moby#53845](https://github.com/moby/moby/pull/53845)\r\n\r\n### Packaging updates\r\n\r\n- Update BuildKit to [v0.34.0](https://github.com/moby/buildkit/releases/tag/v0.34.0). [moby/moby#53882](https://github.com/moby/moby/pull/53882)\r\n- Update Go runtime to [1.26.9](https://go.dev/doc/devel/release#go1.26.9). [docker/cli#7363](https://github.com/docker/cli/pull/7363)\r\n- Update containerd (static binaries) to [v2.4.1](https://github.com/containerd/containerd/releases/tag/v2.4.1). [moby/moby#53773](https://github.com/moby/moby/pull/53773)\r\n\r\n### Networking\r\n\r\n- Allow IPv6 Neighbour Discovery between containers on a bridge network with inter-container communication disabled, matching the existing IPv4 behaviour. [moby/moby#53723](https://github.com/moby/moby/pull/53723)\r\n- Fix `docker ps` and `GET /containers/json` omitting published ports for networks using routed gateway mode. [moby/moby#53693](https://github.com/moby/moby/pull/53693)\r\n- Fix a bug where a restarted daemon could be dropped from a peer's service discovery and load balancing until it rejoined the gossip cluster. [moby/moby#53688](https://github.com/moby/moby/pull/53688)\r\n- Fix a published port being unreachable from another container on the same network when inter-container communication is disabled, including Swarm services published through the routing mesh. [moby/moby#53723](https://github.com/moby/moby/pull/53723)\r\n- Fix an issue where errors programming the kernel to encrypt the overlay network data-plane could in some circumstances lead to encrypted-overlay-network traffic to some nodes being transmitted in cleartext. As the receiving peer would drop cleartext packets for encrypted overlay networks as spoofed, the loss of confidentiality is limited to unidirectional flows (e.g. UDP DNS queries) and handshake attempts that never proceed (e.g. TCP SYN). [moby/moby#53420](https://github.com/moby/moby/pull/53420)\r\n- Fix connecting live-restored containers with an implicit `host-gateway` mapping to additional networks. [moby/moby#53093](https://github.com/moby/moby/pull/53093)\r\n- Fix overlay peers becoming unreachable after a node rejoins the cluster or a service is redeployed, when the VXLAN device had already learned a dynamic FDB entry for the peer. [moby/moby#53663](https://github.com/moby/moby/pull/53663)\r\n- Fix Swarm tasks on overlay networks being rejected when the daemon can't write to `/var/lib/docker`. [moby/moby#53848](https://github.com/moby/moby/pull/53848)\r\n- Published Swarm-service ports are accessible at the host's IPv6 addresses when the userland proxy is enabled. A change introduced in v29.8.0 incidentally enabled this functionality; it is a tested and supported feature as of v29.9.0. [moby/moby#53727](https://github.com/moby/moby/pull/53727)\r\n- Release a node's IPsec security associations and policies when the last container leaves an encrypted overlay network, instead of leaking them until the daemon restarts. [moby/moby#53420](https://github.com/moby/moby/pull/53420)\r\n- Restore the logic to remove the empty `DOCKER-INGRESS` iptables chain, and the `FORWARD` rule that jumps to it, left behind by Docker Engine 28.0.0 and earlier. [moby/moby#53825](https://github.com/moby/moby/pull/53825)\r\n\r\n### Rootless\r\n\r\n- Update RootlessKit (3.2.0). [moby/moby#53607](https://github.com/moby/moby/pull/53607)\r\n\r\n"}
+{"id":407240945,"author":{"login":"vvoland","id":5046555,"node_id":"MDQ6VXNlcjUwNDY1NTU=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAHVdb84YRgDx","tag_name":"docker-v29.9.0","target_commitish":"master","name":"v29.9.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-08T20:35:02Z","updated_at":"2026-10-08T21:34:57Z","published_at":"2026-10-08T21:34:57Z","assets":[],"body":"## 29.9.0\r\n\r\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\r\n\r\n- [docker/cli, 29.9.0 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.9.0)\r\n- [moby/moby, 29.9.0 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.9.0)\r\n\r\n### Security\r\n\r\nThe Go runtime update fixes the following security vulnerabilities in Docker Engine:\r\n\r\n- **CVE-2026-97032**: An HTTP/2 client could crash the daemon by changing the HPACK header table size while sending requests. [golang/go#81867](https://go.dev/issue/81867)\r\n- **CVE-2026-78659**: An HTTP/2 client could exhaust daemon memory by declaring a large number of fields in a `Trailer` header, bypassing the header size limits. [golang/go#81857](https://go.dev/issue/81857)\r\n- **CVE-2026-78663**: An HTTP/2 client could bypass the connection-level flow control limit by resetting streams, making the daemon buffer more request data than the limit allows. [golang/go#81743](https://go.dev/issue/81743)\r\n- **CVE-2026-78669**: An HTTP/2 client could cause excessive daemon CPU use by opening many streams and repeatedly changing the initial window size. [golang/go#81742](https://go.dev/issue/81742)\r\n- **CVE-2026-56857**: On Windows, the daemon could create a directory outside its data root if someone with write access to the data root had placed a junction there. [golang/go#81739](https://go.dev/issue/81739)\r\n\r\nThe `golang.org/x/net` update to v0.60.0 applies the same HTTP/2 fixes to the deprecated `/grpc` endpoint and to the gRPC server that BuildKit runs for frontend containers, such as images referenced by a `# syntax=` directive.\r\n\r\n### Bug fixes and enhancements\r\n\r\n- containerd image store: Add the `lazy-pull` daemon feature to control whether `docker pull` skips downloading layer content that the snapshotter already provides. Lazy pulls are enabled by default for known remote snapshotters (`nydus`, `overlaybd`, `soci`, `stargz`). [moby/moby#53877](https://github.com/moby/moby/pull/53877)\r\n- containerd image store: Fix pulls skipping required layer blobs when unpacked layers already exist, leaving images runnable but incomplete for export or push. [moby/moby#53615](https://github.com/moby/moby/pull/53615)\r\n- Fix `docker container create --name` reporting a misleading validation error mentioning invalid characters instead of invalid name length. [moby/moby#53484](https://github.com/moby/moby/pull/53484)\r\n- Fix a connection leak to the RootlessKit API socket on every `GET /version` request in rootless mode. [moby/moby#53836](https://github.com/moby/moby/pull/53836)\r\n- Improve Windows service registration and unregistration cleanup, including making service unregistration (`--unregister-service`) idempotent. [moby/moby#53845](https://github.com/moby/moby/pull/53845)\r\n\r\n### Packaging updates\r\n\r\n- Update BuildKit to [v0.34.0](https://github.com/moby/buildkit/releases/tag/v0.34.0). [moby/moby#53882](https://github.com/moby/moby/pull/53882)\r\n- Update Go runtime to [1.26.9](https://go.dev/doc/devel/release#go1.26.9). [docker/cli#7363](https://github.com/docker/cli/pull/7363)\r\n- Update containerd (static binaries) to [v2.4.1](https://github.com/containerd/containerd/releases/tag/v2.4.1). [moby/moby#53773](https://github.com/moby/moby/pull/53773)\r\n\r\n### Networking\r\n\r\n- Allow IPv6 Neighbour Discovery between containers on a bridge network with inter-container communication disabled, matching the existing IPv4 behaviour. [moby/moby#53723](https://github.com/moby/moby/pull/53723)\r\n- Fix `docker ps` and `GET /containers/json` omitting published ports for networks using routed gateway mode. [moby/moby#53693](https://github.com/moby/moby/pull/53693)\r\n- Fix a bug where a restarted daemon could be dropped from a peer's service discovery and load balancing until it rejoined the gossip cluster. [moby/moby#53688](https://github.com/moby/moby/pull/53688)\r\n- Fix a published port being unreachable from another container on the same network when inter-container communication is disabled, including Swarm services published through the routing mesh. [moby/moby#53723](https://github.com/moby/moby/pull/53723)\r\n- Fix an issue where errors programming the kernel to encrypt the overlay network data-plane could in some circumstances lead to encrypted-overlay-network traffic to some nodes being transmitted in cleartext. As the receiving peer would drop cleartext packets for encrypted overlay networks as spoofed, the loss of confidentiality is limited to unidirectional flows (e.g. UDP DNS queries) and handshake attempts that never proceed (e.g. TCP SYN). [moby/moby#53420](https://github.com/moby/moby/pull/53420)\r\n- Fix connecting live-restored containers with an implicit `host-gateway` mapping to additional networks. [moby/moby#53093](https://github.com/moby/moby/pull/53093)\r\n- Fix overlay peers becoming unreachable after a node rejoins the cluster or a service is redeployed, when the VXLAN device had already learned a dynamic FDB entry for the peer. [moby/moby#53663](https://github.com/moby/moby/pull/53663)\r\n- Fix Swarm tasks on overlay networks being rejected when the daemon can't write to `/var/lib/docker`. [moby/moby#53848](https://github.com/moby/moby/pull/53848)\r\n- Published Swarm-service ports are accessible at the host's IPv6 addresses when the userland proxy is enabled. A change introduced in v29.8.0 incidentally enabled this functionality; it is a tested and supported feature as of v29.9.0. [moby/moby#53727](https://github.com/moby/moby/pull/53727)\r\n- Release a node's IPsec security associations and policies when the last container leaves an encrypted overlay network, instead of leaking them until the daemon restarts. [moby/moby#53420](https://github.com/moby/moby/pull/53420)\r\n- Restore the logic to remove the empty `DOCKER-INGRESS` iptables chain, and the `FORWARD` rule that jumps to it, left behind by Docker Engine 28.0.0 and earlier. [moby/moby#53825](https://github.com/moby/moby/pull/53825)\r\n\r\n### Rootless\r\n\r\n- Update RootlessKit (3.2.0). [moby/moby#53607](https://github.com/moby/moby/pull/53607)\r\n\r\n","reactions":{"total_count":1,"+1":0,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":0,"rocket":0,"eyes":0}}

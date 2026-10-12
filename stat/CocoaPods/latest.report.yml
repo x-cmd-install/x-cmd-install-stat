@@ -7,7 +7,7 @@ about:
   latestVersion: "1.17.0"
   latestRelease: "1.17.0"
   latestPrerelease: "1.11.0.rc.1"
-  collectedAt: 2026-10-11T07:00:39Z
+  collectedAt: 2026-10-12T07:27:17Z
 timeline:
   created: 2011-08-14
   lastCommit: 2026-07-06
@@ -21,7 +21,7 @@ popularity:
   release: 192
   contributor: 323
   pullRequest: 2210
-  issue: 10519
+  issue: 10522
 language:
   Ruby: 2436070
   Objective-C: 46602
@@ -31,63 +31,63 @@ language:
 totalBytes: 2505523
 recent:
   last30d:
-    since: 2026-09-11
+    since: 2026-09-12
     release: 0
     mergedPR: 0
     openPR: 1
     closedIssue: 0
-    openIssue: 3
+    openIssue: 6
     commit: 0
   last60d:
-    since: 2026-08-12
+    since: 2026-08-13
     release: 0
     mergedPR: 0
     openPR: 1
     closedIssue: 1
-    openIssue: 5
+    openIssue: 8
     commit: 0
   last90d:
-    since: 2026-07-13
+    since: 2026-07-14
     release: 0
     mergedPR: 0
     openPR: 1
     closedIssue: 4
-    openIssue: 7
+    openIssue: 10
     commit: 0
   last180d:
-    since: 2026-04-14
+    since: 2026-04-15
     release: 1
     mergedPR: 5
     openPR: 2
     closedIssue: 8
-    openIssue: 12
+    openIssue: 15
     commit: 25
   last360d:
-    since: 2025-10-16
+    since: 2025-10-17
     release: 1
     mergedPR: 5
     openPR: 3
     closedIssue: 24
-    openIssue: 26
+    openIssue: 29
     commit: 25
   last720d:
-    since: 2024-10-21
+    since: 2024-10-22
     release: 4
     mergedPR: 20
     openPR: 10
-    closedIssue: 92
-    openIssue: 137
+    closedIssue: 89
+    openIssue: 139
     commit: 87
 total:
   release: 192
   mergedPR: 1709
   openPR: 62
   closedIssue: 9741
-  openIssue: 778
+  openIssue: 781
   commit: 10449
 ---
 path: /home/runner/.x-repo/github.com/CocoaPods/CocoaPods
-collectedAt: 2026-10-11T07:00:50Z
+collectedAt: 2026-10-12T07:27:25Z
 loc:
   Json:
     code: 233894
@@ -160,31 +160,27 @@ total:
   blanks: 36934
   files: 5251
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/CocoaPods/CocoaPods
   commit: b80e113e28a7e23cd6dbc169f0c923f6b48bf7a2
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 2
 checks:
-  - name: Code-Review
-    score: 0
-    reason: Found 1/12 approved changesets -- score normalized to 0
-    details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 0
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 0
+    details: null
+  - name: Code-Review
+    score: 0
+    reason: Found 1/12 approved changesets -- score normalized to 0
     details: null
   - name: Token-Permissions
     score: 0
@@ -193,14 +189,10 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/Lint.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/Specs.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -216,6 +208,14 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Binary-Artifacts
     score: 0
     reason: binaries present in source code
@@ -354,6 +354,10 @@ checks:
       - 'Warn: binary detected: spec/fixtures/xcframeworks/StaticLibrary/CoconutLib.xcframework/tvos-arm64_x86_64-simulator/libCoconut.a:1'
       - 'Warn: binary detected: spec/fixtures/xcframeworks/StaticLibrary/CoconutLib.xcframework/watchos-arm64_32_armv7k/libCoconut.a:1'
       - 'Warn: binary detected: spec/fixtures/xcframeworks/StaticLibrary/CoconutLib.xcframework/watchos-arm64_i386_x86_64-simulator/libCoconut.a:1'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Branch-Protection
     score: 3
     reason: branch protection is not maximal on development and all release branches
@@ -363,15 +367,11 @@ checks:
       - 'Warn: branch ''master'' does not require approvers'
       - 'Warn: codeowners review is not required on branch ''master'''
       - 'Warn: no status checks found to merge onto branch ''master'''
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
-      - 'Info: Possibly incomplete results: error parsing shell code: unclosed here-document ''EOS'': spec/cocoapods-integration-specs/install_vendored_dynamic_framework/after/Pods/RealmSwift/build.sh:0'
+      - 'Info: Possibly incomplete results: error parsing shell code: unclosed here-document `EOS`: spec/cocoapods-integration-specs/install_vendored_dynamic_framework/after/Pods/RealmSwift/build.sh:0'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/Lint.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/CocoaPods/CocoaPods/Lint.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/Lint.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/CocoaPods/CocoaPods/Lint.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/Lint.yml:27: update your workflow using https://app.stepsecurity.io/secureworkflow/CocoaPods/CocoaPods/Lint.yml/master?enable=pin'
