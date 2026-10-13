@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.0.0.Final"
   latestRelease: "v1.0.0.Final"
   latestPrerelease: "early-access"
-  collectedAt: 2026-10-12T07:08:33Z
+  collectedAt: 2026-10-13T08:06:56Z
 timeline:
   created: 2020-03-07
   lastCommit: 2023-05-03
@@ -27,7 +27,7 @@ language:
 totalBytes: 196231
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 0
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 0
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 0
     mergedPR: 0
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -83,7 +83,7 @@ total:
   commit: 229
 ---
 path: /home/runner/.x-repo/github.com/moditect/layrry
-collectedAt: 2026-10-12T07:08:34Z
+collectedAt: 2026-10-13T08:06:57Z
 loc:
   Java:
     code: 3954
@@ -136,13 +136,13 @@ total:
   blanks: 1388
   files: 168
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/moditect/layrry
   commit: 5d2e8294f2f9d0b1f74f53ed1057453b5d909ee5
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.1
 checks:
   - name: Code-Review
@@ -157,6 +157,11 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Binary-Artifacts
+    score: 9
+    reason: binaries present in source code
+    details:
+      - 'Warn: binary detected: .mvn/wrapper/maven-wrapper.jar:1'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -165,11 +170,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/early-access.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 9
-    reason: binaries present in source code
-    details:
-      - 'Warn: binary detected: .mvn/wrapper/maven-wrapper.jar:1'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -204,17 +204,17 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE.txt:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE.txt:0'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Signed-Releases
     score: 4
     reason: 2 out of the last 4 releases have a total of 2 signed artifacts.

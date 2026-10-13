@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.5.8"
   latestRelease: "v1.5.8"
   latestPrerelease: ""
-  collectedAt: 2026-10-12T06:57:29Z
+  collectedAt: 2026-10-13T07:55:56Z
 timeline:
   created: 2020-07-31
   lastCommit: 2026-08-28
@@ -33,7 +33,7 @@ language:
 totalBytes: 612856
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 0
     mergedPR: 0
     openPR: 0
@@ -41,15 +41,15 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 0
     mergedPR: 0
-    openPR: 4
+    openPR: 3
     closedIssue: 0
     openIssue: 1
     commit: 1
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 0
     mergedPR: 0
     openPR: 10
@@ -57,7 +57,7 @@ recent:
     openIssue: 1
     commit: 3
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 0
     mergedPR: 0
     openPR: 12
@@ -65,7 +65,7 @@ recent:
     openIssue: 3
     commit: 7
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 1
     mergedPR: 3
     openPR: 12
@@ -73,7 +73,7 @@ recent:
     openIssue: 10
     commit: 23
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 4
     mergedPR: 18
     openPR: 13
@@ -89,7 +89,7 @@ total:
   commit: 2044
 ---
 path: /home/runner/.x-repo/github.com/printfn/fend
-collectedAt: 2026-10-12T06:57:31Z
+collectedAt: 2026-10-13T07:55:57Z
 loc:
   Rust:
     code: 20875
@@ -177,43 +177,43 @@ total:
   blanks: 3163
   files: 119
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/printfn/fend
   commit: d9cb764e83cd1fe629bb526fd1cb08777d123014
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.8
 checks:
-  - name: Maintained
-    score: 2
-    reason: 3 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 2
-    details: null
   - name: Code-Review
     score: 1
     reason: Found 4/26 approved changesets -- score normalized to 1
+    details: null
+  - name: Maintained
+    score: 2
+    reason: 3 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 2
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
     details:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/actions.yml:35'
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/actions.yml:260'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/actions.yml:261'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/actions.yml:260'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/actions.yml:296'
       - 'Info: found token with ''none'' permissions: .github/workflows/actions.yml:1'
       - 'Info: no jobLevel write permissions found'
@@ -221,7 +221,7 @@ checks:
     score: 2
     reason: dependency not pinned by hash detected -- score normalized to 2
     details:
-      - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered (: contrib/test-aur.sh:4'
+      - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered `(`: contrib/test-aur.sh:4'
       - 'Info: Possibly incomplete results: error parsing shell code: statements must be separated by &, ; or a newline: .github/workflows/actions.yml:62'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/actions.yml:307: update your workflow using https://app.stepsecurity.io/secureworkflow/printfn/fend/actions.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/actions.yml:42: update your workflow using https://app.stepsecurity.io/secureworkflow/printfn/fend/actions.yml/main?enable=pin'
@@ -243,8 +243,8 @@ checks:
       - 'Warn: downloadThenRun not pinned by hash: .github/workflows/actions.yml:190'
       - 'Info:   0 out of  13 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   2 downloadThenRun dependencies pinned'
       - 'Info:   2 out of   3 npmCommand dependencies pinned'
+      - 'Info:   0 out of   2 downloadThenRun dependencies pinned'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -257,17 +257,22 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE.md:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE.md:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''main'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -282,11 +287,6 @@ checks:
       - 'Warn: release artifact v1.5.6 does not have provenance: https://api.github.com/repos/printfn/fend/releases/205773035'
       - 'Warn: release artifact v1.5.5 does not have provenance: https://api.github.com/repos/printfn/fend/releases/185776721'
       - 'Warn: release artifact v1.5.3 does not have provenance: https://api.github.com/repos/printfn/fend/releases/178540100'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''main'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

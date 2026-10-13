@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.5.0"
   latestRelease: "v1.5.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-12T07:09:40Z
+  collectedAt: 2026-10-13T08:20:28Z
 timeline:
   created: 2018-01-28
   lastCommit: 2026-10-06
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2021-11-16
   lastPrerelease: 
 popularity:
-  star: 4082
+  star: 4081
   watcher: 43
   fork: 202
   release: 6
@@ -30,7 +30,7 @@ language:
 totalBytes: 185122
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 0
     mergedPR: 0
     openPR: 3
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 2
   last60d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 0
     mergedPR: 1
     openPR: 3
@@ -46,7 +46,7 @@ recent:
     openIssue: 1
     commit: 3
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 0
     mergedPR: 1
     openPR: 3
@@ -54,7 +54,7 @@ recent:
     openIssue: 1
     commit: 3
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 0
     mergedPR: 1
     openPR: 4
@@ -62,7 +62,7 @@ recent:
     openIssue: 1
     commit: 3
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 0
     mergedPR: 4
     openPR: 4
@@ -70,7 +70,7 @@ recent:
     openIssue: 3
     commit: 9
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 0
     mergedPR: 5
     openPR: 7
@@ -86,7 +86,7 @@ total:
   commit: 502
 ---
 path: /home/runner/.x-repo/github.com/github/git-sizer
-collectedAt: 2026-10-12T07:09:41Z
+collectedAt: 2026-10-13T08:20:29Z
 loc:
   Go:
     code: 4866
@@ -119,19 +119,15 @@ total:
   blanks: 1158
   files: 53
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/github/git-sizer
   commit: 56a6df5afb9ea48de2302b9c1b70cf49e36f0d00
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 5.8
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
@@ -140,14 +136,6 @@ checks:
     score: 3
     reason: 4 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 3
     details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/lint.yml:16'
-      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:10'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yml:5'
-      - 'Info: no jobLevel write permissions found'
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -157,6 +145,18 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/lint.yml:16'
+      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:10'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yml:5'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 10
     reason: all dependencies are pinned
@@ -206,7 +206,7 @@ checks:
     details:
       - 'Info: ''allow deletion'' disabled on branch ''master'''
       - 'Info: ''force pushes'' disabled on branch ''master'''
-      - 'Info: ''branch protection settings apply to administrators'' is required to merge on branch ''master'''
+      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''master'''
       - 'Warn: required approving review count is 1 on branch ''master'''
       - 'Warn: codeowners review is not required on branch ''master'''
       - 'Warn: no status checks found to merge onto branch ''master'''

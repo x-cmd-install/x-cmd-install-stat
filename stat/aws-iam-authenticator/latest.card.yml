@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.7.20"
   latestRelease: "v0.7.20"
   latestPrerelease: "v0.5.4"
-  collectedAt: 2026-10-12T07:21:11Z
+  collectedAt: 2026-10-13T08:12:01Z
 timeline:
   created: 2017-08-01
   lastCommit: 2026-09-22
@@ -19,8 +19,8 @@ popularity:
   watcher: 36
   fork: 455
   release: 66
-  contributor: 517
-  pullRequest: 813
+  contributor: 518
+  pullRequest: 814
   issue: 300
 language:
   Go: 404944
@@ -31,23 +31,23 @@ language:
 totalBytes: 467525
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 0
     mergedPR: 1
-    openPR: 4
+    openPR: 5
     closedIssue: 1
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 2
     mergedPR: 4
-    openPR: 5
+    openPR: 6
     closedIssue: 1
     openIssue: 1
     commit: 6
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 2
     mergedPR: 5
     openPR: 8
@@ -55,39 +55,39 @@ recent:
     openIssue: 1
     commit: 8
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 8
-    mergedPR: 21
-    openPR: 12
+    mergedPR: 20
+    openPR: 13
     closedIssue: 2
     openIssue: 2
     commit: 25
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 12
     mergedPR: 62
-    openPR: 15
+    openPR: 16
     closedIssue: 2
     openIssue: 2
     commit: 83
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 24
     mergedPR: 156
-    openPR: 15
-    closedIssue: 6
+    openPR: 16
+    closedIssue: 5
     openIssue: 2
     commit: 347
 total:
   release: 66
   mergedPR: 525
-  openPR: 15
+  openPR: 16
   closedIssue: 294
   openIssue: 6
   commit: 1032
 ---
 path: /home/runner/.x-repo/github.com/kubernetes-sigs/aws-iam-authenticator
-collectedAt: 2026-10-12T07:21:16Z
+collectedAt: 2026-10-13T08:12:05Z
 loc:
   Go:
     code: 10177
@@ -140,18 +140,18 @@ total:
   blanks: 1970
   files: 132
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/kubernetes-sigs/aws-iam-authenticator
   commit: 6815fb70e9e48f713a14cb2fdf698a967290e56f
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 6.9
 checks:
   - name: Maintained
     score: 10
-    reason: 21 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    reason: 13 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Code-Review
     score: 10
@@ -161,6 +161,10 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 9
     reason: detected GitHub workflow tokens with excessive permissions
@@ -169,10 +173,6 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/deps.yml:6'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/pr.yml:8'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -201,14 +201,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: github.com/kubernetes-sigs/.github/SECURITY.md:1'
-      - 'Info: Found linked content: github.com/kubernetes-sigs/.github/SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/kubernetes-sigs/.github/SECURITY.md:1'
-      - 'Info: Found text in security policy: github.com/kubernetes-sigs/.github/SECURITY.md:1'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
@@ -227,14 +219,22 @@ checks:
       - 'Warn: release artifact v0.7.18 does not have provenance: https://api.github.com/repos/kubernetes-sigs/aws-iam-authenticator/releases/339746615'
       - 'Warn: release artifact v0.7.17 does not have provenance: https://api.github.com/repos/kubernetes-sigs/aws-iam-authenticator/releases/333357679'
       - 'Warn: release artifact v0.7.16 does not have provenance: https://api.github.com/repos/kubernetes-sigs/aws-iam-authenticator/releases/324467047'
-  - name: Packaging
+  - name: Security-Policy
     score: 10
-    reason: packaging workflow detected
+    reason: security policy file detected
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/create-release.yml:13'
+      - 'Info: security policy file detected: github.com/kubernetes-sigs/.github/SECURITY.md:1'
+      - 'Info: Found linked content: github.com/kubernetes-sigs/.github/SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/kubernetes-sigs/.github/SECURITY.md:1'
+      - 'Info: Found text in security policy: github.com/kubernetes-sigs/.github/SECURITY.md:1'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/create-release.yml:13'
 ---

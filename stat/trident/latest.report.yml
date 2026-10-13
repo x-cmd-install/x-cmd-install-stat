@@ -2,15 +2,15 @@ about:
   description: "Storage orchestrator for containers"
   license: Apache-2.0
   homepage: 
-  head: c5e772b
+  head: 8d2b910
   archived: false
   latestVersion: "v26.06.2"
   latestRelease: "v26.06.2"
   latestPrerelease: "v20.01.0-beta.1"
-  collectedAt: 2026-10-12T04:59:54Z
+  collectedAt: 2026-10-13T06:00:49Z
 timeline:
   created: 2016-12-22
-  lastCommit: 2026-10-11
+  lastCommit: 2026-10-12
   lastVersion: 2026-10-08
   lastRelease: 2026-10-08
   lastPrerelease: 2019-12-20
@@ -23,7 +23,7 @@ popularity:
   pullRequest: 154
   issue: 1038
 language:
-  Go: 20195211
+  Go: 20195402
   Go Template: 77087
   Python: 51596
   Makefile: 27310
@@ -31,55 +31,55 @@ language:
   Shell: 6579
   Dockerfile: 4904
   templ: 376
-totalBytes: 20373900
+totalBytes: 20374091
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 1
     mergedPR: 0
     openPR: 2
     closedIssue: 1
     openIssue: 4
-    commit: 26
+    commit: 27
   last60d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 2
     mergedPR: 0
     openPR: 5
     closedIssue: 3
     openIssue: 11
-    commit: 39
+    commit: 40
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 2
     mergedPR: 0
-    openPR: 7
+    openPR: 6
     closedIssue: 4
     openIssue: 16
-    commit: 57
+    commit: 58
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 4
     mergedPR: 0
     openPR: 16
     closedIssue: 11
     openIssue: 34
-    commit: 123
+    commit: 124
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 7
     mergedPR: 0
     openPR: 19
     closedIssue: 39
     openIssue: 60
-    commit: 254
+    commit: 255
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 14
     mergedPR: 0
     openPR: 31
     closedIssue: 91
-    openIssue: 117
+    openIssue: 116
     commit: 491
 total:
   release: 76
@@ -87,13 +87,13 @@ total:
   openPR: 51
   closedIssue: 802
   openIssue: 236
-  commit: 1914
+  commit: 1915
 ---
 path: /home/runner/.x-repo/github.com/NetApp/trident
-collectedAt: 2026-10-12T05:00:06Z
+collectedAt: 2026-10-13T06:01:04Z
 loc:
   Go:
-    code: 2095974
+    code: 2095976
     comments: 553926
     blanks: 580765
     files: 5884
@@ -148,44 +148,44 @@ loc:
     blanks: 3655
     files: 9
 total:
-  code: 3231844
+  code: 3231846
   comments: 558358
   blanks: 585789
   files: 6020
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/NetApp/trident
-  commit: 05f58cb6de5ec078475aad18e70726b1a3f80112
+  commit: 8d2b91059d4c3ea7c51f69f8dbf96a30c5a74741
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.8
 checks:
-  - name: Code-Review
-    score: 0
-    reason: Found 0/30 approved changesets -- score normalized to 0
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 0
+    reason: Found 0/30 approved changesets -- score normalized to 0
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql.yml:39'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:40'
       - 'Info: jobLevel ''packages'' permission set to ''read'': .github/workflows/codeql.yml:36'
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql.yml:39'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/backport-on-merge.yml:19'
       - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/changelog-label-check.yml:13'
       - 'Warn: no topLevel permission defined: .github/workflows/codeql.yml:1'
@@ -196,12 +196,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: SAST
-    score: 10
-    reason: 'SAST tool detected: CodeQL'
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: no pull requests merged into dev branch'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -210,6 +204,12 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: SAST
+    score: 10
+    reason: 'SAST tool detected: CodeQL'
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: no pull requests merged into dev branch'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -229,16 +229,20 @@ checks:
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
+      - 'Warn: release artifact v26.06.2 not signed: https://api.github.com/repos/NetApp/trident/releases/407212643'
       - 'Warn: release artifact v26.06.1 not signed: https://api.github.com/repos/NetApp/trident/releases/373344191'
       - 'Warn: release artifact v26.06.0 not signed: https://api.github.com/repos/NetApp/trident/releases/346993406'
       - 'Warn: release artifact v26.02.1 not signed: https://api.github.com/repos/NetApp/trident/releases/318092824'
       - 'Warn: release artifact v26.02.0 not signed: https://api.github.com/repos/NetApp/trident/releases/291163241'
-      - 'Warn: release artifact v25.06.3 not signed: https://api.github.com/repos/NetApp/trident/releases/261588961'
+      - 'Warn: release artifact v26.06.2 does not have provenance: https://api.github.com/repos/NetApp/trident/releases/407212643'
       - 'Warn: release artifact v26.06.1 does not have provenance: https://api.github.com/repos/NetApp/trident/releases/373344191'
       - 'Warn: release artifact v26.06.0 does not have provenance: https://api.github.com/repos/NetApp/trident/releases/346993406'
       - 'Warn: release artifact v26.02.1 does not have provenance: https://api.github.com/repos/NetApp/trident/releases/318092824'
       - 'Warn: release artifact v26.02.0 does not have provenance: https://api.github.com/repos/NetApp/trident/releases/291163241'
-      - 'Warn: release artifact v25.06.3 does not have provenance: https://api.github.com/repos/NetApp/trident/releases/261588961'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
@@ -271,9 +275,5 @@ checks:
       - 'Info:  12 out of  14 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   5 containerImage dependencies pinned'
       - 'Info:   0 out of   1 goCommand dependencies pinned'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
 ---
-{"id":407212643,"author":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBJmq8s4YRZJj","tag_name":"v26.06.2","target_commitish":"9e8c1cd69f9a3461d68bb0a50069e14670258d75","name":"v26.06.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-08T18:48:24Z","updated_at":"2026-10-08T20:46:01Z","published_at":"2026-10-08T20:46:01Z","assets":[{"id":622854005,"node_id":"RA_kwDOBJmq8s4lH_91","name":"trident-installer-26.06.2.tar.gz","label":"","uploader":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":113401352,"digest":"sha256:338a2a7194452a769bfa1871f8a11b06a0f8ed76da7b642a2f53fc9bc12a7ec3","download_count":170,"created_at":"2026-10-08T19:57:39Z","updated_at":"2026-10-08T19:57:42Z"}],"body":"## Changes since v26.06.1\r\n\r\n### Trident\r\n\r\n**Fixes:**\r\n\r\n- **Kubernetes:** Fixed ONTAP-NAS export policy rules being silently deleted when the Trident controller restarted, or a `TridentBackendConfig` was otherwise updated, while `enableConcurrency` was set to `true`, which could strand already-mounted volumes (Issues [#1166](https://github.com/NetApp/trident/issues/1166), [#1179](https://github.com/NetApp/trident/issues/1179)).\r\n- **Kubernetes:** Fixed backend updates running a per-volume orphan scan for non-material changes such as credentials and QoS, which could block CSI operations for hours on large backends. The scan now runs only when the SVM or storage prefix changes.\r\n- **Kubernetes:** Fixed credentials appearing in Trident's debug logs, including CSI gRPC request dumps, the startup environment dump, and `TridentBackendConfig` specifications logged by the CRD controller. The startup environment dump now logs values only for Trident's own `TRIDENT_*` variables and lists other variables by name."}
+{"id":407212643,"author":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBJmq8s4YRZJj","tag_name":"v26.06.2","target_commitish":"9e8c1cd69f9a3461d68bb0a50069e14670258d75","name":"v26.06.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-08T18:48:24Z","updated_at":"2026-10-08T20:46:01Z","published_at":"2026-10-08T20:46:01Z","assets":[{"id":622854005,"node_id":"RA_kwDOBJmq8s4lH_91","name":"trident-installer-26.06.2.tar.gz","label":"","uploader":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":113401352,"digest":"sha256:338a2a7194452a769bfa1871f8a11b06a0f8ed76da7b642a2f53fc9bc12a7ec3","download_count":260,"created_at":"2026-10-08T19:57:39Z","updated_at":"2026-10-08T19:57:42Z"}],"body":"## Changes since v26.06.1\r\n\r\n### Trident\r\n\r\n**Fixes:**\r\n\r\n- **Kubernetes:** Fixed ONTAP-NAS export policy rules being silently deleted when the Trident controller restarted, or a `TridentBackendConfig` was otherwise updated, while `enableConcurrency` was set to `true`, which could strand already-mounted volumes (Issues [#1166](https://github.com/NetApp/trident/issues/1166), [#1179](https://github.com/NetApp/trident/issues/1179)).\r\n- **Kubernetes:** Fixed backend updates running a per-volume orphan scan for non-material changes such as credentials and QoS, which could block CSI operations for hours on large backends. The scan now runs only when the SVM or storage prefix changes.\r\n- **Kubernetes:** Fixed credentials appearing in Trident's debug logs, including CSI gRPC request dumps, the startup environment dump, and `TridentBackendConfig` specifications logged by the CRD controller. The startup environment dump now logs values only for Trident's own `TRIDENT_*` variables and lists other variables by name."}

@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.1.0"
   latestRelease: "v2.1.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-12T07:21:59Z
+  collectedAt: 2026-10-13T08:15:29Z
 timeline:
   created: 2020-08-05
   lastCommit: 2026-10-05
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2025-07-08
   lastPrerelease: 
 popularity:
-  star: 9027
+  star: 9029
   watcher: 45
   fork: 330
   release: 37
@@ -29,31 +29,31 @@ language:
 totalBytes: 397427
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 0
     mergedPR: 0
     openPR: 3
     closedIssue: 0
-    openIssue: 3
+    openIssue: 2
     commit: 1
   last60d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 0
     mergedPR: 0
     openPR: 3
     closedIssue: 0
-    openIssue: 6
+    openIssue: 5
     commit: 1
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 0
     mergedPR: 0
     openPR: 4
     closedIssue: 1
-    openIssue: 11
+    openIssue: 10
     commit: 1
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 0
     mergedPR: 0
     openPR: 14
@@ -61,7 +61,7 @@ recent:
     openIssue: 26
     commit: 1
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 0
     mergedPR: 8
     openPR: 27
@@ -69,7 +69,7 @@ recent:
     openIssue: 60
     commit: 19
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 1
     mergedPR: 36
     openPR: 39
@@ -85,7 +85,7 @@ total:
   commit: 1304
 ---
 path: /home/runner/.x-repo/github.com/Morganamilo/paru
-collectedAt: 2026-10-12T07:22:00Z
+collectedAt: 2026-10-13T08:15:31Z
 loc:
   Rust:
     code: 10105
@@ -128,36 +128,36 @@ total:
   blanks: 1911
   files: 51
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/Morganamilo/paru
-  commit: 9ac3578807a87858651e81a02586ceb947686e7c
+  commit: 7830fac148f8cd2143307386ead67d7ffd2efa33
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.2
 checks:
+  - name: Code-Review
+    score: 5
+    reason: Found 10/19 approved changesets -- score normalized to 5
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Maintained
-    score: 2
-    reason: 0 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 2
-    details: null
-  - name: Code-Review
-    score: 5
-    reason: Found 10/18 approved changesets -- score normalized to 5
+    score: 3
+    reason: 1 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 3
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -186,17 +186,12 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/paru.yml:32: update your workflow using https://app.stepsecurity.io/secureworkflow/Morganamilo/paru/paru.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/paru.yml:63: update your workflow using https://app.stepsecurity.io/secureworkflow/Morganamilo/paru/paru.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/paru.yml:65: update your workflow using https://app.stepsecurity.io/secureworkflow/Morganamilo/paru/paru.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating debian:13 to debian:13@sha256:9cc080028c43b27d2074d63a5f9caf7166d731494965616c1a6d2827a004585c'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating debian:13 to debian:13@sha256:913f6706df59a68922d1dd08f78c2476560a8d367897200a6005b00e5f67c2d5'
       - 'Warn: downloadThenRun not pinned by hash: Dockerfile:33-34'
       - 'Info:   0 out of   8 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -205,6 +200,11 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
@@ -235,5 +235,5 @@ checks:
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
-      - 'Warn: 0 commits out of 22 are checked with a SAST tool'
+      - 'Warn: 0 commits out of 21 are checked with a SAST tool'
 ---

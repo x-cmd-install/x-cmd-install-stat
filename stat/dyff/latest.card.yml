@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.12.0"
   latestRelease: "v1.12.0"
   latestPrerelease: "v0.4-alpha"
-  collectedAt: 2026-10-12T06:41:36Z
+  collectedAt: 2026-10-13T07:35:57Z
 timeline:
   created: 2018-03-09
   lastCommit: 2026-10-09
@@ -17,7 +17,7 @@ timeline:
 popularity:
   star: 1890
   watcher: 10
-  fork: 101
+  fork: 102
   release: 86
   contributor: 31
   pullRequest: 582
@@ -29,7 +29,7 @@ language:
 totalBytes: 220254
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 0
     mergedPR: 8
     openPR: 1
@@ -37,23 +37,23 @@ recent:
     openIssue: 0
     commit: 6
   last60d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 0
-    mergedPR: 20
+    mergedPR: 18
     openPR: 2
     closedIssue: 0
     openIssue: 0
     commit: 15
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 0
     mergedPR: 27
     openPR: 2
     closedIssue: 0
-    openIssue: 1
+    openIssue: 0
     commit: 26
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 2
     mergedPR: 69
     openPR: 6
@@ -61,7 +61,7 @@ recent:
     openIssue: 3
     commit: 68
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 9
     mergedPR: 124
     openPR: 7
@@ -69,7 +69,7 @@ recent:
     openIssue: 4
     commit: 124
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 14
     mergedPR: 217
     openPR: 14
@@ -85,7 +85,7 @@ total:
   commit: 1089
 ---
 path: /home/runner/.x-repo/github.com/homeport/dyff
-collectedAt: 2026-10-12T06:41:37Z
+collectedAt: 2026-10-13T07:35:58Z
 loc:
   Yaml:
     code: 5803
@@ -133,13 +133,13 @@ total:
   blanks: 1396
   files: 109
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/homeport/dyff
-  commit: 2cdf86370efc2d4428d28acecca69674e0ec86fb
+  commit: 4ecb47958c9b97b086e96fd865ce349c4e6ea69b
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 5.4
 checks:
   - name: Code-Review
@@ -149,6 +149,14 @@ checks:
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -160,14 +168,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/tests.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Pinned-Dependencies
     score: 1
     reason: dependency not pinned by hash detected -- score normalized to 1
@@ -200,17 +200,26 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
     details:
-      - 'Warn: no fuzzer integrations found'
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:9'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -225,15 +234,6 @@ checks:
       - 'Warn: release artifact v1.11.3 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/297954045'
       - 'Warn: release artifact v1.11.2 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/291814002'
       - 'Warn: release artifact v1.11.1 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/291772752'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:9'
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits

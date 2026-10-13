@@ -2,22 +2,22 @@ about:
   description: "Flexible, reusable and concise configuration for Kubernetes"
   license: Apache-2.0
   homepage: https://tanka.dev
-  head: a7d1329
+  head: c8b950a
   archived: false
   latestVersion: "v0.39.4"
   latestRelease: "v0.39.4"
   latestPrerelease: "v0.18.0"
-  collectedAt: 2026-10-12T06:06:52Z
+  collectedAt: 2026-10-13T07:25:11Z
 timeline:
   created: 2019-07-17
-  lastCommit: 2026-10-09
+  lastCommit: 2026-10-12
   lastVersion: 2026-10-08
   lastRelease: 2026-10-08
   lastPrerelease: 2021-10-04
 popularity:
   star: 2689
   watcher: 151
-  fork: 195
+  fork: 194
   release: 79
   contributor: 185
   pullRequest: 1860
@@ -29,63 +29,63 @@ language:
 totalBytes: 461687
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 4
-    mergedPR: 62
+    mergedPR: 63
+    openPR: 13
+    closedIssue: 1
+    openIssue: 1
+    commit: 47
+  last60d:
+    since: 2026-08-14
+    release: 5
+    mergedPR: 89
     openPR: 14
     closedIssue: 1
     openIssue: 1
-    commit: 46
-  last60d:
-    since: 2026-08-13
-    release: 5
-    mergedPR: 91
-    openPR: 15
-    closedIssue: 1
-    openIssue: 1
-    commit: 95
+    commit: 96
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 6
-    mergedPR: 119
-    openPR: 15
+    mergedPR: 117
+    openPR: 14
     closedIssue: 2
     openIssue: 1
-    commit: 121
+    commit: 122
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 11
-    mergedPR: 263
-    openPR: 19
+    mergedPR: 261
+    openPR: 18
     closedIssue: 3
     openIssue: 2
-    commit: 261
+    commit: 262
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 17
-    mergedPR: 493
-    openPR: 21
+    mergedPR: 492
+    openPR: 20
     closedIssue: 10
     openIssue: 6
-    commit: 484
+    commit: 485
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 30
-    mergedPR: 938
-    openPR: 24
+    mergedPR: 939
+    openPR: 23
     closedIssue: 18
     openIssue: 14
-    commit: 944
+    commit: 945
 total:
   release: 79
-  mergedPR: 1588
-  openPR: 24
+  mergedPR: 1589
+  openPR: 23
   closedIssue: 357
   openIssue: 38
-  commit: 1628
+  commit: 1629
 ---
 path: /home/runner/.x-repo/github.com/grafana/tanka
-collectedAt: 2026-10-12T06:07:07Z
+collectedAt: 2026-10-13T07:25:29Z
 loc:
   Go:
     code: 28102
@@ -148,19 +148,27 @@ total:
   blanks: 8166
   files: 330
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/grafana/tanka
-  commit: 3a7d6cd89d4bfa7193b678813fa57a7b357fce63
+  commit: c8b950a7b5a83ceefa4e27004964249f4ec86ecb
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 7.5
 checks:
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
     details: null
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: SECURITY.md:1'
+      - 'Info: Found linked content: SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
+      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
@@ -173,27 +181,19 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: SECURITY.md:1'
-      - 'Info: Found linked content: SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
-      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Token-Permissions
     score: 7
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/acceptance-tests.yml:21'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/check-dagger-drift.yml:18'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/docker.yml:171'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/docker.yml:44'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/docker.yml:108'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/docker.yml:171'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/publish-page.yml:27'
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release-please.yml:51'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release-please.yml:11'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release-please.yml:36'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release-please.yml:51'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/signed-commits-info.yml:12'
       - 'Warn: no topLevel permission defined: .github/workflows/acceptance-tests.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/check-dagger-drift.yml:1'
@@ -218,31 +218,31 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
+      - 'Warn: release artifact v0.39.4 not signed: https://api.github.com/repos/grafana/tanka/releases/406719152'
       - 'Warn: release artifact v0.39.3 not signed: https://api.github.com/repos/grafana/tanka/releases/403526729'
       - 'Warn: release artifact v0.39.2 not signed: https://api.github.com/repos/grafana/tanka/releases/392968797'
       - 'Warn: release artifact v0.39.1 not signed: https://api.github.com/repos/grafana/tanka/releases/388392547'
       - 'Warn: release artifact v0.39.0 not signed: https://api.github.com/repos/grafana/tanka/releases/377760994'
-      - 'Warn: release artifact v0.38.0 not signed: https://api.github.com/repos/grafana/tanka/releases/355033729'
+      - 'Warn: release artifact v0.39.4 does not have provenance: https://api.github.com/repos/grafana/tanka/releases/406719152'
       - 'Warn: release artifact v0.39.3 does not have provenance: https://api.github.com/repos/grafana/tanka/releases/403526729'
       - 'Warn: release artifact v0.39.2 does not have provenance: https://api.github.com/repos/grafana/tanka/releases/392968797'
       - 'Warn: release artifact v0.39.1 does not have provenance: https://api.github.com/repos/grafana/tanka/releases/388392547'
       - 'Warn: release artifact v0.39.0 does not have provenance: https://api.github.com/repos/grafana/tanka/releases/377760994'
-      - 'Warn: release artifact v0.38.0 does not have provenance: https://api.github.com/repos/grafana/tanka/releases/355033729'
   - name: Branch-Protection
     score: 5
     reason: branch protection is not maximal on development and all release branches
@@ -268,4 +268,4 @@ checks:
     details:
       - 'Info: all commits (30) are checked with a SAST tool'
 ---
-{"id":406719152,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOC8Owc84YPgqw","tag_name":"v0.39.4","target_commitish":"b56f3c2f3c6627bd48469189f15c297cf7662421","name":"v0.39.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-08T10:44:04Z","updated_at":"2026-10-08T10:51:18Z","published_at":"2026-10-08T10:48:30Z","assets":[{"id":621544857,"node_id":"RA_kwDOC8Owc84lDAWZ","name":"tk-darwin-amd64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":23052336,"digest":"sha256:50141742d7b10793bea71e3f670fcce5b4fbd75b430dc68dfa8a3f4410845df8","download_count":17,"created_at":"2026-10-08T10:51:16Z","updated_at":"2026-10-08T10:51:18Z"},{"id":621544786,"node_id":"RA_kwDOC8Owc84lDAVS","name":"tk-darwin-arm64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":21700530,"digest":"sha256:662cdc46d9e101c0085c18a407a81536923bf56b7f2fff920dac29e425269b6b","download_count":17,"created_at":"2026-10-08T10:51:14Z","updated_at":"2026-10-08T10:51:16Z"},{"id":621544717,"node_id":"RA_kwDOC8Owc84lDAUN","name":"tk-linux-amd64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":22016160,"digest":"sha256:71961ae30b65097c24ad481dca599116aea6b01bfe0e2ec03ab643884076443a","download_count":1561,"created_at":"2026-10-08T10:51:12Z","updated_at":"2026-10-08T10:51:14Z"},{"id":621544676,"node_id":"RA_kwDOC8Owc84lDATk","name":"tk-linux-arm","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":20119712,"digest":"sha256:676ee61c9bfaf02241c39cb956149d730fc53453930e41af5c318d8ba7d3bc6c","download_count":8,"created_at":"2026-10-08T10:51:10Z","updated_at":"2026-10-08T10:51:12Z"},{"id":621544632,"node_id":"RA_kwDOC8Owc84lDAS4","name":"tk-linux-arm64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":20578464,"digest":"sha256:b071ace8f5b7ebb903426713373c21162cda1d4f365cf5d546377cdbc9689fc4","download_count":46,"created_at":"2026-10-08T10:51:09Z","updated_at":"2026-10-08T10:51:10Z"},{"id":621544562,"node_id":"RA_kwDOC8Owc84lDARy","name":"tk-windows-amd64.exe","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":22807552,"digest":"sha256:bc8fe1519c5c7325216366e9e6e0b687753e1200e518fcc842e3ed403ee5146e","download_count":18,"created_at":"2026-10-08T10:51:07Z","updated_at":"2026-10-08T10:51:08Z"}],"body":"## [0.39.4](https://github.com/grafana/tanka/compare/v0.39.3...v0.39.4) (2026-10-08)\n\n\n### \ud83d\udc1b Bug Fixes\n\n* **deps:** bump undici to 8.11.2 in docs ([#2307](https://github.com/grafana/tanka/issues/2307)) ([bb73008](https://github.com/grafana/tanka/commit/bb7300895a654f8fd732b2f544852c0cc5725991))\n* **deps:** update docs ([#2295](https://github.com/grafana/tanka/issues/2295)) ([df781d3](https://github.com/grafana/tanka/commit/df781d3fc322089ee3a81d66364290328a823af2))\n* **deps:** update module github.com/vektah/gqlparser/v2 to v2.5.59 ([#2302](https://github.com/grafana/tanka/issues/2302)) ([3a7d6cd](https://github.com/grafana/tanka/commit/3a7d6cd89d4bfa7193b678813fa57a7b357fce63))\n* **renovate:** use github-releases datasource for helm ([#2304](https://github.com/grafana/tanka/issues/2304)) ([1c06859](https://github.com/grafana/tanka/commit/1c06859f30216e62875f04ca3d7cf02b9672a1b1))\n\n\n### \ud83d\udd27 Miscellaneous Chores\n\n* **deps:** update dependency helm to v3.22.0 ([#2305](https://github.com/grafana/tanka/issues/2305)) ([780889d](https://github.com/grafana/tanka/commit/780889da03cfff70a155e3ec3e3a700af193940a))\n* **deps:** update module github.com/grpc-ecosystem/grpc-gateway/v2 to v2.31.0 ([#2303](https://github.com/grafana/tanka/issues/2303)) ([69af885](https://github.com/grafana/tanka/commit/69af8856ed8b7ee69d022917d8e45b8451812f16))\n* **deps:** update module github.com/huandu/xstrings to v1.6.2 ([#2300](https://github.com/grafana/tanka/issues/2300)) ([8030417](https://github.com/grafana/tanka/commit/8030417ffc6e49a36eaa175e5185835e05bef574))"}
+{"id":406719152,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOC8Owc84YPgqw","tag_name":"v0.39.4","target_commitish":"b56f3c2f3c6627bd48469189f15c297cf7662421","name":"v0.39.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-08T10:44:04Z","updated_at":"2026-10-08T10:51:18Z","published_at":"2026-10-08T10:48:30Z","assets":[{"id":621544857,"node_id":"RA_kwDOC8Owc84lDAWZ","name":"tk-darwin-amd64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":23052336,"digest":"sha256:50141742d7b10793bea71e3f670fcce5b4fbd75b430dc68dfa8a3f4410845df8","download_count":18,"created_at":"2026-10-08T10:51:16Z","updated_at":"2026-10-08T10:51:18Z"},{"id":621544786,"node_id":"RA_kwDOC8Owc84lDAVS","name":"tk-darwin-arm64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":21700530,"digest":"sha256:662cdc46d9e101c0085c18a407a81536923bf56b7f2fff920dac29e425269b6b","download_count":27,"created_at":"2026-10-08T10:51:14Z","updated_at":"2026-10-08T10:51:16Z"},{"id":621544717,"node_id":"RA_kwDOC8Owc84lDAUN","name":"tk-linux-amd64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":22016160,"digest":"sha256:71961ae30b65097c24ad481dca599116aea6b01bfe0e2ec03ab643884076443a","download_count":2097,"created_at":"2026-10-08T10:51:12Z","updated_at":"2026-10-08T10:51:14Z"},{"id":621544676,"node_id":"RA_kwDOC8Owc84lDATk","name":"tk-linux-arm","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":20119712,"digest":"sha256:676ee61c9bfaf02241c39cb956149d730fc53453930e41af5c318d8ba7d3bc6c","download_count":10,"created_at":"2026-10-08T10:51:10Z","updated_at":"2026-10-08T10:51:12Z"},{"id":621544632,"node_id":"RA_kwDOC8Owc84lDAS4","name":"tk-linux-arm64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":20578464,"digest":"sha256:b071ace8f5b7ebb903426713373c21162cda1d4f365cf5d546377cdbc9689fc4","download_count":116,"created_at":"2026-10-08T10:51:09Z","updated_at":"2026-10-08T10:51:10Z"},{"id":621544562,"node_id":"RA_kwDOC8Owc84lDARy","name":"tk-windows-amd64.exe","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"raw","state":"uploaded","size":22807552,"digest":"sha256:bc8fe1519c5c7325216366e9e6e0b687753e1200e518fcc842e3ed403ee5146e","download_count":26,"created_at":"2026-10-08T10:51:07Z","updated_at":"2026-10-08T10:51:08Z"}],"body":"## [0.39.4](https://github.com/grafana/tanka/compare/v0.39.3...v0.39.4) (2026-10-08)\n\n\n### \ud83d\udc1b Bug Fixes\n\n* **deps:** bump undici to 8.11.2 in docs ([#2307](https://github.com/grafana/tanka/issues/2307)) ([bb73008](https://github.com/grafana/tanka/commit/bb7300895a654f8fd732b2f544852c0cc5725991))\n* **deps:** update docs ([#2295](https://github.com/grafana/tanka/issues/2295)) ([df781d3](https://github.com/grafana/tanka/commit/df781d3fc322089ee3a81d66364290328a823af2))\n* **deps:** update module github.com/vektah/gqlparser/v2 to v2.5.59 ([#2302](https://github.com/grafana/tanka/issues/2302)) ([3a7d6cd](https://github.com/grafana/tanka/commit/3a7d6cd89d4bfa7193b678813fa57a7b357fce63))\n* **renovate:** use github-releases datasource for helm ([#2304](https://github.com/grafana/tanka/issues/2304)) ([1c06859](https://github.com/grafana/tanka/commit/1c06859f30216e62875f04ca3d7cf02b9672a1b1))\n\n\n### \ud83d\udd27 Miscellaneous Chores\n\n* **deps:** update dependency helm to v3.22.0 ([#2305](https://github.com/grafana/tanka/issues/2305)) ([780889d](https://github.com/grafana/tanka/commit/780889da03cfff70a155e3ec3e3a700af193940a))\n* **deps:** update module github.com/grpc-ecosystem/grpc-gateway/v2 to v2.31.0 ([#2303](https://github.com/grafana/tanka/issues/2303)) ([69af885](https://github.com/grafana/tanka/commit/69af8856ed8b7ee69d022917d8e45b8451812f16))\n* **deps:** update module github.com/huandu/xstrings to v1.6.2 ([#2300](https://github.com/grafana/tanka/issues/2300)) ([8030417](https://github.com/grafana/tanka/commit/8030417ffc6e49a36eaa175e5185835e05bef574))"}

@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.38.0"
   latestRelease: "v1.38.0"
   latestPrerelease: "v0.0.1-beta.2"
-  collectedAt: 2026-10-12T07:20:39Z
+  collectedAt: 2026-10-13T08:21:16Z
 timeline:
   created: 2016-06-27
   lastCommit: 2026-09-30
@@ -15,11 +15,11 @@ timeline:
   lastRelease: 2026-01-15
   lastPrerelease: 2016-08-05
 popularity:
-  star: 10637
+  star: 10638
   watcher: 128
   fork: 819
   release: 54
-  contributor: 728
+  contributor: 729
   pullRequest: 1294
   issue: 841
 language:
@@ -30,7 +30,7 @@ language:
 totalBytes: 555310
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 0
     mergedPR: 4
     openPR: 6
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 5
   last60d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 0
     mergedPR: 4
     openPR: 11
@@ -46,7 +46,7 @@ recent:
     openIssue: 0
     commit: 6
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 0
     mergedPR: 4
     openPR: 11
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 6
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 0
     mergedPR: 6
     openPR: 11
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 7
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 1
     mergedPR: 18
     openPR: 11
@@ -70,7 +70,7 @@ recent:
     openIssue: 2
     commit: 21
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 4
     mergedPR: 45
     openPR: 11
@@ -86,7 +86,7 @@ total:
   commit: 1818
 ---
 path: /home/runner/.x-repo/github.com/kubernetes/kompose
-collectedAt: 2026-10-12T07:20:41Z
+collectedAt: 2026-10-13T08:21:20Z
 loc:
   Json:
     code: 29471
@@ -169,20 +169,19 @@ total:
   blanks: 5473
   files: 500
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/kubernetes/kompose
   commit: 59af0f0e641e3a4e4b4c7696dc65acf5c8c8df77
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 5.4
 checks:
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 6
+    reason: 8 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 6
+    details: null
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
@@ -190,10 +189,6 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 6
-    reason: 8 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 6
     details: null
   - name: Security-Policy
     score: 10
@@ -203,6 +198,11 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -219,17 +219,17 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -257,15 +257,15 @@ checks:
       - 'Warn: containerImage not pinned by hash: examples/web/Dockerfile:1: pin your Docker image by updating golang:1.21.2 to golang:1.21.2@sha256:e9ebfe932adeff65af5338236f0b0604c86b143c1bff3e1d0551d8f6196ab5c5'
       - 'Warn: containerImage not pinned by hash: script/test/fixtures/buildargs/build/Dockerfile:1: pin your Docker image by updating busybox to busybox@sha256:fd7dc98638c8e305f4dc34e979f1c0fdfdcaeb0fbf8fcff77ae834b6da3d7e6e'
       - 'Warn: containerImage not pinned by hash: script/test/fixtures/buildconfig/build/Dockerfile:1: pin your Docker image by updating busybox to busybox@sha256:fd7dc98638c8e305f4dc34e979f1c0fdfdcaeb0fbf8fcff77ae834b6da3d7e6e'
-      - 'Warn: containerImage not pinned by hash: script/test/fixtures/nginx-node-redis/nginx/Dockerfile:2: pin your Docker image by updating nginx to nginx@sha256:abe47724e466aeab9a345d8e46a221c2fa8953c7848bb4a3bd9976a7199f8cf2'
+      - 'Warn: containerImage not pinned by hash: script/test/fixtures/nginx-node-redis/nginx/Dockerfile:2: pin your Docker image by updating nginx to nginx@sha256:f9ea18bfa4fad859e1ed38259d711da7ccad2c3516e875cec3351a57c859f571'
       - 'Warn: containerImage not pinned by hash: script/test/fixtures/nginx-node-redis/node/Dockerfile:1: pin your Docker image by updating centos:7 to centos:7@sha256:be65f488b7764ad3638f236b7b515b3678369a5124c47b8d32916d6487418ea4'
       - 'Warn: containerImage not pinned by hash: script/test_in_container/Dockerfile:18'
       - 'Warn: npmCommand not pinned by hash: script/test/fixtures/nginx-node-redis/node/Dockerfile:5'
       - 'Warn: npmCommand not pinned by hash: script/test/fixtures/nginx-node-redis/node/Dockerfile:10'
       - 'Info:   9 out of   9 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   0 out of   8 containerImage dependencies pinned'
       - 'Info:   0 out of   2 npmCommand dependencies pinned'
       - 'Info:   2 out of   2 goCommand dependencies pinned'
-      - 'Info:   0 out of   8 containerImage dependencies pinned'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

@@ -7,7 +7,7 @@ about:
   latestVersion: "mosh-1.4.0"
   latestRelease: "mosh-1.4.0"
   latestPrerelease: "mosh-1.3.2.95rc2"
-  collectedAt: 2026-10-12T05:55:02Z
+  collectedAt: 2026-10-13T06:51:56Z
 timeline:
   created: 2011-01-09
   lastCommit: 2026-03-22
@@ -34,7 +34,7 @@ language:
 totalBytes: 764627
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 0
     mergedPR: 0
     openPR: 0
@@ -42,7 +42,7 @@ recent:
     openIssue: 3
     commit: 0
   last60d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 0
     mergedPR: 0
     openPR: 5
@@ -50,7 +50,7 @@ recent:
     openIssue: 3
     commit: 0
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 0
     mergedPR: 0
     openPR: 7
@@ -58,7 +58,7 @@ recent:
     openIssue: 4
     commit: 0
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 0
     mergedPR: 0
     openPR: 9
@@ -66,7 +66,7 @@ recent:
     openIssue: 7
     commit: 0
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 0
     mergedPR: 8
     openPR: 18
@@ -74,7 +74,7 @@ recent:
     openIssue: 11
     commit: 18
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 0
     mergedPR: 8
     openPR: 21
@@ -90,7 +90,7 @@ total:
   commit: 1471
 ---
 path: /home/runner/.x-repo/github.com/mobile-shell/mosh
-collectedAt: 2026-10-12T05:55:03Z
+collectedAt: 2026-10-13T06:51:57Z
 loc:
   Cpp:
     code: 8401
@@ -158,18 +158,22 @@ total:
   blanks: 3032
   files: 134
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/mobile-shell/mosh
   commit: decd9b705eb81626f694335b8d5940538beb06da
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.2
 checks:
   - name: Code-Review
     score: 7
     reason: Found 12/16 approved changesets -- score normalized to 7
+    details: null
+  - name: Maintained
+    score: 4
+    reason: 0 commit(s) and 5 issue activity found in the last 90 days -- score normalized to 4
     details: null
   - name: Dangerous-Workflow
     score: 10
@@ -180,10 +184,6 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
-    score: 4
-    reason: 0 commit(s) and 5 issue activity found in the last 90 days -- score normalized to 4
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -208,10 +208,10 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cifuzz.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/mobile-shell/mosh/cifuzz.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/clang-format.yml:10: update your workflow using https://app.stepsecurity.io/secureworkflow/mobile-shell/mosh/clang-format.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/clang-format.yml:11: update your workflow using https://app.stepsecurity.io/secureworkflow/mobile-shell/mosh/clang-format.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:15: update your workflow using https://app.stepsecurity.io/secureworkflow/mobile-shell/mosh/release.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/mobile-shell/mosh/release.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:51: update your workflow using https://app.stepsecurity.io/secureworkflow/mobile-shell/mosh/release.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:74: update your workflow using https://app.stepsecurity.io/secureworkflow/mobile-shell/mosh/release.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:15: update your workflow using https://app.stepsecurity.io/secureworkflow/mobile-shell/mosh/release.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/mobile-shell/mosh/release.yml/master?enable=pin'
       - 'Info:   0 out of   7 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   1 out of   4 third-party GitHubAction dependencies pinned'
   - name: CII-Best-Practices
@@ -241,6 +241,11 @@ checks:
     details:
       - 'Info: project has a license file: COPYING:0'
       - 'Info: FSF or OSI recognized license: GNU General Public License v3.0: COPYING:0'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -255,11 +260,6 @@ checks:
       - 'Warn: release artifact mosh-1.3.2.95rc1 does not have provenance: https://api.github.com/repos/mobile-shell/mosh/releases/73706426'
       - 'Warn: release artifact mosh-1.3.2 does not have provenance: https://api.github.com/repos/mobile-shell/mosh/releases/7131587'
       - 'Warn: release artifact mosh-1.3.1-rc3 does not have provenance: https://api.github.com/repos/mobile-shell/mosh/releases/7103040'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

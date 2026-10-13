@@ -7,7 +7,7 @@ about:
   latestVersion: "v6.2.11"
   latestRelease: "v6.2.11"
   latestPrerelease: ""
-  collectedAt: 2026-10-12T06:49:41Z
+  collectedAt: 2026-10-13T07:39:46Z
 timeline:
   created: 2017-08-13
   lastCommit: 2023-03-15
@@ -17,7 +17,7 @@ timeline:
 popularity:
   star: 5929
   watcher: 53
-  fork: 273
+  fork: 274
   release: 62
   contributor: 50
   pullRequest: 175
@@ -32,7 +32,7 @@ language:
 totalBytes: 141146
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 0
     mergedPR: 0
     openPR: 0
@@ -40,7 +40,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 0
     mergedPR: 0
     openPR: 0
@@ -48,7 +48,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 0
     mergedPR: 0
     openPR: 0
@@ -56,7 +56,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 0
     mergedPR: 0
     openPR: 0
@@ -64,7 +64,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -72,7 +72,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 0
     mergedPR: 0
     openPR: 3
@@ -88,7 +88,7 @@ total:
   commit: 539
 ---
 path: /home/runner/.x-repo/github.com/jondot/hygen
-collectedAt: 2026-10-12T06:49:43Z
+collectedAt: 2026-10-13T07:39:48Z
 loc:
   JavaScript:
     code: 2932
@@ -131,23 +131,15 @@ total:
   blanks: 1155
   files: 186
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/jondot/hygen
   commit: 26f76d8dede565b2bf38d0b9e9f3009ee2c8f9ae
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 2.8
 checks:
-  - name: Code-Review
-    score: 3
-    reason: Found 9/25 approved changesets -- score normalized to 3
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
@@ -160,6 +152,14 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/docs.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Code-Review
+    score: 3
+    reason: Found 9/25 approved changesets -- score normalized to 3
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -191,6 +191,11 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
@@ -202,6 +207,11 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -216,20 +226,10 @@ checks:
       - 'Warn: release artifact v6.2.9 does not have provenance: https://api.github.com/repos/jondot/hygen/releases/76308776'
       - 'Warn: release artifact v6.2.0 does not have provenance: https://api.github.com/repos/jondot/hygen/releases/60773003'
       - 'Warn: release artifact v6.1.5 does not have provenance: https://api.github.com/repos/jondot/hygen/releases/60622989'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 14 are checked with a SAST tool'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
 ---
-{"id":76459550,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBfhXy84Ejq4e","tag_name":"v6.2.11","target_commitish":"master","name":"v6.2.11","draft":false,"immutable":false,"prerelease":false,"created_at":"2022-09-07T06:51:45Z","updated_at":"2022-09-07T08:16:47Z","published_at":"2022-09-07T08:16:43Z","assets":[{"id":77106595,"node_id":"RA_kwDOBfhXy84EmI2j","name":"hygen.linux.v6.2.11.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":19635346,"digest":null,"download_count":8851,"created_at":"2022-09-07T08:16:44Z","updated_at":"2022-09-07T08:16:46Z"},{"id":77106597,"node_id":"RA_kwDOBfhXy84EmI2l","name":"hygen.macos.v6.2.11.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":19699523,"digest":null,"download_count":48530,"created_at":"2022-09-07T08:16:44Z","updated_at":"2022-09-07T08:16:47Z"},{"id":77106596,"node_id":"RA_kwDOBfhXy84EmI2k","name":"hygen.win.exe.v6.2.11.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":16337749,"digest":null,"download_count":551,"created_at":"2022-09-07T08:16:44Z","updated_at":"2022-09-07T08:16:45Z"}],"body":""}
+{"id":76459550,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBfhXy84Ejq4e","tag_name":"v6.2.11","target_commitish":"master","name":"v6.2.11","draft":false,"immutable":false,"prerelease":false,"created_at":"2022-09-07T06:51:45Z","updated_at":"2022-09-07T08:16:47Z","published_at":"2022-09-07T08:16:43Z","assets":[{"id":77106595,"node_id":"RA_kwDOBfhXy84EmI2j","name":"hygen.linux.v6.2.11.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":19635346,"digest":null,"download_count":8869,"created_at":"2022-09-07T08:16:44Z","updated_at":"2022-09-07T08:16:46Z"},{"id":77106597,"node_id":"RA_kwDOBfhXy84EmI2l","name":"hygen.macos.v6.2.11.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":19699523,"digest":null,"download_count":48605,"created_at":"2022-09-07T08:16:44Z","updated_at":"2022-09-07T08:16:47Z"},{"id":77106596,"node_id":"RA_kwDOBfhXy84EmI2k","name":"hygen.win.exe.v6.2.11.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":16337749,"digest":null,"download_count":552,"created_at":"2022-09-07T08:16:44Z","updated_at":"2022-09-07T08:16:45Z"}],"body":""}

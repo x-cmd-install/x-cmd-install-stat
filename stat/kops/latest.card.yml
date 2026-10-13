@@ -2,24 +2,24 @@ about:
   description: "Kubernetes Operations (kOps) - Production Grade k8s Installation, Upgrades and Management"
   license: Apache-2.0
   homepage: https://kops.sigs.k8s.io/
-  head: 991af3a
+  head: 438a07d
   archived: false
   latestVersion: "v1.37.0-beta.1"
   latestRelease: "v1.36.2"
   latestPrerelease: "v1.37.0-beta.1"
-  collectedAt: 2026-10-12T06:50:40Z
+  collectedAt: 2026-10-13T07:33:03Z
 timeline:
   created: 2016-06-27
-  lastCommit: 2026-10-11
+  lastCommit: 2026-10-12
   lastVersion: 2026-08-29
   lastRelease: 2026-08-08
   lastPrerelease: 2026-08-29
 popularity:
-  star: 16685
+  star: 16688
   watcher: 302
-  fork: 4719
+  fork: 4718
   release: 239
-  contributor: 1489
+  contributor: 1490
   pullRequest: 13318
   issue: 5359
 language:
@@ -34,63 +34,63 @@ language:
 totalBytes: 13709392
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 0
-    mergedPR: 31
-    openPR: 12
+    mergedPR: 34
+    openPR: 9
     closedIssue: 3
     openIssue: 1
-    commit: 70
+    commit: 72
   last60d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 1
-    mergedPR: 126
-    openPR: 18
+    mergedPR: 123
+    openPR: 15
     closedIssue: 6
     openIssue: 5
-    commit: 245
+    commit: 247
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 6
     mergedPR: 197
-    openPR: 26
+    openPR: 23
     closedIssue: 9
     openIssue: 6
-    commit: 464
+    commit: 466
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 10
-    mergedPR: 516
-    openPR: 40
+    mergedPR: 517
+    openPR: 37
     closedIssue: 27
     openIssue: 10
-    commit: 1077
+    commit: 1079
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 18
-    mergedPR: 917
-    openPR: 48
+    mergedPR: 919
+    openPR: 45
     closedIssue: 74
     openIssue: 16
-    commit: 1850
+    commit: 1852
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 33
-    mergedPR: 1392
-    openPR: 50
-    closedIssue: 185
+    mergedPR: 1395
+    openPR: 47
+    closedIssue: 184
     openIssue: 20
     commit: 2754
 total:
   release: 239
-  mergedPR: 11676
-  openPR: 50
+  mergedPR: 11679
+  openPR: 47
   closedIssue: 5274
   openIssue: 85
-  commit: 24525
+  commit: 24527
 ---
 path: /home/runner/.x-repo/github.com/kubernetes/kops
-collectedAt: 2026-10-12T06:52:15Z
+collectedAt: 2026-10-13T07:34:02Z
 loc:
   Go:
     code: 3271542
@@ -213,32 +213,28 @@ total:
   blanks: 528931
   files: 14718
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/kubernetes/kops
-  commit: f44da9e96b8e820d0381cb0e39e669e9648d035e
+  commit: 438a07d72a585671c5a2f7a60950fa6527599279
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 6.9
 checks:
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
     details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 13 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -247,6 +243,10 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 13 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Token-Permissions
     score: 9
     reason: detected GitHub workflow tokens with excessive permissions
@@ -279,6 +279,19 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Pinned-Dependencies
+    score: 7
+    reason: dependency not pinned by hash detected -- score normalized to 7
+    details:
+      - 'Warn: containerImage not pinned by hash: hooks/nvidia-bootstrap/image/Dockerfile:15: pin your Docker image by updating debian:jessie to debian:jessie@sha256:32ad5050caffb2c7e969dac873bce2c370015c2256ff984b70c1c08b3a2816a0'
+      - 'Warn: containerImage not pinned by hash: hooks/nvidia-device-plugin/image/Dockerfile:15: pin your Docker image by updating debian:stretch-slim to debian:stretch-slim@sha256:abaa313c7e1dfe16069a1a42fa254014780f165d4fd084844602edbe29915e70'
+      - 'Warn: containerImage not pinned by hash: hooks/prepull-images/image/Dockerfile:15: pin your Docker image by updating alpine:3.6 to alpine:3.6@sha256:66790a2b79e1ea3e1dabac43990c54aca5d1ddf268d9a5a0285e4167c8b24475'
+      - 'Warn: containerImage not pinned by hash: images/mkdocs/Dockerfile:15: pin your Docker image by updating alpine:3.22 to alpine:3.22@sha256:5291449c3df73caf6ed85e649dec1b9e818b39a5d8c871e97afc13e9cd5e8fa8'
+      - 'Warn: pipCommand not pinned by hash: images/mkdocs/Dockerfile:17-30'
+      - 'Warn: pipCommand not pinned by hash: images/mkdocs/Dockerfile:33'
+      - 'Info:  17 out of  17 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   0 out of   4 containerImage dependencies pinned'
+      - 'Info:   0 out of   2 pipCommand dependencies pinned'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -293,26 +306,6 @@ checks:
       - 'Warn: release artifact v1.36.1 does not have provenance: https://api.github.com/repos/kubernetes/kops/releases/361043997'
       - 'Warn: release artifact v1.37.0-alpha.1 does not have provenance: https://api.github.com/repos/kubernetes/kops/releases/354460487'
       - 'Warn: release artifact v1.36.0 does not have provenance: https://api.github.com/repos/kubernetes/kops/releases/354459860'
-  - name: Pinned-Dependencies
-    score: 6
-    reason: dependency not pinned by hash detected -- score normalized to 6
-    details:
-      - 'Info: Possibly incomplete results: error parsing shell code: "foo(" must be followed by ): vendor/sigs.k8s.io/controller-runtime/Makefile:0'
-      - 'Warn: containerImage not pinned by hash: hooks/nvidia-bootstrap/image/Dockerfile:15: pin your Docker image by updating debian:jessie to debian:jessie@sha256:32ad5050caffb2c7e969dac873bce2c370015c2256ff984b70c1c08b3a2816a0'
-      - 'Warn: containerImage not pinned by hash: hooks/nvidia-device-plugin/image/Dockerfile:15: pin your Docker image by updating debian:stretch-slim to debian:stretch-slim@sha256:abaa313c7e1dfe16069a1a42fa254014780f165d4fd084844602edbe29915e70'
-      - 'Warn: containerImage not pinned by hash: hooks/prepull-images/image/Dockerfile:15: pin your Docker image by updating alpine:3.6 to alpine:3.6@sha256:66790a2b79e1ea3e1dabac43990c54aca5d1ddf268d9a5a0285e4167c8b24475'
-      - 'Warn: containerImage not pinned by hash: images/mkdocs/Dockerfile:15: pin your Docker image by updating alpine:3.22 to alpine:3.22@sha256:5291449c3df73caf6ed85e649dec1b9e818b39a5d8c871e97afc13e9cd5e8fa8'
-      - 'Warn: pipCommand not pinned by hash: images/mkdocs/Dockerfile:17-30'
-      - 'Warn: pipCommand not pinned by hash: images/mkdocs/Dockerfile:33'
-      - 'Warn: goCommand not pinned by hash: hack/verify-golangci-lint.sh:33'
-      - 'Warn: goCommand not pinned by hash: tests/e2e/scenarios/aws-ebs-csi/test.sh:44'
-      - 'Warn: goCommand not pinned by hash: tests/e2e/scenarios/aws-lb-controller/test.sh:52'
-      - 'Warn: goCommand not pinned by hash: tests/e2e/scenarios/metrics-server/test.sh:27'
-      - 'Warn: goCommand not pinned by hash: vendor/github.com/json-iterator/go/build.sh:10'
-      - 'Info:  17 out of  17 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   0 out of   5 goCommand dependencies pinned'
-      - 'Info:   0 out of   4 containerImage dependencies pinned'
-      - 'Info:   0 out of   2 pipCommand dependencies pinned'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

@@ -7,7 +7,7 @@ about:
   latestVersion: "7.0.0"
   latestRelease: "7.0.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-12T07:08:02Z
+  collectedAt: 2026-10-13T08:03:19Z
 timeline:
   created: 2013-08-13
   lastCommit: 2026-08-07
@@ -27,7 +27,7 @@ language:
 totalBytes: 210799
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 0
     mergedPR: 0
     openPR: 4
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 0
     mergedPR: 0
     openPR: 8
@@ -43,7 +43,7 @@ recent:
     openIssue: 2
     commit: 0
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 1
     mergedPR: 7
     openPR: 9
@@ -51,7 +51,7 @@ recent:
     openIssue: 3
     commit: 8
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 1
     mergedPR: 15
     openPR: 10
@@ -59,7 +59,7 @@ recent:
     openIssue: 3
     commit: 14
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 1
     mergedPR: 41
     openPR: 10
@@ -67,9 +67,9 @@ recent:
     openIssue: 4
     commit: 41
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 5
-    mergedPR: 99
+    mergedPR: 98
     openPR: 16
     closedIssue: 30
     openIssue: 7
@@ -83,7 +83,7 @@ total:
   commit: 1387
 ---
 path: /home/runner/.x-repo/github.com/pypa/twine
-collectedAt: 2026-10-12T07:08:02Z
+collectedAt: 2026-10-13T08:03:20Z
 loc:
   Python:
     code: 4909
@@ -116,22 +116,22 @@ total:
   blanks: 1707
   files: 55
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/pypa/twine
   commit: f536ac5d0c77a24a997854328e64644f576b4992
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 7.8
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Maintained
     score: 10
@@ -157,11 +157,11 @@ checks:
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
     details:
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/main.yml:98'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/main.yml:134'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/main.yml:36'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/main.yml:64'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/main.yml:84'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/main.yml:98'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/release.yml:31'
       - 'Info:  18 out of  18 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   2 out of   2 third-party GitHubAction dependencies pinned'
@@ -181,6 +181,11 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:45'
   - name: Signed-Releases
     score: 10
     reason: 4 out of the last 4 releases have a total of 4 signed artifacts.
@@ -189,11 +194,6 @@ checks:
       - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/pypa/twine/releases/tag/6.1.0'
       - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/pypa/twine/releases/tag/6.0.1'
       - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/pypa/twine/releases/tag/6.0.0'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:45'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'

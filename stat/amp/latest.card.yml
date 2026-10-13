@@ -7,7 +7,7 @@ about:
   latestVersion: "0.7.1"
   latestRelease: "0.7.1"
   latestPrerelease: ""
-  collectedAt: 2026-10-12T07:01:21Z
+  collectedAt: 2026-10-13T07:49:50Z
 timeline:
   created: 2015-02-01
   lastCommit: 2026-06-10
@@ -30,7 +30,7 @@ language:
 totalBytes: 508368
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 0
     mergedPR: 0
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 0
     mergedPR: 0
     openPR: 1
@@ -46,7 +46,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 0
     mergedPR: 0
     openPR: 1
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 0
     mergedPR: 2
     openPR: 1
@@ -62,7 +62,7 @@ recent:
     openIssue: 1
     commit: 6
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 0
     mergedPR: 5
     openPR: 1
@@ -70,7 +70,7 @@ recent:
     openIssue: 1
     commit: 31
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 0
     mergedPR: 7
     openPR: 1
@@ -86,7 +86,7 @@ total:
   commit: 1297
 ---
 path: /home/runner/.x-repo/github.com/jmacdonald/amp
-collectedAt: 2026-10-12T07:01:23Z
+collectedAt: 2026-10-13T07:49:51Z
 loc:
   Rust:
     code: 12808
@@ -134,31 +134,15 @@ total:
   blanks: 2508
   files: 125
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/jmacdonald/amp
   commit: df97a3c01e6021a464af4204dd64d10eb205f149
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 2.5
 checks:
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
-      - 'Info: no jobLevel write permissions found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Code-Review
     score: 0
     reason: Found 0/27 approved changesets -- score normalized to 0
@@ -167,19 +151,30 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
+      - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -188,6 +183,11 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 9
     reason: license file detected
@@ -207,8 +207,8 @@ checks:
       - 'Warn: pipCommand not pinned by hash: documentation/Dockerfile:3'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   2 containerImage dependencies pinned'
       - 'Info:   0 out of   1 pipCommand dependencies pinned'
+      - 'Info:   0 out of   2 containerImage dependencies pinned'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.

@@ -7,7 +7,7 @@ about:
   latestVersion: "v11.0.0"
   latestRelease: "v11.0.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-12T06:56:09Z
+  collectedAt: 2026-10-13T07:46:09Z
 timeline:
   created: 2013-12-19
   lastCommit: 2026-08-07
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-06-06
   lastPrerelease: 
 popularity:
-  star: 1554
+  star: 1555
   watcher: 18
   fork: 147
   release: 18
@@ -28,7 +28,7 @@ language:
 totalBytes: 50147
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 0
     mergedPR: 0
     openPR: 3
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 0
     mergedPR: 0
     openPR: 5
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 1
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 1
     mergedPR: 11
     openPR: 5
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 38
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 1
     mergedPR: 11
     openPR: 5
@@ -68,11 +68,11 @@ recent:
     openIssue: 0
     commit: 38
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 2
     mergedPR: 19
     openPR: 5
-    closedIssue: 11
+    closedIssue: 10
     openIssue: 0
     commit: 49
 total:
@@ -84,7 +84,7 @@ total:
   commit: 271
 ---
 path: /home/runner/.x-repo/github.com/afc163/fanyi
-collectedAt: 2026-10-12T06:56:10Z
+collectedAt: 2026-10-13T07:46:10Z
 loc:
   JavaScript:
     code: 881
@@ -122,15 +122,28 @@ total:
   blanks: 261
   files: 22
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/afc163/fanyi
   commit: c853e6bc9bedef2eb92d948816118f311cd4cacd
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.6
 checks:
+  - name: Maintained
+    score: 0
+    reason: 1 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Code-Review
     score: 1
     reason: Found 1/6 approved changesets -- score normalized to 1
@@ -139,10 +152,13 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Maintained
-    score: 0
-    reason: 1 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
+  - name: Token-Permissions
+    score: 10
+    reason: GitHub workflow tokens follow principle of least privilege
+    details:
+      - 'Info: found token with ''none'' permissions: .github/workflows/echo.yml:1'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yml:10'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -153,22 +169,6 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:28: update your workflow using https://app.stepsecurity.io/secureworkflow/afc163/fanyi/test.yml/main?enable=pin'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
-  - name: Token-Permissions
-    score: 10
-    reason: GitHub workflow tokens follow principle of least privilege
-    details:
-      - 'Info: found token with ''none'' permissions: .github/workflows/echo.yml:1'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yml:10'
-      - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -184,15 +184,15 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''main'''
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Security-Policy
     score: 0
     reason: security policy file not detected

@@ -7,7 +7,7 @@ about:
   latestVersion: "0.11.132"
   latestRelease: "0.11.132"
   latestPrerelease: "0.11.78"
-  collectedAt: 2026-10-12T06:24:47Z
+  collectedAt: 2026-10-13T07:11:59Z
 timeline:
   created: 2020-02-26
   lastCommit: 2026-10-07
@@ -29,7 +29,7 @@ language:
 totalBytes: 1085940
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 6
     mergedPR: 5
     openPR: 3
@@ -37,15 +37,15 @@ recent:
     openIssue: 1
     commit: 17
   last60d:
-    since: 2026-08-13
-    release: 15
-    mergedPR: 15
+    since: 2026-08-14
+    release: 14
+    mergedPR: 13
     openPR: 3
     closedIssue: 0
     openIssue: 2
     commit: 46
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 19
     mergedPR: 19
     openPR: 3
@@ -53,7 +53,7 @@ recent:
     openIssue: 3
     commit: 59
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 39
     mergedPR: 25
     openPR: 3
@@ -61,15 +61,15 @@ recent:
     openIssue: 4
     commit: 91
   last360d:
-    since: 2025-10-17
-    release: 82
+    since: 2025-10-18
+    release: 81
     mergedPR: 40
     openPR: 3
     closedIssue: 7
     openIssue: 7
     commit: 176
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 100
     mergedPR: 68
     openPR: 3
@@ -85,7 +85,7 @@ total:
   commit: 1234
 ---
 path: /home/runner/.x-repo/github.com/alexellis/arkade
-collectedAt: 2026-10-12T06:24:49Z
+collectedAt: 2026-10-13T07:12:02Z
 loc:
   Go:
     code: 331108
@@ -143,20 +143,19 @@ total:
   blanks: 47437
   files: 1281
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/alexellis/arkade
-  commit: 90173cc580b31cd46ec01d807b37dc6f9b9fb55f
+  commit: 8b8a849ed4f9b54952f2a3b27168648f8fea31f2
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.8
 checks:
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 0
+    reason: Found 0/17 approved changesets -- score normalized to 0
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
@@ -165,6 +164,11 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -173,17 +177,13 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/e2e-url-checker.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/publish.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Code-Review
+  - name: CII-Best-Practices
     score: 0
-    reason: Found 0/19 approved changesets -- score normalized to 0
+    reason: no effort to earn an OpenSSF best practices badge detected
     details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
-    details: null
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
     details: null
   - name: Pinned-Dependencies
     score: 0
@@ -198,17 +198,17 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/publish.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/alexellis/arkade/publish.yml/master?enable=pin'
       - 'Info:   0 out of   6 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
@@ -225,19 +225,19 @@ checks:
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
+      - 'Warn: release artifact 0.11.132 not signed: https://api.github.com/repos/alexellis/arkade/releases/405996452'
+      - 'Warn: release artifact 0.11.131 not signed: https://api.github.com/repos/alexellis/arkade/releases/404523974'
+      - 'Warn: release artifact 0.11.130 not signed: https://api.github.com/repos/alexellis/arkade/releases/404497264'
+      - 'Warn: release artifact 0.11.129 not signed: https://api.github.com/repos/alexellis/arkade/releases/404456812'
       - 'Warn: release artifact 0.11.128 not signed: https://api.github.com/repos/alexellis/arkade/releases/402429409'
-      - 'Warn: release artifact 0.11.127 not signed: https://api.github.com/repos/alexellis/arkade/releases/402408269'
-      - 'Warn: release artifact 0.11.126 not signed: https://api.github.com/repos/alexellis/arkade/releases/378911265'
-      - 'Warn: release artifact 0.11.125 not signed: https://api.github.com/repos/alexellis/arkade/releases/378500798'
-      - 'Warn: release artifact 0.11.124 not signed: https://api.github.com/repos/alexellis/arkade/releases/374862868'
+      - 'Warn: release artifact 0.11.132 does not have provenance: https://api.github.com/repos/alexellis/arkade/releases/405996452'
+      - 'Warn: release artifact 0.11.131 does not have provenance: https://api.github.com/repos/alexellis/arkade/releases/404523974'
+      - 'Warn: release artifact 0.11.130 does not have provenance: https://api.github.com/repos/alexellis/arkade/releases/404497264'
+      - 'Warn: release artifact 0.11.129 does not have provenance: https://api.github.com/repos/alexellis/arkade/releases/404456812'
       - 'Warn: release artifact 0.11.128 does not have provenance: https://api.github.com/repos/alexellis/arkade/releases/402429409'
-      - 'Warn: release artifact 0.11.127 does not have provenance: https://api.github.com/repos/alexellis/arkade/releases/402408269'
-      - 'Warn: release artifact 0.11.126 does not have provenance: https://api.github.com/repos/alexellis/arkade/releases/378911265'
-      - 'Warn: release artifact 0.11.125 does not have provenance: https://api.github.com/repos/alexellis/arkade/releases/378500798'
-      - 'Warn: release artifact 0.11.124 does not have provenance: https://api.github.com/repos/alexellis/arkade/releases/374862868'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
-      - 'Warn: 0 commits out of 18 are checked with a SAST tool'
+      - 'Warn: 0 commits out of 23 are checked with a SAST tool'
 ---

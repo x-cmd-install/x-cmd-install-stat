@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.4.39"
   latestRelease: "v1.4.39"
   latestPrerelease: "v1.4.0a2"
-  collectedAt: 2026-10-12T06:29:12Z
+  collectedAt: 2026-10-13T07:21:03Z
 timeline:
   created: 2019-04-02
   lastCommit: 2026-09-07
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-05-07
   lastPrerelease: 2025-02-14
 popularity:
-  star: 8897
+  star: 8899
   watcher: 85
-  fork: 1040
+  fork: 1042
   release: 194
   contributor: 240
-  pullRequest: 4263
-  issue: 1173
+  pullRequest: 4266
+  issue: 1174
 language:
   Python: 2943336
   Shell: 48432
@@ -35,63 +35,63 @@ language:
 totalBytes: 3034420
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 0
     mergedPR: 0
-    openPR: 10
+    openPR: 12
     closedIssue: 2
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 0
     mergedPR: 4
-    openPR: 30
+    openPR: 33
     closedIssue: 2
     openIssue: 2
     commit: 6
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 0
     mergedPR: 6
-    openPR: 45
+    openPR: 48
     closedIssue: 2
     openIssue: 5
     commit: 6
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 1
     mergedPR: 10
-    openPR: 74
-    closedIssue: 2
+    openPR: 77
+    closedIssue: 3
     openIssue: 14
     commit: 12
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 13
     mergedPR: 76
-    openPR: 78
-    closedIssue: 19
+    openPR: 81
+    closedIssue: 20
     openIssue: 18
     commit: 81
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 53
-    mergedPR: 430
-    openPR: 78
-    closedIssue: 71
+    mergedPR: 424
+    openPR: 81
+    closedIssue: 72
     openIssue: 32
-    commit: 444
+    commit: 442
 total:
   release: 194
   mergedPR: 3636
-  openPR: 78
-  closedIssue: 1025
+  openPR: 81
+  closedIssue: 1026
   openIssue: 148
   commit: 3762
 ---
 path: /home/runner/.x-repo/github.com/bentoml/BentoML
-collectedAt: 2026-10-12T06:29:18Z
+collectedAt: 2026-10-13T07:21:09Z
 loc:
   Python:
     code: 71674
@@ -209,13 +209,13 @@ total:
   blanks: 18160
   files: 675
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/bentoml/BentoML
   commit: 517b343b81aeb0b01bbd908e58e53ad9c12ef7eb
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 6
 checks:
   - name: Code-Review
@@ -234,22 +234,22 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:17'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:18'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:17'
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/cleanup.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/codeql-analysis.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/cqa.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -269,14 +269,19 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:29'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -324,7 +329,7 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:35: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/release.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:40: update your workflow using https://app.stepsecurity.io/secureworkflow/bentoml/BentoML/release.yml/main?enable=pin'
       - 'Warn: containerImage not pinned by hash: .devcontainer/Dockerfile:3: pin your Docker image by updating python:3-bullseye to python:3-bullseye@sha256:f58f33e0563f2ba81c7afe6259cd912f0c33413da93c75cc3a70a941c17afa8c'
-      - 'Warn: containerImage not pinned by hash: tools/dev.Dockerfile:3: pin your Docker image by updating python:3.10-slim to python:3.10-slim@sha256:d8e262e069903a0b7790cd17a66d5343b2f04b9d9e19dc70f152c50fb511acfe'
+      - 'Warn: containerImage not pinned by hash: tools/dev.Dockerfile:3: pin your Docker image by updating python:3.10-slim to python:3.10-slim@sha256:6ff506466f8b1e981719b468cc0023b8ef000b983cdec0eafe119d01f379e31d'
       - 'Warn: containerImage not pinned by hash: tools/dev.Dockerfile:15'
       - 'Warn: containerImage not pinned by hash: tools/dev.Dockerfile:25'
       - 'Warn: containerImage not pinned by hash: tools/dev.Dockerfile:39'
@@ -339,14 +344,9 @@ checks:
       - 'Warn: downloadThenRun not pinned by hash: .devcontainer/lifecycle/post-start:9'
       - 'Info:   0 out of  29 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of  12 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
       - 'Info:   0 out of   9 containerImage dependencies pinned'
       - 'Info:   0 out of   4 pipCommand dependencies pinned'
-      - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:29'
   - name: SAST
     score: 9
     reason: SAST tool detected but not run on all commits

@@ -7,7 +7,7 @@ about:
   latestVersion: "release-1.37.0"
   latestRelease: "release-1.37.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-12T05:48:31Z
+  collectedAt: 2026-10-13T06:46:27Z
 timeline:
   created: 2010-11-27
   lastCommit: 2026-06-25
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2023-11-15
   lastPrerelease: 
 popularity:
-  star: 43059
+  star: 43080
   watcher: 739
-  fork: 3950
+  fork: 3951
   release: 24
   contributor: 64
   pullRequest: 403
@@ -32,7 +32,7 @@ language:
 totalBytes: 6015930
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 0
     mergedPR: 0
     openPR: 3
@@ -40,15 +40,15 @@ recent:
     openIssue: 3
     commit: 0
   last60d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 0
     mergedPR: 0
-    openPR: 4
+    openPR: 3
     closedIssue: 0
     openIssue: 22
     commit: 0
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 0
     mergedPR: 0
     openPR: 10
@@ -56,7 +56,7 @@ recent:
     openIssue: 26
     commit: 0
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 0
     mergedPR: 2
     openPR: 15
@@ -64,15 +64,15 @@ recent:
     openIssue: 31
     commit: 2
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 0
     mergedPR: 5
-    openPR: 19
+    openPR: 18
     closedIssue: 0
     openIssue: 48
     commit: 5
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 0
     mergedPR: 6
     openPR: 22
@@ -88,7 +88,7 @@ total:
   commit: 5447
 ---
 path: /home/runner/.x-repo/github.com/aria2/aria2
-collectedAt: 2026-10-12T05:48:40Z
+collectedAt: 2026-10-13T06:46:37Z
 loc:
   Cpp:
     code: 93732
@@ -181,15 +181,19 @@ total:
   blanks: 28188
   files: 1272
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/aria2/aria2
   commit: 9e7273583f83e881e3ec067b523ba88724088d2f
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.3
 checks:
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Code-Review
     score: 1
     reason: Found 1/8 approved changesets -- score normalized to 1
@@ -197,10 +201,6 @@ checks:
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -240,20 +240,6 @@ checks:
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
-  - name: Pinned-Dependencies
-    score: 0
-    reason: dependency not pinned by hash detected -- score normalized to 0
-    details:
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/android.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/aria2/aria2/android.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/android.yml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/aria2/aria2/android.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/android.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/aria2/aria2/android.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/aria2/aria2/build.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.android:13: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.mingw:12: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.raspberrypi:1: pin your Docker image by updating ubuntu:trusty to ubuntu:trusty@sha256:64483f3496c1373bfd55348e88694d1c4d0c9b660dee6bfef5e12f43b9933b30'
-      - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   3 containerImage dependencies pinned'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -273,6 +259,20 @@ checks:
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
+  - name: Pinned-Dependencies
+    score: 0
+    reason: dependency not pinned by hash detected -- score normalized to 0
+    details:
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/android.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/aria2/aria2/android.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/android.yml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/aria2/aria2/android.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/android.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/aria2/aria2/android.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/aria2/aria2/build.yml/master?enable=pin'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.android:13: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.mingw:12: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.raspberrypi:1: pin your Docker image by updating ubuntu:trusty to ubuntu:trusty@sha256:64483f3496c1373bfd55348e88694d1c4d0c9b660dee6bfef5e12f43b9933b30'
+      - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   3 containerImage dependencies pinned'
   - name: Packaging
     score: 10
     reason: packaging workflow detected

@@ -2,12 +2,12 @@ about:
   description: "AUR helper with minimal dependencies. Review PKGBUILDs all in once, next build them all without user interaction."
   license: GPL-3.0
   homepage: 
-  head: 2f78208
+  head: f047cd1
   archived: false
   latestVersion: "1.34"
   latestRelease: "1.34"
   latestPrerelease: ""
-  collectedAt: 2026-10-12T05:56:40Z
+  collectedAt: 2026-10-13T07:06:25Z
 timeline:
   created: 2018-01-29
   lastCommit: 2026-10-12
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-10
   lastPrerelease: 
 popularity:
-  star: 959
+  star: 960
   watcher: 18
   fork: 91
   release: 72
@@ -25,69 +25,69 @@ popularity:
 language:
   Python: 657874
   Shell: 35884
-  Makefile: 6105
+  Makefile: 6108
   Dockerfile: 5341
   Vim Script: 269
-totalBytes: 705473
+totalBytes: 705476
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 0
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 5
+    commit: 9
   last60d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 1
     mergedPR: 1
     openPR: 0
     closedIssue: 2
     openIssue: 0
-    commit: 32
+    commit: 36
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 1
     mergedPR: 2
     openPR: 0
     closedIssue: 4
     openIssue: 1
-    commit: 32
+    commit: 36
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 1
     mergedPR: 2
     openPR: 0
     closedIssue: 6
     openIssue: 1
-    commit: 32
+    commit: 36
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 3
     mergedPR: 6
     openPR: 0
     closedIssue: 12
     openIssue: 4
-    commit: 54
+    commit: 58
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 8
     mergedPR: 13
     openPR: 0
     closedIssue: 48
     openIssue: 11
-    commit: 157
+    commit: 161
 total:
   release: 72
   mergedPR: 195
   openPR: 0
   closedIssue: 624
   openIssue: 49
-  commit: 3171
+  commit: 3175
 ---
 path: /home/runner/.x-repo/github.com/actionless/pikaur
-collectedAt: 2026-10-12T05:56:42Z
+collectedAt: 2026-10-13T07:06:27Z
 loc:
   Python:
     code: 15778
@@ -110,7 +110,7 @@ loc:
     blanks: 42
     files: 2
   Makefile:
-    code: 166
+    code: 164
     comments: 38
     blanks: 36
     files: 1
@@ -130,32 +130,36 @@ loc:
     blanks: 152
     files: 2
 total:
-  code: 16945
+  code: 16943
   comments: 1116
   blanks: 2843
   files: 109
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/actionless/pikaur
-  commit: 892c5a5e1f74f4dbc865858138b3074c804fb11f
+  commit: f047cd16d7dcef9990e5b1094c1de3802f053923
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.4
 checks:
+  - name: Code-Review
+    score: 0
+    reason: Found 2/30 approved changesets -- score normalized to 0
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 0
-    reason: Found 2/30 approved changesets -- score normalized to 0
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Maintained
     score: 10
-    reason: 27 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Token-Permissions
     score: 0
@@ -164,10 +168,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/spam-remover.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/tests.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -189,6 +189,12 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: GNU General Public License v3.0: LICENSE:0'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -200,18 +206,12 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/tests.yml:56: update your workflow using https://app.stepsecurity.io/secureworkflow/actionless/pikaur/tests.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/tests.yml:58: update your workflow using https://app.stepsecurity.io/secureworkflow/actionless/pikaur/tests.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/tests.yml:61: update your workflow using https://app.stepsecurity.io/secureworkflow/actionless/pikaur/tests.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:3: pin your Docker image by updating archlinux:base-devel to archlinux:base-devel@sha256:996c3a1d6b0d87b01242f6fcd8cfa3ad3eece1a67ab5c8f108e20af1d7b97bdd'
-      - 'Warn: containerImage not pinned by hash: Dockerfile_export:3: pin your Docker image by updating archlinux:base-devel to archlinux:base-devel@sha256:996c3a1d6b0d87b01242f6fcd8cfa3ad3eece1a67ab5c8f108e20af1d7b97bdd'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:3: pin your Docker image by updating archlinux:base-devel to archlinux:base-devel@sha256:061679925e5d5028f2df9395d441ce6c4b9accf0157ff3486c06b6962e014ef1'
+      - 'Warn: containerImage not pinned by hash: Dockerfile_export:3: pin your Docker image by updating archlinux:base-devel to archlinux:base-devel@sha256:061679925e5d5028f2df9395d441ce6c4b9accf0157ff3486c06b6962e014ef1'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/tests.yml:70'
       - 'Info:   0 out of   7 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
       - 'Info:   0 out of   1 pipCommand dependencies pinned'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: GNU General Public License v3.0: LICENSE:0'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.

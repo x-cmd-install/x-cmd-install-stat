@@ -7,7 +7,7 @@ about:
   latestVersion: "2.6.0"
   latestRelease: "2.6.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-12T05:46:00Z
+  collectedAt: 2026-10-13T06:40:29Z
 timeline:
   created: 2025-04-12
   lastCommit: 2026-09-28
@@ -30,7 +30,7 @@ language:
 totalBytes: 212127
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 0
     mergedPR: 21
     openPR: 2
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 15
   last60d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 0
     mergedPR: 40
     openPR: 3
@@ -46,7 +46,7 @@ recent:
     openIssue: 0
     commit: 35
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 0
     mergedPR: 57
     openPR: 3
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 56
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 17
     mergedPR: 104
     openPR: 3
@@ -62,7 +62,7 @@ recent:
     openIssue: 2
     commit: 296
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 17
     mergedPR: 104
     openPR: 3
@@ -70,7 +70,7 @@ recent:
     openIssue: 2
     commit: 297
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 31
     mergedPR: 111
     openPR: 3
@@ -86,7 +86,7 @@ total:
   commit: 511
 ---
 path: /home/runner/.x-repo/github.com/lfaoro/ssm
-collectedAt: 2026-10-12T05:46:01Z
+collectedAt: 2026-10-13T06:40:30Z
 loc:
   Go:
     code: 6667
@@ -119,36 +119,15 @@ total:
   blanks: 1401
   files: 44
 ---
-date: "2026-10-05T16:28:53Z"
+date: "2026-10-12T17:03:37Z"
 repo:
   name: github.com/lfaoro/ssm
   commit: ea4be8c63ec1784367bb7dc66d689526017ec01a
 scorecard:
   version: v5.5.0
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
-score: 7.9
+score: 7.5
 checks:
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: SECURITY.md:1'
-      - 'Info: Found linked content: SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
-      - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Code-Review
-    score: 0
-    reason: Found 0/1 approved changesets -- score normalized to 0
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
@@ -157,6 +136,19 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Code-Review
+    score: 0
+    reason: Found 0/1 approved changesets -- score normalized to 0
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
@@ -172,11 +164,19 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/lint.yml:24: update your workflow using https://app.stepsecurity.io/secureworkflow/lfaoro/ssm/lint.yml/main?enable=pin'
       - 'Info:  12 out of  17 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   1 out of   5 third-party GitHubAction dependencies pinned'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
     details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: SECURITY.md:1'
+      - 'Info: Found linked content: SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
+      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -195,22 +195,36 @@ checks:
     reason: 'badge detected: Passing'
     details: null
   - name: Vulnerabilities
-    score: 8
-    reason: 2 existing vulnerabilities detected
+    score: 4
+    reason: 6 existing vulnerabilities detected
     details:
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5932'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6443'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6603'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6610'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6611'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6612'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6617'
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits
     details:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Info: all commits (29) are checked with a SAST tool'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -225,16 +239,6 @@ checks:
       - 'Warn: release artifact 2.5.0 does not have provenance: https://api.github.com/repos/lfaoro/ssm/releases/330455474'
       - 'Warn: release artifact 2.4.1 does not have provenance: https://api.github.com/repos/lfaoro/ssm/releases/330393482'
       - 'Warn: release artifact 2.4.0 does not have provenance: https://api.github.com/repos/lfaoro/ssm/releases/329795081'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Contributors
     score: 10
     reason: project has 3 contributing companies or organizations -- score normalized to 10

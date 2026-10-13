@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.2.1"
   latestRelease: "v3.2.1"
   latestPrerelease: "v3.0.0-rc.4"
-  collectedAt: 2026-10-12T04:56:00Z
+  collectedAt: 2026-10-13T05:57:28Z
 timeline:
   created: 2011-11-21
   lastCommit: 2026-08-14
@@ -31,7 +31,7 @@ language:
 totalBytes: 304982
 recent:
   last30d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 0
     mergedPR: 0
     openPR: 1
@@ -39,7 +39,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 0
     mergedPR: 0
     openPR: 3
@@ -47,7 +47,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-07-14
+    since: 2026-07-15
     release: 0
     mergedPR: 0
     openPR: 4
@@ -55,7 +55,7 @@ recent:
     openIssue: 1
     commit: 7
   last180d:
-    since: 2026-04-15
+    since: 2026-04-16
     release: 1
     mergedPR: 1
     openPR: 7
@@ -63,15 +63,15 @@ recent:
     openIssue: 2
     commit: 29
   last360d:
-    since: 2025-10-17
+    since: 2025-10-18
     release: 4
     mergedPR: 10
     openPR: 7
-    closedIssue: 8
+    closedIssue: 7
     openIssue: 4
     commit: 83
   last720d:
-    since: 2024-10-22
+    since: 2024-10-23
     release: 7
     mergedPR: 21
     openPR: 7
@@ -87,7 +87,7 @@ total:
   commit: 1713
 ---
 path: /home/runner/.x-repo/github.com/asciinema/asciinema
-collectedAt: 2026-10-12T04:56:01Z
+collectedAt: 2026-10-13T05:57:30Z
 loc:
   Rust:
     code: 7388
@@ -145,13 +145,13 @@ total:
   blanks: 1852
   files: 58
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/asciinema/asciinema
   commit: 77498061982889f68ba1f6e8b666dd8d13246250
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3
 checks:
   - name: Code-Review
@@ -161,10 +161,6 @@ checks:
   - name: Maintained
     score: 5
     reason: 7 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
     details: null
   - name: Dangerous-Workflow
     score: 10
@@ -182,6 +178,10 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:4'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -191,6 +191,12 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: GNU General Public License v3.0: LICENSE:0'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -198,21 +204,23 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/asciinema/asciinema/ci.yml/develop?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:24: update your workflow using https://app.stepsecurity.io/secureworkflow/asciinema/asciinema/ci.yml/develop?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:27: update your workflow using https://app.stepsecurity.io/secureworkflow/asciinema/asciinema/ci.yml/develop?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/asciinema/asciinema/release.yml/develop?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:56: update your workflow using https://app.stepsecurity.io/secureworkflow/asciinema/asciinema/release.yml/develop?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:59: update your workflow using https://app.stepsecurity.io/secureworkflow/asciinema/asciinema/release.yml/develop?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:65: update your workflow using https://app.stepsecurity.io/secureworkflow/asciinema/asciinema/release.yml/develop?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/asciinema/asciinema/release.yml/develop?enable=pin'
       - 'Warn: containerImage not pinned by hash: Dockerfile:2: pin your Docker image by updating rust:1.90.0-slim-trixie to rust:1.90.0-slim-trixie@sha256:7fa728f3678acf5980d5db70960cf8491aff9411976789086676bdf0c19db39e'
       - 'Warn: containerImage not pinned by hash: Dockerfile:18: pin your Docker image by updating debian:trixie-slim to debian:trixie-slim@sha256:a29215f6a35e51e22adffa17f89e9d2ef06214e64a2bad10d765c46aea49f11f'
       - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
-  - name: License
-    score: 10
-    reason: license file detected
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
     details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: GNU General Public License v3.0: LICENSE:0'
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -232,14 +240,6 @@ checks:
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 1 are checked with a SAST tool'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
