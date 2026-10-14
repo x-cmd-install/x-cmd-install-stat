@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.13.0"
   latestRelease: "v0.13.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-13T07:08:48Z
+  collectedAt: 2026-10-14T05:15:32Z
 timeline:
   created: 2016-02-16
   lastCommit: 2026-09-25
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-22
   lastPrerelease: 
 popularity:
-  star: 9022
+  star: 9040
   watcher: 62
   fork: 393
   release: 27
@@ -31,15 +31,15 @@ language:
 totalBytes: 313051
 recent:
   last30d:
-    since: 2026-09-13
+    since: 2026-09-14
     release: 1
     mergedPR: 7
-    openPR: 12
+    openPR: 10
     closedIssue: 3
     openIssue: 5
     commit: 7
   last60d:
-    since: 2026-08-14
+    since: 2026-08-15
     release: 2
     mergedPR: 18
     openPR: 15
@@ -47,23 +47,23 @@ recent:
     openIssue: 9
     commit: 40
   last90d:
-    since: 2026-07-15
+    since: 2026-07-16
     release: 2
     mergedPR: 18
-    openPR: 16
+    openPR: 15
     closedIssue: 5
     openIssue: 11
     commit: 52
   last180d:
-    since: 2026-04-16
+    since: 2026-04-17
     release: 3
     mergedPR: 23
     openPR: 19
-    closedIssue: 13
+    closedIssue: 12
     openIssue: 16
     commit: 68
   last360d:
-    since: 2025-10-18
+    since: 2025-10-19
     release: 4
     mergedPR: 28
     openPR: 21
@@ -71,7 +71,7 @@ recent:
     openIssue: 26
     commit: 83
   last720d:
-    since: 2024-10-23
+    since: 2024-10-24
     release: 5
     mergedPR: 29
     openPR: 27
@@ -87,7 +87,7 @@ total:
   commit: 747
 ---
 path: /home/runner/.x-repo/github.com/containers/bubblewrap
-collectedAt: 2026-10-13T07:08:49Z
+collectedAt: 2026-10-14T05:15:33Z
 loc:
   C:
     code: 4868
@@ -145,27 +145,42 @@ total:
   blanks: 1726
   files: 44
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/containers/bubblewrap
   commit: 0f8073dd9b547e15e8ec9451371f9729830b083d
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 7
 checks:
-  - name: Code-Review
-    score: 5
-    reason: Found 8/16 approved changesets -- score normalized to 5
-    details: null
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 16 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 17 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 5
+    reason: Found 8/16 approved changesets -- score normalized to 5
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Token-Permissions
+    score: 10
+    reason: GitHub workflow tokens follow principle of least privilege
+    details:
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/check.yml:12'
+      - 'Info: no jobLevel write permissions found'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -174,26 +189,11 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Token-Permissions
-    score: 10
-    reason: GitHub workflow tokens follow principle of least privilege
-    details:
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/check.yml:12'
-      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
-      - 'Info: Possibly incomplete results: error parsing shell code: reached EOF without closing quote ": tests/test-run.sh:653'
+      - 'Info: Possibly incomplete results: error parsing shell code: reached EOF without closing quote `"`: tests/test-run.sh:653'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/check.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/containers/bubblewrap/check.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/check.yml:76: update your workflow using https://app.stepsecurity.io/secureworkflow/containers/bubblewrap/check.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/check.yml:94: update your workflow using https://app.stepsecurity.io/secureworkflow/containers/bubblewrap/check.yml/main?enable=pin'
@@ -204,17 +204,17 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 9
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 3
     reason: 2 out of the last 5 releases have a total of 2 signed artifacts.

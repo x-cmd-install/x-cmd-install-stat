@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.74.5"
   latestRelease: "v0.74.5"
   latestPrerelease: ""
-  collectedAt: 2026-10-13T07:29:28Z
+  collectedAt: 2026-10-14T05:36:08Z
 timeline:
   created: 2013-10-23
   lastCommit: 2026-10-11
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2026-10-11
   lastPrerelease: 
 popularity:
-  star: 83585
+  star: 83595
   watcher: 451
-  fork: 5190
+  fork: 5353
   release: 86
   contributor: 326
-  pullRequest: 1217
+  pullRequest: 1219
   issue: 3225
 language:
   Go: 948936
@@ -35,63 +35,63 @@ language:
 totalBytes: 1459928
 recent:
   last30d:
-    since: 2026-09-13
+    since: 2026-09-14
     release: 1
     mergedPR: 3
-    openPR: 0
+    openPR: 2
     closedIssue: 1
     openIssue: 5
     commit: 7
   last60d:
-    since: 2026-08-14
+    since: 2026-08-15
     release: 3
     mergedPR: 13
-    openPR: 0
+    openPR: 2
     closedIssue: 13
     openIssue: 8
     commit: 30
   last90d:
-    since: 2026-07-15
+    since: 2026-07-16
     release: 5
     mergedPR: 26
-    openPR: 1
-    closedIssue: 25
+    openPR: 3
+    closedIssue: 24
     openIssue: 14
     commit: 70
   last180d:
-    since: 2026-04-16
+    since: 2026-04-17
     release: 9
     mergedPR: 43
-    openPR: 1
-    closedIssue: 60
+    openPR: 3
+    closedIssue: 59
     openIssue: 31
     commit: 151
   last360d:
-    since: 2025-10-18
+    since: 2025-10-19
     release: 14
     mergedPR: 87
-    openPR: 8
-    closedIssue: 126
+    openPR: 10
+    closedIssue: 125
     openIssue: 55
     commit: 335
   last720d:
-    since: 2024-10-23
+    since: 2024-10-24
     release: 36
     mergedPR: 185
-    openPR: 14
-    closedIssue: 349
-    openIssue: 96
+    openPR: 16
+    closedIssue: 348
+    openIssue: 95
     commit: 812
 total:
   release: 86
   mergedPR: 700
-  openPR: 61
+  openPR: 63
   closedIssue: 2953
   openIssue: 272
   commit: 3755
 ---
 path: /home/runner/.x-repo/github.com/junegunn/fzf
-collectedAt: 2026-10-13T07:29:31Z
+collectedAt: 2026-10-14T05:36:10Z
 loc:
   Go:
     code: 28663
@@ -169,15 +169,19 @@ total:
   blanks: 5082
   files: 131
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/junegunn/fzf
-  commit: b1be3a8be1b833ce5b92fbbac11637643d60a046
+  commit: c0a193e031f01fb50bf6f7be4381990a3753f7cf
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 6.5
 checks:
+  - name: Code-Review
+    score: 1
+    reason: Found 3/30 approved changesets -- score normalized to 1
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 18 issue activity found in the last 90 days -- score normalized to 10
@@ -190,17 +194,13 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Code-Review
-    score: 1
-    reason: Found 3/29 approved changesets -- score normalized to 1
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -221,20 +221,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: GoBuiltInFuzzer integration found: src/algo/fastpath_equiv_test.go:156'
-      - 'Info: GoBuiltInFuzzer integration found: src/algo/fastpath_equiv_test.go:157'
-      - 'Info: GoBuiltInFuzzer integration found: src/algo/indexbyte2_test.go:145'
-      - 'Info: GoBuiltInFuzzer integration found: src/algo/indexbyte2_test.go:158'
-      - 'Info: GoBuiltInFuzzer integration found: src/algo/runeprefilter_test.go:400'
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
     details:
-      - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered (: test/lib/common.sh:0'
+      - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered `(`: test/lib/common.sh:0'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql-analysis.yml:30: update your workflow using https://app.stepsecurity.io/secureworkflow/junegunn/fzf/codeql-analysis.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql-analysis.yml:36: update your workflow using https://app.stepsecurity.io/secureworkflow/junegunn/fzf/codeql-analysis.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql-analysis.yml:41: update your workflow using https://app.stepsecurity.io/secureworkflow/junegunn/fzf/codeql-analysis.yml/master?enable=pin'
@@ -255,6 +246,15 @@ checks:
       - 'Info:   4 out of   5 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   1 out of   1 goCommand dependencies pinned'
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: GoBuiltInFuzzer integration found: src/algo/fastpath_equiv_test.go:156'
+      - 'Info: GoBuiltInFuzzer integration found: src/algo/fastpath_equiv_test.go:157'
+      - 'Info: GoBuiltInFuzzer integration found: src/algo/indexbyte2_test.go:145'
+      - 'Info: GoBuiltInFuzzer integration found: src/algo/indexbyte2_test.go:158'
+      - 'Info: GoBuiltInFuzzer integration found: src/algo/runeprefilter_test.go:400'
   - name: License
     score: 10
     reason: license file detected
@@ -269,16 +269,16 @@ checks:
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
+      - 'Warn: release artifact v0.74.5 not signed: https://api.github.com/repos/junegunn/fzf/releases/409351989'
       - 'Warn: release artifact v0.74.4 not signed: https://api.github.com/repos/junegunn/fzf/releases/387401085'
       - 'Warn: release artifact v0.74.3 not signed: https://api.github.com/repos/junegunn/fzf/releases/371507048'
       - 'Warn: release artifact v0.74.2 not signed: https://api.github.com/repos/junegunn/fzf/releases/363380613'
       - 'Warn: release artifact v0.74.1 not signed: https://api.github.com/repos/junegunn/fzf/releases/356101296'
-      - 'Warn: release artifact v0.74.0 not signed: https://api.github.com/repos/junegunn/fzf/releases/349577561'
+      - 'Warn: release artifact v0.74.5 does not have provenance: https://api.github.com/repos/junegunn/fzf/releases/409351989'
       - 'Warn: release artifact v0.74.4 does not have provenance: https://api.github.com/repos/junegunn/fzf/releases/387401085'
       - 'Warn: release artifact v0.74.3 does not have provenance: https://api.github.com/repos/junegunn/fzf/releases/371507048'
       - 'Warn: release artifact v0.74.2 does not have provenance: https://api.github.com/repos/junegunn/fzf/releases/363380613'
       - 'Warn: release artifact v0.74.1 does not have provenance: https://api.github.com/repos/junegunn/fzf/releases/356101296'
-      - 'Warn: release artifact v0.74.0 does not have provenance: https://api.github.com/repos/junegunn/fzf/releases/349577561'
   - name: Packaging
     score: 10
     reason: packaging workflow detected

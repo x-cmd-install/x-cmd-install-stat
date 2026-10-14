@@ -7,7 +7,7 @@ about:
   latestVersion: "7.1.0"
   latestRelease: "7.1.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-13T07:49:38Z
+  collectedAt: 2026-10-14T06:04:43Z
 timeline:
   created: 2015-12-30
   lastCommit: 2021-12-10
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2020-08-02
   lastPrerelease: 
 popularity:
-  star: 23656
+  star: 23654
   watcher: 5
-  fork: 1774
+  fork: 1775
   release: 32
   contributor: 200
   pullRequest: 1250
@@ -29,7 +29,7 @@ language:
 totalBytes: 389803
 recent:
   last30d:
-    since: 2026-09-13
+    since: 2026-09-14
     release: 0
     mergedPR: 0
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-14
+    since: 2026-08-15
     release: 0
     mergedPR: 0
     openPR: 0
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-15
+    since: 2026-07-16
     release: 0
     mergedPR: 0
     openPR: 0
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-16
+    since: 2026-04-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-18
+    since: 2025-10-19
     release: 0
     mergedPR: 0
     openPR: 0
@@ -69,7 +69,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-23
+    since: 2024-10-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -85,7 +85,7 @@ total:
   commit: 5274
 ---
 path: /home/runner/.x-repo/github.com/dylanaraps/neofetch
-collectedAt: 2026-10-13T07:49:44Z
+collectedAt: 2026-10-14T06:04:46Z
 loc:
   Bash:
     code: 9654
@@ -108,13 +108,13 @@ total:
   blanks: 988
   files: 5
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/dylanaraps/neofetch
   commit: ccd5d9f52609bbdcd5d8fa78c4fdb0f12954125f
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3
 checks:
   - name: Packaging
@@ -122,13 +122,17 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: -1
+    reason: no workflows found
+    details: null
   - name: Token-Permissions
     score: -1
     reason: No tokens found
     details: null
-  - name: Dangerous-Workflow
-    score: -1
-    reason: no workflows found
+  - name: Code-Review
+    score: 6
+    reason: Found 19/30 approved changesets -- score normalized to 6
     details: null
   - name: Maintained
     score: 0
@@ -138,10 +142,6 @@ checks:
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
-    details: null
-  - name: Code-Review
-    score: 6
-    reason: Found 19/30 approved changesets -- score normalized to 6
     details: null
   - name: CII-Best-Practices
     score: 2
@@ -159,27 +159,27 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE.md:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE.md:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
       - 'Warn: release artifact 5.0.0 not signed: https://api.github.com/repos/dylanaraps/neofetch/releases/11538706'
       - 'Warn: release artifact 5.0.0 does not have provenance: https://api.github.com/repos/dylanaraps/neofetch/releases/11538706'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

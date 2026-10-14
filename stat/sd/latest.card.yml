@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.1.0"
   latestRelease: "v1.1.0"
   latestPrerelease: "1.0.0-beta.0"
-  collectedAt: 2026-10-13T06:39:47Z
+  collectedAt: 2026-10-14T04:43:54Z
 timeline:
   created: 2018-12-23
   lastCommit: 2026-02-25
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-02-25
   lastPrerelease: 2023-11-05
 popularity:
-  star: 7390
+  star: 7389
   watcher: 33
   fork: 173
   release: 12
@@ -31,7 +31,7 @@ language:
 totalBytes: 71852
 recent:
   last30d:
-    since: 2026-09-13
+    since: 2026-09-14
     release: 0
     mergedPR: 0
     openPR: 3
@@ -39,7 +39,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-08-14
+    since: 2026-08-15
     release: 0
     mergedPR: 0
     openPR: 7
@@ -47,7 +47,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-07-15
+    since: 2026-07-16
     release: 0
     mergedPR: 0
     openPR: 11
@@ -55,7 +55,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-04-16
+    since: 2026-04-17
     release: 0
     mergedPR: 0
     openPR: 13
@@ -63,7 +63,7 @@ recent:
     openIssue: 4
     commit: 0
   last360d:
-    since: 2025-10-18
+    since: 2025-10-19
     release: 1
     mergedPR: 3
     openPR: 16
@@ -71,7 +71,7 @@ recent:
     openIssue: 8
     commit: 8
   last720d:
-    since: 2024-10-23
+    since: 2024-10-24
     release: 1
     mergedPR: 4
     openPR: 17
@@ -87,7 +87,7 @@ total:
   commit: 336
 ---
 path: /home/runner/.x-repo/github.com/chmln/sd
-collectedAt: 2026-10-13T06:39:47Z
+collectedAt: 2026-10-14T04:43:55Z
 loc:
   Rust:
     code: 1700
@@ -135,15 +135,20 @@ total:
   blanks: 534
   files: 28
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/chmln/sd
   commit: 44febdf86343c653255ae4f20f5e1882dad6be17
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.2
 checks:
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Code-Review
     score: 4
     reason: Found 7/16 approved changesets -- score normalized to 4
@@ -152,19 +157,6 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -172,6 +164,10 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/publish.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -183,6 +179,10 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:65: update your workflow using https://app.stepsecurity.io/secureworkflow/chmln/sd/test.yml/master?enable=pin'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 third-party GitHubAction dependencies pinned'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected

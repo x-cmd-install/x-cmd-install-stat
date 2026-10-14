@@ -2,31 +2,31 @@ about:
   description: "Podman: A tool for managing OCI containers and pods."
   license: Apache-2.0
   homepage: https://podman.io
-  head: b17e7db
+  head: 0becfd4
   archived: false
   latestVersion: "v5.8.9"
   latestRelease: "v5.8.9"
   latestPrerelease: "v6.1.0-rc1"
-  collectedAt: 2026-10-13T07:38:53Z
+  collectedAt: 2026-10-14T05:37:13Z
 timeline:
   created: 2017-11-01
-  lastCommit: 2026-10-12
+  lastCommit: 2026-10-13
   lastVersion: 2026-10-12
   lastRelease: 2026-10-12
   lastPrerelease: 2026-07-31
 popularity:
-  star: 33033
+  star: 33038
   watcher: 222
-  fork: 3407
+  fork: 3408
   release: 255
   contributor: 945
-  pullRequest: 16551
-  issue: 10951
+  pullRequest: 16553
+  issue: 10954
 language:
   Go: 9277685
   Shell: 1576687
   Perl: 222090
-  Python: 166492
+  Python: 166522
   PowerShell: 67736
   C: 59887
   Makefile: 47788
@@ -35,10 +35,10 @@ language:
   Awk: 570
   HTML: 404
   Batchfile: 222
-totalBytes: 11426422
+totalBytes: 11426452
 recent:
   last30d:
-    since: 2026-09-13
+    since: 2026-09-14
     release: 6
     mergedPR: 0
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-14
+    since: 2026-08-15
     release: 7
     mergedPR: 0
     openPR: 0
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-15
+    since: 2026-07-16
     release: 11
     mergedPR: 0
     openPR: 0
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-16
+    since: 2026-04-17
     release: 17
     mergedPR: 0
     openPR: 0
@@ -70,7 +70,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-18
+    since: 2025-10-19
     release: 25
     mergedPR: 0
     openPR: 0
@@ -78,8 +78,8 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-23
-    release: 47
+    since: 2024-10-24
+    release: 46
     mergedPR: 0
     openPR: 0
     closedIssue: 0
@@ -87,14 +87,14 @@ recent:
     commit: 0
 total:
   release: 255
-  mergedPR: 13066
-  openPR: 148
-  closedIssue: 10085
-  openIssue: 866
-  commit: 28600
+  mergedPR: 13070
+  openPR: 146
+  closedIssue: 10089
+  openIssue: 865
+  commit: 28606
 ---
 path: /home/runner/.x-repo/github.com/containers/podman
-collectedAt: 2026-10-13T07:39:16Z
+collectedAt: 2026-10-14T05:37:34Z
 loc:
   Go:
     code: 1661766
@@ -272,22 +272,18 @@ total:
   blanks: 257336
   files: 9058
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/containers/podman
-  commit: 23e148ef871c456962266067e0a2367fdc796122
+  commit: d7bde6427a9f8325cbd2c1192e10257c679de6b5
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 7.8
 checks:
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 7 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Security-Policy
     score: 10
@@ -301,6 +297,10 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 7 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -310,23 +310,25 @@ checks:
     score: 9
     reason: detected GitHub workflow tokens with excessive permissions
     details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/actionlint.yml:22'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/cherry-pick.yml:18'
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/cherry-pick.yml:202'
-      - 'Info: found token with ''none'' permissions: .github/workflows/ci.yml:1'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/cherry-pick.yml:205'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:226'
       - 'Info: found token with ''none'' permissions: .github/workflows/ci.yml:1'
       - 'Info: jobLevel ''pull-requests'' permission set to ''read'': .github/workflows/ci.yml:56'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:226'
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/dev-bump.yml:91'
+      - 'Info: found token with ''none'' permissions: .github/workflows/ci.yml:1'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/dev-bump.yml:15'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/dev-bump.yml:91'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/issue-labeler.yml:13'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/labeler.yml:12'
       - 'Info: found token with ''none'' permissions: .github/workflows/lima.yml:1'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/machine-os-pr.yml:21'
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:99'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:219'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:99'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/update-podmanio.yml:29'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/zizmor.yml:22'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/zizmor.yml:21'
+      - 'Info: found token with ''none'' permissions: .github/workflows/actionlint.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/assign.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/cherry-pick.yml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/ci.yml:1'
@@ -380,16 +382,16 @@ checks:
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
+      - 'Warn: release artifact v6.1.4 not signed: https://api.github.com/repos/podman-container-tools/podman/releases/410992137'
+      - 'Warn: release artifact v5.8.9 not signed: https://api.github.com/repos/podman-container-tools/podman/releases/410977684'
       - 'Warn: release artifact v6.1.3 not signed: https://api.github.com/repos/podman-container-tools/podman/releases/399288536'
       - 'Warn: release artifact v5.8.8 not signed: https://api.github.com/repos/podman-container-tools/podman/releases/399328228'
       - 'Warn: release artifact v5.8.7 not signed: https://api.github.com/repos/podman-container-tools/podman/releases/390161028'
-      - 'Warn: release artifact v6.1.2 not signed: https://api.github.com/repos/podman-container-tools/podman/releases/389552633'
-      - 'Warn: release artifact v6.1.1 not signed: https://api.github.com/repos/podman-container-tools/podman/releases/381417560'
+      - 'Warn: release artifact v6.1.4 does not have provenance: https://api.github.com/repos/podman-container-tools/podman/releases/410992137'
+      - 'Warn: release artifact v5.8.9 does not have provenance: https://api.github.com/repos/podman-container-tools/podman/releases/410977684'
       - 'Warn: release artifact v6.1.3 does not have provenance: https://api.github.com/repos/podman-container-tools/podman/releases/399288536'
       - 'Warn: release artifact v5.8.8 does not have provenance: https://api.github.com/repos/podman-container-tools/podman/releases/399328228'
       - 'Warn: release artifact v5.8.7 does not have provenance: https://api.github.com/repos/podman-container-tools/podman/releases/390161028'
-      - 'Warn: release artifact v6.1.2 does not have provenance: https://api.github.com/repos/podman-container-tools/podman/releases/389552633'
-      - 'Warn: release artifact v6.1.1 does not have provenance: https://api.github.com/repos/podman-container-tools/podman/releases/381417560'
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits
@@ -428,8 +430,8 @@ checks:
       - 'Warn: downloadThenRun not pinned by hash: hack/install_golangci.sh:29'
       - 'Warn: goCommand not pinned by hash: vendor/github.com/json-iterator/go/build.sh:10'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/machine-os-pr.yml:70'
-      - 'Info:  49 out of  49 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   9 out of   9 third-party GitHubAction dependencies pinned'
+      - 'Info:  50 out of  50 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:  10 out of  10 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of  22 containerImage dependencies pinned'
       - 'Info:   0 out of   5 pipCommand dependencies pinned'
       - 'Info:   0 out of   1 downloadThenRun dependencies pinned'

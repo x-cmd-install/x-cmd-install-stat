@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-10-13T06:50:07Z
+  collectedAt: 2026-10-14T04:56:19Z
 timeline:
   created: 2010-12-12
   lastCommit: 2020-01-18
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 
   lastPrerelease: 
 popularity:
-  star: 5269
+  star: 5270
   watcher: 1
   fork: 1105
   release: 0
@@ -28,7 +28,7 @@ language:
 totalBytes: 503856
 recent:
   last30d:
-    since: 2026-09-13
+    since: 2026-09-14
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-14
+    since: 2026-08-15
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-15
+    since: 2026-07-16
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-16
+    since: 2026-04-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-18
+    since: 2025-10-19
     release: 0
     mergedPR: 0
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-23
+    since: 2024-10-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 540
 ---
 path: /home/runner/.x-repo/github.com/euske/pdfminer
-collectedAt: 2026-10-13T06:50:09Z
+collectedAt: 2026-10-14T04:56:21Z
 loc:
   Python:
     code: 12189
@@ -137,15 +137,28 @@ total:
   blanks: 1254
   files: 51
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/euske/pdfminer
   commit: 423f851fc20ebd701bc4c8b5b7ba0e7904e18e3b
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 2.1
 checks:
+  - name: Dangerous-Workflow
+    score: -1
+    reason: no workflows found
+    details: null
+  - name: Maintained
+    score: 0
+    reason: project is archived
+    details:
+      - 'Warn: Repository is archived.'
+  - name: Token-Permissions
+    score: -1
+    reason: No tokens found
+    details: null
   - name: Code-Review
     score: 1
     reason: Found 3/27 approved changesets -- score normalized to 1
@@ -155,19 +168,6 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Token-Permissions
-    score: -1
-    reason: No tokens found
-    details: null
-  - name: Maintained
-    score: 0
-    reason: project is archived
-    details:
-      - 'Warn: Repository is archived.'
-  - name: Dangerous-Workflow
-    score: -1
-    reason: no workflows found
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -180,6 +180,15 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -188,26 +197,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
+  - name: Branch-Protection
     score: 0
-    reason: project is not fuzzed
+    reason: branch protection not enabled on development/release branches
     details:
-      - 'Warn: no fuzzer integrations found'
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

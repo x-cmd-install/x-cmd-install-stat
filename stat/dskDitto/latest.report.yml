@@ -2,97 +2,97 @@ about:
   description: "Ultra fast and easy duplicate file finder. Awesome TUI/GUI to manage results."
   license: Apache-2.0
   homepage: 
-  head: 721b82a
+  head: 6c53274
   archived: false
-  latestVersion: "v0.7.0"
-  latestRelease: "v0.7.0"
+  latestVersion: "v0.7.1"
+  latestRelease: "v0.7.1"
   latestPrerelease: ""
-  collectedAt: 2026-10-13T07:48:58Z
+  collectedAt: 2026-10-14T05:48:50Z
 timeline:
   created: 2021-06-14
-  lastCommit: 2026-09-29
-  lastVersion: 2026-09-12
-  lastRelease: 2026-09-12
+  lastCommit: 2026-10-13
+  lastVersion: 2026-10-13
+  lastRelease: 2026-10-13
   lastPrerelease: 
 popularity:
   star: 392
   watcher: 4
   fork: 11
-  release: 6
+  release: 7
   contributor: 2
   pullRequest: 8
   issue: 21
 language:
-  Go: 366440
+  Go: 381403
   Makefile: 6285
   Python: 2905
   Shell: 329
-totalBytes: 375959
+totalBytes: 390922
 recent:
   last30d:
-    since: 2026-09-13
-    release: 0
+    since: 2026-09-14
+    release: 1
     mergedPR: 0
     openPR: 1
     closedIssue: 0
     openIssue: 6
-    commit: 1
+    commit: 4
   last60d:
-    since: 2026-08-14
-    release: 5
+    since: 2026-08-15
+    release: 6
     mergedPR: 0
     openPR: 1
     closedIssue: 0
     openIssue: 7
-    commit: 4
+    commit: 7
   last90d:
-    since: 2026-07-15
-    release: 5
+    since: 2026-07-16
+    release: 6
     mergedPR: 0
     openPR: 1
     closedIssue: 6
     openIssue: 8
-    commit: 12
+    commit: 15
   last180d:
-    since: 2026-04-16
-    release: 6
+    since: 2026-04-17
+    release: 7
     mergedPR: 1
     openPR: 1
     closedIssue: 8
     openIssue: 8
-    commit: 52
+    commit: 55
   last360d:
-    since: 2025-10-18
-    release: 6
+    since: 2025-10-19
+    release: 7
     mergedPR: 3
     openPR: 1
     closedIssue: 11
     openIssue: 8
-    commit: 147
+    commit: 150
   last720d:
-    since: 2024-10-23
-    release: 6
+    since: 2024-10-24
+    release: 7
     mergedPR: 3
     openPR: 1
     closedIssue: 11
     openIssue: 8
-    commit: 182
+    commit: 185
 total:
-  release: 6
+  release: 7
   mergedPR: 3
   openPR: 1
   closedIssue: 13
   openIssue: 8
-  commit: 262
+  commit: 265
 ---
 path: /home/runner/.x-repo/github.com/jdefrancesco/dskDitto
-collectedAt: 2026-10-13T07:48:59Z
+collectedAt: 2026-10-14T05:48:52Z
 loc:
   Go:
-    code: 11397
-    comments: 595
-    blanks: 1785
-    files: 73
+    code: 11802
+    comments: 602
+    blanks: 1806
+    files: 75
   Makefile:
     code: 122
     comments: 9
@@ -110,15 +110,15 @@ loc:
     files: 2
   Markdown:
     code: 0
-    comments: 597
-    blanks: 252
+    comments: 618
+    blanks: 262
     files: 4
 total:
-  code: 11657
-  comments: 1215
-  blanks: 2087
-  files: 81
+  code: 12068
+  comments: 1243
+  blanks: 2118
+  files: 83
 ---
 
 ---
-{"id":387612549,"author":{"login":"jdefrancesco","id":782408,"node_id":"MDQ6VXNlcjc4MjQwOA==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOFncStM4XGn-F","tag_name":"v0.7.0","target_commitish":"master","name":"dskDitto v0.7.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-12T15:24:24Z","updated_at":"2026-09-12T15:25:00Z","published_at":"2026-09-12T15:24:31Z","assets":[],"body":"Terminal TUI usability improvements:\n\n- Added alphabetical duplicate-group sorting by file path via `3`; `s` now cycles total size, duplicate count, and alphabetical sorting.\n- Updated the TUI footer legend to show all three sort options clearly.\n- Added `c` collapse all and `o` open all shortcuts for duplicate groups.\n- Let the terminal TUI use the full terminal width instead of capping at 120 columns, so long paths are less aggressively truncated.\n- Bumped the source version to `0.7.0`."}
+{"id":412176760,"author":{"login":"jdefrancesco","id":782408,"node_id":"MDQ6VXNlcjc4MjQwOA==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOFncStM4YkVF4","tag_name":"v0.7.1","target_commitish":"master","name":"dskDitto v0.7.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-13T22:54:46Z","updated_at":"2026-10-13T22:55:07Z","published_at":"2026-10-13T22:55:07Z","assets":[],"body":"Adds Bash and Zsh command-line completion and reorganizes the CLI implementation.\n\n- Complete long flags, short aliases, hash/shell choices, and file/path arguments.\n- Generate scripts with `dskDitto --completion bash` or `dskDitto --completion zsh`.\n- Generate completion scripts before logging, profiling, or scanning starts.\n- Keep the shared flag registry in the refactored CLI so help and completion stay aligned.\n\nInstall the CLI/TUI:\n\n```sh\ngo install -ldflags=\"-s -w\" github.com/jdefrancesco/dskDitto/cmd/dskDitto@latest\n```\n\nInstall with GUI support:\n\n```sh\ngo install -tags gui -ldflags=\"-s -w\" github.com/jdefrancesco/dskDitto/cmd/dskDitto@latest\n```\n\nFor Zsh, load completion after compinit:\n\n```zsh\nsource <(dskDitto --completion zsh)\n```\n\nFor Bash:\n\n```bash\nsource <(dskDitto --completion bash)\n```\n\nValidation: all Go tests, the standard build, and its security scan passed.\n"}

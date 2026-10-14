@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.12.0"
   latestRelease: "v1.12.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-13T08:14:49Z
+  collectedAt: 2026-10-14T06:07:29Z
 timeline:
   created: 2021-01-15
   lastCommit: 2026-07-07
@@ -28,7 +28,7 @@ language:
 totalBytes: 26235
 recent:
   last30d:
-    since: 2026-09-13
+    since: 2026-09-14
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-14
+    since: 2026-08-15
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-15
+    since: 2026-07-16
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-16
+    since: 2026-04-17
     release: 0
     mergedPR: 6
     openPR: 2
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 6
   last360d:
-    since: 2025-10-18
+    since: 2025-10-19
     release: 1
     mergedPR: 14
     openPR: 2
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 15
   last720d:
-    since: 2024-10-23
+    since: 2024-10-24
     release: 1
     mergedPR: 53
     openPR: 2
@@ -84,7 +84,7 @@ total:
   commit: 281
 ---
 path: /home/runner/.x-repo/github.com/caarlos0/tasktimer
-collectedAt: 2026-10-13T08:14:50Z
+collectedAt: 2026-10-14T06:07:30Z
 loc:
   Go:
     code: 1007
@@ -117,19 +117,15 @@ total:
   blanks: 223
   files: 25
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/caarlos0/tasktimer
   commit: 8e154acd6597b64a31d88e0e1fcedcdd7d6f266f
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.6
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Code-Review
     score: 0
     reason: Found 0/2 approved changesets -- score normalized to 0
@@ -143,6 +139,18 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: topLevel ''packages'' permission set to ''write'': .github/workflows/build.yml:14'
+      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/build.yml:12'
+      - 'Warn: no topLevel permission defined: .github/workflows/lock.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -155,29 +163,21 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/lock.yml:14: update your workflow using https://app.stepsecurity.io/secureworkflow/caarlos0/tasktimer/lock.yml/main?enable=pin'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 third-party GitHubAction dependencies pinned'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/build.yml:12'
-      - 'Warn: topLevel ''packages'' permission set to ''write'': .github/workflows/build.yml:14'
-      - 'Warn: no topLevel permission defined: .github/workflows/lock.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE.md:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE.md:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
