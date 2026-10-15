@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.14.4"
   latestRelease: "v0.14.4"
   latestPrerelease: "v0.14-beta"
-  collectedAt: 2026-10-14T05:24:17Z
+  collectedAt: 2026-10-15T05:05:32Z
 timeline:
   created: 2009-01-21
   lastCommit: 2026-10-01
@@ -35,7 +35,7 @@ language:
 totalBytes: 7557729
 recent:
   last30d:
-    since: 2026-09-14
+    since: 2026-09-15
     release: 0
     mergedPR: 0
     openPR: 1
@@ -43,7 +43,7 @@ recent:
     openIssue: 3
     commit: 5
   last60d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 0
     mergedPR: 1
     openPR: 1
@@ -51,7 +51,7 @@ recent:
     openIssue: 5
     commit: 25
   last90d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 0
     mergedPR: 1
     openPR: 1
@@ -59,7 +59,7 @@ recent:
     openIssue: 6
     commit: 52
   last180d:
-    since: 2026-04-17
+    since: 2026-04-18
     release: 1
     mergedPR: 4
     openPR: 3
@@ -67,7 +67,7 @@ recent:
     openIssue: 8
     commit: 147
   last360d:
-    since: 2025-10-19
+    since: 2025-10-20
     release: 1
     mergedPR: 12
     openPR: 3
@@ -75,7 +75,7 @@ recent:
     openIssue: 24
     commit: 288
   last720d:
-    since: 2024-10-24
+    since: 2024-10-25
     release: 6
     mergedPR: 16
     openPR: 3
@@ -91,7 +91,7 @@ total:
   commit: 13900
 ---
 path: /home/runner/.x-repo/github.com/vifm/vifm
-collectedAt: 2026-10-14T05:24:27Z
+collectedAt: 2026-10-15T05:05:54Z
 loc:
   C:
     code: 172265
@@ -199,15 +199,28 @@ total:
   blanks: 42938
   files: 983
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/vifm/vifm
   commit: d9b2f49786ae077babfa6516f6b9ccea247c6f21
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.1
 checks:
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 0
+    reason: Found 2/27 approved changesets -- score normalized to 0
+    details: null
+  - name: Token-Permissions
+    score: -1
+    reason: No tokens found
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 11 issue activity found in the last 90 days -- score normalized to 10
@@ -215,19 +228,6 @@ checks:
   - name: Dangerous-Workflow
     score: -1
     reason: no workflows found
-    details: null
-  - name: Code-Review
-    score: 0
-    reason: Found 2/27 approved changesets -- score normalized to 0
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Token-Permissions
-    score: -1
-    reason: No tokens found
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -252,6 +252,11 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -266,11 +271,6 @@ checks:
       - 'Warn: release artifact v0.14.2 does not have provenance: https://api.github.com/repos/vifm/vifm/releases/217044314'
       - 'Warn: release artifact v0.14.1 does not have provenance: https://api.github.com/repos/vifm/vifm/releases/216173400'
       - 'Warn: release artifact v0.14 does not have provenance: https://api.github.com/repos/vifm/vifm/releases/199203185'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Security-Policy
     score: 0
     reason: security policy file not detected

@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.1.11"
   latestRelease: "v0.1.11"
   latestPrerelease: "v0.0.23"
-  collectedAt: 2026-10-14T04:11:58Z
+  collectedAt: 2026-10-15T03:55:08Z
 timeline:
   created: 2016-06-03
   lastCommit: 2018-12-10
@@ -17,7 +17,7 @@ timeline:
 popularity:
   star: 4958
   watcher: 95
-  fork: 258
+  fork: 257
   release: 24
   contributor: 14
   pullRequest: 41
@@ -30,7 +30,7 @@ language:
 totalBytes: 3915861
 recent:
   last30d:
-    since: 2026-09-14
+    since: 2026-09-15
     release: 0
     mergedPR: 0
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 0
     mergedPR: 0
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -54,7 +54,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-04-17
+    since: 2026-04-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -62,7 +62,7 @@ recent:
     openIssue: 1
     commit: 0
   last360d:
-    since: 2025-10-19
+    since: 2025-10-20
     release: 0
     mergedPR: 0
     openPR: 0
@@ -70,7 +70,7 @@ recent:
     openIssue: 1
     commit: 0
   last720d:
-    since: 2024-10-24
+    since: 2024-10-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -86,7 +86,7 @@ total:
   commit: 1340
 ---
 path: /home/runner/.x-repo/github.com/wallix/awless
-collectedAt: 2026-10-14T04:12:03Z
+collectedAt: 2026-10-15T03:55:14Z
 loc:
   Go:
     code: 880464
@@ -209,18 +209,22 @@ total:
   blanks: 207047
   files: 3486
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/wallix/awless
   commit: 44e892b4961fc09abf82f61de2ffeb66a20c82b7
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 2.1
 checks:
-  - name: Token-Permissions
-    score: -1
-    reason: No tokens found
+  - name: Code-Review
+    score: 1
+    reason: Found 4/27 approved changesets -- score normalized to 1
+    details: null
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Dangerous-Workflow
     score: -1
@@ -231,21 +235,13 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 1
-    reason: Found 4/27 approved changesets -- score normalized to 1
-    details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+  - name: Token-Permissions
+    score: -1
+    reason: No tokens found
     details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
     details: null
   - name: Security-Policy
     score: 0
@@ -255,24 +251,24 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Pinned-Dependencies
-    score: -1
-    reason: no dependencies found
-    details: null
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Branch-Protection
+  - name: Pinned-Dependencies
     score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    reason: no dependencies found
     details: null
   - name: Signed-Releases
     score: 0
@@ -288,6 +284,10 @@ checks:
       - 'Warn: release artifact v0.1.9 does not have provenance: https://api.github.com/repos/wallix/awless/releases/9250385'
       - 'Warn: release artifact v0.1.8 does not have provenance: https://api.github.com/repos/wallix/awless/releases/8710005'
       - 'Warn: release artifact v0.1.7 does not have provenance: https://api.github.com/repos/wallix/awless/releases/8648868'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

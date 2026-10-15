@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.9.0"
   latestRelease: "v0.9.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-14T05:34:56Z
+  collectedAt: 2026-10-15T05:18:36Z
 timeline:
   created: 2021-05-05
   lastCommit: 2026-07-08
@@ -28,7 +28,7 @@ language:
 totalBytes: 48606
 recent:
   last30d:
-    since: 2026-09-14
+    since: 2026-09-15
     release: 0
     mergedPR: 0
     openPR: 2
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 0
     mergedPR: 0
     openPR: 2
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 0
     mergedPR: 0
     openPR: 2
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-17
+    since: 2026-04-18
     release: 0
     mergedPR: 0
     openPR: 3
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 1
   last360d:
-    since: 2025-10-19
+    since: 2025-10-20
     release: 0
     mergedPR: 0
     openPR: 5
@@ -68,7 +68,7 @@ recent:
     openIssue: 2
     commit: 1
   last720d:
-    since: 2024-10-24
+    since: 2024-10-25
     release: 0
     mergedPR: 0
     openPR: 11
@@ -84,7 +84,7 @@ total:
   commit: 255
 ---
 path: /home/runner/.x-repo/github.com/maaslalani/slides
-collectedAt: 2026-10-14T05:34:59Z
+collectedAt: 2026-10-15T05:18:38Z
 loc:
   Go:
     code: 1840
@@ -117,31 +117,19 @@ total:
   blanks: 510
   files: 42
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/maaslalani/slides
   commit: 92af1ef1f33a75bd51db9842a760bd228f3b1a61
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.4
 checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Maintained
-    score: 0
-    reason: 1 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
-  - name: Security-Policy
-    score: 9
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: SECURITY.md:1'
-      - 'Info: Found linked content: SECURITY.md:1'
-      - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
-      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Code-Review
     score: 4
     reason: Found 8/17 approved changesets -- score normalized to 4
@@ -157,6 +145,18 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/goreleaser.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Security-Policy
+    score: 9
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: SECURITY.md:1'
+      - 'Info: Found linked content: SECURITY.md:1'
+      - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
+      - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -173,22 +173,27 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''main'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -203,11 +208,6 @@ checks:
       - 'Warn: release artifact v0.7.3 does not have provenance: https://api.github.com/repos/maaslalani/slides/releases/59630898'
       - 'Warn: release artifact v0.7.2 does not have provenance: https://api.github.com/repos/maaslalani/slides/releases/52468029'
       - 'Warn: release artifact v0.7.1 does not have provenance: https://api.github.com/repos/maaslalani/slides/releases/52457679'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''main'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

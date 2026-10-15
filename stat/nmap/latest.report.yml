@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-10-14T05:55:17Z
+  collectedAt: 2026-10-15T05:56:34Z
 timeline:
   created: 2012-03-09
   lastCommit: 2026-10-12
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 
   lastPrerelease: 
 popularity:
-  star: 13755
+  star: 13759
   watcher: 461
-  fork: 2929
+  fork: 2930
   release: 0
   contributor: 9
-  pullRequest: 1097
-  issue: 2079
+  pullRequest: 1098
+  issue: 2081
 language:
   C: 11077560
   Lua: 8363018
@@ -54,63 +54,63 @@ language:
 totalBytes: 30924472
 recent:
   last30d:
-    since: 2026-09-14
+    since: 2026-09-15
     release: 0
     mergedPR: 0
-    openPR: 21
-    closedIssue: 26
+    openPR: 22
+    closedIssue: 27
     openIssue: 2
     commit: 39
   last60d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 0
     mergedPR: 0
-    openPR: 34
-    closedIssue: 55
+    openPR: 35
+    closedIssue: 56
     openIssue: 8
     commit: 101
   last90d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 0
     mergedPR: 0
-    openPR: 46
-    closedIssue: 62
+    openPR: 47
+    closedIssue: 64
     openIssue: 8
     commit: 176
   last180d:
-    since: 2026-04-17
+    since: 2026-04-18
     release: 0
     mergedPR: 0
-    openPR: 66
-    closedIssue: 81
+    openPR: 67
+    closedIssue: 83
     openIssue: 11
     commit: 348
   last360d:
-    since: 2025-10-19
+    since: 2025-10-20
     release: 0
     mergedPR: 0
-    openPR: 88
-    closedIssue: 138
+    openPR: 89
+    closedIssue: 140
     openIssue: 36
     commit: 444
   last720d:
-    since: 2024-10-24
+    since: 2024-10-25
     release: 0
     mergedPR: 0
-    openPR: 119
-    closedIssue: 264
+    openPR: 120
+    closedIssue: 265
     openIssue: 83
     commit: 778
 total:
   release: 0
   mergedPR: 1
-  openPR: 344
-  closedIssue: 1720
+  openPR: 345
+  closedIssue: 1722
   openIssue: 359
   commit: 13848
 ---
 path: /home/runner/.x-repo/github.com/nmap/nmap
-collectedAt: 2026-10-14T05:55:41Z
+collectedAt: 2026-10-15T05:56:59Z
 loc:
   C:
     code: 175269
@@ -323,47 +323,47 @@ total:
   blanks: 97072
   files: 1573
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/nmap/nmap
-  commit: 6b9d95c5f12efd9d53491b82a27423e0899b212b
+  commit: d5134b0181e378d09ebfad564ea4d1e1d8b25380
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.2
 checks:
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Code-Review
+    score: 0
+    reason: Found 0/30 approved changesets -- score normalized to 0
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/build.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Code-Review
+  - name: CII-Best-Practices
     score: 0
-    reason: Found 0/30 approved changesets -- score normalized to 0
+    reason: no effort to earn an OpenSSF best practices badge detected
     details: null
   - name: SAST
     score: 0
     reason: no SAST tool detected
     details:
       - 'Warn: no pull requests merged into dev branch'
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
   - name: Binary-Artifacts
     score: 8
     reason: binaries present in source code
@@ -384,34 +384,29 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: CLibFuzzer integration found: ncat/fuzz/fuzz_http.c:7'
-      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_PacketParser.cc:8'
-      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_dns_packet_parseFromBuffer.cc:8'
-      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_gettcpopt_ts.cc:8'
-      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_hexutils.cc:9'
-      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_ippackethdrinfo.cc:8'
-      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_traceroute_decode_reply.cc:8'
-      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_validatepkt.cc:8'
-      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_PacketParser.cc:8'
-      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_dns_packet_parseFromBuffer.cc:8'
-      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_gettcpopt_ts.cc:8'
-      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_hexutils.cc:9'
-      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_ippackethdrinfo.cc:8'
-      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_traceroute_decode_reply.cc:8'
-      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_validatepkt.cc:8'
   - name: Signed-Releases
     score: -1
     reason: no releases found
     details: null
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
     details:
-      - 'Warn: branch protection not enabled for branch ''master'''
+      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_PacketParser.cc:8'
+      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_dns_packet_parseFromBuffer.cc:8'
+      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_gettcpopt_ts.cc:8'
+      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_hexutils.cc:9'
+      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_ippackethdrinfo.cc:8'
+      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_traceroute_decode_reply.cc:8'
+      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_validatepkt.cc:8'
+      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_PacketParser.cc:8'
+      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_dns_packet_parseFromBuffer.cc:8'
+      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_gettcpopt_ts.cc:8'
+      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_hexutils.cc:9'
+      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_ippackethdrinfo.cc:8'
+      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_traceroute_decode_reply.cc:8'
+      - 'Info: CppLibFuzzer integration found: fuzz/fuzz_validatepkt.cc:8'
+      - 'Info: CLibFuzzer integration found: ncat/fuzz/fuzz_http.c:7'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -434,3 +429,8 @@ checks:
       - 'Info:   0 out of   5 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   5 downloadThenRun dependencies pinned'
       - 'Info:   0 out of   3 pipCommand dependencies pinned'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''

@@ -2,12 +2,12 @@ about:
   description: "Portable OpenSSH"
   license: NOASSERTION
   homepage: 
-  head: d551375
+  head: 75ef208
   archived: false
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-10-14T04:53:14Z
+  collectedAt: 2026-10-15T04:36:24Z
 timeline:
   created: 2014-01-17
   lastCommit: 2026-10-14
@@ -15,83 +15,83 @@ timeline:
   lastRelease: 
   lastPrerelease: 
 popularity:
-  star: 4041
+  star: 4042
   watcher: 134
   fork: 2189
   release: 0
   contributor: 111
-  pullRequest: 692
+  pullRequest: 693
   issue: 0
 language:
   C: 4868967
   C++: 915273
-  Shell: 519473
+  Shell: 519466
   Roff: 348484
   M4: 171695
   Makefile: 73966
   HTML: 22582
   Awk: 8740
   KRL: 7037
-totalBytes: 6936217
+totalBytes: 6936210
 recent:
   last30d:
-    since: 2026-09-14
+    since: 2026-09-15
     release: 0
     mergedPR: 0
-    openPR: 6
+    openPR: 7
     closedIssue: 0
     openIssue: 0
-    commit: 60
+    commit: 61
   last60d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 0
     mergedPR: 0
-    openPR: 9
+    openPR: 10
     closedIssue: 0
     openIssue: 0
-    commit: 128
+    commit: 129
   last90d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 0
     mergedPR: 0
-    openPR: 12
+    openPR: 13
     closedIssue: 0
     openIssue: 0
-    commit: 187
+    commit: 188
   last180d:
-    since: 2026-04-17
+    since: 2026-04-18
     release: 0
     mergedPR: 0
-    openPR: 19
+    openPR: 20
     closedIssue: 0
     openIssue: 0
-    commit: 391
+    commit: 392
   last360d:
-    since: 2025-10-19
+    since: 2025-10-20
     release: 0
     mergedPR: 0
-    openPR: 33
+    openPR: 34
     closedIssue: 0
     openIssue: 0
-    commit: 643
+    commit: 644
   last720d:
-    since: 2024-10-24
+    since: 2024-10-25
     release: 0
     mergedPR: 0
-    openPR: 51
+    openPR: 52
     closedIssue: 0
     openIssue: 0
-    commit: 1225
+    commit: 1223
 total:
   release: 0
   mergedPR: 2
-  openPR: 135
+  openPR: 136
   closedIssue: 0
   openIssue: 0
-  commit: 14001
+  commit: 14002
 ---
 path: /home/runner/.x-repo/github.com/openssh/openssh-portable
-collectedAt: 2026-10-14T04:53:25Z
+collectedAt: 2026-10-15T04:36:34Z
 loc:
   C:
     code: 122911
@@ -184,22 +184,18 @@ total:
   blanks: 22495
   files: 641
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/openssh/openssh-portable
-  commit: ac6ad1afd1c3531fad2e96a00c84bd9867cf5561
+  commit: d551375fa96622dd3e5ac2bc0b8da1b5fd4634cb
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 6.4
 checks:
-  - name: Code-Review
-    score: 0
-    reason: Found 0/30 approved changesets -- score normalized to 0
-    details: null
-  - name: Maintained
+  - name: Dangerous-Workflow
     score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Security-Policy
     score: 9
@@ -209,11 +205,14 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Code-Review
+    score: 0
+    reason: Found 0/30 approved changesets -- score normalized to 0
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -228,10 +227,11 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: SAST
     score: 0
     reason: no SAST tool detected
@@ -247,25 +247,49 @@ checks:
     details:
       - 'Info: OSSFuzz integration found'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/agent_fuzz.cc:9'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/authfd_reply_fuzz.cc:164'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/authkeys_fuzz.cc:30'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/authopt_fuzz.cc:11'
-      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/kex_fuzz.cc:411'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/hostfile_fuzz.cc:35'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/kex_fuzz.cc:497'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/krl_fuzz.cc:23'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/misc_parse_fuzz.cc:83'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/mux_fuzz.cc:19'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/privkey_fuzz.cc:10'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/pubkey_fuzz.cc:9'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/session_channel_req_fuzz.cc:37'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sftp_client_fuzz.cc:194'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sftp_server_msg_fuzz.cc:19'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sig_fuzz.cc:25'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sntrup761_dec_fuzz.cc:50'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sntrup761_enc_fuzz.cc:38'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/ssh_channels_fuzz.cc:361'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/ssh_client_session_fuzz.cc:19'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sshconfig_fuzz.cc:39'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sshd_auth_session_fuzz.cc:19'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sshsig_fuzz.cc:18'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sshsigopt_fuzz.cc:11'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/agent_fuzz.cc:9'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/authfd_reply_fuzz.cc:164'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/authkeys_fuzz.cc:30'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/authopt_fuzz.cc:11'
-      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/kex_fuzz.cc:411'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/hostfile_fuzz.cc:35'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/kex_fuzz.cc:497'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/krl_fuzz.cc:23'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/misc_parse_fuzz.cc:83'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/mux_fuzz.cc:19'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/privkey_fuzz.cc:10'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/pubkey_fuzz.cc:9'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/session_channel_req_fuzz.cc:37'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sftp_client_fuzz.cc:194'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sftp_server_msg_fuzz.cc:19'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sig_fuzz.cc:25'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sntrup761_dec_fuzz.cc:50'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sntrup761_enc_fuzz.cc:38'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/ssh_channels_fuzz.cc:361'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/ssh_client_session_fuzz.cc:19'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sshconfig_fuzz.cc:39'
+      - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sshd_auth_session_fuzz.cc:19'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sshsig_fuzz.cc:18'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sshsigopt_fuzz.cc:11'
   - name: License

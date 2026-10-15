@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.33.0"
   latestRelease: "v0.33.0"
   latestPrerelease: "v0.5.1"
-  collectedAt: 2026-10-14T05:03:41Z
+  collectedAt: 2026-10-15T04:45:06Z
 timeline:
   created: 2018-09-12
   lastCommit: 2026-10-13
@@ -15,11 +15,11 @@ timeline:
   lastRelease: 2026-08-26
   lastPrerelease: 2019-08-21
 popularity:
-  star: 15550
+  star: 15551
   watcher: 147
   fork: 1821
   release: 39
-  contributor: 741
+  contributor: 742
   pullRequest: 2200
   issue: 2063
 language:
@@ -34,15 +34,15 @@ language:
 totalBytes: 888143
 recent:
   last30d:
-    since: 2026-09-14
+    since: 2026-09-15
     release: 0
     mergedPR: 4
     openPR: 9
-    closedIssue: 1
+    closedIssue: 0
     openIssue: 1
     commit: 4
   last60d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 1
     mergedPR: 13
     openPR: 13
@@ -50,7 +50,7 @@ recent:
     openIssue: 5
     commit: 16
   last90d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 1
     mergedPR: 18
     openPR: 18
@@ -58,29 +58,29 @@ recent:
     openIssue: 8
     commit: 22
   last180d:
-    since: 2026-04-17
+    since: 2026-04-18
     release: 2
     mergedPR: 58
-    openPR: 26
+    openPR: 25
     closedIssue: 19
     openIssue: 14
     commit: 87
   last360d:
-    since: 2025-10-19
+    since: 2025-10-20
     release: 3
-    mergedPR: 96
+    mergedPR: 95
     openPR: 39
     closedIssue: 35
-    openIssue: 26
+    openIssue: 25
     commit: 175
   last720d:
-    since: 2024-10-24
+    since: 2024-10-25
     release: 9
     mergedPR: 200
     openPR: 42
-    closedIssue: 141
+    closedIssue: 139
     openIssue: 56
-    commit: 549
+    commit: 548
 total:
   release: 39
   mergedPR: 1652
@@ -90,7 +90,7 @@ total:
   commit: 4873
 ---
 path: /home/runner/.x-repo/github.com/kubernetes-sigs/kind
-collectedAt: 2026-10-14T05:03:43Z
+collectedAt: 2026-10-15T04:45:07Z
 loc:
   Go:
     code: 17840
@@ -183,22 +183,22 @@ total:
   blanks: 4363
   files: 374
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/kubernetes-sigs/kind
-  commit: 54e57d2af1f9b2ac922c2ad2c0528d2ddc04ef06
+  commit: 214d9fd1426470dcfa0d8aa1c5dda03bfea835cb
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 6.6
 checks:
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 11 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
     details: null
   - name: Dangerous-Workflow
     score: 10
@@ -226,17 +226,21 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -259,10 +263,6 @@ checks:
       - 'Warn: release artifact v0.31.0 does not have provenance: https://api.github.com/repos/kubernetes-sigs/kind/releases/270940651'
       - 'Warn: release artifact v0.30.0 does not have provenance: https://api.github.com/repos/kubernetes-sigs/kind/releases/242930870'
       - 'Warn: release artifact v0.29.0 does not have provenance: https://api.github.com/repos/kubernetes-sigs/kind/releases/219929453'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
@@ -280,11 +280,11 @@ checks:
       - 'Warn: containerImage not pinned by hash: images/base/Dockerfile:171'
       - 'Warn: containerImage not pinned by hash: images/base/Dockerfile:192'
       - 'Warn: containerImage not pinned by hash: images/base/Dockerfile:207'
-      - 'Warn: containerImage not pinned by hash: images/kindnetd/Dockerfile:17: pin your Docker image by updating docker.io/library/golang:latest to docker.io/library/golang:latest@sha256:e0174e51e81218523251d85d248a90d24c3d5e81543b4f07a5d66229397db190'
+      - 'Warn: containerImage not pinned by hash: images/kindnetd/Dockerfile:17: pin your Docker image by updating docker.io/library/golang:latest to docker.io/library/golang:latest@sha256:820153096fda4de6ac1b7194d12e416b7dd8f4e9a33d17e0345b111b945162d8'
       - 'Warn: containerImage not pinned by hash: images/kindnetd/Dockerfile:37: pin your Docker image by updating registry.k8s.io/build-image/distroless-iptables:v0.8.7 to registry.k8s.io/build-image/distroless-iptables:v0.8.7@sha256:cdac80d8683f9d8d3aa177383e3a5ab166df91d4e884199023d4a5b088f6015f'
       - 'Warn: containerImage not pinned by hash: images/local-path-helper/Dockerfile:19'
       - 'Warn: containerImage not pinned by hash: images/local-path-helper/Dockerfile:45'
-      - 'Warn: containerImage not pinned by hash: images/local-path-provisioner/Dockerfile:16: pin your Docker image by updating docker.io/library/golang:latest to docker.io/library/golang:latest@sha256:e0174e51e81218523251d85d248a90d24c3d5e81543b4f07a5d66229397db190'
+      - 'Warn: containerImage not pinned by hash: images/local-path-provisioner/Dockerfile:16: pin your Docker image by updating docker.io/library/golang:latest to docker.io/library/golang:latest@sha256:820153096fda4de6ac1b7194d12e416b7dd8f4e9a33d17e0345b111b945162d8'
       - 'Warn: containerImage not pinned by hash: images/local-path-provisioner/Dockerfile:32: pin your Docker image by updating gcr.io/distroless/static-debian13 to gcr.io/distroless/static-debian13@sha256:58133991db06659feaabe0f4e97a35cebf15ef4ea08f8a4c6d2ee5f75e4aa6a0'
       - 'Warn: goCommand not pinned by hash: images/base/Dockerfile:119-121'
       - 'Warn: goCommand not pinned by hash: images/kindnetd/Dockerfile:24-27'

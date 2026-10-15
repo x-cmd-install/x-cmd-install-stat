@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.13.0"
   latestRelease: "v0.13.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-14T05:11:56Z
+  collectedAt: 2026-10-15T04:45:35Z
 timeline:
   created: 2023-05-09
   lastCommit: 2025-11-15
@@ -27,7 +27,7 @@ language:
 totalBytes: 122936
 recent:
   last30d:
-    since: 2026-09-14
+    since: 2026-09-15
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 0
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-17
+    since: 2026-04-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-19
+    since: 2025-10-20
     release: 1
     mergedPR: 0
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 18
   last720d:
-    since: 2024-10-24
+    since: 2024-10-25
     release: 3
     mergedPR: 2
     openPR: 0
@@ -83,7 +83,7 @@ total:
   commit: 193
 ---
 path: /home/runner/.x-repo/github.com/ptmcg/logmerger
-collectedAt: 2026-10-14T05:11:57Z
+collectedAt: 2026-10-15T04:45:36Z
 loc:
   Python:
     code: 2592
@@ -116,15 +116,32 @@ total:
   blanks: 605
   files: 50
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/ptmcg/logmerger
   commit: d800fcbbc6e9937d24750c56b88ea2ff265d9157
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.1
 checks:
+  - name: Code-Review
+    score: 0
+    reason: Found 1/30 approved changesets -- score normalized to 0
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -133,29 +150,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/Python Version Testing.yml:1'
-      - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
-  - name: Code-Review
-    score: 0
-    reason: Found 1/30 approved changesets -- score normalized to 0
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -171,6 +165,12 @@ checks:
       - 'Warn: pipCommand not pinned by hash: .github/workflows/Python Version Testing.yml:28'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 pipCommand dependencies pinned'
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/Python Version Testing.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -186,6 +186,11 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''main'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -200,11 +205,6 @@ checks:
       - 'Warn: release artifact v0.11.0 does not have provenance: https://api.github.com/repos/ptmcg/logmerger/releases/208564123'
       - 'Warn: release artifact v0.10.0 does not have provenance: https://api.github.com/repos/ptmcg/logmerger/releases/177743952'
       - 'Warn: release artifact v0.9.0 does not have provenance: https://api.github.com/repos/ptmcg/logmerger/releases/157402998'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''main'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

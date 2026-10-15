@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.1.7-rc.2"
   latestRelease: "v2.1.6"
   latestPrerelease: "v2.1.7-rc.2"
-  collectedAt: 2026-10-14T05:08:14Z
+  collectedAt: 2026-10-15T04:44:18Z
 timeline:
   created: 2013-11-26
   lastCommit: 2026-10-12
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-10-06
   lastPrerelease: 2026-10-13
 popularity:
-  star: 89375
-  watcher: 1053
-  fork: 5518
+  star: 89403
+  watcher: 1054
+  fork: 5522
   release: 487
   contributor: 355
   pullRequest: 4812
-  issue: 5978
+  issue: 5979
 language:
   Go: 2953466
   HTML: 248073
@@ -35,7 +35,7 @@ language:
 totalBytes: 3490908
 recent:
   last30d:
-    since: 2026-09-14
+    since: 2026-09-15
     release: 6
     mergedPR: 10
     openPR: 1
@@ -43,15 +43,15 @@ recent:
     openIssue: 11
     commit: 15
   last60d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 9
     mergedPR: 16
     openPR: 1
-    closedIssue: 23
+    closedIssue: 22
     openIssue: 19
     commit: 28
   last90d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 13
     mergedPR: 38
     openPR: 5
@@ -59,39 +59,39 @@ recent:
     openIssue: 26
     commit: 61
   last180d:
-    since: 2026-04-17
+    since: 2026-04-18
     release: 23
     mergedPR: 90
     openPR: 9
     closedIssue: 85
-    openIssue: 35
+    openIssue: 36
     commit: 146
   last360d:
-    since: 2025-10-19
+    since: 2025-10-20
     release: 37
     mergedPR: 134
     openPR: 11
-    closedIssue: 180
-    openIssue: 60
+    closedIssue: 179
+    openIssue: 61
     commit: 228
   last720d:
-    since: 2024-10-24
+    since: 2024-10-25
     release: 100
-    mergedPR: 375
+    mergedPR: 374
     openPR: 16
     closedIssue: 402
-    openIssue: 99
+    openIssue: 100
     commit: 670
 total:
   release: 487
   mergedPR: 2941
   openPR: 17
   closedIssue: 5605
-  openIssue: 373
+  openIssue: 374
   commit: 8211
 ---
 path: /home/runner/.x-repo/github.com/syncthing/syncthing
-collectedAt: 2026-10-14T05:08:24Z
+collectedAt: 2026-10-15T04:44:29Z
 loc:
   Go:
     code: 93348
@@ -194,13 +194,13 @@ total:
   blanks: 24823
   files: 807
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/syncthing/syncthing
-  commit: 6868119860b0e9cba44978ad929f6a4561f33919
+  commit: d70d210320c4dcce67774c5bf1f545912b99e5d8
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 5.8
 checks:
   - name: Code-Review
@@ -209,7 +209,7 @@ checks:
     details: null
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 15 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 14 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Security-Policy
     score: 10
@@ -222,10 +222,6 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -244,6 +240,10 @@ checks:
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release-syncthing.yaml:10'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/trigger-nightly.yaml:9'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/update-docs-translations.yaml:8'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 5
     reason: 'badge detected: Passing'
@@ -259,64 +259,73 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Branch-Protection
-    score: 3
-    reason: branch protection is not maximal on development and all release branches
-    details:
-      - 'Info: ''allow deletion'' disabled on branch ''main'''
-      - 'Info: ''force pushes'' disabled on branch ''main'''
-      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''main'''
-      - 'Info: ''stale review dismissal'' is required to merge on branch ''main'''
-      - 'Warn: branch ''main'' does not require approvers'
-      - 'Warn: codeowners review is required - but no codeowners file found in repo'
-      - 'Warn: ''last push approval'' is disabled on branch ''main'''
-      - 'Warn: ''up-to-date branches'' is disabled on branch ''main'''
-      - 'Info: status check found to merge onto on branch ''main'''
-      - 'Info: PRs are required in order to make changes on branch ''main'''
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
     details:
+      - 'Info: signed release artifact: sha1sum.txt.asc: https://github.com/syncthing/syncthing/releases/tag/v2.1.7-rc.2'
+      - 'Info: signed release artifact: sha1sum.txt.asc: https://github.com/syncthing/syncthing/releases/tag/v2.1.7-rc.1'
       - 'Info: signed release artifact: sha1sum.txt.asc: https://github.com/syncthing/syncthing/releases/tag/v2.1.6'
       - 'Info: signed release artifact: sha1sum.txt.asc: https://github.com/syncthing/syncthing/releases/tag/v2.1.6-rc.4'
       - 'Info: signed release artifact: sha1sum.txt.asc: https://github.com/syncthing/syncthing/releases/tag/v2.1.6-rc.3'
-      - 'Info: signed release artifact: sha1sum.txt.asc: https://github.com/syncthing/syncthing/releases/tag/v2.1.6-rc.1'
-      - 'Info: signed release artifact: sha1sum.txt.asc: https://github.com/syncthing/syncthing/releases/tag/v2.1.5'
+      - 'Warn: release artifact v2.1.7-rc.2 does not have provenance: https://api.github.com/repos/syncthing/syncthing/releases/411408112'
+      - 'Warn: release artifact v2.1.7-rc.1 does not have provenance: https://api.github.com/repos/syncthing/syncthing/releases/406531126'
       - 'Warn: release artifact v2.1.6 does not have provenance: https://api.github.com/repos/syncthing/syncthing/releases/404372154'
       - 'Warn: release artifact v2.1.6-rc.4 does not have provenance: https://api.github.com/repos/syncthing/syncthing/releases/399825051'
       - 'Warn: release artifact v2.1.6-rc.3 does not have provenance: https://api.github.com/repos/syncthing/syncthing/releases/393751546'
-      - 'Warn: release artifact v2.1.6-rc.1 does not have provenance: https://api.github.com/repos/syncthing/syncthing/releases/389118246'
-      - 'Warn: release artifact v2.1.5 does not have provenance: https://api.github.com/repos/syncthing/syncthing/releases/384523550'
   - name: Pinned-Dependencies
     score: 3
     reason: dependency not pinned by hash detected -- score normalized to 3
     details:
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:406: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:408: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:413: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:487: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1028: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1030: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1037: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1169: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1171: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:231: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:270: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:533: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:535: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:540: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:582: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:315: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:317: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:324: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:349: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:731: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:733: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:748: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:769: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1151: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1153: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1212: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1213: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:365: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:385: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:600: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:602: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:623: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:843: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:849: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:855: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:861: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:866: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:879: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1028: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1030: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1037: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1191: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1192: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:533: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:535: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:540: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:582: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1151: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1153: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:949: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:956: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:974: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:982: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:406: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:408: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:413: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:487: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:786: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:792: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:797: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:810: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:165: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:124: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:126: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:59: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:64: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:648: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:650: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:656: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
@@ -324,38 +333,15 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:691: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:700: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:709: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:786: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:792: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:797: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:810: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:843: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:849: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:855: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:861: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:866: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:879: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:949: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:956: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:974: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:982: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1191: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1192: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:59: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:64: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:124: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:126: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:165: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:365: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:385: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1169: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1171: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:500: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:180: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:182: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:189: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:212: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:315: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:317: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:324: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:349: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1212: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-syncthing.yaml:1213: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/build-syncthing.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/mirrors.yaml:14: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/mirrors.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/org-members.yaml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/org-members.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-syncthing.yaml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/syncthing/syncthing/release-syncthing.yaml/main?enable=pin'
@@ -379,11 +365,25 @@ checks:
       - 'Info:  22 out of  32 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of  11 containerImage dependencies pinned'
       - 'Info:   2 out of   3 goCommand dependencies pinned'
+  - name: Branch-Protection
+    score: 3
+    reason: branch protection is not maximal on development and all release branches
+    details:
+      - 'Info: ''allow deletion'' disabled on branch ''main'''
+      - 'Info: ''force pushes'' disabled on branch ''main'''
+      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''main'''
+      - 'Info: ''stale review dismissal'' is required to merge on branch ''main'''
+      - 'Warn: branch ''main'' does not require approvers'
+      - 'Warn: codeowners review is required - but no codeowners file found in repo'
+      - 'Warn: ''last push approval'' is disabled on branch ''main'''
+      - 'Warn: ''up-to-date branches'' is disabled on branch ''main'''
+      - 'Info: status check found to merge onto on branch ''main'''
+      - 'Info: PRs are required in order to make changes on branch ''main'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
-      - 'Warn: 0 commits out of 13 are checked with a SAST tool'
+      - 'Warn: 0 commits out of 17 are checked with a SAST tool'
   - name: Packaging
     score: 10
     reason: packaging workflow detected

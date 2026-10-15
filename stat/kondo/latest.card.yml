@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.9"
   latestRelease: "v0.9"
   latestPrerelease: ""
-  collectedAt: 2026-10-14T05:14:12Z
+  collectedAt: 2026-10-15T05:05:01Z
 timeline:
   created: 2020-01-27
   lastCommit: 2026-01-28
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-01-23
   lastPrerelease: 
 popularity:
-  star: 2450
+  star: 2449
   watcher: 12
-  fork: 69
+  fork: 71
   release: 9
   contributor: 40
   pullRequest: 130
@@ -28,7 +28,7 @@ language:
 totalBytes: 58978
 recent:
   last30d:
-    since: 2026-09-14
+    since: 2026-09-15
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 0
     mergedPR: 0
     openPR: 1
@@ -44,7 +44,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 0
     mergedPR: 0
     openPR: 2
@@ -52,7 +52,7 @@ recent:
     openIssue: 2
     commit: 0
   last180d:
-    since: 2026-04-17
+    since: 2026-04-18
     release: 0
     mergedPR: 0
     openPR: 3
@@ -60,15 +60,15 @@ recent:
     openIssue: 3
     commit: 0
   last360d:
-    since: 2025-10-19
+    since: 2025-10-20
     release: 1
-    mergedPR: 4
+    mergedPR: 3
     openPR: 6
     closedIssue: 0
     openIssue: 5
     commit: 12
   last720d:
-    since: 2024-10-24
+    since: 2024-10-25
     release: 1
     mergedPR: 16
     openPR: 8
@@ -84,7 +84,7 @@ total:
   commit: 272
 ---
 path: /home/runner/.x-repo/github.com/tbillington/kondo
-collectedAt: 2026-10-14T05:14:13Z
+collectedAt: 2026-10-15T05:05:02Z
 loc:
   Rust:
     code: 1587
@@ -112,13 +112,13 @@ total:
   blanks: 294
   files: 14
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/tbillington/kondo
   commit: 1d351ca80b3d3adfad9bbe7db872c27359190210
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.1
 checks:
   - name: Code-Review
@@ -129,19 +129,27 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Maintained
+    score: 1
+    reason: 0 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 1
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
-    score: 1
-    reason: 0 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 1
-    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/deploys.yaml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/lint.yaml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/tests.yaml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -169,14 +177,6 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/tests.yaml:53: update your workflow using https://app.stepsecurity.io/secureworkflow/tbillington/kondo/tests.yaml/master?enable=pin'
       - 'Info:   0 out of  12 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   9 third-party GitHubAction dependencies pinned'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/deploys.yaml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/lint.yaml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/tests.yaml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -189,17 +189,22 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -214,11 +219,6 @@ checks:
       - 'Warn: release artifact v0.7 does not have provenance: https://api.github.com/repos/tbillington/kondo/releases/111202991'
       - 'Warn: release artifact v0.6 does not have provenance: https://api.github.com/repos/tbillington/kondo/releases/95306211'
       - 'Warn: release artifact v0.5 does not have provenance: https://api.github.com/repos/tbillington/kondo/releases/56444263'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

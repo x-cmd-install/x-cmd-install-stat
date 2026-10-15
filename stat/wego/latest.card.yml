@@ -7,7 +7,7 @@ about:
   latestVersion: "2.4"
   latestRelease: "2.4"
   latestPrerelease: ""
-  collectedAt: 2026-10-14T04:58:40Z
+  collectedAt: 2026-10-15T04:37:08Z
 timeline:
   created: 2014-11-21
   lastCommit: 2026-09-26
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-04-11
   lastPrerelease: 
 popularity:
-  star: 8557
+  star: 8559
   watcher: 160
-  fork: 506
+  fork: 507
   release: 5
   contributor: 36
   pullRequest: 105
@@ -27,7 +27,7 @@ language:
 totalBytes: 124337
 recent:
   last30d:
-    since: 2026-09-14
+    since: 2026-09-15
     release: 0
     mergedPR: 1
     openPR: 2
@@ -35,7 +35,7 @@ recent:
     openIssue: 2
     commit: 5
   last60d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 0
     mergedPR: 1
     openPR: 2
@@ -43,7 +43,7 @@ recent:
     openIssue: 2
     commit: 5
   last90d:
-    since: 2026-07-16
+    since: 2026-07-17
     release: 0
     mergedPR: 2
     openPR: 2
@@ -51,7 +51,7 @@ recent:
     openIssue: 3
     commit: 5
   last180d:
-    since: 2026-04-17
+    since: 2026-04-18
     release: 0
     mergedPR: 3
     openPR: 2
@@ -59,7 +59,7 @@ recent:
     openIssue: 4
     commit: 5
   last360d:
-    since: 2025-10-19
+    since: 2025-10-20
     release: 1
     mergedPR: 19
     openPR: 2
@@ -67,7 +67,7 @@ recent:
     openIssue: 6
     commit: 28
   last720d:
-    since: 2024-10-24
+    since: 2024-10-25
     release: 1
     mergedPR: 22
     openPR: 4
@@ -83,7 +83,7 @@ total:
   commit: 198
 ---
 path: /home/runner/.x-repo/github.com/schachmat/wego
-collectedAt: 2026-10-14T04:58:41Z
+collectedAt: 2026-10-15T04:37:09Z
 loc:
   Go:
     code: 3366
@@ -106,30 +106,35 @@ total:
   blanks: 447
   files: 18
 ---
-date: "2026-10-05"
+date: "2026-10-12"
 repo:
   name: github.com/schachmat/wego
   commit: 14b1e3643badf55963df2889aacd31094a13ac99
 scorecard:
-  version: v5.5.1-0.20260928043300-ac4b58443938
-  commit: ac4b584439389e57f8d56d925f7fef245d8dda1f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4
 checks:
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Code-Review
     score: 4
     reason: Found 5/12 approved changesets -- score normalized to 4
     details: null
-  - name: Dangerous-Workflow
+  - name: Binary-Artifacts
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: no binaries found in the repo
     details: null
   - name: Maintained
     score: 4
     reason: 5 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 4
     details: null
-  - name: Binary-Artifacts
+  - name: Dangerous-Workflow
     score: 10
-    reason: no binaries found in the repo
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Pinned-Dependencies
     score: 0
@@ -142,11 +147,6 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/golangci-lint.yml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/schachmat/wego/golangci-lint.yml/master?enable=pin'
       - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -168,17 +168,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: ISC License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: -1
     reason: no releases found
