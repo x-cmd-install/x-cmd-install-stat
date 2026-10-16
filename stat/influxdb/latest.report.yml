@@ -4,23 +4,23 @@ about:
   homepage: https://influxdata.com
   head: 06200ef
   archived: false
-  latestVersion: "v3.9.13"
-  latestRelease: "v3.9.13"
+  latestVersion: "v3.12.1"
+  latestRelease: "v3.12.1"
   latestPrerelease: "v1.8.5rc1"
-  collectedAt: 2026-10-15T05:16:27Z
+  collectedAt: 2026-10-16T05:07:13Z
 timeline:
   created: 2013-09-26
   lastCommit: 2026-09-18
-  lastVersion: 2026-09-08
-  lastRelease: 2026-09-08
+  lastVersion: 2026-10-15
+  lastRelease: 2026-10-15
   lastPrerelease: 2021-03-25
 popularity:
-  star: 31765
+  star: 31766
   watcher: 701
-  fork: 3722
-  release: 107
-  contributor: 533
-  pullRequest: 12892
+  fork: 3721
+  release: 111
+  contributor: 534
+  pullRequest: 12893
   issue: 14281
 language:
   Rust: 14365852
@@ -31,63 +31,63 @@ language:
 totalBytes: 14900000
 recent:
   last30d:
-    since: 2026-09-15
-    release: 0
-    mergedPR: 38
+    since: 2026-09-16
+    release: 4
+    mergedPR: 39
     openPR: 20
-    closedIssue: 13
+    closedIssue: 3
     openIssue: 10
     commit: 25
   last60d:
-    since: 2026-08-16
-    release: 6
-    mergedPR: 49
+    since: 2026-08-17
+    release: 10
+    mergedPR: 50
     openPR: 27
-    closedIssue: 18
+    closedIssue: 17
     openIssue: 24
     commit: 25
   last90d:
-    since: 2026-07-17
-    release: 6
-    mergedPR: 77
+    since: 2026-07-18
+    release: 10
+    mergedPR: 78
     openPR: 29
     closedIssue: 21
     openIssue: 27
     commit: 30
   last180d:
-    since: 2026-04-18
-    release: 9
-    mergedPR: 159
+    since: 2026-04-19
+    release: 13
+    mergedPR: 160
     openPR: 38
     closedIssue: 41
     openIssue: 42
     commit: 89
   last360d:
-    since: 2025-10-20
-    release: 13
+    since: 2025-10-21
+    release: 17
     mergedPR: 406
-    openPR: 52
+    openPR: 51
     closedIssue: 139
-    openIssue: 71
+    openIssue: 70
     commit: 197
   last720d:
-    since: 2024-10-25
-    release: 21
-    mergedPR: 1120
-    openPR: 71
-    closedIssue: 586
+    since: 2024-10-26
+    release: 25
+    mergedPR: 1121
+    openPR: 70
+    closedIssue: 585
     openIssue: 206
-    commit: 570
+    commit: 569
 total:
-  release: 107
-  mergedPR: 11135
-  openPR: 109
+  release: 111
+  mergedPR: 11136
+  openPR: 108
   closedIssue: 12210
   openIssue: 2071
   commit: 49927
 ---
 path: /home/runner/.x-repo/github.com/influxdata/influxdb
-collectedAt: 2026-10-15T05:17:00Z
+collectedAt: 2026-10-16T05:07:41Z
 loc:
   Rust:
     code: 316774
@@ -230,4 +230,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---
-{"id":382947145,"author":{"login":"cannonpalms","id":2457559,"node_id":"MDQ6VXNlcjI0NTc1NTk=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAMhEws4W009J","tag_name":"v3.11.4","target_commitish":"main","name":"v3.11.4 | 09-04-26","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-04T16:52:20Z","updated_at":"2026-09-08T18:55:40Z","published_at":"2026-09-08T18:55:40Z","assets":[],"body":"The following are some highlighted updates with the newest release for InfluxDB 3. Learn more via our full [Release Notes](https://docs.influxdata.com/influxdb3/core/release-notes/). \r\n\r\n## Updates\r\n\r\n### Core\r\n\r\n#### Bug fixes\r\n\r\n- **Overwrites in the write buffer resolved arbitrarily**: Writes that repeat a series key and timestamp within one write buffer chunk now resolve to the last acknowledged write, in query results and in the persisted Parquet file. Previously the duplicate rows tied on both deduplication sort keys and an unstable sort picked an arbitrary survivor, so a superseded version could win. An overwrite that arrives while a snapshot is persisting also now wins over the frozen rows it replaces.\r\n- **Snapshot manifest skipped for an empty snapshot**: Every snapshot sequence number now lands a manifest, including a snapshot with nothing to persist. Previously the manifest was skipped, leaving a permanent hole in the sequence. Consumers that walk the sequence by exact key cannot tell a skipped snapshot from a manifest that failed to persist, so a single hole stalled Enterprise compaction on that node and blocked its read replicas.\r\n- **Stale plugin source after re-enabling a trigger**: Stopping a trigger now drops its plugin from the worker's in-memory cache, so re-enabling it re-reads the code. Since v3.11.0 the cache was insert-only, so disabling and re-enabling a trigger resumed the cached copy and never contacted the plugin repository again, which is the documented way to pick up a new version of a `gh:` plugin.\r\n- **Plugin source retained after a database was deleted**: Deleting a database now evicts its triggers' cached plugin source. Previously it stayed resident until the server restarted.\r\n- **Processing engine Python updated to 3.13.15**: Picks up the security fixes in that release.\r\n- Other bug fixes and performance improvements\r\n\r\n### Enterprise\r\n\r\nAll Core updates are included in Enterprise.\r\nAdditional Enterprise-specific updates:\r\n\r\n#### Features\r\n\r\n- **Startup phase logging**: The server logs the start and completion of each startup phase, so a node killed during startup shows which phase it was in.\r\n\r\n#### Bug fixes\r\n\r\n- **Privilege escalation through role assignment**: Creating, updating, and deleting a role, and assigning roles to a user, now require admin authorization. Previously a non-admin subject holding `User:Update`, or `User:Create` with roles in the request, could grant permissions beyond its own. This affects the [user authentication preview](/influxdb3/enterprise/admin/security/manage-users/), which is off by default (`--user-auth-type none`); deployments that have not enabled it are unaffected.\r\n- **Out-of-memory clearing the WAL backlog during a storage engine upgrade**: The upgrade now snapshots during WAL replay whenever the buffer reaches a quarter of the query executor's memory pool, instead of buffering the whole backlog and persisting it in one pass. Each snapshot removes the WAL files it covers, so a restart resumes from the last one rather than replaying from the beginning.\r\n- **Out-of-memory importing a large source during a storage engine upgrade**: Bulk import now admits a job by its estimated working set rather than its compressed size, runs a job larger than the compactor's input-size budget on its own, and refuses a source that cannot fit at all with an error naming the budget it would need. Previously an oversized source was retried until the node ran out of memory, with no attempt recorded.\r\n- **File index left behind when a generation expires**: Retention now deletes a generation's detail object along with its Parquet files. Previously the detail, which holds the file index describing those files, was left unreferenced in object storage. On a table with high-cardinality index columns the detail is the larger of the two, so retention shrank the data and accumulated the indexes for the life of the cluster.\r\n- **Compactor replans forever against a missing index file (upgraded storage engine)**: A run set whose index object is confirmed gone from object storage is now skipped after three failed reads on separate scheduler passes, so planning moves on to other work. Previously every planner that read the index failed, abandoned the plan, and recreated it on the next tick indefinitely. The skip list is in memory only: a restart clears it, and a repaired index is picked up again.\r\n- **Empty snapshot manifests were never deleted**: Gen1 cleanup now deletes a consumed manifest that references no files. Previously it returned early on such a manifest without deleting it, and because cleanup retains the oldest entries in each batch, undeletable manifests could eventually fill every batch and starve cleanup.\r\n- **Stale plugin source after a catalog restore**: Restoring a catalog now evicts the worker's cached plugin source, so restarted triggers re-read their code. Previously a trigger whose restored definition matched the cached one resumed the pre-restore source without contacting the plugin repository.\r\n- **Spurious memory reservation warning at startup**: The warning threshold is now above the sum of the shipped percentage defaults, which come to 90 percent of detected memory. Previously a server running the default configuration warned about itself.\r\n- Other bug fixes and performance improvements\r\n","reactions":{"total_count":2,"+1":0,"-1":0,"laugh":0,"hooray":2,"confused":0,"heart":0,"rocket":0,"eyes":0}}
+{"id":412911660,"author":{"login":"cannonpalms","id":2457559,"node_id":"MDQ6VXNlcjI0NTc1NTk=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAMhEws4YnIgs","tag_name":"v3.12.1","target_commitish":"main","name":"v3.12.1 | 10-14-26","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-14T16:00:41Z","updated_at":"2026-10-15T17:45:07Z","published_at":"2026-10-15T17:44:55Z","assets":[],"body":"The following are some highlighted updates with the newest release for InfluxDB 3. Learn more via our full [Release Notes](https://docs.influxdata.com/influxdb3/core/release-notes/#v3121). \n\n## Updates\n\n### Core\n\n#### Features\n\n- **Faster startup after large file removals**: At startup, the files that snapshots and checkpoints mark as removed are now dropped from each table's file list in one pass. Previously, every removed file scanned the table's whole file list, so startup slowed sharply after many files were removed from a large table. \n\n#### Bug fixes\n\n- **Catalog failed to load after upgrading to v3.12.0**: The server now loads a catalog in which a table has more than one field family with the same automatically generated name. Core releases before v3.10.0 and Enterprise releases before v3.9.0 could write such names when fields were added to an existing table. v3.12.0 rejected them, so a node with an affected catalog failed to start.\n- **Acknowledged writes lost after a forced snapshot and a restart**: WAL flushes now run one at a time. Previously, a forced Parquet snapshot, triggered by write buffer memory or [`--force-snapshot-max-age`](https://docs.influxdata.com/influxdb3/core/reference/config-options/#force-snapshot-max-age), could run while an earlier WAL file was still being written, and recorded that file as covered before its rows reached the buffer. If the node restarted before the next snapshot, it skipped that file and the acknowledged writes in it were lost.\n- **Overwrites lost across snapshots**: When two Parquet files hold the same time window because it was persisted across two snapshots, a point in the later file now wins over a point with the same series and timestamp in the earlier file. Previously, the earlier file could win, so a query returned the value from before the overwrite.\n- **Failed streaming queries returned `200`**: A query in CSV, JSON, or JSON Lines format that fails before it returns any rows, such as a sort that exceeds the memory limit, now returns the error status and message. Previously, the server sent `200` and then dropped the connection, so clients saw an empty body and a transport error. An error after the first rows still ends the response early.\n- **Writes near the maximum timestamp**: A line with a timestamp later than `2262-04-11T23:39:59.999999999Z` is now rejected with a `400` error. Previously, a timestamp that close to the maximum could panic the WAL flush when the server forced a snapshot.\n- **`system.parquet_files` listed files under the wrong tables**: A query on `system.parquet_files` without a `table_name` filter now lists only the tables in the current database. Previously, it could list the current database's files under the names of tables in other databases that had the same table ID.\n- Other bug fixes and performance improvements\n\n### Enterprise\n\nAll Core updates are included in Enterprise.\nAdditional Enterprise-specific updates:\n\n#### Features\n\n- **Larger bulk import batches (upgraded storage engine)**: The new [`--compactor-import-batch-size`](https://docs.influxdata.com/influxdb3/enterprise/reference/storage-engine-config-options/#compactor) option sets the largest batch of staged data that one bulk import merge reads at once. The default is `4gb` and is configurable up to one quarter of `--compactor-input-size-budget`.\n- **Faster ingest node startup with many snapshots (upgraded storage engine)**: An ingest node no longer reads every snapshot manifest in object storage at startup. Previously, it read them all, so startup time grew with the number of manifests. The first start on v3.12.1 still reads every manifest once. `system.pt_ingest_files` now lists the files from the newest manifest plus the snapshots taken since the node started.\n- **Faster compaction I/O (Parquet engine)**: The compactor now uploads a finished output file while it encodes the next one, and checks up to 8 input files at a time. Previously, it did both one file at a time.\n- **WAL flush wait metric (Parquet engine)**: The new `influxdb3_parquet_wal_flush_lock_wait_seconds` histogram reports how long a WAL flush waited for an earlier flush to finish. The `kind` label is `timed` for the regular flush interval and `forced` for a flush that forces a snapshot.\n\n#### Bug fixes\n\n- **Missing rows after changing a table's [file index](https://docs.influxdata.com/influxdb3/enterprise/admin/file-index/) columns (Parquet engine)**: The file index now records which columns each compacted generation indexed. A query that filters on a column that only some generations indexed scans the other generations instead of skipping them. Previously, after you added or removed file index columns, such a query could return incomplete results from compacted data.\n- **Overwrites reverted to the older value (upgraded storage engine)**: When the ingest buffer merges new writes into data it already merged for the same time window, a later write now wins over an earlier write to the same series and timestamp. Previously, the earlier value could replace the later one.\n- **Storage engine upgrade failed with more than one compact node**: During an upgrade to the upgraded storage engine, only the compact node that holds the compactor lease now drives the upgrade. Previously, every compact node drove it at the same time, their progress updates conflicted, and the upgrade could be marked as failed.\n- **Compactor replanned forever against a missing data file (upgraded storage engine)**: A run set whose data file is confirmed gone from object storage is now skipped after three failed compaction attempts, so planning moves on to other work. Previously, the compactor planned the same compaction on every pass, and it failed every time. Skipped run sets are counted in `influxdb3_compactor_skipped_run_sets` with `reason=\"auto_data_file_not_found\"`. Compactions of new snapshots and imports aren't covered.\n- **Bulk import could stall object storage requests (upgraded storage engine)**: The server no longer leaves object storage requests unfinished while it checks the status of uploaded imports. Previously, during a credential refresh, one of those requests could hold the object store client's credential lock and never release it, so every other request on the node waited behind it: the server stayed up but stopped reading from and writing to object storage.\n- **Nodes without query mode built an unused file index (Parquet engine)**: Only nodes that run in `query` mode, including `all`, now load the compacted data file index at startup. Previously, compact and process nodes also loaded it, which used startup time and memory for an index they never read. A node that skips the index logs `compacted-data file index not loaded`.\n- **Ingest node refused to restart after an unclean stop (Parquet engine)**: An ingest node that stopped without a clean shutdown now starts again. Previously, if a snapshot covered all of its WAL or a forced snapshot ran during startup, the node could fail every start with an error that it was `still running in another process`, though no other process existed.\n- Other bug fixes and performance improvements\n"}
