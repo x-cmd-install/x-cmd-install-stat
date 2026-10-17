@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.23.1"
   latestRelease: "v0.23.1"
   latestPrerelease: "v0.6.0-rc4"
-  collectedAt: 2026-10-16T05:16:19Z
+  collectedAt: 2026-10-17T05:00:52Z
 timeline:
   created: 2015-12-19
   lastCommit: 2026-10-16
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2026-06-16
   lastPrerelease: 2020-08-07
 popularity:
-  star: 14360
+  star: 14367
   watcher: 60
-  fork: 757
+  fork: 759
   release: 86
   contributor: 162
-  pullRequest: 3836
+  pullRequest: 3838
   issue: 1868
 language:
   Go: 4373760
@@ -33,63 +33,63 @@ language:
 totalBytes: 4494102
 recent:
   last30d:
-    since: 2026-09-16
+    since: 2026-09-17
     release: 0
     mergedPR: 36
-    openPR: 18
+    openPR: 19
     closedIssue: 1
     openIssue: 14
     commit: 37
   last60d:
-    since: 2026-08-17
+    since: 2026-08-18
     release: 0
-    mergedPR: 83
-    openPR: 38
+    mergedPR: 78
+    openPR: 37
     closedIssue: 3
     openIssue: 27
     commit: 86
   last90d:
-    since: 2026-07-18
+    since: 2026-07-19
     release: 0
     mergedPR: 120
-    openPR: 46
+    openPR: 47
     closedIssue: 4
-    openIssue: 37
+    openIssue: 36
     commit: 126
   last180d:
-    since: 2026-04-19
+    since: 2026-04-20
     release: 2
-    mergedPR: 212
-    openPR: 70
+    mergedPR: 211
+    openPR: 72
     closedIssue: 10
     openIssue: 77
     commit: 214
   last360d:
-    since: 2025-10-21
+    since: 2025-10-22
     release: 6
     mergedPR: 444
-    openPR: 88
+    openPR: 90
     closedIssue: 35
-    openIssue: 188
+    openIssue: 185
     commit: 443
   last720d:
-    since: 2024-10-26
+    since: 2024-10-27
     release: 14
     mergedPR: 813
-    openPR: 105
+    openPR: 107
     closedIssue: 115
     openIssue: 362
     commit: 820
 total:
   release: 86
   mergedPR: 3222
-  openPR: 130
+  openPR: 132
   closedIssue: 1091
   openIssue: 777
   commit: 4299
 ---
 path: /home/runner/.x-repo/github.com/kopia/kopia
-collectedAt: 2026-10-16T05:16:23Z
+collectedAt: 2026-10-17T05:00:56Z
 loc:
   Go:
     code: 118291
@@ -172,7 +172,7 @@ total:
   blanks: 35523
   files: 1168
 ---
-date: "2026-10-16T03:26:09Z"
+date: "2026-10-16T19:41:45Z"
 repo:
   name: github.com/kopia/kopia
   commit: 01938f966dc379a74de8b5ba9fc96c2048f64232
@@ -181,6 +181,10 @@ scorecard:
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 6.4
 checks:
+  - name: Code-Review
+    score: 1
+    reason: Found 2/14 approved changesets -- score normalized to 1
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
@@ -190,10 +194,6 @@ checks:
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Code-Review
-    score: 1
-    reason: Found 2/14 approved changesets -- score normalized to 1
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -226,6 +226,10 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/tests.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/volume-shadow-copy-test.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Pinned-Dependencies
     score: 8
     reason: dependency not pinned by hash detected -- score normalized to 8
@@ -240,10 +244,6 @@ checks:
       - 'Info:   0 out of   1 pipCommand dependencies pinned'
       - 'Info:   1 out of   1 goCommand dependencies pinned'
       - 'Info:   0 out of   3 chocoCommand dependencies pinned'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -255,34 +255,22 @@ checks:
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-hp3w-g68c-fv3c'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5932'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-vfj7-8cjw-p6xm'
-  - name: Branch-Protection
-    score: 4
-    reason: branch protection is not maximal on development and all release branches
+  - name: SAST
+    score: 10
+    reason: SAST tool is run on all commits
     details:
-      - 'Info: ''allow deletion'' disabled on branch ''master'''
-      - 'Info: ''force pushes'' disabled on branch ''master'''
-      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''master'''
-      - 'Info: ''stale review dismissal'' is required to merge on branch ''master'''
-      - 'Warn: required approving review count is 1 on branch ''master'''
-      - 'Warn: codeowners review is not required on branch ''master'''
-      - 'Warn: ''last push approval'' is disabled on branch ''master'''
-      - 'Warn: ''up-to-date branches'' is disabled on branch ''master'''
-      - 'Info: status check found to merge onto on branch ''master'''
-      - 'Info: PRs are required in order to make changes on branch ''master'''
+      - 'Info: all commits (30) are checked with a SAST tool'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -297,16 +285,28 @@ checks:
       - 'Warn: release artifact v0.22.3 does not have provenance: https://api.github.com/repos/kopia/kopia/releases/266612804'
       - 'Warn: release artifact v0.22.2 does not have provenance: https://api.github.com/repos/kopia/kopia/releases/265359319'
       - 'Warn: release artifact v0.22.1 does not have provenance: https://api.github.com/repos/kopia/kopia/releases/265001517'
-  - name: Fuzzing
+  - name: Security-Policy
     score: 0
-    reason: project is not fuzzed
+    reason: security policy file not detected
     details:
-      - 'Warn: no fuzzer integrations found'
-  - name: SAST
-    score: 10
-    reason: SAST tool is run on all commits
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+  - name: Branch-Protection
+    score: 4
+    reason: branch protection is not maximal on development and all release branches
     details:
-      - 'Info: all commits (30) are checked with a SAST tool'
+      - 'Info: ''allow deletion'' disabled on branch ''master'''
+      - 'Info: ''force pushes'' disabled on branch ''master'''
+      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''master'''
+      - 'Info: ''stale review dismissal'' is required to merge on branch ''master'''
+      - 'Warn: required approving review count is 1 on branch ''master'''
+      - 'Warn: codeowners review is not required on branch ''master'''
+      - 'Warn: ''last push approval'' is disabled on branch ''master'''
+      - 'Warn: ''up-to-date branches'' is disabled on branch ''master'''
+      - 'Info: status check found to merge onto on branch ''master'''
+      - 'Info: PRs are required in order to make changes on branch ''master'''
   - name: CI-Tests
     score: 10
     reason: 30 out of 30 merged PRs checked by a CI test -- score normalized to 10
