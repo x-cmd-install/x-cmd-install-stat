@@ -2,20 +2,20 @@ about:
   description: "🚀 The easiest way to automate building and releasing your iOS and Android apps"
   license: MIT
   homepage: https://fastlane.tools
-  head: 4b460f1
+  head: e3ef146
   archived: false
   latestVersion: "2.241.1"
   latestRelease: "2.241.1"
   latestPrerelease: ""
-  collectedAt: 2026-10-17T04:54:43Z
+  collectedAt: 2026-10-18T04:59:33Z
 timeline:
   created: 2014-12-02
-  lastCommit: 2026-10-16
+  lastCommit: 2026-10-17
   lastVersion: 2026-10-15
   lastRelease: 2026-10-15
   lastPrerelease: 
 popularity:
-  star: 42249
+  star: 42254
   watcher: 724
   fork: 6037
   release: 573
@@ -34,63 +34,63 @@ language:
 totalBytes: 8601501
 recent:
   last30d:
-    since: 2026-09-17
+    since: 2026-09-18
     release: 2
     mergedPR: 125
-    openPR: 26
+    openPR: 23
     closedIssue: 9
     openIssue: 13
-    commit: 114
+    commit: 110
   last60d:
-    since: 2026-08-18
+    since: 2026-08-19
     release: 5
-    mergedPR: 183
-    openPR: 26
+    mergedPR: 184
+    openPR: 25
     closedIssue: 24
     openIssue: 21
-    commit: 180
+    commit: 179
   last90d:
-    since: 2026-07-19
+    since: 2026-07-20
     release: 6
     mergedPR: 203
-    openPR: 27
+    openPR: 26
     closedIssue: 33
     openIssue: 21
-    commit: 211
+    commit: 207
   last180d:
-    since: 2026-04-20
+    since: 2026-04-21
     release: 12
-    mergedPR: 287
-    openPR: 28
-    closedIssue: 57
+    mergedPR: 286
+    openPR: 27
+    closedIssue: 55
     openIssue: 25
-    commit: 331
+    commit: 332
   last360d:
-    since: 2025-10-22
+    since: 2025-10-23
     release: 21
-    mergedPR: 403
-    openPR: 36
+    mergedPR: 404
+    openPR: 35
     closedIssue: 112
     openIssue: 41
-    commit: 471
+    commit: 472
   last720d:
-    since: 2024-10-27
+    since: 2024-10-28
     release: 26
-    mergedPR: 452
-    openPR: 58
-    closedIssue: 222
-    openIssue: 125
-    commit: 480
+    mergedPR: 453
+    openPR: 57
+    closedIssue: 221
+    openIssue: 124
+    commit: 481
 total:
   release: 573
-  mergedPR: 6680
-  openPR: 160
+  mergedPR: 6681
+  openPR: 159
   closedIssue: 12833
   openIssue: 517
-  commit: 17109
+  commit: 17110
 ---
 path: /home/runner/.x-repo/github.com/fastlane/fastlane
-collectedAt: 2026-10-17T04:54:56Z
+collectedAt: 2026-10-18T04:59:40Z
 loc:
   Json:
     code: 464908
@@ -203,18 +203,27 @@ total:
   blanks: 31186
   files: 2079
 ---
-date: "2026-10-16T10:15:02Z"
+date: "2026-10-17T10:38:52Z"
 repo:
   name: github.com/fastlane/fastlane
-  commit: 4b460f1c55d910d9339122255566bef022309ef0
+  commit: e3ef1469e786892bc8c9d2773ae342d858c8567e
 scorecard:
-  version: v5.5.0
-  commit: c395761df6afe1a69e476bc60a013a94bcbc153f
+  version: v5.6.0
+  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 8.3
 checks:
-  - name: Code-Review
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
     score: 10
-    reason: all changesets reviewed
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 19 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Security-Policy
     score: 10
@@ -224,24 +233,15 @@ checks:
       - 'Info: Found linked content: docs/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: docs/SECURITY.md:1'
       - 'Info: Found text in security policy: docs/SECURITY.md:1'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
+  - name: Code-Review
     score: 10
-    reason: 30 commit(s) and 19 issue activity found in the last 90 days -- score normalized to 10
+    reason: all changesets reviewed
     details: null
   - name: Dependency-Update-Tool
     score: 10
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -270,34 +270,6 @@ checks:
     details:
       - 'Info:  30 out of  30 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  26 out of  26 third-party GitHubAction dependencies pinned'
-  - name: CII-Best-Practices
-    score: 2
-    reason: 'badge detected: InProgress'
-    details: null
-  - name: Vulnerabilities
-    score: 10
-    reason: 0 existing vulnerabilities detected
-    details: null
-  - name: SAST
-    score: 8
-    reason: SAST tool is not run on all commits -- score normalized to 8
-    details:
-      - 'Warn: 24 commits out of 30 are checked with a SAST tool'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -312,9 +284,37 @@ checks:
       - 'Warn: release artifact 2.240.1 does not have provenance: https://api.github.com/repos/fastlane/fastlane/releases/389252776'
       - 'Warn: release artifact 2.240.0 does not have provenance: https://api.github.com/repos/fastlane/fastlane/releases/388295634'
       - 'Warn: release artifact 2.239.0 does not have provenance: https://api.github.com/repos/fastlane/fastlane/releases/382944125'
+  - name: CII-Best-Practices
+    score: 2
+    reason: 'badge detected: InProgress'
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
+    details: null
+  - name: Vulnerabilities
+    score: 10
+    reason: 0 existing vulnerabilities detected
+    details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: SAST
+    score: 8
+    reason: SAST tool is not run on all commits -- score normalized to 8
+    details:
+      - 'Warn: 24 commits out of 30 are checked with a SAST tool'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
   - name: CI-Tests
     score: 10

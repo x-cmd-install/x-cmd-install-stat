@@ -2,32 +2,32 @@ about:
   description: "Programmatic access to Gemini Notebook - via command-line interface (CLI), Model Context Protocol (MCP) server, and AI agent skills."
   license: MIT
   homepage: 
-  head: a277ce7
+  head: d6d427c
   archived: false
-  latestVersion: "v0.15.5"
-  latestRelease: "v0.15.5"
+  latestVersion: "v0.15.6"
+  latestRelease: "v0.15.6"
   latestPrerelease: ""
-  collectedAt: 2026-10-17T04:45:01Z
+  collectedAt: 2026-10-18T04:48:39Z
 timeline:
   created: 2025-12-23
-  lastCommit: 2026-10-15
-  lastVersion: 2026-10-14
-  lastRelease: 2026-10-14
+  lastCommit: 2026-10-17
+  lastVersion: 2026-10-17
+  lastRelease: 2026-10-17
   lastPrerelease: 
 popularity:
-  star: 6325
+  star: 6334
   watcher: 41
-  fork: 952
-  release: 159
-  contributor: 60
+  fork: 953
+  release: 160
+  contributor: 61
   pullRequest: 199
   issue: 171
 language:
-  Python: 3304378
-totalBytes: 3304378
+  Python: 3308536
+totalBytes: 3308536
 recent:
   last30d:
-    since: 2026-09-17
+    since: 2026-09-18
     release: 12
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-18
+    since: 2026-08-19
     release: 22
     mergedPR: 0
     openPR: 0
@@ -43,23 +43,23 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-19
-    release: 34
+    since: 2026-07-20
+    release: 35
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-20
-    release: 70
+    since: 2026-04-21
+    release: 71
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-22
+    since: 2025-10-23
     release: 100
     mergedPR: 0
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-27
+    since: 2024-10-28
     release: 100
     mergedPR: 0
     openPR: 0
@@ -75,21 +75,21 @@ recent:
     openIssue: 0
     commit: 0
 total:
-  release: 159
-  mergedPR: 153
-  openPR: 1
+  release: 160
+  mergedPR: 154
+  openPR: 0
   closedIssue: 171
   openIssue: 0
-  commit: 958
+  commit: 961
 ---
 path: /home/runner/.x-repo/github.com/jacob-bd/notebooklm-mcp-cli
-collectedAt: 2026-10-17T04:45:02Z
+collectedAt: 2026-10-18T04:48:40Z
 loc:
   Python:
-    code: 71633
-    comments: 2873
-    blanks: 14355
-    files: 316
+    code: 71722
+    comments: 2872
+    blanks: 14384
+    files: 317
   Json:
     code: 83
     comments: 0
@@ -102,15 +102,15 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 9269
-    blanks: 4041
+    comments: 9311
+    blanks: 4059
     files: 36
 total:
-  code: 74099
-  comments: 12719
-  blanks: 18769
-  files: 354
+  code: 74195
+  comments: 12762
+  blanks: 18816
+  files: 355
 ---
 
 ---
-{"id":413153580,"author":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQtfMFM4YoDks","tag_name":"v0.15.5","target_commitish":"f3b8edae99e2826a8537cc0e69319b0f127b958a","name":"v0.15.5: validated HTTP-only refresh, account-specific MCP refresh, bounded auth recovery","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-14T20:28:21Z","updated_at":"2026-10-14T20:30:29Z","published_at":"2026-10-14T20:28:33Z","assets":[{"id":641577248,"node_id":"RA_kwDOQtfMFM4mPbEg","name":"notebooklm-mcp-0.15.5.mcpb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":2606,"digest":"sha256:e39699c8876de91b0d3155fec7772f542a0f527db04f46f0e7de790db21ed731","download_count":58,"created_at":"2026-10-14T20:30:29Z","updated_at":"2026-10-14T20:30:29Z"}],"body":"### Added\n\n- **Validated HTTP-only refresh.** `nlm auth refresh --http-only --profile <name>` refreshes eligible cookies and page tokens without launching a browser, even when CDP transport is configured. It saves credentials only after a valid authenticated notebook API response, accepts an authenticated account with zero notebooks, and rejects missing or malformed API payloads. This mode cannot renew browser-dependent PSIDTS cookies or revive a fully expired Google login ([PR #370](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/370)).\n- **Account-specific MCP refresh.** `refresh_auth(profile=\"work\")` validates or recovers the requested saved account without switching the active account or replacing another account's MCP client. Calls without a profile preserve the existing behavior ([PR #372](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/372)).\n\n### Fixed\n\n- **Serialized Chromium recovery across processes.** Concurrent CLI and MCP processes use a separate per-profile recovery lock, reuse newer validated credentials, and fail safely on lock timeout instead of launching competing browsers ([PR #369](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/369)).\n- **Bounded automatic browser recovery.** Automatic attempts have a per-profile, per-process cooldown (900 seconds by default) and failure ceiling (3 by default). Concurrent callers share one active attempt and its refreshed tokens, with a bounded 60-second wait. Changed credential revisions or file-mode cookies reset the budget; success clears failures. Explicit CLI/MCP refresh commands bypass these limits. Configure the limits through `NOTEBOOKLM_AUTH_RECOVERY_COOLDOWN_SECONDS` and `NOTEBOOKLM_AUTH_MAX_HEADLESS_FAILURES`; 0 disables the corresponding limit ([PR #371](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/371)).\n- HTTP-only refresh now returns a non-secret typed service result and translates failures into service-layer errors.\n\n### Changed\n\n- Updated authentication, CLI/MCP documentation and the bundled skill with refresh modes, account targeting, recovery limits, and their limitations.\n- Updated the pinned `astral-sh/setup-uv` GitHub Action from 10.2.0 to 10.3.0 in CI, publishing and release checks ([PR #373](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/373)).\n\n### Removed\n\n- Nothing removed.\n\n### Credits\n\nThanks to **@insane66613** for the authentication improvements in [#369](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/369), [#370](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/370), [#371](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/371) and [#372](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/372), and **@dependabot** for [#373](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/373).\n","mentions_count":2}
+{"id":416057664,"author":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQtfMFM4YzIlA","tag_name":"v0.15.6","target_commitish":"main","name":"v0.15.6: hardened auth credential writes, fixed collection editing","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-17T21:04:46Z","updated_at":"2026-10-17T21:16:03Z","published_at":"2026-10-17T21:14:03Z","assets":[{"id":651621188,"node_id":"RA_kwDOQtfMFM4m1vNE","name":"notebooklm-mcp-0.15.6.mcpb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":2606,"digest":"sha256:4ac31c8693400f5bfcc0a06fc4006b5afb0917d427c5a2dc223be1ce1c319872","download_count":3,"created_at":"2026-10-17T21:16:03Z","updated_at":"2026-10-17T21:16:03Z"}],"body":"### Fixed\n\n- **Headless sign-in requires a valid notebook API response.** Missing or malformed response payloads no longer validate candidate credentials. A valid response with zero notebooks remains accepted ([PR #374](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/374)).\n- **Background recovery preserves newer saved credentials.** Chromium and Firefox recovery compare the starting credential revision or file-mode authentication state before saving, rejecting stale writes when another process updates the profile ([PR #375](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/375)).\n- **Failed profile saves leave the legacy credential cache unchanged.** The default account's file-mode root cache is updated only after its profile save succeeds ([PR #376](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/376)).\n- **Collection editing works again.** Asking Google for a combined rename plus membership change returned INVALID_ARGUMENT for every edit, including re-sending an unchanged list. `edit_collection` now sends one operation per call (rename, add, remove) carrying only the added or removed notebook IDs. Membership is read before anything is written, and an unknown collection ID raises instead of reporting success ([PR #377](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/377)).\n\n### Changed\n\n- Documented the collections MCP tools (`collection_list`, `collection_create`, `collection_edit`, `collection_set_emoji`, `collection_delete`) in the MCP guide, the README feature table and the bundled skill.\n\n### Credits\n\nThanks to **@insane66613** for the authentication fixes in [#374](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/374), [#375](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/375) and [#376](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/376), and **@huyluong868** for the collection editing fix in [#377](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/377).","mentions_count":2}

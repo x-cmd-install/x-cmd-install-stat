@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.10.0"
   latestRelease: "v1.10.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-17T05:23:11Z
+  collectedAt: 2026-10-18T05:34:08Z
 timeline:
   created: 2026-04-08
   lastCommit: 2026-10-12
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-10-12
   lastPrerelease: 
 popularity:
-  star: 6096
+  star: 6099
   watcher: 41
-  fork: 701
+  fork: 702
   release: 26
   contributor: 18
   pullRequest: 0
@@ -34,7 +34,7 @@ language:
 totalBytes: 1819738
 recent:
   last30d:
-    since: 2026-09-17
+    since: 2026-09-18
     release: 4
     mergedPR: 0
     openPR: 0
@@ -42,15 +42,15 @@ recent:
     openIssue: 3
     commit: 4
   last60d:
-    since: 2026-08-18
-    release: 9
+    since: 2026-08-19
+    release: 8
     mergedPR: 0
     openPR: 0
     closedIssue: 9
     openIssue: 4
     commit: 9
   last90d:
-    since: 2026-07-19
+    since: 2026-07-20
     release: 13
     mergedPR: 0
     openPR: 0
@@ -58,7 +58,7 @@ recent:
     openIssue: 7
     commit: 14
   last180d:
-    since: 2026-04-20
+    since: 2026-04-21
     release: 26
     mergedPR: 0
     openPR: 0
@@ -66,7 +66,7 @@ recent:
     openIssue: 19
     commit: 34
   last360d:
-    since: 2025-10-22
+    since: 2025-10-23
     release: 26
     mergedPR: 0
     openPR: 0
@@ -74,7 +74,7 @@ recent:
     openIssue: 19
     commit: 40
   last720d:
-    since: 2024-10-27
+    since: 2024-10-28
     release: 26
     mergedPR: 0
     openPR: 0
@@ -90,7 +90,7 @@ total:
   commit: 45
 ---
 path: /home/runner/.x-repo/github.com/google/agents-cli
-collectedAt: 2026-10-17T05:23:13Z
+collectedAt: 2026-10-18T05:34:10Z
 loc:
   Python:
     code: 31021
@@ -180,4 +180,4 @@ total:
 ---
 
 ---
-{"id":410947439,"author":{"login":"mlevtsun","id":183823921,"node_id":"U_kgDOCvTuMQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOR9TwcM4Yfo9v","tag_name":"v1.10.0","target_commitish":"main","name":"Release v1.10.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-12T19:37:41Z","updated_at":"2026-10-12T19:47:09Z","published_at":"2026-10-12T19:47:09Z","assets":[{"id":634808463,"node_id":"RA_kwDOR9TwcM4l1miP","name":"google_agents_cli-1.10.0-py3-none-any.whl","label":"","uploader":{"login":"mlevtsun","id":183823921,"node_id":"U_kgDOCvTuMQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":1468594,"digest":"sha256:c3fb6372c24dd68ba8a699c112ba4c48529e19ea8f91bae86004cfc52fd33a76","download_count":10,"created_at":"2026-10-12T19:47:08Z","updated_at":"2026-10-12T19:47:08Z"},{"id":634808469,"node_id":"RA_kwDOR9TwcM4l1miV","name":"google_agents_cli-1.10.0.tar.gz","label":"","uploader":{"login":"mlevtsun","id":183823921,"node_id":"U_kgDOCvTuMQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":1198288,"digest":"sha256:8a6e095c8dc471a25fe004086dfc912bab5adf9d6ecf031cc336db7be506c03a","download_count":12,"created_at":"2026-10-12T19:47:08Z","updated_at":"2026-10-12T19:47:08Z"}],"body":"Release v1.10.0\n\n- **New projects use Agent Identity by default.** `agents-cli scaffold create` records `agent_runtime_identity_default: agent_identity`. Then `agents-cli deploy` creates the Agent Runtime agent under its own Agent Identity principal, and the generated Terraform (`infra single-project`, `infra cicd`) does the same. To keep a service account, pass `--agent-runtime-identity-default service_account` to `scaffold create` or `scaffold enhance`. Existing projects are not changed: if the setting is missing, it reads as `service_account`, and `scaffold upgrade` does not migrate it.\n  - `deploy` uses this default only when it creates a new agent. A redeploy without `--agent-identity` or `--no-agent-identity` does not change the identity of an existing agent.\n- **Extensions can ship skills.** An extension declares skills in the `skills:` field of `agents-cli-extension.yaml`:\n  - `agents-cli extension add` copies them to `<project>/.agents/skills/`, or to `~/.agents/skills/` with `--global`.\n  - `agents-cli extension update` replaces them with the new version's skills and lists the skills it removed.\n  - `agents-cli extension remove` deletes them. The new `--global` flag removes the user-scope install.\n  - `agents-cli install` restores the skills of every recorded extension.\n  - A skill folder copied by an extension is managed by that extension, and manual modifications to it might be overwritten.\n- `agents-cli extension update` keeps the old local copy when it refuses a new version or a copy fails.\n- New `agents-cli deploy` flags for Agent Runtime and Cloud Run: `--remove-labels KEY,...` and `--clear-labels`. New aliases that match `gcloud run deploy`: `--update-labels`, `--update-secrets` and `--env-vars`.\n- `agents-cli deploy` now rejects `--iap`, `--port`, `--service-account` and `--cluster-name` on targets that ignored them. Before, they were silently ignored. Scripts that pass them may need an update.\n- `agents-cli run` fails with `Agent run failed: <reason>` and a non-zero exit code when the ADK stream sends an error. Before, the run looked successful.\n- `agents-cli scaffold create` shows the dependency changes, like `enhance` and `upgrade` do.\n- `agents-cli scaffold create` keeps the detected project in `.env` when credential checks fail, instead of writing the `your-gcp-project-id` placeholder. It also warns when `--session-type` is ignored for `--deployment-target none`.\n- `agents-cli scaffold enhance` creates missing config and dependency files instead of skipping them.\n- Values in `agents-cli-manifest.yaml` are now escaped, so a quote or newline in a value no longer breaks the file. Project names are limited to `a-z`, `0-9` and `-`.\n- Terminology has been adjusted in various places to use appropriate names for the Gemini ecosystem. No functional change, as old variants are kept as aliases where applicable.\n- The CLI now uses `google-cloud-aiplatform` 2.x, and `gcsfs` is pinned to `>=2026.10.0`. The template lock files are updated.\n- The bundled skills list the Ambient Quality Agent (AQuA) recipe."}
+{"id":410947439,"author":{"login":"mlevtsun","id":183823921,"node_id":"U_kgDOCvTuMQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOR9TwcM4Yfo9v","tag_name":"v1.10.0","target_commitish":"main","name":"Release v1.10.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-12T19:37:41Z","updated_at":"2026-10-12T19:47:09Z","published_at":"2026-10-12T19:47:09Z","assets":[{"id":634808463,"node_id":"RA_kwDOR9TwcM4l1miP","name":"google_agents_cli-1.10.0-py3-none-any.whl","label":"","uploader":{"login":"mlevtsun","id":183823921,"node_id":"U_kgDOCvTuMQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":1468594,"digest":"sha256:c3fb6372c24dd68ba8a699c112ba4c48529e19ea8f91bae86004cfc52fd33a76","download_count":14,"created_at":"2026-10-12T19:47:08Z","updated_at":"2026-10-12T19:47:08Z"},{"id":634808469,"node_id":"RA_kwDOR9TwcM4l1miV","name":"google_agents_cli-1.10.0.tar.gz","label":"","uploader":{"login":"mlevtsun","id":183823921,"node_id":"U_kgDOCvTuMQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":1198288,"digest":"sha256:8a6e095c8dc471a25fe004086dfc912bab5adf9d6ecf031cc336db7be506c03a","download_count":16,"created_at":"2026-10-12T19:47:08Z","updated_at":"2026-10-12T19:47:08Z"}],"body":"Release v1.10.0\n\n- **New projects use Agent Identity by default.** `agents-cli scaffold create` records `agent_runtime_identity_default: agent_identity`. Then `agents-cli deploy` creates the Agent Runtime agent under its own Agent Identity principal, and the generated Terraform (`infra single-project`, `infra cicd`) does the same. To keep a service account, pass `--agent-runtime-identity-default service_account` to `scaffold create` or `scaffold enhance`. Existing projects are not changed: if the setting is missing, it reads as `service_account`, and `scaffold upgrade` does not migrate it.\n  - `deploy` uses this default only when it creates a new agent. A redeploy without `--agent-identity` or `--no-agent-identity` does not change the identity of an existing agent.\n- **Extensions can ship skills.** An extension declares skills in the `skills:` field of `agents-cli-extension.yaml`:\n  - `agents-cli extension add` copies them to `<project>/.agents/skills/`, or to `~/.agents/skills/` with `--global`.\n  - `agents-cli extension update` replaces them with the new version's skills and lists the skills it removed.\n  - `agents-cli extension remove` deletes them. The new `--global` flag removes the user-scope install.\n  - `agents-cli install` restores the skills of every recorded extension.\n  - A skill folder copied by an extension is managed by that extension, and manual modifications to it might be overwritten.\n- `agents-cli extension update` keeps the old local copy when it refuses a new version or a copy fails.\n- New `agents-cli deploy` flags for Agent Runtime and Cloud Run: `--remove-labels KEY,...` and `--clear-labels`. New aliases that match `gcloud run deploy`: `--update-labels`, `--update-secrets` and `--env-vars`.\n- `agents-cli deploy` now rejects `--iap`, `--port`, `--service-account` and `--cluster-name` on targets that ignored them. Before, they were silently ignored. Scripts that pass them may need an update.\n- `agents-cli run` fails with `Agent run failed: <reason>` and a non-zero exit code when the ADK stream sends an error. Before, the run looked successful.\n- `agents-cli scaffold create` shows the dependency changes, like `enhance` and `upgrade` do.\n- `agents-cli scaffold create` keeps the detected project in `.env` when credential checks fail, instead of writing the `your-gcp-project-id` placeholder. It also warns when `--session-type` is ignored for `--deployment-target none`.\n- `agents-cli scaffold enhance` creates missing config and dependency files instead of skipping them.\n- Values in `agents-cli-manifest.yaml` are now escaped, so a quote or newline in a value no longer breaks the file. Project names are limited to `a-z`, `0-9` and `-`.\n- Terminology has been adjusted in various places to use appropriate names for the Gemini ecosystem. No functional change, as old variants are kept as aliases where applicable.\n- The CLI now uses `google-cloud-aiplatform` 2.x, and `gcsfs` is pinned to `>=2026.10.0`. The template lock files are updated.\n- The bundled skills list the Ambient Quality Agent (AQuA) recipe."}
