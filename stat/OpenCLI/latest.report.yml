@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.0.0"
   latestRelease: "v2.0.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-18T05:03:08Z
+  collectedAt: 2026-10-19T05:20:09Z
 timeline:
   created: 2026-03-14
   lastCommit: 2026-10-17
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2026-10-17
   lastPrerelease: 
 popularity:
-  star: 30384
+  star: 30417
   watcher: 65
-  fork: 3023
+  fork: 3045
   release: 114
   contributor: 268
-  pullRequest: 2002
+  pullRequest: 2003
   issue: 649
 language:
   JavaScript: 9774037
@@ -30,7 +30,7 @@ language:
 totalBytes: 12520636
 recent:
   last30d:
-    since: 2026-09-18
+    since: 2026-09-19
     release: 1
     mergedPR: 51
     openPR: 15
@@ -38,31 +38,31 @@ recent:
     openIssue: 20
     commit: 55
   last60d:
-    since: 2026-08-19
+    since: 2026-08-20
     release: 3
-    mergedPR: 124
+    mergedPR: 121
     openPR: 58
-    closedIssue: 59
+    closedIssue: 57
     openIssue: 47
-    commit: 154
+    commit: 70
   last90d:
-    since: 2026-07-20
+    since: 2026-07-21
     release: 3
     mergedPR: 181
     openPR: 78
-    closedIssue: 94
-    openIssue: 56
-    commit: 194
+    closedIssue: 93
+    openIssue: 54
+    commit: 191
   last180d:
-    since: 2026-04-21
-    release: 28
-    mergedPR: 725
-    openPR: 161
-    closedIssue: 283
+    since: 2026-04-22
+    release: 27
+    mergedPR: 713
+    openPR: 160
+    closedIssue: 278
     openIssue: 88
-    commit: 756
+    commit: 701
   last360d:
-    since: 2025-10-23
+    since: 2025-10-24
     release: 100
     mergedPR: 1387
     openPR: 169
@@ -70,7 +70,7 @@ recent:
     openIssue: 96
     commit: 1634
   last720d:
-    since: 2024-10-28
+    since: 2024-10-29
     release: 100
     mergedPR: 1387
     openPR: 169
@@ -86,7 +86,7 @@ total:
   commit: 1647
 ---
 path: /home/runner/.x-repo/github.com/jackwener/OpenCLI
-collectedAt: 2026-10-18T05:03:20Z
+collectedAt: 2026-10-19T05:20:13Z
 loc:
   JavaScript:
     code: 207996
@@ -131,4 +131,4 @@ total:
 ---
 
 ---
-{"id":415732124,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDORnOeDM4Yx5Gc","tag_name":"v2.0.0","target_commitish":"main","name":"OpenCLI 2.0.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-17T10:17:09Z","updated_at":"2026-10-17T10:18:46Z","published_at":"2026-10-17T10:17:55Z","assets":[{"id":650165879,"node_id":"RA_kwDORnOeDM4mwL53","name":"opencli-extension-v1.0.25.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":48199,"digest":"sha256:7f567b46129d10d268720c1edb8e6112e9cd637966732d8093cd2fe182ca3f43","download_count":288,"created_at":"2026-10-17T10:17:54Z","updated_at":"2026-10-17T10:17:55Z"}],"body":"A major release focused on agent experience: a smaller CLI surface, predictable JSON results, native Chrome APIs, and evidence-driven adapter development. Includes Chrome extension **1.0.25**.\n\n### Breaking changes and migration\n\n- Browser sessions are explicit options: use `opencli browser <command> ... --session research` instead of positional session names.\n- CLI results default to `{ \"ok\": true, \"data\": ... }`; failures use `{ \"ok\": false, \"error\": { \"code\", \"message\", \"hint\", ... } }` and a nonzero exit status. Update consumers to read `data`; follow modes emit JSON Lines. Explicit human-readable formats and raw exports remain available.\n- Use `opencli adapter init`, `adapter test`, and `adapter check` for adapter authoring and validation. These replace the former browser init/verify and adapter validation entry points.\n- Use `opencli browser network --static` for captured requests plus AST-derived endpoint evidence, and `opencli browser state --diagnostics` for page diagnostics. The separate discover/analyze workflow is removed.\n- Electron desktop automation, its app registry and public launcher export, site sitemap knowledge, and external CLI Hub passthrough are removed. Direct CDP connections to Chrome remain supported.\n- Existing JS adapter registration and execution contracts (`cli({...})`, `func(args)`, `func(page, args)`) remain supported. Adapter `defaultFormat` no longer overrides the CLI's JSON default.\n\n### Features\n\n- Native Chrome API discovery and calls through `opencli browser chrome describe` and `chrome call`, including tab/window management and tab-group creation and editing without attaching a page session. Managed session resources are protected.\n- Compact, paginated command discovery with `opencli list [query] --site --limit --offset`; streamlined bundled agent skills and adapter authoring.\n- AST-based static endpoint discovery integrated with captured network evidence, with incomplete network captures retained when requested.\n- Per-site slot pools give concurrent adapter runs exclusive tabs and run-level pacing; optional owned-tab cleanup and configurable browser idle timeout.\n- Proton API inbox and verified browser authentication; Xiaohongshu comment/comment-delete and YouTube comment commands; richer Twitter, YouTube, and Bilibili metadata.\n\n### Fixes\n\n- Exclude Chrome 155 browser toolbar targets from direct CDP page selection so blank tabs remain usable.\n- More reliable ChatGPT file/image uploads and composer targeting; current Gemini, Grok, and DeepSeek composer flows.\n- Xiaohongshu captcha/search/comment handling, Taobao cart confirmation and blocked-page detection, DBLP browser-backed XML reads, and YouTube channel-handle resolution.\n- Plugin path containment and host-package linking, browser upload file chooser activation, auth recovery hints, and structured error/exit-code handling.\n- Updated Vitest to address GHSA-82fw-gwwq-j7x9.\n\n\n**Full changelog:** https://github.com/jackwener/OpenCLI/compare/v1.8.8...v2.0.0\n"}
+{"id":415732124,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDORnOeDM4Yx5Gc","tag_name":"v2.0.0","target_commitish":"main","name":"OpenCLI 2.0.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-17T10:17:09Z","updated_at":"2026-10-17T10:18:46Z","published_at":"2026-10-17T10:17:55Z","assets":[{"id":650165879,"node_id":"RA_kwDORnOeDM4mwL53","name":"opencli-extension-v1.0.25.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":48199,"digest":"sha256:7f567b46129d10d268720c1edb8e6112e9cd637966732d8093cd2fe182ca3f43","download_count":737,"created_at":"2026-10-17T10:17:54Z","updated_at":"2026-10-17T10:17:55Z"}],"body":"A major release focused on agent experience: a smaller CLI surface, predictable JSON results, native Chrome APIs, and evidence-driven adapter development. Includes Chrome extension **1.0.25**.\n\n### Breaking changes and migration\n\n- Browser sessions are explicit options: use `opencli browser <command> ... --session research` instead of positional session names.\n- CLI results default to `{ \"ok\": true, \"data\": ... }`; failures use `{ \"ok\": false, \"error\": { \"code\", \"message\", \"hint\", ... } }` and a nonzero exit status. Update consumers to read `data`; follow modes emit JSON Lines. Explicit human-readable formats and raw exports remain available.\n- Use `opencli adapter init`, `adapter test`, and `adapter check` for adapter authoring and validation. These replace the former browser init/verify and adapter validation entry points.\n- Use `opencli browser network --static` for captured requests plus AST-derived endpoint evidence, and `opencli browser state --diagnostics` for page diagnostics. The separate discover/analyze workflow is removed.\n- Electron desktop automation, its app registry and public launcher export, site sitemap knowledge, and external CLI Hub passthrough are removed. Direct CDP connections to Chrome remain supported.\n- Existing JS adapter registration and execution contracts (`cli({...})`, `func(args)`, `func(page, args)`) remain supported. Adapter `defaultFormat` no longer overrides the CLI's JSON default.\n\n### Features\n\n- Native Chrome API discovery and calls through `opencli browser chrome describe` and `chrome call`, including tab/window management and tab-group creation and editing without attaching a page session. Managed session resources are protected.\n- Compact, paginated command discovery with `opencli list [query] --site --limit --offset`; streamlined bundled agent skills and adapter authoring.\n- AST-based static endpoint discovery integrated with captured network evidence, with incomplete network captures retained when requested.\n- Per-site slot pools give concurrent adapter runs exclusive tabs and run-level pacing; optional owned-tab cleanup and configurable browser idle timeout.\n- Proton API inbox and verified browser authentication; Xiaohongshu comment/comment-delete and YouTube comment commands; richer Twitter, YouTube, and Bilibili metadata.\n\n### Fixes\n\n- Exclude Chrome 155 browser toolbar targets from direct CDP page selection so blank tabs remain usable.\n- More reliable ChatGPT file/image uploads and composer targeting; current Gemini, Grok, and DeepSeek composer flows.\n- Xiaohongshu captcha/search/comment handling, Taobao cart confirmation and blocked-page detection, DBLP browser-backed XML reads, and YouTube channel-handle resolution.\n- Plugin path containment and host-package linking, browser upload file chooser activation, auth recovery hints, and structured error/exit-code handling.\n- Updated Vitest to address GHSA-82fw-gwwq-j7x9.\n\n\n**Full changelog:** https://github.com/jackwener/OpenCLI/compare/v1.8.8...v2.0.0\n","reactions":{"total_count":3,"+1":1,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":0,"rocket":1,"eyes":0}}
