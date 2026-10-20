@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.19.0"
   latestRelease: "v0.19.0"
   latestPrerelease: "v0.17.3-alpha-1"
-  collectedAt: 2026-10-19T05:36:54Z
+  collectedAt: 2026-10-20T05:46:05Z
 timeline:
   created: 2019-01-13
   lastCommit: 2026-09-07
@@ -20,7 +20,7 @@ popularity:
   fork: 93
   release: 104
   contributor: 27
-  pullRequest: 201
+  pullRequest: 202
   issue: 78
 language:
   Go: 332739
@@ -28,63 +28,63 @@ language:
 totalBytes: 338703
 recent:
   last30d:
-    since: 2026-09-19
+    since: 2026-09-20
     release: 0
     mergedPR: 0
-    openPR: 0
+    openPR: 1
     closedIssue: 0
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-08-20
+    since: 2026-08-21
     release: 0
     mergedPR: 1
-    openPR: 1
+    openPR: 2
     closedIssue: 0
     openIssue: 1
     commit: 1
   last90d:
-    since: 2026-07-21
+    since: 2026-07-22
     release: 0
     mergedPR: 2
-    openPR: 1
+    openPR: 2
     closedIssue: 1
     openIssue: 1
     commit: 2
   last180d:
-    since: 2026-04-22
+    since: 2026-04-23
     release: 0
     mergedPR: 4
-    openPR: 5
+    openPR: 6
     closedIssue: 1
     openIssue: 1
     commit: 6
   last360d:
-    since: 2025-10-24
+    since: 2025-10-25
     release: 2
     mergedPR: 9
-    openPR: 5
+    openPR: 6
     closedIssue: 2
     openIssue: 1
     commit: 9
   last720d:
-    since: 2024-10-29
+    since: 2024-10-30
     release: 13
     mergedPR: 22
-    openPR: 5
+    openPR: 6
     closedIssue: 5
     openIssue: 2
     commit: 23
 total:
   release: 104
   mergedPR: 183
-  openPR: 6
+  openPR: 7
   closedIssue: 57
   openIssue: 21
   commit: 373
 ---
 path: /home/runner/.x-repo/github.com/gruntwork-io/kubergrunt
-collectedAt: 2026-10-19T05:36:59Z
+collectedAt: 2026-10-20T05:46:08Z
 loc:
   Go:
     code: 7960
@@ -112,7 +112,7 @@ total:
   blanks: 1493
   files: 92
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/gruntwork-io/kubergrunt
   commit: 9ee00463670cfb34f785d897ae2bd5f134d2a4fa
@@ -121,11 +121,6 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.2
 checks:
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: -1
     reason: No tokens found
@@ -138,6 +133,11 @@ checks:
     score: -1
     reason: no workflows found
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Maintained
     score: 1
     reason: 2 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 1
@@ -162,17 +162,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -187,6 +187,11 @@ checks:
       - 'Warn: release artifact v0.18.4 does not have provenance: https://api.github.com/repos/gruntwork-io/kubergrunt/releases/244617150'
       - 'Warn: release artifact v0.18.3 does not have provenance: https://api.github.com/repos/gruntwork-io/kubergrunt/releases/243455781'
       - 'Warn: release artifact v0.18.2 does not have provenance: https://api.github.com/repos/gruntwork-io/kubergrunt/releases/241531018'
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
   - name: Branch-Protection
     score: 8
     reason: branch protection is not maximal on development and all release branches
@@ -198,9 +203,4 @@ checks:
       - 'Warn: codeowners review is not required on branch ''main'''
       - 'Info: status check found to merge onto on branch ''main'''
       - 'Info: PRs are required in order to make changes on branch ''main'''
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---

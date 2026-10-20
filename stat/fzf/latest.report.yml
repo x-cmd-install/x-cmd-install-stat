@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.74.5"
   latestRelease: "v0.74.5"
   latestPrerelease: ""
-  collectedAt: 2026-10-19T05:09:57Z
+  collectedAt: 2026-10-20T05:26:05Z
 timeline:
   created: 2013-10-23
   lastCommit: 2026-10-17
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-10-11
   lastPrerelease: 
 popularity:
-  star: 83652
+  star: 83683
   watcher: 451
-  fork: 5703
+  fork: 5778
   release: 86
   contributor: 327
   pullRequest: 1219
@@ -35,7 +35,7 @@ language:
 totalBytes: 1469052
 recent:
   last30d:
-    since: 2026-09-19
+    since: 2026-09-20
     release: 1
     mergedPR: 4
     openPR: 1
@@ -43,41 +43,41 @@ recent:
     openIssue: 2
     commit: 9
   last60d:
-    since: 2026-08-20
+    since: 2026-08-21
     release: 2
-    mergedPR: 13
+    mergedPR: 12
     openPR: 1
-    closedIssue: 16
+    closedIssue: 14
     openIssue: 7
     commit: 27
   last90d:
-    since: 2026-07-21
+    since: 2026-07-22
     release: 4
     mergedPR: 22
     openPR: 2
     closedIssue: 27
-    openIssue: 13
+    openIssue: 12
     commit: 66
   last180d:
-    since: 2026-04-22
+    since: 2026-04-23
     release: 9
     mergedPR: 43
     openPR: 2
-    closedIssue: 63
+    closedIssue: 62
     openIssue: 30
     commit: 148
   last360d:
-    since: 2025-10-24
+    since: 2025-10-25
     release: 14
     mergedPR: 87
     openPR: 9
-    closedIssue: 126
+    closedIssue: 124
     openIssue: 54
     commit: 335
   last720d:
-    since: 2024-10-29
+    since: 2024-10-30
     release: 35
-    mergedPR: 185
+    mergedPR: 184
     openPR: 14
     closedIssue: 350
     openIssue: 91
@@ -91,7 +91,7 @@ total:
   commit: 3757
 ---
 path: /home/runner/.x-repo/github.com/junegunn/fzf
-collectedAt: 2026-10-19T05:09:59Z
+collectedAt: 2026-10-20T05:26:08Z
 loc:
   Go:
     code: 28857
@@ -169,22 +169,26 @@ total:
   blanks: 5091
   files: 132
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/junegunn/fzf
-  commit: c0a193e031f01fb50bf6f7be4381990a3753f7cf
+  commit: 55c122f1a0e1340546c8709682bea5561fe0e8fd
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 6.5
 checks:
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Code-Review
     score: 1
-    reason: Found 3/30 approved changesets -- score normalized to 1
+    reason: Found 4/30 approved changesets -- score normalized to 1
     details: null
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 18 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 17 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Security-Policy
     score: 10
@@ -198,16 +202,12 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:17'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:18'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:17'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:12'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/depsreview.yaml:5'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/labeler.yml:8'
@@ -221,6 +221,21 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: GoBuiltInFuzzer integration found: src/algo/fastpath_equiv_test.go:156'
+      - 'Info: GoBuiltInFuzzer integration found: src/algo/fastpath_equiv_test.go:157'
+      - 'Info: GoBuiltInFuzzer integration found: src/algo/indexbyte2_test.go:145'
+      - 'Info: GoBuiltInFuzzer integration found: src/algo/indexbyte2_test.go:158'
+      - 'Info: GoBuiltInFuzzer integration found: src/algo/runeprefilter_test.go:400'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
@@ -246,25 +261,15 @@ checks:
       - 'Info:   4 out of   5 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   1 out of   1 goCommand dependencies pinned'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: GoBuiltInFuzzer integration found: src/algo/fastpath_equiv_test.go:156'
-      - 'Info: GoBuiltInFuzzer integration found: src/algo/fastpath_equiv_test.go:157'
-      - 'Info: GoBuiltInFuzzer integration found: src/algo/indexbyte2_test.go:145'
-      - 'Info: GoBuiltInFuzzer integration found: src/algo/indexbyte2_test.go:158'
-      - 'Info: GoBuiltInFuzzer integration found: src/algo/runeprefilter_test.go:400'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:18'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -279,16 +284,11 @@ checks:
       - 'Warn: release artifact v0.74.3 does not have provenance: https://api.github.com/repos/junegunn/fzf/releases/371507048'
       - 'Warn: release artifact v0.74.2 does not have provenance: https://api.github.com/repos/junegunn/fzf/releases/363380613'
       - 'Warn: release artifact v0.74.1 does not have provenance: https://api.github.com/repos/junegunn/fzf/releases/356101296'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:18'
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits
     details:
       - 'Info: SAST configuration detected: CodeQL'
-      - 'Info: all commits (13) are checked with a SAST tool'
+      - 'Info: all commits (12) are checked with a SAST tool'
 ---
-{"id":409351989,"author":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOANKv9s4YZjc1","tag_name":"v0.74.5","target_commitish":"master","name":"0.74.5","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-11T02:35:56Z","updated_at":"2026-10-11T02:39:32Z","published_at":"2026-10-11T02:39:32Z","assets":[{"id":629581796,"node_id":"RA_kwDOANKv9s4lhqfk","name":"fzf-0.74.5-android_arm64.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2171304,"digest":"sha256:3116a74c4c518083a97d5e0bf998456cf6959759b023099ddb66cac44aa87b7c","download_count":136,"created_at":"2026-10-11T02:39:29Z","updated_at":"2026-10-11T02:39:29Z"},{"id":629581774,"node_id":"RA_kwDOANKv9s4lhqfO","name":"fzf-0.74.5-darwin_amd64.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2362114,"digest":"sha256:aca6cab692e6c069e724a43070a448e18586c7c0fdd1139f6d487ec1680599ed","download_count":993,"created_at":"2026-10-11T02:39:28Z","updated_at":"2026-10-11T02:39:28Z"},{"id":629581702,"node_id":"RA_kwDOANKv9s4lhqeG","name":"fzf-0.74.5-darwin_arm64.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2154490,"digest":"sha256:ada808c7401b9949ce8842274ac16a6b6193fd32dcada396884a6a9a89e5985a","download_count":5472,"created_at":"2026-10-11T02:39:25Z","updated_at":"2026-10-11T02:39:26Z"},{"id":629581728,"node_id":"RA_kwDOANKv9s4lhqeg","name":"fzf-0.74.5-freebsd_amd64.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2261218,"digest":"sha256:a1740d86e8e061d99d13925ba85432948d23d9cf9d0a9d0f7ab547931a2d6fdb","download_count":92,"created_at":"2026-10-11T02:39:26Z","updated_at":"2026-10-11T02:39:27Z"},{"id":629581740,"node_id":"RA_kwDOANKv9s4lhqes","name":"fzf-0.74.5-linux_amd64.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2291079,"digest":"sha256:d47d7f882972c7d674dbbba998ffa4116e68379616ffac7695d0671e9a722c5f","download_count":57539,"created_at":"2026-10-11T02:39:27Z","updated_at":"2026-10-11T02:39:27Z"},{"id":629581759,"node_id":"RA_kwDOANKv9s4lhqe_","name":"fzf-0.74.5-linux_arm64.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2078357,"digest":"sha256:cf058001da21724a469b714a29cf4aab9cbe860d218a0d6c1b5b661efad7784c","download_count":7907,"created_at":"2026-10-11T02:39:27Z","updated_at":"2026-10-11T02:39:28Z"},{"id":629581751,"node_id":"RA_kwDOANKv9s4lhqe3","name":"fzf-0.74.5-linux_armv5.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2163034,"digest":"sha256:a07b37eef2c14654b6f21bc67524bca3e2eafe0e7ddba1bf9acb3f51f185ae1b","download_count":54,"created_at":"2026-10-11T02:39:27Z","updated_at":"2026-10-11T02:39:27Z"},{"id":629581743,"node_id":"RA_kwDOANKv9s4lhqev","name":"fzf-0.74.5-linux_armv6.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2155367,"digest":"sha256:8615ce6e3eadcae3be9b38aaee8d432361a39c2983e0ab94cea6254492b70eaf","download_count":81,"created_at":"2026-10-11T02:39:27Z","updated_at":"2026-10-11T02:39:27Z"},{"id":629581701,"node_id":"RA_kwDOANKv9s4lhqeF","name":"fzf-0.74.5-linux_armv7.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2150362,"digest":"sha256:dbf45f895a6b272725679b0aa46b5fc4683cc869ec89bbbd1c3a661304cecc34","download_count":106,"created_at":"2026-10-11T02:39:25Z","updated_at":"2026-10-11T02:39:26Z"},{"id":629581761,"node_id":"RA_kwDOANKv9s4lhqfB","name":"fzf-0.74.5-linux_loong64.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2189434,"digest":"sha256:adf086a78bcfbf4cda432078e92b5517d648b9fd50551465cc2eeb9df28f594f","download_count":58,"created_at":"2026-10-11T02:39:27Z","updated_at":"2026-10-11T02:39:28Z"},{"id":629581784,"node_id":"RA_kwDOANKv9s4lhqfY","name":"fzf-0.74.5-linux_ppc64le.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2111483,"digest":"sha256:54308760da12847f3100d312dadadea1e839b61a4bdd7c082fa417e3df4aef3f","download_count":55,"created_at":"2026-10-11T02:39:28Z","updated_at":"2026-10-11T02:39:28Z"},{"id":629581722,"node_id":"RA_kwDOANKv9s4lhqea","name":"fzf-0.74.5-linux_riscv64.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2150796,"digest":"sha256:6ca2259cd2002ea7dd23e53c484d966b10c759cf0dae022359c681234dc81e74","download_count":69,"created_at":"2026-10-11T02:39:26Z","updated_at":"2026-10-11T02:39:26Z"},{"id":629581785,"node_id":"RA_kwDOANKv9s4lhqfZ","name":"fzf-0.74.5-linux_s390x.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2199750,"digest":"sha256:89e6cd91dcc519422a06449262772aa8daaa7f0e842e574001c1cb2e57c3fd54","download_count":55,"created_at":"2026-10-11T02:39:28Z","updated_at":"2026-10-11T02:39:28Z"},{"id":629581700,"node_id":"RA_kwDOANKv9s4lhqeE","name":"fzf-0.74.5-openbsd_amd64.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2257187,"digest":"sha256:9af584480f741b0b63b6a37caa162caffeea84c73a1a490266a8bf06cf235304","download_count":50,"created_at":"2026-10-11T02:39:25Z","updated_at":"2026-10-11T02:39:26Z"},{"id":629581724,"node_id":"RA_kwDOANKv9s4lhqec","name":"fzf-0.74.5-windows_amd64.zip","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":2544236,"digest":"sha256:01f854ec8b9b47c99a7d78023638f7d2056cfb0af56b72dabd112032eed3993e","download_count":11668,"created_at":"2026-10-11T02:39:26Z","updated_at":"2026-10-11T02:39:26Z"},{"id":629581790,"node_id":"RA_kwDOANKv9s4lhqfe","name":"fzf-0.74.5-windows_arm64.zip","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":2292730,"digest":"sha256:45d8f69b7660ac0c59118c9ccaccdea305d56fdd74a3599aa357cbb374ebd61e","download_count":294,"created_at":"2026-10-11T02:39:28Z","updated_at":"2026-10-11T02:39:29Z"},{"id":629581823,"node_id":"RA_kwDOANKv9s4lhqf_","name":"fzf_0.74.5_amd64.deb","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-debian-package","state":"uploaded","size":2320404,"digest":"sha256:0f9f693c12eeabf776c05430e082bda62dac8207fdc85ae3d1b06ac27daedec7","download_count":258,"created_at":"2026-10-11T02:39:29Z","updated_at":"2026-10-11T02:39:30Z"},{"id":629581817,"node_id":"RA_kwDOANKv9s4lhqf5","name":"fzf_0.74.5_arm64.deb","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-debian-package","state":"uploaded","size":2107444,"digest":"sha256:a5063ad3eb0eb184fabbc07c9929dd14e77eb9c1586de19afb37c4686f855426","download_count":91,"created_at":"2026-10-11T02:39:29Z","updated_at":"2026-10-11T02:39:29Z"},{"id":629581798,"node_id":"RA_kwDOANKv9s4lhqfm","name":"fzf_0.74.5_armv5.deb","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-debian-package","state":"uploaded","size":2191406,"digest":"sha256:4c2ffd181468ebdd91da97c3413666eda9f6e711499cfc938b2d6d7d57932b6f","download_count":45,"created_at":"2026-10-11T02:39:29Z","updated_at":"2026-10-11T02:39:29Z"},{"id":629581827,"node_id":"RA_kwDOANKv9s4lhqgD","name":"fzf_0.74.5_armv6.deb","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-debian-package","state":"uploaded","size":2182890,"digest":"sha256:7c8523c44244c40bc540ea98e8c9231dd3f24c31c8fd88de28b2e3f619c21fb2","download_count":49,"created_at":"2026-10-11T02:39:29Z","updated_at":"2026-10-11T02:39:30Z"},{"id":629581844,"node_id":"RA_kwDOANKv9s4lhqgU","name":"fzf_0.74.5_armv7.deb","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-debian-package","state":"uploaded","size":2177408,"digest":"sha256:803605073ed5c1f6151e4d10a4887ce4eead61576d1e8b677df52f217f4438bd","download_count":49,"created_at":"2026-10-11T02:39:30Z","updated_at":"2026-10-11T02:39:30Z"},{"id":629581869,"node_id":"RA_kwDOANKv9s4lhqgt","name":"fzf_0.74.5_checksums.txt","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":2337,"digest":"sha256:c0538a65abaaafce561513dfbe80e38961fe866933aedd6c5b06232e7583c477","download_count":1185,"created_at":"2026-10-11T02:39:31Z","updated_at":"2026-10-11T02:39:31Z"},{"id":629581841,"node_id":"RA_kwDOANKv9s4lhqgR","name":"fzf_0.74.5_loong64.deb","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-debian-package","state":"uploaded","size":2219044,"digest":"sha256:22ed52bb8cfd5b0cd15879644db5a5a7c70d5df80062c89bb22998e092f81b65","download_count":47,"created_at":"2026-10-11T02:39:30Z","updated_at":"2026-10-11T02:39:30Z"},{"id":629581858,"node_id":"RA_kwDOANKv9s4lhqgi","name":"fzf_0.74.5_ppc64le.deb","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-debian-package","state":"uploaded","size":2139194,"digest":"sha256:b9875cebe48380697d3e2656e6786bf4e979153fe382cc97141359b1d280dd66","download_count":45,"created_at":"2026-10-11T02:39:30Z","updated_at":"2026-10-11T02:39:31Z"},{"id":629581864,"node_id":"RA_kwDOANKv9s4lhqgo","name":"fzf_0.74.5_riscv64.deb","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-debian-package","state":"uploaded","size":2179564,"digest":"sha256:f7c92764cef7427f5a3b0dd5c0925782c62c3250e7de75e12aaf404382e750ca","download_count":46,"created_at":"2026-10-11T02:39:31Z","updated_at":"2026-10-11T02:39:31Z"},{"id":629581850,"node_id":"RA_kwDOANKv9s4lhqga","name":"fzf_0.74.5_s390x.deb","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-debian-package","state":"uploaded","size":2227802,"digest":"sha256:ef201e04c1bee0bc5053ba7bf987c7570d0af24be8558ed764fa3ad1016324dc","download_count":48,"created_at":"2026-10-11T02:39:30Z","updated_at":"2026-10-11T02:39:30Z"}],"body":"- Fixed `--popup` unzooming the window when opened over a zoomed pane on tmux 3.8 or above (#4927, junegunn/fzf.vim#1625) (@jereviikari)\n    - On tmux 3.7, the window is still unzoomed, as tmux 3.7b crashes when a floating pane is created over a zoomed window\n- Fixed `--gap-line` cutting a grapheme cluster when filling the last cells of the line (#4920)\n- Fixed an escape sequence fzf does not recognize being partly consumed, which leaked the rest into the query (#4926)\n- Fixed a key lost when it arrived in the same read as an escape sequence\n- Fixed `focus` event not triggered after `reload` when the new item is at the same position as the previous one (#4930)\n    - With `--id-nth`, the event is not triggered if the focus moves directly from an item to another item with the same key\n    - A `focus` binding that runs `reload` now triggers itself again after each reload, unless `--id-nth` is set and the key does not change\n- Security fixes\n    - fzf-tmux no longer evaluates an attached layout size (e.g. `-l50`) via bash arithmetic, which could run commands or inject tmux flags (GHSA-w6x2-f5m4-xw82)\n    - zsh completion now creates its FIFO in a private `mktemp -d` directory instead of a predictable `/tmp` path (GHSA-7rj6-7pqx-v7rm)\n    - Reported by Sai Sreewathsa Kovalluri, Shon Babu, and Kannan K (Researchers) of Innspark Solutions\n\n","reactions":{"total_count":32,"+1":12,"-1":0,"laugh":1,"hooray":7,"confused":0,"heart":6,"rocket":5,"eyes":1},"mentions_count":1}
+{"id":409351989,"author":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOANKv9s4YZjc1","tag_name":"v0.74.5","target_commitish":"master","name":"0.74.5","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-11T02:35:56Z","updated_at":"2026-10-11T02:39:32Z","published_at":"2026-10-11T02:39:32Z","assets":[{"id":629581796,"node_id":"RA_kwDOANKv9s4lhqfk","name":"fzf-0.74.5-android_arm64.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2171304,"digest":"sha256:3116a74c4c518083a97d5e0bf998456cf6959759b023099ddb66cac44aa87b7c","download_count":143,"created_at":"2026-10-11T02:39:29Z","updated_at":"2026-10-11T02:39:29Z"},{"id":629581774,"node_id":"RA_kwDOANKv9s4lhqfO","name":"fzf-0.74.5-darwin_amd64.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2362114,"digest":"sha256:aca6cab692e6c069e724a43070a448e18586c7c0fdd1139f6d487ec1680599ed","download_count":1116,"created_at":"2026-10-11T02:39:28Z","updated_at":"2026-10-11T02:39:28Z"},{"id":629581702,"node_id":"RA_kwDOANKv9s4lhqeG","name":"fzf-0.74.5-darwin_arm64.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2154490,"digest":"sha256:ada808c7401b9949ce8842274ac16a6b6193fd32dcada396884a6a9a89e5985a","download_count":6130,"created_at":"2026-10-11T02:39:25Z","updated_at":"2026-10-11T02:39:26Z"},{"id":629581728,"node_id":"RA_kwDOANKv9s4lhqeg","name":"fzf-0.74.5-freebsd_amd64.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2261218,"digest":"sha256:a1740d86e8e061d99d13925ba85432948d23d9cf9d0a9d0f7ab547931a2d6fdb","download_count":97,"created_at":"2026-10-11T02:39:26Z","updated_at":"2026-10-11T02:39:27Z"},{"id":629581740,"node_id":"RA_kwDOANKv9s4lhqes","name":"fzf-0.74.5-linux_amd64.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2291079,"digest":"sha256:d47d7f882972c7d674dbbba998ffa4116e68379616ffac7695d0671e9a722c5f","download_count":66618,"created_at":"2026-10-11T02:39:27Z","updated_at":"2026-10-11T02:39:27Z"},{"id":629581759,"node_id":"RA_kwDOANKv9s4lhqe_","name":"fzf-0.74.5-linux_arm64.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2078357,"digest":"sha256:cf058001da21724a469b714a29cf4aab9cbe860d218a0d6c1b5b661efad7784c","download_count":8862,"created_at":"2026-10-11T02:39:27Z","updated_at":"2026-10-11T02:39:28Z"},{"id":629581751,"node_id":"RA_kwDOANKv9s4lhqe3","name":"fzf-0.74.5-linux_armv5.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2163034,"digest":"sha256:a07b37eef2c14654b6f21bc67524bca3e2eafe0e7ddba1bf9acb3f51f185ae1b","download_count":61,"created_at":"2026-10-11T02:39:27Z","updated_at":"2026-10-11T02:39:27Z"},{"id":629581743,"node_id":"RA_kwDOANKv9s4lhqev","name":"fzf-0.74.5-linux_armv6.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2155367,"digest":"sha256:8615ce6e3eadcae3be9b38aaee8d432361a39c2983e0ab94cea6254492b70eaf","download_count":92,"created_at":"2026-10-11T02:39:27Z","updated_at":"2026-10-11T02:39:27Z"},{"id":629581701,"node_id":"RA_kwDOANKv9s4lhqeF","name":"fzf-0.74.5-linux_armv7.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2150362,"digest":"sha256:dbf45f895a6b272725679b0aa46b5fc4683cc869ec89bbbd1c3a661304cecc34","download_count":121,"created_at":"2026-10-11T02:39:25Z","updated_at":"2026-10-11T02:39:26Z"},{"id":629581761,"node_id":"RA_kwDOANKv9s4lhqfB","name":"fzf-0.74.5-linux_loong64.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2189434,"digest":"sha256:adf086a78bcfbf4cda432078e92b5517d648b9fd50551465cc2eeb9df28f594f","download_count":66,"created_at":"2026-10-11T02:39:27Z","updated_at":"2026-10-11T02:39:28Z"},{"id":629581784,"node_id":"RA_kwDOANKv9s4lhqfY","name":"fzf-0.74.5-linux_ppc64le.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2111483,"digest":"sha256:54308760da12847f3100d312dadadea1e839b61a4bdd7c082fa417e3df4aef3f","download_count":62,"created_at":"2026-10-11T02:39:28Z","updated_at":"2026-10-11T02:39:28Z"},{"id":629581722,"node_id":"RA_kwDOANKv9s4lhqea","name":"fzf-0.74.5-linux_riscv64.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2150796,"digest":"sha256:6ca2259cd2002ea7dd23e53c484d966b10c759cf0dae022359c681234dc81e74","download_count":77,"created_at":"2026-10-11T02:39:26Z","updated_at":"2026-10-11T02:39:26Z"},{"id":629581785,"node_id":"RA_kwDOANKv9s4lhqfZ","name":"fzf-0.74.5-linux_s390x.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2199750,"digest":"sha256:89e6cd91dcc519422a06449262772aa8daaa7f0e842e574001c1cb2e57c3fd54","download_count":61,"created_at":"2026-10-11T02:39:28Z","updated_at":"2026-10-11T02:39:28Z"},{"id":629581700,"node_id":"RA_kwDOANKv9s4lhqeE","name":"fzf-0.74.5-openbsd_amd64.tar.gz","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2257187,"digest":"sha256:9af584480f741b0b63b6a37caa162caffeea84c73a1a490266a8bf06cf235304","download_count":52,"created_at":"2026-10-11T02:39:25Z","updated_at":"2026-10-11T02:39:26Z"},{"id":629581724,"node_id":"RA_kwDOANKv9s4lhqec","name":"fzf-0.74.5-windows_amd64.zip","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":2544236,"digest":"sha256:01f854ec8b9b47c99a7d78023638f7d2056cfb0af56b72dabd112032eed3993e","download_count":12705,"created_at":"2026-10-11T02:39:26Z","updated_at":"2026-10-11T02:39:26Z"},{"id":629581790,"node_id":"RA_kwDOANKv9s4lhqfe","name":"fzf-0.74.5-windows_arm64.zip","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":2292730,"digest":"sha256:45d8f69b7660ac0c59118c9ccaccdea305d56fdd74a3599aa357cbb374ebd61e","download_count":322,"created_at":"2026-10-11T02:39:28Z","updated_at":"2026-10-11T02:39:29Z"},{"id":629581823,"node_id":"RA_kwDOANKv9s4lhqf_","name":"fzf_0.74.5_amd64.deb","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-debian-package","state":"uploaded","size":2320404,"digest":"sha256:0f9f693c12eeabf776c05430e082bda62dac8207fdc85ae3d1b06ac27daedec7","download_count":292,"created_at":"2026-10-11T02:39:29Z","updated_at":"2026-10-11T02:39:30Z"},{"id":629581817,"node_id":"RA_kwDOANKv9s4lhqf5","name":"fzf_0.74.5_arm64.deb","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-debian-package","state":"uploaded","size":2107444,"digest":"sha256:a5063ad3eb0eb184fabbc07c9929dd14e77eb9c1586de19afb37c4686f855426","download_count":93,"created_at":"2026-10-11T02:39:29Z","updated_at":"2026-10-11T02:39:29Z"},{"id":629581798,"node_id":"RA_kwDOANKv9s4lhqfm","name":"fzf_0.74.5_armv5.deb","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-debian-package","state":"uploaded","size":2191406,"digest":"sha256:4c2ffd181468ebdd91da97c3413666eda9f6e711499cfc938b2d6d7d57932b6f","download_count":47,"created_at":"2026-10-11T02:39:29Z","updated_at":"2026-10-11T02:39:29Z"},{"id":629581827,"node_id":"RA_kwDOANKv9s4lhqgD","name":"fzf_0.74.5_armv6.deb","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-debian-package","state":"uploaded","size":2182890,"digest":"sha256:7c8523c44244c40bc540ea98e8c9231dd3f24c31c8fd88de28b2e3f619c21fb2","download_count":51,"created_at":"2026-10-11T02:39:29Z","updated_at":"2026-10-11T02:39:30Z"},{"id":629581844,"node_id":"RA_kwDOANKv9s4lhqgU","name":"fzf_0.74.5_armv7.deb","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-debian-package","state":"uploaded","size":2177408,"digest":"sha256:803605073ed5c1f6151e4d10a4887ce4eead61576d1e8b677df52f217f4438bd","download_count":51,"created_at":"2026-10-11T02:39:30Z","updated_at":"2026-10-11T02:39:30Z"},{"id":629581869,"node_id":"RA_kwDOANKv9s4lhqgt","name":"fzf_0.74.5_checksums.txt","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":2337,"digest":"sha256:c0538a65abaaafce561513dfbe80e38961fe866933aedd6c5b06232e7583c477","download_count":1332,"created_at":"2026-10-11T02:39:31Z","updated_at":"2026-10-11T02:39:31Z"},{"id":629581841,"node_id":"RA_kwDOANKv9s4lhqgR","name":"fzf_0.74.5_loong64.deb","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-debian-package","state":"uploaded","size":2219044,"digest":"sha256:22ed52bb8cfd5b0cd15879644db5a5a7c70d5df80062c89bb22998e092f81b65","download_count":49,"created_at":"2026-10-11T02:39:30Z","updated_at":"2026-10-11T02:39:30Z"},{"id":629581858,"node_id":"RA_kwDOANKv9s4lhqgi","name":"fzf_0.74.5_ppc64le.deb","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-debian-package","state":"uploaded","size":2139194,"digest":"sha256:b9875cebe48380697d3e2656e6786bf4e979153fe382cc97141359b1d280dd66","download_count":47,"created_at":"2026-10-11T02:39:30Z","updated_at":"2026-10-11T02:39:31Z"},{"id":629581864,"node_id":"RA_kwDOANKv9s4lhqgo","name":"fzf_0.74.5_riscv64.deb","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-debian-package","state":"uploaded","size":2179564,"digest":"sha256:f7c92764cef7427f5a3b0dd5c0925782c62c3250e7de75e12aaf404382e750ca","download_count":48,"created_at":"2026-10-11T02:39:31Z","updated_at":"2026-10-11T02:39:31Z"},{"id":629581850,"node_id":"RA_kwDOANKv9s4lhqga","name":"fzf_0.74.5_s390x.deb","label":"","uploader":{"login":"junegunn","id":700826,"node_id":"MDQ6VXNlcjcwMDgyNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-debian-package","state":"uploaded","size":2227802,"digest":"sha256:ef201e04c1bee0bc5053ba7bf987c7570d0af24be8558ed764fa3ad1016324dc","download_count":50,"created_at":"2026-10-11T02:39:30Z","updated_at":"2026-10-11T02:39:30Z"}],"body":"- Fixed `--popup` unzooming the window when opened over a zoomed pane on tmux 3.8 or above (#4927, junegunn/fzf.vim#1625) (@jereviikari)\n    - On tmux 3.7, the window is still unzoomed, as tmux 3.7b crashes when a floating pane is created over a zoomed window\n- Fixed `--gap-line` cutting a grapheme cluster when filling the last cells of the line (#4920)\n- Fixed an escape sequence fzf does not recognize being partly consumed, which leaked the rest into the query (#4926)\n- Fixed a key lost when it arrived in the same read as an escape sequence\n- Fixed `focus` event not triggered after `reload` when the new item is at the same position as the previous one (#4930)\n    - With `--id-nth`, the event is not triggered if the focus moves directly from an item to another item with the same key\n    - A `focus` binding that runs `reload` now triggers itself again after each reload, unless `--id-nth` is set and the key does not change\n- Security fixes\n    - fzf-tmux no longer evaluates an attached layout size (e.g. `-l50`) via bash arithmetic, which could run commands or inject tmux flags (GHSA-w6x2-f5m4-xw82)\n    - zsh completion now creates its FIFO in a private `mktemp -d` directory instead of a predictable `/tmp` path (GHSA-7rj6-7pqx-v7rm)\n    - Reported by Sai Sreewathsa Kovalluri, Shon Babu, and Kannan K (Researchers) of Innspark Solutions\n\n","reactions":{"total_count":33,"+1":12,"-1":0,"laugh":1,"hooray":7,"confused":0,"heart":7,"rocket":5,"eyes":1},"mentions_count":1}

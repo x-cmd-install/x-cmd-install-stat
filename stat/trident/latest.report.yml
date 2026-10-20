@@ -2,15 +2,15 @@ about:
   description: "Storage orchestrator for containers"
   license: Apache-2.0
   homepage: 
-  head: cf2a32a
+  head: c510c4b
   archived: false
   latestVersion: "v26.06.2"
   latestRelease: "v26.06.2"
   latestPrerelease: "v20.01.0-beta.1"
-  collectedAt: 2026-10-19T03:48:49Z
+  collectedAt: 2026-10-20T03:59:43Z
 timeline:
   created: 2016-12-22
-  lastCommit: 2026-10-16
+  lastCommit: 2026-10-19
   lastVersion: 2026-10-08
   lastRelease: 2026-10-08
   lastPrerelease: 2019-12-20
@@ -23,7 +23,7 @@ popularity:
   pullRequest: 154
   issue: 1038
 language:
-  Go: 21248726
+  Go: 21381712
   Go Template: 77087
   Python: 51596
   Makefile: 27883
@@ -31,72 +31,72 @@ language:
   Mustache: 10837
   Dockerfile: 4904
   templ: 376
-totalBytes: 21439730
+totalBytes: 21572716
 recent:
   last30d:
-    since: 2026-09-19
+    since: 2026-09-20
     release: 1
     mergedPR: 0
     openPR: 0
     closedIssue: 1
     openIssue: 2
-    commit: 33
+    commit: 36
   last60d:
-    since: 2026-08-20
+    since: 2026-08-21
     release: 1
     mergedPR: 0
     openPR: 5
     closedIssue: 3
     openIssue: 10
-    commit: 48
+    commit: 51
   last90d:
-    since: 2026-07-21
+    since: 2026-07-22
     release: 2
     mergedPR: 0
     openPR: 6
     closedIssue: 4
     openIssue: 15
-    commit: 64
+    commit: 67
   last180d:
-    since: 2026-04-22
+    since: 2026-04-23
     release: 4
     mergedPR: 0
     openPR: 16
     closedIssue: 9
     openIssue: 33
-    commit: 132
+    commit: 135
   last360d:
-    since: 2025-10-24
+    since: 2025-10-25
     release: 7
     mergedPR: 0
     openPR: 19
     closedIssue: 36
     openIssue: 59
-    commit: 255
+    commit: 258
   last720d:
-    since: 2024-10-29
+    since: 2024-10-30
     release: 14
     mergedPR: 0
     openPR: 31
     closedIssue: 89
     openIssue: 116
-    commit: 494
+    commit: 496
 total:
   release: 76
   mergedPR: 4
   openPR: 51
   closedIssue: 802
   openIssue: 236
-  commit: 1924
+  commit: 1927
 ---
 path: /home/runner/.x-repo/github.com/NetApp/trident
-collectedAt: 2026-10-19T03:49:08Z
+collectedAt: 2026-10-20T03:59:57Z
 loc:
   Go:
-    code: 2123726
-    comments: 557243
-    blanks: 585147
-    files: 6000
+    code: 2127096
+    comments: 557585
+    blanks: 585765
+    files: 6006
   Yaml:
     code: 962567
     comments: 128
@@ -148,29 +148,29 @@ loc:
     blanks: 3655
     files: 9
 total:
-  code: 3260886
-  comments: 561744
-  blanks: 590212
-  files: 6144
+  code: 3264256
+  comments: 562086
+  blanks: 590830
+  files: 6150
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/NetApp/trident
-  commit: 8d2b91059d4c3ea7c51f69f8dbf96a30c5a74741
+  commit: c510c4ba346a900408880e1f1c34256dd27877a0
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.8
 checks:
+  - name: Code-Review
+    score: 0
+    reason: Found 0/30 approved changesets -- score normalized to 0
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 0
-    reason: Found 0/30 approved changesets -- score normalized to 0
-    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
@@ -183,9 +183,9 @@ checks:
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
+      - 'Info: jobLevel ''packages'' permission set to ''read'': .github/workflows/codeql.yml:36'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql.yml:39'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:40'
-      - 'Info: jobLevel ''packages'' permission set to ''read'': .github/workflows/codeql.yml:36'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/backport-on-merge.yml:19'
       - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/changelog-label-check.yml:13'
       - 'Warn: no topLevel permission defined: .github/workflows/codeql.yml:1'
@@ -196,14 +196,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: SAST
     score: 10
     reason: 'SAST tool detected: CodeQL'
@@ -214,6 +206,14 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: License
     score: 10
     reason: license file detected
@@ -251,6 +251,11 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:67: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/codeql.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:77: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/codeql.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:105: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/codeql.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:28: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:51: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:55: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:70: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:71: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:91: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:95: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:96: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
@@ -260,14 +265,9 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:174: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/github-actions.yml:230: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:297: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:28: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:51: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:55: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:70: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-actions.yml:71: update your workflow using https://app.stepsecurity.io/secureworkflow/NetApp/trident/github-actions.yml/master?enable=pin'
       - 'Warn: containerImage not pinned by hash: Dockerfile:4'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.Windows:4: pin your Docker image by updating mcr.microsoft.com/windows/servercore:ltsc2022 to mcr.microsoft.com/windows/servercore:ltsc2022@sha256:76cf422c98ca437b308374d0498280541fa42ac7061bb44015a6c8b70cf4db6a'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.Windows:5: pin your Docker image by updating mcr.microsoft.com/windows/nanoserver:ltsc2022 to mcr.microsoft.com/windows/nanoserver:ltsc2022@sha256:8e17c72fbf586d21e7e5a4edf51d97d05ce2c095cbbd345246c69d151fb3ddb3'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.Windows:4: pin your Docker image by updating mcr.microsoft.com/windows/servercore:ltsc2022 to mcr.microsoft.com/windows/servercore:ltsc2022@sha256:593cf4a5ef08cfff00a03637e45eba073b8fe9dc90b80af4449bc5f427c7cdcd'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.Windows:5: pin your Docker image by updating mcr.microsoft.com/windows/nanoserver:ltsc2022 to mcr.microsoft.com/windows/nanoserver:ltsc2022@sha256:32729e1cdc6718c90952375e9bbae2b2c5d38f41ceb50a693fc2383b76df28fd'
       - 'Warn: containerImage not pinned by hash: contrib/docker/plugin/Dockerfile:1: pin your Docker image by updating alpine:3 to alpine:3@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6'
       - 'Warn: containerImage not pinned by hash: operator/Dockerfile:4'
       - 'Warn: goCommand not pinned by hash: .github/workflows/github-actions.yml:181'
@@ -276,4 +276,4 @@ checks:
       - 'Info:   0 out of   5 containerImage dependencies pinned'
       - 'Info:   0 out of   1 goCommand dependencies pinned'
 ---
-{"id":407212643,"author":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBJmq8s4YRZJj","tag_name":"v26.06.2","target_commitish":"9e8c1cd69f9a3461d68bb0a50069e14670258d75","name":"v26.06.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-08T18:48:24Z","updated_at":"2026-10-13T13:01:39Z","published_at":"2026-10-08T20:46:01Z","assets":[{"id":622854005,"node_id":"RA_kwDOBJmq8s4lH_91","name":"trident-installer-26.06.2.tar.gz","label":"","uploader":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":113401352,"digest":"sha256:338a2a7194452a769bfa1871f8a11b06a0f8ed76da7b642a2f53fc9bc12a7ec3","download_count":683,"created_at":"2026-10-08T19:57:39Z","updated_at":"2026-10-08T19:57:42Z"}],"body":"## Changes since v26.06.1\r\n\r\n### Trident\r\n\r\n**Fixes:**\r\n\r\n- **Kubernetes:** Fixed ONTAP-NAS export policy rules being silently deleted when the Trident controller restarted, or a `TridentBackendConfig` was otherwise updated, while `enableConcurrency` was set to `true`, which could strand already-mounted volumes (Issues [#1166](https://github.com/NetApp/trident/issues/1166), [#1179](https://github.com/NetApp/trident/issues/1179)).\r\n- **Kubernetes:** Fixed backend updates running a per-volume orphan scan for non-material changes such as credentials and QoS, which could block CSI operations for hours on large backends. The scan now runs only when the SVM or storage prefix changes.\r\n- **Kubernetes:** Fixed credentials appearing in Trident's debug logs, including CSI gRPC request dumps, the startup environment dump, and `TridentBackendConfig` specifications logged by the CRD controller. The startup environment dump now logs values only for Trident's own `TRIDENT_*` variables and lists other variables by name. ([CVE-2026-22061](https://nvd.nist.gov/vuln/detail/cve-2026-22061))"}
+{"id":407212643,"author":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBJmq8s4YRZJj","tag_name":"v26.06.2","target_commitish":"9e8c1cd69f9a3461d68bb0a50069e14670258d75","name":"v26.06.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-08T18:48:24Z","updated_at":"2026-10-13T13:01:39Z","published_at":"2026-10-08T20:46:01Z","assets":[{"id":622854005,"node_id":"RA_kwDOBJmq8s4lH_91","name":"trident-installer-26.06.2.tar.gz","label":"","uploader":{"login":"netapp-ci-release[bot]","id":131532883,"node_id":"BOT_kgDOB9cIUw","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":113401352,"digest":"sha256:338a2a7194452a769bfa1871f8a11b06a0f8ed76da7b642a2f53fc9bc12a7ec3","download_count":791,"created_at":"2026-10-08T19:57:39Z","updated_at":"2026-10-08T19:57:42Z"}],"body":"## Changes since v26.06.1\r\n\r\n### Trident\r\n\r\n**Fixes:**\r\n\r\n- **Kubernetes:** Fixed ONTAP-NAS export policy rules being silently deleted when the Trident controller restarted, or a `TridentBackendConfig` was otherwise updated, while `enableConcurrency` was set to `true`, which could strand already-mounted volumes (Issues [#1166](https://github.com/NetApp/trident/issues/1166), [#1179](https://github.com/NetApp/trident/issues/1179)).\r\n- **Kubernetes:** Fixed backend updates running a per-volume orphan scan for non-material changes such as credentials and QoS, which could block CSI operations for hours on large backends. The scan now runs only when the SVM or storage prefix changes.\r\n- **Kubernetes:** Fixed credentials appearing in Trident's debug logs, including CSI gRPC request dumps, the startup environment dump, and `TridentBackendConfig` specifications logged by the CRD controller. The startup environment dump now logs values only for Trident's own `TRIDENT_*` variables and lists other variables by name. ([CVE-2026-22061](https://nvd.nist.gov/vuln/detail/cve-2026-22061))"}

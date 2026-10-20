@@ -7,7 +7,7 @@ about:
   latestVersion: "1.17.0"
   latestRelease: "1.17.0"
   latestPrerelease: "1.11.0.rc.1"
-  collectedAt: 2026-10-19T05:54:55Z
+  collectedAt: 2026-10-20T06:14:46Z
 timeline:
   created: 2011-08-14
   lastCommit: 2026-07-06
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-07-06
   lastPrerelease: 2021-08-25
 popularity:
-  star: 14831
+  star: 14832
   watcher: 545
-  fork: 2682
+  fork: 2681
   release: 192
   contributor: 323
   pullRequest: 2210
@@ -31,7 +31,7 @@ language:
 totalBytes: 2505523
 recent:
   last30d:
-    since: 2026-09-19
+    since: 2026-09-20
     release: 0
     mergedPR: 0
     openPR: 0
@@ -39,7 +39,7 @@ recent:
     openIssue: 5
     commit: 0
   last60d:
-    since: 2026-08-20
+    since: 2026-08-21
     release: 0
     mergedPR: 0
     openPR: 1
@@ -47,7 +47,7 @@ recent:
     openIssue: 8
     commit: 0
   last90d:
-    since: 2026-07-21
+    since: 2026-07-22
     release: 0
     mergedPR: 0
     openPR: 1
@@ -55,7 +55,7 @@ recent:
     openIssue: 9
     commit: 0
   last180d:
-    since: 2026-04-22
+    since: 2026-04-23
     release: 1
     mergedPR: 5
     openPR: 1
@@ -63,7 +63,7 @@ recent:
     openIssue: 15
     commit: 25
   last360d:
-    since: 2025-10-24
+    since: 2025-10-25
     release: 1
     mergedPR: 5
     openPR: 3
@@ -71,23 +71,23 @@ recent:
     openIssue: 29
     commit: 25
   last720d:
-    since: 2024-10-29
-    release: 4
+    since: 2024-10-30
+    release: 2
     mergedPR: 13
     openPR: 10
     closedIssue: 80
-    openIssue: 132
-    commit: 58
+    openIssue: 131
+    commit: 47
 total:
   release: 192
   mergedPR: 1709
-  openPR: 62
+  openPR: 61
   closedIssue: 9742
   openIssue: 780
   commit: 10449
 ---
 path: /home/runner/.x-repo/github.com/CocoaPods/CocoaPods
-collectedAt: 2026-10-19T05:55:03Z
+collectedAt: 2026-10-20T06:14:54Z
 loc:
   Json:
     code: 233894
@@ -160,7 +160,7 @@ total:
   blanks: 36934
   files: 5251
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/CocoaPods/CocoaPods
   commit: b80e113e28a7e23cd6dbc169f0c923f6b48bf7a2
@@ -169,18 +169,22 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 2
 checks:
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 0
-    details: null
   - name: Code-Review
     score: 0
     reason: Found 1/12 approved changesets -- score normalized to 0
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -189,10 +193,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/Lint.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/Specs.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -202,12 +202,6 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: License
-    score: 9
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Warn: project license file does not contain an FSF or OSI license.'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -354,19 +348,16 @@ checks:
       - 'Warn: binary detected: spec/fixtures/xcframeworks/StaticLibrary/CoconutLib.xcframework/tvos-arm64_x86_64-simulator/libCoconut.a:1'
       - 'Warn: binary detected: spec/fixtures/xcframeworks/StaticLibrary/CoconutLib.xcframework/watchos-arm64_32_armv7k/libCoconut.a:1'
       - 'Warn: binary detected: spec/fixtures/xcframeworks/StaticLibrary/CoconutLib.xcframework/watchos-arm64_i386_x86_64-simulator/libCoconut.a:1'
+  - name: License
+    score: 9
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Warn: project license file does not contain an FSF or OSI license.'
   - name: Signed-Releases
     score: -1
     reason: no releases found
     details: null
-  - name: Branch-Protection
-    score: 3
-    reason: branch protection is not maximal on development and all release branches
-    details:
-      - 'Info: ''allow deletion'' disabled on branch ''master'''
-      - 'Info: ''force pushes'' disabled on branch ''master'''
-      - 'Warn: branch ''master'' does not require approvers'
-      - 'Warn: codeowners review is not required on branch ''master'''
-      - 'Warn: no status checks found to merge onto branch ''master'''
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -384,6 +375,15 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/issue-opened.yml:12: update your workflow using https://app.stepsecurity.io/secureworkflow/CocoaPods/CocoaPods/issue-opened.yml/master?enable=pin'
       - 'Info:   0 out of   7 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 third-party GitHubAction dependencies pinned'
+  - name: Branch-Protection
+    score: 3
+    reason: branch protection is not maximal on development and all release branches
+    details:
+      - 'Info: ''allow deletion'' disabled on branch ''master'''
+      - 'Info: ''force pushes'' disabled on branch ''master'''
+      - 'Warn: branch ''master'' does not require approvers'
+      - 'Warn: codeowners review is not required on branch ''master'''
+      - 'Warn: no status checks found to merge onto branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

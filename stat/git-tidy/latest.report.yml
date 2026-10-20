@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.0.1"
   latestRelease: "v2.0.1"
   latestPrerelease: "0.4.0"
-  collectedAt: 2026-10-19T05:23:14Z
+  collectedAt: 2026-10-20T05:25:38Z
 timeline:
   created: 2019-03-08
   lastCommit: 2023-04-26
@@ -28,7 +28,7 @@ language:
 totalBytes: 11053
 recent:
   last30d:
-    since: 2026-09-19
+    since: 2026-09-20
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-20
+    since: 2026-08-21
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-21
+    since: 2026-07-22
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-22
+    since: 2026-04-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-24
+    since: 2025-10-25
     release: 0
     mergedPR: 0
     openPR: 1
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-29
+    since: 2024-10-30
     release: 0
     mergedPR: 0
     openPR: 1
@@ -84,7 +84,7 @@ total:
   commit: 65
 ---
 path: /home/runner/.x-repo/github.com/drewwyatt/git-tidy
-collectedAt: 2026-10-19T05:23:14Z
+collectedAt: 2026-10-20T05:25:38Z
 loc:
   Rust:
     code: 276
@@ -107,7 +107,7 @@ total:
   blanks: 78
   files: 7
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/drewwyatt/git-tidy
   commit: 270f8aa8f59b2e157183b7eaab230cb585200208
@@ -116,21 +116,9 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.2
 checks:
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
-  - name: Code-Review
-    score: 4
-    reason: Found 8/17 approved changesets -- score normalized to 4
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
     details: null
   - name: Packaging
     score: -1
@@ -143,6 +131,18 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Code-Review
+    score: 4
+    reason: Found 8/17 approved changesets -- score normalized to 4
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -154,7 +154,7 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/drewwyatt/git-tidy/ci.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/drewwyatt/git-tidy/ci.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:29: update your workflow using https://app.stepsecurity.io/secureworkflow/drewwyatt/git-tidy/ci.yml/main?enable=pin'
-      - 'Warn: containerImage not pinned by hash: .devcontainer/Dockerfile:1: pin your Docker image by updating rust:1 to rust:1@sha256:81015672d6939b0265f09adf96d5de125482bb1330106076956b0518e74edc90'
+      - 'Warn: containerImage not pinned by hash: .devcontainer/Dockerfile:1: pin your Docker image by updating rust:1 to rust:1@sha256:e259494b14672950a909b4c54527e19d29cae6ebf980672114c8bb85e5594e4a'
       - 'Info:   0 out of   1 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
@@ -177,6 +177,10 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -191,10 +195,6 @@ checks:
       - 'Warn: release artifact 0.4.0 does not have provenance: https://api.github.com/repos/drewwyatt/git-tidy/releases/17081060'
       - 'Warn: release artifact 0.3.0 does not have provenance: https://api.github.com/repos/drewwyatt/git-tidy/releases/17019991'
       - 'Warn: release artifact 0.2.0 does not have provenance: https://api.github.com/repos/drewwyatt/git-tidy/releases/16889613'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

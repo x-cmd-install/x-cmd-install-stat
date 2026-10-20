@@ -7,7 +7,7 @@ about:
   latestVersion: "20250605"
   latestRelease: "20250605"
   latestPrerelease: ""
-  collectedAt: 2026-10-19T04:57:04Z
+  collectedAt: 2026-10-20T05:07:07Z
 timeline:
   created: 2014-04-18
   lastCommit: 2026-10-16
@@ -32,7 +32,7 @@ language:
 totalBytes: 267769
 recent:
   last30d:
-    since: 2026-09-19
+    since: 2026-09-20
     release: 0
     mergedPR: 0
     openPR: 8
@@ -40,15 +40,15 @@ recent:
     openIssue: 0
     commit: 2
   last60d:
-    since: 2026-08-20
+    since: 2026-08-21
     release: 0
-    mergedPR: 1
+    mergedPR: 0
     openPR: 11
     closedIssue: 1
     openIssue: 0
     commit: 7
   last90d:
-    since: 2026-07-21
+    since: 2026-07-22
     release: 0
     mergedPR: 1
     openPR: 11
@@ -56,7 +56,7 @@ recent:
     openIssue: 1
     commit: 28
   last180d:
-    since: 2026-04-22
+    since: 2026-04-23
     release: 0
     mergedPR: 1
     openPR: 14
@@ -64,7 +64,7 @@ recent:
     openIssue: 4
     commit: 34
   last360d:
-    since: 2025-10-24
+    since: 2025-10-25
     release: 0
     mergedPR: 1
     openPR: 17
@@ -72,7 +72,7 @@ recent:
     openIssue: 5
     commit: 54
   last720d:
-    since: 2024-10-29
+    since: 2024-10-30
     release: 2
     mergedPR: 7
     openPR: 19
@@ -88,7 +88,7 @@ total:
   commit: 1406
 ---
 path: /home/runner/.x-repo/github.com/iputils/iputils
-collectedAt: 2026-10-19T04:57:05Z
+collectedAt: 2026-10-20T05:07:08Z
 loc:
   C:
     code: 6063
@@ -146,24 +146,27 @@ total:
   blanks: 1426
   files: 54
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/iputils/iputils
-  commit: 18717a3984c83452138d6bed76426237dbe41ae7
+  commit: a22bd56c486766d5fadb9ed4821c356936c4854f
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 5.3
 checks:
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Code-Review
     score: 0
     reason: Found 1/24 approved changesets -- score normalized to 0
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -172,14 +175,11 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -211,10 +211,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -229,6 +225,10 @@ checks:
       - 'Warn: release artifact 20240905 does not have provenance: https://api.github.com/repos/iputils/iputils/releases/173601718'
       - 'Warn: release artifact 20240117 does not have provenance: https://api.github.com/repos/iputils/iputils/releases/137364883'
       - 'Warn: release artifact 20231222 does not have provenance: https://api.github.com/repos/iputils/iputils/releases/134940741'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

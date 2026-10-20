@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-10-19T05:20:09Z
+  collectedAt: 2026-10-20T05:28:32Z
 timeline:
   created: 2014-01-18
   lastCommit: 2026-10-02
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 
   lastPrerelease: 
 popularity:
-  star: 347
+  star: 345
   watcher: 5
   fork: 16
   release: 0
@@ -28,7 +28,7 @@ language:
 totalBytes: 14406
 recent:
   last30d:
-    since: 2026-09-19
+    since: 2026-09-20
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 4
   last60d:
-    since: 2026-08-20
+    since: 2026-08-21
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 4
   last90d:
-    since: 2026-07-21
+    since: 2026-07-22
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 4
   last180d:
-    since: 2026-04-22
+    since: 2026-04-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 4
   last360d:
-    since: 2025-10-24
+    since: 2025-10-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 4
   last720d:
-    since: 2024-10-29
+    since: 2024-10-30
     release: 0
     mergedPR: 0
     openPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 94
 ---
 path: /home/runner/.x-repo/github.com/kessler/node-bcat
-collectedAt: 2026-10-19T05:20:10Z
+collectedAt: 2026-10-20T05:28:33Z
 loc:
   Json:
     code: 3819
@@ -112,7 +112,7 @@ total:
   blanks: 71
   files: 9
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/kessler/node-bcat
   commit: b707ad6c7e29ad4ca2e15a0b6bb2e89464659ca9
@@ -121,9 +121,18 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.6
 checks:
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Maintained
     score: 3
     reason: 4 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 3
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -131,23 +140,10 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/codeql-analysis.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Code-Review
     score: 0
     reason: Found 1/27 approved changesets -- score normalized to 0
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -157,6 +153,10 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql-analysis.yml:53: update your workflow using https://app.stepsecurity.io/secureworkflow/kessler/node-bcat/codeql-analysis.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql-analysis.yml:67: update your workflow using https://app.stepsecurity.io/secureworkflow/kessler/node-bcat/codeql-analysis.yml/master?enable=pin'
       - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected

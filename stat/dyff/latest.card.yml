@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.12.0"
   latestRelease: "v1.12.0"
   latestPrerelease: "v0.4-alpha"
-  collectedAt: 2026-10-19T05:23:45Z
+  collectedAt: 2026-10-20T05:33:17Z
 timeline:
   created: 2018-03-09
   lastCommit: 2026-10-14
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-04-26
   lastPrerelease: 2018-04-20
 popularity:
-  star: 1898
+  star: 1899
   watcher: 10
   fork: 102
   release: 86
@@ -29,7 +29,7 @@ language:
 totalBytes: 220254
 recent:
   last30d:
-    since: 2026-09-19
+    since: 2026-09-20
     release: 0
     mergedPR: 11
     openPR: 1
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 9
   last60d:
-    since: 2026-08-20
+    since: 2026-08-21
     release: 0
     mergedPR: 20
     openPR: 3
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 20
   last90d:
-    since: 2026-07-21
+    since: 2026-07-22
     release: 0
     mergedPR: 29
     openPR: 3
@@ -53,15 +53,15 @@ recent:
     openIssue: 0
     commit: 28
   last180d:
-    since: 2026-04-22
+    since: 2026-04-23
     release: 2
     mergedPR: 73
     openPR: 7
-    closedIssue: 2
+    closedIssue: 1
     openIssue: 3
     commit: 69
   last360d:
-    since: 2025-10-24
+    since: 2025-10-25
     release: 9
     mergedPR: 128
     openPR: 8
@@ -69,7 +69,7 @@ recent:
     openIssue: 3
     commit: 128
   last720d:
-    since: 2024-10-29
+    since: 2024-10-30
     release: 14
     mergedPR: 220
     openPR: 15
@@ -85,7 +85,7 @@ total:
   commit: 1099
 ---
 path: /home/runner/.x-repo/github.com/homeport/dyff
-collectedAt: 2026-10-19T05:23:47Z
+collectedAt: 2026-10-20T05:33:17Z
 loc:
   Yaml:
     code: 5803
@@ -133,10 +133,10 @@ total:
   blanks: 1396
   files: 109
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/homeport/dyff
-  commit: 4ecb47958c9b97b086e96fd865ce349c4e6ea69b
+  commit: 8801e8ed76df99e67fd56c3ebdda8d058a5313a7
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
@@ -192,6 +192,17 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -200,26 +211,10 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:9'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -239,4 +234,9 @@ checks:
     reason: SAST tool is run on all commits
     details:
       - 'Info: all commits (30) are checked with a SAST tool'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:9'
 ---
