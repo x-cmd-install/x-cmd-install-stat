@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.12.7"
   latestRelease: "v2.12.7"
   latestPrerelease: "v2.12.0-rc2"
-  collectedAt: 2026-10-20T04:43:33Z
+  collectedAt: 2026-10-21T04:37:57Z
 timeline:
   created: 2016-10-09
   lastCommit: 2026-10-13
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-10-13
   lastPrerelease: 2026-01-29
 popularity:
-  star: 1058
+  star: 1059
   watcher: 76
   fork: 289
   release: 70
@@ -33,7 +33,7 @@ language:
 totalBytes: 3749828
 recent:
   last30d:
-    since: 2026-09-20
+    since: 2026-09-21
     release: 1
     mergedPR: 1
     openPR: 0
@@ -41,7 +41,7 @@ recent:
     openIssue: 0
     commit: 5
   last60d:
-    since: 2026-08-21
+    since: 2026-08-22
     release: 2
     mergedPR: 1
     openPR: 0
@@ -49,7 +49,7 @@ recent:
     openIssue: 0
     commit: 17
   last90d:
-    since: 2026-07-22
+    since: 2026-07-23
     release: 2
     mergedPR: 1
     openPR: 2
@@ -57,15 +57,15 @@ recent:
     openIssue: 0
     commit: 25
   last180d:
-    since: 2026-04-23
-    release: 3
+    since: 2026-04-24
+    release: 2
     mergedPR: 6
     openPR: 4
     closedIssue: 0
     openIssue: 0
     commit: 62
   last360d:
-    since: 2025-10-25
+    since: 2025-10-26
     release: 12
     mergedPR: 28
     openPR: 7
@@ -73,13 +73,13 @@ recent:
     openIssue: 0
     commit: 281
   last720d:
-    since: 2024-10-30
+    since: 2024-10-31
     release: 25
     mergedPR: 38
     openPR: 7
     closedIssue: 0
     openIssue: 0
-    commit: 510
+    commit: 509
 total:
   release: 70
   mergedPR: 267
@@ -89,7 +89,7 @@ total:
   commit: 9077
 ---
 path: /home/runner/.x-repo/github.com/macports/macports-base
-collectedAt: 2026-10-20T04:43:50Z
+collectedAt: 2026-10-21T04:38:10Z
 loc:
   C:
     code: 490684
@@ -282,31 +282,22 @@ total:
   blanks: 200428
   files: 3893
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/macports/macports-base
-  commit: b2562d961aa9ff224e800c48fcd5bdf180d73a68
+  commit: 9a7c0ff68010491f699c91e915c1623769a472c9
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4
 checks:
-  - name: Code-Review
-    score: 0
-    reason: Found 2/30 approved changesets -- score normalized to 0
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 28 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Code-Review
+    score: 0
+    reason: Found 2/30 approved changesets -- score normalized to 0
     details: null
   - name: Token-Permissions
     score: 0
@@ -316,6 +307,15 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/mirror.yml:8'
       - 'Info: no jobLevel write permissions found'
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 10
+    reason: 27 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -334,10 +334,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: BSD 3-Clause "New" or "Revised" License: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Binary-Artifacts
     score: 4
     reason: binaries present in source code
@@ -379,6 +375,10 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/mirror.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/macports/macports-base/mirror.yml/master?enable=pin'
       - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
@@ -388,14 +388,14 @@ checks:
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
     details:
+      - 'Info: signed release artifact: MacPorts-2.12.7-10.10-Yosemite.pkg.asc: https://github.com/macports/macports-base/releases/tag/v2.12.7'
       - 'Info: signed release artifact: MacPorts-2.12.6-10.10-Yosemite.pkg.asc: https://github.com/macports/macports-base/releases/tag/v2.12.6'
       - 'Info: signed release artifact: MacPorts-2.12.5-10.10-Yosemite.pkg.asc: https://github.com/macports/macports-base/releases/tag/v2.12.5'
       - 'Info: signed release artifact: MacPorts-2.12.4-10.10-Yosemite.pkg.asc: https://github.com/macports/macports-base/releases/tag/v2.12.4'
       - 'Info: signed release artifact: MacPorts-2.12.3-10.10-Yosemite.pkg.asc: https://github.com/macports/macports-base/releases/tag/v2.12.3'
-      - 'Info: signed release artifact: MacPorts-2.12.2-10.10-Yosemite.pkg.asc: https://github.com/macports/macports-base/releases/tag/v2.12.2'
+      - 'Warn: release artifact v2.12.7 does not have provenance: https://api.github.com/repos/macports/macports-base/releases/411499205'
       - 'Warn: release artifact v2.12.6 does not have provenance: https://api.github.com/repos/macports/macports-base/releases/376635228'
       - 'Warn: release artifact v2.12.5 does not have provenance: https://api.github.com/repos/macports/macports-base/releases/312172286'
       - 'Warn: release artifact v2.12.4 does not have provenance: https://api.github.com/repos/macports/macports-base/releases/298203956'
       - 'Warn: release artifact v2.12.3 does not have provenance: https://api.github.com/repos/macports/macports-base/releases/294673883'
-      - 'Warn: release artifact v2.12.2 does not have provenance: https://api.github.com/repos/macports/macports-base/releases/291541681'
 ---

@@ -2,15 +2,15 @@ about:
   description: "Kubernetes Operations (kOps) - Production Grade k8s Installation, Upgrades and Management"
   license: Apache-2.0
   homepage: https://kops.sigs.k8s.io/
-  head: 8e9f0aa
+  head: da18165
   archived: false
   latestVersion: "v1.37.0-beta.1"
   latestRelease: "v1.36.2"
   latestPrerelease: "v1.37.0-beta.1"
-  collectedAt: 2026-10-20T05:28:56Z
+  collectedAt: 2026-10-21T05:23:44Z
 timeline:
   created: 2016-06-27
-  lastCommit: 2026-10-20
+  lastCommit: 2026-10-21
   lastVersion: 2026-08-29
   lastRelease: 2026-08-08
   lastPrerelease: 2026-08-29
@@ -19,8 +19,8 @@ popularity:
   watcher: 302
   fork: 4717
   release: 239
-  contributor: 1493
-  pullRequest: 13348
+  contributor: 1494
+  pullRequest: 13356
   issue: 5360
 language:
   Go: 8721790
@@ -34,69 +34,69 @@ language:
 totalBytes: 13835086
 recent:
   last30d:
-    since: 2026-09-20
+    since: 2026-09-21
     release: 0
-    mergedPR: 57
-    openPR: 11
+    mergedPR: 58
+    openPR: 18
     closedIssue: 2
     openIssue: 2
-    commit: 108
+    commit: 110
   last60d:
-    since: 2026-08-21
+    since: 2026-08-22
     release: 1
     mergedPR: 110
-    openPR: 16
+    openPR: 23
     closedIssue: 4
     openIssue: 3
-    commit: 227
+    commit: 229
   last90d:
-    since: 2026-07-22
+    since: 2026-07-23
     release: 3
-    mergedPR: 209
-    openPR: 22
+    mergedPR: 210
+    openPR: 28
     closedIssue: 9
     openIssue: 6
-    commit: 483
+    commit: 485
   last180d:
-    since: 2026-04-23
+    since: 2026-04-24
     release: 10
-    mergedPR: 520
-    openPR: 37
+    mergedPR: 517
+    openPR: 44
     closedIssue: 26
     openIssue: 11
-    commit: 1062
+    commit: 1064
   last360d:
-    since: 2025-10-25
+    since: 2025-10-26
     release: 17
     mergedPR: 932
-    openPR: 44
+    openPR: 51
     closedIssue: 73
     openIssue: 15
-    commit: 1870
+    commit: 1872
   last720d:
-    since: 2024-10-30
+    since: 2024-10-31
     release: 33
-    mergedPR: 1409
-    openPR: 45
+    mergedPR: 1410
+    openPR: 52
     closedIssue: 185
     openIssue: 18
-    commit: 2783
+    commit: 2785
 total:
   release: 239
-  mergedPR: 11705
-  openPR: 45
+  mergedPR: 11706
+  openPR: 52
   closedIssue: 5278
   openIssue: 82
-  commit: 24577
+  commit: 24579
 ---
 path: /home/runner/.x-repo/github.com/kubernetes/kops
-collectedAt: 2026-10-20T05:29:54Z
+collectedAt: 2026-10-21T05:25:03Z
 loc:
   Go:
-    code: 3276590
-    comments: 821158
-    blanks: 479137
-    files: 13076
+    code: 3288279
+    comments: 823340
+    blanks: 480592
+    files: 13092
   Json:
     code: 141594
     comments: 0
@@ -204,19 +204,19 @@ loc:
     files: 611
   Text:
     code: 0
-    comments: 11532
+    comments: 11537
     blanks: 1279
     files: 78
 total:
-  code: 3616453
-  comments: 931502
-  blanks: 529585
-  files: 14735
+  code: 3628142
+  comments: 933689
+  blanks: 531040
+  files: 14751
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/kubernetes/kops
-  commit: 438a07d72a585671c5a2f7a60950fa6527599279
+  commit: 8e9f0aaf976a1d97ab8ad9715b5f90edcfaeba62
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
@@ -226,15 +226,19 @@ checks:
     score: 10
     reason: all changesets reviewed
     details: null
-  - name: Dangerous-Workflow
+  - name: Maintained
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: 30 commit(s) and 10 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -243,10 +247,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 13 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Token-Permissions
     score: 9
     reason: detected GitHub workflow tokens with excessive permissions
@@ -271,13 +271,13 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
+    details: null
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
   - name: Pinned-Dependencies
     score: 7

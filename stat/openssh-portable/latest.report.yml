@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-10-20T04:46:13Z
+  collectedAt: 2026-10-21T04:42:21Z
 timeline:
   created: 2014-01-17
   lastCommit: 2026-10-18
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 
   lastPrerelease: 
 popularity:
-  star: 4050
+  star: 4054
   watcher: 136
-  fork: 2192
+  fork: 2194
   release: 0
   contributor: 111
-  pullRequest: 696
+  pullRequest: 697
   issue: 0
 language:
   C: 4869919
@@ -35,63 +35,63 @@ language:
 totalBytes: 6937175
 recent:
   last30d:
-    since: 2026-09-20
+    since: 2026-09-21
     release: 0
     mergedPR: 0
-    openPR: 9
+    openPR: 10
     closedIssue: 0
     openIssue: 0
     commit: 59
   last60d:
-    since: 2026-08-21
+    since: 2026-08-22
     release: 0
     mergedPR: 0
-    openPR: 13
+    openPR: 14
     closedIssue: 0
     openIssue: 0
     commit: 136
   last90d:
-    since: 2026-07-22
+    since: 2026-07-23
     release: 0
     mergedPR: 0
-    openPR: 16
+    openPR: 17
     closedIssue: 0
     openIssue: 0
     commit: 193
   last180d:
-    since: 2026-04-23
+    since: 2026-04-24
     release: 0
     mergedPR: 0
-    openPR: 23
+    openPR: 24
     closedIssue: 0
     openIssue: 0
     commit: 399
   last360d:
-    since: 2025-10-25
+    since: 2025-10-26
     release: 0
     mergedPR: 0
-    openPR: 37
+    openPR: 38
     closedIssue: 0
     openIssue: 0
     commit: 656
   last720d:
-    since: 2024-10-30
+    since: 2024-10-31
     release: 0
     mergedPR: 0
-    openPR: 55
+    openPR: 56
     closedIssue: 0
     openIssue: 0
-    commit: 1228
+    commit: 1227
 total:
   release: 0
   mergedPR: 2
-  openPR: 139
+  openPR: 140
   closedIssue: 0
   openIssue: 0
   commit: 14015
 ---
 path: /home/runner/.x-repo/github.com/openssh/openssh-portable
-collectedAt: 2026-10-20T04:46:24Z
+collectedAt: 2026-10-21T04:42:32Z
 loc:
   C:
     code: 122937
@@ -184,18 +184,18 @@ total:
   blanks: 22497
   files: 641
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/openssh/openssh-portable
-  commit: d551375fa96622dd3e5ac2bc0b8da1b5fd4634cb
+  commit: 26b1363c7cbf5d01c730f45fc0b4abc5686beaf7
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 6.4
+score: 7.6
 checks:
-  - name: Dangerous-Workflow
+  - name: Maintained
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Security-Policy
     score: 9
@@ -205,33 +205,33 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Maintained
+  - name: Dangerous-Workflow
     score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Code-Review
     score: 0
     reason: Found 0/30 approved changesets -- score normalized to 0
-    details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/c-cpp.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/cifuzz.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/selfhosted.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/upstream.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/vm.yml:1'
-      - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Token-Permissions
+    score: 10
+    reason: GitHub workflow tokens follow principle of least privilege
+    details:
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/c-cpp.yml:13'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/cifuzz.yml:2'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/selfhosted.yml:2'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/upstream.yml:2'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/vm.yml:8'
+      - 'Info: no jobLevel write permissions found'
   - name: SAST
     score: 0
     reason: no SAST tool detected
@@ -292,6 +292,12 @@ checks:
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sshd_auth_session_fuzz.cc:19'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sshsig_fuzz.cc:18'
       - 'Info: CppLibFuzzer integration found: regress/misc/fuzz-harness/sshsigopt_fuzz.cc:11'
+  - name: Pinned-Dependencies
+    score: 10
+    reason: all dependencies are pinned
+    details:
+      - 'Info:  18 out of  18 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:  10 out of  10 third-party GitHubAction dependencies pinned'
   - name: License
     score: 9
     reason: license file detected
@@ -302,12 +308,6 @@ checks:
     score: -1
     reason: no releases found
     details: null
-  - name: Pinned-Dependencies
-    score: 10
-    reason: all dependencies are pinned
-    details:
-      - 'Info:  18 out of  18 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:  10 out of  10 third-party GitHubAction dependencies pinned'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'

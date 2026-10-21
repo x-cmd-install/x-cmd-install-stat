@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-10-20T04:36:02Z
+  collectedAt: 2026-10-21T04:28:53Z
 timeline:
   created: 2017-03-03
   lastCommit: 2026-09-06
@@ -17,7 +17,7 @@ timeline:
 popularity:
   star: 831
   watcher: 15
-  fork: 80
+  fork: 78
   release: 0
   contributor: 12
   pullRequest: 46
@@ -44,7 +44,7 @@ language:
 totalBytes: 2740851
 recent:
   last30d:
-    since: 2026-09-20
+    since: 2026-09-21
     release: 0
     mergedPR: 0
     openPR: 2
@@ -52,7 +52,7 @@ recent:
     openIssue: 3
     commit: 0
   last60d:
-    since: 2026-08-21
+    since: 2026-08-22
     release: 0
     mergedPR: 0
     openPR: 3
@@ -60,7 +60,7 @@ recent:
     openIssue: 4
     commit: 0
   last90d:
-    since: 2026-07-22
+    since: 2026-07-23
     release: 0
     mergedPR: 0
     openPR: 4
@@ -68,7 +68,7 @@ recent:
     openIssue: 4
     commit: 0
   last180d:
-    since: 2026-04-23
+    since: 2026-04-24
     release: 0
     mergedPR: 1
     openPR: 4
@@ -76,7 +76,7 @@ recent:
     openIssue: 5
     commit: 10
   last360d:
-    since: 2025-10-25
+    since: 2025-10-26
     release: 0
     mergedPR: 2
     openPR: 4
@@ -84,7 +84,7 @@ recent:
     openIssue: 7
     commit: 11
   last720d:
-    since: 2024-10-30
+    since: 2024-10-31
     release: 0
     mergedPR: 4
     openPR: 5
@@ -100,7 +100,7 @@ total:
   commit: 1046
 ---
 path: /home/runner/.x-repo/github.com/beyondgrep/ack3
-collectedAt: 2026-10-20T04:36:03Z
+collectedAt: 2026-10-21T04:28:55Z
 loc:
   Perl:
     code: 8284
@@ -203,7 +203,7 @@ total:
   blanks: 2852
   files: 126
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/beyondgrep/ack3
   commit: 11d698f9407c6bd5dfcff1c264bf0aa60abacc5d
@@ -212,13 +212,22 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 2.9
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
+  - name: Code-Review
+    score: 1
+    reason: Found 4/21 approved changesets -- score normalized to 1
     details: null
   - name: Maintained
     score: 1
     reason: 1 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 1
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -226,15 +235,6 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/testsuite.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Code-Review
-    score: 1
-    reason: Found 4/21 approved changesets -- score normalized to 1
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -258,11 +258,6 @@ checks:
       - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -271,6 +266,11 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: -1
     reason: no releases found

@@ -2,12 +2,12 @@ about:
   description: "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond."
   license: MIT
   homepage: https://ecc.tools
-  head: 6f1881a
+  head: 90606c8
   archived: false
   latestVersion: "v2.2.3"
   latestRelease: "v2.2.3"
   latestPrerelease: "v2.0.0-rc.1"
-  collectedAt: 2026-10-20T04:37:21Z
+  collectedAt: 2026-10-21T04:30:57Z
 timeline:
   created: 2026-01-18
   lastCommit: 2026-10-20
@@ -15,15 +15,15 @@ timeline:
   lastRelease: 2026-10-01
   lastPrerelease: 2026-05-25
 popularity:
-  star: 284240
-  watcher: 1415
-  fork: 42219
+  star: 284997
+  watcher: 1410
+  fork: 42283
   release: 19
-  contributor: 438
-  pullRequest: 2612
-  issue: 865
+  contributor: 439
+  pullRequest: 2619
+  issue: 867
 language:
-  JavaScript: 11217721
+  JavaScript: 11228890
   Rust: 1914717
   Python: 1620816
   Shell: 241535
@@ -33,71 +33,71 @@ language:
   CSS: 4037
   PowerShell: 2752
   Dockerfile: 2586
-totalBytes: 15132433
+totalBytes: 15143602
 recent:
   last30d:
-    since: 2026-09-20
+    since: 2026-09-21
     release: 2
-    mergedPR: 121
-    openPR: 94
-    closedIssue: 34
-    openIssue: 42
-    commit: 579
+    mergedPR: 119
+    openPR: 90
+    closedIssue: 32
+    openIssue: 43
+    commit: 583
   last60d:
-    since: 2026-08-21
+    since: 2026-08-22
     release: 4
-    mergedPR: 258
-    openPR: 133
-    closedIssue: 81
-    openIssue: 74
-    commit: 893
+    mergedPR: 260
+    openPR: 127
+    closedIssue: 82
+    openIssue: 76
+    commit: 897
   last90d:
-    since: 2026-07-22
+    since: 2026-07-23
     release: 5
-    mergedPR: 349
-    openPR: 147
-    closedIssue: 119
-    openIssue: 89
-    commit: 1157
+    mergedPR: 350
+    openPR: 141
+    closedIssue: 120
+    openIssue: 91
+    commit: 1161
   last180d:
-    since: 2026-04-23
+    since: 2026-04-24
     release: 7
-    mergedPR: 897
-    openPR: 153
-    closedIssue: 293
-    openIssue: 94
-    commit: 1992
+    mergedPR: 900
+    openPR: 148
+    closedIssue: 291
+    openIssue: 96
+    commit: 1996
   last360d:
-    since: 2025-10-25
+    since: 2025-10-26
     release: 19
-    mergedPR: 1270
-    openPR: 153
+    mergedPR: 1273
+    openPR: 148
     closedIssue: 770
-    openIssue: 94
-    commit: 3249
+    openIssue: 96
+    commit: 3253
   last720d:
-    since: 2024-10-30
+    since: 2024-10-31
     release: 19
-    mergedPR: 1270
-    openPR: 153
+    mergedPR: 1273
+    openPR: 148
     closedIssue: 770
-    openIssue: 94
-    commit: 3953
+    openIssue: 96
+    commit: 3957
 total:
   release: 19
-  mergedPR: 1273
-  openPR: 153
+  mergedPR: 1276
+  openPR: 148
   closedIssue: 771
-  openIssue: 94
-  commit: 3953
+  openIssue: 96
+  commit: 3957
 ---
 path: /home/runner/.x-repo/github.com/affaan-m/ECC
-collectedAt: 2026-10-20T04:37:26Z
+collectedAt: 2026-10-21T04:31:06Z
 loc:
   JavaScript:
-    code: 244686
-    comments: 12838
-    blanks: 25431
+    code: 244893
+    comments: 12855
+    blanks: 25438
     files: 1019
   Rust:
     code: 50126
@@ -190,11 +190,11 @@ loc:
     blanks: 26
     files: 9
 total:
-  code: 481553
-  comments: 267941
-  blanks: 150018
+  code: 481763
+  comments: 267965
+  blanks: 150026
   files: 4045
 ---
 
 ---
-{"id":401417947,"author":{"login":"affaan-m","id":124439313,"node_id":"U_kgDOB2rLEQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQ77-1M4X7Sbb","tag_name":"v2.2.3","target_commitish":"main","name":"v2.2.3","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-01T22:50:59Z","updated_at":"2026-10-01T23:59:38Z","published_at":"2026-10-01T23:00:36Z","assets":[],"body":"# ECC 2.2.3\n\nECC 2.2.3 is a naming and release-reliability update. The project is called ECC\neverywhere it ships, starting with the `pi/core` profile, and the release\nworkflow now waits long enough for npm to serve a freshly published version.\n\n## Naming\n\n- `pi/core` no longer expands the project name: its README and the bundled\n  `blueprint` skill refer to ECC only. The profile contents are otherwise\n  unchanged: 123 curated skills and 24 prompt commands, 35,006 characters of\n  skill description text.\n- Downstream packagers need no changes. The package is still `ecc-pi-core`, the\n  directory is still `pi/core/`, and existing install paths keep working.\n\n## Release workflow\n\n- After `npm publish`, the release workflow polls the registry for up to five\n  minutes before verifying the published artifact. In 2.2.2 it gave up after\n  about 30 seconds while npm was still processing the upload, so the run failed\n  before promoting `latest` and creating the GitHub Release, and had to be\n  re-run.\n\nDownstream consumption is unchanged: poll `/releases`, download\n`archive/refs/tags/vX.Y.Z.tar.gz`, pin its sha256, copy `pi/core/`, and load it\noffline.\n","reactions":{"total_count":13,"+1":0,"-1":0,"laugh":0,"hooray":6,"confused":0,"heart":7,"rocket":0,"eyes":0}}
+{"id":401417947,"author":{"login":"affaan-m","id":124439313,"node_id":"U_kgDOB2rLEQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQ77-1M4X7Sbb","tag_name":"v2.2.3","target_commitish":"main","name":"v2.2.3","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-01T22:50:59Z","updated_at":"2026-10-01T23:59:38Z","published_at":"2026-10-01T23:00:36Z","assets":[],"body":"# ECC 2.2.3\n\nECC 2.2.3 is a naming and release-reliability update. The project is called ECC\neverywhere it ships, starting with the `pi/core` profile, and the release\nworkflow now waits long enough for npm to serve a freshly published version.\n\n## Naming\n\n- `pi/core` no longer expands the project name: its README and the bundled\n  `blueprint` skill refer to ECC only. The profile contents are otherwise\n  unchanged: 123 curated skills and 24 prompt commands, 35,006 characters of\n  skill description text.\n- Downstream packagers need no changes. The package is still `ecc-pi-core`, the\n  directory is still `pi/core/`, and existing install paths keep working.\n\n## Release workflow\n\n- After `npm publish`, the release workflow polls the registry for up to five\n  minutes before verifying the published artifact. In 2.2.2 it gave up after\n  about 30 seconds while npm was still processing the upload, so the run failed\n  before promoting `latest` and creating the GitHub Release, and had to be\n  re-run.\n\nDownstream consumption is unchanged: poll `/releases`, download\n`archive/refs/tags/vX.Y.Z.tar.gz`, pin its sha256, copy `pi/core/`, and load it\noffline.\n","reactions":{"total_count":14,"+1":0,"-1":0,"laugh":0,"hooray":6,"confused":0,"heart":8,"rocket":0,"eyes":0}}
