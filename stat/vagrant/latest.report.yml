@@ -7,7 +7,7 @@ about:
   latestVersion: "2.4.10.dev+000834-2757db88"
   latestRelease: "v2.4.9"
   latestPrerelease: "2.4.10.dev+000834-2757db88"
-  collectedAt: 2026-10-21T05:53:39Z
+  collectedAt: 2026-10-22T05:55:52Z
 timeline:
   created: 2010-01-21
   lastCommit: 2026-09-03
@@ -15,11 +15,11 @@ timeline:
   lastRelease: 2025-08-21
   lastPrerelease: 2026-06-01
 popularity:
-  star: 27219
+  star: 27217
   watcher: 709
-  fork: 4424
+  fork: 4428
   release: 191
-  contributor: 1083
+  contributor: 1082
   pullRequest: 4042
   issue: 9658
 language:
@@ -35,15 +35,15 @@ language:
 totalBytes: 4977503
 recent:
   last30d:
-    since: 2026-09-21
+    since: 2026-09-22
     release: 0
     mergedPR: 0
     openPR: 2
     closedIssue: 0
-    openIssue: 2
+    openIssue: 1
     commit: 0
   last60d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 1
     openPR: 4
@@ -51,7 +51,7 @@ recent:
     openIssue: 5
     commit: 4
   last90d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 4
     openPR: 4
@@ -59,7 +59,7 @@ recent:
     openIssue: 8
     commit: 5
   last180d:
-    since: 2026-04-24
+    since: 2026-04-25
     release: 1
     mergedPR: 7
     openPR: 8
@@ -67,7 +67,7 @@ recent:
     openIssue: 14
     commit: 12
   last360d:
-    since: 2025-10-26
+    since: 2025-10-27
     release: 19
     mergedPR: 30
     openPR: 18
@@ -75,23 +75,23 @@ recent:
     openIssue: 30
     commit: 58
   last720d:
-    since: 2024-10-31
-    release: 67
-    mergedPR: 98
+    since: 2024-11-01
+    release: 66
+    mergedPR: 96
     openPR: 29
-    closedIssue: 90
+    closedIssue: 89
     openIssue: 54
-    commit: 258
+    commit: 256
 total:
   release: 191
   mergedPR: 2803
-  openPR: 85
+  openPR: 84
   closedIssue: 8984
   openIssue: 674
   commit: 17074
 ---
 path: /home/runner/.x-repo/github.com/hashicorp/vagrant
-collectedAt: 2026-10-21T05:53:46Z
+collectedAt: 2026-10-22T05:56:05Z
 loc:
   Ruby:
     code: 106472
@@ -184,7 +184,7 @@ total:
   blanks: 25582
   files: 1628
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/hashicorp/vagrant
   commit: dc55920a284544919340b975098b4ac9005b08b0
@@ -197,18 +197,18 @@ checks:
     score: 5
     reason: 5 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 5
     details: null
-  - name: Code-Review
-    score: 5
-    reason: Found 5/9 approved changesets -- score normalized to 5
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
+  - name: Code-Review
+    score: 5
+    reason: Found 5/9 approved changesets -- score normalized to 5
     details: null
   - name: Token-Permissions
     score: 0
@@ -230,13 +230,13 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/testing-skipped.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/testing.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Pinned-Dependencies
     score: 5
@@ -259,19 +259,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
-  - name: Branch-Protection
-    score: 8
-    reason: branch protection is not maximal on development and all release branches
-    details:
-      - 'Info: ''allow deletion'' disabled on branch ''main'''
-      - 'Info: ''force pushes'' disabled on branch ''main'''
-      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''main'''
-      - 'Info: ''stale review dismissal'' is required to merge on branch ''main'''
-      - 'Warn: required approving review count is 1 on branch ''main'''
-      - 'Info: codeowner review is required on branch ''main'''
-      - 'Info: ''last push approval'' is required to merge on branch ''main'''
-      - 'Info: status check found to merge onto on branch ''main'''
-      - 'Info: PRs are required in order to make changes on branch ''main'''
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -286,6 +273,19 @@ checks:
       - 'Warn: release artifact 2.4.10.dev+000759-0b7d460a does not have provenance: https://api.github.com/repos/hashicorp/vagrant/releases/298306562'
       - 'Warn: release artifact 2.4.10.dev+000754-d3cecace does not have provenance: https://api.github.com/repos/hashicorp/vagrant/releases/296565603'
       - 'Warn: release artifact 2.4.10.dev+000724-92e88862 does not have provenance: https://api.github.com/repos/hashicorp/vagrant/releases/285128640'
+  - name: Branch-Protection
+    score: 8
+    reason: branch protection is not maximal on development and all release branches
+    details:
+      - 'Info: ''allow deletion'' disabled on branch ''main'''
+      - 'Info: ''force pushes'' disabled on branch ''main'''
+      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''main'''
+      - 'Info: ''stale review dismissal'' is required to merge on branch ''main'''
+      - 'Warn: required approving review count is 1 on branch ''main'''
+      - 'Info: codeowner review is required on branch ''main'''
+      - 'Info: ''last push approval'' is required to merge on branch ''main'''
+      - 'Info: status check found to merge onto on branch ''main'''
+      - 'Info: PRs are required in order to make changes on branch ''main'''
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -300,4 +300,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 27 are checked with a SAST tool'
 ---
-{"id":241423075,"author":{"login":"vagrant-bot","id":54192515,"node_id":"MDQ6VXNlcjU0MTkyNTE1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAAdaUM4OY9Lj","tag_name":"v2.4.9","target_commitish":"main","name":"v2.4.9","draft":false,"immutable":false,"prerelease":false,"created_at":"2025-08-21T07:11:39Z","updated_at":"2025-08-21T07:45:33Z","published_at":"2025-08-21T07:45:30Z","assets":[{"id":284713824,"node_id":"RA_kwDOAAdaUM4Q-GNg","name":"vagrant-2.4.9.gem","label":"","uploader":{"login":"vagrant-bot","id":54192515,"node_id":"MDQ6VXNlcjU0MTkyNTE1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":708608,"digest":"sha256:66c6955cf15fd6c6044df2ea39a0bd9134f2ab848111158bb12d5d7f2b8e9d81","download_count":704,"created_at":"2025-08-21T07:45:31Z","updated_at":"2025-08-21T07:45:31Z"},{"id":284713827,"node_id":"RA_kwDOAAdaUM4Q-GNj","name":"vagrant_2.4.9_SHA256SUMS","label":"","uploader":{"login":"vagrant-bot","id":54192515,"node_id":"MDQ6VXNlcjU0MTkyNTE1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":83,"digest":"sha256:06439db65a90ff8b18d9e60e123b489fea78969b8e71fdabed4cb2e2f1b3f2b8","download_count":446,"created_at":"2025-08-21T07:45:32Z","updated_at":"2025-08-21T07:45:32Z"},{"id":284713834,"node_id":"RA_kwDOAAdaUM4Q-GNq","name":"vagrant_2.4.9_SHA256SUMS.sig","label":"","uploader":{"login":"vagrant-bot","id":54192515,"node_id":"MDQ6VXNlcjU0MTkyNTE1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":566,"digest":"sha256:1eb7501e5571d43b9ccf2827da1c20abe88aec967293647ff5524b5c3aa85caf","download_count":394,"created_at":"2025-08-21T07:45:33Z","updated_at":"2025-08-21T07:45:33Z"}],"body":"CHANGELOG:\n\nhttps://github.com/hashicorp/vagrant/blob/v2.4.9/CHANGELOG.md","reactions":{"total_count":8,"+1":8,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0}}
+{"id":241423075,"author":{"login":"vagrant-bot","id":54192515,"node_id":"MDQ6VXNlcjU0MTkyNTE1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAAdaUM4OY9Lj","tag_name":"v2.4.9","target_commitish":"main","name":"v2.4.9","draft":false,"immutable":false,"prerelease":false,"created_at":"2025-08-21T07:11:39Z","updated_at":"2025-08-21T07:45:33Z","published_at":"2025-08-21T07:45:30Z","assets":[{"id":284713824,"node_id":"RA_kwDOAAdaUM4Q-GNg","name":"vagrant-2.4.9.gem","label":"","uploader":{"login":"vagrant-bot","id":54192515,"node_id":"MDQ6VXNlcjU0MTkyNTE1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":708608,"digest":"sha256:66c6955cf15fd6c6044df2ea39a0bd9134f2ab848111158bb12d5d7f2b8e9d81","download_count":708,"created_at":"2025-08-21T07:45:31Z","updated_at":"2025-08-21T07:45:31Z"},{"id":284713827,"node_id":"RA_kwDOAAdaUM4Q-GNj","name":"vagrant_2.4.9_SHA256SUMS","label":"","uploader":{"login":"vagrant-bot","id":54192515,"node_id":"MDQ6VXNlcjU0MTkyNTE1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":83,"digest":"sha256:06439db65a90ff8b18d9e60e123b489fea78969b8e71fdabed4cb2e2f1b3f2b8","download_count":446,"created_at":"2025-08-21T07:45:32Z","updated_at":"2025-08-21T07:45:32Z"},{"id":284713834,"node_id":"RA_kwDOAAdaUM4Q-GNq","name":"vagrant_2.4.9_SHA256SUMS.sig","label":"","uploader":{"login":"vagrant-bot","id":54192515,"node_id":"MDQ6VXNlcjU0MTkyNTE1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":566,"digest":"sha256:1eb7501e5571d43b9ccf2827da1c20abe88aec967293647ff5524b5c3aa85caf","download_count":394,"created_at":"2025-08-21T07:45:33Z","updated_at":"2025-08-21T07:45:33Z"}],"body":"CHANGELOG:\n\nhttps://github.com/hashicorp/vagrant/blob/v2.4.9/CHANGELOG.md","reactions":{"total_count":8,"+1":8,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0}}

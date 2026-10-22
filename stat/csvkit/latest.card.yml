@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-10-21T04:51:00Z
+  collectedAt: 2026-10-22T04:42:56Z
 timeline:
   created: 2011-04-01
   lastCommit: 2026-09-21
@@ -28,7 +28,7 @@ language:
 totalBytes: 259990
 recent:
   last30d:
-    since: 2026-09-21
+    since: 2026-09-22
     release: 0
     mergedPR: 0
     openPR: 5
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 2
     openPR: 9
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 2
   last90d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 4
     openPR: 13
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 4
   last180d:
-    since: 2026-04-24
+    since: 2026-04-25
     release: 0
     mergedPR: 12
     openPR: 15
@@ -60,7 +60,7 @@ recent:
     openIssue: 1
     commit: 19
   last360d:
-    since: 2025-10-26
+    since: 2025-10-27
     release: 0
     mergedPR: 24
     openPR: 15
@@ -68,7 +68,7 @@ recent:
     openIssue: 2
     commit: 40
   last720d:
-    since: 2024-10-31
+    since: 2024-11-01
     release: 0
     mergedPR: 32
     openPR: 15
@@ -84,7 +84,7 @@ total:
   commit: 2085
 ---
 path: /home/runner/.x-repo/github.com/wireservice/csvkit
-collectedAt: 2026-10-21T04:51:02Z
+collectedAt: 2026-10-22T04:42:58Z
 loc:
   Python:
     code: 5195
@@ -147,19 +147,15 @@ total:
   blanks: 2275
   files: 96
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/wireservice/csvkit
   commit: 6d19c625214977ab2988e674441ca24638bc12d3
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 4
+score: 3.9
 checks:
-  - name: Maintained
-    score: 5
-    reason: 6 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5
-    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -167,6 +163,14 @@ checks:
   - name: Code-Review
     score: 3
     reason: Found 3/10 approved changesets -- score normalized to 3
+    details: null
+  - name: Maintained
+    score: 4
+    reason: 5 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 4
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -179,19 +183,29 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/deploy.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/lint.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/pypi.yml:1'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: COPYING:0'
+      - 'Info: FSF or OSI recognized license: MIT License: COPYING:0'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -212,7 +226,7 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pypi.yml:27: update your workflow using https://app.stepsecurity.io/secureworkflow/wireservice/csvkit/pypi.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/pypi.yml:39: update your workflow using https://app.stepsecurity.io/secureworkflow/wireservice/csvkit/pypi.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/pypi.yml:43: update your workflow using https://app.stepsecurity.io/secureworkflow/wireservice/csvkit/pypi.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating python:alpine to python:alpine@sha256:618e7b661a89d05565fb402a5e1eab8b1b4e5df1f5ea3dc494998d092ffe1213'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating python:alpine to python:alpine@sha256:5aa3872d12a059e22fda84b7556a8d103dc9dff314d044d2d47d5785378c5856'
       - 'Warn: pipCommand not pinned by hash: Dockerfile:7'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/ci.yml:19'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/lint.yml:15'
@@ -221,24 +235,10 @@ checks:
       - 'Info:   1 out of   7 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   0 out of   4 pipCommand dependencies pinned'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: COPYING:0'
-      - 'Info: FSF or OSI recognized license: MIT License: COPYING:0'
   - name: Signed-Releases
     score: -1
     reason: no releases found
     details: null
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches

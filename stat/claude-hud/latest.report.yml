@@ -2,99 +2,99 @@ about:
   description: "A Claude Code plugin that shows what's happening - context usage, active tools, running agents, and todo progress"
   license: MIT
   homepage: 
-  head: a759168
+  head: 3e4e6b4
   archived: false
-  latestVersion: "v0.12.0"
-  latestRelease: "v0.12.0"
+  latestVersion: "v0.12.1"
+  latestRelease: "v0.12.1"
   latestPrerelease: ""
-  collectedAt: 2026-10-21T04:59:01Z
+  collectedAt: 2026-10-22T04:59:54Z
 timeline:
   created: 2026-01-02
-  lastCommit: 2026-10-19
-  lastVersion: 2026-10-19
-  lastRelease: 2026-10-19
+  lastCommit: 2026-10-21
+  lastVersion: 2026-10-21
+  lastRelease: 2026-10-21
   lastPrerelease: 
 popularity:
-  star: 28697
+  star: 28744
   watcher: 41
-  fork: 1329
-  release: 25
+  fork: 1319
+  release: 26
   contributor: 116
-  pullRequest: 515
+  pullRequest: 519
   issue: 295
 language:
-  JavaScript: 244345
-  TypeScript: 207223
-totalBytes: 451568
+  JavaScript: 249614
+  TypeScript: 207638
+totalBytes: 457252
 recent:
   last30d:
-    since: 2026-09-21
-    release: 7
-    mergedPR: 31
+    since: 2026-09-22
+    release: 8
+    mergedPR: 35
     openPR: 0
-    closedIssue: 14
-    openIssue: 1
-    commit: 85
+    closedIssue: 15
+    openIssue: 0
+    commit: 92
   last60d:
-    since: 2026-08-22
-    release: 7
-    mergedPR: 50
+    since: 2026-08-23
+    release: 8
+    mergedPR: 53
     openPR: 0
-    closedIssue: 30
-    openIssue: 1
-    commit: 95
+    closedIssue: 29
+    openIssue: 0
+    commit: 102
   last90d:
-    since: 2026-07-23
-    release: 11
-    mergedPR: 68
+    since: 2026-07-24
+    release: 12
+    mergedPR: 71
     openPR: 0
-    closedIssue: 39
-    openIssue: 1
-    commit: 132
+    closedIssue: 40
+    openIssue: 0
+    commit: 139
   last180d:
-    since: 2026-04-24
-    release: 22
-    mergedPR: 156
+    since: 2026-04-25
+    release: 23
+    mergedPR: 160
     openPR: 0
-    closedIssue: 108
-    openIssue: 1
-    commit: 294
+    closedIssue: 109
+    openIssue: 0
+    commit: 301
   last360d:
-    since: 2025-10-26
-    release: 25
-    mergedPR: 324
+    since: 2025-10-27
+    release: 26
+    mergedPR: 328
     openPR: 0
-    closedIssue: 294
-    openIssue: 1
-    commit: 761
+    closedIssue: 295
+    openIssue: 0
+    commit: 768
   last720d:
-    since: 2024-10-31
-    release: 25
-    mergedPR: 324
+    since: 2024-11-01
+    release: 26
+    mergedPR: 328
     openPR: 0
-    closedIssue: 294
-    openIssue: 1
-    commit: 856
+    closedIssue: 295
+    openIssue: 0
+    commit: 863
 total:
-  release: 25
-  mergedPR: 324
+  release: 26
+  mergedPR: 328
   openPR: 0
-  closedIssue: 294
-  openIssue: 1
-  commit: 856
+  closedIssue: 295
+  openIssue: 0
+  commit: 863
 ---
 path: /home/runner/.x-repo/github.com/jarrodwatts/claude-hud
-collectedAt: 2026-10-21T04:59:02Z
+collectedAt: 2026-10-22T04:59:55Z
 loc:
   JavaScript:
-    code: 5002
-    comments: 94
-    blanks: 599
-    files: 34
+    code: 5093
+    comments: 95
+    blanks: 605
+    files: 35
   TypeScript:
-    code: 4418
-    comments: 394
-    blanks: 531
+    code: 4430
+    comments: 395
+    blanks: 532
     files: 48
   Json:
     code: 1216
@@ -103,8 +103,8 @@ loc:
     files: 3
   Markdown:
     code: 0
-    comments: 1042
-    blanks: 385
+    comments: 1046
+    blanks: 387
     files: 10
   Text:
     code: 0
@@ -112,11 +112,11 @@ loc:
     blanks: 120
     files: 2
 total:
-  code: 10707
-  comments: 1995
-  blanks: 1635
-  files: 97
+  code: 10810
+  comments: 2001
+  blanks: 1644
+  files: 98
 ---
 
 ---
-{"id":417218115,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQySeqs4Y3j5D","tag_name":"v0.12.0","target_commitish":"main","name":"v0.12.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-19T11:33:43Z","updated_at":"2026-10-19T11:34:25Z","published_at":"2026-10-19T11:34:25Z","assets":[],"body":"\n### Added\n- `display.showAgentEffort` option to show each subagent's reasoning effort next to its model in the agents line, e.g. `\u25d0 code-reviewer [haiku-4.5 \u25d4 medium]`, read from the subagent's own transcript (#815).\n\n### Fixed\n- Options that read the transcript (tools, agents, todos, config counts, session tokens, and others) no longer reread the whole file on every render. Each run picks up where the last left off, so a long session's HUD no longer slows down and then disappears once the transcript reaches hundreds of MB (#816).\n\n","reactions":{"total_count":1,"+1":1,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0}}
+{"id":419502713,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQySeqs4ZARp5","tag_name":"v0.12.1","target_commitish":"main","name":"v0.12.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-21T11:57:25Z","updated_at":"2026-10-21T11:58:03Z","published_at":"2026-10-21T11:58:03Z","assets":[],"body":"\n### Fixed\n- Recent Claude Code versions log `api-request-blob` lines that repeat earlier tool calls. These no longer make finished tools show as running, count tasks twice, or reset agents to `(<1s)` (#820, #821).\n- Truncated labels (todos, agent descriptions, tool names, file paths, skill and MCP names, added dirs, `--extra-cmd` and external usage labels) no longer cut an emoji or accented letter in half (#822, #823).\n\n","reactions":{"total_count":1,"+1":1,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0}}

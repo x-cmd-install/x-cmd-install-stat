@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-10-21T04:51:08Z
+  collectedAt: 2026-10-22T04:47:17Z
 timeline:
   created: 2015-02-21
   lastCommit: 2023-10-19
@@ -28,7 +28,7 @@ language:
 totalBytes: 7354
 recent:
   last30d:
-    since: 2026-09-21
+    since: 2026-09-22
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-24
+    since: 2026-04-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-26
+    since: 2025-10-27
     release: 0
     mergedPR: 0
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-31
+    since: 2024-11-01
     release: 0
     mergedPR: 0
     openPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 70
 ---
 path: /home/runner/.x-repo/github.com/frescobaldi/python-poppler-qt5
-collectedAt: 2026-10-21T04:51:09Z
+collectedAt: 2026-10-22T04:47:18Z
 loc:
   Yaml:
     code: 2287
@@ -127,7 +127,7 @@ total:
   blanks: 118
   files: 13
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/frescobaldi/python-poppler-qt5
   commit: 3675f2bd8d2b1fb006b176336e6139535cad5fb2
@@ -136,18 +136,13 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 2.9
 checks:
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
   - name: Code-Review
     score: 2
     reason: Found 7/27 approved changesets -- score normalized to 2
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Dangerous-Workflow
     score: 10
@@ -159,9 +154,14 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/build_wheels.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Pinned-Dependencies
     score: 0
@@ -189,6 +189,12 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 9
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Warn: project license file does not contain an FSF or OSI license.'
   - name: Signed-Releases
     score: -1
     reason: no releases found
@@ -198,12 +204,6 @@ checks:
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''master'''
-  - name: License
-    score: 9
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Warn: project license file does not contain an FSF or OSI license.'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

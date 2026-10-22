@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.1.4"
   latestRelease: "v2.1.4"
   latestPrerelease: ""
-  collectedAt: 2026-10-21T04:34:02Z
+  collectedAt: 2026-10-22T04:32:25Z
 timeline:
   created: 2026-02-19
   lastCommit: 2026-10-20
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-10-20
   lastPrerelease: 
 popularity:
-  star: 99975
-  watcher: 292
-  fork: 6778
+  star: 100676
+  watcher: 290
+  fork: 6811
   release: 6
   contributor: 18
   pullRequest: 92
-  issue: 57
+  issue: 58
 language:
   JavaScript: 389730
   CSS: 23579
@@ -29,63 +29,63 @@ language:
 totalBytes: 417321
 recent:
   last30d:
-    since: 2026-09-21
+    since: 2026-09-22
     release: 6
-    mergedPR: 26
+    mergedPR: 25
     openPR: 0
     closedIssue: 5
-    openIssue: 1
+    openIssue: 2
     commit: 45
   last60d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 6
     mergedPR: 30
     openPR: 1
     closedIssue: 15
-    openIssue: 1
+    openIssue: 2
     commit: 54
   last90d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 6
     mergedPR: 37
     openPR: 1
     closedIssue: 19
-    openIssue: 1
+    openIssue: 2
     commit: 65
   last180d:
-    since: 2026-04-24
+    since: 2026-04-25
     release: 6
     mergedPR: 50
     openPR: 1
     closedIssue: 51
-    openIssue: 1
+    openIssue: 2
     commit: 135
   last360d:
-    since: 2025-10-26
+    since: 2025-10-27
     release: 6
     mergedPR: 50
     openPR: 1
     closedIssue: 56
-    openIssue: 1
+    openIssue: 2
     commit: 207
   last720d:
-    since: 2024-10-31
+    since: 2024-11-01
     release: 6
     mergedPR: 50
     openPR: 1
     closedIssue: 56
-    openIssue: 1
+    openIssue: 2
     commit: 245
 total:
   release: 6
   mergedPR: 50
   openPR: 1
   closedIssue: 56
-  openIssue: 1
+  openIssue: 2
   commit: 245
 ---
 path: /home/runner/.x-repo/github.com/Leonxlnx/taste-skill
-collectedAt: 2026-10-21T04:34:05Z
+collectedAt: 2026-10-22T04:32:27Z
 loc:
   Json:
     code: 27187
@@ -125,4 +125,4 @@ total:
 ---
 
 ---
-{"id":418926123,"author":{"login":"Leonxlnx","id":219127460,"node_id":"U_kgDODQ-epA","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDORUQ5b84Y-E4r","tag_name":"v2.1.4","target_commitish":"6010f91a9935f1c167dfc500fb1a475681892e6b","name":"tasteskill v2.1.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-20T18:38:06Z","updated_at":"2026-10-20T22:04:30Z","published_at":"2026-10-20T22:04:30Z","assets":[],"body":"This release makes the inspector's browser profiles safe when several runs go at once ([#157](https://github.com/Leonxlnx/taste-skill/issues/157), [#158](https://github.com/Leonxlnx/taste-skill/pull/158), [#159](https://github.com/Leonxlnx/taste-skill/pull/159)). The rules of `design-taste-frontend` are unchanged; only `scripts/lib/cdp.mjs` changed.\n\n- **Fix: one inspector run could delete the browser profile of another run that was still going.** Chrome keeps no `lockfile` on macOS and Linux, so the sweep added in 2.1.0 judged a profile unused by its age alone. A second run started during a long one could then pull that run's profile away. Thanks to @t4sh for the report and the fix.\n- **Leftover profiles are cleaned up again, safely.** Every profile now carries `taste-skill-owner.json` with the machine and the process IDs of the run and its Chrome. A later run removes a profile left by a killed run only when that file names this machine and neither process is alive. A profile without the file is never touched.\n\nProfiles left by earlier versions are not removed automatically. To clear them, delete the `ad-chrome-*` folders in your temp folder (or in `TASTE_SKILL_TMP`).\n\nUpdate:\n\n```bash\nnpx skills add https://github.com/Leonxlnx/taste-skill --skill \"design-taste-frontend\"\n```\n\nClaude Code plugin users: `/plugin update`.\n","reactions":{"total_count":1,"+1":1,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"mentions_count":1}
+{"id":418926123,"author":{"login":"Leonxlnx","id":219127460,"node_id":"U_kgDODQ-epA","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDORUQ5b84Y-E4r","tag_name":"v2.1.4","target_commitish":"6010f91a9935f1c167dfc500fb1a475681892e6b","name":"tasteskill v2.1.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-20T18:38:06Z","updated_at":"2026-10-20T22:04:30Z","published_at":"2026-10-20T22:04:30Z","assets":[],"body":"This release makes the inspector's browser profiles safe when several runs go at once ([#157](https://github.com/Leonxlnx/taste-skill/issues/157), [#158](https://github.com/Leonxlnx/taste-skill/pull/158), [#159](https://github.com/Leonxlnx/taste-skill/pull/159)). The rules of `design-taste-frontend` are unchanged; only `scripts/lib/cdp.mjs` changed.\n\n- **Fix: one inspector run could delete the browser profile of another run that was still going.** Chrome keeps no `lockfile` on macOS and Linux, so the sweep added in 2.1.0 judged a profile unused by its age alone. A second run started during a long one could then pull that run's profile away. Thanks to @t4sh for the report and the fix.\n- **Leftover profiles are cleaned up again, safely.** Every profile now carries `taste-skill-owner.json` with the machine and the process IDs of the run and its Chrome. A later run removes a profile left by a killed run only when that file names this machine and neither process is alive. A profile without the file is never touched.\n\nProfiles left by earlier versions are not removed automatically. To clear them, delete the `ad-chrome-*` folders in your temp folder (or in `TASTE_SKILL_TMP`).\n\nUpdate:\n\n```bash\nnpx skills add https://github.com/Leonxlnx/taste-skill --skill \"design-taste-frontend\"\n```\n\nClaude Code plugin users: `/plugin update`.\n","reactions":{"total_count":2,"+1":2,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"mentions_count":1}

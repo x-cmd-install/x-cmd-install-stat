@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.51.1"
   latestRelease: "v1.51.1"
   latestPrerelease: ""
-  collectedAt: 2026-10-21T05:08:50Z
+  collectedAt: 2026-10-22T05:10:33Z
 timeline:
   created: 2019-04-16
   lastCommit: 2026-10-06
@@ -35,15 +35,15 @@ language:
 totalBytes: 20504411
 recent:
   last30d:
-    since: 2026-09-21
+    since: 2026-09-22
     release: 3
     mergedPR: 6
-    openPR: 1
+    openPR: 0
     closedIssue: 2
     openIssue: 2
     commit: 15
   last60d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 7
     mergedPR: 16
     openPR: 3
@@ -51,7 +51,7 @@ recent:
     openIssue: 2
     commit: 45
   last90d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 8
     mergedPR: 24
     openPR: 4
@@ -59,7 +59,7 @@ recent:
     openIssue: 4
     commit: 73
   last180d:
-    since: 2026-04-24
+    since: 2026-04-25
     release: 17
     mergedPR: 42
     openPR: 5
@@ -67,7 +67,7 @@ recent:
     openIssue: 6
     commit: 140
   last360d:
-    since: 2025-10-26
+    since: 2025-10-27
     release: 36
     mergedPR: 95
     openPR: 10
@@ -75,11 +75,11 @@ recent:
     openIssue: 26
     commit: 326
   last720d:
-    since: 2024-10-31
+    since: 2024-11-01
     release: 85
-    mergedPR: 204
+    mergedPR: 201
     openPR: 15
-    closedIssue: 151
+    closedIssue: 150
     openIssue: 50
     commit: 893
 total:
@@ -91,7 +91,7 @@ total:
   commit: 3047
 ---
 path: /home/runner/.x-repo/github.com/crate-ci/typos
-collectedAt: 2026-10-21T05:09:05Z
+collectedAt: 2026-10-22T05:10:51Z
 loc:
   Rust:
     code: 10543
@@ -169,7 +169,7 @@ total:
   blanks: 2471
   files: 167
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/crate-ci/typos
   commit: 7f9d0819ca1c008ade73f4b41fa9d258d48f605b
@@ -203,18 +203,18 @@ checks:
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
     details:
-      - 'Info: found token with ''none'' permissions: .github/workflows/audit.yml:24'
       - 'Warn: jobLevel ''checks'' permission set to ''write'': .github/workflows/audit.yml:36'
       - 'Warn: jobLevel ''checks'' permission set to ''write'': .github/workflows/audit.yml:58'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/audit.yml:79'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/audit.yml:80'
+      - 'Info: found token with ''none'' permissions: .github/workflows/audit.yml:24'
       - 'Info: found token with ''none'' permissions: .github/workflows/ci.yml:27'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/post-release.yml:140'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/post-release.yml:33'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/post-release.yml:60'
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/post-release.yml:140'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/pre-commit.yml:22'
-      - 'Warn: jobLevel ''security-events'' permission set to ''write'': .github/workflows/template.yml:25'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/template.yml:27'
+      - 'Warn: jobLevel ''security-events'' permission set to ''write'': .github/workflows/template.yml:25'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/audit.yml:4'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:4'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/committed.yml:7'
@@ -251,6 +251,10 @@ checks:
       - 'Info:  34 out of  34 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  24 out of  24 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -270,14 +274,10 @@ checks:
       - 'Warn: release artifact v1.50.3 does not have provenance: https://api.github.com/repos/crate-ci/typos/releases/396844799'
       - 'Warn: release artifact v1.50.2 does not have provenance: https://api.github.com/repos/crate-ci/typos/releases/389182420'
       - 'Warn: release artifact v1.50.1 does not have provenance: https://api.github.com/repos/crate-ci/typos/releases/380675659'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits
     details:
       - 'Info: all commits (20) are checked with a SAST tool'
 ---
-{"id":405137903,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCtXHDs4YJenv","tag_name":"v1.51.1","target_commitish":"main","name":"v1.51.1","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-10-06T21:00:11Z","updated_at":"2026-10-06T21:06:35Z","published_at":"2026-10-06T21:06:35Z","assets":[{"id":616656668,"node_id":"RA_kwDOCtXHDs4kwW8c","name":"typos-v1.51.1-aarch64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":3347206,"digest":"sha256:316d50a32c3726a80ab39c6d12141b70080498973c5e8a9b068b12cde78b10c1","download_count":4795,"created_at":"2026-10-06T21:04:07Z","updated_at":"2026-10-06T21:04:08Z"},{"id":616656568,"node_id":"RA_kwDOCtXHDs4kwW64","name":"typos-v1.51.1-aarch64-pc-windows-msvc.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3079661,"digest":"sha256:b149fbe092d658d20c0ed40f326a25ebd382f3f2bc27a1526357672bfecdef6d","download_count":436,"created_at":"2026-10-06T21:04:04Z","updated_at":"2026-10-06T21:04:04Z"},{"id":616652747,"node_id":"RA_kwDOCtXHDs4kwV_L","name":"typos-v1.51.1-aarch64-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":7190748,"digest":"sha256:2ac5e37b3236b3c07dec5cdf1527acf143aec4674a6089b0bf424d021b35e099","download_count":17041,"created_at":"2026-10-06T21:02:19Z","updated_at":"2026-10-06T21:02:20Z"},{"id":616660774,"node_id":"RA_kwDOCtXHDs4kwX8m","name":"typos-v1.51.1-x86_64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":3458232,"digest":"sha256:f3451079971633a7f769fb958fe06b0d64b5f1dc46df0854aa1ddb9a6f4031d6","download_count":1029,"created_at":"2026-10-06T21:06:19Z","updated_at":"2026-10-06T21:06:19Z"},{"id":616657506,"node_id":"RA_kwDOCtXHDs4kwXJi","name":"typos-v1.51.1-x86_64-pc-windows-msvc.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3248796,"digest":"sha256:518f759fba43205f17a717656054c1d25bc883455a6296989e9d021c6edb7c59","download_count":3600,"created_at":"2026-10-06T21:04:34Z","updated_at":"2026-10-06T21:04:35Z"},{"id":616653682,"node_id":"RA_kwDOCtXHDs4kwWNy","name":"typos-v1.51.1-x86_64-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":8248699,"digest":"sha256:93c301fd4120ff076e2cc2a6d6a61cab4a4bdb81899287c0938b452e56d1f454","download_count":102056,"created_at":"2026-10-06T21:02:41Z","updated_at":"2026-10-06T21:02:44Z"}],"body":"## [1.51.1] - 2026-10-06\n\n### Features\n\n- Add ARM Windows builds"}
+{"id":405137903,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCtXHDs4YJenv","tag_name":"v1.51.1","target_commitish":"main","name":"v1.51.1","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-10-06T21:00:11Z","updated_at":"2026-10-06T21:06:35Z","published_at":"2026-10-06T21:06:35Z","assets":[{"id":616656668,"node_id":"RA_kwDOCtXHDs4kwW8c","name":"typos-v1.51.1-aarch64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":3347206,"digest":"sha256:316d50a32c3726a80ab39c6d12141b70080498973c5e8a9b068b12cde78b10c1","download_count":5279,"created_at":"2026-10-06T21:04:07Z","updated_at":"2026-10-06T21:04:08Z"},{"id":616656568,"node_id":"RA_kwDOCtXHDs4kwW64","name":"typos-v1.51.1-aarch64-pc-windows-msvc.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3079661,"digest":"sha256:b149fbe092d658d20c0ed40f326a25ebd382f3f2bc27a1526357672bfecdef6d","download_count":471,"created_at":"2026-10-06T21:04:04Z","updated_at":"2026-10-06T21:04:04Z"},{"id":616652747,"node_id":"RA_kwDOCtXHDs4kwV_L","name":"typos-v1.51.1-aarch64-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":7190748,"digest":"sha256:2ac5e37b3236b3c07dec5cdf1527acf143aec4674a6089b0bf424d021b35e099","download_count":19775,"created_at":"2026-10-06T21:02:19Z","updated_at":"2026-10-06T21:02:20Z"},{"id":616660774,"node_id":"RA_kwDOCtXHDs4kwX8m","name":"typos-v1.51.1-x86_64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":3458232,"digest":"sha256:f3451079971633a7f769fb958fe06b0d64b5f1dc46df0854aa1ddb9a6f4031d6","download_count":1148,"created_at":"2026-10-06T21:06:19Z","updated_at":"2026-10-06T21:06:19Z"},{"id":616657506,"node_id":"RA_kwDOCtXHDs4kwXJi","name":"typos-v1.51.1-x86_64-pc-windows-msvc.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3248796,"digest":"sha256:518f759fba43205f17a717656054c1d25bc883455a6296989e9d021c6edb7c59","download_count":3934,"created_at":"2026-10-06T21:04:34Z","updated_at":"2026-10-06T21:04:35Z"},{"id":616653682,"node_id":"RA_kwDOCtXHDs4kwWNy","name":"typos-v1.51.1-x86_64-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":8248699,"digest":"sha256:93c301fd4120ff076e2cc2a6d6a61cab4a4bdb81899287c0938b452e56d1f454","download_count":115863,"created_at":"2026-10-06T21:02:41Z","updated_at":"2026-10-06T21:02:44Z"}],"body":"## [1.51.1] - 2026-10-06\n\n### Features\n\n- Add ARM Windows builds"}

@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.9.0"
   latestRelease: "v0.9.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-21T04:58:37Z
+  collectedAt: 2026-10-22T04:57:30Z
 timeline:
   created: 2018-11-01
   lastCommit: 2026-02-14
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2025-12-06
   lastPrerelease: 
 popularity:
-  star: 1263
+  star: 1265
   watcher: 16
   fork: 46
   release: 10
@@ -27,7 +27,7 @@ language:
 totalBytes: 15648
 recent:
   last30d:
-    since: 2026-09-21
+    since: 2026-09-22
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 1
@@ -43,7 +43,7 @@ recent:
     openIssue: 2
     commit: 0
   last90d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 0
     openPR: 1
@@ -51,7 +51,7 @@ recent:
     openIssue: 2
     commit: 0
   last180d:
-    since: 2026-04-24
+    since: 2026-04-25
     release: 0
     mergedPR: 0
     openPR: 2
@@ -59,7 +59,7 @@ recent:
     openIssue: 2
     commit: 0
   last360d:
-    since: 2025-10-26
+    since: 2025-10-27
     release: 1
     mergedPR: 4
     openPR: 3
@@ -67,7 +67,7 @@ recent:
     openIssue: 2
     commit: 20
   last720d:
-    since: 2024-10-31
+    since: 2024-11-01
     release: 2
     mergedPR: 5
     openPR: 4
@@ -83,7 +83,7 @@ total:
   commit: 123
 ---
 path: /home/runner/.x-repo/github.com/sharkdp/diskus
-collectedAt: 2026-10-21T04:58:38Z
+collectedAt: 2026-10-22T04:57:30Z
 loc:
   Rust:
     code: 381
@@ -106,7 +106,7 @@ total:
   blanks: 152
   files: 9
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/sharkdp/diskus
   commit: 90196e950017d25b2940e8e0fda51a321ca66e1a
@@ -119,10 +119,6 @@ checks:
     score: 1
     reason: Found 5/29 approved changesets -- score normalized to 1
     details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -132,16 +128,20 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/CICD.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -176,11 +176,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE-APACHE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE-APACHE:0'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -195,6 +190,11 @@ checks:
       - 'Warn: release artifact v0.7.0 does not have provenance: https://api.github.com/repos/sharkdp/diskus/releases/53327228'
       - 'Warn: release artifact v0.6.0 does not have provenance: https://api.github.com/repos/sharkdp/diskus/releases/20156583'
       - 'Warn: release artifact v0.5.0 does not have provenance: https://api.github.com/repos/sharkdp/diskus/releases/14171066'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Security-Policy
     score: 0
     reason: security policy file not detected

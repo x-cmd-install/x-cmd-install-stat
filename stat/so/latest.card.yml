@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.4.10"
   latestRelease: "v0.4.10"
   latestPrerelease: ""
-  collectedAt: 2026-10-21T05:10:15Z
+  collectedAt: 2026-10-22T05:04:24Z
 timeline:
   created: 2020-05-30
   lastCommit: 2025-06-30
@@ -29,7 +29,7 @@ language:
 totalBytes: 114954
 recent:
   last30d:
-    since: 2026-09-21
+    since: 2026-09-22
     release: 0
     mergedPR: 0
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-24
+    since: 2026-04-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-26
+    since: 2025-10-27
     release: 0
     mergedPR: 0
     openPR: 4
@@ -69,7 +69,7 @@ recent:
     openIssue: 1
     commit: 0
   last720d:
-    since: 2024-10-31
+    since: 2024-11-01
     release: 0
     mergedPR: 1
     openPR: 4
@@ -85,7 +85,7 @@ total:
   commit: 207
 ---
 path: /home/runner/.x-repo/github.com/samtay/so
-collectedAt: 2026-10-21T05:10:16Z
+collectedAt: 2026-10-22T05:04:24Z
 loc:
   Rust:
     code: 2919
@@ -128,7 +128,7 @@ total:
   blanks: 2363
   files: 35
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/samtay/so
   commit: 4969956b4aab1bb3aa8705627f71a1ad269ffe31
@@ -137,6 +137,10 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 2.9
 checks:
+  - name: Code-Review
+    score: 1
+    reason: Found 3/16 approved changesets -- score normalized to 1
+    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
@@ -145,19 +149,15 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 1
-    reason: Found 3/16 approved changesets -- score normalized to 1
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -209,6 +209,10 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -223,10 +227,6 @@ checks:
       - 'Warn: release artifact v0.4.8 does not have provenance: https://api.github.com/repos/samtay/so/releases/74948337'
       - 'Warn: release artifact v0.4.7 does not have provenance: https://api.github.com/repos/samtay/so/releases/74937337'
       - 'Warn: release artifact v0.4.6 does not have provenance: https://api.github.com/repos/samtay/so/releases/60168464'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

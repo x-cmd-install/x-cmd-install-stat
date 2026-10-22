@@ -2,26 +2,26 @@ about:
   description: "Distributed reliable key-value store for the most critical data of a distributed system"
   license: Apache-2.0
   homepage: https://etcd.io
-  head: 7ff040c
+  head: bf9cadf
   archived: false
   latestVersion: "v3.7.2"
   latestRelease: "v3.7.2"
   latestPrerelease: "v3.7.0-rc.0"
-  collectedAt: 2026-10-21T04:38:56Z
+  collectedAt: 2026-10-22T04:37:27Z
 timeline:
   created: 2013-07-06
-  lastCommit: 2026-10-20
+  lastCommit: 2026-10-21
   lastVersion: 2026-09-22
   lastRelease: 2026-09-22
   lastPrerelease: 2026-06-01
 popularity:
-  star: 52407
+  star: 52413
   watcher: 1267
-  fork: 10543
+  fork: 10545
   release: 295
-  contributor: 993
-  pullRequest: 14715
-  issue: 7308
+  contributor: 994
+  pullRequest: 14718
+  issue: 7310
 language:
   Go: 5855618
   Shell: 142637
@@ -32,63 +32,63 @@ language:
 totalBytes: 6098070
 recent:
   last30d:
-    since: 2026-09-21
+    since: 2026-09-22
     release: 3
-    mergedPR: 44
-    openPR: 67
-    closedIssue: 10
-    openIssue: 21
-    commit: 57
+    mergedPR: 47
+    openPR: 66
+    closedIssue: 9
+    openIssue: 23
+    commit: 59
   last60d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 3
-    mergedPR: 92
-    openPR: 95
-    closedIssue: 21
-    openIssue: 39
-    commit: 119
+    mergedPR: 96
+    openPR: 94
+    closedIssue: 20
+    openIssue: 42
+    commit: 121
   last90d:
-    since: 2026-07-23
-    release: 6
-    mergedPR: 144
-    openPR: 130
-    closedIssue: 28
-    openIssue: 51
-    commit: 221
+    since: 2026-07-24
+    release: 3
+    mergedPR: 146
+    openPR: 129
+    closedIssue: 27
+    openIssue: 54
+    commit: 223
   last180d:
-    since: 2026-04-24
+    since: 2026-04-25
     release: 17
-    mergedPR: 397
-    openPR: 207
-    closedIssue: 72
-    openIssue: 79
-    commit: 623
+    mergedPR: 400
+    openPR: 206
+    closedIssue: 71
+    openIssue: 82
+    commit: 625
   last360d:
-    since: 2025-10-26
+    since: 2025-10-27
     release: 32
     mergedPR: 756
-    openPR: 244
-    closedIssue: 160
-    openIssue: 89
-    commit: 1302
+    openPR: 243
+    closedIssue: 159
+    openIssue: 92
+    commit: 1304
   last720d:
-    since: 2024-10-31
+    since: 2024-11-01
     release: 56
-    mergedPR: 1834
-    openPR: 262
-    closedIssue: 506
-    openIssue: 115
-    commit: 3316
+    mergedPR: 1832
+    openPR: 261
+    closedIssue: 505
+    openIssue: 118
+    commit: 3312
 total:
   release: 295
-  mergedPR: 10722
-  openPR: 269
-  closedIssue: 7171
-  openIssue: 137
-  commit: 25308
+  mergedPR: 10726
+  openPR: 268
+  closedIssue: 7170
+  openIssue: 140
+  commit: 25310
 ---
 path: /home/runner/.x-repo/github.com/etcd-io/etcd
-collectedAt: 2026-10-21T04:39:05Z
+collectedAt: 2026-10-22T04:37:38Z
 loc:
   Go:
     code: 167788
@@ -161,15 +161,20 @@ total:
   blanks: 31113
   files: 1286
 ---
-date: "2026-10-20T23:33:17Z"
+date: "2026-10-21T13:08:45Z"
 repo:
   name: github.com/etcd-io/etcd
-  commit: 7ff040cb84c9944d0c38a9f0dc9f12ed9c58223b
+  commit: bf9cadf044f0531036a61c9b6dbeba8aef2a3b30
 scorecard:
   version: v5.5.0
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 6.9
 checks:
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -188,9 +193,18 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/measure-testgrid-flakiness.yaml:8'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecards.yml:12'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/verify-released-assets.yaml:3'
+  - name: Dangerous-Workflow
+    score: 0
+    reason: dangerous workflow patterns detected
+    details:
+      - 'Warn: script injection with untrusted input ''github.event.pull_request.head.ref'': .github/workflows/bump-devcontainer-version.yml:32'
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 13 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Security-Policy
     score: 9
@@ -200,24 +214,16 @@ checks:
       - 'Info: Found linked content: .github/SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: .github/SECURITY.md:1'
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 15 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Dangerous-Workflow
-    score: 0
-    reason: dangerous workflow patterns detected
-    details:
-      - 'Warn: script injection with untrusted input ''github.event.pull_request.head.ref'': .github/workflows/bump-devcontainer-version.yml:32'
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: CII-Best-Practices
     score: 5
     reason: 'badge detected: Passing'
@@ -236,8 +242,8 @@ checks:
       - 'Warn: goCommand not pinned by hash: scripts/verify_golangci-lint_version.sh:18'
       - 'Info:  15 out of  15 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   5 out of   5 third-party GitHubAction dependencies pinned'
-      - 'Info:   2 out of   7 containerImage dependencies pinned'
       - 'Info:   5 out of   8 goCommand dependencies pinned'
+      - 'Info:   2 out of   7 containerImage dependencies pinned'
   - name: Vulnerabilities
     score: 8
     reason: 2 existing vulnerabilities detected
@@ -250,17 +256,6 @@ checks:
     details:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Info: all commits (30) are checked with a SAST tool'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/antithesis-test.yml:40'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -279,6 +274,11 @@ checks:
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/antithesis-test.yml:40'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -289,7 +289,7 @@ checks:
       - 'Info: GoBuiltInFuzzer integration found: server/etcdserver/api/v3rpc/validationfuzz_test.go:121'
   - name: CI-Tests
     score: 10
-    reason: 16 out of 16 merged PRs checked by a CI test -- score normalized to 10
+    reason: 15 out of 15 merged PRs checked by a CI test -- score normalized to 10
     details: null
   - name: Contributors
     score: 10

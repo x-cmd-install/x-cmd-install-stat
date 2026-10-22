@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.55.0"
   latestRelease: "v0.55.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-21T04:32:54Z
+  collectedAt: 2026-10-22T04:32:33Z
 timeline:
   created: 2013-09-14
   lastCommit: 2026-10-18
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2025-07-20
   lastPrerelease: 
 popularity:
-  star: 5376
+  star: 5377
   watcher: 94
   fork: 631
   release: 38
@@ -28,7 +28,7 @@ language:
 totalBytes: 3982062
 recent:
   last30d:
-    since: 2026-09-21
+    since: 2026-09-22
     release: 0
     mergedPR: 0
     openPR: 4
@@ -36,7 +36,7 @@ recent:
     openIssue: 1
     commit: 2
   last60d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 4
@@ -44,7 +44,7 @@ recent:
     openIssue: 1
     commit: 2
   last90d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 0
     openPR: 4
@@ -52,7 +52,7 @@ recent:
     openIssue: 1
     commit: 2
   last180d:
-    since: 2026-04-24
+    since: 2026-04-25
     release: 0
     mergedPR: 2
     openPR: 5
@@ -60,7 +60,7 @@ recent:
     openIssue: 4
     commit: 2
   last360d:
-    since: 2025-10-26
+    since: 2025-10-27
     release: 0
     mergedPR: 5
     openPR: 5
@@ -68,7 +68,7 @@ recent:
     openIssue: 6
     commit: 7
   last720d:
-    since: 2024-10-31
+    since: 2024-11-01
     release: 2
     mergedPR: 11
     openPR: 6
@@ -84,7 +84,7 @@ total:
   commit: 858
 ---
 path: /home/runner/.x-repo/github.com/mozillazg/python-pinyin
-collectedAt: 2026-10-21T04:32:56Z
+collectedAt: 2026-10-22T04:32:35Z
 loc:
   Json:
     code: 567734
@@ -147,27 +147,26 @@ total:
   blanks: 1975
   files: 93
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/mozillazg/python-pinyin
-  commit: 8595294b1a97845e30f11ecfdb3caa4e61ac3988
+  commit: 85bf408b3b326676e4e1ffa727f8063774f709f6
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 3.2
+score: 3.3
 checks:
   - name: Code-Review
     score: 1
-    reason: Found 3/27 approved changesets -- score normalized to 1
+    reason: Found 3/25 approved changesets -- score normalized to 1
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    score: 1
+    reason: 2 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 1
     details: null
   - name: Token-Permissions
     score: 0
@@ -175,10 +174,11 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -196,20 +196,24 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE.txt:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE.txt:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: -1
     reason: no releases found
+    details: null
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
   - name: Security-Policy
     score: 0
@@ -219,14 +223,10 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
-      - 'Warn: 0 commits out of 9 are checked with a SAST tool'
+      - 'Warn: 0 commits out of 10 are checked with a SAST tool'
 ---
 {"id":233748972,"author":{"login":"bors-homu","id":32156617,"node_id":"MDQ6VXNlcjMyMTU2NjE3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAMPFrs4N7rns","tag_name":"v0.55.0","target_commitish":"master","name":"v0.55.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2025-07-20T11:53:35Z","updated_at":"2025-07-20T12:11:54Z","published_at":"2025-07-20T12:11:54Z","assets":[],"body":""}

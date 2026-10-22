@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.17.1"
   latestRelease: "v1.17.1"
   latestPrerelease: ""
-  collectedAt: 2026-10-21T05:39:41Z
+  collectedAt: 2026-10-22T05:39:44Z
 timeline:
   created: 2017-07-04
   lastCommit: 2026-10-20
@@ -29,7 +29,7 @@ language:
 totalBytes: 778452
 recent:
   last30d:
-    since: 2026-09-21
+    since: 2026-09-22
     release: 2
     mergedPR: 0
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 2
     mergedPR: 0
     openPR: 0
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 3
     mergedPR: 0
     openPR: 0
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-24
+    since: 2026-04-25
     release: 3
     mergedPR: 0
     openPR: 0
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-26
+    since: 2025-10-27
     release: 6
     mergedPR: 0
     openPR: 0
@@ -69,7 +69,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-31
+    since: 2024-11-01
     release: 16
     mergedPR: 0
     openPR: 0
@@ -85,7 +85,7 @@ total:
   commit: 1482
 ---
 path: /home/runner/.x-repo/github.com/mgechev/revive
-collectedAt: 2026-10-21T05:39:42Z
+collectedAt: 2026-10-22T05:39:45Z
 loc:
   Go:
     code: 33181
@@ -128,15 +128,19 @@ total:
   blanks: 7441
   files: 716
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/mgechev/revive
-  commit: 1bb4b38596242179056badfc6a3f29a53be82ed3
+  commit: d4544106b77a832547b314802debae41c1023c09
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 5.3
+score: 5.8
 checks:
+  - name: Code-Review
+    score: 5
+    reason: Found 15/30 approved changesets -- score normalized to 5
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 14 issue activity found in the last 90 days -- score normalized to 10
@@ -144,10 +148,6 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Code-Review
-    score: 0
-    reason: Found 2/30 approved changesets -- score normalized to 0
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -170,14 +170,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: Pinned-Dependencies
     score: 6
     reason: dependency not pinned by hash detected -- score normalized to 6
@@ -192,6 +184,14 @@ checks:
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   0 out of   2 goCommand dependencies pinned'
       - 'Info:   0 out of   2 npmCommand dependencies pinned'
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -203,11 +203,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:12'
   - name: Branch-Protection
     score: 3
     reason: branch protection is not maximal on development and all release branches
@@ -218,6 +213,11 @@ checks:
       - 'Warn: could not determine whether codeowners review is allowed'
       - 'Warn: no status checks found to merge onto branch ''master'''
       - 'Warn: PRs are not required to make changes on branch ''master''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:12'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -236,5 +236,5 @@ checks:
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
-      - 'Warn: 0 commits out of 18 are checked with a SAST tool'
+      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---

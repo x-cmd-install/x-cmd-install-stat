@@ -2,25 +2,25 @@ about:
   description: "🦀🌡️ Real-time system monitor for Apple Silicon Macs (M1–M5). No sudo. TUI, JSON/Prometheus metrics server, and Rust library."
   license: MIT
   homepage: https://docs.rs/macmon
-  head: 8b2ab56
+  head: 39e98aa
   archived: false
   latestVersion: "dev"
   latestRelease: "v0.10.0"
   latestPrerelease: "dev"
-  collectedAt: 2026-10-21T04:32:17Z
+  collectedAt: 2026-10-22T04:29:34Z
 timeline:
   created: 2024-06-16
-  lastCommit: 2026-10-17
+  lastCommit: 2026-10-21
   lastVersion: 2026-10-07
   lastRelease: 2026-10-14
   lastPrerelease: 2026-10-07
 popularity:
-  star: 2016
+  star: 2033
   watcher: 13
   fork: 93
   release: 24
   contributor: 18
-  pullRequest: 57
+  pullRequest: 58
   issue: 50
 language:
   Rust: 559283
@@ -30,63 +30,63 @@ language:
 totalBytes: 636199
 recent:
   last30d:
-    since: 2026-09-21
+    since: 2026-09-22
     release: 3
-    mergedPR: 21
+    mergedPR: 22
     openPR: 3
     closedIssue: 2
     openIssue: 0
-    commit: 42
+    commit: 43
   last60d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 3
-    mergedPR: 21
+    mergedPR: 22
     openPR: 3
     closedIssue: 3
     openIssue: 1
-    commit: 42
+    commit: 43
   last90d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 6
-    mergedPR: 21
+    mergedPR: 22
     openPR: 3
     closedIssue: 4
     openIssue: 2
-    commit: 52
+    commit: 53
   last180d:
-    since: 2026-04-24
+    since: 2026-04-25
     release: 7
-    mergedPR: 25
+    mergedPR: 26
     openPR: 4
     closedIssue: 7
     openIssue: 3
-    commit: 75
+    commit: 76
   last360d:
-    since: 2025-10-26
+    since: 2025-10-27
     release: 9
-    mergedPR: 29
+    mergedPR: 30
     openPR: 4
     closedIssue: 23
     openIssue: 3
-    commit: 92
+    commit: 93
   last720d:
-    since: 2024-10-31
+    since: 2024-11-01
     release: 16
-    mergedPR: 34
+    mergedPR: 35
     openPR: 4
     closedIssue: 36
     openIssue: 6
-    commit: 130
+    commit: 131
 total:
   release: 24
-  mergedPR: 35
+  mergedPR: 36
   openPR: 4
   closedIssue: 43
   openIssue: 7
-  commit: 159
+  commit: 160
 ---
 path: /home/runner/.x-repo/github.com/vladkens/macmon
-collectedAt: 2026-10-21T04:32:19Z
+collectedAt: 2026-10-22T04:29:35Z
 loc:
   Rust:
     code: 11908
@@ -119,9 +119,9 @@ loc:
     blanks: 5
     files: 4
   Makefile:
-    code: 34
+    code: 31
     comments: 0
-    blanks: 11
+    blanks: 10
     files: 1
   Markdown:
     code: 0
@@ -129,11 +129,11 @@ loc:
     blanks: 441
     files: 16
 total:
-  code: 14760
+  code: 14757
   comments: 2925
-  blanks: 2302
+  blanks: 2301
   files: 52
 ---
 
 ---
-{"id":413187274,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOMKBR7c4YoLzK","tag_name":"v0.10.0","target_commitish":"main","name":"v0.10.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-14T21:08:38Z","updated_at":"2026-10-14T21:11:08Z","published_at":"2026-10-14T21:11:08Z","assets":[{"id":641677170,"node_id":"RA_kwDOMKBR7c4mPzdy","name":"macmon-v0.10.0.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":934099,"digest":"sha256:0ccff60b7bf67bcb9e09cc8f804656a1cafa7eeae7297ee83d10e460ead7d43d","download_count":823,"created_at":"2026-10-14T21:11:06Z","updated_at":"2026-10-14T21:11:07Z"}],"body":"### Breaking Changes\n\n- Added `cpu_tiers` to `SocInfo` and `Metrics` and `vm` to `SocInfo` in the Rust library, so code that builds these structs or matches them exhaustively needs updating; the `ecpu_*` and `pcpu_*` fields are deprecated in favor of `cpu_tiers` (#85, #100)\n\n### Features\n\n- Added support for the three CPU tiers of M6 Macs, with per-tier CPU metrics in JSON (`cpu_tiers`) and Prometheus (`macmon_cpu_tier_*`) (#85)\n- Added an info overlay (`i`) with the working directory, open files and sockets of the selected process, grouped by type and filterable (#95, #97)\n- Added killing the selected process with `k`, with Terminate and Force kill (#89)\n- Added revealing the selected process or file in Finder with `e` and copying its path with `c` (#95, #98)\n- Added several terms to the process filter, `!` to exclude matches, and a total row for each term (#86)\n- Added a sortable CPU time column (`TIME`) to the process list (#104, #105)\n- Added a total power box with fan speed to the power row (#94, by @NicholasClooney)\n- Added scrollbars to the process list, the info overlay and the help (#98, #104)\n- Added support for running in a macOS virtual machine, where unavailable power and frequency readings are hidden; the `soc` JSON object gains `vm` (#99, #100)\n\n### Fixes\n\n- Fixed processes of the `nobody` user missing from the process list (#104)\n- Fixed the base M5 Efficiency cores being labeled `P` instead of `E` (#85)\n- Fixed CPU core counts in `macmon debug` on macOS 27 (#85)\n\n### Improvements\n\n- Reduced the TUI's own CPU usage by about half with the process list shown (#103)\n- Made key hints easier to read in both light and dark terminal themes (#92)\n- Updated the Grafana dashboard to plot per-tier CPU metrics; it needs this version's exporter (#85)\n\n**Full Changelog**: https://github.com/vladkens/macmon/compare/v0.9.0...v0.10.0","reactions":{"total_count":8,"+1":2,"-1":0,"laugh":0,"hooray":2,"confused":0,"heart":2,"rocket":2,"eyes":0},"mentions_count":1}
+{"id":413187274,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOMKBR7c4YoLzK","tag_name":"v0.10.0","target_commitish":"main","name":"v0.10.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-14T21:08:38Z","updated_at":"2026-10-14T21:11:08Z","published_at":"2026-10-14T21:11:08Z","assets":[{"id":641677170,"node_id":"RA_kwDOMKBR7c4mPzdy","name":"macmon-v0.10.0.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":934099,"digest":"sha256:0ccff60b7bf67bcb9e09cc8f804656a1cafa7eeae7297ee83d10e460ead7d43d","download_count":933,"created_at":"2026-10-14T21:11:06Z","updated_at":"2026-10-14T21:11:07Z"}],"body":"### Breaking Changes\n\n- Added `cpu_tiers` to `SocInfo` and `Metrics` and `vm` to `SocInfo` in the Rust library, so code that builds these structs or matches them exhaustively needs updating; the `ecpu_*` and `pcpu_*` fields are deprecated in favor of `cpu_tiers` (#85, #100)\n\n### Features\n\n- Added support for the three CPU tiers of M6 Macs, with per-tier CPU metrics in JSON (`cpu_tiers`) and Prometheus (`macmon_cpu_tier_*`) (#85)\n- Added an info overlay (`i`) with the working directory, open files and sockets of the selected process, grouped by type and filterable (#95, #97)\n- Added killing the selected process with `k`, with Terminate and Force kill (#89)\n- Added revealing the selected process or file in Finder with `e` and copying its path with `c` (#95, #98)\n- Added several terms to the process filter, `!` to exclude matches, and a total row for each term (#86)\n- Added a sortable CPU time column (`TIME`) to the process list (#104, #105)\n- Added a total power box with fan speed to the power row (#94, by @NicholasClooney)\n- Added scrollbars to the process list, the info overlay and the help (#98, #104)\n- Added support for running in a macOS virtual machine, where unavailable power and frequency readings are hidden; the `soc` JSON object gains `vm` (#99, #100)\n\n### Fixes\n\n- Fixed processes of the `nobody` user missing from the process list (#104)\n- Fixed the base M5 Efficiency cores being labeled `P` instead of `E` (#85)\n- Fixed CPU core counts in `macmon debug` on macOS 27 (#85)\n\n### Improvements\n\n- Reduced the TUI's own CPU usage by about half with the process list shown (#103)\n- Made key hints easier to read in both light and dark terminal themes (#92)\n- Updated the Grafana dashboard to plot per-tier CPU metrics; it needs this version's exporter (#85)\n\n**Full Changelog**: https://github.com/vladkens/macmon/compare/v0.9.0...v0.10.0","reactions":{"total_count":8,"+1":2,"-1":0,"laugh":0,"hooray":2,"confused":0,"heart":2,"rocket":2,"eyes":0},"mentions_count":1}

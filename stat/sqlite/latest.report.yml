@@ -2,12 +2,12 @@ about:
   description: "Official Git mirror of the SQLite source tree"
   license: NOASSERTION
   homepage: 
-  head: 0498915
+  head: ac429ff
   archived: false
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-10-21T06:01:06Z
+  collectedAt: 2026-10-22T05:50:51Z
 timeline:
   created: 2019-03-18
   lastCommit: 2026-10-21
@@ -15,15 +15,15 @@ timeline:
   lastRelease: 
   lastPrerelease: 
 popularity:
-  star: 10741
+  star: 10751
   watcher: 150
-  fork: 1698
+  fork: 1700
   release: 0
   contributor: 1
   pullRequest: 51
   issue: 0
 language:
-  C: 15482715
+  C: 15492529
   Tcl: 1423781
   JavaScript: 1077329
   Java: 471722
@@ -37,10 +37,10 @@ language:
   Roff: 5315
   CSS: 2823
   Python: 2389
-totalBytes: 19060599
+totalBytes: 19070413
 recent:
   last30d:
-    since: 2026-09-21
+    since: 2026-09-22
     release: 0
     mergedPR: 0
     openPR: 3
@@ -48,7 +48,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 0
     mergedPR: 0
     openPR: 4
@@ -56,7 +56,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-23
+    since: 2026-07-24
     release: 0
     mergedPR: 0
     openPR: 4
@@ -64,7 +64,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-24
+    since: 2026-04-25
     release: 0
     mergedPR: 0
     openPR: 7
@@ -72,7 +72,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-26
+    since: 2025-10-27
     release: 0
     mergedPR: 0
     openPR: 12
@@ -80,28 +80,28 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-10-31
+    since: 2024-11-01
     release: 0
     mergedPR: 0
     openPR: 16
     closedIssue: 0
     openIssue: 0
-    commit: 3699
+    commit: 3702
 total:
   release: 0
   mergedPR: 0
   openPR: 26
   closedIssue: 0
   openIssue: 0
-  commit: 32769
+  commit: 32789
 ---
 path: /home/runner/.x-repo/github.com/sqlite/sqlite
-collectedAt: 2026-10-21T06:02:59Z
+collectedAt: 2026-10-22T05:51:58Z
 loc:
   C:
-    code: 319415
-    comments: 93047
-    blanks: 28167
+    code: 319561
+    comments: 93135
+    blanks: 28181
     files: 318
   Tcl:
     code: 28275
@@ -128,6 +128,11 @@ loc:
     comments: 3995
     blanks: 1067
     files: 58
+  Sql:
+    code: 2925
+    comments: 34
+    blanks: 230
+    files: 22
   Sh:
     code: 2484
     comments: 610
@@ -143,11 +148,6 @@ loc:
     comments: 0
     blanks: 223
     files: 3
-  Sql:
-    code: 1925
-    comments: 34
-    blanks: 102
-    files: 20
   Makefile:
     code: 1506
     comments: 823
@@ -194,15 +194,15 @@ loc:
     blanks: 229
     files: 18
 total:
-  code: 421336
-  comments: 163054
-  blanks: 38410
-  files: 702
+  code: 422482
+  comments: 163142
+  blanks: 38552
+  files: 704
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/sqlite/sqlite
-  commit: 5bab74a91ba9d755d8102484e871821e796df77a
+  commit: ac429ff80483f25c0f7d1ea02f3e21040ec388e3
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
@@ -216,6 +216,10 @@ checks:
     score: -1
     reason: No tokens found
     details: null
+  - name: Dangerous-Workflow
+    score: -1
+    reason: no workflows found
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
@@ -225,10 +229,6 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: -1
-    reason: no workflows found
-    details: null
   - name: SAST
     score: 0
     reason: no SAST tool detected
@@ -265,6 +265,10 @@ checks:
       - 'Info: Possibly incomplete results: error parsing shell code: `|` can only immediately follow a statement: test/speedtest.tcl:0'
       - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered `(`: test/testrunner.tcl:0'
       - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered `(`: tool/cg_anno.tcl:0'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -279,10 +283,6 @@ checks:
       - 'Info: CLibFuzzer integration found: test/ossfuzz.c:119'
       - 'Info: CLibFuzzer integration found: test/ossshell.c:24'
       - 'Info: CLibFuzzer integration found: test/ossshell.c:92'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
