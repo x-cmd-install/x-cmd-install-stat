@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.15.1"
   latestRelease: "v2.15.1"
   latestPrerelease: ""
-  collectedAt: 2026-10-20T04:42:51Z
+  collectedAt: 2026-10-21T04:36:51Z
 timeline:
   created: 2009-04-23
   lastCommit: 2026-07-09
@@ -32,7 +32,7 @@ language:
 totalBytes: 590660
 recent:
   last30d:
-    since: 2026-09-20
+    since: 2026-09-21
     release: 0
     mergedPR: 0
     openPR: 6
@@ -40,7 +40,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-21
+    since: 2026-08-22
     release: 0
     mergedPR: 0
     openPR: 11
@@ -48,7 +48,7 @@ recent:
     openIssue: 3
     commit: 0
   last90d:
-    since: 2026-07-22
+    since: 2026-07-23
     release: 0
     mergedPR: 0
     openPR: 11
@@ -56,7 +56,7 @@ recent:
     openIssue: 4
     commit: 0
   last180d:
-    since: 2026-04-23
+    since: 2026-04-24
     release: 1
     mergedPR: 9
     openPR: 12
@@ -64,7 +64,7 @@ recent:
     openIssue: 7
     commit: 15
   last360d:
-    since: 2025-10-25
+    since: 2025-10-26
     release: 2
     mergedPR: 12
     openPR: 16
@@ -72,10 +72,10 @@ recent:
     openIssue: 7
     commit: 20
   last720d:
-    since: 2024-10-30
+    since: 2024-10-31
     release: 3
     mergedPR: 20
-    openPR: 17
+    openPR: 16
     closedIssue: 9
     openIssue: 10
     commit: 63
@@ -88,7 +88,7 @@ total:
   commit: 1140
 ---
 path: /home/runner/.x-repo/github.com/akheron/jansson
-collectedAt: 2026-10-20T04:42:52Z
+collectedAt: 2026-10-21T04:36:52Z
 loc:
   C:
     code: 13666
@@ -166,7 +166,7 @@ total:
   blanks: 3784
   files: 97
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/akheron/jansson
   commit: 851a2145e3256f2e67e5dfe24b0e456bf198b741
@@ -175,14 +175,6 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 5.9
 checks:
-  - name: Security-Policy
-    score: 9
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: SECURITY.md:1'
-      - 'Info: Found linked content: SECURITY.md:1'
-      - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
-      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Code-Review
     score: 6
     reason: Found 9/13 approved changesets -- score normalized to 6
@@ -192,6 +184,21 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Security-Policy
+    score: 9
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: SECURITY.md:1'
+      - 'Info: Found linked content: SECURITY.md:1'
+      - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
+      - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Token-Permissions
+    score: 10
+    reason: GitHub workflow tokens follow principle of least privilege
+    details:
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/fuzz.yml:13'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/tests.yml:10'
+      - 'Info: no jobLevel write permissions found'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -204,13 +211,6 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Token-Permissions
-    score: 10
-    reason: GitHub workflow tokens follow principle of least privilege
-    details:
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/fuzz.yml:13'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/tests.yml:10'
-      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -218,10 +218,10 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/fuzz.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/akheron/jansson/fuzz.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/fuzz.yml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/akheron/jansson/fuzz.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/fuzz.yml:32: update your workflow using https://app.stepsecurity.io/secureworkflow/akheron/jansson/fuzz.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/tests.yml:31: update your workflow using https://app.stepsecurity.io/secureworkflow/akheron/jansson/tests.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/tests.yml:56: update your workflow using https://app.stepsecurity.io/secureworkflow/akheron/jansson/tests.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/tests.yml:66: update your workflow using https://app.stepsecurity.io/secureworkflow/akheron/jansson/tests.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/tests.yml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/akheron/jansson/tests.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/tests.yml:31: update your workflow using https://app.stepsecurity.io/secureworkflow/akheron/jansson/tests.yml/master?enable=pin'
       - 'Info:   0 out of   5 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
   - name: CII-Best-Practices

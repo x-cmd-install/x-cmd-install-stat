@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.3.1"
   latestRelease: "v2.3.1"
   latestPrerelease: ""
-  collectedAt: 2026-10-20T05:23:07Z
+  collectedAt: 2026-10-21T05:11:30Z
 timeline:
   created: 2019-04-08
   lastCommit: 2026-10-06
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-10-06
   lastPrerelease: 
 popularity:
-  star: 6994
+  star: 7000
   watcher: 36
-  fork: 459
+  fork: 461
   release: 43
   contributor: 78
   pullRequest: 494
@@ -27,7 +27,7 @@ language:
 totalBytes: 967172
 recent:
   last30d:
-    since: 2026-09-20
+    since: 2026-09-21
     release: 2
     mergedPR: 17
     openPR: 27
@@ -35,15 +35,15 @@ recent:
     openIssue: 14
     commit: 18
   last60d:
-    since: 2026-08-21
+    since: 2026-08-22
     release: 2
     mergedPR: 28
     openPR: 28
-    closedIssue: 5
+    closedIssue: 4
     openIssue: 15
     commit: 28
   last90d:
-    since: 2026-07-22
+    since: 2026-07-23
     release: 3
     mergedPR: 42
     openPR: 28
@@ -51,7 +51,7 @@ recent:
     openIssue: 15
     commit: 44
   last180d:
-    since: 2026-04-23
+    since: 2026-04-24
     release: 4
     mergedPR: 71
     openPR: 28
@@ -59,7 +59,7 @@ recent:
     openIssue: 15
     commit: 75
   last360d:
-    since: 2025-10-25
+    since: 2025-10-26
     release: 4
     mergedPR: 73
     openPR: 28
@@ -67,9 +67,9 @@ recent:
     openIssue: 18
     commit: 75
   last720d:
-    since: 2024-10-30
+    since: 2024-10-31
     release: 5
-    mergedPR: 105
+    mergedPR: 104
     openPR: 28
     closedIssue: 63
     openIssue: 26
@@ -83,7 +83,7 @@ total:
   commit: 1674
 ---
 path: /home/runner/.x-repo/github.com/adbar/trafilatura
-collectedAt: 2026-10-20T05:23:16Z
+collectedAt: 2026-10-21T05:11:40Z
 loc:
   Html:
     code: 817422
@@ -156,7 +156,7 @@ total:
   blanks: 221213
   files: 1148
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/adbar/trafilatura
   commit: e2f85c965662c7df26b73290ef175b2c2a5fdca6
@@ -165,6 +165,23 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 5.2
 checks:
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Code-Review
+    score: 7
+    reason: Found 22/30 approved changesets -- score normalized to 7
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -174,30 +191,13 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/codeql.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/tests.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Code-Review
-    score: 7
-    reason: Found 22/30 approved changesets -- score normalized to 7
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 10 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Security-Policy
     score: 0
@@ -207,17 +207,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -226,24 +226,24 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:32: update your workflow using https://app.stepsecurity.io/secureworkflow/adbar/trafilatura/codeql.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:46: update your workflow using https://app.stepsecurity.io/secureworkflow/adbar/trafilatura/codeql.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:59: update your workflow using https://app.stepsecurity.io/secureworkflow/adbar/trafilatura/codeql.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/tests.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/adbar/trafilatura/tests.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/tests.yml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/adbar/trafilatura/tests.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/tests.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/adbar/trafilatura/tests.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/tests.yml:62: update your workflow using https://app.stepsecurity.io/secureworkflow/adbar/trafilatura/tests.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/tests.yml:66: update your workflow using https://app.stepsecurity.io/secureworkflow/adbar/trafilatura/tests.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/tests.yml:73: update your workflow using https://app.stepsecurity.io/secureworkflow/adbar/trafilatura/tests.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/tests.yml:112: update your workflow using https://app.stepsecurity.io/secureworkflow/adbar/trafilatura/tests.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/tests.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/adbar/trafilatura/tests.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/tests.yml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/adbar/trafilatura/tests.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/tests.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/adbar/trafilatura/tests.yml/master?enable=pin'
       - 'Info:   0 out of   8 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 third-party GitHubAction dependencies pinned'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''master'''
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits

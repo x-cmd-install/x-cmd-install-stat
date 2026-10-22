@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.12.0"
   latestRelease: "v0.12.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-20T04:51:35Z
+  collectedAt: 2026-10-21T04:38:49Z
 timeline:
   created: 2019-03-31
   lastCommit: 2026-10-12
@@ -27,7 +27,7 @@ language:
 totalBytes: 301645
 recent:
   last30d:
-    since: 2026-09-20
+    since: 2026-09-21
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 32
   last60d:
-    since: 2026-08-21
+    since: 2026-08-22
     release: 1
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 76
   last90d:
-    since: 2026-07-22
+    since: 2026-07-23
     release: 2
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 82
   last180d:
-    since: 2026-04-23
+    since: 2026-04-24
     release: 3
     mergedPR: 0
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 107
   last360d:
-    since: 2025-10-25
+    since: 2025-10-26
     release: 3
     mergedPR: 2
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 1
     commit: 115
   last720d:
-    since: 2024-10-30
+    since: 2024-10-31
     release: 7
     mergedPR: 6
     openPR: 0
@@ -83,7 +83,7 @@ total:
   commit: 427
 ---
 path: /home/runner/.x-repo/github.com/mvdan/gofumpt
-collectedAt: 2026-10-20T04:51:35Z
+collectedAt: 2026-10-21T04:38:50Z
 loc:
   Go:
     code: 7277
@@ -106,7 +106,7 @@ total:
   blanks: 1240
   files: 33
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/mvdan/gofumpt
   commit: 361d571111e81218c1fdf3419c9a60c918a66a7f
@@ -115,6 +115,14 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.3
 checks:
+  - name: Code-Review
+    score: 0
+    reason: Found 0/30 approved changesets -- score normalized to 0
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -128,10 +136,12 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: SAST
     score: 0
     reason: no SAST tool detected
@@ -144,16 +154,6 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:11: update your workflow using https://app.stepsecurity.io/secureworkflow/mvdan/gofumpt/test.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:12: update your workflow using https://app.stepsecurity.io/secureworkflow/mvdan/gofumpt/test.yml/master?enable=pin'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
-  - name: Code-Review
-    score: 0
-    reason: Found 0/30 approved changesets -- score normalized to 0
-    details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -166,17 +166,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: GoBuiltInFuzzer integration found: format/fuzz_test.go:28'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: BSD 3-Clause "New" or "Revised" License: LICENSE:0'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: GoBuiltInFuzzer integration found: format/fuzz_test.go:28'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.

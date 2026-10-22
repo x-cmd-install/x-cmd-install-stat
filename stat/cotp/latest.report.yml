@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.10.0"
   latestRelease: "v1.10.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-20T03:28:47Z
+  collectedAt: 2026-10-21T03:23:13Z
 timeline:
   created: 2020-12-20
   lastCommit: 2026-07-26
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-07-22
   lastPrerelease: 
 popularity:
-  star: 390
+  star: 391
   watcher: 5
   fork: 28
   release: 49
@@ -29,7 +29,7 @@ language:
 totalBytes: 156263
 recent:
   last30d:
-    since: 2026-09-20
+    since: 2026-09-21
     release: 0
     mergedPR: 0
     openPR: 5
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-21
+    since: 2026-08-22
     release: 0
     mergedPR: 0
     openPR: 8
@@ -45,23 +45,23 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-22
-    release: 1
-    mergedPR: 1
+    since: 2026-07-23
+    release: 0
+    mergedPR: 0
     openPR: 11
     closedIssue: 0
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-23
+    since: 2026-04-24
     release: 2
-    mergedPR: 9
+    mergedPR: 8
     openPR: 12
     closedIssue: 3
     openIssue: 0
     commit: 18
   last360d:
-    since: 2025-10-25
+    since: 2025-10-26
     release: 4
     mergedPR: 18
     openPR: 12
@@ -69,7 +69,7 @@ recent:
     openIssue: 0
     commit: 34
   last720d:
-    since: 2024-10-30
+    since: 2024-10-31
     release: 10
     mergedPR: 82
     openPR: 12
@@ -85,7 +85,7 @@ total:
   commit: 1507
 ---
 path: /home/runner/.x-repo/github.com/replydev/cotp
-collectedAt: 2026-10-20T03:28:51Z
+collectedAt: 2026-10-21T03:23:14Z
 loc:
   Rust:
     code: 4012
@@ -133,30 +133,30 @@ total:
   blanks: 842
   files: 76
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/replydev/cotp
   commit: 8f5513937f577d48c403830887fe65c48eaff45c
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 4.6
+score: 4.3
 checks:
-  - name: Maintained
-    score: 8
-    reason: 9 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 8
-    details: null
   - name: Code-Review
     score: 0
     reason: Found 0/4 approved changesets -- score normalized to 0
     details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
+  - name: Maintained
+    score: 5
+    reason: 6 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 5
     details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -164,9 +164,9 @@ checks:
     details:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/build.yml:10'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/build.yml:37'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/deploy.yml:90'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/deploy.yml:145'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/deploy.yml:20'
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/deploy.yml:90'
       - 'Warn: no topLevel permission defined: .github/workflows/build.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/deploy.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
@@ -201,6 +201,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -209,11 +214,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
@@ -225,6 +225,18 @@ checks:
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/deploy.yml:140'
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v1.9.10 not signed: https://api.github.com/repos/replydev/cotp/releases/316839870'
+      - 'Warn: release artifact v1.9.9 not signed: https://api.github.com/repos/replydev/cotp/releases/308016690'
+      - 'Warn: release artifact v1.9.8 not signed: https://api.github.com/repos/replydev/cotp/releases/298159782'
+      - 'Warn: release artifact v1.9.7 not signed: https://api.github.com/repos/replydev/cotp/releases/244537942'
+      - 'Warn: release artifact v1.9.10 does not have provenance: https://api.github.com/repos/replydev/cotp/releases/316839870'
+      - 'Warn: release artifact v1.9.9 does not have provenance: https://api.github.com/repos/replydev/cotp/releases/308016690'
+      - 'Warn: release artifact v1.9.8 does not have provenance: https://api.github.com/repos/replydev/cotp/releases/298159782'
+      - 'Warn: release artifact v1.9.7 does not have provenance: https://api.github.com/repos/replydev/cotp/releases/244537942'
   - name: Branch-Protection
     score: 4
     reason: branch protection is not maximal on development and all release branches
@@ -239,18 +251,6 @@ checks:
       - 'Info: ''up-to-date branches'' is required to merge on branch ''main'''
       - 'Info: status check found to merge onto on branch ''main'''
       - 'Info: PRs are required in order to make changes on branch ''main'''
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v1.9.10 not signed: https://api.github.com/repos/replydev/cotp/releases/316839870'
-      - 'Warn: release artifact v1.9.9 not signed: https://api.github.com/repos/replydev/cotp/releases/308016690'
-      - 'Warn: release artifact v1.9.8 not signed: https://api.github.com/repos/replydev/cotp/releases/298159782'
-      - 'Warn: release artifact v1.9.7 not signed: https://api.github.com/repos/replydev/cotp/releases/244537942'
-      - 'Warn: release artifact v1.9.10 does not have provenance: https://api.github.com/repos/replydev/cotp/releases/316839870'
-      - 'Warn: release artifact v1.9.9 does not have provenance: https://api.github.com/repos/replydev/cotp/releases/308016690'
-      - 'Warn: release artifact v1.9.8 does not have provenance: https://api.github.com/repos/replydev/cotp/releases/298159782'
-      - 'Warn: release artifact v1.9.7 does not have provenance: https://api.github.com/repos/replydev/cotp/releases/244537942'
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits

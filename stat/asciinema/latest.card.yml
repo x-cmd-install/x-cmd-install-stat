@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.2.1"
   latestRelease: "v3.2.1"
   latestPrerelease: "v3.0.0-rc.4"
-  collectedAt: 2026-10-20T03:57:09Z
+  collectedAt: 2026-10-21T03:47:00Z
 timeline:
   created: 2011-11-21
   lastCommit: 2026-08-14
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-06-16
   lastPrerelease: 2025-05-07
 popularity:
-  star: 17891
+  star: 17897
   watcher: 276
-  fork: 1130
+  fork: 1061
   release: 26
   contributor: 63
   pullRequest: 253
@@ -31,7 +31,7 @@ language:
 totalBytes: 304982
 recent:
   last30d:
-    since: 2026-09-20
+    since: 2026-09-21
     release: 0
     mergedPR: 0
     openPR: 1
@@ -39,7 +39,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-08-21
+    since: 2026-08-22
     release: 0
     mergedPR: 0
     openPR: 4
@@ -47,7 +47,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-07-22
+    since: 2026-07-23
     release: 0
     mergedPR: 0
     openPR: 5
@@ -55,7 +55,7 @@ recent:
     openIssue: 1
     commit: 4
   last180d:
-    since: 2026-04-23
+    since: 2026-04-24
     release: 1
     mergedPR: 1
     openPR: 7
@@ -63,7 +63,7 @@ recent:
     openIssue: 2
     commit: 29
   last360d:
-    since: 2025-10-25
+    since: 2025-10-26
     release: 3
     mergedPR: 5
     openPR: 8
@@ -71,7 +71,7 @@ recent:
     openIssue: 4
     commit: 68
   last720d:
-    since: 2024-10-30
+    since: 2024-10-31
     release: 7
     mergedPR: 21
     openPR: 8
@@ -87,7 +87,7 @@ total:
   commit: 1713
 ---
 path: /home/runner/.x-repo/github.com/asciinema/asciinema
-collectedAt: 2026-10-20T03:57:10Z
+collectedAt: 2026-10-21T03:47:00Z
 loc:
   Rust:
     code: 7388
@@ -145,7 +145,7 @@ total:
   blanks: 1852
   files: 58
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/asciinema/asciinema
   commit: 77498061982889f68ba1f6e8b666dd8d13246250
@@ -154,17 +154,21 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3
 checks:
-  - name: Code-Review
-    score: 0
-    reason: Found 1/30 approved changesets -- score normalized to 0
-    details: null
   - name: Maintained
     score: 5
     reason: 7 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5
     details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Code-Review
+    score: 0
+    reason: Found 1/30 approved changesets -- score normalized to 0
     details: null
   - name: Packaging
     score: -1
@@ -178,10 +182,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:4'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -213,14 +213,6 @@ checks:
       - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -235,15 +227,23 @@ checks:
       - 'Warn: release artifact v3.1.0 does not have provenance: https://api.github.com/repos/asciinema/asciinema/releases/276649464'
       - 'Warn: release artifact v3.0.1 does not have provenance: https://api.github.com/repos/asciinema/asciinema/releases/257014366'
       - 'Warn: release artifact v3.0.0 does not have provenance: https://api.github.com/repos/asciinema/asciinema/releases/247353490'
-  - name: SAST
+  - name: Security-Policy
     score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
+    reason: security policy file not detected
     details:
-      - 'Warn: 0 commits out of 1 are checked with a SAST tool'
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''develop'''
       - 'Warn: branch protection not enabled for branch ''main'''
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 1 are checked with a SAST tool'
 ---

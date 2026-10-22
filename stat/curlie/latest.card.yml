@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.8.2"
   latestRelease: "v1.8.2"
   latestPrerelease: ""
-  collectedAt: 2026-10-20T06:01:56Z
+  collectedAt: 2026-10-21T05:57:43Z
 timeline:
   created: 2018-05-26
   lastCommit: 2025-12-07
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2025-03-07
   lastPrerelease: 
 popularity:
-  star: 3729
+  star: 3728
   watcher: 26
   fork: 119
   release: 19
@@ -28,7 +28,7 @@ language:
 totalBytes: 21529
 recent:
   last30d:
-    since: 2026-09-20
+    since: 2026-09-21
     release: 0
     mergedPR: 0
     openPR: 4
@@ -36,7 +36,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-08-21
+    since: 2026-08-22
     release: 0
     mergedPR: 0
     openPR: 5
@@ -44,7 +44,7 @@ recent:
     openIssue: 2
     commit: 0
   last90d:
-    since: 2026-07-22
+    since: 2026-07-23
     release: 0
     mergedPR: 0
     openPR: 5
@@ -52,7 +52,7 @@ recent:
     openIssue: 2
     commit: 0
   last180d:
-    since: 2026-04-23
+    since: 2026-04-24
     release: 0
     mergedPR: 0
     openPR: 6
@@ -60,7 +60,7 @@ recent:
     openIssue: 3
     commit: 0
   last360d:
-    since: 2025-10-25
+    since: 2025-10-26
     release: 0
     mergedPR: 1
     openPR: 6
@@ -68,7 +68,7 @@ recent:
     openIssue: 5
     commit: 1
   last720d:
-    since: 2024-10-30
+    since: 2024-10-31
     release: 1
     mergedPR: 6
     openPR: 6
@@ -84,7 +84,7 @@ total:
   commit: 91
 ---
 path: /home/runner/.x-repo/github.com/rs/curlie
-collectedAt: 2026-10-20T06:01:56Z
+collectedAt: 2026-10-21T05:57:48Z
 loc:
   Go:
     code: 929
@@ -112,7 +112,7 @@ total:
   blanks: 117
   files: 16
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/rs/curlie
   commit: 5dfcbb17ea673b66a3faab66d2ff5f24145f45a8
@@ -129,16 +129,16 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
     details:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:18'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 0
@@ -178,6 +178,16 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:21'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 1
     reason: 1 out of the last 5 releases have a total of 1 signed artifacts.
@@ -192,16 +202,6 @@ checks:
       - 'Warn: release artifact v1.7.1 does not have provenance: https://api.github.com/repos/rs/curlie/releases/102221753'
       - 'Warn: release artifact v1.6.9 does not have provenance: https://api.github.com/repos/rs/curlie/releases/63533318'
       - 'Warn: release artifact v1.6.8 does not have provenance: https://api.github.com/repos/rs/curlie/releases/63529692'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:21'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
