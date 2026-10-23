@@ -2,37 +2,37 @@ about:
   description: "An idiomatic, lean, fast & safe pure Rust implementation of Git"
   license: Apache-2.0
   homepage: 
-  head: b8ef9ea
+  head: 4dc73c3
   archived: false
-  latestVersion: "gix-utils-v0.5.1"
-  latestRelease: "gix-utils-v0.5.1"
+  latestVersion: "v0.61.0"
+  latestRelease: "v0.61.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-22T05:23:12Z
+  collectedAt: 2026-10-23T05:35:38Z
 timeline:
   created: 2018-06-07
-  lastCommit: 2026-10-22
-  lastVersion: 2026-10-11
-  lastRelease: 2026-10-11
+  lastCommit: 2026-10-23
+  lastVersion: 2026-10-22
+  lastRelease: 2026-10-22
   lastPrerelease: 
 popularity:
-  star: 12039
+  star: 12045
   watcher: 59
-  fork: 569
-  release: 3131
+  fork: 570
+  release: 3189
   contributor: 212
-  pullRequest: 1888
-  issue: 776
+  pullRequest: 1895
+  issue: 802
 language:
-  Rust: 16046588
-  Shell: 910724
+  Rust: 16049383
+  Shell: 911196
   HTML: 96933
   Just: 20502
   Makefile: 6956
   Dockerfile: 108
-totalBytes: 17081811
+totalBytes: 17085078
 recent:
   last30d:
-    since: 2026-09-22
+    since: 2026-09-23
     release: 100
     mergedPR: 0
     openPR: 0
@@ -40,7 +40,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 100
     mergedPR: 0
     openPR: 0
@@ -48,7 +48,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 100
     mergedPR: 0
     openPR: 0
@@ -56,7 +56,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-25
+    since: 2026-04-26
     release: 100
     mergedPR: 0
     openPR: 0
@@ -64,7 +64,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-27
+    since: 2025-10-28
     release: 100
     mergedPR: 0
     openPR: 0
@@ -72,7 +72,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-01
+    since: 2024-11-02
     release: 100
     mergedPR: 0
     openPR: 0
@@ -80,25 +80,25 @@ recent:
     openIssue: 0
     commit: 0
 total:
-  release: 3131
-  mergedPR: 1640
-  openPR: 14
+  release: 3189
+  mergedPR: 1643
+  openPR: 18
   closedIssue: 773
-  openIssue: 3
-  commit: 17061
+  openIssue: 29
+  commit: 17071
 ---
 path: /home/runner/.x-repo/github.com/Byron/gitoxide
-collectedAt: 2026-10-22T05:23:35Z
+collectedAt: 2026-10-23T05:36:04Z
 loc:
   Rust:
-    code: 364935
+    code: 364994
     comments: 3553
-    blanks: 30259
+    blanks: 30265
     files: 1612
   Sh:
-    code: 17166
-    comments: 1563
-    blanks: 2620
+    code: 17171
+    comments: 1571
+    blanks: 2621
     files: 276
   Toml:
     code: 3854
@@ -132,19 +132,19 @@ loc:
     files: 3
   Markdown:
     code: 0
-    comments: 100769
-    blanks: 34238
-    files: 177
+    comments: 101417
+    blanks: 34564
+    files: 178
   Text:
     code: 0
     comments: 720
     blanks: 174
     files: 39
 total:
-  code: 387184
-  comments: 131945
-  blanks: 72952
-  files: 2213
+  code: 387248
+  comments: 132610
+  blanks: 73286
+  files: 2214
 ---
 date: "2026-10-19"
 repo:
@@ -308,4 +308,4 @@ checks:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Info: all commits (30) are checked with a SAST tool'
 ---
-{"id":409528643,"author":{"login":"Byron","id":63622,"node_id":"MDQ6VXNlcjYzNjIy","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCCL8X84YaOlD","tag_name":"gix-utils-v0.5.1","target_commitish":"main","name":"gix-utils v0.5.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-11T08:14:28Z","updated_at":"2026-10-11T08:14:32Z","published_at":"2026-10-11T08:14:32Z","assets":[],"body":"### Bug Fixes\n\n - Document the `gix-utils/prodash` workaround and guard auditable builds\n   <!-- agent -->\n   `cargo-auditable` reconstructs enabled features from Cargo\u2019s `rustc` arguments\n   and replays them into workspace-wide `cargo metadata`. The root package\u2019s\n   implicit `prodash` feature also matches `gix-utils`\u2019 optional dependency,\n   despite `dep:prodash` suppressing its implicit feature. Cargo then rejects the\n   request for the nonexistent `gix-utils/prodash` feature.\n   \n   Explain why the explicit alias is a tooling compatibility workaround, link\n   the upstream Cargo and `cargo-auditable` issues, and document a metadata\n   reproduction and how to reassess removal.\n   \n   Add `just check-auditable` and a blocking CI job using stable Rust and\n   `cargo-auditable` 0.7.6. Test an actual auditable build of the `small`\n   configuration rather than requiring the alias itself, so an upstream fix can\n   allow the workaround to be removed without rewriting the check.\n\n### Commit Statistics\n\n - 4 commits contributed to the release over the course of 2 calendar days.\n - 3 days passed between releases.\n - 1 commit was understood as [conventional](https://www.conventionalcommits.org).\n - 0 issues like '(#ID)' were seen in commit messages\n\n### Commit Details\n\n<csr-read-only-do-not-edit/>\n\n<details><summary>view details</summary>\n\n * **Uncategorized**\n    - Merge pull request #3050 from plusky/fix-gix-utils-prodash-feature (e7ddf81)\n    - Document the `gix-utils/prodash` workaround and guard auditable builds (6a262bc)\n    - Restore explicit prodash feature in gix-utils dropped in dep: migration (3c367a6)\n    - Merge pull request #3048 from GitoxideLabs/new-release (5fccccf)\n</details>\n\n","reactions":{"total_count":1,"+1":1,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0}}
+{"id":420796422,"author":{"login":"Byron","id":63622,"node_id":"MDQ6VXNlcjYzNjIy","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCCL8X84ZFNgG","tag_name":"v0.61.0","target_commitish":"main","name":"v0.61.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-22T13:59:54Z","updated_at":"2026-10-22T14:01:27Z","published_at":"2026-10-22T14:01:27Z","assets":[],"body":"Headline benefits of this extra-curricular release are various security improvements,\nand greatly improved error handling and consisstency. Plumbing crates for instance will now\nuse a standard `std::error::Error` compatible error type.\n\nBesides that, the tracing of all commands was greatly improved.\n\n### Commit Statistics\n\n - 3 commits contributed to the release over the course of 4 calendar days.\n - 14 days passed between releases.\n - 0 commits were understood as [conventional](https://www.conventionalcommits.org).\n - 0 issues like '(#ID)' were seen in commit messages\n\n### Commit Details\n\n<csr-read-only-do-not-edit/>\n\n<details><summary>view details</summary>\n\n * **Uncategorized**\n    - Merge pull request #3064 from GitoxideLabs/various-improvements (8c513c5)\n    - Merge pull request #3066 from GitoxideLabs/check-commit-graph (7540f69)\n    - Merge pull request #3037 from ameyypawar/gix-remote-default-branch (ad0202e)\n</details>\n\n"}

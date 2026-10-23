@@ -7,7 +7,7 @@ about:
   latestVersion: "dist"
   latestRelease: "dist"
   latestPrerelease: ""
-  collectedAt: 2026-10-22T05:57:52Z
+  collectedAt: 2026-10-23T06:04:33Z
 timeline:
   created: 2017-02-16
   lastCommit: 2026-07-21
@@ -17,7 +17,7 @@ timeline:
 popularity:
   star: 3701
   watcher: 72
-  fork: 824
+  fork: 823
   release: 954
   contributor: 101
   pullRequest: 4107
@@ -34,7 +34,7 @@ language:
 totalBytes: 2551952
 recent:
   last30d:
-    since: 2026-09-22
+    since: 2026-09-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -42,7 +42,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -50,7 +50,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
     mergedPR: 0
     openPR: 1
@@ -58,7 +58,7 @@ recent:
     openIssue: 4
     commit: 0
   last180d:
-    since: 2026-04-25
+    since: 2026-04-26
     release: 0
     mergedPR: 1
     openPR: 1
@@ -66,7 +66,7 @@ recent:
     openIssue: 11
     commit: 1
   last360d:
-    since: 2025-10-27
+    since: 2025-10-28
     release: 0
     mergedPR: 1
     openPR: 7
@@ -74,7 +74,7 @@ recent:
     openIssue: 34
     commit: 1
   last720d:
-    since: 2024-11-01
+    since: 2024-11-02
     release: 0
     mergedPR: 1
     openPR: 21
@@ -90,7 +90,7 @@ total:
   commit: 6373
 ---
 path: /home/runner/.x-repo/github.com/webhintio/hint
-collectedAt: 2026-10-22T05:58:01Z
+collectedAt: 2026-10-23T06:04:49Z
 loc:
   TypeScript:
     code: 50175
@@ -188,7 +188,7 @@ total:
   blanks: 35679
   files: 1783
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/webhintio/hint
   commit: 62bfce68b934aab205bd60beb136112a5bfa1da1
@@ -197,19 +197,6 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3
 checks:
-  - name: Code-Review
-    score: 2
-    reason: Found 5/24 approved changesets -- score normalized to 2
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
-    score: 0
-    reason: 1 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -220,9 +207,26 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
+  - name: Code-Review
+    score: 2
+    reason: Found 5/24 approved changesets -- score normalized to 2
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Pinned-Dependencies
     score: 0
@@ -230,10 +234,6 @@ checks:
     details:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/3rdparty.yml:13: update your workflow using https://app.stepsecurity.io/secureworkflow/webhintio/hint/3rdparty.yml/main?enable=pin'
       - 'Info:   0 out of   1 GitHub-owned GitHubAction dependencies pinned'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: License
     score: 10
     reason: license file detected
@@ -245,6 +245,10 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -253,10 +257,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.

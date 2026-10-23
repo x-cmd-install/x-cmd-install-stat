@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.1.11"
   latestRelease: "v0.1.11"
   latestPrerelease: "v0.0.23"
-  collectedAt: 2026-10-22T03:58:12Z
+  collectedAt: 2026-10-23T04:01:13Z
 timeline:
   created: 2016-06-03
   lastCommit: 2018-12-10
@@ -30,7 +30,7 @@ language:
 totalBytes: 3915861
 recent:
   last30d:
-    since: 2026-09-22
+    since: 2026-09-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-07-24
+    since: 2026-07-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -54,7 +54,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-04-25
+    since: 2026-04-26
     release: 0
     mergedPR: 0
     openPR: 0
@@ -62,7 +62,7 @@ recent:
     openIssue: 1
     commit: 0
   last360d:
-    since: 2025-10-27
+    since: 2025-10-28
     release: 0
     mergedPR: 0
     openPR: 0
@@ -70,7 +70,7 @@ recent:
     openIssue: 1
     commit: 0
   last720d:
-    since: 2024-11-01
+    since: 2024-11-02
     release: 0
     mergedPR: 0
     openPR: 0
@@ -86,7 +86,7 @@ total:
   commit: 1340
 ---
 path: /home/runner/.x-repo/github.com/wallix/awless
-collectedAt: 2026-10-22T03:58:15Z
+collectedAt: 2026-10-23T04:01:20Z
 loc:
   Go:
     code: 880464
@@ -209,7 +209,7 @@ total:
   blanks: 207047
   files: 3486
 ---
-date: "2026-10-12"
+date: "2026-10-19"
 repo:
   name: github.com/wallix/awless
   commit: 44e892b4961fc09abf82f61de2ffeb66a20c82b7
@@ -218,10 +218,11 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 2.1
 checks:
-  - name: Code-Review
-    score: 1
-    reason: Found 4/27 approved changesets -- score normalized to 1
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
@@ -230,11 +231,10 @@ checks:
     score: -1
     reason: no workflows found
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 1
+    reason: Found 4/27 approved changesets -- score normalized to 1
+    details: null
   - name: Token-Permissions
     score: -1
     reason: No tokens found
@@ -242,6 +242,10 @@ checks:
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Security-Policy
     score: 0
@@ -251,15 +255,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
@@ -270,6 +265,11 @@ checks:
     score: -1
     reason: no dependencies found
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
