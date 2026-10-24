@@ -2,64 +2,64 @@ about:
   description: "Programmatic access to Gemini Notebook - via command-line interface (CLI), Model Context Protocol (MCP) server, and AI agent skills."
   license: MIT
   homepage: 
-  head: d6d427c
+  head: 458d086
   archived: false
-  latestVersion: "v0.15.6"
-  latestRelease: "v0.15.6"
+  latestVersion: "v0.15.7"
+  latestRelease: "v0.15.7"
   latestPrerelease: ""
-  collectedAt: 2026-10-23T05:14:13Z
+  collectedAt: 2026-10-24T04:58:46Z
 timeline:
   created: 2025-12-23
-  lastCommit: 2026-10-17
-  lastVersion: 2026-10-17
-  lastRelease: 2026-10-17
+  lastCommit: 2026-10-23
+  lastVersion: 2026-10-23
+  lastRelease: 2026-10-23
   lastPrerelease: 
 popularity:
-  star: 6376
+  star: 6386
   watcher: 41
-  fork: 957
-  release: 160
+  fork: 958
+  release: 161
   contributor: 61
   pullRequest: 199
   issue: 172
 language:
-  Python: 3308536
-totalBytes: 3308536
+  Python: 3315671
+totalBytes: 3315671
 recent:
   last30d:
-    since: 2026-09-23
-    release: 10
+    since: 2026-09-24
+    release: 11
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-24
-    release: 20
+    since: 2026-08-25
+    release: 21
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-25
-    release: 32
+    since: 2026-07-26
+    release: 31
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-26
-    release: 67
+    since: 2026-04-27
+    release: 68
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-28
+    since: 2025-10-29
     release: 100
     mergedPR: 0
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-02
+    since: 2024-11-03
     release: 100
     mergedPR: 0
     openPR: 0
@@ -75,20 +75,20 @@ recent:
     openIssue: 0
     commit: 0
 total:
-  release: 160
+  release: 161
   mergedPR: 154
   openPR: 0
-  closedIssue: 171
-  openIssue: 1
-  commit: 961
+  closedIssue: 172
+  openIssue: 0
+  commit: 963
 ---
 path: /home/runner/.x-repo/github.com/jacob-bd/notebooklm-mcp-cli
-collectedAt: 2026-10-23T05:14:15Z
+collectedAt: 2026-10-24T04:58:48Z
 loc:
   Python:
-    code: 71722
-    comments: 2872
-    blanks: 14384
+    code: 71856
+    comments: 2877
+    blanks: 14412
     files: 317
   Json:
     code: 83
@@ -102,15 +102,15 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 9311
-    blanks: 4059
+    comments: 9318
+    blanks: 4066
     files: 36
 total:
-  code: 74195
-  comments: 12762
-  blanks: 18816
+  code: 74329
+  comments: 12774
+  blanks: 18851
   files: 355
 ---
 
 ---
-{"id":416057664,"author":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQtfMFM4YzIlA","tag_name":"v0.15.6","target_commitish":"main","name":"v0.15.6: hardened auth credential writes, fixed collection editing","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-17T21:04:46Z","updated_at":"2026-10-17T21:16:03Z","published_at":"2026-10-17T21:14:03Z","assets":[{"id":651621188,"node_id":"RA_kwDOQtfMFM4m1vNE","name":"notebooklm-mcp-0.15.6.mcpb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":2606,"digest":"sha256:4ac31c8693400f5bfcc0a06fc4006b5afb0917d427c5a2dc223be1ce1c319872","download_count":94,"created_at":"2026-10-17T21:16:03Z","updated_at":"2026-10-17T21:16:03Z"}],"body":"### Fixed\n\n- **Headless sign-in requires a valid notebook API response.** Missing or malformed response payloads no longer validate candidate credentials. A valid response with zero notebooks remains accepted ([PR #374](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/374)).\n- **Background recovery preserves newer saved credentials.** Chromium and Firefox recovery compare the starting credential revision or file-mode authentication state before saving, rejecting stale writes when another process updates the profile ([PR #375](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/375)).\n- **Failed profile saves leave the legacy credential cache unchanged.** The default account's file-mode root cache is updated only after its profile save succeeds ([PR #376](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/376)).\n- **Collection editing works again.** Asking Google for a combined rename plus membership change returned INVALID_ARGUMENT for every edit, including re-sending an unchanged list. `edit_collection` now sends one operation per call (rename, add, remove) carrying only the added or removed notebook IDs. Membership is read before anything is written, and an unknown collection ID raises instead of reporting success ([PR #377](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/377)).\n\n### Changed\n\n- Documented the collections MCP tools (`collection_list`, `collection_create`, `collection_edit`, `collection_set_emoji`, `collection_delete`) in the MCP guide, the README feature table and the bundled skill.\n\n### Credits\n\nThanks to **@insane66613** for the authentication fixes in [#374](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/374), [#375](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/375) and [#376](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/376), and **@huyluong868** for the collection editing fix in [#377](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/377).","mentions_count":2}
+{"id":422207476,"author":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQtfMFM4ZKl_0","tag_name":"v0.15.7","target_commitish":"main","name":"v0.15.7: Claude Desktop Windows Store migrated-folder fix","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-23T18:57:44Z","updated_at":"2026-10-23T19:00:06Z","published_at":"2026-10-23T18:57:55Z","assets":[{"id":670086787,"node_id":"RA_kwDOQtfMFM4n8LaD","name":"notebooklm-mcp-0.15.7.mcpb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":2607,"digest":"sha256:0a6d5e6f0dd4e0725dcffaee32a2bc29f3fbdea622f502882a8e48cd500de6c4","download_count":11,"created_at":"2026-10-23T19:00:05Z","updated_at":"2026-10-23T19:00:06Z"}],"body":"## Fixed\n\n- **`nlm setup add claude-desktop` now writes to the right file on migrated Windows Store installs.** Newer Microsoft Store builds of Claude Desktop move their user data to `%LOCALAPPDATA%\\Claude-Data\\<package>`. We only knew the old path under `Packages\\`, so `setup add` wrote a config the app never read, and `setup list` showed a false \u2713 for it. The resolver now follows the app's own rule: the new folder is used only when it exists as a directory and no `.user-data-back.<package>` marker is in the old folder. An empty `Claude-Data` next to a live old folder keeps the old path, so working installs don't change ([#378](https://github.com/jacob-bd/gemini-notebook-mcp-cli/issues/378)).\n\n## Notes\n\n- Unverified: when the new folder exists with neither a `left` nor a `back` marker, Claude Desktop runs an extra check we haven't read. We treat that case as migrated.\n\n## Credits\n\nThanks to **@diogoflorencio** for the report and the manual workaround in #378.\n","mentions_count":1}
