@@ -2,95 +2,95 @@ about:
   description: "Draw service for human and agents."
   license: Apache-2.0
   homepage: https://x-cmd.com/draw
-  head: f702cd3
+  head: 62e12e3
   archived: false
-  latestVersion: "v0.2.4"
-  latestRelease: "v0.2.4"
+  latestVersion: "v0.2.5"
+  latestRelease: "v0.2.5"
   latestPrerelease: ""
-  collectedAt: 2026-10-24T05:39:22Z
+  collectedAt: 2026-10-25T05:39:31Z
 timeline:
   created: 2026-09-24
   lastCommit: 2026-10-22
-  lastVersion: 2026-10-22
-  lastRelease: 2026-10-22
+  lastVersion: 2026-10-24
+  lastRelease: 2026-10-24
   lastPrerelease: 
 popularity:
   star: 3
   watcher: 0
   fork: 0
-  release: 5
+  release: 6
   contributor: 2
   pullRequest: 0
   issue: 2
 language:
-  TypeScript: 465185
+  TypeScript: 467883
   Shell: 5020
   JavaScript: 276
-totalBytes: 470481
+totalBytes: 473179
 recent:
   last30d:
-    since: 2026-09-24
-    release: 5
+    since: 2026-09-25
+    release: 6
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 2
-    commit: 44
+    commit: 49
   last60d:
-    since: 2026-08-25
-    release: 5
+    since: 2026-08-26
+    release: 6
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 2
-    commit: 45
+    commit: 50
   last90d:
-    since: 2026-07-26
-    release: 5
+    since: 2026-07-27
+    release: 6
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 2
-    commit: 45
+    commit: 50
   last180d:
-    since: 2026-04-27
-    release: 5
+    since: 2026-04-28
+    release: 6
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 2
-    commit: 45
+    commit: 50
   last360d:
-    since: 2025-10-29
-    release: 5
+    since: 2025-10-30
+    release: 6
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 2
-    commit: 45
+    commit: 50
   last720d:
-    since: 2024-11-03
-    release: 5
+    since: 2024-11-04
+    release: 6
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 2
-    commit: 45
+    commit: 50
 total:
-  release: 5
+  release: 6
   mergedPR: 0
   openPR: 0
   closedIssue: 0
   openIssue: 2
-  commit: 45
+  commit: 50
 ---
 path: /home/runner/.x-repo/github.com/x-cmd/draw
-collectedAt: 2026-10-24T05:39:22Z
+collectedAt: 2026-10-25T05:39:32Z
 loc:
   TypeScript:
-    code: 15723
-    comments: 8619
-    blanks: 517
+    code: 15753
+    comments: 8621
+    blanks: 519
     files: 60
   Json:
     code: 3480
@@ -123,20 +123,39 @@ loc:
     blanks: 35
     files: 2
 total:
-  code: 19850
-  comments: 23674
-  blanks: 6866
+  code: 19880
+  comments: 23676
+  blanks: 6868
   files: 398
 ---
-date: "2026-10-22T08:16:08Z"
+date: "2026-10-24T15:02:35Z"
 repo:
   name: github.com/x-cmd/draw
-  commit: f702cd362fded9c1ab0f165973fb982773a7a83a
+  commit: 62e12e36fd6310b13bb9844d43cca40fdbb52e05
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 5.2
 checks:
+  - name: Code-Review
+    score: 0
+    reason: Found 0/30 approved changesets -- score normalized to 0
+    details: null
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 0
+    reason: project was created within the last 90 days. Please review its contents carefully
+    details:
+      - 'Warn: Repository was created within the last 90 days.'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -145,6 +164,17 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Token-Permissions
+    score: 9
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:19'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/publish.yml:16'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/publish.yml:54'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/ci.yml:10'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/codeql.yml:11'
+      - 'Warn: no topLevel permission defined: .github/workflows/publish.yml:1'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:16'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -153,45 +183,6 @@ checks:
     score: -1
     reason: no pull request found
     details: null
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Maintained
-    score: 0
-    reason: project was created within the last 90 days. Please review its contents carefully
-    details:
-      - 'Warn: Repository was created within the last 90 days.'
-  - name: Code-Review
-    score: 0
-    reason: Found 0/30 approved changesets -- score normalized to 0
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Pinned-Dependencies
-    score: 3
-    reason: dependency not pinned by hash detected -- score normalized to 3
-    details:
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/ci.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/ci.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/codeql.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/codeql.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/codeql.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish.yml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/publish.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/publish.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish.yml:57: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/publish.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/publish.yml:58: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/publish.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/scorecard.yml:30: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/scorecard.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/scorecard.yml:35: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/scorecard.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/scorecard.yml:42: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/scorecard.yml/main?enable=pin'
-      - 'Warn: npmCommand not pinned by hash: scripts/setup.sh:48'
-      - 'Info:   0 out of  10 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
-      - 'Info:   3 out of   4 npmCommand dependencies pinned'
   - name: SAST
     score: 10
     reason: 'SAST tool detected: CodeQL'
@@ -202,24 +193,29 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Token-Permissions
-    score: 9
-    reason: detected GitHub workflow tokens with excessive permissions
+  - name: Pinned-Dependencies
+    score: 3
+    reason: dependency not pinned by hash detected -- score normalized to 3
     details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:19'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/publish.yml:54'
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/publish.yml:16'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/ci.yml:10'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/codeql.yml:11'
-      - 'Warn: no topLevel permission defined: .github/workflows/publish.yml:1'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:16'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/ci.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/ci.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/codeql.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/codeql.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/codeql.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish.yml:57: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/publish.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/publish.yml:58: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/publish.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish.yml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/publish.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/publish.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/scorecard.yml:30: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/scorecard.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/scorecard.yml:35: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/scorecard.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/scorecard.yml:42: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/scorecard.yml/main?enable=pin'
+      - 'Warn: npmCommand not pinned by hash: scripts/setup.sh:48'
+      - 'Info:   0 out of  10 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
+      - 'Info:   3 out of   4 npmCommand dependencies pinned'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
     details: null
   - name: License
     score: 10
@@ -227,24 +223,9 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''main'''
-  - name: Contributors
-    score: 3
-    reason: project has 1 contributing companies or organizations -- score normalized to 3
-    details:
-      - 'Info: found contributions from: x-cmd'
   - name: Vulnerabilities
     score: 0
-    reason: 21 existing vulnerabilities detected
+    reason: 24 existing vulnerabilities detected
     details:
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-82fw-gwwq-j7x9'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-qxg6-89mg-rqv8'
@@ -256,16 +237,38 @@ checks:
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-2jfj-6hjv-fm6j'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-3wwx-pv8p-q78v'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-3xpg-4rpp-hhhm'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-4qv8-2p9j-2685'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-8436-99hf-9mmv'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-f72v-6w45-q472'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-pmjh-fq2x-6v4x'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-r53p-7pc4-xj5r'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-rfgv-xxqx-mfg5'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-rx4f-c7p8-82vq'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-w293-vg96-wgc3'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-xjj6-f33q-929c'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-587h-7wmj-h5pm'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-698v-4r3x-3vcv'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-9jrq-w75r-8gcw'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-r825-w8mm-5pxw'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-rq7h-c2jc-7f22'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''main'''
+  - name: Contributors
+    score: 3
+    reason: project has 1 contributing companies or organizations -- score normalized to 3
+    details:
+      - 'Info: found contributions from: x-cmd'
 ---
-{"id":420461733,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOUo_iK84ZD7yl","tag_name":"v0.2.4","target_commitish":"main","name":"v0.2.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-22T07:14:30Z","updated_at":"2026-10-22T08:16:36Z","published_at":"2026-10-22T08:16:36Z","assets":[],"body":"**Full Changelog**: https://github.com/x-cmd/draw/compare/v0.2.3...v0.2.4"}
+{"id":422798685,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOUo_iK84ZM2Vd","tag_name":"v0.2.5","target_commitish":"main","name":"v0.2.5","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-22T11:04:24Z","updated_at":"2026-10-24T15:02:59Z","published_at":"2026-10-24T15:02:59Z","assets":[],"body":"**Full Changelog**: https://github.com/x-cmd/draw/compare/v0.2.4...v0.2.5"}

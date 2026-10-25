@@ -2,12 +2,12 @@ about:
   description: "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More"
   license: Apache-2.0
   homepage: https://claude-mem.ai
-  head: 75fc021
+  head: a4469fd
   archived: false
   latestVersion: "v15.0.2"
   latestRelease: "v15.0.2"
   latestPrerelease: "v13.10.3-community-edge.0"
-  collectedAt: 2026-10-24T05:23:37Z
+  collectedAt: 2026-10-25T05:33:28Z
 timeline:
   created: 2025-08-31
   lastCommit: 2026-10-24
@@ -15,86 +15,86 @@ timeline:
   lastRelease: 2026-10-23
   lastPrerelease: 2026-07-09
 popularity:
-  star: 102615
-  watcher: 323
-  fork: 9067
+  star: 102876
+  watcher: 319
+  fork: 9085
   release: 373
   contributor: 292
-  pullRequest: 2480
-  issue: 2276
+  pullRequest: 2494
+  issue: 2278
 language:
-  TypeScript: 15920079
-  JavaScript: 8776505
+  TypeScript: 15922318
+  JavaScript: 8780787
   Python: 2042435
   HTML: 232973
   Shell: 144247
   CSS: 11969
   Dockerfile: 5506
-totalBytes: 27133714
+totalBytes: 27140235
 recent:
   last30d:
-    since: 2026-09-24
+    since: 2026-09-25
     release: 28
-    mergedPR: 579
-    openPR: 30
-    closedIssue: 128
-    openIssue: 22
-    commit: 899
+    mergedPR: 574
+    openPR: 41
+    closedIssue: 125
+    openIssue: 24
+    commit: 654
   last60d:
-    since: 2026-08-25
-    release: 65
-    mergedPR: 800
-    openPR: 38
-    closedIssue: 268
-    openIssue: 31
-    commit: 1152
+    since: 2026-08-26
+    release: 64
+    mergedPR: 801
+    openPR: 47
+    closedIssue: 266
+    openIssue: 33
+    commit: 1085
   last90d:
-    since: 2026-07-26
+    since: 2026-07-27
     release: 71
-    mergedPR: 885
-    openPR: 48
-    closedIssue: 401
-    openIssue: 42
-    commit: 1211
+    mergedPR: 884
+    openPR: 59
+    closedIssue: 397
+    openIssue: 44
+    commit: 1208
   last180d:
-    since: 2026-04-27
+    since: 2026-04-28
     release: 100
-    mergedPR: 1116
-    openPR: 57
-    closedIssue: 1071
-    openIssue: 44
-    commit: 1666
+    mergedPR: 1117
+    openPR: 68
+    closedIssue: 1055
+    openIssue: 46
+    commit: 1640
   last360d:
-    since: 2025-10-29
+    since: 2025-10-30
     release: 100
-    mergedPR: 1439
-    openPR: 57
+    mergedPR: 1441
+    openPR: 68
     closedIssue: 2213
-    openIssue: 44
-    commit: 3096
+    openIssue: 46
+    commit: 3058
   last720d:
-    since: 2024-11-03
+    since: 2024-11-04
     release: 100
-    mergedPR: 1446
-    openPR: 57
+    mergedPR: 1448
+    openPR: 68
     closedIssue: 2232
-    openIssue: 44
-    commit: 3648
+    openIssue: 46
+    commit: 3649
 total:
   release: 373
-  mergedPR: 1446
-  openPR: 57
+  mergedPR: 1448
+  openPR: 68
   closedIssue: 2232
-  openIssue: 44
-  commit: 3648
+  openIssue: 46
+  commit: 3649
 ---
 path: /home/runner/.x-repo/github.com/thedotmack/claude-mem
-collectedAt: 2026-10-24T05:24:30Z
+collectedAt: 2026-10-25T05:34:29Z
 loc:
   TypeScript:
-    code: 293845
-    comments: 45120
-    blanks: 36275
+    code: 293863
+    comments: 45125
+    blanks: 36277
     files: 1667
   Json:
     code: 53438
@@ -102,9 +102,9 @@ loc:
     blanks: 141
     files: 123
   JavaScript:
-    code: 29681
-    comments: 2125
-    blanks: 1191
+    code: 29693
+    comments: 2128
+    blanks: 1192
     files: 92
   Python:
     code: 26914
@@ -167,11 +167,11 @@ loc:
     blanks: 73
     files: 10
 total:
-  code: 427543
-  comments: 82451
-  blanks: 58027
+  code: 427573
+  comments: 82459
+  blanks: 58030
   files: 2458
 ---
 
 ---
-{"id":422199378,"author":{"login":"cursor[bot]","id":206951365,"node_id":"BOT_kgDODFXTxQ","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOPng1J84ZKkBS","tag_name":"v15.0.2","target_commitish":"main","name":"v15.0.2 \u2014 Stop observer reasoning from consuming the output budget","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-23T18:51:22Z","updated_at":"2026-10-23T18:51:46Z","published_at":"2026-10-23T18:51:46Z","assets":[],"body":"# Stop observer reasoning from consuming the output budget\n\nObserver requests to OpenRouter, the cmem.ai gateway, and OpenAI-compatible endpoints now disable reasoning by default, so reasoning tokens no longer fill the output budget and leave a session with zero observations.\n\n- An empty reply with finish_reason=length is logged and retried once with reasoning forced off. That retry counts against the existing paid-send budget and is bounded by the per-attempt timeout.\n- Billed usage keeps the retry's prompt size and adds completion tokens and cost from both attempts.\n- Health status names the active OpenRouter credential, including a custom OPENROUTER_BASE_URL.\n- OpenAI \"Unsupported parameter\" responses drop the reasoning field and remember the endpoint. Mandatory-reasoning and invalid-effort refusals are left in place.\n- Empty replies that finish with stop stay accepted.\n\nShips the observer repair from #5029."}
+{"id":422199378,"author":{"login":"cursor[bot]","id":206951365,"node_id":"BOT_kgDODFXTxQ","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOPng1J84ZKkBS","tag_name":"v15.0.2","target_commitish":"main","name":"v15.0.2 \u2014 Stop observer reasoning from consuming the output budget","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-23T18:51:22Z","updated_at":"2026-10-23T18:51:46Z","published_at":"2026-10-23T18:51:46Z","assets":[],"body":"# Stop observer reasoning from consuming the output budget\n\nObserver requests to OpenRouter, the cmem.ai gateway, and OpenAI-compatible endpoints now disable reasoning by default, so reasoning tokens no longer fill the output budget and leave a session with zero observations.\n\n- An empty reply with finish_reason=length is logged and retried once with reasoning forced off. That retry counts against the existing paid-send budget and is bounded by the per-attempt timeout.\n- Billed usage keeps the retry's prompt size and adds completion tokens and cost from both attempts.\n- Health status names the active OpenRouter credential, including a custom OPENROUTER_BASE_URL.\n- OpenAI \"Unsupported parameter\" responses drop the reasoning field and remember the endpoint. Mandatory-reasoning and invalid-effort refusals are left in place.\n- Empty replies that finish with stop stay accepted.\n\nShips the observer repair from #5029.","reactions":{"total_count":3,"+1":3,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0}}
