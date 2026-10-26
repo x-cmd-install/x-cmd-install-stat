@@ -7,7 +7,7 @@ about:
   latestVersion: "plugins-2026-09-16"
   latestRelease: "plugins-2026-09-16"
   latestPrerelease: ""
-  collectedAt: 2026-10-25T04:55:35Z
+  collectedAt: 2026-10-26T04:53:36Z
 timeline:
   created: 2019-05-24
   lastCommit: 2026-10-22
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2026-09-16
   lastPrerelease: 
 popularity:
-  star: 17679
+  star: 17684
   watcher: 203
   fork: 2668
   release: 49
   contributor: 66
-  pullRequest: 665
+  pullRequest: 666
   issue: 1190
 language:
   TypeScript: 2852123
@@ -33,63 +33,63 @@ language:
 totalBytes: 5404494
 recent:
   last30d:
-    since: 2026-09-25
+    since: 2026-09-26
     release: 0
     mergedPR: 16
-    openPR: 9
-    closedIssue: 2
+    openPR: 10
+    closedIssue: 1
     openIssue: 0
-    commit: 44
+    commit: 32
   last60d:
-    since: 2026-08-26
+    since: 2026-08-27
     release: 1
     mergedPR: 40
-    openPR: 10
-    closedIssue: 3
-    openIssue: 1
-    commit: 222
-  last90d:
-    since: 2026-07-27
-    release: 2
-    mergedPR: 43
     openPR: 11
     closedIssue: 3
     openIssue: 1
-    commit: 228
+    commit: 211
+  last90d:
+    since: 2026-07-28
+    release: 2
+    mergedPR: 42
+    openPR: 12
+    closedIssue: 3
+    openIssue: 1
+    commit: 227
   last180d:
-    since: 2026-04-28
+    since: 2026-04-29
     release: 2
     mergedPR: 51
-    openPR: 14
+    openPR: 15
     closedIssue: 5
     openIssue: 3
-    commit: 259
+    commit: 254
   last360d:
-    since: 2025-10-30
+    since: 2025-10-31
     release: 4
     mergedPR: 68
-    openPR: 17
+    openPR: 18
     closedIssue: 26
     openIssue: 13
-    commit: 302
+    commit: 301
   last720d:
-    since: 2024-11-04
+    since: 2024-11-05
     release: 15
     mergedPR: 147
-    openPR: 20
+    openPR: 21
     closedIssue: 137
     openIssue: 42
     commit: 761
 total:
   release: 49
   mergedPR: 537
-  openPR: 22
+  openPR: 23
   closedIssue: 1085
   openIssue: 105
   commit: 3406
 ---
 path: /home/runner/.x-repo/github.com/tradingview/lightweight-charts
-collectedAt: 2026-10-25T04:56:29Z
+collectedAt: 2026-10-26T04:54:23Z
 loc:
   TypeScript:
     code: 62509
@@ -243,4 +243,4 @@ checks:
     details:
       - 'Info: all commits (30) are checked with a SAST tool'
 ---
-{"id":369194941,"author":{"login":"SlicedSilver","id":3482679,"node_id":"MDQ6VXNlcjM0ODI2Nzk=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCztWr84WAXe9","tag_name":"v5.2.1","target_commitish":"master","name":"v5.2.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-12T11:32:49Z","updated_at":"2026-08-12T11:39:26Z","published_at":"2026-08-12T11:39:26Z","assets":[],"body":"**Enhancements**\r\n\r\n- Added an [Agent Skill](https://github.com/tradingview/lightweight-charts/blob/master/.github/skills/lightweight-charts/SKILL.md) to the repository, which teaches AI coding assistants how to work with Lightweight Charts\u2122. The skill covers v5 API conventions, mental models, and common foot-guns related to time, scales, markers, plugins, and wrappers. See [AI coding assistants](https://tradingview.github.io/lightweight-charts/docs#ai-coding-assistants) for more details. (PR [#2088](https://github.com/tradingview/lightweight-charts/pull/2088))\r\n- Added \"hovered area line lift\" when `hoveredSeriesOnTop` is enabled. Hovering an Area or Baseline series now renders its stroke, point markers, and price lines on a top layer while the fill stays at its natural z-order. This keeps the line visible above overlapping series fills. (PR [#2090](https://github.com/tradingview/lightweight-charts/pull/2090))\r\n\r\n**Performance Improvements**\r\n\r\n- Improved crosshair and hover performance on charts which combine series markers with large datasets. The series markers pane view no longer clones the entire series dataset on every mouse move; the per-move cost is no longer proportional to the total number of data points. (PR [#2105](https://github.com/tradingview/lightweight-charts/pull/2105))\r\n\r\n**Bug Fixes**\r\n\r\n- Fixed `autoscaleInfoProvider` not being reset when explicitly set back to `undefined` via `applyOptions`, which caused autoscaling to permanently stop working once a custom provider had been used. (PR [#2098](https://github.com/tradingview/lightweight-charts/pull/2098), contributed by [@0007aadil](https://github.com/0007aadil))\r\n- Fixed arrow marker tips drifting away from the anchor price when the marker `size` is greater than `1`. The resolved marker size is no longer re-clamped to a 30px maximum within the renderer, so the drawn shape scales with `size` and remains aligned with the anchor price. This also fixes large circle and square markers being capped at 30px. Markers using the default size render identically to the previous version. (PR [#2100](https://github.com/tradingview/lightweight-charts/pull/2100))\r\n- Fixed a `Value is null` error which could be thrown when replacing the data of multiple series with shorter datasets while the crosshair was hovering over data. Affected series pane views are now invalidated before time scale changes are applied, so any synchronous recalculation rebuilds its items against the current row indices. (PR [#2110](https://github.com/tradingview/lightweight-charts/pull/2110), fixes [#2044](https://github.com/tradingview/lightweight-charts/issues/2044), contributed by [@anAirdrop](https://github.com/anAirdrop))\r\n- Fixed documentation examples (tutorials) which used `priceScale()` on the chart instance without specifying a price scale id. The id is required when calling `priceScale()` on the chart instance, unlike when calling it on `ISeriesApi`. (PR [#2102](https://github.com/tradingview/lightweight-charts/pull/2102))\r\n\r\n**Plugin & Indicator Examples**\r\n\r\n- Added a drop-in _Accessibility_ plugin which packages the keyboard navigation, ARIA markup, and screen-reader announcements covered in the accessibility tutorial into a single chart-level helper. (PR [#2095](https://github.com/tradingview/lightweight-charts/pull/2095))\r\n\r\n**Contributors**\r\n\r\nWe'd like to thank our external contributors for their valuable contributions to this release:\r\n\r\n- [@0007aadil](https://github.com/0007aadil)\r\n- [@anAirdrop](https://github.com/anAirdrop)\r\n\r\n[Changes since the last published version](https://github.com/tradingview/lightweight-charts/compare/v5.2.0..v5.2.1).","reactions":{"total_count":8,"+1":3,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":2,"rocket":2,"eyes":0}}
+{"id":369194941,"author":{"login":"SlicedSilver","id":3482679,"node_id":"MDQ6VXNlcjM0ODI2Nzk=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCztWr84WAXe9","tag_name":"v5.2.1","target_commitish":"master","name":"v5.2.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-12T11:32:49Z","updated_at":"2026-08-12T11:39:26Z","published_at":"2026-08-12T11:39:26Z","assets":[],"body":"**Enhancements**\r\n\r\n- Added an [Agent Skill](https://github.com/tradingview/lightweight-charts/blob/master/.github/skills/lightweight-charts/SKILL.md) to the repository, which teaches AI coding assistants how to work with Lightweight Charts™. The skill covers v5 API conventions, mental models, and common foot-guns related to time, scales, markers, plugins, and wrappers. See [AI coding assistants](https://tradingview.github.io/lightweight-charts/docs#ai-coding-assistants) for more details. (PR [#2088](https://github.com/tradingview/lightweight-charts/pull/2088))\r\n- Added \"hovered area line lift\" when `hoveredSeriesOnTop` is enabled. Hovering an Area or Baseline series now renders its stroke, point markers, and price lines on a top layer while the fill stays at its natural z-order. This keeps the line visible above overlapping series fills. (PR [#2090](https://github.com/tradingview/lightweight-charts/pull/2090))\r\n\r\n**Performance Improvements**\r\n\r\n- Improved crosshair and hover performance on charts which combine series markers with large datasets. The series markers pane view no longer clones the entire series dataset on every mouse move; the per-move cost is no longer proportional to the total number of data points. (PR [#2105](https://github.com/tradingview/lightweight-charts/pull/2105))\r\n\r\n**Bug Fixes**\r\n\r\n- Fixed `autoscaleInfoProvider` not being reset when explicitly set back to `undefined` via `applyOptions`, which caused autoscaling to permanently stop working once a custom provider had been used. (PR [#2098](https://github.com/tradingview/lightweight-charts/pull/2098), contributed by [@0007aadil](https://github.com/0007aadil))\r\n- Fixed arrow marker tips drifting away from the anchor price when the marker `size` is greater than `1`. The resolved marker size is no longer re-clamped to a 30px maximum within the renderer, so the drawn shape scales with `size` and remains aligned with the anchor price. This also fixes large circle and square markers being capped at 30px. Markers using the default size render identically to the previous version. (PR [#2100](https://github.com/tradingview/lightweight-charts/pull/2100))\r\n- Fixed a `Value is null` error which could be thrown when replacing the data of multiple series with shorter datasets while the crosshair was hovering over data. Affected series pane views are now invalidated before time scale changes are applied, so any synchronous recalculation rebuilds its items against the current row indices. (PR [#2110](https://github.com/tradingview/lightweight-charts/pull/2110), fixes [#2044](https://github.com/tradingview/lightweight-charts/issues/2044), contributed by [@anAirdrop](https://github.com/anAirdrop))\r\n- Fixed documentation examples (tutorials) which used `priceScale()` on the chart instance without specifying a price scale id. The id is required when calling `priceScale()` on the chart instance, unlike when calling it on `ISeriesApi`. (PR [#2102](https://github.com/tradingview/lightweight-charts/pull/2102))\r\n\r\n**Plugin & Indicator Examples**\r\n\r\n- Added a drop-in _Accessibility_ plugin which packages the keyboard navigation, ARIA markup, and screen-reader announcements covered in the accessibility tutorial into a single chart-level helper. (PR [#2095](https://github.com/tradingview/lightweight-charts/pull/2095))\r\n\r\n**Contributors**\r\n\r\nWe'd like to thank our external contributors for their valuable contributions to this release:\r\n\r\n- [@0007aadil](https://github.com/0007aadil)\r\n- [@anAirdrop](https://github.com/anAirdrop)\r\n\r\n[Changes since the last published version](https://github.com/tradingview/lightweight-charts/compare/v5.2.0..v5.2.1).","reactions":{"total_count":8,"+1":3,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":2,"rocket":2,"eyes":0}}

@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.3.0"
   latestRelease: "v1.3.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-25T05:49:24Z
+  collectedAt: 2026-10-26T05:54:59Z
 timeline:
   created: 2021-04-30
   lastCommit: 2026-10-21
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-08-02
   lastPrerelease: 
 popularity:
-  star: 8797
+  star: 8800
   watcher: 29
   fork: 379
   release: 54
@@ -30,23 +30,23 @@ language:
 totalBytes: 2640960
 recent:
   last30d:
-    since: 2026-09-25
+    since: 2026-09-26
     release: 0
     mergedPR: 9
     openPR: 0
     closedIssue: 4
-    openIssue: 8
+    openIssue: 7
     commit: 7
   last60d:
-    since: 2026-08-26
+    since: 2026-08-27
     release: 0
-    mergedPR: 14
+    mergedPR: 13
     openPR: 0
-    closedIssue: 11
-    openIssue: 15
+    closedIssue: 10
+    openIssue: 14
     commit: 12
   last90d:
-    since: 2026-07-27
+    since: 2026-07-28
     release: 1
     mergedPR: 15
     openPR: 0
@@ -54,7 +54,7 @@ recent:
     openIssue: 27
     commit: 14
   last180d:
-    since: 2026-04-28
+    since: 2026-04-29
     release: 1
     mergedPR: 25
     openPR: 0
@@ -62,21 +62,21 @@ recent:
     openIssue: 36
     commit: 25
   last360d:
-    since: 2025-10-30
-    release: 5
-    mergedPR: 44
+    since: 2025-10-31
+    release: 4
+    mergedPR: 43
     openPR: 4
     closedIssue: 86
     openIssue: 60
     commit: 43
   last720d:
-    since: 2024-11-04
+    since: 2024-11-05
     release: 14
     mergedPR: 209
     openPR: 11
-    closedIssue: 206
+    closedIssue: 205
     openIssue: 131
-    commit: 211
+    commit: 210
 total:
   release: 54
   mergedPR: 2606
@@ -86,7 +86,7 @@ total:
   commit: 2781
 ---
 path: /home/runner/.x-repo/github.com/ariga/atlas
-collectedAt: 2026-10-25T05:49:26Z
+collectedAt: 2026-10-26T05:55:01Z
 loc:
   Go:
     code: 106662
@@ -227,4 +227,4 @@ checks:
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/cd-docker-push-cockroach_oss.yaml:12'
 ---
-{"id":363744315,"author":{"login":"a8m","id":7413593,"node_id":"MDQ6VXNlcjc0MTM1OTM=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOFaZ9g84Vrkw7","tag_name":"v1.3.0","target_commitish":"master","name":"v1.3.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-07-29T06:36:44Z","updated_at":"2026-08-02T09:09:55Z","published_at":"2026-08-02T09:09:55Z","assets":[],"body":"## We're excited to announce [Atlas v1.3](https://atlasgo.io/blog/2026/07/30/atlas-v1-3) \ud83c\udf8a\r\n\r\nThis release delivers on a promise we made in v1.2: the security graph is now live in Atlas Cloud, mapping your entire database attack surface. It also introduces Atlas Scripts for running data operations as code, safer and faster migrations, and a new command group for working with the Atlas Registry from the CLI.\r\n\r\nHere is what you can find in this release:\r\n\r\n- [Security Graph for Databases](https://atlasgo.io/blog/2026/07/30/atlas-v1-3#security-graph-for-databases) - Map your entire database attack surface: permissions, misconfigurations, and CVEs across every object, with severity tiers and blast-radius tracing.\r\n- [Atlas Scripts: DataOps as Code](https://atlasgo.io/blog/2026/07/30/atlas-v1-3#atlas-scripts-dataops-as-code) - Backfills, GDPR purges, and reports declared as code: transactional mutations, masked queries, and batched loops, reviewed and tested in CI.\r\n- [`atlas cloud`: Manage Registry Resources from the CLI](https://atlasgo.io/blog/2026/07/30/atlas-v1-3#atlas-cloud-manage-registry-resources-from-the-cli) - Repositories, databases, and deployment history from the terminal, with JSON output for scripts, CI gates, and AI agents, plus security graph and lineage graph exports.\r\n- [Schema Annotations](https://atlasgo.io/blog/2026/07/30/atlas-v1-3#schema-annotations) - Attach type-safe metadata to schema resources and render GraphQL, OpenAPI, or any other format from it with templates.\r\n- [Pre-Apply Drift Detection](https://atlasgo.io/blog/2026/07/30/atlas-v1-3#pre-apply-drift-detection) - Block a deployment when the database drifted from the expected state, with the diff printed before any statement runs.\r\n- [Database Driver Improvements](https://atlasgo.io/blog/2026/07/30/atlas-v1-3#database-driver-improvements) - Lock-safe NOT NULL and 8x-10x faster schema tests on PostgreSQL, Oracle roles and storage, Snowflake Iceberg tables, ClickHouse row policies, and more.\r\n\r\nRead the full announcement in our [blogpost](https://atlasgo.io/blog/2026/07/30/atlas-v1-3).\r\n\r\n<img width=\"3680\" height=\"2206\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c24314fa-65ba-48b4-9bd8-50646ddf94c0\" />\r\n\r\n\r\n## Quick installation\r\n\r\n**macOS + Linux:**\r\n\r\n```bash\r\ncurl -sSf https://atlasgo.sh | sh\r\n```\r\n\r\n**Homebrew:**\r\n\r\n```bash\r\nbrew install ariga/tap/atlas\r\n```\r\n\r\n**Docker:**\r\n\r\n```bash\r\ndocker pull arigaio/atlas\r\n```\r\n\r\n### Windows\r\n\r\n[Download](https://release.ariga.io/atlas/atlas-windows-amd64-v1.3.0.exe)\r\n\r\n### Legal\r\nThe default binaries in this release are distributed released under our [MSA](https://ariga.io/legal/msa), and the community binaries are released under the Apache 2.0 license.","reactions":{"total_count":21,"+1":8,"-1":0,"laugh":0,"hooray":5,"confused":0,"heart":4,"rocket":4,"eyes":0}}
+{"id":363744315,"author":{"login":"a8m","id":7413593,"node_id":"MDQ6VXNlcjc0MTM1OTM=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOFaZ9g84Vrkw7","tag_name":"v1.3.0","target_commitish":"master","name":"v1.3.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-07-29T06:36:44Z","updated_at":"2026-08-02T09:09:55Z","published_at":"2026-08-02T09:09:55Z","assets":[],"body":"## We're excited to announce [Atlas v1.3](https://atlasgo.io/blog/2026/07/30/atlas-v1-3) 🎊\r\n\r\nThis release delivers on a promise we made in v1.2: the security graph is now live in Atlas Cloud, mapping your entire database attack surface. It also introduces Atlas Scripts for running data operations as code, safer and faster migrations, and a new command group for working with the Atlas Registry from the CLI.\r\n\r\nHere is what you can find in this release:\r\n\r\n- [Security Graph for Databases](https://atlasgo.io/blog/2026/07/30/atlas-v1-3#security-graph-for-databases) - Map your entire database attack surface: permissions, misconfigurations, and CVEs across every object, with severity tiers and blast-radius tracing.\r\n- [Atlas Scripts: DataOps as Code](https://atlasgo.io/blog/2026/07/30/atlas-v1-3#atlas-scripts-dataops-as-code) - Backfills, GDPR purges, and reports declared as code: transactional mutations, masked queries, and batched loops, reviewed and tested in CI.\r\n- [`atlas cloud`: Manage Registry Resources from the CLI](https://atlasgo.io/blog/2026/07/30/atlas-v1-3#atlas-cloud-manage-registry-resources-from-the-cli) - Repositories, databases, and deployment history from the terminal, with JSON output for scripts, CI gates, and AI agents, plus security graph and lineage graph exports.\r\n- [Schema Annotations](https://atlasgo.io/blog/2026/07/30/atlas-v1-3#schema-annotations) - Attach type-safe metadata to schema resources and render GraphQL, OpenAPI, or any other format from it with templates.\r\n- [Pre-Apply Drift Detection](https://atlasgo.io/blog/2026/07/30/atlas-v1-3#pre-apply-drift-detection) - Block a deployment when the database drifted from the expected state, with the diff printed before any statement runs.\r\n- [Database Driver Improvements](https://atlasgo.io/blog/2026/07/30/atlas-v1-3#database-driver-improvements) - Lock-safe NOT NULL and 8x-10x faster schema tests on PostgreSQL, Oracle roles and storage, Snowflake Iceberg tables, ClickHouse row policies, and more.\r\n\r\nRead the full announcement in our [blogpost](https://atlasgo.io/blog/2026/07/30/atlas-v1-3).\r\n\r\n<img width=\"3680\" height=\"2206\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c24314fa-65ba-48b4-9bd8-50646ddf94c0\" />\r\n\r\n\r\n## Quick installation\r\n\r\n**macOS + Linux:**\r\n\r\n```bash\r\ncurl -sSf https://atlasgo.sh | sh\r\n```\r\n\r\n**Homebrew:**\r\n\r\n```bash\r\nbrew install ariga/tap/atlas\r\n```\r\n\r\n**Docker:**\r\n\r\n```bash\r\ndocker pull arigaio/atlas\r\n```\r\n\r\n### Windows\r\n\r\n[Download](https://release.ariga.io/atlas/atlas-windows-amd64-v1.3.0.exe)\r\n\r\n### Legal\r\nThe default binaries in this release are distributed released under our [MSA](https://ariga.io/legal/msa), and the community binaries are released under the Apache 2.0 license.","reactions":{"total_count":21,"+1":8,"-1":0,"laugh":0,"hooray":5,"confused":0,"heart":4,"rocket":4,"eyes":0}}

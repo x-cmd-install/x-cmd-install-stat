@@ -2,12 +2,12 @@ about:
   description: "📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more."
   license: MIT
   homepage: https://repomix.com
-  head: c39c574
+  head: a835271
   archived: false
   latestVersion: "v1.18.1"
   latestRelease: "v1.18.1"
   latestPrerelease: ""
-  collectedAt: 2026-10-25T04:36:46Z
+  collectedAt: 2026-10-26T04:43:26Z
 timeline:
   created: 2024-07-13
   lastCommit: 2026-10-25
@@ -15,89 +15,89 @@ timeline:
   lastRelease: 2026-09-21
   lastPrerelease: 
 popularity:
-  star: 29013
+  star: 29025
   watcher: 72
-  fork: 1598
+  fork: 1599
   release: 102
-  contributor: 72
-  pullRequest: 1612
+  contributor: 76
+  pullRequest: 1626
   issue: 282
 language:
-  TypeScript: 2208690
+  TypeScript: 2299469
   Vue: 87579
   JavaScript: 7539
   Shell: 7157
   Dockerfile: 6625
   CSS: 5650
   Nix: 874
-totalBytes: 2324114
+totalBytes: 2414893
 recent:
   last30d:
-    since: 2026-09-25
+    since: 2026-09-26
     release: 0
-    mergedPR: 34
-    openPR: 11
+    mergedPR: 48
+    openPR: 5
     closedIssue: 1
-    openIssue: 4
-    commit: 24
+    openIssue: 3
+    commit: 55
   last60d:
-    since: 2026-08-26
+    since: 2026-08-27
     release: 1
-    mergedPR: 81
-    openPR: 20
+    mergedPR: 104
+    openPR: 9
     closedIssue: 8
     openIssue: 13
-    commit: 79
+    commit: 116
   last90d:
-    since: 2026-07-27
+    since: 2026-07-28
     release: 2
-    mergedPR: 125
-    openPR: 21
+    mergedPR: 149
+    openPR: 10
     closedIssue: 10
     openIssue: 13
-    commit: 172
+    commit: 209
   last180d:
-    since: 2026-04-28
+    since: 2026-04-29
     release: 7
-    mergedPR: 319
-    openPR: 24
+    mergedPR: 342
+    openPR: 13
     closedIssue: 21
     openIssue: 18
-    commit: 543
+    commit: 580
   last360d:
-    since: 2025-10-30
+    since: 2025-10-31
     release: 19
-    mergedPR: 717
-    openPR: 39
+    mergedPR: 741
+    openPR: 28
     closedIssue: 61
     openIssue: 31
-    commit: 1528
+    commit: 1565
   last720d:
-    since: 2024-11-04
+    since: 2024-11-05
     release: 71
-    mergedPR: 1203
-    openPR: 45
+    mergedPR: 1227
+    openPR: 34
     closedIssue: 146
     openIssue: 101
-    commit: 4293
+    commit: 4348
 total:
   release: 102
-  mergedPR: 1312
-  openPR: 46
+  mergedPR: 1336
+  openPR: 35
   closedIssue: 169
   openIssue: 113
-  commit: 4657
+  commit: 4720
 ---
 path: /home/runner/.x-repo/github.com/yamadashy/repomix
-collectedAt: 2026-10-25T04:36:50Z
+collectedAt: 2026-10-26T04:43:32Z
 loc:
   TypeScript:
-    code: 46805
-    comments: 5660
-    blanks: 7347
-    files: 376
+    code: 48341
+    comments: 5906
+    blanks: 7634
+    files: 383
   Json:
-    code: 33685
+    code: 32667
     comments: 0
     blanks: 0
     files: 66
@@ -153,8 +153,8 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 34624
-    blanks: 16151
+    comments: 34655
+    blanks: 16167
     files: 421
   Text:
     code: 0
@@ -162,11 +162,11 @@ loc:
     blanks: 90
     files: 16
 total:
-  code: 94373
-  comments: 43327
-  blanks: 26001
-  files: 925
+  code: 94891
+  comments: 43604
+  blanks: 26304
+  files: 932
 ---
 
 ---
-{"id":392799044,"author":{"login":"yamadashy","id":5019072,"node_id":"MDQ6VXNlcjUwMTkwNzI=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOMVwZR84XaaNE","tag_name":"v1.18.1","target_commitish":"main","name":"v1.18.1","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-09-21T06:09:54Z","updated_at":"2026-09-21T08:34:49Z","published_at":"2026-09-21T08:34:49Z","assets":[],"body":"This patch release fixes a security issue in the CLI's git handling, along with the Windows `.gitignore` crash and a set of contributor bug fixes!\n\n## Security Fix \ud83d\udd12\n\n### Repository-Level Git Config Is No Longer Executed (GHSA-4p5g-gh74-q524)\n\nRepomix runs `git log` in the target directory to sort files by change frequency, and `git diff` / `git log` for `--include-diffs` / `--include-logs`. Git honors settings from the repository's own `.git/config` that name an executable, such as `gpg.program`, `diff.external`, textconv drivers, and `core.fsmonitor`. A directory shipped with a crafted `.git` (for example inside a zip archive) could therefore run arbitrary commands when Repomix was invoked inside it. A normal `git clone` does not carry the remote's `.git/config`, and `--remote` removes the clone's `.git` before processing, so those paths were not affected.\n\nAll git commands Repomix runs in a target directory now disable these settings. Output for a normal repository is unchanged.\n\nSee the security advisory for details. Thanks to @kinehoo77-debug for the report! \ud83d\ude4f\nhttps://github.com/yamadashy/repomix/security/advisories/GHSA-4p5g-gh74-q524\n\n## Bug Fixes \ud83d\udc1b\n\n### Windows Crash on `.gitignore` with Backslash Escapes (#1765, #1775)\n\nOn Windows, packing failed with ``path should be a `path.relative()`d string`` when a `.gitignore` mixed a backslash-escaped rule with a negation rule. The bug was in globby and is fixed in globby 16.2.3, which this release picks up. Thanks to @iki for the report and for sticking with it! \ud83d\ude4f\n\n### `--remove-comments` No Longer Corrupts Shell and YAML Files (#1752)\n\nShell and YAML files were stripped with the Perl profile, which treats every unquoted `#` as a comment. In these languages `#` only starts a comment at the beginning of a line or after whitespace, so constructs like `${name##*/}`, `$#`, and URL fragments were being cut. Shell and YAML now use a dedicated handler that respects this rule, heredocs, and block scalars. Thanks @serhiizghama!\n\n### `--include-full-directory-structure` Keeps Non-Included Files (#1749)\n\nWhen combined with `--include`, the Directory Structure section is meant to show the whole repository tree while packing only the included files' contents. Non-included files were being dropped from the tree. Thanks @serhiizghama!\n\n### Split Output Shows Each Part's Own Directory Tree (#1815, #1822)\n\nWith `--split-output`, every part listed the directory tree of the entire output instead of the files in that part. Each part now renders only its own files. Thanks @Elioooon!\n\n### Remote URLs Whose Repository Name Starts with a Dot (#1772)\n\n`https://github.com/microsoft/.github` and similar org profile repositories were rejected as invalid. Thanks @serhiizghama!\n\n### Data URI Parameters Preserved When Truncating Base64 (#1819, #1820)\n\nTruncating long base64 payloads kept only the last `;param` before `;base64,`, dropping the others. Thanks @cyphercodes!\n\n### Small CLI Fixes (#1808, #1809, #1810)\n\n- `--split-output` sizes that round down to zero bytes (such as `0.5b`) are now rejected instead of looping forever.\n- Output and skill paths are classified by real directory boundaries, so a sibling directory with a matching prefix is no longer treated as inside the base.\n- Remote skill names are derived from the owner and repository of GitHub URLs.\n\nThanks @Whxuan0701!\n\n## How to Update\n\n```bash\nnpm update -g repomix\n```\n","mentions_count":6}
+{"id":392799044,"author":{"login":"yamadashy","id":5019072,"node_id":"MDQ6VXNlcjUwMTkwNzI=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOMVwZR84XaaNE","tag_name":"v1.18.1","target_commitish":"main","name":"v1.18.1","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-09-21T06:09:54Z","updated_at":"2026-09-21T08:34:49Z","published_at":"2026-09-21T08:34:49Z","assets":[],"body":"This patch release fixes a security issue in the CLI's git handling, along with the Windows `.gitignore` crash and a set of contributor bug fixes!\n\n## Security Fix 🔒\n\n### Repository-Level Git Config Is No Longer Executed (GHSA-4p5g-gh74-q524)\n\nRepomix runs `git log` in the target directory to sort files by change frequency, and `git diff` / `git log` for `--include-diffs` / `--include-logs`. Git honors settings from the repository's own `.git/config` that name an executable, such as `gpg.program`, `diff.external`, textconv drivers, and `core.fsmonitor`. A directory shipped with a crafted `.git` (for example inside a zip archive) could therefore run arbitrary commands when Repomix was invoked inside it. A normal `git clone` does not carry the remote's `.git/config`, and `--remote` removes the clone's `.git` before processing, so those paths were not affected.\n\nAll git commands Repomix runs in a target directory now disable these settings. Output for a normal repository is unchanged.\n\nSee the security advisory for details. Thanks to @kinehoo77-debug for the report! 🙏\nhttps://github.com/yamadashy/repomix/security/advisories/GHSA-4p5g-gh74-q524\n\n## Bug Fixes 🐛\n\n### Windows Crash on `.gitignore` with Backslash Escapes (#1765, #1775)\n\nOn Windows, packing failed with ``path should be a `path.relative()`d string`` when a `.gitignore` mixed a backslash-escaped rule with a negation rule. The bug was in globby and is fixed in globby 16.2.3, which this release picks up. Thanks to @iki for the report and for sticking with it! 🙏\n\n### `--remove-comments` No Longer Corrupts Shell and YAML Files (#1752)\n\nShell and YAML files were stripped with the Perl profile, which treats every unquoted `#` as a comment. In these languages `#` only starts a comment at the beginning of a line or after whitespace, so constructs like `${name##*/}`, `$#`, and URL fragments were being cut. Shell and YAML now use a dedicated handler that respects this rule, heredocs, and block scalars. Thanks @serhiizghama!\n\n### `--include-full-directory-structure` Keeps Non-Included Files (#1749)\n\nWhen combined with `--include`, the Directory Structure section is meant to show the whole repository tree while packing only the included files' contents. Non-included files were being dropped from the tree. Thanks @serhiizghama!\n\n### Split Output Shows Each Part's Own Directory Tree (#1815, #1822)\n\nWith `--split-output`, every part listed the directory tree of the entire output instead of the files in that part. Each part now renders only its own files. Thanks @Elioooon!\n\n### Remote URLs Whose Repository Name Starts with a Dot (#1772)\n\n`https://github.com/microsoft/.github` and similar org profile repositories were rejected as invalid. Thanks @serhiizghama!\n\n### Data URI Parameters Preserved When Truncating Base64 (#1819, #1820)\n\nTruncating long base64 payloads kept only the last `;param` before `;base64,`, dropping the others. Thanks @cyphercodes!\n\n### Small CLI Fixes (#1808, #1809, #1810)\n\n- `--split-output` sizes that round down to zero bytes (such as `0.5b`) are now rejected instead of looping forever.\n- Output and skill paths are classified by real directory boundaries, so a sibling directory with a matching prefix is no longer treated as inside the base.\n- Remote skill names are derived from the owner and repository of GitHub URLs.\n\nThanks @Whxuan0701!\n\n## How to Update\n\n```bash\nnpm update -g repomix\n```\n","mentions_count":6}

@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.6.2"
   latestRelease: "v3.6.2"
   latestPrerelease: ""
-  collectedAt: 2026-10-25T05:23:50Z
+  collectedAt: 2026-10-26T05:33:14Z
 timeline:
   created: 2026-04-08
   lastCommit: 2026-06-28
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-06-28
   lastPrerelease: 
 popularity:
-  star: 901
+  star: 899
   watcher: 2
   fork: 128
   release: 27
@@ -30,7 +30,7 @@ language:
 totalBytes: 989806
 recent:
   last30d:
-    since: 2026-09-25
+    since: 2026-09-26
     release: 0
     mergedPR: 0
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-08-26
+    since: 2026-08-27
     release: 0
     mergedPR: 0
     openPR: 2
@@ -46,7 +46,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-07-27
+    since: 2026-07-28
     release: 0
     mergedPR: 0
     openPR: 2
@@ -54,7 +54,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-04-28
+    since: 2026-04-29
     release: 6
     mergedPR: 21
     openPR: 3
@@ -62,7 +62,7 @@ recent:
     openIssue: 2
     commit: 44
   last360d:
-    since: 2025-10-30
+    since: 2025-10-31
     release: 27
     mergedPR: 37
     openPR: 3
@@ -70,7 +70,7 @@ recent:
     openIssue: 2
     commit: 257
   last720d:
-    since: 2024-11-04
+    since: 2024-11-05
     release: 27
     mergedPR: 37
     openPR: 3
@@ -86,7 +86,7 @@ total:
   commit: 285
 ---
 path: /home/runner/.x-repo/github.com/xaspx/hermes-control-interface
-collectedAt: 2026-10-25T05:23:52Z
+collectedAt: 2026-10-26T05:33:17Z
 loc:
   JavaScript:
     code: 16960
@@ -131,4 +131,4 @@ total:
 ---
 
 ---
-{"id":345851115,"author":{"login":"xaspx","id":38959282,"node_id":"MDQ6VXNlcjM4OTU5Mjgy","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOR9T72s4UnUTr","tag_name":"v3.6.2","target_commitish":"main","name":"v3.6.2 - Profile-Based Access Control & Windows Compatibility","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-06-28T06:28:17Z","updated_at":"2026-06-28T06:28:21Z","published_at":"2026-06-28T06:28:21Z","assets":[],"body":"## v3.6.2 \u2014 Profile-Based Access Control & Windows Compatibility\n\n**Release date:** 2026-06-28\n\nA maintenance release focusing on two community-contributed improvements: profile-based access isolation for multi-agent deployments, and Windows compatibility fixes.\n\n### \u2728 Feature: Profile-Based Access Control (PR #78 by @sfalsin)\n\n**What it does:** Restricts which Hermes agent profiles each HCI user can see and manage. In multi-agent setups where you run multiple Hermes profiles (e.g. \"jorah\", \"varys\", \"production\"), this prevents users from accessing profiles they shouldn't.\n\n**Backend changes:**\n- New `allowed_profiles` field on user records \u2014 an array of profile names, or `['*']` for unrestricted access\n- `requireProfileAccess` Express middleware applied to all profile-scoped endpoints: `/api/gateway/:profile/*`, `/api/config/:profile`, `/api/keys/:profile`\n- `/api/profiles` endpoint now filters results per-user \u2014 users only see profiles they're authorized for\n- `/api/office/agent-states` also filtered per-user\n- `canAccessProfile(user, profileName)` and `updateUserProfiles()` helper functions exported from auth module\n- `POST /api/users` accepts optional `allowed_profiles` array\n\n**Frontend changes:**\n- Create User form now includes an \"Agent Access\" section with live-loaded checkboxes for each available profile\n- Admin role auto-sets full access (`['*']`) \u2014 no checkbox interaction needed\n- Files tab hidden for users without `files.read` permission\n- Maintenance tab hidden for non-admin users\n\n**Compatibility:** Fully backward compatible. Existing users without `allowed_profiles` see all profiles (fallback to `['*']` behavior). No migration required.\n\n### \ud83d\udc1b Fix: Windows Compatibility (PR #79 by @jpntw-dotcom)\n\n**Problem:** `process.getuid()` is a Unix-only API. On Windows, it throws `TypeError: process.getuid is not a function` at startup, preventing HCI from running entirely.\n\n**Changes in `server.js`:**\n- `const IS_ROOT = process.getuid === 0` \u2192 `process.getuid ? process.getuid() === 0 : false` (gracefully returns `false` on Windows, which is correct \u2014 Windows has no root concept)\n- XDG_RUNTIME_DIR auto-detection block now guarded with `process.getuid` check (Linux-only feature, safely skipped on Windows)\n\n**No functional impact on Linux/macOS** \u2014 the guard is a no-op where `process.getuid` exists.\n\n### \ud83d\udce6 Files changed since v3.6.1\n\n| File | Changes |\n|---|---|\n| `README.md` | +18 lines \u2014 Profile-Based Access Control documentation |\n| `auth.js` | +23 lines, -2 \u2014 new auth functions for profile access |\n| `server.js` | +46 lines, -23 \u2014 middleware + route guards + Windows fix |\n| `src/index.html` | +2 lines, -2 \u2014 `id` attributes for nav elements |\n| `src/js/core/auth.js` | +9 lines, -1 \u2014 nav visibility based on permissions |\n| `src/js/pages/users.js` | +32 lines, -3 \u2014 profile selection UI in Create User form |\n| `package.json` | version 3.6.1 \u2192 3.6.2 |\n\n### \ud83d\udd17 PRs\n- **#78** \u2014 feat: Profile-Based Access Control (per-agent user isolation)\n- **#79** \u2014 fix: guard process.getuid() calls for Windows compatibility\n","mentions_count":2}
+{"id":345851115,"author":{"login":"xaspx","id":38959282,"node_id":"MDQ6VXNlcjM4OTU5Mjgy","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOR9T72s4UnUTr","tag_name":"v3.6.2","target_commitish":"main","name":"v3.6.2 - Profile-Based Access Control & Windows Compatibility","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-06-28T06:28:17Z","updated_at":"2026-06-28T06:28:21Z","published_at":"2026-06-28T06:28:21Z","assets":[],"body":"## v3.6.2 — Profile-Based Access Control & Windows Compatibility\n\n**Release date:** 2026-06-28\n\nA maintenance release focusing on two community-contributed improvements: profile-based access isolation for multi-agent deployments, and Windows compatibility fixes.\n\n### ✨ Feature: Profile-Based Access Control (PR #78 by @sfalsin)\n\n**What it does:** Restricts which Hermes agent profiles each HCI user can see and manage. In multi-agent setups where you run multiple Hermes profiles (e.g. \"jorah\", \"varys\", \"production\"), this prevents users from accessing profiles they shouldn't.\n\n**Backend changes:**\n- New `allowed_profiles` field on user records — an array of profile names, or `['*']` for unrestricted access\n- `requireProfileAccess` Express middleware applied to all profile-scoped endpoints: `/api/gateway/:profile/*`, `/api/config/:profile`, `/api/keys/:profile`\n- `/api/profiles` endpoint now filters results per-user — users only see profiles they're authorized for\n- `/api/office/agent-states` also filtered per-user\n- `canAccessProfile(user, profileName)` and `updateUserProfiles()` helper functions exported from auth module\n- `POST /api/users` accepts optional `allowed_profiles` array\n\n**Frontend changes:**\n- Create User form now includes an \"Agent Access\" section with live-loaded checkboxes for each available profile\n- Admin role auto-sets full access (`['*']`) — no checkbox interaction needed\n- Files tab hidden for users without `files.read` permission\n- Maintenance tab hidden for non-admin users\n\n**Compatibility:** Fully backward compatible. Existing users without `allowed_profiles` see all profiles (fallback to `['*']` behavior). No migration required.\n\n### 🐛 Fix: Windows Compatibility (PR #79 by @jpntw-dotcom)\n\n**Problem:** `process.getuid()` is a Unix-only API. On Windows, it throws `TypeError: process.getuid is not a function` at startup, preventing HCI from running entirely.\n\n**Changes in `server.js`:**\n- `const IS_ROOT = process.getuid === 0` → `process.getuid ? process.getuid() === 0 : false` (gracefully returns `false` on Windows, which is correct — Windows has no root concept)\n- XDG_RUNTIME_DIR auto-detection block now guarded with `process.getuid` check (Linux-only feature, safely skipped on Windows)\n\n**No functional impact on Linux/macOS** — the guard is a no-op where `process.getuid` exists.\n\n### 📦 Files changed since v3.6.1\n\n| File | Changes |\n|---|---|\n| `README.md` | +18 lines — Profile-Based Access Control documentation |\n| `auth.js` | +23 lines, -2 — new auth functions for profile access |\n| `server.js` | +46 lines, -23 — middleware + route guards + Windows fix |\n| `src/index.html` | +2 lines, -2 — `id` attributes for nav elements |\n| `src/js/core/auth.js` | +9 lines, -1 — nav visibility based on permissions |\n| `src/js/pages/users.js` | +32 lines, -3 — profile selection UI in Create User form |\n| `package.json` | version 3.6.1 → 3.6.2 |\n\n### 🔗 PRs\n- **#78** — feat: Profile-Based Access Control (per-agent user isolation)\n- **#79** — fix: guard process.getuid() calls for Windows compatibility\n","mentions_count":2}

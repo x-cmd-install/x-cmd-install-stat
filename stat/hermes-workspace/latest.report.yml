@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.3.0"
   latestRelease: "v2.3.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-25T05:21:38Z
+  collectedAt: 2026-10-26T05:26:02Z
 timeline:
   created: 2026-03-16
   lastCommit: 2026-08-22
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-05-08
   lastPrerelease: 
 popularity:
-  star: 6753
+  star: 6757
   watcher: 35
-  fork: 1058
+  fork: 1059
   release: 7
   contributor: 84
-  pullRequest: 525
-  issue: 300
+  pullRequest: 526
+  issue: 301
 language:
   JavaScript: 21954417
   TypeScript: 7240814
@@ -35,63 +35,63 @@ language:
 totalBytes: 29357829
 recent:
   last30d:
-    since: 2026-09-25
+    since: 2026-09-26
     release: 0
     mergedPR: 0
-    openPR: 10
+    openPR: 9
     closedIssue: 2
     openIssue: 18
     commit: 0
   last60d:
-    since: 2026-08-26
+    since: 2026-08-27
     release: 0
     mergedPR: 0
-    openPR: 25
+    openPR: 24
     closedIssue: 2
-    openIssue: 30
+    openIssue: 31
     commit: 0
   last90d:
-    since: 2026-07-27
+    since: 2026-07-28
     release: 0
     mergedPR: 0
-    openPR: 46
+    openPR: 45
     closedIssue: 4
-    openIssue: 39
+    openIssue: 40
     commit: 3
   last180d:
-    since: 2026-04-28
+    since: 2026-04-29
     release: 5
-    mergedPR: 129
+    mergedPR: 128
     openPR: 104
-    closedIssue: 145
-    openIssue: 78
-    commit: 430
+    closedIssue: 144
+    openIssue: 79
+    commit: 136
   last360d:
-    since: 2025-10-30
+    since: 2025-10-31
     release: 7
     mergedPR: 199
     openPR: 104
     closedIssue: 222
-    openIssue: 78
+    openIssue: 79
     commit: 1965
   last720d:
-    since: 2024-11-04
+    since: 2024-11-05
     release: 7
     mergedPR: 199
     openPR: 104
     closedIssue: 222
-    openIssue: 78
+    openIssue: 79
     commit: 2030
 total:
   release: 7
   mergedPR: 199
   openPR: 104
   closedIssue: 222
-  openIssue: 78
+  openIssue: 79
   commit: 2030
 ---
 path: /home/runner/.x-repo/github.com/outsourc-e/hermes-workspace
-collectedAt: 2026-10-25T05:21:44Z
+collectedAt: 2026-10-26T05:26:09Z
 loc:
   JavaScript:
     code: 294306
@@ -186,4 +186,4 @@ total:
 ---
 
 ---
-{"id":319267831,"author":{"login":"outsourc-e","id":201563152,"node_id":"U_kgDODAOcEA","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDORoFuJM4TB6P3","tag_name":"v2.3.0","target_commitish":"main","name":"Hermes-Workspace v2.3.0 \u2014 HermesWorld integration, Agent View, Dashboard polish","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-05-08T00:54:54Z","updated_at":"2026-05-08T00:56:19Z","published_at":"2026-05-08T00:56:19Z","assets":[],"body":"# Hermes-Workspace v2.3.0 \u2014 HermesWorld integration, Agent View, Dashboard polish\n\nA focused follow-up to v2.2.0 with **three new features in the workspace shell** and a wave of bug fixes that unblock fresh installs.\n\n46 commits since v2.2.0 \u00b7 22 PRs merged in the final push \u00b7 4 issues closed \u00b7 queue down 50%.\n\n---\n\n## \u2728 New features\n\n### \ud83c\udf10 HermesWorld integration\n\nThe playable agent MMO \u2014 [hermes-world.ai](https://hermes-world.ai) \u2014 now embeds **directly inside Workspace** via iframe, with the workspace nav preserved around it. Sign in with Google or email, reserve your founder username, and you're in. Real users started signing up the moment the landing went live (13 founder usernames claimed in the first hour).\n\n- **`/play/` embed** with workspace chrome around the playable runtime\n- **Wave Chat RPG panels** \u2014 Inventory, Quest, Map, Founders Vault as React components\n- **Speech bubbles + toasts** in the in-world chat\n- **Photosensitive safety mode** \u2014 flash/strobe reduction toggle\n- **Mobile bundle splitting** for faster load on phones\n- **HermesWorld brand asset pack** \u2014 logo lockups, social previews, in-game art\n- **MJ-generated NPC + zone art** wired into the playground\n- **Public name reservation flow** at `/reserve` with founder ranking\n\n`VITE_HERMESWORLD_ENABLED=false` lets you opt out of the link in the sidebar.\n\n### \ud83d\udc64 Agent View panel\n\nA new **side panel in chat** that shows the active agent, queue, history, and a usage meter wired to real provider quota.\n\n- **Avatar reflects real activity state** \u2014 idle / thinking / speaking, sourced from the chat-activity store, no fake demo data\n- **Two-tier avatar picker** \u2014 Hermes default + 9 Greek god PNGs (Athena, Apollo, Artemis, Iris, Nike, Pan, Chronos, Eros, Hermes), plus an emoji avatar tier\n- **Real provider quota tracking** in the usage meter\n- **Smooth slide+fade transitions** on the desktop panel\n- **Mobile sheet variant** for small screens\n- **Enterprise chrome** \u2014 borderless inner sections, no demo fallback when the gateway returns zero agents\n\n### \ud83d\udcca Dashboard\n\nWorkspace dashboard now mirrors the native Hermes Agent dashboard at `:9120`, aggregated server-side in **a single round trip** that proxies six native endpoints with per-section graceful fallbacks.\n\nNew cards:\n\n- **System Status Strip** \u2014 gateway pill + active-agents count + warning chip on `restart_requested`\n- **Platforms card** \u2014 connected platforms with per-platform state pills\n- **Cron Summary** \u2014 scheduled / paused / running counts + next-run countdown, deep-links to `/jobs`\n- **Achievements ribbon** \u2014 three most recent unlocks with tier badges + modal for the full ribbon\n- **Analytics Summary** \u2014 top-3 models by tokens with proportional bars + real cost (replaces the hardcoded `$5/M` estimate)\n- **Provider Mix donut + cache efficiency tile**\n- **Velocity + Cost Ledger menu items**\n- **Contextual Operator Tip card**\n\nVanilla installs still render a usable dashboard \u2014 every section resolves to `null` independently if its provider isn't available.\n\n---\n\n## \ud83d\udee0 Patches & fixes (22 PRs merged)\n\n### Install / runtime\n\n- **#360 \u2014 Docker compose finally works on fresh installs.** `hermes-agent` was missing `command: [gateway, run]` so the container started the interactive CLI and exited under `up -d`. Fixed in #385.\n- **#356 \u2014 \"Hermes updated\" modal stops popping on every refresh.** `storeNotes()` was clearing the seen marker on every poll. Fixed in #386 \u2014 only clears when the notes ID actually changes.\n- **kimi-k2.6 256k context window support** (#357)\n- **Legacy `claude-workspace` / `claude-agent` remote aliases** so old upgrades don't break the update checker (#359)\n\n### Tasks / jobs / cron\n\n- **Tasks board auto-detects local vs gateway backend** (#361). Probes `/api/hermes-tasks` and `/api/claude-tasks` in parallel and picks the one with data. Fixes silent empty boards on installs that store tasks in `~/.hermes/tasks.json`.\n- **Jobs API normalization** \u2014 always returns `{jobs:[]}` even when the gateway returns a bare array (#358)\n\n### Chat / sessions / agent\n\n- **Chat session accounting + local title rename fixes** (#350) \u2014 phantom agents in sidebar, context meter inflation, local session rename display mismatches all addressed.\n- **Inline `MEDIA:<path>` rendering** (#349, #330) \u2014 local file paths from the agent now show as images in chat, served through a path-allowlisted `/api/media` route.\n- **Inline artifact cards** in chat (#346, #295)\n- **Workspace session identity preserved during streams** (#310)\n- **Right-click works on update cards** (#286)\n\n### Conductor / Swarm / orchestration\n\n- **Conductor mission sanitization** (#335) \u2014 strips Cloudflare 5xx HTML error pages and self-referencing workspace URLs out of mission goals before they hit the model. Defense-in-depth against gateway/proxy failures contaminating agent prompts.\n- **Conductor falls back when Dashboard mission API is unavailable** (#317)\n- **Swarm tmux session survival check** (#341) \u2014 when the agent process dies inside tmux (bad PATH, missing API key, etc.), Workspace now surfaces the actual exit output instead of a cryptic \"can't find pane\" error.\n- **Hardened workspace swarm prompt submission** (#307)\n- **Operations picker merges Hermes models** (#342)\n- **Chat sends scoped to active workspace** (#340)\n\n### Files / browser / settings\n\n- **Server-side file browser mode clarified** (#345)\n- **HTML preview mode in file browser** (#296)\n- **Groq STT controls in workspace settings** (#347)\n\n### Themes / UI\n\n- **SciFi theme** (#320) \u2014 full dark/light Tailwind v4 token palette\n- **Switch toggles show ON/OFF labels** with emerald accent (#284)\n\n### Auth / gateway\n\n- **Codex OAuth tokens bridge to portable-mode chat bearer auth** (#332)\n- **Gateway capability fields reported correctly** (#318)\n- **Production server start path fixed** (#308)\n- **Faster recovery from disconnected state** (#275)\n\n### Misc\n\n- **VT-Capital Guardian OMS cockpit** plugin-scoped surface (#364)\n- **Agora HUD polish** to match mockup (#376)\n- **MseeP.ai security badge** added to README (#378)\n- **Asset generation v2 prompts** + ChatGPT prompt batch docs (#370, #375)\n- **HermesWorld lore bible + player guides** (#368)\n\n---\n\n## \ud83d\udd04 Issues closed\n\n- **#360** Docker compose on fresh install \u2014 fixed in #385\n- **#356** Update modal popping every refresh \u2014 fixed in #386\n- **#319** Workspace + Codex provider compatibility \u2014 clarified, gateway is the missing piece\n- **#294** File browser file system access \u2014 already resolved, server-side mode confirmed\n\n## \ud83d\udcca Queue movement\n\n- **PRs:** 24 open \u2192 12 open\n- **Issues:** 10 open \u2192 6 open\n- **Today's merges:** 22 PRs\n\n---\n\n## \ud83d\ude80 Upgrade\n\n```bash\ncd ~/hermes-workspace\ngit pull\npnpm install\npnpm dev\n```\n\nOr, fresh install:\n\n```bash\ncurl -fsSL https://hermes-workspace.com/install.sh | bash\n```\n\n---\n\n## \ud83d\ude4f Contributors this release\n\n@Interstellar-code, @WanderWang, @kadeross, @John-tip, @shoveller, @Fungraphic, @valted81, @kung4lex, @aliasfoxkde, @moto-taka, @kaankirsan, @nazeshinjite, @nixbin-engineering, @CipherFrame, @mseep-ai, @sebuh, @kliebinz-ds, @yasuhidekoizumi-afk\n\n---\n\n**Free. MIT. Open source forever.**\n\n\u2192 [github.com/outsourc-e/hermes-workspace](https://github.com/outsourc-e/hermes-workspace)\n\u2192 [hermes-world.ai](https://hermes-world.ai)\n\u2192 [hermes-workspace.com](https://hermes-workspace.com)\n","reactions":{"total_count":5,"+1":5,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"mentions_count":18}
+{"id":319267831,"author":{"login":"outsourc-e","id":201563152,"node_id":"U_kgDODAOcEA","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDORoFuJM4TB6P3","tag_name":"v2.3.0","target_commitish":"main","name":"Hermes-Workspace v2.3.0 — HermesWorld integration, Agent View, Dashboard polish","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-05-08T00:54:54Z","updated_at":"2026-05-08T00:56:19Z","published_at":"2026-05-08T00:56:19Z","assets":[],"body":"# Hermes-Workspace v2.3.0 — HermesWorld integration, Agent View, Dashboard polish\n\nA focused follow-up to v2.2.0 with **three new features in the workspace shell** and a wave of bug fixes that unblock fresh installs.\n\n46 commits since v2.2.0 · 22 PRs merged in the final push · 4 issues closed · queue down 50%.\n\n---\n\n## ✨ New features\n\n### 🌐 HermesWorld integration\n\nThe playable agent MMO — [hermes-world.ai](https://hermes-world.ai) — now embeds **directly inside Workspace** via iframe, with the workspace nav preserved around it. Sign in with Google or email, reserve your founder username, and you're in. Real users started signing up the moment the landing went live (13 founder usernames claimed in the first hour).\n\n- **`/play/` embed** with workspace chrome around the playable runtime\n- **Wave Chat RPG panels** — Inventory, Quest, Map, Founders Vault as React components\n- **Speech bubbles + toasts** in the in-world chat\n- **Photosensitive safety mode** — flash/strobe reduction toggle\n- **Mobile bundle splitting** for faster load on phones\n- **HermesWorld brand asset pack** — logo lockups, social previews, in-game art\n- **MJ-generated NPC + zone art** wired into the playground\n- **Public name reservation flow** at `/reserve` with founder ranking\n\n`VITE_HERMESWORLD_ENABLED=false` lets you opt out of the link in the sidebar.\n\n### 👤 Agent View panel\n\nA new **side panel in chat** that shows the active agent, queue, history, and a usage meter wired to real provider quota.\n\n- **Avatar reflects real activity state** — idle / thinking / speaking, sourced from the chat-activity store, no fake demo data\n- **Two-tier avatar picker** — Hermes default + 9 Greek god PNGs (Athena, Apollo, Artemis, Iris, Nike, Pan, Chronos, Eros, Hermes), plus an emoji avatar tier\n- **Real provider quota tracking** in the usage meter\n- **Smooth slide+fade transitions** on the desktop panel\n- **Mobile sheet variant** for small screens\n- **Enterprise chrome** — borderless inner sections, no demo fallback when the gateway returns zero agents\n\n### 📊 Dashboard\n\nWorkspace dashboard now mirrors the native Hermes Agent dashboard at `:9120`, aggregated server-side in **a single round trip** that proxies six native endpoints with per-section graceful fallbacks.\n\nNew cards:\n\n- **System Status Strip** — gateway pill + active-agents count + warning chip on `restart_requested`\n- **Platforms card** — connected platforms with per-platform state pills\n- **Cron Summary** — scheduled / paused / running counts + next-run countdown, deep-links to `/jobs`\n- **Achievements ribbon** — three most recent unlocks with tier badges + modal for the full ribbon\n- **Analytics Summary** — top-3 models by tokens with proportional bars + real cost (replaces the hardcoded `$5/M` estimate)\n- **Provider Mix donut + cache efficiency tile**\n- **Velocity + Cost Ledger menu items**\n- **Contextual Operator Tip card**\n\nVanilla installs still render a usable dashboard — every section resolves to `null` independently if its provider isn't available.\n\n---\n\n## 🛠 Patches & fixes (22 PRs merged)\n\n### Install / runtime\n\n- **#360 — Docker compose finally works on fresh installs.** `hermes-agent` was missing `command: [gateway, run]` so the container started the interactive CLI and exited under `up -d`. Fixed in #385.\n- **#356 — \"Hermes updated\" modal stops popping on every refresh.** `storeNotes()` was clearing the seen marker on every poll. Fixed in #386 — only clears when the notes ID actually changes.\n- **kimi-k2.6 256k context window support** (#357)\n- **Legacy `claude-workspace` / `claude-agent` remote aliases** so old upgrades don't break the update checker (#359)\n\n### Tasks / jobs / cron\n\n- **Tasks board auto-detects local vs gateway backend** (#361). Probes `/api/hermes-tasks` and `/api/claude-tasks` in parallel and picks the one with data. Fixes silent empty boards on installs that store tasks in `~/.hermes/tasks.json`.\n- **Jobs API normalization** — always returns `{jobs:[]}` even when the gateway returns a bare array (#358)\n\n### Chat / sessions / agent\n\n- **Chat session accounting + local title rename fixes** (#350) — phantom agents in sidebar, context meter inflation, local session rename display mismatches all addressed.\n- **Inline `MEDIA:<path>` rendering** (#349, #330) — local file paths from the agent now show as images in chat, served through a path-allowlisted `/api/media` route.\n- **Inline artifact cards** in chat (#346, #295)\n- **Workspace session identity preserved during streams** (#310)\n- **Right-click works on update cards** (#286)\n\n### Conductor / Swarm / orchestration\n\n- **Conductor mission sanitization** (#335) — strips Cloudflare 5xx HTML error pages and self-referencing workspace URLs out of mission goals before they hit the model. Defense-in-depth against gateway/proxy failures contaminating agent prompts.\n- **Conductor falls back when Dashboard mission API is unavailable** (#317)\n- **Swarm tmux session survival check** (#341) — when the agent process dies inside tmux (bad PATH, missing API key, etc.), Workspace now surfaces the actual exit output instead of a cryptic \"can't find pane\" error.\n- **Hardened workspace swarm prompt submission** (#307)\n- **Operations picker merges Hermes models** (#342)\n- **Chat sends scoped to active workspace** (#340)\n\n### Files / browser / settings\n\n- **Server-side file browser mode clarified** (#345)\n- **HTML preview mode in file browser** (#296)\n- **Groq STT controls in workspace settings** (#347)\n\n### Themes / UI\n\n- **SciFi theme** (#320) — full dark/light Tailwind v4 token palette\n- **Switch toggles show ON/OFF labels** with emerald accent (#284)\n\n### Auth / gateway\n\n- **Codex OAuth tokens bridge to portable-mode chat bearer auth** (#332)\n- **Gateway capability fields reported correctly** (#318)\n- **Production server start path fixed** (#308)\n- **Faster recovery from disconnected state** (#275)\n\n### Misc\n\n- **VT-Capital Guardian OMS cockpit** plugin-scoped surface (#364)\n- **Agora HUD polish** to match mockup (#376)\n- **MseeP.ai security badge** added to README (#378)\n- **Asset generation v2 prompts** + ChatGPT prompt batch docs (#370, #375)\n- **HermesWorld lore bible + player guides** (#368)\n\n---\n\n## 🔄 Issues closed\n\n- **#360** Docker compose on fresh install — fixed in #385\n- **#356** Update modal popping every refresh — fixed in #386\n- **#319** Workspace + Codex provider compatibility — clarified, gateway is the missing piece\n- **#294** File browser file system access — already resolved, server-side mode confirmed\n\n## 📊 Queue movement\n\n- **PRs:** 24 open → 12 open\n- **Issues:** 10 open → 6 open\n- **Today's merges:** 22 PRs\n\n---\n\n## 🚀 Upgrade\n\n```bash\ncd ~/hermes-workspace\ngit pull\npnpm install\npnpm dev\n```\n\nOr, fresh install:\n\n```bash\ncurl -fsSL https://hermes-workspace.com/install.sh | bash\n```\n\n---\n\n## 🙏 Contributors this release\n\n@Interstellar-code, @WanderWang, @kadeross, @John-tip, @shoveller, @Fungraphic, @valted81, @kung4lex, @aliasfoxkde, @moto-taka, @kaankirsan, @nazeshinjite, @nixbin-engineering, @CipherFrame, @mseep-ai, @sebuh, @kliebinz-ds, @yasuhidekoizumi-afk\n\n---\n\n**Free. MIT. Open source forever.**\n\n→ [github.com/outsourc-e/hermes-workspace](https://github.com/outsourc-e/hermes-workspace)\n→ [hermes-world.ai](https://hermes-world.ai)\n→ [hermes-workspace.com](https://hermes-workspace.com)\n","reactions":{"total_count":5,"+1":5,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"mentions_count":18}

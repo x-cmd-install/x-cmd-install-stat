@@ -2,98 +2,98 @@ about:
   description: "Intercept and inspect Coding Agent API traffic from Claude Code, Codex CLI, Gemini CLI, Cursor CLI, OpenCode, Kimi/Kimi Code, Pi, and Hermes in a local trace viewer."
   license: MIT
   homepage: 
-  head: 3c40f11
+  head: 1ca0cb3
   archived: false
   latestVersion: "v0.1.146"
   latestRelease: "v0.1.146"
   latestPrerelease: ""
-  collectedAt: 2026-10-25T05:57:40Z
+  collectedAt: 2026-10-26T06:02:50Z
 timeline:
   created: 2026-02-15
-  lastCommit: 2026-10-19
+  lastCommit: 2026-10-25
   lastVersion: 2026-10-17
   lastRelease: 2026-10-17
   lastPrerelease: 
 popularity:
-  star: 3308
+  star: 3309
   watcher: 4
   fork: 286
   release: 126
   contributor: 37
-  pullRequest: 379
+  pullRequest: 382
   issue: 91
 language:
-  Python: 2611598
+  Python: 2616402
   JavaScript: 307194
   HTML: 96654
   CSS: 57281
   Shell: 17257
-totalBytes: 3089984
+totalBytes: 3094788
 recent:
   last30d:
-    since: 2026-09-25
-    release: 1
-    mergedPR: 4
-    openPR: 2
-    closedIssue: 0
-    openIssue: 3
-    commit: 5
-  last60d:
-    since: 2026-08-26
+    since: 2026-09-26
     release: 1
     mergedPR: 5
+    openPR: 4
+    closedIssue: 1
+    openIssue: 2
+    commit: 6
+  last60d:
+    since: 2026-08-27
+    release: 1
+    mergedPR: 6
     openPR: 6
-    closedIssue: 0
-    openIssue: 8
-    commit: 7
+    closedIssue: 1
+    openIssue: 5
+    commit: 8
   last90d:
-    since: 2026-07-27
-    release: 7
+    since: 2026-07-28
+    release: 6
     mergedPR: 24
-    openPR: 14
-    closedIssue: 5
-    openIssue: 11
-    commit: 24
+    openPR: 16
+    closedIssue: 6
+    openIssue: 10
+    commit: 25
   last180d:
-    since: 2026-04-28
+    since: 2026-04-29
     release: 100
     mergedPR: 259
-    openPR: 17
-    closedIssue: 49
-    openIssue: 22
-    commit: 247
+    openPR: 19
+    closedIssue: 47
+    openIssue: 21
+    commit: 248
   last360d:
-    since: 2025-10-30
+    since: 2025-10-31
     release: 100
-    mergedPR: 313
-    openPR: 17
-    closedIssue: 68
-    openIssue: 23
-    commit: 395
+    mergedPR: 314
+    openPR: 19
+    closedIssue: 69
+    openIssue: 22
+    commit: 396
   last720d:
-    since: 2024-11-04
+    since: 2024-11-05
     release: 100
-    mergedPR: 313
-    openPR: 17
-    closedIssue: 68
-    openIssue: 23
-    commit: 402
+    mergedPR: 314
+    openPR: 19
+    closedIssue: 69
+    openIssue: 22
+    commit: 403
 total:
   release: 126
-  mergedPR: 313
-  openPR: 17
-  closedIssue: 68
-  openIssue: 23
-  commit: 402
+  mergedPR: 314
+  openPR: 19
+  closedIssue: 69
+  openIssue: 22
+  commit: 403
 ---
 path: /home/runner/.x-repo/github.com/liaohch3/claude-tap
-collectedAt: 2026-10-25T05:57:46Z
+collectedAt: 2026-10-26T06:02:57Z
 loc:
   Python:
-    code: 55618
-    comments: 1215
-    blanks: 8837
-    files: 127
+    code: 55717
+    comments: 1213
+    blanks: 8851
+    files: 128
   JavaScript:
     code: 5966
     comments: 745
@@ -136,8 +136,8 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 2305
-    blanks: 1087
+    comments: 2309
+    blanks: 1091
     files: 24
   Text:
     code: 0
@@ -145,11 +145,11 @@ loc:
     blanks: 1
     files: 1
 total:
-  code: 69483
-  comments: 4677
-  blanks: 11005
-  files: 180
+  code: 69582
+  comments: 4679
+  blanks: 11023
+  files: 181
 ---
 
 ---
-{"id":415878231,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDORQz-bc4YycxX","tag_name":"v0.1.146","target_commitish":"main","name":"v0.1.146","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-17T15:20:02Z","updated_at":"2026-10-17T15:22:36Z","published_at":"2026-10-17T15:22:24Z","assets":[],"body":"## English\n\n### Changed\n\n- Compute viewer costs using the Python pricing adapter.\n- Explain prompt cache misses in the viewer turn detail.\n- Distinguish harness-injected input from human prompts when displaying conversation titles.\n- Flag tool results large enough to dominate a conversation turn.\n\n### Fixed\n\n- Fix Dashboard records and HTML viewer HTTP 500 errors caused by `urlsplit()` `ValueError`, hiding the affected display strings and response text previews while retaining stored captures.\n- Ignore object key order in viewer parameter diffs and sort displayed JSON to highlight actual value changes.\n- Preserve wrapped-client stdout for every mode by routing claude-tap operational output to stderr.\n- Capture Anthropic-protocol requests (`/v1/messages`) when dsh uses an Anthropic provider.\n- Avoid double-counting cached input tokens in dashboard session totals.\n\n## \u7b80\u4f53\u4e2d\u6587\n\n### \u53d8\u66f4\n\n- \u4f7f\u7528 Python \u5b9a\u4ef7\u9002\u914d\u5668\u8ba1\u7b97\u67e5\u770b\u5668\u4e2d\u7684\u8d39\u7528\u3002\n- \u5728\u67e5\u770b\u5668\u7684\u8f6e\u6b21\u8be6\u60c5\u4e2d\u89e3\u91ca\u63d0\u793a\u7f13\u5b58\u672a\u547d\u4e2d\u7684\u539f\u56e0\u3002\n- \u5c55\u793a\u4f1a\u8bdd\u6807\u9898\u65f6\u533a\u5206\u5de5\u5177\u6846\u67b6\u6ce8\u5165\u7684\u5185\u5bb9\u548c\u7528\u6237\u63d0\u793a\u3002\n- \u6807\u8bb0\u5360\u636e\u4f1a\u8bdd\u8f6e\u6b21\u5927\u91cf\u5185\u5bb9\u7684\u5de5\u5177\u7ed3\u679c\u3002\n\n### \u4fee\u590d\n\n- \u4fee\u590d `urlsplit()` \u629b\u51fa `ValueError` \u5bfc\u81f4 Dashboard \u8bb0\u5f55\u63a5\u53e3\u548c HTML \u67e5\u770b\u5668\u8fd4\u56de HTTP 500 \u7684\u95ee\u9898\uff1b\u9690\u85cf\u53d7\u5f71\u54cd\u7684\u5c55\u793a\u6587\u672c\u548c\u9884\u89c8\uff0c\u4fdd\u7559\u5b58\u50a8\u7684\u539f\u59cb\u8bb0\u5f55\u3002\n- \u53c2\u6570\u5dee\u5f02\u6bd4\u8f83\u5ffd\u7565\u5bf9\u8c61\u952e\u987a\u5e8f\uff0c\u5e76\u5bf9\u5c55\u793a\u7684 JSON \u6392\u5e8f\u4ee5\u7a81\u51fa\u5b9e\u9645\u503c\u53d8\u5316\u3002\n- \u5c06 claude-tap \u7684\u8fd0\u884c\u63d0\u793a\u8f93\u51fa\u5230 stderr\uff0c\u786e\u4fdd\u5404\u6a21\u5f0f\u5747\u4fdd\u7559\u88ab\u5305\u88c5\u5ba2\u6237\u7aef\u7684 stdout\u3002\n- dsh \u4f7f\u7528 Anthropic \u4f9b\u5e94\u5546\u65f6\u6293\u53d6 Anthropic \u534f\u8bae\u8bf7\u6c42\uff08`/v1/messages`\uff09\u3002\n- \u907f\u514d Dashboard \u4f1a\u8bdd token \u603b\u6570\u91cd\u590d\u8ba1\u7b97\u7f13\u5b58\u8f93\u5165\u3002\n"}
+{"id":415878231,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDORQz-bc4YycxX","tag_name":"v0.1.146","target_commitish":"main","name":"v0.1.146","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-17T15:20:02Z","updated_at":"2026-10-17T15:22:36Z","published_at":"2026-10-17T15:22:24Z","assets":[],"body":"## English\n\n### Changed\n\n- Compute viewer costs using the Python pricing adapter.\n- Explain prompt cache misses in the viewer turn detail.\n- Distinguish harness-injected input from human prompts when displaying conversation titles.\n- Flag tool results large enough to dominate a conversation turn.\n\n### Fixed\n\n- Fix Dashboard records and HTML viewer HTTP 500 errors caused by `urlsplit()` `ValueError`, hiding the affected display strings and response text previews while retaining stored captures.\n- Ignore object key order in viewer parameter diffs and sort displayed JSON to highlight actual value changes.\n- Preserve wrapped-client stdout for every mode by routing claude-tap operational output to stderr.\n- Capture Anthropic-protocol requests (`/v1/messages`) when dsh uses an Anthropic provider.\n- Avoid double-counting cached input tokens in dashboard session totals.\n\n## 简体中文\n\n### 变更\n\n- 使用 Python 定价适配器计算查看器中的费用。\n- 在查看器的轮次详情中解释提示缓存未命中的原因。\n- 展示会话标题时区分工具框架注入的内容和用户提示。\n- 标记占据会话轮次大量内容的工具结果。\n\n### 修复\n\n- 修复 `urlsplit()` 抛出 `ValueError` 导致 Dashboard 记录接口和 HTML 查看器返回 HTTP 500 的问题；隐藏受影响的展示文本和预览，保留存储的原始记录。\n- 参数差异比较忽略对象键顺序，并对展示的 JSON 排序以突出实际值变化。\n- 将 claude-tap 的运行提示输出到 stderr，确保各模式均保留被包装客户端的 stdout。\n- dsh 使用 Anthropic 供应商时抓取 Anthropic 协议请求（`/v1/messages`）。\n- 避免 Dashboard 会话 token 总数重复计算缓存输入。\n"}

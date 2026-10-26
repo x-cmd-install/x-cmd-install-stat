@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.7.3"
   latestRelease: "v0.7.3"
   latestPrerelease: ""
-  collectedAt: 2026-10-25T05:46:36Z
+  collectedAt: 2026-10-26T05:52:54Z
 timeline:
   created: 2026-04-24
   lastCommit: 2026-10-15
@@ -28,7 +28,7 @@ language:
 totalBytes: 305866
 recent:
   last30d:
-    since: 2026-09-25
+    since: 2026-09-26
     release: 1
     mergedPR: 1
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 10
   last60d:
-    since: 2026-08-26
+    since: 2026-08-27
     release: 1
     mergedPR: 1
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 10
   last90d:
-    since: 2026-07-27
+    since: 2026-07-28
     release: 1
     mergedPR: 6
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 18
   last180d:
-    since: 2026-04-28
+    since: 2026-04-29
     release: 1
     mergedPR: 6
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 23
   last360d:
-    since: 2025-10-30
+    since: 2025-10-31
     release: 1
     mergedPR: 6
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 42
   last720d:
-    since: 2024-11-04
+    since: 2024-11-05
     release: 1
     mergedPR: 6
     openPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 48
 ---
 path: /home/runner/.x-repo/github.com/B33pBeeps/redthread
-collectedAt: 2026-10-25T05:46:37Z
+collectedAt: 2026-10-26T05:52:56Z
 loc:
   Go:
     code: 8774
@@ -109,4 +109,4 @@ total:
 ---
 
 ---
-{"id":414098950,"author":{"login":"B33pBeeps","id":47845755,"node_id":"MDQ6VXNlcjQ3ODQ1NzU1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOSL2qjs4YrqYG","tag_name":"v0.7.3","target_commitish":"main","name":"v0.7.3","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-15T17:33:55Z","updated_at":"2026-10-15T17:45:02Z","published_at":"2026-10-15T17:45:02Z","assets":[],"body":"\nThe first tagged release, and the first with outside contributions. Thank you\n[@saforem2](https://github.com/saforem2), [@ambareeshav](https://github.com/ambareeshav)\nand [@webbrain-one](https://github.com/webbrain-one).\n\n*Features*\n- **Light terminal palette** with auto-detection, `--theme=light|dark|auto`, `RT_THEME`,\n  and a `T` toggle that is remembered; five light fills in the background picker.\n  The dark palette is unchanged. ([#3](https://github.com/B33pBeeps/redthread/pull/3), @saforem2)\n- **Undo everything** \u2014 a 50-step undo/redo stack (`u` / `ctrl+r`) covering every change,\n  including deleted boards; `ctrl+p` over a non-empty note asks first; each content-changing\n  save keeps the previous `notes.json` under `backups/`, newest 20.\n  ([#4](https://github.com/B33pBeeps/redthread/pull/4), @saforem2)\n- **Open a note in `$EDITOR`** \u2014 `e` on the board or `ctrl+e` in the card hands the note\n  to your editor as a markdown file and reads it back; every failure path leaves the note alone.\n  ([#5](https://github.com/B33pBeeps/redthread/pull/5), @saforem2)\n- **Optional vim bindings** in the note card: `--vim` / `RT_VIM=1`, off by default,\n  `--vim=false` turns it off again. ([#6](https://github.com/B33pBeeps/redthread/pull/6), @saforem2)\n- **Resizable notes** \u2014 drag the bottom-right corner, or `H`/`L` and `K`/`J`; sizes persist\n  and scale with zoom. ([#7](https://github.com/B33pBeeps/redthread/pull/7), @ambareeshav)\n- README fix for the menu.go description. ([#2](https://github.com/B33pBeeps/redthread/pull/2), @webbrain-one)\n\n*Fixes*\n- Keyboard nudges and resizes are undoable like mouse moves; a refused last-board delete\n  no longer consumes an undo slot.\n- Returning from `$EDITOR` gives the mouse back and no longer doubles the animation tick.\n- `ctrl+p` in vim normal/visual mode pastes into the live buffer instead of a hidden one.\n- With a solid fill color, the open card and footer now use the fill instead of the\n  terminal background.\n- The outgoing board in a board-switch crossfade is drawn with its own highlight color.\n- The debounced saver no longer reads the live workspace from its timer goroutine\n  (a data race under heavy editing); it snapshots on the UI thread instead.\n- Tests can no longer touch the real `notes.json`: the package redirects `XDG_DATA_HOME`\n  to a temp dir for every test.\n\n","mentions_count":3}
+{"id":414098950,"author":{"login":"B33pBeeps","id":47845755,"node_id":"MDQ6VXNlcjQ3ODQ1NzU1","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOSL2qjs4YrqYG","tag_name":"v0.7.3","target_commitish":"main","name":"v0.7.3","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-15T17:33:55Z","updated_at":"2026-10-15T17:45:02Z","published_at":"2026-10-15T17:45:02Z","assets":[],"body":"\nThe first tagged release, and the first with outside contributions. Thank you\n[@saforem2](https://github.com/saforem2), [@ambareeshav](https://github.com/ambareeshav)\nand [@webbrain-one](https://github.com/webbrain-one).\n\n*Features*\n- **Light terminal palette** with auto-detection, `--theme=light|dark|auto`, `RT_THEME`,\n  and a `T` toggle that is remembered; five light fills in the background picker.\n  The dark palette is unchanged. ([#3](https://github.com/B33pBeeps/redthread/pull/3), @saforem2)\n- **Undo everything** — a 50-step undo/redo stack (`u` / `ctrl+r`) covering every change,\n  including deleted boards; `ctrl+p` over a non-empty note asks first; each content-changing\n  save keeps the previous `notes.json` under `backups/`, newest 20.\n  ([#4](https://github.com/B33pBeeps/redthread/pull/4), @saforem2)\n- **Open a note in `$EDITOR`** — `e` on the board or `ctrl+e` in the card hands the note\n  to your editor as a markdown file and reads it back; every failure path leaves the note alone.\n  ([#5](https://github.com/B33pBeeps/redthread/pull/5), @saforem2)\n- **Optional vim bindings** in the note card: `--vim` / `RT_VIM=1`, off by default,\n  `--vim=false` turns it off again. ([#6](https://github.com/B33pBeeps/redthread/pull/6), @saforem2)\n- **Resizable notes** — drag the bottom-right corner, or `H`/`L` and `K`/`J`; sizes persist\n  and scale with zoom. ([#7](https://github.com/B33pBeeps/redthread/pull/7), @ambareeshav)\n- README fix for the menu.go description. ([#2](https://github.com/B33pBeeps/redthread/pull/2), @webbrain-one)\n\n*Fixes*\n- Keyboard nudges and resizes are undoable like mouse moves; a refused last-board delete\n  no longer consumes an undo slot.\n- Returning from `$EDITOR` gives the mouse back and no longer doubles the animation tick.\n- `ctrl+p` in vim normal/visual mode pastes into the live buffer instead of a hidden one.\n- With a solid fill color, the open card and footer now use the fill instead of the\n  terminal background.\n- The outgoing board in a board-switch crossfade is drawn with its own highlight color.\n- The debounced saver no longer reads the live workspace from its timer goroutine\n  (a data race under heavy editing); it snapshots on the UI thread instead.\n- Tests can no longer touch the real `notes.json`: the package redirects `XDG_DATA_HOME`\n  to a temp dir for every test.\n\n","mentions_count":3}

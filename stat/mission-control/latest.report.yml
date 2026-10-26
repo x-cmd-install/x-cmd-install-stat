@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.3.0"
   latestRelease: "v2.3.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-25T05:03:58Z
+  collectedAt: 2026-10-26T05:04:50Z
 timeline:
   created: 2026-02-13
   lastCommit: 2026-09-22
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-07-25
   lastPrerelease: 
 popularity:
-  star: 6393
+  star: 6397
   watcher: 31
   fork: 120
   release: 9
@@ -33,7 +33,7 @@ language:
 totalBytes: 5063258
 recent:
   last30d:
-    since: 2026-09-25
+    since: 2026-09-26
     release: 0
     mergedPR: 0
     openPR: 15
@@ -41,7 +41,7 @@ recent:
     openIssue: 4
     commit: 0
   last60d:
-    since: 2026-08-26
+    since: 2026-08-27
     release: 0
     mergedPR: 0
     openPR: 35
@@ -49,7 +49,7 @@ recent:
     openIssue: 6
     commit: 2
   last90d:
-    since: 2026-07-27
+    since: 2026-07-28
     release: 0
     mergedPR: 9
     openPR: 40
@@ -57,15 +57,15 @@ recent:
     openIssue: 9
     commit: 11
   last180d:
-    since: 2026-04-28
+    since: 2026-04-29
     release: 3
-    mergedPR: 167
+    mergedPR: 165
     openPR: 41
     closedIssue: 24
     openIssue: 15
     commit: 180
   last360d:
-    since: 2025-10-30
+    since: 2025-10-31
     release: 9
     mergedPR: 393
     openPR: 41
@@ -73,7 +73,7 @@ recent:
     openIssue: 15
     commit: 454
   last720d:
-    since: 2024-11-04
+    since: 2024-11-05
     release: 9
     mergedPR: 393
     openPR: 41
@@ -89,7 +89,7 @@ total:
   commit: 538
 ---
 path: /home/runner/.x-repo/github.com/builderz-labs/mission-control
-collectedAt: 2026-10-25T05:04:01Z
+collectedAt: 2026-10-26T05:04:52Z
 loc:
   TypeScript:
     code: 69100
@@ -174,4 +174,4 @@ total:
 ---
 
 ---
-{"id":359708447,"author":{"login":"0xNyk","id":93952610,"node_id":"U_kgDOBZmaYg","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDORPNUhM4VcLcf","tag_name":"v2.3.0","target_commitish":"main","name":"v2.3.0 \u2014 Dependency Security Patch, Toolchain Refresh & Locale Integrity","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-07-25T08:10:07Z","updated_at":"2026-07-25T08:10:11Z","published_at":"2026-07-25T08:10:11Z","assets":[],"body":"Mission Control 2.3.0 patches **13 known dependency vulnerabilities (8 high severity)** and is a recommended upgrade for all self-hosted operators \u2014 especially any instance exposed beyond localhost.\n\n## Security\n- **next 16.2.10 \u2192 16.2.11** \u2014 9 advisories including SSRF in Server Actions (GHSA-89xv-2m56-2m9x, GHSA-p9j2-gv94-2wf4), middleware/proxy bypass (GHSA-6gpp-xcg3-4w24), response cache confusion, and DoS\n- **sharp 0.34.5 \u2192 0.35.3** via bounded workspace override (GHSA-f88m-g3jw-g9cj, inherited libvips CVEs)\n- **brace-expansion** DoS patched on all three resolved major lines (GHSA-3jxr-9vmj-r5cp, GHSA-mh99-v99m-4gvg)\n- Transitive **postcss** forced to \u22658.5.18 (GHSA-r28c-9q8g-f849)\n\nNo Mission Control application code required security changes; the full protected quality gate passed unchanged on the patch series.\n\n## Added\n- `MC_DISABLE_RUNTIME_SCAN` environment flag to skip local CLI probing during runtime detection (#895)\n\n## Fixed\n- Locale parity restored across all 10 locales with a permanent guard test in the quality gate (#907); missing `calMode_day` translation (#894)\n\n## Changed\n- Test toolchain on current majors: vite 8, vitest 4, @vitejs/plugin-react 6 (#908) \u2014 production builds remain webpack\n\n## Upgrade\n1. Back up the database and runtime configuration\n2. Upgrade from the protected `v2.3.0` tag or corresponding immutable container digest\n3. No migrations; no configuration changes required\n\nFull notes: [docs/releases/2.3.0.md](https://github.com/builderz-labs/mission-control/blob/main/docs/releases/2.3.0.md) \u00b7 Changelog: [CHANGELOG.md](https://github.com/builderz-labs/mission-control/blob/main/CHANGELOG.md)"}
+{"id":359708447,"author":{"login":"0xNyk","id":93952610,"node_id":"U_kgDOBZmaYg","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDORPNUhM4VcLcf","tag_name":"v2.3.0","target_commitish":"main","name":"v2.3.0 — Dependency Security Patch, Toolchain Refresh & Locale Integrity","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-07-25T08:10:07Z","updated_at":"2026-07-25T08:10:11Z","published_at":"2026-07-25T08:10:11Z","assets":[],"body":"Mission Control 2.3.0 patches **13 known dependency vulnerabilities (8 high severity)** and is a recommended upgrade for all self-hosted operators — especially any instance exposed beyond localhost.\n\n## Security\n- **next 16.2.10 → 16.2.11** — 9 advisories including SSRF in Server Actions (GHSA-89xv-2m56-2m9x, GHSA-p9j2-gv94-2wf4), middleware/proxy bypass (GHSA-6gpp-xcg3-4w24), response cache confusion, and DoS\n- **sharp 0.34.5 → 0.35.3** via bounded workspace override (GHSA-f88m-g3jw-g9cj, inherited libvips CVEs)\n- **brace-expansion** DoS patched on all three resolved major lines (GHSA-3jxr-9vmj-r5cp, GHSA-mh99-v99m-4gvg)\n- Transitive **postcss** forced to ≥8.5.18 (GHSA-r28c-9q8g-f849)\n\nNo Mission Control application code required security changes; the full protected quality gate passed unchanged on the patch series.\n\n## Added\n- `MC_DISABLE_RUNTIME_SCAN` environment flag to skip local CLI probing during runtime detection (#895)\n\n## Fixed\n- Locale parity restored across all 10 locales with a permanent guard test in the quality gate (#907); missing `calMode_day` translation (#894)\n\n## Changed\n- Test toolchain on current majors: vite 8, vitest 4, @vitejs/plugin-react 6 (#908) — production builds remain webpack\n\n## Upgrade\n1. Back up the database and runtime configuration\n2. Upgrade from the protected `v2.3.0` tag or corresponding immutable container digest\n3. No migrations; no configuration changes required\n\nFull notes: [docs/releases/2.3.0.md](https://github.com/builderz-labs/mission-control/blob/main/docs/releases/2.3.0.md) · Changelog: [CHANGELOG.md](https://github.com/builderz-labs/mission-control/blob/main/CHANGELOG.md)"}
