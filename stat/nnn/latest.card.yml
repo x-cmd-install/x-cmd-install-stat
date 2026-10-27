@@ -7,7 +7,7 @@ about:
   latestVersion: "v5.3"
   latestRelease: "v5.3"
   latestPrerelease: "v3.7"
-  collectedAt: 2026-10-26T04:32:01Z
+  collectedAt: 2026-10-27T04:50:17Z
 timeline:
   created: 2016-08-20
   lastCommit: 2026-10-25
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-08-15
   lastPrerelease: 2021-04-13
 popularity:
-  star: 22094
+  star: 22097
   watcher: 138
-  fork: 832
+  fork: 833
   release: 44
   contributor: 207
   pullRequest: 834
@@ -35,15 +35,15 @@ language:
 totalBytes: 738821
 recent:
   last30d:
-    since: 2026-09-26
+    since: 2026-09-27
     release: 0
     mergedPR: 5
     openPR: 0
-    closedIssue: 2
+    closedIssue: 1
     openIssue: 1
     commit: 11
   last60d:
-    since: 2026-08-27
+    since: 2026-08-28
     release: 0
     mergedPR: 8
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 1
     commit: 39
   last90d:
-    since: 2026-07-28
+    since: 2026-07-29
     release: 1
     mergedPR: 11
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 1
     commit: 74
   last180d:
-    since: 2026-04-29
+    since: 2026-04-30
     release: 1
     mergedPR: 14
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 1
     commit: 87
   last360d:
-    since: 2025-10-31
+    since: 2025-11-01
     release: 2
     mergedPR: 20
     openPR: 0
@@ -75,13 +75,13 @@ recent:
     openIssue: 1
     commit: 195
   last720d:
-    since: 2024-11-05
+    since: 2024-11-06
     release: 3
-    mergedPR: 52
+    mergedPR: 51
     openPR: 0
     closedIssue: 63
     openIssue: 1
-    commit: 318
+    commit: 315
 total:
   release: 44
   mergedPR: 689
@@ -91,7 +91,7 @@ total:
   commit: 4699
 ---
 path: /home/runner/.x-repo/github.com/jarun/nnn
-collectedAt: 2026-10-26T04:32:05Z
+collectedAt: 2026-10-27T04:50:20Z
 loc:
   C:
     code: 8863
@@ -169,27 +169,31 @@ total:
   blanks: 2819
   files: 96
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/jarun/nnn
-  commit: c3e00d99cc83c71a9a0d285669775ae3c82db38e
+  commit: 5d5ed929dba5b1593db301e404be276a0c65b084
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 4.8
+score: 4.9
 checks:
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 12 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 14 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Code-Review
-    score: 0
-    reason: Found 2/29 approved changesets -- score normalized to 0
+    score: 2
+    reason: Found 5/25 approved changesets -- score normalized to 2
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -204,10 +208,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/codeql.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -244,6 +244,11 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: BSD 2-Clause "Simplified" License: LICENSE:0'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -258,15 +263,10 @@ checks:
       - 'Warn: release artifact v5.1 does not have provenance: https://api.github.com/repos/jarun/nnn/releases/207663260'
       - 'Warn: release artifact v5.0 does not have provenance: https://api.github.com/repos/jarun/nnn/releases/171944635'
       - 'Warn: release artifact v4.9 does not have provenance: https://api.github.com/repos/jarun/nnn/releases/118828967'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
-    score: 10
-    reason: SAST tool is run on all commits
+    score: 9
+    reason: SAST tool detected but not run on all commits
     details:
       - 'Info: SAST configuration detected: CodeQL'
-      - 'Info: all commits (3) are checked with a SAST tool'
+      - 'Warn: 8 commits out of 10 are checked with a SAST tool'
 ---

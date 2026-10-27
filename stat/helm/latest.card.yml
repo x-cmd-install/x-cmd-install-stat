@@ -2,12 +2,12 @@ about:
   description: "The Kubernetes Package Manager"
   license: Apache-2.0
   homepage: https://helm.sh
-  head: 8661276
+  head: 952508d
   archived: false
   latestVersion: "v3.22.1"
   latestRelease: "v3.22.1"
   latestPrerelease: "v3.22.0-rc.1"
-  collectedAt: 2026-10-26T05:43:06Z
+  collectedAt: 2026-10-27T06:14:13Z
 timeline:
   created: 2015-10-06
   lastCommit: 2026-10-26
@@ -15,80 +15,80 @@ timeline:
   lastRelease: 2026-10-15
   lastPrerelease: 2026-08-31
 popularity:
-  star: 30371
-  watcher: 495
-  fork: 7873
+  star: 30374
+  watcher: 493
+  fork: 7889
   release: 257
   contributor: 856
-  pullRequest: 7271
+  pullRequest: 7277
   issue: 8527
 language:
-  Go: 3323625
+  Go: 3320519
   Shell: 41812
   Makefile: 8954
-totalBytes: 3374391
+totalBytes: 3371285
 recent:
   last30d:
-    since: 2026-09-26
+    since: 2026-09-27
     release: 2
-    mergedPR: 32
-    openPR: 53
+    mergedPR: 38
+    openPR: 52
     closedIssue: 0
     openIssue: 19
-    commit: 20
+    commit: 24
   last60d:
-    since: 2026-08-27
+    since: 2026-08-28
     release: 6
-    mergedPR: 75
-    openPR: 93
+    mergedPR: 80
+    openPR: 91
     closedIssue: 6
     openIssue: 28
-    commit: 52
+    commit: 56
   last90d:
-    since: 2026-07-28
+    since: 2026-07-29
     release: 8
-    mergedPR: 104
-    openPR: 124
-    closedIssue: 11
-    openIssue: 48
-    commit: 95
+    mergedPR: 110
+    openPR: 121
+    closedIssue: 10
+    openIssue: 45
+    commit: 99
   last180d:
-    since: 2026-04-29
+    since: 2026-04-30
     release: 16
-    mergedPR: 302
+    mergedPR: 305
     openPR: 189
-    closedIssue: 46
-    openIssue: 80
-    commit: 423
+    closedIssue: 45
+    openIssue: 79
+    commit: 427
   last360d:
-    since: 2025-10-31
+    since: 2025-11-01
     release: 36
-    mergedPR: 564
+    mergedPR: 569
     openPR: 211
-    closedIssue: 188
+    closedIssue: 186
     openIssue: 114
-    commit: 978
+    commit: 982
   last720d:
-    since: 2024-11-05
+    since: 2024-11-06
     release: 58
-    mergedPR: 1089
+    mergedPR: 1094
     openPR: 213
     closedIssue: 549
     openIssue: 140
-    commit: 2315
+    commit: 2316
 total:
   release: 257
-  mergedPR: 4830
+  mergedPR: 4836
   openPR: 220
   closedIssue: 8263
   openIssue: 264
-  commit: 10020
+  commit: 10024
 ---
 path: /home/runner/.x-repo/github.com/helm/helm
-collectedAt: 2026-10-26T05:43:09Z
+collectedAt: 2026-10-27T06:14:18Z
 loc:
   Go:
-    code: 81488
+    code: 81420
     comments: 16859
     blanks: 13383
     files: 560
@@ -148,24 +148,20 @@ loc:
     blanks: 173
     files: 267
 total:
-  code: 92466
+  code: 92398
   comments: 22254
   blanks: 14987
   files: 1748
 ---
-date: "2026-10-26T00:20:10Z"
+date: "2026-10-26T22:29:35Z"
 repo:
   name: github.com/helm/helm
-  commit: 86612766c6fb617eabd73167832bd46c91390b04
+  commit: 952508d1244dd39aa96bda06362464637ce40934
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 9.2
 checks:
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
   - name: Security-Policy
     score: 9
     reason: security policy file detected
@@ -178,10 +174,15 @@ checks:
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
-  - name: Dangerous-Workflow
+  - name: Code-Review
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: all changesets reviewed
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Dependency-Update-Tool
     score: 10
     reason: update tool detected
@@ -204,6 +205,10 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecards.yml:14'
       - 'Info: found token with ''none'' permissions: .github/workflows/stale.yaml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -214,21 +219,16 @@ checks:
     details:
       - 'Info:  23 out of  23 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   6 out of   6 third-party GitHubAction dependencies pinned'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: CII-Best-Practices
+    score: 5
+    reason: 'badge detected: Passing'
+    details: null
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: CII-Best-Practices
-    score: 5
-    reason: 'badge detected: Passing'
-    details: null
   - name: Vulnerabilities
     score: 9
     reason: 1 existing vulnerabilities detected
@@ -280,7 +280,7 @@ checks:
       - 'Info: PRs are required in order to make changes on branch ''main'''
   - name: CI-Tests
     score: 10
-    reason: 27 out of 27 merged PRs checked by a CI test -- score normalized to 10
+    reason: 28 out of 28 merged PRs checked by a CI test -- score normalized to 10
     details: null
   - name: Contributors
     score: 10

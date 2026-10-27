@@ -7,7 +7,7 @@ about:
   latestVersion: "early-access"
   latestRelease: "v0.142.0"
   latestPrerelease: "early-access"
-  collectedAt: 2026-10-26T06:05:19Z
+  collectedAt: 2026-10-27T06:25:57Z
 timeline:
   created: 2019-12-24
   lastCommit: 2026-10-26
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-22
   lastPrerelease: 2026-10-26
 popularity:
-  star: 1880
+  star: 1881
   watcher: 24
   fork: 214
   release: 248
@@ -37,7 +37,7 @@ language:
 totalBytes: 1703522
 recent:
   last30d:
-    since: 2026-09-26
+    since: 2026-09-27
     release: 1
     mergedPR: 5
     openPR: 9
@@ -45,7 +45,7 @@ recent:
     openIssue: 3
     commit: 8
   last60d:
-    since: 2026-08-27
+    since: 2026-08-28
     release: 2
     mergedPR: 8
     openPR: 18
@@ -53,15 +53,15 @@ recent:
     openIssue: 5
     commit: 11
   last90d:
-    since: 2026-07-28
+    since: 2026-07-29
     release: 2
-    mergedPR: 15
+    mergedPR: 14
     openPR: 25
     closedIssue: 2
     openIssue: 9
     commit: 19
   last180d:
-    since: 2026-04-29
+    since: 2026-04-30
     release: 6
     mergedPR: 92
     openPR: 48
@@ -69,7 +69,7 @@ recent:
     openIssue: 31
     commit: 128
   last360d:
-    since: 2025-10-31
+    since: 2025-11-01
     release: 13
     mergedPR: 145
     openPR: 53
@@ -77,7 +77,7 @@ recent:
     openIssue: 66
     commit: 222
   last720d:
-    since: 2024-11-05
+    since: 2024-11-06
     release: 37
     mergedPR: 326
     openPR: 58
@@ -93,7 +93,7 @@ total:
   commit: 2371
 ---
 path: /home/runner/.x-repo/github.com/jbangdev/jbang
-collectedAt: 2026-10-26T06:05:20Z
+collectedAt: 2026-10-27T06:25:59Z
 loc:
   Java:
     code: 38309
@@ -201,10 +201,10 @@ total:
   blanks: 11907
   files: 598
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/jbangdev/jbang
-  commit: 352052182d6673fedc8954fe77629c3e84ad8f9b
+  commit: 9ce399eba7f363fa09b34aa9d8b7994800636c3f
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
@@ -212,15 +212,11 @@ score: 6.1
 checks:
   - name: Code-Review
     score: 3
-    reason: Found 11/28 approved changesets -- score normalized to 3
+    reason: Found 10/28 approved changesets -- score normalized to 3
     details: null
   - name: Maintained
     score: 10
-    reason: 22 commit(s) and 10 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Pinned-Dependencies
-    score: -1
-    reason: 'internal error: internal error: invalid Dockerfile: LABEL must have two arguments'
+    reason: 24 commit(s) and 10 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Dangerous-Workflow
     score: 10
@@ -232,6 +228,10 @@ checks:
     details:
       - 'Warn: binary detected: gradle/wrapper/gradle-wrapper.jar:1'
       - 'Warn: binary detected: itests/hellojar.jar:1'
+  - name: Pinned-Dependencies
+    score: -1
+    reason: 'internal error: internal error: invalid Dockerfile: LABEL must have two arguments'
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -255,17 +255,17 @@ checks:
     score: 2
     reason: 'badge detected: InProgress'
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
@@ -278,6 +278,11 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/publish-packages.yml:116'
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -287,16 +292,11 @@ checks:
       - 'Info: signed release artifact: checksums_sha256.txt.asc: https://github.com/jbangdev/jbang/releases/tag/v0.141.0'
       - 'Info: signed release artifact: checksums_sha256.txt.asc: https://github.com/jbangdev/jbang/releases/tag/v0.140.1'
       - 'Info: signed release artifact: checksums_sha256.txt.asc: https://github.com/jbangdev/jbang/releases/tag/v0.139.3'
-      - 'Warn: release artifact early-access does not have provenance: https://api.github.com/repos/jbangdev/jbang/releases/416319321'
+      - 'Warn: release artifact early-access does not have provenance: https://api.github.com/repos/jbangdev/jbang/releases/423769128'
       - 'Warn: release artifact v0.142.0 does not have provenance: https://api.github.com/repos/jbangdev/jbang/releases/393964017'
       - 'Warn: release artifact v0.141.0 does not have provenance: https://api.github.com/repos/jbangdev/jbang/releases/353474491'
       - 'Warn: release artifact v0.140.1 does not have provenance: https://api.github.com/repos/jbangdev/jbang/releases/352556797'
       - 'Warn: release artifact v0.139.3 does not have provenance: https://api.github.com/repos/jbangdev/jbang/releases/342368470'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/publish-packages.yml:116'
   - name: SAST
     score: 9
     reason: SAST tool detected but not run on all commits

@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.0.1"
   latestRelease: "v1.0.1"
   latestPrerelease: "v0.24"
-  collectedAt: 2026-10-26T05:10:06Z
+  collectedAt: 2026-10-27T05:42:21Z
 timeline:
   created: 2018-12-08
   lastCommit: 2026-05-11
@@ -32,7 +32,7 @@ language:
 totalBytes: 173751
 recent:
   last30d:
-    since: 2026-09-26
+    since: 2026-09-27
     release: 0
     mergedPR: 0
     openPR: 0
@@ -40,7 +40,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-27
+    since: 2026-08-28
     release: 0
     mergedPR: 0
     openPR: 0
@@ -48,7 +48,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-07-28
+    since: 2026-07-29
     release: 0
     mergedPR: 0
     openPR: 0
@@ -56,7 +56,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-04-29
+    since: 2026-04-30
     release: 0
     mergedPR: 2
     openPR: 2
@@ -64,7 +64,7 @@ recent:
     openIssue: 2
     commit: 1
   last360d:
-    since: 2025-10-31
+    since: 2025-11-01
     release: 2
     mergedPR: 8
     openPR: 2
@@ -72,7 +72,7 @@ recent:
     openIssue: 2
     commit: 12
   last720d:
-    since: 2024-11-05
+    since: 2024-11-06
     release: 4
     mergedPR: 24
     openPR: 2
@@ -88,7 +88,7 @@ total:
   commit: 990
 ---
 path: /home/runner/.x-repo/github.com/naggie/dstask
-collectedAt: 2026-10-26T05:10:07Z
+collectedAt: 2026-10-27T05:42:23Z
 loc:
   Go:
     code: 4997
@@ -141,7 +141,7 @@ total:
   blanks: 1544
   files: 60
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/naggie/dstask
   commit: cdfd902d8439ba750d4425dc403e1f74b7e7c024
@@ -158,13 +158,13 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Code-Review
     score: 6
     reason: Found 11/16 approved changesets -- score normalized to 6
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -201,22 +201,26 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:11'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -231,10 +235,6 @@ checks:
       - 'Warn: release artifact 0.28 does not have provenance: https://api.github.com/repos/naggie/dstask/releases/252931246'
       - 'Warn: release artifact 0.27 does not have provenance: https://api.github.com/repos/naggie/dstask/releases/192022329'
       - 'Warn: release artifact v0.26.0 does not have provenance: https://api.github.com/repos/naggie/dstask/releases/82171710'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

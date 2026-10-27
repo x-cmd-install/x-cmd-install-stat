@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.74.5"
   latestRelease: "v0.74.5"
   latestPrerelease: ""
-  collectedAt: 2026-10-26T05:16:53Z
+  collectedAt: 2026-10-27T05:47:15Z
 timeline:
   created: 2013-10-23
   lastCommit: 2026-10-25
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-10-11
   lastPrerelease: 
 popularity:
-  star: 83790
+  star: 83812
   watcher: 445
-  fork: 4688
+  fork: 4709
   release: 86
   contributor: 329
   pullRequest: 1220
@@ -35,31 +35,31 @@ language:
 totalBytes: 1481172
 recent:
   last30d:
-    since: 2026-09-26
+    since: 2026-09-27
     release: 1
-    mergedPR: 5
+    mergedPR: 4
     openPR: 1
     closedIssue: 8
     openIssue: 2
     commit: 18
   last60d:
-    since: 2026-08-27
+    since: 2026-08-28
     release: 2
     mergedPR: 12
     openPR: 1
-    closedIssue: 17
+    closedIssue: 16
     openIssue: 8
     commit: 34
   last90d:
-    since: 2026-07-28
+    since: 2026-07-29
     release: 4
     mergedPR: 18
     openPR: 2
-    closedIssue: 27
+    closedIssue: 26
     openIssue: 13
     commit: 58
   last180d:
-    since: 2026-04-29
+    since: 2026-04-30
     release: 8
     mergedPR: 43
     openPR: 2
@@ -67,7 +67,7 @@ recent:
     openIssue: 28
     commit: 156
   last360d:
-    since: 2025-10-31
+    since: 2025-11-01
     release: 13
     mergedPR: 87
     openPR: 9
@@ -75,7 +75,7 @@ recent:
     openIssue: 55
     commit: 342
   last720d:
-    since: 2024-11-05
+    since: 2024-11-06
     release: 35
     mergedPR: 182
     openPR: 14
@@ -91,7 +91,7 @@ total:
   commit: 3766
 ---
 path: /home/runner/.x-repo/github.com/junegunn/fzf
-collectedAt: 2026-10-26T05:16:57Z
+collectedAt: 2026-10-27T05:47:19Z
 loc:
   Go:
     code: 29019
@@ -169,26 +169,26 @@ total:
   blanks: 5112
   files: 132
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/junegunn/fzf
-  commit: 55c122f1a0e1340546c8709682bea5561fe0e8fd
+  commit: 26ff936df038b6a62ec42cf18db27b2ea2bb8ec3
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 6.5
 checks:
-  - name: Dangerous-Workflow
+  - name: Maintained
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: 30 commit(s) and 15 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Code-Review
     score: 1
-    reason: Found 4/30 approved changesets -- score normalized to 1
+    reason: Found 3/28 approved changesets -- score normalized to 1
     details: null
-  - name: Maintained
+  - name: Dangerous-Workflow
     score: 10
-    reason: 30 commit(s) and 17 issue activity found in the last 90 days -- score normalized to 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Security-Policy
     score: 10
@@ -206,8 +206,8 @@ checks:
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:18'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:17'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:18'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:12'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/depsreview.yaml:5'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/labeler.yml:8'
@@ -230,12 +230,6 @@ checks:
       - 'Info: GoBuiltInFuzzer integration found: src/algo/indexbyte2_test.go:145'
       - 'Info: GoBuiltInFuzzer integration found: src/algo/indexbyte2_test.go:158'
       - 'Info: GoBuiltInFuzzer integration found: src/algo/runeprefilter_test.go:400'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
@@ -261,15 +255,16 @@ checks:
       - 'Info:   4 out of   5 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   1 out of   1 goCommand dependencies pinned'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:18'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -284,10 +279,15 @@ checks:
       - 'Warn: release artifact v0.74.3 does not have provenance: https://api.github.com/repos/junegunn/fzf/releases/371507048'
       - 'Warn: release artifact v0.74.2 does not have provenance: https://api.github.com/repos/junegunn/fzf/releases/363380613'
       - 'Warn: release artifact v0.74.1 does not have provenance: https://api.github.com/repos/junegunn/fzf/releases/356101296'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:18'
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits
     details:
       - 'Info: SAST configuration detected: CodeQL'
-      - 'Info: all commits (12) are checked with a SAST tool'
+      - 'Info: all commits (11) are checked with a SAST tool'
 ---

@@ -2,25 +2,25 @@ about:
   description: "Command-line Git information tool"
   license: MIT
   homepage: https://onefetch.dev
-  head: a459b5c
+  head: 56fe369
   archived: false
   latestVersion: "3.1.0"
   latestRelease: "3.1.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-26T04:47:15Z
+  collectedAt: 2026-10-27T05:05:51Z
 timeline:
   created: 2018-09-14
-  lastCommit: 2026-10-25
+  lastCommit: 2026-10-26
   lastVersion: 2026-10-18
   lastRelease: 2026-10-18
   lastPrerelease: 
 popularity:
-  star: 12074
+  star: 12078
   watcher: 36
-  fork: 334
+  fork: 335
   release: 60
   contributor: 157
-  pullRequest: 1526
+  pullRequest: 1529
   issue: 354
 language:
   Rust: 196460
@@ -29,63 +29,63 @@ language:
 totalBytes: 197734
 recent:
   last30d:
-    since: 2026-09-26
+    since: 2026-09-27
     release: 2
-    mergedPR: 25
-    openPR: 8
+    mergedPR: 26
+    openPR: 10
     closedIssue: 0
     openIssue: 0
-    commit: 33
+    commit: 34
   last60d:
-    since: 2026-08-27
+    since: 2026-08-28
     release: 4
     mergedPR: 43
-    openPR: 9
+    openPR: 11
     closedIssue: 0
     openIssue: 1
-    commit: 56
+    commit: 57
   last90d:
-    since: 2026-07-28
+    since: 2026-07-29
     release: 4
-    mergedPR: 60
-    openPR: 10
+    mergedPR: 61
+    openPR: 12
     closedIssue: 2
     openIssue: 3
-    commit: 87
+    commit: 88
   last180d:
-    since: 2026-04-29
+    since: 2026-04-30
     release: 4
-    mergedPR: 98
-    openPR: 13
+    mergedPR: 99
+    openPR: 15
     closedIssue: 6
     openIssue: 6
-    commit: 140
+    commit: 141
   last360d:
-    since: 2025-10-31
+    since: 2025-11-01
     release: 8
     mergedPR: 170
-    openPR: 19
+    openPR: 21
     closedIssue: 12
     openIssue: 11
-    commit: 314
+    commit: 315
   last720d:
-    since: 2024-11-05
+    since: 2024-11-06
     release: 12
-    mergedPR: 259
-    openPR: 20
+    mergedPR: 260
+    openPR: 22
     closedIssue: 23
-    openIssue: 19
-    commit: 489
+    openIssue: 18
+    commit: 490
 total:
   release: 60
-  mergedPR: 1143
-  openPR: 25
+  mergedPR: 1144
+  openPR: 27
   closedIssue: 315
   openIssue: 39
-  commit: 3016
+  commit: 3017
 ---
 path: /home/runner/.x-repo/github.com/o2sh/onefetch
-collectedAt: 2026-10-26T04:47:17Z
+collectedAt: 2026-10-27T05:05:57Z
 loc:
   Rust:
     code: 5614
@@ -143,10 +143,10 @@ total:
   blanks: 1228
   files: 103
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/o2sh/onefetch
-  commit: aeb7a35afe03bfce637396fb65b6ddd4ea30e0b7
+  commit: 56fe369c47edc529057563e0947ea62f0576afdc
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
@@ -154,7 +154,7 @@ score: 4
 checks:
   - name: Code-Review
     score: 0
-    reason: Found 2/24 approved changesets -- score normalized to 0
+    reason: Found 2/25 approved changesets -- score normalized to 0
     details: null
   - name: Maintained
     score: 10
@@ -218,18 +218,11 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
     details:
-      - 'Warn: release artifact 3.1.0 not signed: https://api.github.com/repos/o2sh/onefetch/releases/416696773'
-      - 'Warn: release artifact 3.0.0 not signed: https://api.github.com/repos/o2sh/onefetch/releases/405146146'
-      - 'Warn: release artifact 2.28.1 not signed: https://api.github.com/repos/o2sh/onefetch/releases/379261050'
-      - 'Warn: release artifact 2.27.1 not signed: https://api.github.com/repos/o2sh/onefetch/releases/298888305'
-      - 'Warn: release artifact 3.1.0 does not have provenance: https://api.github.com/repos/o2sh/onefetch/releases/416696773'
-      - 'Warn: release artifact 3.0.0 does not have provenance: https://api.github.com/repos/o2sh/onefetch/releases/405146146'
-      - 'Warn: release artifact 2.28.1 does not have provenance: https://api.github.com/repos/o2sh/onefetch/releases/379261050'
-      - 'Warn: release artifact 2.27.1 does not have provenance: https://api.github.com/repos/o2sh/onefetch/releases/298888305'
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/cd.yml:63'
   - name: Branch-Protection
     score: 1
     reason: branch protection is not maximal on development and all release branches
@@ -244,11 +237,18 @@ checks:
       - 'Warn: ''up-to-date branches'' is disabled on branch ''main'''
       - 'Info: status check found to merge onto on branch ''main'''
       - 'Info: PRs are required in order to make changes on branch ''main'''
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/cd.yml:63'
+      - 'Warn: release artifact 3.1.0 not signed: https://api.github.com/repos/o2sh/onefetch/releases/416696773'
+      - 'Warn: release artifact 3.0.0 not signed: https://api.github.com/repos/o2sh/onefetch/releases/405146146'
+      - 'Warn: release artifact 2.28.1 not signed: https://api.github.com/repos/o2sh/onefetch/releases/379261050'
+      - 'Warn: release artifact 2.27.1 not signed: https://api.github.com/repos/o2sh/onefetch/releases/298888305'
+      - 'Warn: release artifact 3.1.0 does not have provenance: https://api.github.com/repos/o2sh/onefetch/releases/416696773'
+      - 'Warn: release artifact 3.0.0 does not have provenance: https://api.github.com/repos/o2sh/onefetch/releases/405146146'
+      - 'Warn: release artifact 2.28.1 does not have provenance: https://api.github.com/repos/o2sh/onefetch/releases/379261050'
+      - 'Warn: release artifact 2.27.1 does not have provenance: https://api.github.com/repos/o2sh/onefetch/releases/298888305'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

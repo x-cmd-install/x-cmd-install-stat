@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.2.5"
   latestRelease: "v0.2.5"
   latestPrerelease: ""
-  collectedAt: 2026-10-26T05:43:02Z
+  collectedAt: 2026-10-27T06:06:29Z
 timeline:
   created: 2026-09-24
   lastCommit: 2026-10-22
@@ -29,7 +29,7 @@ language:
 totalBytes: 473179
 recent:
   last30d:
-    since: 2026-09-26
+    since: 2026-09-27
     release: 6
     mergedPR: 0
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 2
     commit: 49
   last60d:
-    since: 2026-08-27
+    since: 2026-08-28
     release: 6
     mergedPR: 0
     openPR: 0
@@ -45,7 +45,7 @@ recent:
     openIssue: 2
     commit: 50
   last90d:
-    since: 2026-07-28
+    since: 2026-07-29
     release: 6
     mergedPR: 0
     openPR: 0
@@ -53,7 +53,7 @@ recent:
     openIssue: 2
     commit: 50
   last180d:
-    since: 2026-04-29
+    since: 2026-04-30
     release: 6
     mergedPR: 0
     openPR: 0
@@ -61,7 +61,7 @@ recent:
     openIssue: 2
     commit: 50
   last360d:
-    since: 2025-10-31
+    since: 2025-11-01
     release: 6
     mergedPR: 0
     openPR: 0
@@ -69,7 +69,7 @@ recent:
     openIssue: 2
     commit: 50
   last720d:
-    since: 2024-11-05
+    since: 2024-11-06
     release: 6
     mergedPR: 0
     openPR: 0
@@ -85,7 +85,7 @@ total:
   commit: 50
 ---
 path: /home/runner/.x-repo/github.com/x-cmd/draw
-collectedAt: 2026-10-26T05:43:02Z
+collectedAt: 2026-10-27T06:06:30Z
 loc:
   TypeScript:
     code: 15753
@@ -128,7 +128,7 @@ total:
   blanks: 6868
   files: 398
 ---
-date: "2026-10-24T15:02:35Z"
+date: "2026-10-26T08:06:33Z"
 repo:
   name: github.com/x-cmd/draw
   commit: 62e12e36fd6310b13bb9844d43cca40fdbb52e05
@@ -137,20 +137,20 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 5.2
 checks:
-  - name: Code-Review
-    score: 0
-    reason: Found 0/30 approved changesets -- score normalized to 0
+  - name: CI-Tests
+    score: -1
+    reason: no pull request found
     details: null
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Maintained
     score: 0
     reason: project was created within the last 90 days. Please review its contents carefully
@@ -164,35 +164,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Token-Permissions
-    score: 9
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:19'
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/publish.yml:16'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/publish.yml:54'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/ci.yml:10'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/codeql.yml:11'
-      - 'Warn: no topLevel permission defined: .github/workflows/publish.yml:1'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:16'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: CI-Tests
-    score: -1
-    reason: no pull request found
-    details: null
-  - name: SAST
-    score: 10
-    reason: 'SAST tool detected: CodeQL'
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: no pull requests merged into dev branch'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Pinned-Dependencies
     score: 3
     reason: dependency not pinned by hash detected -- score normalized to 3
@@ -213,16 +184,39 @@ checks:
       - 'Info:   0 out of  10 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
       - 'Info:   3 out of   4 npmCommand dependencies pinned'
+  - name: SAST
+    score: 10
+    reason: 'SAST tool detected: CodeQL'
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: no pull requests merged into dev branch'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Code-Review
+    score: 0
+    reason: Found 0/30 approved changesets -- score normalized to 0
+    details: null
+  - name: Token-Permissions
+    score: 9
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:19'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/publish.yml:16'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/publish.yml:54'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/ci.yml:10'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/codeql.yml:11'
+      - 'Warn: no topLevel permission defined: .github/workflows/publish.yml:1'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:16'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Vulnerabilities
     score: 0
     reason: 24 existing vulnerabilities detected
@@ -251,20 +245,26 @@ checks:
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-9jrq-w75r-8gcw'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-r825-w8mm-5pxw'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-rq7h-c2jc-7f22'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''main'''
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Contributors
     score: 3
     reason: project has 1 contributing companies or organizations -- score normalized to 3

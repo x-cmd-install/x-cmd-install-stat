@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.16.4"
   latestRelease: "v2.16.4"
   latestPrerelease: "v2.0.0-rc.0"
-  collectedAt: 2026-10-26T05:56:02Z
+  collectedAt: 2026-10-27T06:24:49Z
 timeline:
   created: 2017-08-07
   lastCommit: 2026-02-02
@@ -17,7 +17,7 @@ timeline:
 popularity:
   star: 44005
   watcher: 441
-  fork: 2319
+  fork: 2335
   release: 52
   contributor: 413
   pullRequest: 3450
@@ -47,15 +47,15 @@ language:
 totalBytes: 5295448
 recent:
   last30d:
-    since: 2026-09-26
+    since: 2026-09-27
     release: 0
     mergedPR: 0
-    openPR: 5
+    openPR: 4
     closedIssue: 0
     openIssue: 2
     commit: 0
   last60d:
-    since: 2026-08-27
+    since: 2026-08-28
     release: 0
     mergedPR: 0
     openPR: 12
@@ -63,7 +63,7 @@ recent:
     openIssue: 3
     commit: 0
   last90d:
-    since: 2026-07-28
+    since: 2026-07-29
     release: 0
     mergedPR: 0
     openPR: 16
@@ -71,7 +71,7 @@ recent:
     openIssue: 4
     commit: 0
   last180d:
-    since: 2026-04-29
+    since: 2026-04-30
     release: 0
     mergedPR: 0
     openPR: 32
@@ -79,7 +79,7 @@ recent:
     openIssue: 14
     commit: 0
   last360d:
-    since: 2025-10-31
+    since: 2025-11-01
     release: 3
     mergedPR: 6
     openPR: 54
@@ -87,7 +87,7 @@ recent:
     openIssue: 22
     commit: 9
   last720d:
-    since: 2024-11-05
+    since: 2024-11-06
     release: 17
     mergedPR: 41
     openPR: 66
@@ -103,7 +103,7 @@ total:
   commit: 3499
 ---
 path: /home/runner/.x-repo/github.com/parcel-bundler/parcel
-collectedAt: 2026-10-26T05:56:12Z
+collectedAt: 2026-10-27T06:25:00Z
 loc:
   JavaScript:
     code: 143783
@@ -261,7 +261,7 @@ total:
   blanks: 21998
   files: 4692
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/parcel-bundler/parcel
   commit: 59484858a1a0bcbb71f74088956bb437a2db6505
@@ -274,6 +274,11 @@ checks:
     score: 1
     reason: Found 3/28 approved changesets -- score normalized to 1
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Maintained
     score: 1
     reason: 0 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 1
@@ -282,18 +287,13 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Warn: jobLevel ''deployments'' permission set to ''write'': .github/workflows/ci.yml:131'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/tag-release.yml:22'
       - 'Warn: jobLevel ''deployments'' permission set to ''write'': .github/workflows/tag-release.yml:23'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/tag-release.yml:22'
       - 'Warn: no topLevel permission defined: .github/workflows/canary-release.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:11'
       - 'Warn: no topLevel permission defined: .github/workflows/dev-release.yml:1'
@@ -304,11 +304,27 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Binary-Artifacts
+    score: 5
+    reason: binaries present in source code
+    details:
+      - 'Warn: binary detected: packages/core/integration-tests/test/integration/wasm-async/add.wasm:1'
+      - 'Warn: binary detected: packages/core/integration-tests/test/integration/wasm-dynamic/add.wasm:1'
+      - 'Warn: binary detected: packages/core/integration-tests/test/integration/wasm-sourcemap-transformer/index.wasm:1'
+      - 'Warn: binary detected: packages/core/integration-tests/test/integration/wasm-sync/add.wasm:1'
+      - 'Warn: binary detected: packages/core/integration-tests/test/integration/workers-with-other-loaders/add.wasm:1'
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:56: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/ci.yml/v2?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:68: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/ci.yml/v2?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:69: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/ci.yml/v2?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:73: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/ci.yml/v2?enable=pin'
@@ -332,9 +348,7 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:34: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/ci.yml/v2?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:44: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/ci.yml/v2?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:45: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/ci.yml/v2?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:171: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:174: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:176: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:56: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/ci.yml/v2?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:47: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:49: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:53: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
@@ -349,6 +363,9 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:143: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:151: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:158: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:171: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:174: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:176: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/release.yml/v2?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/stale.yml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/stale.yml/v2?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/tag-release.yml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/tag-release.yml/v2?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/tag-release.yml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/tag-release.yml/v2?enable=pin'
@@ -359,23 +376,6 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/tag-release.yml:76: update your workflow using https://app.stepsecurity.io/secureworkflow/parcel-bundler/parcel/tag-release.yml/v2?enable=pin'
       - 'Info:   0 out of  21 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of  28 third-party GitHubAction dependencies pinned'
-  - name: Binary-Artifacts
-    score: 5
-    reason: binaries present in source code
-    details:
-      - 'Warn: binary detected: packages/core/integration-tests/test/integration/wasm-async/add.wasm:1'
-      - 'Warn: binary detected: packages/core/integration-tests/test/integration/wasm-dynamic/add.wasm:1'
-      - 'Warn: binary detected: packages/core/integration-tests/test/integration/wasm-sourcemap-transformer/index.wasm:1'
-      - 'Warn: binary detected: packages/core/integration-tests/test/integration/wasm-sync/add.wasm:1'
-      - 'Warn: binary detected: packages/core/integration-tests/test/integration/workers-with-other-loaders/add.wasm:1'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: License
     score: 10
     reason: license file detected

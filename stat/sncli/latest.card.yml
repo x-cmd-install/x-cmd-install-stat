@@ -7,7 +7,7 @@ about:
   latestVersion: "0.4.2"
   latestRelease: "0.4.2"
   latestPrerelease: ""
-  collectedAt: 2026-10-26T05:02:24Z
+  collectedAt: 2026-10-27T05:21:43Z
 timeline:
   created: 2014-07-14
   lastCommit: 2025-06-01
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2023-02-24
   lastPrerelease: 
 popularity:
-  star: 433
+  star: 434
   watcher: 21
   fork: 40
   release: 4
@@ -28,7 +28,7 @@ language:
 totalBytes: 147040
 recent:
   last30d:
-    since: 2026-09-26
+    since: 2026-09-27
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-27
+    since: 2026-08-28
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-28
+    since: 2026-07-29
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-29
+    since: 2026-04-30
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-10-31
+    since: 2025-11-01
     release: 0
     mergedPR: 0
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-05
+    since: 2024-11-06
     release: 0
     mergedPR: 1
     openPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 311
 ---
 path: /home/runner/.x-repo/github.com/insanum/sncli
-collectedAt: 2026-10-26T05:02:29Z
+collectedAt: 2026-10-27T05:21:45Z
 loc:
   Python:
     code: 2990
@@ -127,7 +127,7 @@ total:
   blanks: 1112
   files: 31
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/insanum/sncli
   commit: befe46abf978e315472ade27e841c0a21fe6b467
@@ -136,6 +136,19 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 2.8
 checks:
+  - name: Code-Review
+    score: 7
+    reason: Found 11/14 approved changesets -- score normalized to 7
+    details: null
+  - name: Token-Permissions
+    score: -1
+    reason: No tokens found
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Dangerous-Workflow
     score: -1
     reason: no workflows found
@@ -144,22 +157,9 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Code-Review
-    score: 7
-    reason: Found 11/14 approved changesets -- score normalized to 7
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
-    details: null
-  - name: Token-Permissions
-    score: -1
-    reason: No tokens found
     details: null
   - name: Pinned-Dependencies
     score: 0
@@ -167,8 +167,8 @@ checks:
     details:
       - 'Warn: containerImage not pinned by hash: Dockerfile:4'
       - 'Warn: pipCommand not pinned by hash: Dockerfile:28'
-      - 'Info:   0 out of   1 pipCommand dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
+      - 'Info:   0 out of   1 pipCommand dependencies pinned'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -186,6 +186,12 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Signed-Releases
     score: -1
     reason: no releases found
@@ -195,12 +201,6 @@ checks:
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''master'''
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

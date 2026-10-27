@@ -7,7 +7,7 @@ about:
   latestVersion: "release-1.12.2"
   latestRelease: "release-1.12.2"
   latestPrerelease: "release-1.10.0-rc2"
-  collectedAt: 2026-10-26T05:33:50Z
+  collectedAt: 2026-10-27T05:53:21Z
 timeline:
   created: 2009-05-21
   lastCommit: 2026-10-14
@@ -45,15 +45,15 @@ language:
 totalBytes: 10156499
 recent:
   last30d:
-    since: 2026-09-26
+    since: 2026-09-27
     release: 0
     mergedPR: 1
-    openPR: 42
+    openPR: 38
     closedIssue: 0
     openIssue: 0
     commit: 1
   last60d:
-    since: 2026-08-27
+    since: 2026-08-28
     release: 0
     mergedPR: 4
     openPR: 55
@@ -61,23 +61,23 @@ recent:
     openIssue: 0
     commit: 3
   last90d:
-    since: 2026-07-28
+    since: 2026-07-29
     release: 1
     mergedPR: 26
-    openPR: 84
+    openPR: 81
     closedIssue: 0
     openIssue: 0
     commit: 31
   last180d:
-    since: 2026-04-29
+    since: 2026-04-30
     release: 1
-    mergedPR: 120
-    openPR: 118
+    mergedPR: 119
+    openPR: 117
     closedIssue: 0
     openIssue: 0
     commit: 121
   last360d:
-    since: 2025-10-31
+    since: 2025-11-01
     release: 1
     mergedPR: 290
     openPR: 132
@@ -85,7 +85,7 @@ recent:
     openIssue: 0
     commit: 281
   last720d:
-    since: 2024-11-05
+    since: 2024-11-06
     release: 1
     mergedPR: 521
     openPR: 147
@@ -101,7 +101,7 @@ total:
   commit: 5104
 ---
 path: /home/runner/.x-repo/github.com/apache/avro
-collectedAt: 2026-10-26T05:34:03Z
+collectedAt: 2026-10-27T05:53:34Z
 loc:
   Java:
     code: 98399
@@ -294,7 +294,7 @@ total:
   blanks: 45227
   files: 1772
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/apache/avro
   commit: 3a207fa6e87c535b95eafca4cf5a6ef524d77df2
@@ -314,6 +314,10 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -342,10 +346,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/test-lang-py.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/test-lang-ruby.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -356,6 +356,15 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE.txt:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE.txt:0'
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: OSSFuzz integration found'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Pinned-Dependencies
     score: 2
     reason: dependency not pinned by hash detected -- score normalized to 2
@@ -379,15 +388,6 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql-py-analysis.yml:64: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/codeql-py-analysis.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql-py-analysis.yml:76: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/codeql-py-analysis.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql-py-analysis.yml:86: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/codeql-py-analysis.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:138: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:141: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:154: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:167: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:177: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:180: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:191: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:201: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:214: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:226: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:237: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:243: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
@@ -404,6 +404,15 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:106: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:116: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:128: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:138: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:141: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:154: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:167: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:177: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:180: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:191: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:201: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/deploy-docs.yml:214: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/deploy-docs.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/java-publish-snapshot.yml:36: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/java-publish-snapshot.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/java-publish-snapshot.yml:39: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/java-publish-snapshot.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/java-publish-snapshot.yml:47: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/java-publish-snapshot.yml/main?enable=pin'
@@ -440,13 +449,13 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test-lang-java.yml:102: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/test-lang-java.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test-lang-java.yml:110: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/test-lang-java.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test-lang-java.yml:144: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/test-lang-java.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test-lang-js.yml:48: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/test-lang-js.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test-lang-js.yml:50: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/test-lang-js.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test-lang-js.yml:54: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/test-lang-js.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test-lang-js.yml:79: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/test-lang-js.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test-lang-js.yml:81: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/test-lang-js.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test-lang-js.yml:85: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/test-lang-js.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test-lang-js.yml:93: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/test-lang-js.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test-lang-js.yml:48: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/test-lang-js.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test-lang-js.yml:50: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/test-lang-js.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test-lang-js.yml:54: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/test-lang-js.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test-lang-perl.yml:46: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/test-lang-perl.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test-lang-perl.yml:48: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/test-lang-perl.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test-lang-perl.yml:84: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/avro/test-lang-perl.yml/main?enable=pin'
@@ -497,15 +506,6 @@ checks:
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   0 out of   9 downloadThenRun dependencies pinned'
       - 'Info:   1 out of   7 npmCommand dependencies pinned'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: OSSFuzz integration found'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected

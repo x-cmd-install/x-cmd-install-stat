@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-10-26T05:22:07Z
+  collectedAt: 2026-10-27T05:42:37Z
 timeline:
   created: 2014-01-18
   lastCommit: 2026-10-02
@@ -28,7 +28,7 @@ language:
 totalBytes: 14406
 recent:
   last30d:
-    since: 2026-09-26
+    since: 2026-09-27
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 2
   last60d:
-    since: 2026-08-27
+    since: 2026-08-28
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 4
   last90d:
-    since: 2026-07-28
+    since: 2026-07-29
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 4
   last180d:
-    since: 2026-04-29
+    since: 2026-04-30
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 4
   last360d:
-    since: 2025-10-31
+    since: 2025-11-01
     release: 0
     mergedPR: 0
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 4
   last720d:
-    since: 2024-11-05
+    since: 2024-11-06
     release: 0
     mergedPR: 0
     openPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 94
 ---
 path: /home/runner/.x-repo/github.com/kessler/node-bcat
-collectedAt: 2026-10-26T05:22:08Z
+collectedAt: 2026-10-27T05:42:37Z
 loc:
   Json:
     code: 3819
@@ -112,7 +112,7 @@ total:
   blanks: 71
   files: 9
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/kessler/node-bcat
   commit: b707ad6c7e29ad4ca2e15a0b6bb2e89464659ca9
@@ -121,18 +121,26 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.6
 checks:
+  - name: Code-Review
+    score: 0
+    reason: Found 1/27 approved changesets -- score normalized to 0
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
-    score: 3
-    reason: 4 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 3
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Maintained
+    score: 3
+    reason: 4 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 3
     details: null
   - name: Token-Permissions
     score: 0
@@ -140,10 +148,6 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/codeql-analysis.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Code-Review
-    score: 0
-    reason: Found 1/27 approved changesets -- score normalized to 0
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -153,14 +157,15 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql-analysis.yml:53: update your workflow using https://app.stepsecurity.io/secureworkflow/kessler/node-bcat/codeql-analysis.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql-analysis.yml:67: update your workflow using https://app.stepsecurity.io/secureworkflow/kessler/node-bcat/codeql-analysis.yml/master?enable=pin'
       - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -169,21 +174,16 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches

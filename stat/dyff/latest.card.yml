@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.12.0"
   latestRelease: "v1.12.0"
   latestPrerelease: "v0.4-alpha"
-  collectedAt: 2026-10-26T05:19:53Z
+  collectedAt: 2026-10-27T05:44:54Z
 timeline:
   created: 2018-03-09
   lastCommit: 2026-10-14
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-04-26
   lastPrerelease: 2018-04-20
 popularity:
-  star: 1899
+  star: 1900
   watcher: 10
   fork: 102
   release: 86
@@ -29,7 +29,7 @@ language:
 totalBytes: 220254
 recent:
   last30d:
-    since: 2026-09-26
+    since: 2026-09-27
     release: 0
     mergedPR: 9
     openPR: 1
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 8
   last60d:
-    since: 2026-08-27
+    since: 2026-08-28
     release: 0
     mergedPR: 20
     openPR: 3
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 19
   last90d:
-    since: 2026-07-28
+    since: 2026-07-29
     release: 0
     mergedPR: 27
     openPR: 3
@@ -53,15 +53,15 @@ recent:
     openIssue: 0
     commit: 27
   last180d:
-    since: 2026-04-29
+    since: 2026-04-30
     release: 0
-    mergedPR: 67
+    mergedPR: 66
     openPR: 6
     closedIssue: 1
     openIssue: 3
     commit: 65
   last360d:
-    since: 2025-10-31
+    since: 2025-11-01
     release: 9
     mergedPR: 127
     openPR: 8
@@ -69,7 +69,7 @@ recent:
     openIssue: 3
     commit: 128
   last720d:
-    since: 2024-11-05
+    since: 2024-11-06
     release: 14
     mergedPR: 220
     openPR: 15
@@ -85,7 +85,7 @@ total:
   commit: 1099
 ---
 path: /home/runner/.x-repo/github.com/homeport/dyff
-collectedAt: 2026-10-26T05:19:55Z
+collectedAt: 2026-10-27T05:44:56Z
 loc:
   Yaml:
     code: 5803
@@ -133,7 +133,7 @@ total:
   blanks: 1396
   files: 109
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/homeport/dyff
   commit: 8801e8ed76df99e67fd56c3ebdda8d058a5313a7
@@ -142,10 +142,6 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 5.4
 checks:
-  - name: Code-Review
-    score: -1
-    reason: Found no human activity in the last 15 changesets
-    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
@@ -153,6 +149,10 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Code-Review
+    score: -1
+    reason: Found no human activity in the last 15 changesets
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -192,12 +192,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -211,10 +205,12 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -229,14 +225,18 @@ checks:
       - 'Warn: release artifact v1.11.3 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/297954045'
       - 'Warn: release artifact v1.11.2 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/291814002'
       - 'Warn: release artifact v1.11.1 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/291772752'
-  - name: SAST
-    score: 10
-    reason: SAST tool is run on all commits
-    details:
-      - 'Info: all commits (30) are checked with a SAST tool'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:9'
+  - name: SAST
+    score: 10
+    reason: SAST tool is run on all commits
+    details:
+      - 'Info: all commits (30) are checked with a SAST tool'
 ---
