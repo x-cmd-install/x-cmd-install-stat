@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.35.0"
   latestRelease: "v1.35.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-27T05:15:37Z
+  collectedAt: 2026-10-28T05:49:29Z
 timeline:
   created: 2020-10-21
   lastCommit: 2026-10-25
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-10-22
   lastPrerelease: 
 popularity:
-  star: 4909
+  star: 4911
   watcher: 24
   fork: 180
   release: 28
@@ -31,7 +31,7 @@ language:
 totalBytes: 198780
 recent:
   last30d:
-    since: 2026-09-27
+    since: 2026-09-28
     release: 1
     mergedPR: 10
     openPR: 3
@@ -39,7 +39,7 @@ recent:
     openIssue: 2
     commit: 13
   last60d:
-    since: 2026-08-28
+    since: 2026-08-29
     release: 1
     mergedPR: 11
     openPR: 3
@@ -47,7 +47,7 @@ recent:
     openIssue: 2
     commit: 15
   last90d:
-    since: 2026-07-29
+    since: 2026-07-30
     release: 1
     mergedPR: 14
     openPR: 4
@@ -55,7 +55,7 @@ recent:
     openIssue: 2
     commit: 16
   last180d:
-    since: 2026-04-30
+    since: 2026-05-01
     release: 2
     mergedPR: 23
     openPR: 4
@@ -63,7 +63,7 @@ recent:
     openIssue: 2
     commit: 19
   last360d:
-    since: 2025-11-01
+    since: 2025-11-02
     release: 3
     mergedPR: 27
     openPR: 4
@@ -71,7 +71,7 @@ recent:
     openIssue: 3
     commit: 25
   last720d:
-    since: 2024-11-06
+    since: 2024-11-07
     release: 5
     mergedPR: 40
     openPR: 4
@@ -87,7 +87,7 @@ total:
   commit: 333
 ---
 path: /home/runner/.x-repo/github.com/stern/stern
-collectedAt: 2026-10-27T05:15:38Z
+collectedAt: 2026-10-28T05:49:29Z
 loc:
   Go:
     code: 6318
@@ -130,15 +130,19 @@ total:
   blanks: 993
   files: 50
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/stern/stern
-  commit: 477230646316297067206152283fc1d239382dac
+  commit: e79a65421a1ecd752a74b683037bf528a0567b94
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 4.7
+score: 4.8
 checks:
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -147,13 +151,9 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
   - name: Maintained
-    score: 9
-    reason: 9 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 9
+    score: 10
+    reason: 16 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Packaging
     score: -1
@@ -185,12 +185,6 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -201,10 +195,16 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yaml:12: update your workflow using https://app.stepsecurity.io/secureworkflow/stern/stern/release.yaml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yaml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/stern/stern/release.yaml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yaml:29: update your workflow using https://app.stepsecurity.io/secureworkflow/stern/stern/release.yaml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating gcr.io/distroless/static-debian13 to gcr.io/distroless/static-debian13@sha256:9e0130bec991f471279b70f1630ada11e46dad439ef2949544f96001225329fb'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating gcr.io/distroless/static-debian13 to gcr.io/distroless/static-debian13@sha256:15f8637509792e05b97d83451b0b6ccfa4abd548f997e406ac1e72c87fe1fa78'
       - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
@@ -213,16 +213,16 @@ checks:
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
+      - 'Warn: release artifact v1.35.0 not signed: https://api.github.com/repos/stern/stern/releases/420791471'
       - 'Warn: release artifact v1.34.0 not signed: https://api.github.com/repos/stern/stern/releases/316691032'
       - 'Warn: release artifact v1.33.1 not signed: https://api.github.com/repos/stern/stern/releases/259532449'
       - 'Warn: release artifact v1.33.0 not signed: https://api.github.com/repos/stern/stern/releases/245330163'
       - 'Warn: release artifact v1.32.0 not signed: https://api.github.com/repos/stern/stern/releases/195739576'
-      - 'Warn: release artifact v1.31.0 not signed: https://api.github.com/repos/stern/stern/releases/178640231'
+      - 'Warn: release artifact v1.35.0 does not have provenance: https://api.github.com/repos/stern/stern/releases/420791471'
       - 'Warn: release artifact v1.34.0 does not have provenance: https://api.github.com/repos/stern/stern/releases/316691032'
       - 'Warn: release artifact v1.33.1 does not have provenance: https://api.github.com/repos/stern/stern/releases/259532449'
       - 'Warn: release artifact v1.33.0 does not have provenance: https://api.github.com/repos/stern/stern/releases/245330163'
       - 'Warn: release artifact v1.32.0 does not have provenance: https://api.github.com/repos/stern/stern/releases/195739576'
-      - 'Warn: release artifact v1.31.0 does not have provenance: https://api.github.com/repos/stern/stern/releases/178640231'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

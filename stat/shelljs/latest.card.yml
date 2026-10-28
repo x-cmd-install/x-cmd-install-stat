@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.10.0"
   latestRelease: "v0.10.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-27T06:22:38Z
+  collectedAt: 2026-10-28T07:02:06Z
 timeline:
   created: 2012-03-02
   lastCommit: 2026-10-25
@@ -27,7 +27,7 @@ language:
 totalBytes: 362306
 recent:
   last30d:
-    since: 2026-09-27
+    since: 2026-09-28
     release: 0
     mergedPR: 3
     openPR: 15
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 5
   last60d:
-    since: 2026-08-28
+    since: 2026-08-29
     release: 0
     mergedPR: 4
     openPR: 20
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 5
   last90d:
-    since: 2026-07-29
+    since: 2026-07-30
     release: 0
     mergedPR: 4
     openPR: 21
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 5
   last180d:
-    since: 2026-04-30
+    since: 2026-05-01
     release: 0
     mergedPR: 7
     openPR: 25
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 7
   last360d:
-    since: 2025-11-01
+    since: 2025-11-02
     release: 0
     mergedPR: 21
     openPR: 27
@@ -67,7 +67,7 @@ recent:
     openIssue: 1
     commit: 21
   last720d:
-    since: 2024-11-06
+    since: 2024-11-07
     release: 4
     mergedPR: 57
     openPR: 27
@@ -83,7 +83,7 @@ total:
   commit: 905
 ---
 path: /home/runner/.x-repo/github.com/shelljs/shelljs
-collectedAt: 2026-10-27T06:22:39Z
+collectedAt: 2026-10-28T07:02:07Z
 loc:
   JavaScript:
     code: 9080
@@ -111,32 +111,31 @@ total:
   blanks: 1987
   files: 103
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/shelljs/shelljs
-  commit: beb2b1f01a7f23b19a2c217cc37cb5369181dd93
+  commit: 060e8ac15aa32b1311db15c5e12cd64016637932
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.9
 checks:
-  - name: Code-Review
-    score: 4
-    reason: Found 9/22 approved changesets -- score normalized to 4
-    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
     details:
-      - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
-      - 'Info: no jobLevel write permissions found'
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Maintained
     score: 5
-    reason: 4 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 5
+    reason: 5 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 5
+    details: null
+  - name: Code-Review
+    score: 4
+    reason: Found 9/22 approved changesets -- score normalized to 4
     details: null
   - name: Security-Policy
     score: 10
@@ -146,11 +145,12 @@ checks:
       - 'Info: Found linked content: .github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: .github/SECURITY.md:1'
       - 'Info: Found text in security policy: .github/SECURITY.md:1'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
     details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+      - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -170,17 +170,17 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: BSD 3-Clause "New" or "Revised" License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: -1
     reason: no releases found

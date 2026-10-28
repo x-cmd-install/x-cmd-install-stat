@@ -7,7 +7,7 @@ about:
   latestVersion: "v4.0.0"
   latestRelease: "v4.0.0"
   latestPrerelease: "v4.0.0-beta6"
-  collectedAt: 2026-10-27T05:32:02Z
+  collectedAt: 2026-10-28T06:07:08Z
 timeline:
   created: 2020-04-13
   lastCommit: 2026-09-22
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-08-28
   lastPrerelease: 2026-07-23
 popularity:
-  star: 49572
+  star: 49576
   watcher: 212
-  fork: 1742
+  fork: 1761
   release: 35
   contributor: 467
-  pullRequest: 1862
-  issue: 1819
+  pullRequest: 1864
+  issue: 1820
 language:
   JavaScript: 2003877
   HTML: 152511
@@ -32,63 +32,63 @@ language:
 totalBytes: 2174829
 recent:
   last30d:
-    since: 2026-09-27
+    since: 2026-09-28
     release: 0
     mergedPR: 6
-    openPR: 29
-    closedIssue: 7
+    openPR: 30
+    closedIssue: 8
     openIssue: 13
     commit: 0
   last60d:
-    since: 2026-08-28
-    release: 3
+    since: 2026-08-29
+    release: 2
     mergedPR: 41
     openPR: 43
     closedIssue: 40
-    openIssue: 38
+    openIssue: 37
     commit: 45
   last90d:
-    since: 2026-07-29
+    since: 2026-07-30
     release: 3
-    mergedPR: 75
+    mergedPR: 71
     openPR: 43
-    closedIssue: 46
-    openIssue: 40
+    closedIssue: 48
+    openIssue: 39
     commit: 48
   last180d:
-    since: 2026-04-30
+    since: 2026-05-01
     release: 7
-    mergedPR: 148
+    mergedPR: 149
     openPR: 43
-    closedIssue: 76
-    openIssue: 48
+    closedIssue: 78
+    openIssue: 47
     commit: 65
   last360d:
-    since: 2025-11-01
+    since: 2025-11-02
     release: 8
-    mergedPR: 278
+    mergedPR: 279
     openPR: 45
-    closedIssue: 156
-    openIssue: 63
+    closedIssue: 158
+    openIssue: 62
     commit: 114
   last720d:
-    since: 2024-11-06
+    since: 2024-11-07
     release: 12
     mergedPR: 444
     openPR: 45
-    closedIssue: 282
-    openIssue: 126
+    closedIssue: 283
+    openIssue: 125
     commit: 458
 total:
   release: 35
-  mergedPR: 1262
+  mergedPR: 1263
   openPR: 47
-  closedIssue: 1558
-  openIssue: 261
+  closedIssue: 1560
+  openIssue: 260
   commit: 3607
 ---
 path: /home/runner/.x-repo/github.com/bigskysoftware/htmx
-collectedAt: 2026-10-27T05:32:11Z
+collectedAt: 2026-10-28T06:07:22Z
 loc:
   JavaScript:
     code: 92973
@@ -151,7 +151,7 @@ total:
   blanks: 19627
   files: 562
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/bigskysoftware/htmx
   commit: fa978b24e75fb03c137bf2cdae4fef0e711cf8a1
@@ -160,19 +160,25 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 5.2
 checks:
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Code-Review
     score: 5
     reason: Found 15/30 approved changesets -- score normalized to 5
     details: null
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 13 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 14 issue activity found in the last 90 days -- score normalized to 10
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
     details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -185,12 +191,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -213,11 +213,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
@@ -236,6 +231,11 @@ checks:
       - 'Warn: release artifact v4.0.0-beta5 does not have provenance: https://api.github.com/repos/bigskysoftware/htmx/releases/345469161'
       - 'Warn: release artifact v4.0.0-beta4 does not have provenance: https://api.github.com/repos/bigskysoftware/htmx/releases/328001892'
       - 'Warn: release artifact v4.0.0-beta3 does not have provenance: https://api.github.com/repos/bigskysoftware/htmx/releases/319699000'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

@@ -7,7 +7,7 @@ about:
   latestVersion: "cli-latest"
   latestRelease: "cli-latest"
   latestPrerelease: "python-v0.6.1-rc3"
-  collectedAt: 2026-10-27T06:33:05Z
+  collectedAt: 2026-10-28T07:06:24Z
 timeline:
   created: 2023-08-22
   lastCommit: 2026-10-23
@@ -17,10 +17,10 @@ timeline:
 popularity:
   star: 18747
   watcher: 71
-  fork: 1186
+  fork: 1189
   release: 15
   contributor: 54
-  pullRequest: 895
+  pullRequest: 897
   issue: 659
 language:
   Rust: 968819
@@ -65,63 +65,63 @@ language:
 totalBytes: 1655345
 recent:
   last30d:
-    since: 2026-09-27
+    since: 2026-09-28
     release: 0
-    mergedPR: 34
-    openPR: 5
+    mergedPR: 33
+    openPR: 6
     closedIssue: 9
     openIssue: 6
     commit: 28
   last60d:
-    since: 2026-08-28
+    since: 2026-08-29
     release: 0
     mergedPR: 66
-    openPR: 13
+    openPR: 14
     closedIssue: 17
     openIssue: 14
     commit: 93
   last90d:
-    since: 2026-07-29
+    since: 2026-07-30
     release: 0
     mergedPR: 72
-    openPR: 19
+    openPR: 20
     closedIssue: 17
-    openIssue: 19
+    openIssue: 18
     commit: 98
   last180d:
-    since: 2026-04-30
+    since: 2026-05-01
     release: 0
-    mergedPR: 85
-    openPR: 32
+    mergedPR: 84
+    openPR: 31
     closedIssue: 19
     openIssue: 23
     commit: 115
   last360d:
-    since: 2025-11-01
+    since: 2025-11-02
     release: 4
-    mergedPR: 142
-    openPR: 45
-    closedIssue: 45
-    openIssue: 49
+    mergedPR: 141
+    openPR: 46
+    closedIssue: 46
+    openIssue: 48
     commit: 183
   last720d:
-    since: 2024-11-06
+    since: 2024-11-07
     release: 15
     mergedPR: 352
-    openPR: 47
-    closedIssue: 147
-    openIssue: 80
-    commit: 958
+    openPR: 48
+    closedIssue: 148
+    openIssue: 79
+    commit: 957
 total:
   release: 15
   mergedPR: 570
-  openPR: 47
-  closedIssue: 534
-  openIssue: 125
+  openPR: 48
+  closedIssue: 535
+  openIssue: 124
   commit: 1894
 ---
 path: /home/runner/.x-repo/github.com/google/magika
-collectedAt: 2026-10-27T06:33:17Z
+collectedAt: 2026-10-28T07:06:32Z
 loc:
   Json:
     code: 30661
@@ -354,7 +354,7 @@ total:
   blanks: 5221
   files: 401
 ---
-date: "2026-10-23T14:04:25Z"
+date: "2026-10-27T21:46:07Z"
 repo:
   name: github.com/google/magika
   commit: 8d3d3b9b9452a65a6aa7752e061a67bf4a6b3c9b
@@ -365,8 +365,21 @@ score: 6.3
 checks:
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 24 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 25 issue activity found in the last 90 days -- score normalized to 10
     details: null
+  - name: Code-Review
+    score: 7
+    reason: Found 12/17 approved changesets -- score normalized to 7
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Security-Policy
     score: 9
     reason: security policy file detected
@@ -375,19 +388,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Code-Review
-    score: 7
-    reason: Found 12/17 approved changesets -- score normalized to 7
-    details: null
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Binary-Artifacts
     score: 0
     reason: binaries present in source code
@@ -434,21 +434,30 @@ checks:
     score: 5
     reason: 'badge detected: Passing'
     details: null
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
+  - name: License
+    score: 10
+    reason: license file detected
     details:
-      - 'Warn: release artifact cli/v1.1.0 not signed: https://api.github.com/repos/google/magika/releases/313265945'
-      - 'Warn: release artifact cli-latest not signed: https://api.github.com/repos/google/magika/releases/313267487'
-      - 'Warn: release artifact cli/v1.0.2 not signed: https://api.github.com/repos/google/magika/releases/290269834'
-      - 'Warn: release artifact cli/v1.1.0 does not have provenance: https://api.github.com/repos/google/magika/releases/313265945'
-      - 'Warn: release artifact cli-latest does not have provenance: https://api.github.com/repos/google/magika/releases/313267487'
-      - 'Warn: release artifact cli/v1.0.2 does not have provenance: https://api.github.com/repos/google/magika/releases/290269834'
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: TypeScriptPropertyBasedTesting integration found: js/test/magika.test.ts:27'
+      - 'Info: TypeScriptPropertyBasedTesting integration found: js/test/magika.test.ts:27'
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
     details:
       - 'Info: Possibly incomplete results: error parsing shell code: invalid parameter name: .github/workflows/cli-release.yml:79'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:59: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:69: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:85: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:123: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:138: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:152: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:169: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:186: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:191: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:198: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
@@ -459,17 +468,10 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:265: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:272: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:306: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:59: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:69: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:85: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:123: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:138: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:152: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cli-release.yml:169: update your workflow using https://app.stepsecurity.io/secureworkflow/google/magika/cli-release.yml/main?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:4: pin your Docker image by updating python:3.11-slim to python:3.11-slim@sha256:b7a9e5f6a93d6d4a31f129bbd4bdee69efccb6ded0fb230d78aafaf37af98377'
-      - 'Warn: containerImage not pinned by hash: go/docker/Dockerfile:11: pin your Docker image by updating golang:latest to golang:latest@sha256:f20d83a83e18dbd2a4714b8ffd4b30b287b6243962dd75608e86abcc63ba4efc'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:4: pin your Docker image by updating python:3.11-slim to python:3.11-slim@sha256:ae952e0a57138a4317b9b61caaa19a8217c2f356803f8d7e63aad08769950937'
+      - 'Warn: containerImage not pinned by hash: go/docker/Dockerfile:11: pin your Docker image by updating golang:latest to golang:latest@sha256:921f61120011c774a7b37fd80bd3c3d259636090d3cd002b6a344322a0328082'
       - 'Warn: containerImage not pinned by hash: go/docker/Dockerfile:55: pin your Docker image by updating debian:latest to debian:latest@sha256:4c25275446ca371766b8b093c696782eabce06263fccacb8d5d813b3dc44b308'
-      - 'Warn: containerImage not pinned by hash: tests_data/basic/dockerfile/Dockerfile:4: pin your Docker image by updating python:3.11-slim to python:3.11-slim@sha256:b7a9e5f6a93d6d4a31f129bbd4bdee69efccb6ded0fb230d78aafaf37af98377'
+      - 'Warn: containerImage not pinned by hash: tests_data/basic/dockerfile/Dockerfile:4: pin your Docker image by updating python:3.11-slim to python:3.11-slim@sha256:ae952e0a57138a4317b9b61caaa19a8217c2f356803f8d7e63aad08769950937'
       - 'Warn: pipCommand not pinned by hash: Dockerfile:16'
       - 'Warn: pipCommand not pinned by hash: tests_data/basic/dockerfile/Dockerfile:12'
       - 'Warn: downloadThenRun not pinned by hash: .github/workflows/cli-release.yml:68'
@@ -496,6 +498,30 @@ checks:
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/python-build-test-and-release-package.yml:458'
+  - name: Branch-Protection
+    score: 8
+    reason: branch protection is not maximal on development and all release branches
+    details:
+      - 'Info: ''allow deletion'' disabled on branch ''main'''
+      - 'Info: ''force pushes'' disabled on branch ''main'''
+      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''main'''
+      - 'Info: ''stale review dismissal'' is required to merge on branch ''main'''
+      - 'Warn: required approving review count is 1 on branch ''main'''
+      - 'Info: codeowner review is required on branch ''main'''
+      - 'Info: ''last push approval'' is required to merge on branch ''main'''
+      - 'Info: ''up-to-date branches'' is required to merge on branch ''main'''
+      - 'Info: status check found to merge onto on branch ''main'''
+      - 'Info: PRs are required in order to make changes on branch ''main'''
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact cli/v1.1.0 not signed: https://api.github.com/repos/google/magika/releases/313265945'
+      - 'Warn: release artifact cli-latest not signed: https://api.github.com/repos/google/magika/releases/313267487'
+      - 'Warn: release artifact cli/v1.0.2 not signed: https://api.github.com/repos/google/magika/releases/290269834'
+      - 'Warn: release artifact cli/v1.1.0 does not have provenance: https://api.github.com/repos/google/magika/releases/313265945'
+      - 'Warn: release artifact cli-latest does not have provenance: https://api.github.com/repos/google/magika/releases/313267487'
+      - 'Warn: release artifact cli/v1.0.2 does not have provenance: https://api.github.com/repos/google/magika/releases/290269834'
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits
@@ -504,7 +530,7 @@ checks:
       - 'Info: all commits (30) are checked with a SAST tool'
   - name: Vulnerabilities
     score: 0
-    reason: 90 existing vulnerabilities detected
+    reason: 92 existing vulnerabilities detected
     details:
       - 'Warn: Project is vulnerable to: GHSA-4x5r-pxfx-6jf8'
       - 'Warn: Project is vulnerable to: GHSA-968p-4wvh-cqc8'
@@ -527,6 +553,7 @@ checks:
       - 'Warn: Project is vulnerable to: GHSA-73wf-gq98-2v4g'
       - 'Warn: Project is vulnerable to: GHSA-c83g-rgw3-j3cx'
       - 'Warn: Project is vulnerable to: GHSA-3xgq-45jj-v275'
+      - 'Warn: Project is vulnerable to: GHSA-gcqx-w48m-w2h4'
       - 'Warn: Project is vulnerable to: GHSA-73rr-hh4g-fpgx'
       - 'Warn: Project is vulnerable to: GHSA-hmw2-7cc7-3qxx'
       - 'Warn: Project is vulnerable to: GHSA-2883-xcg3-v3hh'
@@ -593,35 +620,10 @@ checks:
       - 'Warn: Project is vulnerable to: GHSA-9jrq-w75r-8gcw'
       - 'Warn: Project is vulnerable to: GHSA-r825-w8mm-5pxw'
       - 'Warn: Project is vulnerable to: GHSA-rq7h-c2jc-7f22'
+      - 'Warn: Project is vulnerable to: GHSA-mrhx-c7xc-m3w5'
       - 'Warn: Project is vulnerable to: GHSA-g2v6-rqmx-r4w6'
       - 'Warn: Project is vulnerable to: GHSA-2g4f-4pwh-qvx6'
       - 'Warn: Project is vulnerable to: GHSA-w9m9-85wc-3x92'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: TypeScriptPropertyBasedTesting integration found: js/test/magika.test.ts:27'
-      - 'Info: TypeScriptPropertyBasedTesting integration found: js/test/magika.test.ts:27'
-  - name: Branch-Protection
-    score: 8
-    reason: branch protection is not maximal on development and all release branches
-    details:
-      - 'Info: ''allow deletion'' disabled on branch ''main'''
-      - 'Info: ''force pushes'' disabled on branch ''main'''
-      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''main'''
-      - 'Info: ''stale review dismissal'' is required to merge on branch ''main'''
-      - 'Warn: required approving review count is 1 on branch ''main'''
-      - 'Info: codeowner review is required on branch ''main'''
-      - 'Info: ''last push approval'' is required to merge on branch ''main'''
-      - 'Info: ''up-to-date branches'' is required to merge on branch ''main'''
-      - 'Info: status check found to merge onto on branch ''main'''
-      - 'Info: PRs are required in order to make changes on branch ''main'''
   - name: CI-Tests
     score: 10
     reason: 17 out of 17 merged PRs checked by a CI test -- score normalized to 10

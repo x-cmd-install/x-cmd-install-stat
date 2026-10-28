@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.14.0"
   latestRelease: "v1.14.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-27T02:58:38Z
+  collectedAt: 2026-10-28T03:09:01Z
 timeline:
   created: 2021-02-21
   lastCommit: 2026-07-27
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2025-12-06
   lastPrerelease: 
 popularity:
-  star: 2603
+  star: 2605
   watcher: 14
   fork: 259
   release: 35
@@ -28,7 +28,7 @@ language:
 totalBytes: 387556
 recent:
   last30d:
-    since: 2026-09-27
+    since: 2026-09-28
     release: 0
     mergedPR: 0
     openPR: 6
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-28
+    since: 2026-08-29
     release: 0
     mergedPR: 0
     openPR: 9
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-29
+    since: 2026-07-30
     release: 0
     mergedPR: 0
     openPR: 12
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-30
+    since: 2026-05-01
     release: 0
     mergedPR: 6
     openPR: 13
@@ -60,7 +60,7 @@ recent:
     openIssue: 1
     commit: 10
   last360d:
-    since: 2025-11-01
+    since: 2025-11-02
     release: 2
     mergedPR: 14
     openPR: 16
@@ -68,7 +68,7 @@ recent:
     openIssue: 11
     commit: 16
   last720d:
-    since: 2024-11-06
+    since: 2024-11-07
     release: 6
     mergedPR: 41
     openPR: 21
@@ -84,7 +84,7 @@ total:
   commit: 621
 ---
 path: /home/runner/.x-repo/github.com/python-lsp/python-lsp-server
-collectedAt: 2026-10-27T02:58:39Z
+collectedAt: 2026-10-28T03:09:02Z
 loc:
   Python:
     code: 9080
@@ -122,7 +122,7 @@ total:
   blanks: 2534
   files: 85
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/python-lsp/python-lsp-server
   commit: a3620069a607a63ed52569fde188e9301feae93a
@@ -135,10 +135,6 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -148,9 +144,13 @@ checks:
     score: 7
     reason: Found 22/30 approved changesets -- score normalized to 7
     details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Maintained
     score: 0
-    reason: 1 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Security-Policy
     score: 10
@@ -160,6 +160,16 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/static.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/test-linux.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/test-mac.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/test-win.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -191,31 +201,21 @@ checks:
       - 'Warn: pipCommand not pinned by hash: .github/workflows/test-mac.yml:46'
       - 'Info:   0 out of  15 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of  10 pipCommand dependencies pinned'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/static.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/test-linux.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/test-mac.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/test-win.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: -1
     reason: no releases found

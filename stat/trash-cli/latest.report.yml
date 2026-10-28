@@ -2,15 +2,15 @@ about:
   description: "Command line interface to the freedesktop.org trashcan."
   license: GPL-2.0
   homepage: 
-  head: 936cf5a
+  head: 3f7c93a
   archived: false
   latestVersion: "0.26.9.29"
   latestRelease: "0.26.9.29"
   latestPrerelease: ""
-  collectedAt: 2026-10-27T03:34:55Z
+  collectedAt: 2026-10-28T03:51:00Z
 timeline:
   created: 2011-11-09
-  lastCommit: 2026-10-25
+  lastCommit: 2026-10-27
   lastVersion: 2026-09-29
   lastRelease: 2026-09-29
   lastPrerelease: 
@@ -29,15 +29,15 @@ language:
 totalBytes: 622218
 recent:
   last30d:
-    since: 2026-09-27
+    since: 2026-09-28
     release: 1
-    mergedPR: 9
+    mergedPR: 8
     openPR: 4
     closedIssue: 0
     openIssue: 4
     commit: 138
   last60d:
-    since: 2026-08-28
+    since: 2026-08-29
     release: 2
     mergedPR: 10
     openPR: 4
@@ -45,15 +45,15 @@ recent:
     openIssue: 5
     commit: 293
   last90d:
-    since: 2026-07-29
+    since: 2026-07-30
     release: 2
     mergedPR: 10
     openPR: 4
-    closedIssue: 4
+    closedIssue: 3
     openIssue: 5
     commit: 297
   last180d:
-    since: 2026-04-30
+    since: 2026-05-01
     release: 2
     mergedPR: 22
     openPR: 5
@@ -61,7 +61,7 @@ recent:
     openIssue: 7
     commit: 361
   last360d:
-    since: 2025-11-01
+    since: 2025-11-02
     release: 2
     mergedPR: 23
     openPR: 5
@@ -69,23 +69,23 @@ recent:
     openIssue: 11
     commit: 363
   last720d:
-    since: 2024-11-06
+    since: 2024-11-07
     release: 2
     mergedPR: 27
     openPR: 5
     closedIssue: 11
     openIssue: 15
-    commit: 368
+    commit: 369
 total:
   release: 2
   mergedPR: 84
   openPR: 5
   closedIssue: 199
   openIssue: 75
-  commit: 2348
+  commit: 2349
 ---
 path: /home/runner/.x-repo/github.com/andreafrancia/trash-cli
-collectedAt: 2026-10-27T03:34:57Z
+collectedAt: 2026-10-28T03:51:02Z
 loc:
   Python:
     code: 13263
@@ -148,10 +148,10 @@ total:
   blanks: 4467
   files: 597
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/andreafrancia/trash-cli
-  commit: bfb1595b8520fc7b6eba905d81ef4c228d705aba
+  commit: 936cf5acaf76fd95fc30884f1bd3b9b0955d96ea
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
@@ -174,6 +174,10 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -182,10 +186,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/run-tests-2.7.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/run-tests.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -198,6 +198,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: COPYING:0'
+      - 'Info: FSF or OSI recognized license: GNU General Public License v2.0: COPYING:0'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -211,7 +222,7 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/run-tests.yml:35: update your workflow using https://app.stepsecurity.io/secureworkflow/andreafrancia/trash-cli/run-tests.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/run-tests.yml:56: update your workflow using https://app.stepsecurity.io/secureworkflow/andreafrancia/trash-cli/run-tests.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/run-tests.yml:58: update your workflow using https://app.stepsecurity.io/secureworkflow/andreafrancia/trash-cli/run-tests.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: support/run-in-docker/Dockerfile:1: pin your Docker image by updating python:trixie to python:trixie@sha256:a07fc5df0a3f5f1b5dcb197f442492e8953f5595747e6e761232763167de74c6'
+      - 'Warn: containerImage not pinned by hash: support/run-in-docker/Dockerfile:1: pin your Docker image by updating python:trixie to python:trixie@sha256:8268b5058c72832502a7eabc0c719892769c09389ed95fc213f3c308cbedc6dd'
       - 'Warn: containerImage not pinned by hash: support/run-in-docker27/Dockerfile:1: pin your Docker image by updating python:2.7.18-buster to python:2.7.18-buster@sha256:d8fac68ebdc45b8d66d53f1ed6c1532da81109a8f5532a6ca0c951ed31107d70'
       - 'Warn: pipCommand not pinned by hash: support/run-in-docker/Dockerfile:18'
       - 'Warn: pipCommand not pinned by hash: support/run-in-docker27/Dockerfile:26'
@@ -227,17 +238,6 @@ checks:
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
       - 'Info:   0 out of  10 pipCommand dependencies pinned'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: COPYING:0'
-      - 'Info: FSF or OSI recognized license: GNU General Public License v2.0: COPYING:0'
   - name: Signed-Releases
     score: -1
     reason: no releases found

@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.1.0"
   latestRelease: "v2.1.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-27T05:17:25Z
+  collectedAt: 2026-10-28T05:42:03Z
 timeline:
   created: 2019-09-19
   lastCommit: 2023-01-30
@@ -27,7 +27,7 @@ language:
 totalBytes: 50999
 recent:
   last30d:
-    since: 2026-09-27
+    since: 2026-09-28
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-28
+    since: 2026-08-29
     release: 0
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-29
+    since: 2026-07-30
     release: 0
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-30
+    since: 2026-05-01
     release: 0
     mergedPR: 0
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-01
+    since: 2025-11-02
     release: 0
     mergedPR: 0
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-06
+    since: 2024-11-07
     release: 0
     mergedPR: 0
     openPR: 0
@@ -83,7 +83,7 @@ total:
   commit: 98
 ---
 path: /home/runner/.x-repo/github.com/raftario/licensor
-collectedAt: 2026-10-27T05:17:26Z
+collectedAt: 2026-10-28T05:42:04Z
 loc:
   Rust:
     code: 1041
@@ -116,7 +116,7 @@ total:
   blanks: 197
   files: 18
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/raftario/licensor
   commit: a7c74793e529667f58c2ea6bfcd0c6c08e9a1ed6
@@ -129,15 +129,30 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
+  - name: Code-Review
+    score: 1
+    reason: Found 3/25 approved changesets -- score normalized to 1
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/build.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/check.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -158,21 +173,6 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/check.yml:42: update your workflow using https://app.stepsecurity.io/secureworkflow/raftario/licensor/check.yml/master?enable=pin'
       - 'Info:   0 out of   5 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   9 third-party GitHubAction dependencies pinned'
-  - name: Code-Review
-    score: 1
-    reason: Found 3/25 approved changesets -- score normalized to 1
-    details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/build.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/check.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected

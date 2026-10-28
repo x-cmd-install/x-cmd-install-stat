@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.12.4"
   latestRelease: "v0.12.4"
   latestPrerelease: ""
-  collectedAt: 2026-10-27T04:48:53Z
+  collectedAt: 2026-10-28T05:22:50Z
 timeline:
   created: 2020-12-06
   lastCommit: 2025-11-28
@@ -28,7 +28,7 @@ language:
 totalBytes: 93784
 recent:
   last30d:
-    since: 2026-09-27
+    since: 2026-09-28
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-28
+    since: 2026-08-29
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-29
+    since: 2026-07-30
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-30
+    since: 2026-05-01
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-01
+    since: 2025-11-02
     release: 2
     mergedPR: 2
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 5
   last720d:
-    since: 2024-11-06
+    since: 2024-11-07
     release: 10
     mergedPR: 7
     openPR: 6
@@ -84,7 +84,7 @@ total:
   commit: 138
 ---
 path: /home/runner/.x-repo/github.com/brittonhayes/pillager
-collectedAt: 2026-10-27T04:48:54Z
+collectedAt: 2026-10-28T05:22:52Z
 loc:
   Go:
     code: 2896
@@ -122,7 +122,7 @@ total:
   blanks: 797
   files: 37
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/brittonhayes/pillager
   commit: 32ff84ac9f49704ea03a08b8d6e74b30999e5359
@@ -143,6 +143,10 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -152,10 +156,6 @@ checks:
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:13'
       - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -202,11 +202,7 @@ checks:
     score: 10
     reason: packaging workflow detected
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:16'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:36'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -221,6 +217,10 @@ checks:
       - 'Warn: release artifact v0.11.6 does not have provenance: https://api.github.com/repos/brittonhayes/pillager/releases/187947281'
       - 'Warn: release artifact v0.11.5 does not have provenance: https://api.github.com/repos/brittonhayes/pillager/releases/187946882'
       - 'Warn: release artifact v0.11.4 does not have provenance: https://api.github.com/repos/brittonhayes/pillager/releases/187944660'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

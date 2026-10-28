@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-10-27T05:18:16Z
+  collectedAt: 2026-10-28T05:53:57Z
 timeline:
   created: 2009-12-31
   lastCommit: 2026-10-13
@@ -46,7 +46,7 @@ language:
 totalBytes: 39600435
 recent:
   last30d:
-    since: 2026-09-27
+    since: 2026-09-28
     release: 0
     mergedPR: 0
     openPR: 0
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 6
   last60d:
-    since: 2026-08-28
+    since: 2026-08-29
     release: 0
     mergedPR: 0
     openPR: 0
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 17
   last90d:
-    since: 2026-07-29
+    since: 2026-07-30
     release: 0
     mergedPR: 0
     openPR: 0
@@ -70,7 +70,7 @@ recent:
     openIssue: 0
     commit: 27
   last180d:
-    since: 2026-04-30
+    since: 2026-05-01
     release: 0
     mergedPR: 0
     openPR: 0
@@ -78,7 +78,7 @@ recent:
     openIssue: 0
     commit: 186
   last360d:
-    since: 2025-11-01
+    since: 2025-11-02
     release: 0
     mergedPR: 0
     openPR: 0
@@ -86,7 +86,7 @@ recent:
     openIssue: 0
     commit: 392
   last720d:
-    since: 2024-11-06
+    since: 2024-11-07
     release: 0
     mergedPR: 0
     openPR: 3
@@ -102,7 +102,7 @@ total:
   commit: 61655
 ---
 path: /home/runner/.x-repo/github.com/apache/subversion
-collectedAt: 2026-10-27T05:19:05Z
+collectedAt: 2026-10-28T05:54:42Z
 loc:
   C:
     code: 426536
@@ -265,7 +265,7 @@ total:
   blanks: 147974
   files: 1851
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/apache/subversion
   commit: 3c2832239c0f1a4784aa41e43b4d83d18546930b
@@ -274,18 +274,19 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.5
 checks:
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Code-Review
     score: 0
     reason: Found 0/30 approved changesets -- score normalized to 0
     details: null
-  - name: Dangerous-Workflow
+  - name: Maintained
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -294,11 +295,10 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/cmake.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/detect-backport-conflicts.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: SAST
     score: 0
     reason: no SAST tool detected
@@ -337,6 +337,11 @@ checks:
     score: -1
     reason: no releases found
     details: null
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''trunk'''
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -350,9 +355,4 @@ checks:
       - 'Info: Found linked content: github.com/apache/.github/.github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/apache/.github/.github/SECURITY.md:1'
       - 'Info: Found text in security policy: github.com/apache/.github/.github/SECURITY.md:1'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''trunk'''
 ---

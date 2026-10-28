@@ -7,7 +7,7 @@ about:
   latestVersion: "v4.7.0"
   latestRelease: "v4.7.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-27T05:42:17Z
+  collectedAt: 2026-10-28T06:24:45Z
 timeline:
   created: 2014-03-13
   lastCommit: 2026-10-20
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-10-13
   lastPrerelease: 
 popularity:
-  star: 15664
+  star: 15667
   watcher: 92
   fork: 1021
   release: 120
   contributor: 138
   pullRequest: 1409
-  issue: 2320
+  issue: 2322
 language:
   Python: 595587
   R: 12037
@@ -35,63 +35,63 @@ language:
 totalBytes: 611612
 recent:
   last30d:
-    since: 2026-09-27
+    since: 2026-09-28
     release: 1
-    mergedPR: 9
+    mergedPR: 8
     openPR: 0
-    closedIssue: 9
+    closedIssue: 11
     openIssue: 0
     commit: 9
   last60d:
-    since: 2026-08-28
+    since: 2026-08-29
     release: 1
     mergedPR: 9
     openPR: 0
-    closedIssue: 13
+    closedIssue: 15
     openIssue: 0
     commit: 11
   last90d:
-    since: 2026-07-29
+    since: 2026-07-30
     release: 2
     mergedPR: 11
     openPR: 0
-    closedIssue: 20
+    closedIssue: 22
     openIssue: 0
     commit: 14
   last180d:
-    since: 2026-04-30
+    since: 2026-05-01
     release: 3
     mergedPR: 20
     openPR: 0
-    closedIssue: 37
+    closedIssue: 39
     openIssue: 0
     commit: 24
   last360d:
-    since: 2025-11-01
+    since: 2025-11-02
     release: 7
     mergedPR: 42
     openPR: 1
-    closedIssue: 84
+    closedIssue: 86
     openIssue: 1
     commit: 50
   last720d:
-    since: 2024-11-06
+    since: 2024-11-07
     release: 10
     mergedPR: 73
     openPR: 4
-    closedIssue: 230
+    closedIssue: 232
     openIssue: 3
     commit: 163
 total:
   release: 120
   mergedPR: 1061
   openPR: 8
-  closedIssue: 2303
+  closedIssue: 2305
   openIssue: 17
   commit: 2877
 ---
 path: /home/runner/.x-repo/github.com/pre-commit/pre-commit
-collectedAt: 2026-10-27T05:42:20Z
+collectedAt: 2026-10-28T06:24:47Z
 loc:
   Python:
     code: 14758
@@ -169,7 +169,7 @@ total:
   blanks: 4328
   files: 169
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/pre-commit/pre-commit
   commit: 8cb5845c835b1ff72240eb2484239411ec481d92
@@ -178,17 +178,22 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.5
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Code-Review
     score: 0
     reason: Found 1/11 approved changesets -- score normalized to 0
     details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Maintained
     score: 10
-    reason: 25 commit(s) and 18 issue activity found in the last 90 days -- score normalized to 10
+    reason: 25 commit(s) and 17 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Token-Permissions
     score: 0
@@ -197,11 +202,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/languages.yaml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -210,6 +210,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -224,25 +229,32 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/languages.yaml:40: update your workflow using https://app.stepsecurity.io/secureworkflow/pre-commit/pre-commit/languages.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/languages.yaml:66: update your workflow using https://app.stepsecurity.io/secureworkflow/pre-commit/pre-commit/languages.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/languages.yaml:68: update your workflow using https://app.stepsecurity.io/secureworkflow/pre-commit/pre-commit/languages.yaml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/main.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/pre-commit/pre-commit/main.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/main.yml:15: update your workflow using https://app.stepsecurity.io/secureworkflow/pre-commit/pre-commit/main.yml/main?enable=pin'
-      - 'Warn: containerImage not pinned by hash: testing/zipapp/Dockerfile:1: pin your Docker image by updating ubuntu:noble to ubuntu:noble@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/main.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/pre-commit/pre-commit/main.yml/main?enable=pin'
+      - 'Warn: containerImage not pinned by hash: testing/zipapp/Dockerfile:1: pin your Docker image by updating ubuntu:noble to ubuntu:noble@sha256:24737cef17f4e22b1977df7d9a05e77c4e28b7da5b8911f8d8ccda136bf3573c'
       - 'Warn: pipCommand not pinned by hash: testing/zipapp/Dockerfile:10-12'
       - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   5 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   0 out of   1 pipCommand dependencies pinned'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: github.com/pre-commit/.github/.github/SECURITY.md:1'
+      - 'Info: Found linked content: github.com/pre-commit/.github/.github/SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/pre-commit/.github/.github/SECURITY.md:1'
+      - 'Info: Found text in security policy: github.com/pre-commit/.github/.github/SECURITY.md:1'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -257,18 +269,6 @@ checks:
       - 'Warn: release artifact v4.6.1 does not have provenance: https://api.github.com/repos/pre-commit/pre-commit/releases/357637738'
       - 'Warn: release artifact v4.6.0 does not have provenance: https://api.github.com/repos/pre-commit/pre-commit/releases/311932354'
       - 'Warn: release artifact v4.5.1 does not have provenance: https://api.github.com/repos/pre-commit/pre-commit/releases/270891437'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: github.com/pre-commit/.github/.github/SECURITY.md:1'
-      - 'Info: Found linked content: github.com/pre-commit/.github/.github/SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/pre-commit/.github/.github/SECURITY.md:1'
-      - 'Info: Found text in security policy: github.com/pre-commit/.github/.github/SECURITY.md:1'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

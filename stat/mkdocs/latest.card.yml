@@ -7,7 +7,7 @@ about:
   latestVersion: "1.6.1"
   latestRelease: "1.6.1"
   latestPrerelease: ""
-  collectedAt: 2026-10-27T05:58:51Z
+  collectedAt: 2026-10-28T06:45:43Z
 timeline:
   created: 2014-01-11
   lastCommit: 2025-10-20
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2024-08-30
   lastPrerelease: 
 popularity:
-  star: 22521
+  star: 22523
   watcher: 223
-  fork: 2661
+  fork: 2660
   release: 15
   contributor: 240
   pullRequest: 1415
@@ -30,23 +30,23 @@ language:
 totalBytes: 873062
 recent:
   last30d:
-    since: 2026-09-27
+    since: 2026-09-28
     release: 0
     mergedPR: 0
     openPR: 1
     closedIssue: 0
-    openIssue: 2
+    openIssue: 1
     commit: 0
   last60d:
-    since: 2026-08-28
+    since: 2026-08-29
     release: 0
     mergedPR: 0
-    openPR: 3
+    openPR: 2
     closedIssue: 0
     openIssue: 2
     commit: 0
   last90d:
-    since: 2026-07-29
+    since: 2026-07-30
     release: 0
     mergedPR: 0
     openPR: 7
@@ -54,7 +54,7 @@ recent:
     openIssue: 3
     commit: 0
   last180d:
-    since: 2026-04-30
+    since: 2026-05-01
     release: 0
     mergedPR: 0
     openPR: 30
@@ -62,31 +62,31 @@ recent:
     openIssue: 8
     commit: 0
   last360d:
-    since: 2025-11-01
+    since: 2025-11-02
     release: 0
     mergedPR: 0
-    openPR: 41
+    openPR: 39
     closedIssue: 7
     openIssue: 18
     commit: 0
   last720d:
-    since: 2024-11-06
+    since: 2024-11-07
     release: 0
     mergedPR: 4
-    openPR: 46
+    openPR: 44
     closedIssue: 53
     openIssue: 59
-    commit: 5
+    commit: 4
 total:
   release: 15
   mergedPR: 988
-  openPR: 65
+  openPR: 63
   closedIssue: 2004
   openIssue: 120
   commit: 2118
 ---
 path: /home/runner/.x-repo/github.com/mkdocs/mkdocs
-collectedAt: 2026-10-27T05:58:54Z
+collectedAt: 2026-10-28T06:45:45Z
 loc:
   Python:
     code: 15882
@@ -149,7 +149,7 @@ total:
   blanks: 6501
   files: 191
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/mkdocs/mkdocs
   commit: 2862536793b3c67d9d83c33e0dd6d50a791928f8
@@ -170,6 +170,10 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -179,10 +183,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/deploy-release.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/docs.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -224,12 +224,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: BSD 2-Clause "Simplified" License: LICENSE:0'
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -240,13 +234,19 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: BSD 2-Clause "Simplified" License: LICENSE:0'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
     details: null
   - name: SAST
     score: 0

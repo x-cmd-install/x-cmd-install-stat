@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.13.1"
   latestRelease: "v0.13.1"
   latestPrerelease: ""
-  collectedAt: 2026-10-27T05:20:56Z
+  collectedAt: 2026-10-28T05:57:09Z
 timeline:
   created: 2016-02-16
   lastCommit: 2026-10-14
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-10-14
   lastPrerelease: 
 popularity:
-  star: 9227
-  watcher: 62
-  fork: 403
+  star: 9250
+  watcher: 63
+  fork: 404
   release: 28
   contributor: 73
   pullRequest: 416
@@ -31,7 +31,7 @@ language:
 totalBytes: 313279
 recent:
   last30d:
-    since: 2026-09-27
+    since: 2026-09-28
     release: 1
     mergedPR: 1
     openPR: 8
@@ -39,15 +39,15 @@ recent:
     openIssue: 3
     commit: 3
   last60d:
-    since: 2026-08-28
+    since: 2026-08-29
     release: 2
-    mergedPR: 14
+    mergedPR: 12
     openPR: 14
     closedIssue: 3
-    openIssue: 9
+    openIssue: 8
     commit: 27
   last90d:
-    since: 2026-07-29
+    since: 2026-07-30
     release: 3
     mergedPR: 19
     openPR: 15
@@ -55,7 +55,7 @@ recent:
     openIssue: 10
     commit: 55
   last180d:
-    since: 2026-04-30
+    since: 2026-05-01
     release: 3
     mergedPR: 23
     openPR: 19
@@ -63,7 +63,7 @@ recent:
     openIssue: 14
     commit: 61
   last360d:
-    since: 2025-11-01
+    since: 2025-11-02
     release: 5
     mergedPR: 29
     openPR: 21
@@ -71,7 +71,7 @@ recent:
     openIssue: 26
     commit: 86
   last720d:
-    since: 2024-11-06
+    since: 2024-11-07
     release: 5
     mergedPR: 30
     openPR: 24
@@ -87,7 +87,7 @@ total:
   commit: 750
 ---
 path: /home/runner/.x-repo/github.com/containers/bubblewrap
-collectedAt: 2026-10-27T05:20:57Z
+collectedAt: 2026-10-28T05:57:10Z
 loc:
   C:
     code: 4871
@@ -145,7 +145,7 @@ total:
   blanks: 1731
   files: 44
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/containers/bubblewrap
   commit: 1fb0aa26d3eb66254f7742e704add7f82f41a582
@@ -154,17 +154,17 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 6.8
 checks:
+  - name: Code-Review
+    score: 5
+    reason: Found 9/18 approved changesets -- score normalized to 5
+    details: null
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 16 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 15 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
     details: null
   - name: Security-Policy
     score: 10
@@ -174,9 +174,9 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Code-Review
-    score: 5
-    reason: Found 9/18 approved changesets -- score normalized to 5
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 10
@@ -194,11 +194,11 @@ checks:
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
       - 'Info: Possibly incomplete results: error parsing shell code: reached EOF without closing quote `"`: tests/test-run.sh:653'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/check.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/containers/bubblewrap/check.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/check.yml:76: update your workflow using https://app.stepsecurity.io/secureworkflow/containers/bubblewrap/check.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/check.yml:94: update your workflow using https://app.stepsecurity.io/secureworkflow/containers/bubblewrap/check.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/check.yml:98: update your workflow using https://app.stepsecurity.io/secureworkflow/containers/bubblewrap/check.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/check.yml:108: update your workflow using https://app.stepsecurity.io/secureworkflow/containers/bubblewrap/check.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/check.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/containers/bubblewrap/check.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/check.yml:76: update your workflow using https://app.stepsecurity.io/secureworkflow/containers/bubblewrap/check.yml/main?enable=pin'
       - 'Info:   0 out of   5 GitHub-owned GitHubAction dependencies pinned'
   - name: CII-Best-Practices
     score: 0
@@ -215,6 +215,10 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 1
     reason: 1 out of the last 5 releases have a total of 1 signed artifacts.
@@ -229,10 +233,6 @@ checks:
       - 'Warn: release artifact v0.12.0 does not have provenance: https://api.github.com/repos/containers/bubblewrap/releases/377041403'
       - 'Warn: release artifact v0.11.2 does not have provenance: https://api.github.com/repos/containers/bubblewrap/releases/312611313'
       - 'Warn: release artifact v0.11.1 does not have provenance: https://api.github.com/repos/containers/bubblewrap/releases/299780424'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits

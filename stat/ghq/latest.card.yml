@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.11.2"
   latestRelease: "v1.11.2"
   latestPrerelease: "v0.7-pre"
-  collectedAt: 2026-10-27T05:05:04Z
+  collectedAt: 2026-10-28T05:41:21Z
 timeline:
   created: 2013-02-05
   lastCommit: 2026-09-29
@@ -30,15 +30,15 @@ language:
 totalBytes: 197663
 recent:
   last30d:
-    since: 2026-09-27
+    since: 2026-09-28
     release: 3
-    mergedPR: 7
+    mergedPR: 6
     openPR: 13
     closedIssue: 1
     openIssue: 2
     commit: 0
   last60d:
-    since: 2026-08-28
+    since: 2026-08-29
     release: 3
     mergedPR: 9
     openPR: 13
@@ -46,7 +46,7 @@ recent:
     openIssue: 2
     commit: 18
   last90d:
-    since: 2026-07-29
+    since: 2026-07-30
     release: 3
     mergedPR: 13
     openPR: 13
@@ -54,7 +54,7 @@ recent:
     openIssue: 3
     commit: 23
   last180d:
-    since: 2026-04-30
+    since: 2026-05-01
     release: 3
     mergedPR: 34
     openPR: 13
@@ -62,7 +62,7 @@ recent:
     openIssue: 5
     commit: 43
   last360d:
-    since: 2025-11-01
+    since: 2025-11-02
     release: 11
     mergedPR: 83
     openPR: 14
@@ -70,7 +70,7 @@ recent:
     openIssue: 7
     commit: 134
   last720d:
-    since: 2024-11-06
+    since: 2024-11-07
     release: 14
     mergedPR: 100
     openPR: 15
@@ -86,7 +86,7 @@ total:
   commit: 1275
 ---
 path: /home/runner/.x-repo/github.com/x-motemen/ghq
-collectedAt: 2026-10-27T05:05:05Z
+collectedAt: 2026-10-28T05:41:21Z
 loc:
   Go:
     code: 5888
@@ -139,7 +139,7 @@ total:
   blanks: 934
   files: 45
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/x-motemen/ghq
   commit: b9273dd116d09b423073b83e7c0d82ef508d985a
@@ -148,6 +148,15 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 5
 checks:
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Code-Review
     score: 2
     reason: Found 1/5 approved changesets -- score normalized to 2
@@ -160,21 +169,6 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Pinned-Dependencies
-    score: 10
-    reason: all dependencies are pinned
-    details:
-      - 'Info:  16 out of  16 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   8 out of   8 third-party GitHubAction dependencies pinned'
   - name: Token-Permissions
     score: 8
     reason: detected GitHub workflow tokens with excessive permissions
@@ -183,12 +177,12 @@ checks:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:16'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yaml:26'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release.yaml:25'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yaml:23'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yaml:41'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yaml:60'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yaml:10'
-      - 'Info: jobLevel ''issues'' permission set to ''read'': .github/workflows/tagpr.yaml:15'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/reviewdog.yaml:23'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/tagpr.yaml:13'
+      - 'Info: jobLevel ''issues'' permission set to ''read'': .github/workflows/tagpr.yaml:15'
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/tagpr.yaml:39'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/integration.yaml:7'
       - 'Warn: no topLevel permission defined: .github/workflows/release-build.yaml:1'
@@ -197,6 +191,12 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/tagpr.yaml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yaml:10'
       - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/test.yaml:11'
+  - name: Pinned-Dependencies
+    score: 10
+    reason: all dependencies are pinned
+    details:
+      - 'Info:  16 out of  16 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   8 out of   8 third-party GitHubAction dependencies pinned'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected

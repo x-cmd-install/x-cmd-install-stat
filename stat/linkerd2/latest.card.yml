@@ -7,7 +7,7 @@ about:
   latestVersion: "edge-26.10.1"
   latestRelease: "edge-26.10.1"
   latestPrerelease: ""
-  collectedAt: 2026-10-27T05:40:29Z
+  collectedAt: 2026-10-28T06:19:38Z
 timeline:
   created: 2017-12-04
   lastCommit: 2026-10-26
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-10-05
   lastPrerelease: 
 popularity:
-  star: 11520
+  star: 11521
   watcher: 193
-  fork: 1389
+  fork: 1390
   release: 451
   contributor: 397
   pullRequest: 10774
@@ -37,15 +37,15 @@ language:
 totalBytes: 5282575
 recent:
   last30d:
-    since: 2026-09-27
+    since: 2026-09-28
     release: 1
-    mergedPR: 11
+    mergedPR: 10
     openPR: 42
     closedIssue: 0
     openIssue: 9
     commit: 10
   last60d:
-    since: 2026-08-28
+    since: 2026-08-29
     release: 4
     mergedPR: 63
     openPR: 44
@@ -53,23 +53,23 @@ recent:
     openIssue: 11
     commit: 70
   last90d:
-    since: 2026-07-29
+    since: 2026-07-30
     release: 8
-    mergedPR: 112
+    mergedPR: 111
     openPR: 48
     closedIssue: 7
     openIssue: 21
     commit: 113
   last180d:
-    since: 2026-04-30
+    since: 2026-05-01
     release: 18
-    mergedPR: 358
-    openPR: 55
+    mergedPR: 356
+    openPR: 54
     closedIssue: 11
     openIssue: 28
     commit: 361
   last360d:
-    since: 2025-11-01
+    since: 2025-11-02
     release: 36
     mergedPR: 771
     openPR: 56
@@ -77,13 +77,13 @@ recent:
     openIssue: 30
     commit: 772
   last720d:
-    since: 2024-11-06
+    since: 2024-11-07
     release: 88
-    mergedPR: 1877
+    mergedPR: 1875
     openPR: 56
     closedIssue: 149
     openIssue: 35
-    commit: 1889
+    commit: 1887
 total:
   release: 451
   mergedPR: 9331
@@ -93,7 +93,7 @@ total:
   commit: 9193
 ---
 path: /home/runner/.x-repo/github.com/linkerd/linkerd2
-collectedAt: 2026-10-27T05:40:41Z
+collectedAt: 2026-10-28T06:19:53Z
 loc:
   Go:
     code: 98821
@@ -186,15 +186,19 @@ total:
   blanks: 22890
   files: 1213
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/linkerd/linkerd2
-  commit: 5bb8ea8434bb17a679bfcf34b2045ebeea6afcc6
+  commit: e9ea8d941c106b4ec60712f819e5c2d5cdf5c170
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 8.2
 checks:
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
@@ -207,10 +211,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -223,14 +223,14 @@ checks:
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
     details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:31'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql.yml:30'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:31'
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/go.yml:77'
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/integration.yml:429'
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:156'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:37'
       - 'Warn: jobLevel ''packages'' permission set to ''write'': .github/workflows/release.yml:38'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:131'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:156'
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/rerun.yml:24'
       - 'Info: jobLevel ''checks'' permission set to ''read'': .github/workflows/sync-proxy.yml:90'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/sync-proxy.yml:91'
@@ -253,17 +253,17 @@ checks:
     score: 5
     reason: 'badge detected: Passing'
     details: null
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: OSSFuzz integration found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: OSSFuzz integration found'
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -291,34 +291,34 @@ checks:
     score: 5
     reason: dependency not pinned by hash detected -- score normalized to 5
     details:
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/actions.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/linkerd/linkerd2/actions.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/actions.yml:24: update your workflow using https://app.stepsecurity.io/secureworkflow/linkerd/linkerd2/actions.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/actions.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/linkerd/linkerd2/actions.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:50: update your workflow using https://app.stepsecurity.io/secureworkflow/linkerd/linkerd2/codeql.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:55: update your workflow using https://app.stepsecurity.io/secureworkflow/linkerd/linkerd2/codeql.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/devcontainer.yml:42: update your workflow using https://app.stepsecurity.io/secureworkflow/linkerd/linkerd2/devcontainer.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:74: update your workflow using https://app.stepsecurity.io/secureworkflow/linkerd/linkerd2/release.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/shell.yml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/linkerd/linkerd2/shell.yml/main?enable=pin'
       - 'Warn: containerImage not pinned by hash: Dockerfile-debug:1: pin your Docker image by updating debian:bookworm-slim to debian:bookworm-slim@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.controller:2: pin your Docker image by updating golang:1.26.9-alpine to golang:1.26.9-alpine@sha256:3082400e369fa24d5fc60bca20edab3f6d604e0c5a690ec66b295eff4dd87ade'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.controller:2: pin your Docker image by updating golang:1.26.10-alpine to golang:1.26.10-alpine@sha256:a2012b4a1d1f9f7e9f44e0d39b805a901e856b1dd80b4e6ee4338db547050308'
       - 'Warn: containerImage not pinned by hash: Dockerfile.controller:11'
       - 'Warn: containerImage not pinned by hash: Dockerfile.controller:24: pin your Docker image by updating ghcr.io/linkerd/dev:v50-rust-musl to ghcr.io/linkerd/dev:v50-rust-musl@sha256:4ee8e184b3473669f854356d492884bb2371f1a3fe9d1bb868cc3aad382ca8e6'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.proxy:6: pin your Docker image by updating golang:1.26.9-alpine to golang:1.26.9-alpine@sha256:3082400e369fa24d5fc60bca20edab3f6d604e0c5a690ec66b295eff4dd87ade'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.proxy:6: pin your Docker image by updating golang:1.26.10-alpine to golang:1.26.10-alpine@sha256:a2012b4a1d1f9f7e9f44e0d39b805a901e856b1dd80b4e6ee4338db547050308'
       - 'Warn: containerImage not pinned by hash: Dockerfile.proxy:14: pin your Docker image by updating debian:bookworm-slim to debian:bookworm-slim@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8'
       - 'Warn: containerImage not pinned by hash: Dockerfile.proxy:36'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.proxy:48: pin your Docker image by updating golang:1.26.9-alpine to golang:1.26.9-alpine@sha256:3082400e369fa24d5fc60bca20edab3f6d604e0c5a690ec66b295eff4dd87ade'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.proxy:48: pin your Docker image by updating golang:1.26.10-alpine to golang:1.26.10-alpine@sha256:a2012b4a1d1f9f7e9f44e0d39b805a901e856b1dd80b4e6ee4338db547050308'
       - 'Warn: containerImage not pinned by hash: Dockerfile.proxy:64'
-      - 'Warn: containerImage not pinned by hash: cli/Dockerfile:4: pin your Docker image by updating golang:1.26.9-alpine to golang:1.26.9-alpine@sha256:3082400e369fa24d5fc60bca20edab3f6d604e0c5a690ec66b295eff4dd87ade'
+      - 'Warn: containerImage not pinned by hash: cli/Dockerfile:4: pin your Docker image by updating golang:1.26.10-alpine to golang:1.26.10-alpine@sha256:a2012b4a1d1f9f7e9f44e0d39b805a901e856b1dd80b4e6ee4338db547050308'
       - 'Warn: containerImage not pinned by hash: cli/Dockerfile:10'
       - 'Warn: containerImage not pinned by hash: cli/Dockerfile:28'
       - 'Warn: containerImage not pinned by hash: cli/Dockerfile:33'
       - 'Warn: containerImage not pinned by hash: cli/Dockerfile:38'
       - 'Warn: containerImage not pinned by hash: cli/Dockerfile:43'
       - 'Warn: containerImage not pinned by hash: cli/Dockerfile:48'
-      - 'Warn: containerImage not pinned by hash: viz/metrics-api/Dockerfile:4: pin your Docker image by updating golang:1.26.9-alpine to golang:1.26.9-alpine@sha256:3082400e369fa24d5fc60bca20edab3f6d604e0c5a690ec66b295eff4dd87ade'
+      - 'Warn: containerImage not pinned by hash: viz/metrics-api/Dockerfile:4: pin your Docker image by updating golang:1.26.10-alpine to golang:1.26.10-alpine@sha256:a2012b4a1d1f9f7e9f44e0d39b805a901e856b1dd80b4e6ee4338db547050308'
       - 'Warn: containerImage not pinned by hash: viz/metrics-api/Dockerfile:13'
-      - 'Warn: containerImage not pinned by hash: viz/tap/Dockerfile:4: pin your Docker image by updating golang:1.26.9-alpine to golang:1.26.9-alpine@sha256:3082400e369fa24d5fc60bca20edab3f6d604e0c5a690ec66b295eff4dd87ade'
+      - 'Warn: containerImage not pinned by hash: viz/tap/Dockerfile:4: pin your Docker image by updating golang:1.26.10-alpine to golang:1.26.10-alpine@sha256:a2012b4a1d1f9f7e9f44e0d39b805a901e856b1dd80b4e6ee4338db547050308'
       - 'Warn: containerImage not pinned by hash: viz/tap/Dockerfile:13'
-      - 'Warn: containerImage not pinned by hash: web/Dockerfile:4: pin your Docker image by updating golang:1.26.9-alpine to golang:1.26.9-alpine@sha256:3082400e369fa24d5fc60bca20edab3f6d604e0c5a690ec66b295eff4dd87ade'
+      - 'Warn: containerImage not pinned by hash: web/Dockerfile:4: pin your Docker image by updating golang:1.26.10-alpine to golang:1.26.10-alpine@sha256:a2012b4a1d1f9f7e9f44e0d39b805a901e856b1dd80b4e6ee4338db547050308'
       - 'Warn: containerImage not pinned by hash: web/Dockerfile:13: pin your Docker image by updating node:20-bookworm to node:20-bookworm@sha256:8f693eaa7e0a8e71560c9a82b55fd54c2ae920a2ba5d2cde28bac7d1c01c9ba5'
       - 'Warn: containerImage not pinned by hash: web/Dockerfile:35'
       - 'Info:  57 out of  59 GitHub-owned GitHubAction dependencies pinned'

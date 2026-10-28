@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.0.1"
   latestRelease: "v1.0.1"
   latestPrerelease: ""
-  collectedAt: 2026-10-27T05:35:47Z
+  collectedAt: 2026-10-28T06:18:26Z
 timeline:
   created: 2017-03-11
   lastCommit: 2026-03-13
@@ -29,7 +29,7 @@ language:
 totalBytes: 102938
 recent:
   last30d:
-    since: 2026-09-27
+    since: 2026-09-28
     release: 0
     mergedPR: 0
     openPR: 1
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-28
+    since: 2026-08-29
     release: 0
     mergedPR: 0
     openPR: 1
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-29
+    since: 2026-07-30
     release: 0
     mergedPR: 0
     openPR: 1
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-04-30
+    since: 2026-05-01
     release: 0
     mergedPR: 0
     openPR: 1
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-01
+    since: 2025-11-02
     release: 0
     mergedPR: 1
     openPR: 4
@@ -69,7 +69,7 @@ recent:
     openIssue: 1
     commit: 3
   last720d:
-    since: 2024-11-06
+    since: 2024-11-07
     release: 2
     mergedPR: 12
     openPR: 8
@@ -85,7 +85,7 @@ total:
   commit: 331
 ---
 path: /home/runner/.x-repo/github.com/knqyf263/pet
-collectedAt: 2026-10-27T05:35:48Z
+collectedAt: 2026-10-28T06:18:27Z
 loc:
   Go:
     code: 3067
@@ -113,7 +113,7 @@ total:
   blanks: 800
   files: 38
 ---
-date: "2026-10-19"
+date: "2026-10-26"
 repo:
   name: github.com/knqyf263/pet
   commit: 3661dc9cb080bf48343e2d7f56a75abd3864c1d6
@@ -130,9 +130,9 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Dangerous-Workflow
+  - name: Binary-Artifacts
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: no binaries found in the repo
     details: null
   - name: Security-Policy
     score: 4
@@ -142,9 +142,9 @@ checks:
       - 'Warn: no linked content found'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Binary-Artifacts
+  - name: Dangerous-Workflow
     score: 10
-    reason: no binaries found in the repo
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -175,22 +175,27 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
     details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
     details:
-      - 'Warn: no fuzzer integrations found'
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''main'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -205,11 +210,6 @@ checks:
       - 'Warn: release artifact v0.9.1 does not have provenance: https://api.github.com/repos/knqyf263/pet/releases/182441941'
       - 'Warn: release artifact v0.9.0 does not have provenance: https://api.github.com/repos/knqyf263/pet/releases/170947527'
       - 'Warn: release artifact v0.8.4 does not have provenance: https://api.github.com/repos/knqyf263/pet/releases/154808197'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''main'''
   - name: SAST
     score: 7
     reason: SAST tool detected but not run on all commits
