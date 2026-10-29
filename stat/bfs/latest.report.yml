@@ -7,7 +7,7 @@ about:
   latestVersion: "4.1.5"
   latestRelease: "4.1.5"
   latestPrerelease: ""
-  collectedAt: 2026-10-28T06:36:57Z
+  collectedAt: 2026-10-29T06:41:17Z
 timeline:
   created: 2015-06-14
   lastCommit: 2026-10-28
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-10-28
   lastPrerelease: 
 popularity:
-  star: 1281
+  star: 1280
   watcher: 12
   fork: 44
   release: 73
@@ -29,7 +29,7 @@ language:
 totalBytes: 931248
 recent:
   last30d:
-    since: 2026-09-28
+    since: 2026-09-29
     release: 1
     mergedPR: 3
     openPR: 2
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 7
   last60d:
-    since: 2026-08-29
+    since: 2026-08-30
     release: 1
     mergedPR: 5
     openPR: 2
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 9
   last90d:
-    since: 2026-07-30
+    since: 2026-07-31
     release: 1
     mergedPR: 8
     openPR: 2
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 13
   last180d:
-    since: 2026-05-01
+    since: 2026-05-02
     release: 4
     mergedPR: 17
     openPR: 2
@@ -61,19 +61,19 @@ recent:
     openIssue: 0
     commit: 53
   last360d:
-    since: 2025-11-02
+    since: 2025-11-03
     release: 5
-    mergedPR: 43
+    mergedPR: 42
     openPR: 2
     closedIssue: 9
     openIssue: 2
     commit: 103
   last720d:
-    since: 2024-11-07
+    since: 2024-11-08
     release: 10
     mergedPR: 52
     openPR: 3
-    closedIssue: 14
+    closedIssue: 13
     openIssue: 4
     commit: 313
 total:
@@ -85,7 +85,7 @@ total:
   commit: 2306
 ---
 path: /home/runner/.x-repo/github.com/tavianator/bfs
-collectedAt: 2026-10-28T06:36:59Z
+collectedAt: 2026-10-29T06:41:20Z
 loc:
   C:
     code: 19631
@@ -218,4 +218,4 @@ checks:
     details:
       - 'Info: all commits (20) are checked with a SAST tool'
 ---
-{"id":426266696,"author":{"login":"tavianator","id":1692591,"node_id":"MDQ6VXNlcjE2OTI1OTE=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAjss7c4ZaFBI","tag_name":"4.1.5","target_commitish":"main","name":"Version 4.1.5","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-10-28T04:04:35Z","updated_at":"2026-10-28T04:37:55Z","published_at":"2026-10-28T04:37:55Z","assets":[{"id":683831936,"node_id":"RA_kwDOAjss7c4ownKA","name":"bfs-4.1.5.tar.gz","label":"","uploader":{"login":"tavianator","id":1692591,"node_id":"MDQ6VXNlcjE2OTI1OTE=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":303001,"digest":"sha256:9b0ebcef31460b1d30e35009ff9d1357e4e1b0db7fe6570430badf9782fa1a61","download_count":0,"created_at":"2026-10-28T04:37:16Z","updated_at":"2026-10-28T04:37:16Z"},{"id":683831937,"node_id":"RA_kwDOAjss7c4ownKB","name":"bfs-4.1.5.tar.gz.sig","label":"","uploader":{"login":"tavianator","id":1692591,"node_id":"MDQ6VXNlcjE2OTI1OTE=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":294,"digest":"sha256:ac987ddabccc570edd3a277a242a292d844089d6968b74b8699370e6b9a3d7fd","download_count":0,"created_at":"2026-10-28T04:37:16Z","updated_at":"2026-10-28T04:37:16Z"}],"body":"## Changes\r\n\r\n- `bfs` now builds a static library as part of the build process.  For release builds with LTO, some systems will require an `ar` wrapper to find the linker plugin, such as\r\n\r\n      $ ./configure --enable-release AR=gcc-ar\r\n\r\n  (or `AR=llvm-ar` for Clang builds).  Most modern systems will not require overriding the default `AR`.  ([`9d6880c2`](https://github.com/tavianator/bfs/commit/9d6880c2323c7caaf81943bf1381bddf4529371b))\r\n\r\n- As hardening against some race conditions and buggy file systems, `bfs` will refuse to follow symbolic links in more cases  ([`18415819`](https://github.com/tavianator/bfs/commit/184158197c9e80df334e4a4253807a78188e61b0))\r\n\r\n## Bug fixes\r\n\r\n- Fixed an optimizer bug that assumed if `-samefile` didn't match, `-inum` couldn't match either.  This is false for files on different mount points, which is why (device, inode) number pairs are necessary to uniquely identify a file.  The bug was originally introduced in bfs 3.1 (February 6, 2024).  ([`1537b7e6`](https://github.com/tavianator/bfs/commit/1537b7e62a61f5ad1b654cc53d28319372d4eea5))\r\n\r\n- Added some missing primary expression types to various shell completions  ([`fa35eb9c`](https://github.com/tavianator/bfs/commit/fa35eb9ce26251a02b9d8ce3ad5b543430f871aa))\r\n\r\n- Fixed a memory leak in `-context`  ([`568c1bd0`](https://github.com/tavianator/bfs/commit/568c1bd03a723df7585b293b18d0f43d0b051295))\r\n\r\n**Full Changelog**: https://github.com/tavianator/bfs/compare/4.1.4...4.1.5"}
+{"id":426266696,"author":{"login":"tavianator","id":1692591,"node_id":"MDQ6VXNlcjE2OTI1OTE=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAjss7c4ZaFBI","tag_name":"4.1.5","target_commitish":"main","name":"Version 4.1.5","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-10-28T04:04:35Z","updated_at":"2026-10-28T04:37:55Z","published_at":"2026-10-28T04:37:55Z","assets":[{"id":683831936,"node_id":"RA_kwDOAjss7c4ownKA","name":"bfs-4.1.5.tar.gz","label":"","uploader":{"login":"tavianator","id":1692591,"node_id":"MDQ6VXNlcjE2OTI1OTE=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":303001,"digest":"sha256:9b0ebcef31460b1d30e35009ff9d1357e4e1b0db7fe6570430badf9782fa1a61","download_count":4,"created_at":"2026-10-28T04:37:16Z","updated_at":"2026-10-28T04:37:16Z"},{"id":683831937,"node_id":"RA_kwDOAjss7c4ownKB","name":"bfs-4.1.5.tar.gz.sig","label":"","uploader":{"login":"tavianator","id":1692591,"node_id":"MDQ6VXNlcjE2OTI1OTE=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/pgp-signature","state":"uploaded","size":294,"digest":"sha256:ac987ddabccc570edd3a277a242a292d844089d6968b74b8699370e6b9a3d7fd","download_count":1,"created_at":"2026-10-28T04:37:16Z","updated_at":"2026-10-28T04:37:16Z"}],"body":"## Changes\r\n\r\n- `bfs` now builds a static library as part of the build process.  For release builds with LTO, some systems will require an `ar` wrapper to find the linker plugin, such as\r\n\r\n      $ ./configure --enable-release AR=gcc-ar\r\n\r\n  (or `AR=llvm-ar` for Clang builds).  Most modern systems will not require overriding the default `AR`.  ([`9d6880c2`](https://github.com/tavianator/bfs/commit/9d6880c2323c7caaf81943bf1381bddf4529371b))\r\n\r\n- As hardening against some race conditions and buggy file systems, `bfs` will refuse to follow symbolic links in more cases  ([`18415819`](https://github.com/tavianator/bfs/commit/184158197c9e80df334e4a4253807a78188e61b0))\r\n\r\n## Bug fixes\r\n\r\n- Fixed an optimizer bug that assumed if `-samefile` didn't match, `-inum` couldn't match either.  This is false for files on different mount points, which is why (device, inode) number pairs are necessary to uniquely identify a file.  The bug was originally introduced in bfs 3.1 (February 6, 2024).  ([`1537b7e6`](https://github.com/tavianator/bfs/commit/1537b7e62a61f5ad1b654cc53d28319372d4eea5))\r\n\r\n- Added some missing primary expression types to various shell completions  ([`fa35eb9c`](https://github.com/tavianator/bfs/commit/fa35eb9ce26251a02b9d8ce3ad5b543430f871aa))\r\n\r\n- Fixed a memory leak in `-context`  ([`568c1bd0`](https://github.com/tavianator/bfs/commit/568c1bd03a723df7585b293b18d0f43d0b051295))\r\n\r\n**Full Changelog**: https://github.com/tavianator/bfs/compare/4.1.4...4.1.5","reactions":{"total_count":1,"+1":0,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":0,"rocket":0,"eyes":0}}

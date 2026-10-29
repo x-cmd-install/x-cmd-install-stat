@@ -2,111 +2,111 @@ about:
   description: "Find the local LLM that actually runs and performs best on your hardware. Ranked by real, recency-aware benchmarks, not parameter count. One command, run it instantly."
   license: MIT
   homepage: 
-  head: 9f3709f
+  head: 5f2ab61
   archived: false
-  latestVersion: "v0.5.21"
-  latestRelease: "v0.5.21"
+  latestVersion: "v0.5.23"
+  latestRelease: "v0.5.23"
   latestPrerelease: ""
-  collectedAt: 2026-10-28T05:02:04Z
+  collectedAt: 2026-10-29T05:15:27Z
 timeline:
   created: 2026-03-04
-  lastCommit: 2026-10-19
-  lastVersion: 2026-10-19
-  lastRelease: 2026-10-19
+  lastCommit: 2026-10-28
+  lastVersion: 2026-10-28
+  lastRelease: 2026-10-28
   lastPrerelease: 
 popularity:
-  star: 6796
+  star: 6803
   watcher: 24
-  fork: 373
-  release: 22
+  fork: 375
+  release: 24
   contributor: 32
-  pullRequest: 111
+  pullRequest: 124
   issue: 77
 language:
-  Python: 717934
+  Python: 760684
   Tape: 1329
-totalBytes: 719263
+totalBytes: 762013
 recent:
   last30d:
-    since: 2026-09-28
-    release: 2
-    mergedPR: 3
-    openPR: 2
+    since: 2026-09-29
+    release: 4
+    mergedPR: 15
+    openPR: 3
     closedIssue: 1
     openIssue: 6
-    commit: 11
+    commit: 19
   last60d:
-    since: 2026-08-29
-    release: 5
-    mergedPR: 12
-    openPR: 2
+    since: 2026-08-30
+    release: 7
+    mergedPR: 24
+    openPR: 3
     closedIssue: 2
     openIssue: 6
-    commit: 29
+    commit: 37
   last90d:
-    since: 2026-07-30
-    release: 6
-    mergedPR: 25
-    openPR: 2
+    since: 2026-07-31
+    release: 8
+    mergedPR: 37
+    openPR: 3
     closedIssue: 8
     openIssue: 6
-    commit: 39
+    commit: 47
   last180d:
-    since: 2026-05-01
-    release: 21
-    mergedPR: 96
-    openPR: 2
+    since: 2026-05-02
+    release: 23
+    mergedPR: 108
+    openPR: 3
     closedIssue: 71
     openIssue: 6
-    commit: 171
+    commit: 179
   last360d:
-    since: 2025-11-02
-    release: 22
-    mergedPR: 96
-    openPR: 2
+    since: 2025-11-03
+    release: 24
+    mergedPR: 108
+    openPR: 3
     closedIssue: 71
     openIssue: 6
-    commit: 253
+    commit: 261
   last720d:
-    since: 2024-11-07
-    release: 22
-    mergedPR: 96
-    openPR: 2
+    since: 2024-11-08
+    release: 24
+    mergedPR: 108
+    openPR: 3
     closedIssue: 71
     openIssue: 6
-    commit: 337
+    commit: 345
 total:
-  release: 22
-  mergedPR: 96
-  openPR: 2
+  release: 24
+  mergedPR: 108
+  openPR: 3
   closedIssue: 71
   openIssue: 6
-  commit: 337
+  commit: 345
 ---
 path: /home/runner/.x-repo/github.com/Andyyyy64/whichllm
-collectedAt: 2026-10-28T05:02:05Z
+collectedAt: 2026-10-29T05:15:28Z
 loc:
   Python:
-    code: 17567
-    comments: 745
-    blanks: 3127
-    files: 123
+    code: 18602
+    comments: 757
+    blanks: 3329
+    files: 130
   Toml:
-    code: 55
-    comments: 0
-    blanks: 7
-    files: 1
+    code: 253
+    comments: 13
+    blanks: 35
+    files: 2
   Markdown:
     code: 0
-    comments: 1882
-    blanks: 712
-    files: 11
+    comments: 2063
+    blanks: 770
+    files: 12
 total:
-  code: 17890
-  comments: 2677
-  blanks: 3888
-  files: 135
+  code: 19124
+  comments: 2883
+  blanks: 4176
+  files: 144
 ---
 
 ---
-{"id":417147514,"author":{"login":"Andyyyy64","id":105579829,"node_id":"U_kgDOBksFNQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOReQROs4Y3Sp6","tag_name":"v0.5.21","target_commitish":"9f3709fbbe468c6ab2dd676d6a3e9888cff62562","name":"v0.5.21","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-19T09:58:07Z","updated_at":"2026-10-19T10:08:50Z","published_at":"2026-10-19T10:08:50Z","assets":[],"body":"Fix Artificial Analysis checkpoint matching for Kimi K2 and Command R+ (#188).\n\nThe Kimi K2 row now maps only to `moonshotai/Kimi-K2-Instruct`. The April Command R+ row maps only to `CohereForAI/c4ai-command-r-plus`. `Kimi-K2-Base` and `c4ai-command-r-plus-08-2024` no longer inherit their sibling's live AA score. Stored fallback scores are unchanged.\n\nUse `--refresh` to bypass an existing benchmark cache.\n\nThe release candidate passed all 594 tests on Python 3.11, 3.12, and 3.13, plus Ruff lint and format checks. Its wheel was built from the sdist and checked against all 88 source package files. A clean Python 3.13 installation with production dependencies only returned recommendation JSON from an empty cache and the same picks on a cached rerun.\n\nRequired lint and Python 3.11, 3.12, and 3.13 CI checks pass on release commit `9f3709fbbe468c6ab2dd676d6a3e9888cff62562`.\n"}
+{"id":426939145,"author":{"login":"Andyyyy64","id":105579829,"node_id":"U_kgDOBksFNQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOReQROs4ZcpMJ","tag_name":"v0.5.23","target_commitish":"019b5fb796cbaebd480f20cbdda26dbdb98d1c09","name":"v0.5.23","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-28T16:49:40Z","updated_at":"2026-10-28T16:50:27Z","published_at":"2026-10-28T16:50:27Z","assets":[],"body":"Fetch trending models again and keep the model cache for its full 6 hours (#202).\n\nThe Hugging Face API rejects `sort=trending` with HTTP 400, so both trending model lists were always skipped and newly popular repositories only appeared once they also ranked by downloads. whichllm now uses `sort=trendingScore`, which returns the 300 trending models. In 0.5.22 the failing lists also marked every fetched model list as incomplete, so it was cached for 30 minutes instead of 6 hours.\n\nThe release candidate passed all 699 tests (plus 23 expected failures) and Ruff lint and format checks. Its wheel was built from a clean checkout and contains exactly the 89 source package files. A clean Python 3.13 installation with production dependencies only returned recommendation JSON from an empty cache and stored a complete model list of 1,131 models.\n\nRequired lint and Python 3.11, 3.12, and 3.13 CI checks pass on release commit `019b5fb796cbaebd480f20cbdda26dbdb98d1c09`.\n"}

@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.6.4"
   latestRelease: "v2.6.4"
   latestPrerelease: "v2.3.1a1"
-  collectedAt: 2026-10-28T05:37:13Z
+  collectedAt: 2026-10-29T05:54:06Z
 timeline:
   created: 2018-11-22
   lastCommit: 2026-10-12
@@ -34,7 +34,7 @@ language:
 totalBytes: 2028762
 recent:
   last30d:
-    since: 2026-09-28
+    since: 2026-09-29
     release: 1
     mergedPR: 4
     openPR: 0
@@ -42,7 +42,7 @@ recent:
     openIssue: 1
     commit: 4
   last60d:
-    since: 2026-08-29
+    since: 2026-08-30
     release: 1
     mergedPR: 7
     openPR: 1
@@ -50,7 +50,7 @@ recent:
     openIssue: 2
     commit: 12
   last90d:
-    since: 2026-07-30
+    since: 2026-07-31
     release: 1
     mergedPR: 10
     openPR: 1
@@ -58,7 +58,7 @@ recent:
     openIssue: 2
     commit: 12
   last180d:
-    since: 2026-05-01
+    since: 2026-05-02
     release: 2
     mergedPR: 18
     openPR: 1
@@ -66,7 +66,7 @@ recent:
     openIssue: 2
     commit: 18
   last360d:
-    since: 2025-11-02
+    since: 2025-11-03
     release: 10
     mergedPR: 51
     openPR: 3
@@ -74,7 +74,7 @@ recent:
     openIssue: 2
     commit: 57
   last720d:
-    since: 2024-11-07
+    since: 2024-11-08
     release: 21
     mergedPR: 94
     openPR: 4
@@ -90,7 +90,7 @@ total:
   commit: 392
 ---
 path: /home/runner/.x-repo/github.com/Neoteroi/BlackSheep
-collectedAt: 2026-10-28T05:37:18Z
+collectedAt: 2026-10-29T05:54:09Z
 loc:
   Python:
     code: 48042
@@ -312,4 +312,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 27 are checked with a SAST tool'
 ---
-{"id":409750105,"author":{"login":"RobertoPrevato","id":2576032,"node_id":"MDQ6VXNlcjI1NzYwMzI=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCXZn8M4YbEpZ","tag_name":"v2.6.4","target_commitish":"main","name":"v2.6.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-11T15:06:39Z","updated_at":"2026-10-11T15:24:49Z","published_at":"2026-10-11T15:24:49Z","assets":[],"body":"- Add a `vary` parameter to the `cache_control` decorator and to\r\n  `CacheControlMiddleware`, to add field names to the `Vary` response header\r\n  (e.g. `@cache_control(max_age=60, vary=[\"Accept-Language\"])`). Names already\r\n  listed in the response `Vary` header are not repeated (case-insensitive), and\r\n  nothing is added when the response has `Vary: *`.\r\n- Fix `GzipMiddleware` to add `Vary: Accept-Encoding` to responses that are\r\n  eligible for compression (also when not compressed for a given request), so\r\n  that shared caches and CDNs do not serve a compressed response to clients that\r\n  don't support it, or vice versa.\r\n- Fix [#688](https://github.com/Neoteroi/BlackSheep/issues/688): `import_child_modules`\r\n  derived the dotted import path for auto-imported routes/controllers from\r\n  `os.path.relpath`, which resolves relative to the process's current working\r\n  directory. When an app is installed as a package (e.g. via `uv tool install`)\r\n  and started from an unrelated working directory, this produced a bogus dotted\r\n  path and raised `ModuleNotFoundError` instead of importing the routes. The\r\n  dotted path is now built from the folder's own location, walking up its\r\n  parent directories while they contain `__init__.py`, so it reflects the\r\n  actual package structure and no longer depends on the cwd. By @pctablet505.\r\n- Fix CORS middleware never emitting a wildcard `Access-Control-Allow-Origin`\r\n  alongside `Access-Control-Allow-Credentials: true`. Per the Fetch spec this\r\n  combination is invalid and browsers reject the response outright, so\r\n  credentialed requests against a wildcard-origin, credentials-enabled policy\r\n  would fail in the browser even though the server responded `200`. The\r\n  specific request `Origin` is now echoed back instead of `*` whenever\r\n  credentials are allowed, matching the existing behaviour for non-wildcard\r\n  origins. By @sridhar-3009.\r\n- Fix `ForwardedHeadersMiddleware.should_validate_client_ip()` (used by\r\n  `accept_only_proxied_requests`) so that setting\r\n  `accept_only_proxied_requests=False` is honored even when `known_networks`\r\n  is also configured. Due to Python operator precedence (`and` binds tighter\r\n  than `or`), the previous condition always validated the client IP whenever\r\n  `known_networks` was non-empty, regardless of\r\n  `accept_only_proxied_requests`,   contradicting the documented behaviour. By @sridhar-3009.\r\n- Clarify docstrings of `CookieAuthentication.set_cookie`, `CookiesTokensStore`,\r\n  and the OIDC cookie result-handlers: the `id_token`/`access_token`/\r\n  `refresh_token` cookies are only **signed** (tamper-proof) via\r\n  `itsdangerous.URLSafeSerializer`, not encrypted, so their contents remain\r\n  readable to anyone with access to the cookie. By @sridhar-3009.\r\n- Fix OpenAPI generation for Pydantic discriminated unions: `discriminator.mapping`\r\n  values were left pointing at `#/$defs/Name` (JSON Schema) instead of\r\n  `#/components/schemas/Name` (OpenAPI), because the reference rewriter only handled\r\n  `$ref` keys and mapping values are plain strings. Pydantic is now asked for\r\n  OpenAPI-shaped references via `ref_template`, and the rewriter also normalizes\r\n  plain string pointers (including inside lists), so hand-written `#/$defs/...`\r\n  pointers in `json_schema_extra` are covered too. Applies to both `BaseModel`\r\n  subclasses and Pydantic dataclasses. By @martinmkhitaryan.\r\n- Add `FromFile` to bind a single named multipart file as `FormPart`. Unlike\r\n  `FromFiles` (every uploaded file as `list[FormPart]`), `FromFile` reads only\r\n  the parts matching the parameter name and expects exactly one. A missing\r\n  required file raises `MissingParameterError`; `FromFile | None` is optional.\r\n  Several `FromFile` parameters, or `FromFile` next to `FromFiles` / a body\r\n  binder, are supported. OpenAPI documents it as a named `format: binary`\r\n  property (not an array). By @martinmkhitaryan.\r\n\r\n- Fix OpenAPI documentation of file uploads, so that Swagger UI renders an\r\n  **Upload** control for every file field, whatever its name, with or without a\r\n  DTO body on the same handler:\r\n  - `FromFiles` is now documented as a `multipart/form-data` **object** schema with\r\n    one `type: array` property named after the handler parameter (the specification\r\n    requires an object with named parts; the previous top-level array produced no\r\n    upload button). `required` is derived from the binder: `FromFiles | None` is\r\n    documented as optional.\r\n  - Handlers combining a body binder (`FromJSON[T]`, `FromForm[T]`, …) with\r\n    `FromFiles` no longer silently drop the files: a single `multipart/form-data`\r\n    media type is emitted, composing the DTO `$ref` with the file properties using\r\n    `allOf` (inline object schemas are merged instead). Other content types, which\r\n    cannot carry files, are dropped for these operations.\r\n  - `FileBuffer` and `bytes` are documented with both the OpenAPI 3.0 marker\r\n    (`format: binary`) and the OpenAPI 3.1 / JSON Schema 2020-12 marker\r\n    (`contentMediaType: application/octet-stream`).\r\n  - `FileBuffer` / `list[FileBuffer]` used directly as request body are documented\r\n    as an object with a property named after the parameter.\r\n\r\n  By @martinmkhitaryan.\r\n- Add `BinderBodyDocs` and `OpenAPIHandler.set_binder_body_docs()`, so custom binders\r\n  can be documented as named parts of the `multipart/form-data` request body instead\r\n  of parameters (`set_binder_docs()` also accepts a `BinderBodyDocs`). A Parameter\r\n  Object can only be in `path`, `query`, `header` or `cookie`, so this is the only\r\n  valid way to document a custom file binder; such docs are never moved to\r\n  `components/parameters`. By @martinmkhitaryan.\r\n- Never emit a binary schema for a `query`, `path`, `header` or `cookie` parameter:\r\n  a `UserWarning` is issued and the parameter is documented as a plain string.\r\n  `set_binder_docs()` also warns when given a `Parameter` with a binary schema.\r\n  By @martinmkhitaryan.\r\n- Add `get_binary_schema()` and `is_binary_schema()` helpers in\r\n  `blacksheep.server.openapi.v3`. By @martinmkhitaryan.\r\n","reactions":{"total_count":1,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":1,"eyes":0},"mentions_count":3}
+{"id":409750105,"author":{"login":"RobertoPrevato","id":2576032,"node_id":"MDQ6VXNlcjI1NzYwMzI=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCXZn8M4YbEpZ","tag_name":"v2.6.4","target_commitish":"main","name":"v2.6.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-11T15:06:39Z","updated_at":"2026-10-11T15:24:49Z","published_at":"2026-10-11T15:24:49Z","assets":[],"body":"- Add a `vary` parameter to the `cache_control` decorator and to\r\n  `CacheControlMiddleware`, to add field names to the `Vary` response header\r\n  (e.g. `@cache_control(max_age=60, vary=[\"Accept-Language\"])`). Names already\r\n  listed in the response `Vary` header are not repeated (case-insensitive), and\r\n  nothing is added when the response has `Vary: *`.\r\n- Fix `GzipMiddleware` to add `Vary: Accept-Encoding` to responses that are\r\n  eligible for compression (also when not compressed for a given request), so\r\n  that shared caches and CDNs do not serve a compressed response to clients that\r\n  don't support it, or vice versa.\r\n- Fix [#688](https://github.com/Neoteroi/BlackSheep/issues/688): `import_child_modules`\r\n  derived the dotted import path for auto-imported routes/controllers from\r\n  `os.path.relpath`, which resolves relative to the process's current working\r\n  directory. When an app is installed as a package (e.g. via `uv tool install`)\r\n  and started from an unrelated working directory, this produced a bogus dotted\r\n  path and raised `ModuleNotFoundError` instead of importing the routes. The\r\n  dotted path is now built from the folder's own location, walking up its\r\n  parent directories while they contain `__init__.py`, so it reflects the\r\n  actual package structure and no longer depends on the cwd. By @pctablet505.\r\n- Fix CORS middleware never emitting a wildcard `Access-Control-Allow-Origin`\r\n  alongside `Access-Control-Allow-Credentials: true`. Per the Fetch spec this\r\n  combination is invalid and browsers reject the response outright, so\r\n  credentialed requests against a wildcard-origin, credentials-enabled policy\r\n  would fail in the browser even though the server responded `200`. The\r\n  specific request `Origin` is now echoed back instead of `*` whenever\r\n  credentials are allowed, matching the existing behaviour for non-wildcard\r\n  origins. By @sridhar-3009.\r\n- Fix `ForwardedHeadersMiddleware.should_validate_client_ip()` (used by\r\n  `accept_only_proxied_requests`) so that setting\r\n  `accept_only_proxied_requests=False` is honored even when `known_networks`\r\n  is also configured. Due to Python operator precedence (`and` binds tighter\r\n  than `or`), the previous condition always validated the client IP whenever\r\n  `known_networks` was non-empty, regardless of\r\n  `accept_only_proxied_requests`,   contradicting the documented behaviour. By @sridhar-3009.\r\n- Clarify docstrings of `CookieAuthentication.set_cookie`, `CookiesTokensStore`,\r\n  and the OIDC cookie result-handlers: the `id_token`/`access_token`/\r\n  `refresh_token` cookies are only **signed** (tamper-proof) via\r\n  `itsdangerous.URLSafeSerializer`, not encrypted, so their contents remain\r\n  readable to anyone with access to the cookie. By @sridhar-3009.\r\n- Fix OpenAPI generation for Pydantic discriminated unions: `discriminator.mapping`\r\n  values were left pointing at `#/$defs/Name` (JSON Schema) instead of\r\n  `#/components/schemas/Name` (OpenAPI), because the reference rewriter only handled\r\n  `$ref` keys and mapping values are plain strings. Pydantic is now asked for\r\n  OpenAPI-shaped references via `ref_template`, and the rewriter also normalizes\r\n  plain string pointers (including inside lists), so hand-written `#/$defs/...`\r\n  pointers in `json_schema_extra` are covered too. Applies to both `BaseModel`\r\n  subclasses and Pydantic dataclasses. By @martinmkhitaryan.\r\n- Add `FromFile` to bind a single named multipart file as `FormPart`. Unlike\r\n  `FromFiles` (every uploaded file as `list[FormPart]`), `FromFile` reads only\r\n  the parts matching the parameter name and expects exactly one. A missing\r\n  required file raises `MissingParameterError`; `FromFile | None` is optional.\r\n  Several `FromFile` parameters, or `FromFile` next to `FromFiles` / a body\r\n  binder, are supported. OpenAPI documents it as a named `format: binary`\r\n  property (not an array). By @martinmkhitaryan.\r\n\r\n- Fix OpenAPI documentation of file uploads, so that Swagger UI renders an\r\n  **Upload** control for every file field, whatever its name, with or without a\r\n  DTO body on the same handler:\r\n  - `FromFiles` is now documented as a `multipart/form-data` **object** schema with\r\n    one `type: array` property named after the handler parameter (the specification\r\n    requires an object with named parts; the previous top-level array produced no\r\n    upload button). `required` is derived from the binder: `FromFiles | None` is\r\n    documented as optional.\r\n  - Handlers combining a body binder (`FromJSON[T]`, `FromForm[T]`, …) with\r\n    `FromFiles` no longer silently drop the files: a single `multipart/form-data`\r\n    media type is emitted, composing the DTO `$ref` with the file properties using\r\n    `allOf` (inline object schemas are merged instead). Other content types, which\r\n    cannot carry files, are dropped for these operations.\r\n  - `FileBuffer` and `bytes` are documented with both the OpenAPI 3.0 marker\r\n    (`format: binary`) and the OpenAPI 3.1 / JSON Schema 2020-12 marker\r\n    (`contentMediaType: application/octet-stream`).\r\n  - `FileBuffer` / `list[FileBuffer]` used directly as request body are documented\r\n    as an object with a property named after the parameter.\r\n\r\n  By @martinmkhitaryan.\r\n- Add `BinderBodyDocs` and `OpenAPIHandler.set_binder_body_docs()`, so custom binders\r\n  can be documented as named parts of the `multipart/form-data` request body instead\r\n  of parameters (`set_binder_docs()` also accepts a `BinderBodyDocs`). A Parameter\r\n  Object can only be in `path`, `query`, `header` or `cookie`, so this is the only\r\n  valid way to document a custom file binder; such docs are never moved to\r\n  `components/parameters`. By @martinmkhitaryan.\r\n- Never emit a binary schema for a `query`, `path`, `header` or `cookie` parameter:\r\n  a `UserWarning` is issued and the parameter is documented as a plain string.\r\n  `set_binder_docs()` also warns when given a `Parameter` with a binary schema.\r\n  By @martinmkhitaryan.\r\n- Add `get_binary_schema()` and `is_binary_schema()` helpers in\r\n  `blacksheep.server.openapi.v3`. By @martinmkhitaryan.\r\n","reactions":{"total_count":2,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":2,"eyes":0},"mentions_count":3}
