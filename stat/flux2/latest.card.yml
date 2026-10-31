@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.10.0"
   latestRelease: "v2.10.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-29T06:25:51Z
+  collectedAt: 2026-10-31T06:09:26Z
 timeline:
   created: 2020-04-24
   lastCommit: 2026-10-26
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2026-10-26
   lastPrerelease: 
 popularity:
-  star: 8481
+  star: 8488
   watcher: 68
-  fork: 807
+  fork: 812
   release: 217
   contributor: 216
-  pullRequest: 2172
+  pullRequest: 2173
   issue: 1668
 language:
   Go: 1575534
@@ -31,63 +31,63 @@ language:
 totalBytes: 1616187
 recent:
   last30d:
-    since: 2026-09-29
+    since: 2026-10-01
     release: 2
-    mergedPR: 40
+    mergedPR: 36
     openPR: 4
     closedIssue: 5
     openIssue: 5
     commit: 61
   last60d:
-    since: 2026-08-30
-    release: 3
-    mergedPR: 55
+    since: 2026-09-01
+    release: 2
+    mergedPR: 49
     openPR: 7
     closedIssue: 11
-    openIssue: 9
+    openIssue: 7
     commit: 73
   last90d:
-    since: 2026-07-31
+    since: 2026-08-02
     release: 4
     mergedPR: 61
-    openPR: 8
+    openPR: 9
     closedIssue: 14
     openIssue: 12
     commit: 82
   last180d:
-    since: 2026-05-02
+    since: 2026-05-04
     release: 10
     mergedPR: 124
-    openPR: 13
+    openPR: 14
     closedIssue: 43
     openIssue: 27
     commit: 158
   last360d:
-    since: 2025-11-03
+    since: 2025-11-05
     release: 19
     mergedPR: 204
-    openPR: 20
+    openPR: 21
     closedIssue: 102
     openIssue: 41
     commit: 232
   last720d:
-    since: 2024-11-08
+    since: 2024-11-10
     release: 30
-    mergedPR: 375
-    openPR: 25
+    mergedPR: 374
+    openPR: 26
     closedIssue: 224
     openIssue: 76
     commit: 725
 total:
   release: 217
   mergedPR: 1831
-  openPR: 44
+  openPR: 45
   closedIssue: 1470
   openIssue: 198
   commit: 4123
 ---
 path: /home/runner/.x-repo/github.com/fluxcd/flux2
-collectedAt: 2026-10-29T06:25:54Z
+collectedAt: 2026-10-31T06:09:28Z
 loc:
   Go:
     code: 37823
@@ -145,14 +145,14 @@ total:
   blanks: 7978
   files: 652
 ---
-date: "2026-10-26T14:20:49Z"
+date: "2026-10-31T01:33:17Z"
 repo:
   name: github.com/fluxcd/flux2
   commit: 3fa784edd773d56630bb9f62645e08f70c2cff0a
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 9.6
+score: 9.5
 checks:
   - name: Code-Review
     score: 10
@@ -185,8 +185,8 @@ checks:
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release.yaml:169'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release.yaml:181'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/release.yaml:195'
-      - 'Warn: jobLevel ''security-events'' permission set to ''write'': .github/workflows/scan.yaml:15'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/scan.yaml:14'
+      - 'Warn: jobLevel ''security-events'' permission set to ''write'': .github/workflows/scan.yaml:15'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/sync-labels.yaml:13'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/update.yaml:15'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/action.yaml:14'
@@ -223,34 +223,31 @@ checks:
       - 'Info:  38 out of  45 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
   - name: Vulnerabilities
-    score: 9
-    reason: 1 existing vulnerabilities detected
+    score: 7
+    reason: 3 existing vulnerabilities detected
     details:
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5932'
-  - name: SAST
+      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6860'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6866'
+  - name: Signed-Releases
     score: 10
-    reason: SAST tool is run on all commits
+    reason: 5 out of the last 5 releases have a total of 10 signed artifacts.
     details:
-      - 'Info: all commits (30) are checked with a SAST tool'
+      - 'Info: signed release artifact: flux_2.10.0_checksums.txt.sigstore.json: https://github.com/fluxcd/flux2/releases/tag/v2.10.0'
+      - 'Info: signed release artifact: flux_2.9.6_checksums.txt.sig: https://github.com/fluxcd/flux2/releases/tag/v2.9.6'
+      - 'Info: signed release artifact: flux_2.9.5_checksums.txt.sig: https://github.com/fluxcd/flux2/releases/tag/v2.9.5'
+      - 'Info: signed release artifact: flux_2.9.4_checksums.txt.sig: https://github.com/fluxcd/flux2/releases/tag/v2.9.4'
+      - 'Info: signed release artifact: flux_2.9.3_checksums.txt.sig: https://github.com/fluxcd/flux2/releases/tag/v2.9.3'
+      - 'Info: provenance for release artifact: provenance.intoto.jsonl: https://github.com/fluxcd/flux2/releases/tag/v2.10.0'
+      - 'Info: provenance for release artifact: provenance.intoto.jsonl: https://github.com/fluxcd/flux2/releases/tag/v2.9.6'
+      - 'Info: provenance for release artifact: provenance.intoto.jsonl: https://github.com/fluxcd/flux2/releases/tag/v2.9.5'
+      - 'Info: provenance for release artifact: provenance.intoto.jsonl: https://github.com/fluxcd/flux2/releases/tag/v2.9.4'
+      - 'Info: provenance for release artifact: provenance.intoto.jsonl: https://github.com/fluxcd/flux2/releases/tag/v2.9.3'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yaml:11'
-  - name: Signed-Releases
-    score: 10
-    reason: 5 out of the last 5 releases have a total of 10 signed artifacts.
-    details:
-      - 'Info: signed release artifact: flux_2.9.6_checksums.txt.sig: https://github.com/fluxcd/flux2/releases/tag/v2.9.6'
-      - 'Info: signed release artifact: flux_2.9.5_checksums.txt.sig: https://github.com/fluxcd/flux2/releases/tag/v2.9.5'
-      - 'Info: signed release artifact: flux_2.9.4_checksums.txt.sig: https://github.com/fluxcd/flux2/releases/tag/v2.9.4'
-      - 'Info: signed release artifact: flux_2.9.3_checksums.txt.sig: https://github.com/fluxcd/flux2/releases/tag/v2.9.3'
-      - 'Info: signed release artifact: flux_2.9.2_checksums.txt.sig: https://github.com/fluxcd/flux2/releases/tag/v2.9.2'
-      - 'Info: provenance for release artifact: provenance.intoto.jsonl: https://github.com/fluxcd/flux2/releases/tag/v2.9.6'
-      - 'Info: provenance for release artifact: provenance.intoto.jsonl: https://github.com/fluxcd/flux2/releases/tag/v2.9.5'
-      - 'Info: provenance for release artifact: provenance.intoto.jsonl: https://github.com/fluxcd/flux2/releases/tag/v2.9.4'
-      - 'Info: provenance for release artifact: provenance.intoto.jsonl: https://github.com/fluxcd/flux2/releases/tag/v2.9.3'
-      - 'Info: provenance for release artifact: provenance.intoto.jsonl: https://github.com/fluxcd/flux2/releases/tag/v2.9.2'
   - name: License
     score: 10
     reason: license file detected
@@ -267,6 +264,11 @@ checks:
       - 'Warn: codeowners review is not required on branch ''main'''
       - 'Info: status check found to merge onto on branch ''main'''
       - 'Info: PRs are required in order to make changes on branch ''main'''
+  - name: SAST
+    score: 10
+    reason: SAST tool is run on all commits
+    details:
+      - 'Info: all commits (30) are checked with a SAST tool'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed

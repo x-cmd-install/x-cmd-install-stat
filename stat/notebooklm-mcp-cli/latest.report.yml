@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.15.8"
   latestRelease: "v0.15.8"
   latestPrerelease: ""
-  collectedAt: 2026-10-29T06:12:04Z
+  collectedAt: 2026-10-31T06:01:48Z
 timeline:
   created: 2025-12-23
   lastCommit: 2026-10-27
@@ -15,19 +15,19 @@ timeline:
   lastRelease: 2026-10-25
   lastPrerelease: 
 popularity:
-  star: 6412
+  star: 6427
   watcher: 42
-  fork: 963
+  fork: 966
   release: 162
   contributor: 61
-  pullRequest: 201
+  pullRequest: 202
   issue: 175
 language:
   Python: 3320147
 totalBytes: 3320147
 recent:
   last30d:
-    since: 2026-09-29
+    since: 2026-10-01
     release: 10
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-08-30
+    since: 2026-09-01
     release: 21
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-07-31
+    since: 2026-08-02
     release: 31
     mergedPR: 0
     openPR: 0
@@ -51,15 +51,15 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-02
-    release: 66
+    since: 2026-05-04
+    release: 65
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-03
+    since: 2025-11-05
     release: 100
     mergedPR: 0
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-08
+    since: 2024-11-10
     release: 100
     mergedPR: 0
     openPR: 0
@@ -77,13 +77,13 @@ recent:
 total:
   release: 162
   mergedPR: 156
-  openPR: 0
+  openPR: 1
   closedIssue: 175
   openIssue: 0
   commit: 967
 ---
 path: /home/runner/.x-repo/github.com/jacob-bd/notebooklm-mcp-cli
-collectedAt: 2026-10-29T06:12:07Z
+collectedAt: 2026-10-31T06:01:51Z
 loc:
   Python:
     code: 71935
@@ -113,4 +113,4 @@ total:
 ---
 
 ---
-{"id":423727847,"author":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQtfMFM4ZQZLn","tag_name":"v0.15.8","target_commitish":"930a3ae1adfaad9894fd33a82c002f91190341ec","name":"v0.15.8: session ID parsing and authentication cache fixes","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-25T23:44:17Z","updated_at":"2026-10-25T23:46:16Z","published_at":"2026-10-25T23:44:20Z","assets":[{"id":676445681,"node_id":"RA_kwDOQtfMFM4oUb3x","name":"notebooklm-mcp-0.15.8.mcpb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":2607,"digest":"sha256:d0cfe693218355b946b08f9b7a75c8c238e55c6d830fb77e545385cf60600c5f","download_count":36,"created_at":"2026-10-25T23:46:16Z","updated_at":"2026-10-25T23:46:16Z"},{"id":676416446,"node_id":"RA_kwDOQtfMFM4oUUu-","name":"notebooklm_mcp_cli-0.15.8-py3-none-any.whl","label":"","uploader":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":560211,"digest":"sha256:098ac98061247db98dfbd6ef8c1ac01e88323af3a286bc4761b2d1bc64f5f25b","download_count":3,"created_at":"2026-10-25T23:31:29Z","updated_at":"2026-10-25T23:31:31Z"},{"id":676416449,"node_id":"RA_kwDOQtfMFM4oUUvB","name":"notebooklm_mcp_cli-0.15.8.tar.gz","label":"","uploader":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":1177967,"digest":"sha256:e551c9f89c50b66923137ce28d52adf9b14605698ab8110b5bd2dc071f7a4a00","download_count":1,"created_at":"2026-10-25T23:31:30Z","updated_at":"2026-10-25T23:31:31Z"}],"body":"## Authentication fixes\n\nI fixed three reported authentication bugs:\n\n- **#379:** We now accept negative Google session IDs in the browser transport and the page fallback.\n- **#380:** We now recognize Google's signed-out landing page when Google returns HTTP 200 and tell users their session has expired.\n- **#381:** We now reject stale cookies copied from the legacy root cache when the saved default profile has different credentials. Fresh login credentials can still update both stores.\n\nI verified repeated live notebook listing through HTTP and the browser transport, authenticated page refresh, and signed-out error reporting. I also confirmed that working credentials still succeed after a rejected stale-cache overwrite in isolated storage. Google supplied a positive live session ID, so I verified negative IDs with regression tests.\n\nThanks @alexchaifu-ship-it for #379, and @bradmarshall987 for the detailed reports and reproductions in #380 and #381.\n\n## Validation\n\n- 2,549 local tests passed, 40 skipped, and 1 deselected.\n- Ruff lint and formatting checks passed.\n- All five release version declarations match 0.15.8.\n- Built the Python wheel, source package, and desktop extension.\n- GitHub CI passed on Windows and Linux, including lint and version alignment.\n","mentions_count":2}
+{"id":423727847,"author":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQtfMFM4ZQZLn","tag_name":"v0.15.8","target_commitish":"930a3ae1adfaad9894fd33a82c002f91190341ec","name":"v0.15.8: session ID parsing and authentication cache fixes","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-25T23:44:17Z","updated_at":"2026-10-25T23:46:16Z","published_at":"2026-10-25T23:44:20Z","assets":[{"id":676445681,"node_id":"RA_kwDOQtfMFM4oUb3x","name":"notebooklm-mcp-0.15.8.mcpb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":2607,"digest":"sha256:d0cfe693218355b946b08f9b7a75c8c238e55c6d830fb77e545385cf60600c5f","download_count":53,"created_at":"2026-10-25T23:46:16Z","updated_at":"2026-10-25T23:46:16Z"},{"id":676416446,"node_id":"RA_kwDOQtfMFM4oUUu-","name":"notebooklm_mcp_cli-0.15.8-py3-none-any.whl","label":"","uploader":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":560211,"digest":"sha256:098ac98061247db98dfbd6ef8c1ac01e88323af3a286bc4761b2d1bc64f5f25b","download_count":5,"created_at":"2026-10-25T23:31:29Z","updated_at":"2026-10-25T23:31:31Z"},{"id":676416449,"node_id":"RA_kwDOQtfMFM4oUUvB","name":"notebooklm_mcp_cli-0.15.8.tar.gz","label":"","uploader":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":1177967,"digest":"sha256:e551c9f89c50b66923137ce28d52adf9b14605698ab8110b5bd2dc071f7a4a00","download_count":2,"created_at":"2026-10-25T23:31:30Z","updated_at":"2026-10-25T23:31:31Z"}],"body":"## Authentication fixes\n\nI fixed three reported authentication bugs:\n\n- **#379:** We now accept negative Google session IDs in the browser transport and the page fallback.\n- **#380:** We now recognize Google's signed-out landing page when Google returns HTTP 200 and tell users their session has expired.\n- **#381:** We now reject stale cookies copied from the legacy root cache when the saved default profile has different credentials. Fresh login credentials can still update both stores.\n\nI verified repeated live notebook listing through HTTP and the browser transport, authenticated page refresh, and signed-out error reporting. I also confirmed that working credentials still succeed after a rejected stale-cache overwrite in isolated storage. Google supplied a positive live session ID, so I verified negative IDs with regression tests.\n\nThanks @alexchaifu-ship-it for #379, and @bradmarshall987 for the detailed reports and reproductions in #380 and #381.\n\n## Validation\n\n- 2,549 local tests passed, 40 skipped, and 1 deselected.\n- Ruff lint and formatting checks passed.\n- All five release version declarations match 0.15.8.\n- Built the Python wheel, source package, and desktop extension.\n- GitHub CI passed on Windows and Linux, including lint and version alignment.\n","mentions_count":2}

@@ -2,91 +2,91 @@ about:
   description: "View disk space usage and delete unwanted data, fast."
   license: MIT
   homepage: https://lib.rs/crates/dua-cli
-  head: 467f3ec
+  head: bc03fed
   archived: false
-  latestVersion: "dua-core-v5.0.1"
-  latestRelease: "dua-core-v5.0.1"
+  latestVersion: "dua-core-v5.0.2"
+  latestRelease: "dua-core-v5.0.2"
   latestPrerelease: ""
-  collectedAt: 2026-10-29T06:11:26Z
+  collectedAt: 2026-10-31T06:17:03Z
 timeline:
   created: 2019-05-29
-  lastCommit: 2026-10-25
-  lastVersion: 2026-10-25
-  lastRelease: 2026-10-25
+  lastCommit: 2026-10-31
+  lastVersion: 2026-10-31
+  lastRelease: 2026-10-31
   lastPrerelease: 
 popularity:
-  star: 6397
+  star: 6401
   watcher: 27
-  fork: 177
-  release: 121
+  fork: 179
+  release: 122
   contributor: 76
-  pullRequest: 206
+  pullRequest: 207
   issue: 185
 language:
-  Rust: 1132290
+  Rust: 1132286
   Shell: 14354
   Makefile: 1997
   Dockerfile: 162
-totalBytes: 1148803
+totalBytes: 1148799
 recent:
   last30d:
-    since: 2026-09-29
+    since: 2026-10-01
     release: 5
-    mergedPR: 5
+    mergedPR: 6
     openPR: 0
     closedIssue: 3
     openIssue: 0
-    commit: 15
+    commit: 19
   last60d:
-    since: 2026-08-30
-    release: 10
+    since: 2026-09-01
+    release: 9
     mergedPR: 21
     openPR: 0
     closedIssue: 8
     openIssue: 0
-    commit: 42
+    commit: 46
   last90d:
-    since: 2026-07-31
-    release: 22
-    mergedPR: 50
+    since: 2026-08-02
+    release: 21
+    mergedPR: 49
     openPR: 0
     closedIssue: 12
     openIssue: 0
-    commit: 116
+    commit: 120
   last180d:
-    since: 2026-05-02
-    release: 30
-    mergedPR: 67
+    since: 2026-05-04
+    release: 31
+    mergedPR: 68
     openPR: 0
     closedIssue: 20
     openIssue: 0
-    commit: 176
+    commit: 180
   last360d:
-    since: 2025-11-03
-    release: 32
-    mergedPR: 76
+    since: 2025-11-05
+    release: 33
+    mergedPR: 77
     openPR: 0
     closedIssue: 30
     openIssue: 0
-    commit: 192
+    commit: 196
   last720d:
-    since: 2024-11-08
-    release: 38
-    mergedPR: 87
+    since: 2024-11-10
+    release: 39
+    mergedPR: 88
     openPR: 0
     closedIssue: 44
     openIssue: 0
-    commit: 315
+    commit: 320
 total:
-  release: 121
-  mergedPR: 183
+  release: 122
+  mergedPR: 184
   openPR: 0
   closedIssue: 185
   openIssue: 0
-  commit: 1329
+  commit: 1334
 ---
 path: /home/runner/.x-repo/github.com/Byron/dua-cli
-collectedAt: 2026-10-29T06:11:27Z
+collectedAt: 2026-10-31T06:17:05Z
 loc:
   Rust:
     code: 28953
@@ -115,13 +115,13 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 4016
-    blanks: 1686
+    comments: 4039
+    blanks: 1700
     files: 3
 total:
   code: 29604
-  comments: 5246
-  blanks: 4107
+  comments: 5269
+  blanks: 4121
   files: 76
 ---
 date: "2026-10-26"
@@ -230,4 +230,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 23 are checked with a SAST tool'
 ---
-{"id":423449486,"author":{"login":"Byron","id":63622,"node_id":"MDQ6VXNlcjYzNjIy","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOC0cxwM4ZPVOO","tag_name":"dua-core-v5.0.1","target_commitish":"main","name":"dua-core v5.0.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-25T14:20:37Z","updated_at":"2026-10-25T14:20:40Z","published_at":"2026-10-25T14:20:40Z","assets":[],"body":"### Bug Fixes\n\n - fall back when macOS bulk directory reads are unavailable\n   The new implementation can have a performance impact if the bulk reads are turned\n   off, but this can be controlled with configuration so shouldn't be a problem.\n   Also, it's for old systems.\n   \n   <!-- agent -->\n   PowerPC and macOS before 10.10 do not provide getattrlistbulk, so\n   unconditional native directory enumeration leaves dua-core consumers\n   with an undefined symbol at link time.\n   \n   Select bulk reads from the target architecture and deployment version in\n   build.rs. Respect MACOSX_DEPLOYMENT_TARGET, otherwise query the target\n   compiler's default; unknown versions and architectures use ordinary\n   directory reads. Keep the existing macOS entry/metadata API and preserve\n   requested APFS clone metadata in the fallback.\n   \n   Review identified an unused 64 KiB allocation per directory in fallback\n   builds. Make that buffer zero-sized, avoiding the heap allocation while\n   keeping the shared reader layout and fallback behavior.\n   \n   Also omit clock_gettime before macOS 10.12, leaving the metadata probe's\n   existing missing-clock behavior in place.\n - avoid reading past HEADER_SIZE in Windows ReadDir::entry_at\n   `FILE_ID_BOTH_DIR_INFO` has a 104-byte fixed header (`HEADER_SIZE`) followed by `FileName: [u16; 1]` (2 bytes) and 6 bytes of trailing alignment padding (`size_of::<FILE_ID_BOTH_DIR_INFO>() == 112`).\n\n### Commit Statistics\n\n - 4 commits contributed to the release.\n - 10 days passed between releases.\n - 2 commits were understood as [conventional](https://www.conventionalcommits.org).\n - 1 unique issue was worked on: #417\n\n### Commit Details\n\n<csr-read-only-do-not-edit/>\n\n<details><summary>view details</summary>\n\n * **#417**\n    - Fall back when macOS bulk directory reads are unavailable (67c8576)\n * **Uncategorized**\n    - Merge pull request #418 from Byron/conditional-bulk-macos (fb5d863)\n    - Merge pull request #416 from kiranani/fix-windows-entry-at-oob-read (48c91c7)\n    - Avoid reading past HEADER_SIZE in Windows ReadDir::entry_at (b5ef287)\n</details>\n\n"}
+{"id":429701307,"author":{"login":"Byron","id":63622,"node_id":"MDQ6VXNlcjYzNjIy","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOC0cxwM4ZnLi7","tag_name":"dua-core-v5.0.2","target_commitish":"main","name":"dua-core v5.0.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-31T03:40:02Z","updated_at":"2026-10-31T03:40:04Z","published_at":"2026-10-31T03:40:04Z","assets":[],"body":"Add license files to the release package.\n\n### Chore\n\n - thanks clippy\n\n### Commit Statistics\n\n - 4 commits contributed to the release.\n - 6 days passed between releases.\n - 1 commit was understood as [conventional](https://www.conventionalcommits.org).\n - 0 issues like '(#ID)' were seen in commit messages\n\n### Thanks Clippy\n\n[Clippy](https://github.com/rust-lang/rust-clippy) helped 1 time to make code idiomatic. \n\n### Commit Details\n\n<csr-read-only-do-not-edit/>\n\n<details><summary>view details</summary>\n\n * **Uncategorized**\n    - Prepare changelog prior to dua-core release (3f954df)\n    - Merge pull request #420 from blinxen/main (cca6d29)\n    - Thanks clippy (996041e)\n    - Add license link to dua-core so it gets published to crates.io too (55d0c54)\n</details>\n\n"}
