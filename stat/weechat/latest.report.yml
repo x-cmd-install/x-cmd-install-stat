@@ -2,99 +2,99 @@ about:
   description: "The extensible chat client."
   license: GPL-3.0
   homepage: https://weechat.org
-  head: c07415d
+  head: 4eef823
   archived: false
-  latestVersion: "v4.10.1"
-  latestRelease: "v4.10.1"
+  latestVersion: "v4.10.2"
+  latestRelease: "v4.10.2"
   latestPrerelease: ""
-  collectedAt: 2026-10-31T06:51:55Z
+  collectedAt: 2026-11-01T07:18:55Z
 timeline:
   created: 2014-03-03
-  lastCommit: 2026-10-29
-  lastVersion: 2026-09-05
-  lastRelease: 2026-09-05
+  lastCommit: 2026-10-31
+  lastVersion: 2026-10-31
+  lastRelease: 2026-10-31
   lastPrerelease: 
 popularity:
-  star: 3418
+  star: 3420
   watcher: 78
   fork: 365
-  release: 89
+  release: 90
   contributor: 175
   pullRequest: 726
   issue: 1622
 language:
-  C: 10188650
-  C++: 2841439
+  C: 10191340
+  C++: 2847167
   Python: 254760
   CMake: 75706
   Shell: 25745
   PHP: 16313
   Makefile: 1174
-totalBytes: 13403787
+totalBytes: 13412205
 recent:
   last30d:
-    since: 2026-10-01
-    release: 0
+    since: 2026-10-02
+    release: 1
     mergedPR: 0
     openPR: 0
     closedIssue: 3
     openIssue: 1
-    commit: 254
+    commit: 182
   last60d:
-    since: 2026-09-01
-    release: 1
+    since: 2026-09-02
+    release: 2
     mergedPR: 2
     openPR: 0
     closedIssue: 5
     openIssue: 2
-    commit: 359
+    commit: 338
   last90d:
-    since: 2026-08-02
+    since: 2026-08-03
     release: 2
     mergedPR: 2
     openPR: 0
     closedIssue: 6
     openIssue: 4
-    commit: 441
+    commit: 443
   last180d:
-    since: 2026-05-04
-    release: 7
+    since: 2026-05-05
+    release: 8
     mergedPR: 10
     openPR: 0
     closedIssue: 8
     openIssue: 7
     commit: 662
   last360d:
-    since: 2025-11-05
-    release: 12
+    since: 2025-11-06
+    release: 13
     mergedPR: 16
     openPR: 1
-    closedIssue: 20
+    closedIssue: 19
     openIssue: 16
-    commit: 892
+    commit: 852
   last720d:
-    since: 2024-11-10
-    release: 22
+    since: 2024-11-11
+    release: 23
     mergedPR: 30
     openPR: 2
-    closedIssue: 48
-    openIssue: 28
-    commit: 1236
+    closedIssue: 49
+    openIssue: 27
+    commit: 1241
 total:
-  release: 89
+  release: 90
   mergedPR: 402
-  openPR: 35
-  closedIssue: 1271
-  openIssue: 351
-  commit: 14400
+  openPR: 34
+  closedIssue: 1274
+  openIssue: 348
+  commit: 14405
 ---
 path: /home/runner/.x-repo/github.com/weechat/weechat
-collectedAt: 2026-10-31T06:52:49Z
+collectedAt: 2026-11-01T07:19:48Z
 loc:
   C:
-    code: 223505
-    comments: 32338
-    blanks: 37941
+    code: 223554
+    comments: 32353
+    blanks: 37946
     files: 251
   AsciiDoc:
     code: 149169
@@ -102,9 +102,9 @@ loc:
     blanks: 47931
     files: 112
   Cpp:
-    code: 57187
-    comments: 14583
-    blanks: 13203
+    code: 57297
+    comments: 14604
+    blanks: 13227
     files: 130
   CHeader:
     code: 14264
@@ -163,8 +163,8 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 6888
-    blanks: 1942
+    comments: 6913
+    blanks: 1947
     files: 7
   Text:
     code: 0
@@ -172,9 +172,9 @@ loc:
     blanks: 105
     files: 1
 total:
-  code: 452951
-  comments: 60435
-  blanks: 104625
+  code: 453110
+  comments: 60496
+  blanks: 104659
   files: 835
 ---
 date: "2026-10-19"
@@ -267,4 +267,4 @@ checks:
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
 ---
-{"id":383186345,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAQjhas4W1vWp","tag_name":"v4.10.1","target_commitish":"main","name":"v4.10.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-05T08:34:41Z","updated_at":"2026-09-05T08:37:03Z","published_at":"2026-09-05T08:37:03Z","assets":[],"body":"### Fixed\n\n- irc: fix memory leak in SASL authentication with mechanism \"ecdsa-nist256p-challenge\"\n- irc: reject an empty SASL challenge received with mechanism \"ecdsa-nist256p-challenge\"\n\n### Security\n\n- relay: limit size of data queued for sending to a client to prevent memory exhaustion ([#2357](https://github.com/weechat/weechat/issues/2357))\n- relay: reject fragmented, compressed or oversized websocket control frames received from a client ([#2356](https://github.com/weechat/weechat/issues/2356))\n- relay: limit size of partial message received from a client to prevent memory exhaustion ([#2347](https://github.com/weechat/weechat/issues/2347))\n- script: reject script names containing path separators in the scripts repository file to prevent writing files outside the scripts directory ([#2351](https://github.com/weechat/weechat/issues/2351))\n- xfer: fix comparison of status in search of transfers, preventing a remote peer from starting a file transfer that was not accepted by the user ([#2352](https://github.com/weechat/weechat/issues/2352))\n- xfer: limit size of partial message received in DCC chat to prevent memory exhaustion ([#2349](https://github.com/weechat/weechat/issues/2349))\n- xfer: remove path from filename received in DCC file transfer to prevent writing the file outside the download directory ([#2348](https://github.com/weechat/weechat/issues/2348))\n"}
+{"id":429819514,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAQjhas4ZnoZ6","tag_name":"v4.10.2","target_commitish":"main","name":"v4.10.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-31T08:39:33Z","updated_at":"2026-10-31T08:46:16Z","published_at":"2026-10-31T08:46:16Z","assets":[],"body":"### Fixed\n\n- core: fix freeze when displaying a very long message, for example a corrupted log file displayed in backlog ([#637](https://github.com/weechat/weechat/issues/637))\n- core: fix memory leak when the last buffer is closed\n- api: fix compilation error with macro weechat_file_compare\n- guile: fix return value of functions mkdir_home, mkdir and mkdir_parents when the directory cannot be created\n- perl: fix wrong arguments error in function nicklist_remove_all\n- relay/api: fix memory leak when a message without body is sent to a client connected with websocket\n- tcl: return 0 instead of raising an error in functions mkdir_home, mkdir and mkdir_parents when the directory cannot be created\n- tcl: add missing function completion_free\n\n### Security\n\n- core: fix integer overflow in dynamic strings when their size exceeds 4 GiB ([GHSA-h394-85x4-68c7](https://github.com/weechat/weechat/security/advisories/GHSA-h394-85x4-68c7))\n- core: fix heap buffer overflow in charset conversion when the converted string is more than 4 times longer than the input and contains invalid chars, for example with charset TSCII ([GHSA-q32h-5qvq-3936](https://github.com/weechat/weechat/security/advisories/GHSA-q32h-5qvq-3936))\n- irc: limit number of prefix modes in PREFIX of message 005 to prevent memory exhaustion\n- irc: escape `${` in values of variables `$nick`, `$channel` and `$server` in commands `/allchan`, `/allpv` and `/allserv`, to prevent evaluation of untrusted values\n- irc: escape `${` in server options addresses, nicks, password and autojoin set from an IRC URL (`irc://...`), to prevent evaluation of untrusted values\n- irc: escape `${` in channel names saved in server option autojoin, to prevent evaluation of channel names received from the server (for example on channel forward)\n- irc: fix heap buffer overflow in nick prefixes when the server sends an empty PREFIX in message 005 and the connection is lost before message 001 ([GHSA-xj8h-x2w9-m8m6](https://github.com/weechat/weechat/security/advisories/GHSA-xj8h-x2w9-m8m6))\n- relay: limit size of HTTP headers received from a client to prevent memory exhaustion ([GHSA-h394-85x4-68c7](https://github.com/weechat/weechat/security/advisories/GHSA-h394-85x4-68c7))\n- relay: fix heap buffer overflow in path of hdata sent to clients with \"weechat\" protocol ([GHSA-8wr2-x42m-7fxv](https://github.com/weechat/weechat/security/advisories/GHSA-8wr2-x42m-7fxv))\n"}

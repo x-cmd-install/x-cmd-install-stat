@@ -2,97 +2,97 @@ about:
   description: "Text-based interface for BitTorrent clients (Transmission, qBittorrent, Deluge, rTorrent)"
   license: GPL-3.0
   homepage: 
-  head: cd06573
+  head: 6d28a0d
   archived: false
-  latestVersion: "v3.0.0"
-  latestRelease: "v3.0.0"
+  latestVersion: "v3.1.0"
+  latestRelease: "v3.1.0"
   latestPrerelease: ""
-  collectedAt: 2026-10-31T05:31:32Z
+  collectedAt: 2026-11-01T05:56:39Z
 timeline:
   created: 2024-10-04
-  lastCommit: 2026-10-25
-  lastVersion: 2026-10-18
-  lastRelease: 2026-10-18
+  lastCommit: 2026-10-31
+  lastVersion: 2026-10-31
+  lastRelease: 2026-10-31
   lastPrerelease: 
 popularity:
   star: 186
   watcher: 1
   fork: 2
-  release: 26
-  contributor: 2
-  pullRequest: 93
+  release: 27
+  contributor: 3
+  pullRequest: 94
   issue: 93
 language:
-  Python: 745410
+  Python: 755743
   CSS: 13646
   Shell: 3824
   Makefile: 2292
-totalBytes: 765172
+totalBytes: 775505
 recent:
   last30d:
-    since: 2026-10-01
-    release: 1
-    mergedPR: 2
+    since: 2026-10-02
+    release: 2
+    mergedPR: 3
     openPR: 1
     closedIssue: 2
     openIssue: 0
-    commit: 38
+    commit: 26
   last60d:
-    since: 2026-09-01
-    release: 2
-    mergedPR: 6
+    since: 2026-09-02
+    release: 3
+    mergedPR: 7
     openPR: 1
     closedIssue: 2
     openIssue: 0
-    commit: 77
+    commit: 71
   last90d:
-    since: 2026-08-02
-    release: 2
-    mergedPR: 6
+    since: 2026-08-03
+    release: 3
+    mergedPR: 7
     openPR: 1
     closedIssue: 2
     openIssue: 0
-    commit: 77
+    commit: 79
   last180d:
-    since: 2026-05-04
-    release: 5
-    mergedPR: 11
+    since: 2026-05-05
+    release: 6
+    mergedPR: 12
     openPR: 1
     closedIssue: 3
     openIssue: 0
-    commit: 104
+    commit: 106
   last360d:
-    since: 2025-11-05
-    release: 14
-    mergedPR: 46
+    since: 2025-11-06
+    release: 15
+    mergedPR: 47
     openPR: 1
     closedIssue: 43
     openIssue: 1
-    commit: 378
+    commit: 360
   last720d:
-    since: 2024-11-10
-    release: 21
-    mergedPR: 74
+    since: 2024-11-11
+    release: 22
+    mergedPR: 75
     openPR: 1
     closedIssue: 58
     openIssue: 1
-    commit: 454
+    commit: 456
 total:
-  release: 26
-  mergedPR: 88
+  release: 27
+  mergedPR: 89
   openPR: 1
   closedIssue: 92
   openIssue: 1
-  commit: 613
+  commit: 615
 ---
 path: /home/runner/.x-repo/github.com/anlar/tewi
-collectedAt: 2026-10-31T05:31:33Z
+collectedAt: 2026-11-01T05:56:40Z
 loc:
   Python:
-    code: 18168
-    comments: 1217
-    blanks: 3389
-    files: 81
+    code: 18396
+    comments: 1238
+    blanks: 3463
+    files: 82
   Yaml:
     code: 199
     comments: 9
@@ -130,8 +130,8 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 485
-    blanks: 186
+    comments: 488
+    blanks: 189
     files: 2
   Text:
     code: 0
@@ -139,11 +139,11 @@ loc:
     blanks: 121
     files: 2
 total:
-  code: 18866
-  comments: 2288
-  blanks: 3777
-  files: 95
+  code: 19094
+  comments: 2312
+  blanks: 3854
+  files: 96
 ---
 
 ---
-{"id":416391238,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOM7gUDM4Y0aBG","tag_name":"v3.0.0","target_commitish":"master","name":"v3.0.0","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-10-18T10:46:56Z","updated_at":"2026-10-18T12:11:49Z","published_at":"2026-10-18T12:11:49Z","assets":[],"body":"## [3.0.0] - 2026-10-18 - Hypersonic Paws\r\n\r\n### Added\r\n\r\n- Add rTorrent support (0.9.7 or newer), connecting directly via SCGI or via XML-RPC over HTTP when `--path` is set [#109](https://github.com/anlar/tewi/pull/109)\r\n- Add sorting for web search results (`s` hotkey) [#180](https://github.com/anlar/tewi/pull/180)\r\n- Add `Ctrl+F`/`Ctrl+B` (page down/up) and `Ctrl+D`/`Ctrl+U` (half page down/up) hotkeys to torrent list\r\n\r\n### Changed\r\n\r\n- Declare `requests` as an explicit dependency (used by Deluge client, previously installed only transitively via `qbittorrent-api`)\r\n- `PgUp`/`PgDown` in torrent list now scroll by page instead of jumping to first/last item\r\n- Ask for confirmation before starting or stopping all torrents\r\n- Torrent list shows and sorts by size of selected files\r\n- Torrent details show selected size and files count next to totals when some files are skipped\r\n- Raise minimum required Textual version to 0.86.0 (themes support: theme selector and theme colors in torrent list)\r\n- Fix torrent list scroll to highlighted item when switching to page with different number of torrents (e.g. moving up from last page left list scrolled to top)\r\n- Rewrite torrent list with Textual line API (only visible lines are drawn) for much faster loading, updates and scrolling, and redesign it\r\n- Default torrent list page size increased from 30 to 1000\r\n\r\n"}
+{"id":430111516,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOM7gUDM4Zovsc","tag_name":"v3.1.0","target_commitish":"master","name":"v3.1.0","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-10-31T18:29:15Z","updated_at":"2026-10-31T18:32:03Z","published_at":"2026-10-31T18:32:03Z","assets":[],"body":"## [3.1.0] - 2026-10-31 - Spectrum Rabbit\r\n\r\n### Added\r\n\r\n- Complete available profile names for `--profile` in shell completion\r\n- Add custom color themes via `[theme.NAME]` config sections: define new theme (optionally based on existing one with `base` option) or override colors of built-in theme, using Textual color names or hex codes\r\n- Add `--themes` CLI flag to print available themes (built-in and custom), one per line\r\n\r\n### Changed\r\n\r\n- Fix crash when opening torrent details on older Textual caused by unsupported column keys in files table\r\n- Show connection status in top panel only when disconnected, as readable badge after host (connection dot colors were unreadable in some themes)\r\n- Fix unreadable, faint or missing colors in non-default, light and ANSI themes: top and bottom panels, torrent status, badges, speeds, progress bar and secondary details (peers, speeds, sizes) on highlighted row, file priorities, freeleech tag, titles and key hints on panel borders, and inactive tabs in torrent details\r\n- Make dialogs readable in all themes and stand out more: primary color borders, solid background and stronger dimming behind them\r\n- `--profiles` prints a machine-readable list of profile names, one per line (nothing when no profiles exist)\r\n- Unknown theme from `--theme` or config stops the app with error instead of falling back to default theme\r\n- Config file created by `--create-config` ends with vim modeline for INI syntax highlighting\r\n\r\n### Removed\r\n\r\n- Remove `--list-themes` CLI flag, replaced by `--themes`\r\n\r\n"}
