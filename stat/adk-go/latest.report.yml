@@ -2,97 +2,97 @@ about:
   description: "An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control."
   license: Apache-2.0
   homepage: https://google.github.io/adk-docs/
-  head: beea418
+  head: 40f132d
   archived: false
-  latestVersion: "v1.9.0"
-  latestRelease: "v1.9.0"
+  latestVersion: "v2.7.0"
+  latestRelease: "v2.7.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-02T06:28:41Z
+  collectedAt: 2026-11-03T07:09:29Z
 timeline:
   created: 2025-05-05
-  lastCommit: 2026-10-30
-  lastVersion: 2026-10-15
-  lastRelease: 2026-10-15
+  lastCommit: 2026-11-02
+  lastVersion: 2026-11-02
+  lastRelease: 2026-11-02
   lastPrerelease: 
 popularity:
-  star: 8917
-  watcher: 89
-  fork: 990
-  release: 24
-  contributor: 144
-  pullRequest: 1564
-  issue: 494
+  star: 8924
+  watcher: 88
+  fork: 992
+  release: 25
+  contributor: 145
+  pullRequest: 1568
+  issue: 498
 language:
-  Go: 11124931
+  Go: 11127474
   HTML: 53359
   Shell: 32799
   JavaScript: 4232
   Dockerfile: 2739
   Go Template: 1407
-totalBytes: 11219467
+totalBytes: 11222010
 recent:
   last30d:
-    since: 2026-10-03
-    release: 3
-    mergedPR: 105
-    openPR: 121
-    closedIssue: 50
-    openIssue: 90
-    commit: 96
+    since: 2026-10-04
+    release: 4
+    mergedPR: 103
+    openPR: 116
+    closedIssue: 51
+    openIssue: 93
+    commit: 98
   last60d:
-    since: 2026-09-03
-    release: 7
-    mergedPR: 229
-    openPR: 139
-    closedIssue: 95
-    openIssue: 106
-    commit: 212
+    since: 2026-09-04
+    release: 8
+    mergedPR: 219
+    openPR: 133
+    closedIssue: 93
+    openIssue: 109
+    commit: 214
   last90d:
-    since: 2026-08-04
-    release: 10
-    mergedPR: 347
-    openPR: 151
-    closedIssue: 145
-    openIssue: 119
-    commit: 313
+    since: 2026-08-05
+    release: 11
+    mergedPR: 343
+    openPR: 144
+    closedIssue: 143
+    openIssue: 122
+    commit: 315
   last180d:
-    since: 2026-05-06
-    release: 16
+    since: 2026-05-07
+    release: 17
     mergedPR: 594
-    openPR: 165
-    closedIssue: 190
-    openIssue: 137
-    commit: 414
+    openPR: 160
+    closedIssue: 191
+    openIssue: 140
+    commit: 416
   last360d:
-    since: 2025-11-07
-    release: 24
-    mergedPR: 822
-    openPR: 168
-    closedIssue: 311
-    openIssue: 172
-    commit: 604
-  last720d:
-    since: 2024-11-12
-    release: 24
-    mergedPR: 1023
-    openPR: 168
-    closedIssue: 320
+    since: 2025-11-08
+    release: 25
+    mergedPR: 823
+    openPR: 163
+    closedIssue: 310
     openIssue: 174
-    commit: 822
+    commit: 606
+  last720d:
+    since: 2024-11-13
+    release: 25
+    mergedPR: 1025
+    openPR: 163
+    closedIssue: 321
+    openIssue: 177
+    commit: 824
 total:
-  release: 24
-  mergedPR: 1023
-  openPR: 168
-  closedIssue: 320
-  openIssue: 174
-  commit: 822
+  release: 25
+  mergedPR: 1025
+  openPR: 163
+  closedIssue: 321
+  openIssue: 177
+  commit: 824
 ---
 path: /home/runner/.x-repo/github.com/google/adk-go
-collectedAt: 2026-11-02T06:28:46Z
+collectedAt: 2026-11-03T07:09:36Z
 loc:
   Go:
-    code: 248080
-    comments: 50348
+    code: 248133
+    comments: 50354
     blanks: 24932
     files: 831
   Json:
@@ -141,11 +141,11 @@ loc:
     blanks: 753
     files: 37
 total:
-  code: 270630
-  comments: 53130
+  code: 270683
+  comments: 53136
   blanks: 26234
   files: 1077
 ---
 
 ---
-{"id":411747320,"author":{"login":"wojtas000","id":56300703,"node_id":"MDQ6VXNlcjU2MzAwNzAz","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOOk6zdc4YisP4","tag_name":"v2.6.0","target_commitish":"main","name":"v2.6.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-13T13:21:42Z","updated_at":"2026-10-29T10:20:23Z","published_at":"2026-10-13T14:09:19Z","assets":[],"body":"## Highlights (released Oct 13)\r\n\r\n- Gemini 4 Argon support: Gemini 4 models such as gemini-4-argon stop long answers at a per-request output limit. ADK now resumes these answers automatically, so they come back whole instead of cut off. The resuming is now done by the genai SDK (v1.74.0). (#1715, #1759, #1822)\r\n- Auth: credentials are refreshed and the call retried once after a downstream 401/403. Remote A2A agents accept per-request auth through Config.Auth. (#1136, #1150)\r\n- MCP: request-scoped metadata is passed on to MCP tool calls. Callers can close MCP sessions, waiting for a session respects context cancellation, and connection config is checked when the toolset is built. (#1429, #1713, #1717, #1687)\r\n- Server hardening: every web launcher route checks Host and Origin. /run_live limits message size, dead peers and concurrent sessions. The Pub/Sub and Eventarc trigger endpoints can require a Google OIDC token, and MaxConcurrentRuns is now enforced. (#1641, #1648, #1737, #1720)\r\n- New experimental endpoint: /apps/{app_name}/app-info. (#1404)\r\n- Privacy fix: session-scoped artifact filenames no longer show up in shared listings, both in-memory and on GCS. (#1673, #1708)\r\n- Reliability:\r\n  - Loop and sequential agents stop when a sub-agent fails. This changes behavior for existing users.\r\n  - Toolsets are re-evaluated on every step.\r\n  - Concurrency fixes in the session database, the in-memory session store and artifact saves.\r\n  - Vertex AI sessions now keep code-execution parts.\r\n  - (#1684, #785, #1743, #1575, #1756, #1729)\r\n\r\n## What's Changed\r\n* fix(artifact): keep session filenames out of shared listings by @ktsoator in https://github.com/google/adk-go/pull/1673\r\n* test(workflow): enable TestRunNode_ErrInvalidRunNodeContext_OnStaticContext by @sushant-me in https://github.com/google/adk-go/pull/1679\r\n* fix(mcptoolset): validate connection configuration during construction by @ktsoator in https://github.com/google/adk-go/pull/1687\r\n* test(telemetry): replace hand-written telemetry expectations with record/replay goldens by @RKest in https://github.com/google/adk-go/pull/1640\r\n* fix(workflow): build route edges in a deterministic order by @wolo-lab in https://github.com/google/adk-go/pull/1268\r\n* fix(workflow): single-flight RunNode idempotency cache by @wolo-lab in https://github.com/google/adk-go/pull/1043\r\n* fix(skilltoolset): count skill metadata limits in runes by @Harbor404 in https://github.com/google/adk-go/pull/1709\r\n* fix(artifact): keep session filenames out of GCS shared listings by @ktsoator in https://github.com/google/adk-go/pull/1708\r\n* fix(launcher): check Host and Origin on every web launcher route by @jjsasha63 in https://github.com/google/adk-go/pull/1641\r\n* chore(deps): bump google.golang.org/genai from 1.71.0 to 1.72.0 by @baptmont in https://github.com/google/adk-go/pull/1714\r\n* feat(remoteagent): apply per-request auth to A2A via Config.Auth by @wolo-lab in https://github.com/google/adk-go/pull/1150\r\n* fix(utils): respect Nullable field on nil values during schema validation by @moritzwilhelm in https://github.com/google/adk-go/pull/1566\r\n* fix(examples): return an error for missing image data by @ktsoator in https://github.com/google/adk-go/pull/1509\r\n* test(compaction): actually run two writers at once by @baptmont in https://github.com/google/adk-go/pull/1485\r\n* fix(server): default a zero SSE write timeout to 120s by @Vivek1106-04 in https://github.com/google/adk-go/pull/1686\r\n* fix(llminternal): re-evaluate toolsets on every step in toolProcessor by @nuthalapativarun in https://github.com/google/adk-go/pull/785\r\n* docs(workflow): correct doc comments that describe fields and behaviour that do not exist by @sushant-me in https://github.com/google/adk-go/pull/1711\r\n* chore(deps): bump the go-minor-patch group with 5 updates by @dependabot[bot] in https://github.com/google/adk-go/pull/1725\r\n* fix(session/inmemory): holding sess.mu accross the eventCopy creation in AppendEvent by @dhakad22klx in https://github.com/google/adk-go/pull/1575\r\n* fix(runner): preserve buffered live events at stream end by @Ultronen in https://github.com/google/adk-go/pull/1547\r\n* fix(llmagent): clone Tools and Toolsets slices in constructor to prevent backing array aliasing by @somuai in https://github.com/google/adk-go/pull/1493\r\n* fix(session/database): surface JSON marshal errors on state writes by @Huang-404-Q in https://github.com/google/adk-go/pull/1551\r\n* fix(llminternal): classify a dropped live connection by type, not error text by @harshitwandhare in https://github.com/google/adk-go/pull/1603\r\n* fix(mcptoolset): allow callers to close MCP sessions by @ktsoator in https://github.com/google/adk-go/pull/1713\r\n* fix(llminternal): omit foreign thoughts from agent context by @jabrailkhalil in https://github.com/google/adk-go/pull/1719\r\n* fix(mcptoolset): honor context cancellation while waiting for sessions by @via2004 in https://github.com/google/adk-go/pull/1717\r\n* docs: fix stale method names in doc comments by @PratikDhanave in https://github.com/google/adk-go/pull/1721\r\n* fix(server/triggers): honor MaxConcurrentRuns in PubSubController by @PratikDhanave in https://github.com/google/adk-go/pull/1720\r\n* chore(lint): forbid process-wide logging in library code by @jjsasha63 in https://github.com/google/adk-go/pull/1649\r\n* fix(sequentialagent): serialize live completion tool injection by @jabrailkhalil in https://github.com/google/adk-go/pull/1722\r\n* fix(llminternal): leave ${var} and \\{var} placeholders literal by @Vivek1106-04 in https://github.com/google/adk-go/pull/1682\r\n* docs(memory): fix stale \"string\" wording on MemoryEntry.Timestamp by @PratikDhanave in https://github.com/google/adk-go/pull/1745\r\n* test(agentanalytics): cover the retry that opens a fresh stream by @Trainingcqy in https://github.com/google/adk-go/pull/1527\r\n* fix(vertexai): preserve ExecutableCode and CodeExecutionResult in session storage by @karthik-0306 in https://github.com/google/adk-go/pull/1729\r\n* test(examples): cover image precedence and empty results by @ktsoator in https://github.com/google/adk-go/pull/1567\r\n* fix(model/gemini): preserve empty text on thought-signature parts by @adilalperenciftci in https://github.com/google/adk-go/pull/1639\r\n* feat(mcptoolset): forward request-scoped metadata to MCP tool calls by @jjsasha63 in https://github.com/google/adk-go/pull/1429\r\n* fix(workflowagents): stop loop and sequential agents on sub-agent error by @Vivek1106-04 in https://github.com/google/adk-go/pull/1684\r\n* fix(adkrest): render nested workflow clusters in graph images by @leilei3167 in https://github.com/google/adk-go/pull/1724\r\n* fix(adkrest): bound /run_live messages, dead peers and concurrent sessions by @jjsasha63 in https://github.com/google/adk-go/pull/1648\r\n* test(vertexai): keep RPC replay independent of external network by @Ultronen in https://github.com/google/adk-go/pull/1548\r\n* fix(memory): normalize punctuation in in-memory search by @tejas5038 in https://github.com/google/adk-go/pull/1565\r\n* chore(lint): add misspell linter and perform US spelling sweep by @somuai in https://github.com/google/adk-go/pull/1465\r\n* test(llminternal): cover the nil RunConfig branch in callLLM by @baptmont in https://github.com/google/adk-go/pull/1368\r\n* fix(session/database): lock app and user state rows in AppendEvent by @Vivek1106-04 in https://github.com/google/adk-go/pull/1743\r\n* test(llmagent): drive tail retention end to end against a recorded model by @baptmont in https://github.com/google/adk-go/pull/1438\r\n* fix(runner): preserve BeforeRun plugin responses by @ktsoator in https://github.com/google/adk-go/pull/1598\r\n* fix(agent): synchronize concurrent artifact saves by @ktsoator in https://github.com/google/adk-go/pull/1756\r\n* docs(workflow): fix Run signature in NewRequestInputEvent example by @PratikDhanave in https://github.com/google/adk-go/pull/1746\r\n* refactor(agent): remove redundant Context method declarations by @moodbased in https://github.com/google/adk-go/pull/1758\r\n* docs(agent): clarify agent callback error behavior by @ktsoator in https://github.com/google/adk-go/pull/1761\r\n* chore(deps): bump the go-minor-patch group with 12 updates by @dependabot[bot] in https://github.com/google/adk-go/pull/1798\r\n* fix(llminternal): correct misleading \"global\" in appendInstructions error by @PratikDhanave in https://github.com/google/adk-go/pull/1804\r\n* fix(agenttool): wrap the runner.New error instead of discarding it by @PratikDhanave in https://github.com/google/adk-go/pull/1803\r\n* docs(telemetry): fix StartNodeSpan doc for invoke_workflow by @PratikDhanave in https://github.com/google/adk-go/pull/1805\r\n* fix(llminternal): guard nil first candidate in streaming aggregator by @PratikDhanave in https://github.com/google/adk-go/pull/1802\r\n* docs(mcptoolset): fix constructor example and schema comment by @ktsoator in https://github.com/google/adk-go/pull/1779\r\n* feat(exp): add the experimental /apps/{app_name}/app-info endpoint by @wojtas000 in https://github.com/google/adk-go/pull/1404\r\n* fix(loopagent): return when there are no sub-agents by @anzal1 in https://github.com/google/adk-go/pull/1780\r\n* chore(deps): bump google.golang.org/grpc from 1.83.1 to 1.83.2 in /plugin/agentanalytics in the go_modules group across 1 directory by @dependabot[bot] in https://github.com/google/adk-go/pull/1814\r\n* Align vertexai session service via ADK REST API with other impl by @kdroste-google in https://github.com/google/adk-go/pull/1571\r\n* fix: reject Cloud Run service name beginning with '-' by @herdiyana256 in https://github.com/google/adk-go/pull/1505\r\n* chore(version): bump the tagged version constant to 2.6.0 by @wolo-lab in https://github.com/google/adk-go/pull/1817\r\n* feat(auth): refresh and retry once on a downstream 401/403 by @wolo-lab in https://github.com/google/adk-go/pull/1136\r\n* docs(artifact): clarify missing-version deletion behavior by @ktsoator in https://github.com/google/adk-go/pull/1767\r\n* fix(runner): drop nil parts from live requests by @Trainingcqy in https://github.com/google/adk-go/pull/1795\r\n* fix(server/triggers): let the Pub/Sub and Eventarc endpoints require a Google OIDC token by @wolo-lab in https://github.com/google/adk-go/pull/1737\r\n* fix(model/gemini): let the genai SDK resume paused generations by @baptmont in https://github.com/google/adk-go/pull/1822\r\n\r\n## New Contributors\r\n* @sushant-me made their first contribution in https://github.com/google/adk-go/pull/1679\r\n* @Harbor404 made their first contribution in https://github.com/google/adk-go/pull/1709\r\n* @moritzwilhelm made their first contribution in https://github.com/google/adk-go/pull/1566\r\n* @Ultronen made their first contribution in https://github.com/google/adk-go/pull/1547\r\n* @Huang-404-Q made their first contribution in https://github.com/google/adk-go/pull/1551\r\n* @jabrailkhalil made their first contribution in https://github.com/google/adk-go/pull/1719\r\n* @via2004 made their first contribution in https://github.com/google/adk-go/pull/1717\r\n* @karthik-0306 made their first contribution in https://github.com/google/adk-go/pull/1729\r\n* @adilalperenciftci made their first contribution in https://github.com/google/adk-go/pull/1639\r\n* @tejas5038 made their first contribution in https://github.com/google/adk-go/pull/1565\r\n* @moodbased made their first contribution in https://github.com/google/adk-go/pull/1758\r\n* @anzal1 made their first contribution in https://github.com/google/adk-go/pull/1780\r\n\r\n**Full Changelog**: https://github.com/google/adk-go/compare/v2.5.0...v2.6.0","reactions":{"total_count":2,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":2,"rocket":0,"eyes":0},"mentions_count":28}
+{"id":431334261,"author":{"login":"wolo-lab","id":274205925,"node_id":"U_kgDOEFgM5Q","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOOk6zdc4ZtaN1","tag_name":"v2.7.0","target_commitish":"main","name":"v2.7.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-02T08:20:23Z","updated_at":"2026-11-02T10:37:02Z","published_at":"2026-11-02T10:37:02Z","assets":[],"body":"## Highlights\r\n\r\nv2.7.0 adds Anthropic Claude as a first-party model, search-gated tool discovery for large tool catalogs, an experimental classifier API for workflow routing, and a per-invocation budget on model calls. It also switches telemetry to the OpenTelemetry GenAI semantic conventions by default, which is a breaking change for anyone consuming ADK traces.\r\n\r\n* **Anthropic Claude models** (experimental): `model/anthropicmodel` implements `model.LLM` over the Anthropic Messages API and Vertex AI, with streaming, tool calling, image and PDF input, extended and adaptive thinking, structured output and prompt caching. See `examples/anthropic`. (#1866)\r\n* **Search-gated tool discovery**: `tool/toolsearch` wraps any `tool.Toolset` so the model starts with a `search_tools` tool plus a configured core set, and the tools it finds are declared from the next model step on. This keeps a large MCP catalog out of every request. See `examples/toolsearch`. (#1734, #1735)\r\n* **Classifiers** (experimental): `exp/classifier` defines a `Classifier` that answers typed Choice, Binary and Score questions with probabilities. It ships with a client for TypeSafe's Jev decision models (`exp/classifier/typesafe`), an `LLMClassifier` backed by any `model.LLM`, and a workflow `Node` that routes on the answer, matching adk-python's `ClassifierNode`. (#2003, #2005, #2035)\r\n* **Model-call budget**: `RunConfig.MaxLLMCalls` bounds the model calls one invocation may make, 500 by default, and ends the run with `agent.ErrLLMCallsLimitExceeded` when the budget is spent. Matches adk-python's `max_llm_calls`. This changes behavior for existing users, see below. (#1412)\r\n* **Telemetry**: traces follow OpenTelemetry GenAI semantic conventions v2 by default, as adk-python does. This is breaking for telemetry consumers, see below. (#1635)\r\n* **OpenAI-compatible models**: images and files in `InlineData` and `FileData` parts are sent on both the Responses and Chat Completions endpoints (#1543). A response schema title that is not a valid format name falls back to `adk_response` instead of a 400 from the API (#1912). A `GenerateContentConfig` field that a newer genai adds is refused with `ErrUnsupportedConfigField` instead of being dropped silently (#1922).\r\n* **Gemini built-in tools**: `geminitool.GoogleMaps`, `geminitool.UrlContext` and `geminitool.EnterpriseWebSearch`. (#2026)\r\n* **MCP**: with `Config.Auth` set, each user gets their own MCP session, so servers that bind a session to the user who opened it stop answering other users with 403 (#1755). MCP HTTP requests identify ADK in `User-Agent` and `X-Goog-Api-Client`, as model calls already do (#1862).\r\n* **Auth fix**: credentials from `auth.ADC()` and `auth.ServiceAccount()` failed every token mint with `context canceled` on local gcloud ADC and impersonated service accounts. Services on GCE or with a key file were not affected. (#1904)\r\n* **Tool auth groundwork**: `tool/toolauth` adds adk-python's auth data model and wire format for `adk_request_credential`, so requests, replies and credential keys agree with adk-python and ADK Web. Nothing uses it yet. (#2032)\r\n* **Reliability**:\r\n  * Workflow joins resume with completed predecessors restored instead of rerunning them. (#1572)\r\n  * `LoopAgent` stops on context cancellation. `WithAgentTimeout` and `WithAgentCancel` work on tool and callback contexts instead of returning nil. (#1810, #1604)\r\n  * Artifacts saved in agent and model callbacks are recorded in `ArtifactDelta`. `OutputKey` is saved when a before-agent callback short-circuits. (#1878, #1800, #1963)\r\n  * Optional instruction placeholders such as `{key?}` and `{artifact.name?}` surface infrastructure errors instead of rendering an empty string. This changes behavior, see below. (#1748)\r\n  * Vertex AI sessions persist live transcriptions. In-memory memory search skips thought parts. (#1964, #1975)\r\n  * Streaming function tools preserve consumer panics. `agenttool` keeps code-execution output in sub-agent results. Running an agent without `Run` returns an error instead of doing nothing. (#1961, #1860, #1850)\r\n  * `launcher.Config.TelemetryOptions` honors `WithOtelToCloud`. Live reconnect matches close code 1008 by type, not by error text. (#1968, #1993)\r\n* **CLI**: `adkgo deploy agentengine --mem_deploy` no longer defaults Memory Bank to gemini-2.5-flash, which Vertex AI stopped serving to new projects. Memory Bank applies its own default model unless `--mem_model` is set. (#1902)\r\n* **Agent Analytics plugin** (`plugin/agentanalytics`, its own module and tag): aligned with adk-python's schema and event vocabulary, with rich session, HITL, A2A and workflow events, GCS offloading of multimodal content, opt-in exactly-once delivery, drop statistics, hierarchical span ids with latency and time-to-first-token, and 25 pre-built per-event BigQuery views. (#1786, #1787, #1788, #1789, #1790, #1791 and follow-up fixes)\r\n\r\n### Breaking changes\r\n\r\n* **Telemetry schema**: ADK now emits the OpenTelemetry GenAI semantic conventions v2. The legacy log events are replaced by one `gen_ai.client.inference.operation.details` event per model call, message content on spans is a structured value rather than a JSON string, `execute_tool` records arguments and results only when span content capture is on (under `gen_ai.tool.call.*`), and an LLM-agent root gets a new `invoke_workflow` parent span. Set `ADK_TELEMETRY_SCHEMA_VERSION_OPT_IN=otel_semconv_1_36` to restore the previous format, supported until at least March 31, 2027. (#1635)\r\n* **Model calls are capped at 500 per invocation**: a run that makes more than 500 model calls now ends with an error wrapping `agent.ErrLLMCallsLimitExceeded`. Raise the cap with `RunConfig.MaxLLMCalls` or `ADK_MAX_LLM_CALLS`, or set `MaxLLMCalls` to `-1` for no limit. Unlike adk-python, `0` means the default, not unlimited. (#1412)\r\n* **Optional instruction placeholders propagate errors**: `{key?}` and `{artifact.name?}` render empty only when the key or artifact is missing (`session.ErrStateKeyNotExist`, `fs.ErrNotExist`). Any other error from the session or artifact service now fails the run. A custom `artifact.Service` must wrap `fs.ErrNotExist` for missing files, and an `agenttool` sub-agent with an optional artifact placeholder now errors when the root runner has no artifact service. (#1748)\r\n* **Go 1.26.10 is required**: `go.mod` moves from 1.26.6 to 1.26.10. (#1916)\r\n* **Agent Analytics plugin defaults**: the default table name is `agent_events` instead of `events`, existing tables are upgraded additively on startup unless `DisableSchemaUpgrade` is set, the per-event views are created on startup unless `DisableCreateViews` is set, and granular event types (`STATE_DELTA`, `AGENT_TRANSFER`, `HITL_*`, `NODE_OUTPUT`, …) replace the generic `EVENT` row. These apply when the plugin module is next tagged, not to the core `v2.7.0` tag. (#1786, #1788, #1791)\r\n\r\nSmaller behavior changes:\r\n\r\n* `geminitool.GoogleSearch` returns an error on a non-Gemini model, and on a Gemini 1.x model combined with other tools. (#2026)\r\n* `launcher`: passing `telemetry.WithOtelToCloud(true)` in `TelemetryOptions` now exports to Google Cloud and needs credentials at startup, where it used to start with export silently off. (#1968)\r\n* `openaimodel`: a config field added by a genai release newer than v1.74.0 is refused with `ErrUnsupportedConfigField`. Configs valid today are unaffected. (#1922)\r\n* `mcptoolset` with `Config.Auth` opens one session per distinct credential, closes sessions idle for 10 minutes, and caps the pool at 64. Without `Auth` nothing changes. (#1755)\r\n* `LoopAgent` yields the context error once and stops when its context is cancelled, where it used to keep looping if no pass yielded an event. (#1810)\r\n* An agent callback that saves an artifact and returns nil now yields one event carrying the `ArtifactDelta`, where it yielded none. (#1878)\r\n* The in-memory memory service no longer stores or matches thought parts, and an event with only thought text is not stored. (#1975)\r\n* Deprecated: `artifact.SaveRequest.Version`. `Save` has never read it. (#1985)\r\n\r\n<details>\r\n<summary>All changes</summary>\r\n\r\n## What's Changed\r\n* feat(tool): add search-gated tool discovery by @wolo-lab in https://github.com/google/adk-go/pull/1734\r\n* docs(examples/toolsearch): add a tool search sample by @wolo-lab in https://github.com/google/adk-go/pull/1735\r\n* fix(agent): report an error when an agent without Run is run by @wolo-lab in https://github.com/google/adk-go/pull/1850\r\n* docs(artifact): fix service references in doc comments by @ktsoator in https://github.com/google/adk-go/pull/1775\r\n* feat(agentanalytics): align schema, event vocabulary, redaction, and core contract with adk-python by @haiyuan-eng-google in https://github.com/google/adk-go/pull/1786\r\n* fix(loopagent): stop on context cancellation by @anzal1 in https://github.com/google/adk-go/pull/1810\r\n* feat(runner): bound model calls per invocation with RunConfig.MaxLLMCalls by @venkat-uk in https://github.com/google/adk-go/pull/1412\r\n* fix(llminternal): prevent silent context degradation by propagating systemic state failures by @karthik-0306 in https://github.com/google/adk-go/pull/1748\r\n* test(model/gemini): pin the last citation and accepting AutomaticContinuation by @baptmont in https://github.com/google/adk-go/pull/1825\r\n* test(llminternal): match isResumable's doc and test table to the errors it sees by @harshitwandhare in https://github.com/google/adk-go/pull/1750\r\n* docs(loopagent): say the context is checked before each pass by @anzal1 in https://github.com/google/adk-go/pull/1861\r\n* refactor(workflow): remove redundant goroutine in scheduleRetry by @moodbased in https://github.com/google/adk-go/pull/1849\r\n* docs(compaction): list the GenerateContentConfig fields the summarizer uses by @karolpiotrowicz in https://github.com/google/adk-go/pull/1828\r\n* fix(agenttool): preserve code output in sub-agent results by @ktsoator in https://github.com/google/adk-go/pull/1860\r\n* feat(mcptoolset): identify ADK in the User-Agent of MCP HTTP requests by @wolo-lab in https://github.com/google/adk-go/pull/1862\r\n* fix(mcptoolset): stop using context.Background() in connectionRefresher.Close by @wolo-lab in https://github.com/google/adk-go/pull/1844\r\n* feat(model/openaimodel): support image/file input via genai InlineData/FileData parts by @tonydzi in https://github.com/google/adk-go/pull/1543\r\n* feat(agentanalytics): add concurrency-safe trace manager, latency_ms, and streaming TTFT by @haiyuan-eng-google in https://github.com/google/adk-go/pull/1787\r\n* fix(llminternal): record model callback artifact saves on the event by @Vivek1106-04 in https://github.com/google/adk-go/pull/1800\r\n* fix(agent): record artifact-only deltas from before/after agent callbacks by @anzal1 in https://github.com/google/adk-go/pull/1878\r\n* fix(workflow): restore completed predecessors when resuming joins by @lucky798213 in https://github.com/google/adk-go/pull/1572\r\n* fix(agent): make WithAgentTimeout work on tool and callback contexts by @jaideeppyne in https://github.com/google/adk-go/pull/1604\r\n* test(model/gemini): pin that MAX_TOKENS after CONTINUATION is not resumed by @beiryu in https://github.com/google/adk-go/pull/1872\r\n* chore(deps): bump the go-minor-patch group with 2 updates by @dependabot[bot] in https://github.com/google/adk-go/pull/1901\r\n* chore(deps): bump golang.org/x/net to v0.60.0 in agentanalytics by @wojtas000 in https://github.com/google/adk-go/pull/1908\r\n* feat(telemetry)!: default to experimental GenAI semconv, with ADK_TELEMETRY_SCHEMA_VERSION_OPT_IN=otel_semconv_1_36 rollback by @RKest in https://github.com/google/adk-go/pull/1635\r\n* fix(adkgo/deploy): stop defaulting Memory Bank to gemini-2.5-flash by @wojtas000 in https://github.com/google/adk-go/pull/1902\r\n* feat(agentanalytics): emit rich session/HITL/A2A/workflow events and classify tool_origin by @haiyuan-eng-google in https://github.com/google/adk-go/pull/1788\r\n* Upgrading go to 1.26.10 by @kdroste-google in https://github.com/google/adk-go/pull/1916\r\n* fix(agentanalytics): redact credentials when a value ends in a key name by @haiyuan-eng-google in https://github.com/google/adk-go/pull/1863\r\n* feat(agentanalytics): add race-free GCS multimodal offloading and ObjectRef support by @haiyuan-eng-google in https://github.com/google/adk-go/pull/1789\r\n* chore(v2): update Go version requirements in documentation by @ktsoator in https://github.com/google/adk-go/pull/1926\r\n* fix(agentanalytics): preserve live spans when tasks resume by @jabrailkhalil in https://github.com/google/adk-go/pull/1910\r\n* fix(agentanalytics): never mark workflow agents taskDelegated by @haiyuan-eng-google in https://github.com/google/adk-go/pull/1935\r\n* feat(agentanalytics): pause GCS uploads after batch timeout and preserve run-end flush budget by @haiyuan-eng-google in https://github.com/google/adk-go/pull/1936\r\n* feat(agentanalytics): add DropStats, ExactlyOnceDelivery, and schema setup hardening by @haiyuan-eng-google in https://github.com/google/adk-go/pull/1790\r\n* fix(agentanalytics): preserve invocation spans for late callbacks by @jabrailkhalil in https://github.com/google/adk-go/pull/1911\r\n* fix(agentanalytics): ExactlyOnceDelivery and DropStats follow-ups from #1790 by @haiyuan-eng-google in https://github.com/google/adk-go/pull/1943\r\n* feat(agentanalytics): add pre-built per-event BigQuery analytics views by @haiyuan-eng-google in https://github.com/google/adk-go/pull/1791\r\n* chore(deps): bump the go-minor-patch group with 3 updates by @dependabot[bot] in https://github.com/google/adk-go/pull/1969\r\n* fix(agentanalytics): log a deferred GCS retry only when it is requeued by @leilei3167 in https://github.com/google/adk-go/pull/1941\r\n* fix(session/vertexai): persist live transcriptions by @DisturbedCrow in https://github.com/google/adk-go/pull/1964\r\n* fix(agentanalytics): pause stalled run-end uploads across batches by @ktsoator in https://github.com/google/adk-go/pull/1947\r\n* fix(llmagent): save output_key when a before-agent callback short-circuits by @anzal1 in https://github.com/google/adk-go/pull/1963\r\n* fix(functiontool): preserve streaming consumer panics by @jabrailkhalil in https://github.com/google/adk-go/pull/1961\r\n* fix(launcher): honor WithOtelToCloud in launcher.Config.TelemetryOptions by @Saurav-Gupta-9741 in https://github.com/google/adk-go/pull/1968\r\n* fix(memory): skip thought parts in in-memory search and preloaded memories by @Vivek1106-04 in https://github.com/google/adk-go/pull/1975\r\n* chore(deps): bump the go_modules group across 1 directory with 2 updates by @dependabot[bot] in https://github.com/google/adk-go/pull/1934\r\n* fix(auth): keep the init context alive so token sources can refresh by @wojtas000 in https://github.com/google/adk-go/pull/1904\r\n* fix(openaimodel): use adk_response when the schema title is not a valid format name by @wojtas000 in https://github.com/google/adk-go/pull/1912\r\n* fix(openaimodel): refuse config fields genai adds before they are supported by @wojtas000 in https://github.com/google/adk-go/pull/1922\r\n* fix(ci): stop every CI run from building with an empty Go cache by @baptmont in https://github.com/google/adk-go/pull/1972\r\n* fix(agentanalytics): report the right terminal row in more failure cases by @haiyuan-eng-google in https://github.com/google/adk-go/pull/1952\r\n* feat(model/anthropicmodel): add Anthropic Claude model support by @ScottMansfield in https://github.com/google/adk-go/pull/1866\r\n* docs(artifact): deprecate SaveRequest.Version by @wojtas000 in https://github.com/google/adk-go/pull/1985\r\n* fix(agentanalytics): cap deferred retry upload budget and pause on shorter run-end stalls by @haiyuan-eng-google in https://github.com/google/adk-go/pull/1955\r\n* fix(llminternal): match close code 1008 by type in isResumable by @wojtas000 in https://github.com/google/adk-go/pull/1993\r\n* fix(agentanalytics): tidy span bookkeeping, comments and tests by @haiyuan-eng-google in https://github.com/google/adk-go/pull/1953\r\n* fix(agentanalytics): release deferred upload reservations on append or Close panic by @haiyuan-eng-google in https://github.com/google/adk-go/pull/1954\r\n* fix(mcptoolset): give each user its own MCP session with Config.Auth by @Vivek1106-04 in https://github.com/google/adk-go/pull/1755\r\n* feat(exp): add classifier interface and TypeSafe Jev decision model client by @rafal-glowinski in https://github.com/google/adk-go/pull/2003\r\n* Added google_maps, url_contex + gemini guards by @kdroste-google in https://github.com/google/adk-go/pull/2026\r\n* feat(exp): add workflow routing Node for classifiers by @rafal-glowinski in https://github.com/google/adk-go/pull/2005\r\n* feat(exp): add LLMClassifier backed by model.LLM by @rafal-glowinski in https://github.com/google/adk-go/pull/2035\r\n* feat(toolauth): add adk-python's auth data model and wire format by @jjsasha63 in https://github.com/google/adk-go/pull/2032\r\n* Update version.go by @baptmont in https://github.com/google/adk-go/pull/2031\r\n\r\n## New Contributors\r\n* @haiyuan-eng-google made their first contribution in https://github.com/google/adk-go/pull/1786\r\n* @venkat-uk made their first contribution in https://github.com/google/adk-go/pull/1412\r\n* @tonydzi made their first contribution in https://github.com/google/adk-go/pull/1543\r\n* @jaideeppyne made their first contribution in https://github.com/google/adk-go/pull/1604\r\n* @beiryu made their first contribution in https://github.com/google/adk-go/pull/1872\r\n* @DisturbedCrow made their first contribution in https://github.com/google/adk-go/pull/1964\r\n* @Saurav-Gupta-9741 made their first contribution in https://github.com/google/adk-go/pull/1968\r\n* @ScottMansfield made their first contribution in https://github.com/google/adk-go/pull/1866\r\n* @rafal-glowinski made their first contribution in https://github.com/google/adk-go/pull/2003\r\n\r\n</details>\r\n\r\n**Full Changelog**: https://github.com/google/adk-go/compare/v2.6.0...v2.7.0\r\n\r\n## New Contributors\r\n* @haiyuan-eng-google made their first contribution in https://github.com/google/adk-go/pull/1786\r\n* @venkat-uk made their first contribution in https://github.com/google/adk-go/pull/1412\r\n* @tonydzi made their first contribution in https://github.com/google/adk-go/pull/1543\r\n* @jaideeppyne made their first contribution in https://github.com/google/adk-go/pull/1604\r\n* @beiryu made their first contribution in https://github.com/google/adk-go/pull/1872\r\n* @DisturbedCrow made their first contribution in https://github.com/google/adk-go/pull/1964\r\n* @Saurav-Gupta-9741 made their first contribution in https://github.com/google/adk-go/pull/1968\r\n* @ScottMansfield made their first contribution in https://github.com/google/adk-go/pull/1866\r\n* @rafal-glowinski made their first contribution in https://github.com/google/adk-go/pull/2003\r\n\r\n","mentions_count":26}
