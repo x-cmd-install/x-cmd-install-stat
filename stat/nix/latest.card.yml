@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-11-03T08:18:03Z
+  collectedAt: 2026-11-04T07:40:59Z
 timeline:
   created: 2012-02-08
   lastCommit: 2026-11-02
@@ -20,7 +20,7 @@ popularity:
   fork: 2063
   release: 0
   contributor: 913
-  pullRequest: 9193
+  pullRequest: 9195
   issue: 7364
 language:
   C++: 5737985
@@ -40,63 +40,63 @@ language:
 totalBytes: 7281817
 recent:
   last30d:
-    since: 2026-10-04
+    since: 2026-10-05
     release: 0
-    mergedPR: 88
-    openPR: 63
+    mergedPR: 86
+    openPR: 65
     closedIssue: 10
-    openIssue: 28
+    openIssue: 29
     commit: 189
   last60d:
-    since: 2026-09-04
+    since: 2026-09-05
     release: 0
     mergedPR: 146
     openPR: 99
     closedIssue: 21
-    openIssue: 52
+    openIssue: 53
     commit: 352
   last90d:
-    since: 2026-08-05
+    since: 2026-08-06
     release: 0
-    mergedPR: 238
-    openPR: 122
-    closedIssue: 37
-    openIssue: 77
+    mergedPR: 236
+    openPR: 124
+    closedIssue: 35
+    openIssue: 78
     commit: 562
   last180d:
-    since: 2026-05-07
+    since: 2026-05-08
     release: 0
-    mergedPR: 487
-    openPR: 170
+    mergedPR: 485
+    openPR: 169
     closedIssue: 85
-    openIssue: 154
+    openIssue: 153
     commit: 1139
   last360d:
-    since: 2025-11-08
+    since: 2025-11-09
     release: 0
-    mergedPR: 1280
-    openPR: 328
-    closedIssue: 202
-    openIssue: 286
+    mergedPR: 1270
+    openPR: 329
+    closedIssue: 199
+    openIssue: 287
     commit: 2896
   last720d:
-    since: 2024-11-13
+    since: 2024-11-14
     release: 0
-    mergedPR: 2870
-    openPR: 413
-    closedIssue: 537
+    mergedPR: 2867
+    openPR: 415
+    closedIssue: 535
     openIssue: 609
-    commit: 6007
+    commit: 5997
 total:
   release: 0
   mergedPR: 6995
-  openPR: 583
-  closedIssue: 4908
-  openIssue: 2456
+  openPR: 585
+  closedIssue: 4907
+  openIssue: 2457
   commit: 24761
 ---
 path: /home/runner/.x-repo/github.com/NixOS/nix
-collectedAt: 2026-11-03T08:18:16Z
+collectedAt: 2026-11-04T07:41:12Z
 loc:
   Cpp:
     code: 103050
@@ -244,28 +244,28 @@ total:
   blanks: 42418
   files: 2732
 ---
-date: "2026-10-26"
+date: "2026-11-02"
 repo:
   name: github.com/NixOS/nix
-  commit: 570246c9cad691152acb762aed78b603d03867c8
+  commit: e8962d01875f41b781ddd9edeac904fafd285b0b
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 6.5
+score: 6.3
 checks:
-  - name: Dangerous-Workflow
-    score: 0
-    reason: dangerous workflow patterns detected
-    details:
-      - 'Warn: untrusted code checkout ''${{ github.event.pull_request.head.sha }}'': .github/workflows/backport.yml:29'
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
     details: null
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 4 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 12 issue activity found in the last 90 days -- score normalized to 10
     details: null
+  - name: Dangerous-Workflow
+    score: 0
+    reason: dangerous workflow patterns detected
+    details:
+      - 'Warn: untrusted code checkout ''${{ github.event.pull_request.head.sha }}'': .github/workflows/backport.yml:29'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -281,15 +281,10 @@ checks:
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
   - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: License
-    score: 10
-    reason: license file detected
+    score: 9
+    reason: binaries present in source code
     details:
-      - 'Info: project has a license file: COPYING:0'
-      - 'Info: FSF or OSI recognized license: GNU Lesser General Public License v2.1: COPYING:0'
+      - 'Warn: binary detected: src/libstore-tests/data/derivation/aterm-encoding.drv:1'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -306,6 +301,12 @@ checks:
       - 'Info: CppLibFuzzer integration found: src/libutil-tests/fuzz/handle-json-message.cc:21'
       - 'Info: CppLibFuzzer integration found: src/libutil-tests/fuzz/parse-dump-case-hacked.cc:5'
       - 'Info: CppLibFuzzer integration found: src/libutil-tests/fuzz/parse-dump.cc:3'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: COPYING:0'
+      - 'Info: FSF or OSI recognized license: GNU Lesser General Public License v2.1: COPYING:0'
   - name: Pinned-Dependencies
     score: 10
     reason: all dependencies are pinned
@@ -341,14 +342,14 @@ checks:
       - 'Info: Found linked content: github.com/NixOS/.github/SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: github.com/NixOS/.github/SECURITY.md:1'
+  - name: SAST
+    score: 4
+    reason: SAST tool is not run on all commits -- score normalized to 4
+    details:
+      - 'Warn: 14 commits out of 30 are checked with a SAST tool'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/upload-release.yml:19'
-  - name: SAST
-    score: 6
-    reason: SAST tool is not run on all commits -- score normalized to 6
-    details:
-      - 'Warn: 19 commits out of 30 are checked with a SAST tool'
 ---

@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-11-03T06:37:23Z
+  collectedAt: 2026-11-04T06:09:18Z
 timeline:
   created: 2015-03-18
   lastCommit: 2026-01-23
@@ -32,7 +32,7 @@ language:
 totalBytes: 5198333
 recent:
   last30d:
-    since: 2026-10-04
+    since: 2026-10-05
     release: 0
     mergedPR: 0
     openPR: 0
@@ -40,7 +40,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-04
+    since: 2026-09-05
     release: 0
     mergedPR: 0
     openPR: 0
@@ -48,7 +48,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-05
+    since: 2026-08-06
     release: 0
     mergedPR: 0
     openPR: 0
@@ -56,7 +56,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-07
+    since: 2026-05-08
     release: 0
     mergedPR: 0
     openPR: 0
@@ -64,7 +64,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-08
+    since: 2025-11-09
     release: 0
     mergedPR: 3
     openPR: 3
@@ -72,13 +72,13 @@ recent:
     openIssue: 0
     commit: 2
   last720d:
-    since: 2024-11-13
+    since: 2024-11-14
     release: 0
     mergedPR: 49
     openPR: 4
     closedIssue: 33
     openIssue: 1
-    commit: 61
+    commit: 60
 total:
   release: 0
   mergedPR: 978
@@ -88,7 +88,7 @@ total:
   commit: 6969
 ---
 path: /home/runner/.x-repo/github.com/google/pytype
-collectedAt: 2026-11-03T06:37:30Z
+collectedAt: 2026-11-04T06:09:25Z
 loc:
   Python:
     code: 140647
@@ -171,7 +171,7 @@ total:
   blanks: 20125
   files: 647
 ---
-date: "2026-10-19"
+date: "2026-11-02"
 repo:
   name: github.com/google/pytype
   commit: f411a8b445c19500a737ba1671f071e001072618
@@ -189,11 +189,6 @@ checks:
     score: 1
     reason: Found 3/30 approved changesets -- score normalized to 1
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -205,6 +200,11 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/build.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -213,12 +213,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: License
-    score: 9
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Warn: project license file does not contain an FSF or OSI license.'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -238,29 +232,27 @@ checks:
       - 'Warn: containerImage not pinned by hash: Dockerfile.dev:1: pin your Docker image by updating python:3.7 to python:3.7@sha256:eedf63967cdb57d8214db38ce21f105003ed4e4d0358f02bedc057341bcf92a0'
       - 'Warn: pipCommand not pinned by hash: Dockerfile.dev:13'
       - 'Warn: pipCommand not pinned by hash: build_scripts/wheels/macos.sh:12'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/ci.yml:48'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/ci.yml:79'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/ci.yml:48'
       - 'Info:   0 out of  10 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   4 pipCommand dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
+      - 'Info:   0 out of   4 pipCommand dependencies pinned'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 9
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Warn: project license file does not contain an FSF or OSI license.'
   - name: Signed-Releases
     score: -1
     reason: no releases found
     details: null
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: github.com/google/.github/SECURITY.md:1'
-      - 'Info: Found linked content: github.com/google/.github/SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/google/.github/SECURITY.md:1'
-      - 'Info: Found text in security policy: github.com/google/.github/SECURITY.md:1'
   - name: Branch-Protection
     score: 5
     reason: branch protection is not maximal on development and all release branches
@@ -274,6 +266,14 @@ checks:
       - 'Warn: ''last push approval'' is disabled on branch ''main'''
       - 'Warn: no status checks found to merge onto branch ''main'''
       - 'Info: PRs are required in order to make changes on branch ''main'''
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: github.com/google/.github/SECURITY.md:1'
+      - 'Info: Found linked content: github.com/google/.github/SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/google/.github/SECURITY.md:1'
+      - 'Info: Found text in security policy: github.com/google/.github/SECURITY.md:1'
   - name: SAST
     score: 4
     reason: SAST tool is not run on all commits -- score normalized to 4

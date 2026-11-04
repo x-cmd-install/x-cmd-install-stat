@@ -7,7 +7,7 @@ about:
   latestVersion: "0.6.0"
   latestRelease: "0.6.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-03T06:49:52Z
+  collectedAt: 2026-11-04T06:28:54Z
 timeline:
   created: 2013-01-24
   lastCommit: 2026-02-22
@@ -28,7 +28,7 @@ language:
 totalBytes: 64457
 recent:
   last30d:
-    since: 2026-10-04
+    since: 2026-10-05
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-04
+    since: 2026-09-05
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-05
+    since: 2026-08-06
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-05-07
+    since: 2026-05-08
     release: 0
     mergedPR: 0
     openPR: 1
@@ -60,7 +60,7 @@ recent:
     openIssue: 4
     commit: 0
   last360d:
-    since: 2025-11-08
+    since: 2025-11-09
     release: 1
     mergedPR: 10
     openPR: 1
@@ -68,7 +68,7 @@ recent:
     openIssue: 5
     commit: 21
   last720d:
-    since: 2024-11-13
+    since: 2024-11-14
     release: 3
     mergedPR: 16
     openPR: 1
@@ -84,7 +84,7 @@ total:
   commit: 388
 ---
 path: /home/runner/.x-repo/github.com/jenv/jenv
-collectedAt: 2026-11-03T06:49:53Z
+collectedAt: 2026-11-04T06:28:55Z
 loc:
   Bash:
     code: 1721
@@ -127,7 +127,7 @@ total:
   blanks: 693
   files: 83
 ---
-date: "2026-10-19"
+date: "2026-11-02"
 repo:
   name: github.com/jenv/jenv
   commit: a771525269be4637e5b29d6adbba28be93953c02
@@ -136,6 +136,10 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.1
 checks:
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -145,20 +149,16 @@ checks:
     score: 3
     reason: Found 6/17 approved changesets -- score normalized to 3
     details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 0
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 0
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -172,9 +172,14 @@ checks:
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:12: update your workflow using https://app.stepsecurity.io/secureworkflow/jenv/jenv/release.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: test/Dockerfile:1: pin your Docker image by updating redhat/ubi8 to redhat/ubi8@sha256:73071333d0cd7c526b6d7d01f0c9b709fd4a96c47853b1c9071e0a11284bd1da'
+      - 'Warn: containerImage not pinned by hash: test/Dockerfile:1: pin your Docker image by updating redhat/ubi8 to redhat/ubi8@sha256:c322aa68f2d630b36b9faab64094357f62720be2f56f7099376ca2d6c4fe389b'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -183,11 +188,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected

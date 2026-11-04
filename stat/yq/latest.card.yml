@@ -7,7 +7,7 @@ about:
   latestVersion: "v4.54.1"
   latestRelease: "v4.54.1"
   latestPrerelease: "v4.40.1"
-  collectedAt: 2026-11-03T07:36:33Z
+  collectedAt: 2026-11-04T07:03:28Z
 timeline:
   created: 2015-09-26
   lastCommit: 2026-10-27
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-09-29
   lastPrerelease: 2023-11-07
 popularity:
-  star: 16217
+  star: 16223
   watcher: 63
-  fork: 2100
+  fork: 2099
   release: 170
   contributor: 166
   pullRequest: 818
@@ -30,7 +30,7 @@ language:
 totalBytes: 1375689
 recent:
   last30d:
-    since: 2026-10-04
+    since: 2026-10-05
     release: 0
     mergedPR: 16
     openPR: 32
@@ -38,7 +38,7 @@ recent:
     openIssue: 9
     commit: 19
   last60d:
-    since: 2026-09-04
+    since: 2026-09-05
     release: 1
     mergedPR: 36
     openPR: 42
@@ -46,23 +46,23 @@ recent:
     openIssue: 11
     commit: 49
   last90d:
-    since: 2026-08-05
+    since: 2026-08-06
     release: 3
-    mergedPR: 58
+    mergedPR: 53
     openPR: 52
     closedIssue: 9
     openIssue: 16
     commit: 67
   last180d:
-    since: 2026-05-07
+    since: 2026-05-08
     release: 4
-    mergedPR: 106
+    mergedPR: 105
     openPR: 69
     closedIssue: 19
-    openIssue: 25
+    openIssue: 24
     commit: 141
   last360d:
-    since: 2025-11-08
+    since: 2025-11-09
     release: 13
     mergedPR: 191
     openPR: 76
@@ -70,9 +70,9 @@ recent:
     openIssue: 49
     commit: 324
   last720d:
-    since: 2024-11-13
+    since: 2024-11-14
     release: 23
-    mergedPR: 261
+    mergedPR: 259
     openPR: 77
     closedIssue: 141
     openIssue: 109
@@ -86,7 +86,7 @@ total:
   commit: 2358
 ---
 path: /home/runner/.x-repo/github.com/mikefarah/yq
-collectedAt: 2026-11-03T07:36:35Z
+collectedAt: 2026-11-04T07:03:30Z
 loc:
   Go:
     code: 39752
@@ -159,15 +159,20 @@ total:
   blanks: 7667
   files: 526
 ---
-date: "2026-10-27T07:50:51Z"
+date: "2026-11-03T07:40:29Z"
 repo:
   name: github.com/mikefarah/yq
   commit: fb05831b3aa710b699fbdb8561268847061b8689
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 7.7
+score: 7.5
 checks:
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -176,11 +181,10 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+  - name: Code-Review
+    score: 6
+    reason: Found 7/11 approved changesets -- score normalized to 6
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -208,14 +212,6 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:18'
       - 'Info: found token with ''none'' permissions: .github/workflows/snap-release.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test-yq.yml:7'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Code-Review
-    score: 6
-    reason: Found 7/11 approved changesets -- score normalized to 6
-    details: null
   - name: Pinned-Dependencies
     score: 9
     reason: dependency not pinned by hash detected -- score normalized to 9
@@ -226,20 +222,31 @@ checks:
       - 'Info:  14 out of  16 third-party GitHubAction dependencies pinned'
       - 'Info:   4 out of   4 containerImage dependencies pinned'
       - 'Info:   2 out of   2 goCommand dependencies pinned'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Vulnerabilities
+  - name: Packaging
     score: 10
-    reason: 0 existing vulnerabilities detected
-    details: null
-  - name: SAST
-    score: 9
-    reason: SAST tool detected but not run on all commits
+    reason: packaging workflow detected
     details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 27 commits out of 28 are checked with a SAST tool'
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker-githubaction.yml:9'
+  - name: Vulnerabilities
+    score: 8
+    reason: 2 existing vulnerabilities detected
+    details:
+      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6860'
+      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6866'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -259,17 +266,6 @@ checks:
       - 'Warn: release artifact v4.53.4 does not have provenance: https://api.github.com/repos/mikefarah/yq/releases/372802948'
       - 'Warn: release artifact v4.53.3 does not have provenance: https://api.github.com/repos/mikefarah/yq/releases/335390315'
       - 'Warn: release artifact v4.53.2 does not have provenance: https://api.github.com/repos/mikefarah/yq/releases/310192188'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker-githubaction.yml:9'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Branch-Protection
     score: 3
     reason: branch protection is not maximal on development and all release branches
@@ -280,6 +276,12 @@ checks:
       - 'Warn: could not determine whether codeowners review is allowed'
       - 'Warn: no status checks found to merge onto branch ''master'''
       - 'Warn: PRs are not required to make changes on branch ''master''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
+  - name: SAST
+    score: 9
+    reason: SAST tool detected but not run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: 27 commits out of 28 are checked with a SAST tool'
   - name: CI-Tests
     score: 9
     reason: 27 out of 28 merged PRs checked by a CI test -- score normalized to 9

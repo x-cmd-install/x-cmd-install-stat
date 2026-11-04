@@ -7,7 +7,7 @@ about:
   latestVersion: "v9.16.1"
   latestRelease: "v9.16.1"
   latestPrerelease: ""
-  collectedAt: 2026-11-03T07:24:18Z
+  collectedAt: 2026-11-04T06:42:35Z
 timeline:
   created: 2021-04-25
   lastCommit: 2026-10-23
@@ -16,7 +16,7 @@ timeline:
   lastPrerelease: 
 popularity:
   star: 3047
-  watcher: 23
+  watcher: 22
   fork: 286
   release: 217
   contributor: 5
@@ -30,7 +30,7 @@ language:
 totalBytes: 123748
 recent:
   last30d:
-    since: 2026-10-04
+    since: 2026-10-05
     release: 1
     mergedPR: 0
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-04
+    since: 2026-09-05
     release: 1
     mergedPR: 0
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-05
+    since: 2026-08-06
     release: 3
     mergedPR: 0
     openPR: 0
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-07
+    since: 2026-05-08
     release: 5
     mergedPR: 0
     openPR: 0
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-08
+    since: 2025-11-09
     release: 19
     mergedPR: 0
     openPR: 0
@@ -70,7 +70,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-13
+    since: 2024-11-14
     release: 77
     mergedPR: 0
     openPR: 0
@@ -86,7 +86,7 @@ total:
   commit: 885
 ---
 path: /home/runner/.x-repo/github.com/deedy5/duckduckgo_search
-collectedAt: 2026-11-03T07:24:19Z
+collectedAt: 2026-11-04T06:42:35Z
 loc:
   Python:
     code: 3063
@@ -129,15 +129,28 @@ total:
   blanks: 738
   files: 42
 ---
-date: "2026-10-19"
+date: "2026-11-02"
 repo:
   name: github.com/deedy5/duckduckgo_search
-  commit: 70a5635510fb8d5b15d5ba6ceced6a67e212149b
+  commit: 8e74959141106702645020dcb853c6453b5e5195
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 3.3
+score: 3.7
 checks:
+  - name: Maintained
+    score: 9
+    reason: 10 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 9
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 0
+    reason: Found 1/26 approved changesets -- score normalized to 0
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -145,19 +158,6 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Code-Review
-    score: 0
-    reason: Found 1/26 approved changesets -- score normalized to 0
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
-    score: 5
-    reason: 6 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5
     details: null
   - name: Token-Permissions
     score: 0
@@ -170,11 +170,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -183,7 +178,7 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/python-package.yml:27: update your workflow using https://app.stepsecurity.io/secureworkflow/deedy5/ddgs/python-package.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/python-publish.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/deedy5/ddgs/python-publish.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/python-publish.yml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/deedy5/ddgs/python-publish.yml/main?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:2: pin your Docker image by updating python:3.11-slim to python:3.11-slim@sha256:e88e9763f943ec1834f992a4b51e0f24500486803e8bc534e5767af9ea65f6ce'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:2: pin your Docker image by updating python:3.11-slim to python:3.11-slim@sha256:db20d8506e2f15b6db39b40b6015ca46bae855dec6dd326d462cfe79ae972893'
       - 'Warn: pipCommand not pinned by hash: Dockerfile:23'
       - 'Warn: pipCommand not pinned by hash: start_api.sh:21'
       - 'Warn: pipCommand not pinned by hash: start_api.sh:22'
@@ -202,6 +197,11 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
@@ -212,15 +212,15 @@ checks:
     score: -1
     reason: no releases found
     details: null
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 13 are checked with a SAST tool'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''main'''
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 13 are checked with a SAST tool'
 ---
 {"id":422317373,"author":{"login":"deedy5","id":65482418,"node_id":"MDQ6VXNlcjY1NDgyNDE4","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOFYw4d84ZLA09","tag_name":"v9.16.1","target_commitish":"main","name":"v9.16.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-23T21:12:27Z","updated_at":"2026-10-23T21:16:26Z","published_at":"2026-10-23T21:16:26Z","assets":[],"body":"## What's Changed\r\n* fix(engines): add one iteration to extract results from pending futures by @deedy5 in https://github.com/deedy5/ddgs/pull/496\r\n\r\n\r\n**Full Changelog**: https://github.com/deedy5/ddgs/compare/v9.16.0...v9.16.1","mentions_count":1}

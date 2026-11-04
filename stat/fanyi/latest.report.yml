@@ -7,7 +7,7 @@ about:
   latestVersion: "v11.0.0"
   latestRelease: "v11.0.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-03T07:56:30Z
+  collectedAt: 2026-11-04T07:20:51Z
 timeline:
   created: 2013-12-19
   lastCommit: 2026-08-07
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-06-06
   lastPrerelease: 
 popularity:
-  star: 1555
+  star: 1554
   watcher: 18
   fork: 147
   release: 18
@@ -28,7 +28,7 @@ language:
 totalBytes: 50147
 recent:
   last30d:
-    since: 2026-10-04
+    since: 2026-10-05
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-04
+    since: 2026-09-05
     release: 0
     mergedPR: 0
     openPR: 3
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-05
+    since: 2026-08-06
     release: 0
     mergedPR: 0
     openPR: 3
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-07
+    since: 2026-05-08
     release: 1
     mergedPR: 11
     openPR: 5
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 38
   last360d:
-    since: 2025-11-08
+    since: 2025-11-09
     release: 1
     mergedPR: 11
     openPR: 5
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 38
   last720d:
-    since: 2024-11-13
+    since: 2024-11-14
     release: 2
     mergedPR: 19
     openPR: 5
@@ -84,7 +84,7 @@ total:
   commit: 271
 ---
 path: /home/runner/.x-repo/github.com/afc163/fanyi
-collectedAt: 2026-11-03T07:56:30Z
+collectedAt: 2026-11-04T07:20:51Z
 loc:
   JavaScript:
     code: 881
@@ -122,7 +122,7 @@ total:
   blanks: 261
   files: 22
 ---
-date: "2026-10-26"
+date: "2026-11-02"
 repo:
   name: github.com/afc163/fanyi
   commit: c853e6bc9bedef2eb92d948816118f311cd4cacd
@@ -135,6 +135,14 @@ checks:
     score: 1
     reason: Found 1/6 approved changesets -- score normalized to 1
     details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Maintained
     score: 0
     reason: 1 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
@@ -144,21 +152,6 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Token-Permissions
-    score: 10
-    reason: GitHub workflow tokens follow principle of least privilege
-    details:
-      - 'Info: found token with ''none'' permissions: .github/workflows/echo.yml:1'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yml:10'
-      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -169,6 +162,13 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:28: update your workflow using https://app.stepsecurity.io/secureworkflow/afc163/fanyi/test.yml/main?enable=pin'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
+  - name: Token-Permissions
+    score: 10
+    reason: GitHub workflow tokens follow principle of least privilege
+    details:
+      - 'Info: found token with ''none'' permissions: .github/workflows/echo.yml:1'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yml:10'
+      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -184,15 +184,15 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''main'''
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Security-Policy
     score: 0
     reason: security policy file not detected

@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.12.0"
   latestRelease: "v1.12.0"
   latestPrerelease: "v0.4-alpha"
-  collectedAt: 2026-11-03T07:33:46Z
+  collectedAt: 2026-11-04T07:04:42Z
 timeline:
   created: 2018-03-09
   lastCommit: 2026-11-02
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2026-04-26
   lastPrerelease: 2018-04-20
 popularity:
-  star: 1902
+  star: 1905
   watcher: 10
   fork: 103
   release: 86
   contributor: 31
-  pullRequest: 592
+  pullRequest: 593
   issue: 132
 language:
   Go: 215332
@@ -29,63 +29,63 @@ language:
 totalBytes: 220254
 recent:
   last30d:
-    since: 2026-10-04
+    since: 2026-10-05
     release: 0
-    mergedPR: 11
-    openPR: 1
+    mergedPR: 10
+    openPR: 2
     closedIssue: 0
     openIssue: 0
     commit: 11
   last60d:
-    since: 2026-09-04
+    since: 2026-09-05
     release: 0
     mergedPR: 22
-    openPR: 3
+    openPR: 4
     closedIssue: 0
     openIssue: 0
     commit: 19
   last90d:
-    since: 2026-08-05
+    since: 2026-08-06
     release: 0
     mergedPR: 29
-    openPR: 3
+    openPR: 4
     closedIssue: 0
     openIssue: 0
     commit: 29
   last180d:
-    since: 2026-05-07
+    since: 2026-05-08
     release: 0
-    mergedPR: 68
-    openPR: 6
+    mergedPR: 64
+    openPR: 7
     closedIssue: 1
     openIssue: 3
     commit: 64
   last360d:
-    since: 2025-11-08
+    since: 2025-11-09
     release: 9
     mergedPR: 130
-    openPR: 8
+    openPR: 9
     closedIssue: 4
     openIssue: 3
     commit: 130
   last720d:
-    since: 2024-11-13
+    since: 2024-11-14
     release: 13
     mergedPR: 223
-    openPR: 15
+    openPR: 16
     closedIssue: 9
     openIssue: 14
     commit: 448
 total:
   release: 86
   mergedPR: 458
-  openPR: 17
+  openPR: 18
   closedIssue: 77
   openIssue: 55
   commit: 1105
 ---
 path: /home/runner/.x-repo/github.com/homeport/dyff
-collectedAt: 2026-11-03T07:33:48Z
+collectedAt: 2026-11-04T07:04:44Z
 loc:
   Yaml:
     code: 5803
@@ -133,15 +133,19 @@ total:
   blanks: 1396
   files: 109
 ---
-date: "2026-10-26"
+date: "2026-11-02"
 repo:
   name: github.com/homeport/dyff
-  commit: 8801e8ed76df99e67fd56c3ebdda8d058a5313a7
+  commit: e617f7906aa3bbdb431b8b68ca1198faae87967e
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 5.4
 checks:
+  - name: Code-Review
+    score: -1
+    reason: Found no human activity in the last 16 changesets
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
@@ -149,10 +153,6 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Code-Review
-    score: -1
-    reason: Found no human activity in the last 15 changesets
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -192,11 +192,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -205,12 +200,22 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:9'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -229,11 +234,6 @@ checks:
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:9'
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits

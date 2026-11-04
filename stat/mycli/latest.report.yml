@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.30.2"
   latestRelease: "v2.30.2"
   latestPrerelease: ""
-  collectedAt: 2026-11-03T06:35:54Z
+  collectedAt: 2026-11-04T06:06:15Z
 timeline:
   created: 2015-04-05
   lastCommit: 2026-11-02
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2026-10-28
   lastPrerelease: 
 popularity:
-  star: 11991
+  star: 11992
   watcher: 166
-  fork: 699
+  fork: 698
   release: 135
   contributor: 130
-  pullRequest: 1645
+  pullRequest: 1644
   issue: 743
 language:
   Python: 2092345
@@ -30,7 +30,7 @@ language:
 totalBytes: 2108438
 recent:
   last30d:
-    since: 2026-10-04
+    since: 2026-10-05
     release: 11
     mergedPR: 77
     openPR: 0
@@ -38,31 +38,31 @@ recent:
     openIssue: 0
     commit: 63
   last60d:
-    since: 2026-09-04
+    since: 2026-09-05
     release: 30
-    mergedPR: 205
+    mergedPR: 199
     openPR: 0
     closedIssue: 1
     openIssue: 0
     commit: 184
   last90d:
-    since: 2026-08-05
-    release: 47
-    mergedPR: 294
+    since: 2026-08-06
+    release: 46
+    mergedPR: 291
     openPR: 0
-    closedIssue: 10
+    closedIssue: 8
     openIssue: 0
     commit: 273
   last180d:
-    since: 2026-05-07
+    since: 2026-05-08
     release: 68
-    mergedPR: 496
+    mergedPR: 495
     openPR: 0
     closedIssue: 20
     openIssue: 0
     commit: 498
   last360d:
-    since: 2025-11-08
+    since: 2025-11-09
     release: 100
     mergedPR: 930
     openPR: 0
@@ -70,7 +70,7 @@ recent:
     openIssue: 0
     commit: 946
   last720d:
-    since: 2024-11-13
+    since: 2024-11-14
     release: 100
     mergedPR: 1099
     openPR: 0
@@ -86,7 +86,7 @@ total:
   commit: 4155
 ---
 path: /home/runner/.x-repo/github.com/dbcli/mycli
-collectedAt: 2026-11-03T06:35:58Z
+collectedAt: 2026-11-04T06:06:19Z
 loc:
   Python:
     code: 45424
@@ -134,22 +134,22 @@ total:
   blanks: 12784
   files: 194
 ---
-date: "2026-10-26"
+date: "2026-11-02"
 repo:
   name: github.com/dbcli/mycli
-  commit: 793e295a25738757bdc85de6e34f3f9a594cd175
+  commit: 34ba5d0cc2d08c09d59ac699ccbcc2a2e8eb7e44
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 5.2
+score: 5.1
 checks:
-  - name: Code-Review
-    score: 1
-    reason: Found 2/13 approved changesets -- score normalized to 1
-    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Code-Review
+    score: 0
+    reason: Found 0/8 approved changesets -- score normalized to 0
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -175,6 +175,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -189,25 +194,16 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE.txt:0'
       - 'Info: FSF or OSI recognized license: BSD 3-Clause "New" or "Revised" License: LICENSE.txt:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 9
     reason: dependency not pinned by hash detected -- score normalized to 9
     details:
-      - 'Warn: containerImage not pinned by hash: docker/Dockerfile:1: pin your Docker image by updating python:3.15 to python:3.15@sha256:3d35e8d5e482ef4f6151426e59208ecde73b7a80e88b38c1b098f60662e5fb91'
+      - 'Warn: containerImage not pinned by hash: docker/Dockerfile:1: pin your Docker image by updating python:3.15 to python:3.15@sha256:f17ec845ebdd4f3347431579e1c22eaeec82913f039f2a54b937c7ff870bacdb'
       - 'Warn: pipCommand not pinned by hash: docker/Dockerfile:26'
       - 'Info:  26 out of  26 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  21 out of  21 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   0 out of   1 pipCommand dependencies pinned'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Branch-Protection
     score: 3
     reason: branch protection is not maximal on development and all release branches
@@ -221,6 +217,10 @@ checks:
       - 'Warn: ''last push approval'' is disabled on branch ''main'''
       - 'Warn: no status checks found to merge onto branch ''main'''
       - 'Info: PRs are required in order to make changes on branch ''main'''
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
@@ -230,6 +230,6 @@ checks:
     score: 10
     reason: packaging workflow detected
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/ci.yml:253'
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/ci.yml:273'
 ---
 {"id":426426205,"author":{"login":"rolandwalker","id":727482,"node_id":"MDQ6VXNlcjcyNzQ4Mg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAf6F6s4Zar9d","tag_name":"v2.30.2","target_commitish":"main","name":"v2.30.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-28T08:40:59Z","updated_at":"2026-10-28T08:41:46Z","published_at":"2026-10-28T08:41:46Z","assets":[],"body":"## What's Changed\r\n* Read and write default myclirc as UTF-8 by @b84330808 in https://github.com/dbcli/mycli/pull/2389\r\n* Check every statement for the destructive warning by @shaurya703 in https://github.com/dbcli/mycli/pull/2390\r\n* Bump ubuntu/wsl/.github/actions/wsl-checkout from 3b7a6b2a43af18aa541eeee1669ac27656630097 to e7fb23c6481945b25b974b6cf7a5c7f4550b6cf8 by @dependabot[bot] in https://github.com/dbcli/mycli/pull/2391\r\n* Bump pypa/gh-action-pypi-publish from 1.14.2 to 1.14.3 by @dependabot[bot] in https://github.com/dbcli/mycli/pull/2392\r\n* Bump astral-sh/setup-uv from 10.3.0 to 10.3.1 by @dependabot[bot] in https://github.com/dbcli/mycli/pull/2394\r\n* Bump actions/setup-python from 7.0.0 to 7.1.0 by @dependabot[bot] in https://github.com/dbcli/mycli/pull/2395\r\n* Bump shogo82148/actions-setup-mysql from 1.54.2 to 1.55.0 by @dependabot[bot] in https://github.com/dbcli/mycli/pull/2396\r\n* Update `cli_helpers` to v2.15.3 by @rolandwalker in https://github.com/dbcli/mycli/pull/2393\r\n* Update changelog for release v2.30.2 by @rolandwalker in https://github.com/dbcli/mycli/pull/2397\r\n\r\n## New Contributors\r\n* @b84330808 made their first contribution in https://github.com/dbcli/mycli/pull/2389\r\n* @shaurya703 made their first contribution in https://github.com/dbcli/mycli/pull/2390\r\n\r\n**Full Changelog**: https://github.com/dbcli/mycli/compare/v2.30.1...v2.30.2","mentions_count":4}
