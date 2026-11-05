@@ -2,15 +2,15 @@ about:
   description: "Apache Karaf, the enterprise modulith runtime"
   license: Apache-2.0
   homepage: https://karaf.apache.org
-  head: 5b23743
+  head: b77a948
   archived: false
   latestVersion: "karaf-4.4.12"
   latestRelease: "karaf-4.4.12"
   latestPrerelease: ""
-  collectedAt: 2026-11-04T06:12:13Z
+  collectedAt: 2026-11-05T06:41:44Z
 timeline:
   created: 2010-08-12
-  lastCommit: 2026-10-31
+  lastCommit: 2026-11-05
   lastVersion: 2026-09-22
   lastRelease: 2026-09-22
   lastPrerelease: 
@@ -20,7 +20,7 @@ popularity:
   fork: 670
   release: 4
   contributor: 173
-  pullRequest: 2958
+  pullRequest: 2963
   issue: 88
 language:
   Java: 7380762
@@ -37,63 +37,63 @@ language:
 totalBytes: 7643765
 recent:
   last30d:
-    since: 2026-10-05
+    since: 2026-10-06
     release: 0
-    mergedPR: 49
-    openPR: 21
+    mergedPR: 53
+    openPR: 19
     closedIssue: 3
     openIssue: 1
-    commit: 33
+    commit: 37
   last60d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 1
-    mergedPR: 160
+    mergedPR: 163
     openPR: 26
     closedIssue: 6
     openIssue: 2
-    commit: 102
+    commit: 106
   last90d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 1
-    mergedPR: 202
+    mergedPR: 206
     openPR: 27
     closedIssue: 8
     openIssue: 2
-    commit: 136
+    commit: 140
   last180d:
-    since: 2026-05-08
+    since: 2026-05-09
     release: 1
-    mergedPR: 309
+    mergedPR: 314
     openPR: 27
     closedIssue: 15
     openIssue: 2
-    commit: 198
+    commit: 202
   last360d:
-    since: 2025-11-09
+    since: 2025-11-10
     release: 4
-    mergedPR: 630
+    mergedPR: 634
     openPR: 35
     closedIssue: 61
     openIssue: 13
-    commit: 380
+    commit: 384
   last720d:
-    since: 2024-11-14
+    since: 2024-11-15
     release: 4
-    mergedPR: 820
+    mergedPR: 825
     openPR: 38
     closedIssue: 73
     openIssue: 15
-    commit: 596
+    commit: 600
 total:
   release: 4
-  mergedPR: 2310
+  mergedPR: 2315
   openPR: 40
   closedIssue: 73
   openIssue: 15
-  commit: 10195
+  commit: 10199
 ---
 path: /home/runner/.x-repo/github.com/apache/karaf
-collectedAt: 2026-11-04T06:12:23Z
+collectedAt: 2026-11-05T06:42:02Z
 loc:
   Java:
     code: 129535
@@ -101,7 +101,7 @@ loc:
     blanks: 24099
     files: 1601
   Xml:
-    code: 32087
+    code: 32082
     comments: 8916
     blanks: 3294
     files: 486
@@ -192,8 +192,8 @@ loc:
     files: 2
   Markdown:
     code: 0
-    comments: 2476
-    blanks: 941
+    comments: 2554
+    blanks: 962
     files: 40
   Text:
     code: 0
@@ -201,28 +201,48 @@ loc:
     blanks: 13
     files: 12
 total:
-  code: 176133
-  comments: 56719
-  blanks: 32793
+  code: 176128
+  comments: 56797
+  blanks: 32814
   files: 2285
 ---
-date: "2026-10-26"
+date: "2026-11-02"
 repo:
   name: github.com/apache/karaf
-  commit: 1cccd2fbc0bf07074bc3ab451e8b7660fe728e2b
+  commit: 5b2374351a668332d35ea974286085da4df08b4b
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 6.7
+score: 7
 checks:
+  - name: Code-Review
+    score: 7
+    reason: Found 6/8 approved changesets -- score normalized to 7
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 5 issue activity found in the last 90 days -- score normalized to 10
     details: null
-  - name: Code-Review
-    score: 4
-    reason: Found 4/10 approved changesets -- score normalized to 4
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
+  - name: Token-Permissions
+    score: 9
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:65'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:33'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/ci-test-results.yml:29'
+      - 'Warn: topLevel ''checks'' permission set to ''write'': .github/workflows/ci-test-results.yml:30'
+      - 'Info: topLevel ''actions'' permission set to ''read'': .github/workflows/ci-test-results.yml:32'
+      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -231,26 +251,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Token-Permissions
-    score: 9
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:33'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:65'
-      - 'Info: topLevel ''actions'' permission set to ''read'': .github/workflows/ci-test-results.yml:32'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/ci-test-results.yml:29'
-      - 'Warn: topLevel ''checks'' permission set to ''write'': .github/workflows/ci-test-results.yml:30'
-      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -267,15 +267,15 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci-test-results.yml:42: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/karaf/ci-test-results.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci-test-results.yml:50: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/karaf/ci-test-results.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci-test-results.yml:57: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/karaf/ci-test-results.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:44: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/karaf/ci.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:46: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/karaf/ci.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:54: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/karaf/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:76: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/karaf/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:78: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/karaf/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:84: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/karaf/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:93: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/karaf/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:99: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/karaf/ci.yml/main?enable=pin'
-      - 'Warn: containerImage not pinned by hash: assemblies/docker/Dockerfile:19: pin your Docker image by updating eclipse-temurin:11-jre to eclipse-temurin:11-jre@sha256:d218907a19a41f9036cf547a0a84a408cfb1bc56aeb2be090ae867563e086458'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:44: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/karaf/ci.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:46: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/karaf/ci.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:54: update your workflow using https://app.stepsecurity.io/secureworkflow/apache/karaf/ci.yml/main?enable=pin'
+      - 'Warn: containerImage not pinned by hash: assemblies/docker/Dockerfile:19: pin your Docker image by updating eclipse-temurin:11-jre to eclipse-temurin:11-jre@sha256:5dd0f12260b837ce636299e4fc0a10c7c70ed879d1f162470da6badd6f8f733d'
       - 'Info:   0 out of   8 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'

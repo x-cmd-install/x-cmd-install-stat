@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-11-04T06:39:47Z
+  collectedAt: 2026-11-05T07:04:57Z
 timeline:
   created: 
   lastCommit: 
@@ -24,7 +24,7 @@ popularity:
   issue: 0
 recent:
   last30d:
-    since: 2026-10-05
+    since: 2026-10-06
     release: 0
     mergedPR: 0
     openPR: 0
@@ -32,7 +32,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 0
     mergedPR: 0
     openPR: 0
@@ -40,7 +40,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 0
     mergedPR: 0
     openPR: 0
@@ -48,7 +48,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-08
+    since: 2026-05-09
     release: 0
     mergedPR: 0
     openPR: 0
@@ -56,7 +56,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-09
+    since: 2025-11-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -64,7 +64,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-14
+    since: 2024-11-15
     release: 0
     mergedPR: 0
     openPR: 0
@@ -83,7 +83,7 @@ graphqlErrors:
   - Could not resolve to a Repository with the name 'sindresorhus/capture-website-cli#readme'.
 ---
 ---
-date: "2026-10-19"
+date: "2026-11-02"
 repo:
   name: github.com/sindresorhus/capture-website-cli
   commit: 032a6214826c77c099482f8a805326644501113d
@@ -96,6 +96,10 @@ checks:
     score: 1
     reason: Found 3/30 approved changesets -- score normalized to 1
     details: null
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -104,11 +108,6 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -118,10 +117,11 @@ checks:
       - 'Warn: npmCommand not pinned by hash: .github/workflows/main.yml:21'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 npmCommand dependencies pinned'
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -137,16 +137,21 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: license:0'
       - 'Info: FSF or OSI recognized license: MIT License: license:0'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''main'''
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -155,11 +160,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''main'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

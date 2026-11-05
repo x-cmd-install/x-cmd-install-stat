@@ -7,7 +7,7 @@ about:
   latestVersion: "20260616"
   latestRelease: "20260616"
   latestPrerelease: "20200807"
-  collectedAt: 2026-11-04T06:09:20Z
+  collectedAt: 2026-11-05T06:30:36Z
 timeline:
   created: 2015-12-21
   lastCommit: 2026-10-27
@@ -32,7 +32,7 @@ language:
 totalBytes: 9949988
 recent:
   last30d:
-    since: 2026-10-05
+    since: 2026-10-06
     release: 0
     mergedPR: 12
     openPR: 5
@@ -40,7 +40,7 @@ recent:
     openIssue: 3
     commit: 19
   last60d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 0
     mergedPR: 18
     openPR: 5
@@ -48,15 +48,15 @@ recent:
     openIssue: 3
     commit: 22
   last90d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 0
-    mergedPR: 28
+    mergedPR: 27
     openPR: 9
     closedIssue: 12
     openIssue: 14
     commit: 33
   last180d:
-    since: 2026-05-08
+    since: 2026-05-09
     release: 1
     mergedPR: 82
     openPR: 15
@@ -64,21 +64,21 @@ recent:
     openIssue: 34
     commit: 187
   last360d:
-    since: 2025-11-09
+    since: 2025-11-10
     release: 5
-    mergedPR: 151
+    mergedPR: 150
     openPR: 30
     closedIssue: 63
     openIssue: 56
     commit: 1103
   last720d:
-    since: 2024-11-14
-    release: 12
+    since: 2024-11-15
+    release: 11
     mergedPR: 242
     openPR: 33
     closedIssue: 134
     openIssue: 91
-    commit: 1590
+    commit: 1565
 total:
   release: 100
   mergedPR: 1938
@@ -88,7 +88,7 @@ total:
   commit: 18787
 ---
 path: /home/runner/.x-repo/github.com/neomutt/neomutt
-collectedAt: 2026-11-04T06:10:34Z
+collectedAt: 2026-11-05T06:31:12Z
 loc:
   C:
     code: 197779
@@ -156,22 +156,18 @@ total:
   blanks: 41858
   files: 1691
 ---
-date: "2026-10-26"
+date: "2026-11-02"
 repo:
   name: github.com/neomutt/neomutt
-  commit: 3a2e4b6eb03c0439ffcac34c157a021a0d710dc1
+  commit: 88ae8484ff57faf455a7f6a08bb5e921ad68a4f4
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 7.5
 checks:
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 12 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Code-Review
     score: 6
-    reason: Found 17/26 approved changesets -- score normalized to 6
+    reason: Found 18/26 approved changesets -- score normalized to 6
     details: null
   - name: Security-Policy
     score: 10
@@ -181,15 +177,19 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 11 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 2
     reason: detected GitHub workflow tokens with excessive permissions
@@ -298,6 +298,12 @@ checks:
       - 'Info:   0 out of  39 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   3 out of  16 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 pipCommand dependencies pinned'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE.md:0'
+      - 'Info: FSF or OSI recognized license: GNU General Public License v2.0: LICENSE.md:0'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -307,6 +313,10 @@ checks:
       - 'Info: CLibFuzzer integration found: fuzz/body.c:65'
       - 'Info: CLibFuzzer integration found: fuzz/cli.c:132'
       - 'Info: CLibFuzzer integration found: fuzz/date.c:10'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -321,21 +331,11 @@ checks:
       - 'Warn: release artifact 20260406 does not have provenance: https://api.github.com/repos/neomutt/neomutt/releases/305646556'
       - 'Warn: release artifact 20260105 does not have provenance: https://api.github.com/repos/neomutt/neomutt/releases/274200704'
       - 'Warn: release artifact 20251211 does not have provenance: https://api.github.com/repos/neomutt/neomutt/releases/269507265'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE.md:0'
-      - 'Info: FSF or OSI recognized license: GNU General Public License v2.0: LICENSE.md:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 9
     reason: SAST tool detected but not run on all commits
     details:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 21 commits out of 22 are checked with a SAST tool'
+      - 'Warn: 22 commits out of 23 are checked with a SAST tool'
 ---

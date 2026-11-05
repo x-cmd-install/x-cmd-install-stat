@@ -7,7 +7,7 @@ about:
   latestVersion: "1.4.6"
   latestRelease: "1.4.6"
   latestPrerelease: "1.0-rc1"
-  collectedAt: 2026-11-04T06:16:06Z
+  collectedAt: 2026-11-05T06:37:25Z
 timeline:
   created: 2014-05-11
   lastCommit: 2026-04-15
@@ -30,7 +30,7 @@ language:
 totalBytes: 608866
 recent:
   last30d:
-    since: 2026-10-05
+    since: 2026-10-06
     release: 0
     mergedPR: 0
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 0
     mergedPR: 0
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 0
     mergedPR: 0
     openPR: 0
@@ -54,7 +54,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-05-08
+    since: 2026-05-09
     release: 0
     mergedPR: 0
     openPR: 0
@@ -62,15 +62,15 @@ recent:
     openIssue: 2
     commit: 0
   last360d:
-    since: 2025-11-09
+    since: 2025-11-10
     release: 0
     mergedPR: 4
     openPR: 7
-    closedIssue: 2
+    closedIssue: 1
     openIssue: 8
     commit: 5
   last720d:
-    since: 2024-11-14
+    since: 2024-11-15
     release: 1
     mergedPR: 4
     openPR: 7
@@ -86,7 +86,7 @@ total:
   commit: 957
 ---
 path: /home/runner/.x-repo/github.com/zevv/duc
-collectedAt: 2026-11-04T06:16:07Z
+collectedAt: 2026-11-05T06:37:26Z
 loc:
   C:
     code: 9436
@@ -154,7 +154,7 @@ total:
   blanks: 2566
   files: 66
 ---
-date: "2026-10-19"
+date: "2026-11-02"
 repo:
   name: github.com/zevv/duc
   commit: c42b0382f17b65a9b1a98fde384d1abb6de677e3
@@ -163,6 +163,14 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 2.8
 checks:
+  - name: Code-Review
+    score: 3
+    reason: Found 3/9 approved changesets -- score normalized to 3
+    details: null
+  - name: Token-Permissions
+    score: -1
+    reason: No tokens found
+    details: null
   - name: Dangerous-Workflow
     score: -1
     reason: no workflows found
@@ -172,14 +180,6 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Token-Permissions
-    score: -1
-    reason: No tokens found
-    details: null
-  - name: Code-Review
-    score: 3
-    reason: Found 3/9 approved changesets -- score normalized to 3
-    details: null
   - name: Maintained
     score: 1
     reason: 0 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 1
@@ -196,6 +196,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -204,11 +209,12 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
+  - name: License
+    score: 10
+    reason: license file detected
     details:
-      - 'Warn: no fuzzer integrations found'
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: GNU Lesser General Public License v3.0: LICENSE:0'
   - name: Signed-Releases
     score: 4
     reason: 3 out of the last 5 releases have a total of 3 signed artifacts.
@@ -223,12 +229,6 @@ checks:
       - 'Warn: release artifact 1.4.4 does not have provenance: https://api.github.com/repos/zevv/duc/releases/13146409'
       - 'Warn: release artifact 1.4.3 does not have provenance: https://api.github.com/repos/zevv/duc/releases/5047985'
       - 'Warn: release artifact 1.4.2 does not have provenance: https://api.github.com/repos/zevv/duc/releases/4710621'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: GNU Lesser General Public License v3.0: LICENSE:0'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches

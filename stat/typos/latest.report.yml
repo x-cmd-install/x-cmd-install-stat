@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.52.0"
   latestRelease: "v1.52.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-04T06:50:06Z
+  collectedAt: 2026-11-05T07:12:52Z
 timeline:
   created: 2019-04-16
   lastCommit: 2026-11-04
@@ -35,15 +35,15 @@ language:
 totalBytes: 20504411
 recent:
   last30d:
-    since: 2026-10-05
+    since: 2026-10-06
     release: 3
-    mergedPR: 5
+    mergedPR: 4
     openPR: 0
     closedIssue: 1
     openIssue: 1
     commit: 7
   last60d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 5
     mergedPR: 15
     openPR: 1
@@ -51,23 +51,23 @@ recent:
     openIssue: 2
     commit: 31
   last90d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 8
-    mergedPR: 23
+    mergedPR: 22
     openPR: 3
     closedIssue: 10
     openIssue: 3
     commit: 60
   last180d:
-    since: 2026-05-08
-    release: 16
+    since: 2026-05-09
+    release: 15
     mergedPR: 41
     openPR: 5
     closedIssue: 24
     openIssue: 5
     commit: 131
   last360d:
-    since: 2025-11-09
+    since: 2025-11-10
     release: 36
     mergedPR: 93
     openPR: 9
@@ -75,7 +75,7 @@ recent:
     openIssue: 26
     commit: 316
   last720d:
-    since: 2024-11-14
+    since: 2024-11-15
     release: 82
     mergedPR: 201
     openPR: 15
@@ -91,7 +91,7 @@ total:
   commit: 3056
 ---
 path: /home/runner/.x-repo/github.com/crate-ci/typos
-collectedAt: 2026-11-04T06:50:37Z
+collectedAt: 2026-11-05T07:13:08Z
 loc:
   Rust:
     code: 10543
@@ -169,10 +169,10 @@ total:
   blanks: 2474
   files: 167
 ---
-date: "2026-10-26"
+date: "2026-11-02"
 repo:
   name: github.com/crate-ci/typos
-  commit: 7f9d0819ca1c008ade73f4b41fa9d258d48f605b
+  commit: 7cd4cdb2163dd8ef2eec5268a8cdcf0b5a6828f9
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
@@ -180,34 +180,34 @@ score: 6.2
 checks:
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 8 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Code-Review
     score: 1
-    reason: Found 3/21 approved changesets -- score normalized to 1
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
+    reason: Found 3/24 approved changesets -- score normalized to 1
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
     details:
-      - 'Warn: jobLevel ''checks'' permission set to ''write'': .github/workflows/audit.yml:36'
       - 'Warn: jobLevel ''checks'' permission set to ''write'': .github/workflows/audit.yml:58'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/audit.yml:79'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/audit.yml:80'
       - 'Info: found token with ''none'' permissions: .github/workflows/audit.yml:24'
+      - 'Warn: jobLevel ''checks'' permission set to ''write'': .github/workflows/audit.yml:36'
       - 'Info: found token with ''none'' permissions: .github/workflows/ci.yml:27'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/post-release.yml:33'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/post-release.yml:60'
@@ -251,10 +251,6 @@ checks:
       - 'Info:  34 out of  34 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  24 out of  24 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -264,20 +260,24 @@ checks:
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
+      - 'Warn: release artifact v1.52.0 not signed: https://api.github.com/repos/crate-ci/typos/releases/431956818'
       - 'Warn: release artifact v1.51.1 not signed: https://api.github.com/repos/crate-ci/typos/releases/405137903'
       - 'Warn: release artifact v1.51.0 not signed: https://api.github.com/repos/crate-ci/typos/releases/404901206'
       - 'Warn: release artifact v1.50.3 not signed: https://api.github.com/repos/crate-ci/typos/releases/396844799'
       - 'Warn: release artifact v1.50.2 not signed: https://api.github.com/repos/crate-ci/typos/releases/389182420'
-      - 'Warn: release artifact v1.50.1 not signed: https://api.github.com/repos/crate-ci/typos/releases/380675659'
+      - 'Warn: release artifact v1.52.0 does not have provenance: https://api.github.com/repos/crate-ci/typos/releases/431956818'
       - 'Warn: release artifact v1.51.1 does not have provenance: https://api.github.com/repos/crate-ci/typos/releases/405137903'
       - 'Warn: release artifact v1.51.0 does not have provenance: https://api.github.com/repos/crate-ci/typos/releases/404901206'
       - 'Warn: release artifact v1.50.3 does not have provenance: https://api.github.com/repos/crate-ci/typos/releases/396844799'
       - 'Warn: release artifact v1.50.2 does not have provenance: https://api.github.com/repos/crate-ci/typos/releases/389182420'
-      - 'Warn: release artifact v1.50.1 does not have provenance: https://api.github.com/repos/crate-ci/typos/releases/380675659'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits
     details:
-      - 'Info: all commits (20) are checked with a SAST tool'
+      - 'Info: all commits (18) are checked with a SAST tool'
 ---
-{"id":431956818,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCtXHDs4ZvyNS","tag_name":"v1.52.0","target_commitish":"main","name":"v1.52.0","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-11-02T20:51:04Z","updated_at":"2026-11-02T21:00:37Z","published_at":"2026-11-02T21:00:37Z","assets":[{"id":703166489,"node_id":"RA_kwDOCtXHDs4p6XgZ","name":"typos-v1.52.0-aarch64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":3362010,"digest":"sha256:90724dd2905cb1ce033343c71ed60e52fe898674f882803e3110cd228e09e1c5","download_count":199,"created_at":"2026-11-02T21:00:21Z","updated_at":"2026-11-02T21:00:22Z"},{"id":703158061,"node_id":"RA_kwDOCtXHDs4p6Vct","name":"typos-v1.52.0-aarch64-pc-windows-msvc.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3092222,"digest":"sha256:bbee0a3b8826ae6fcf9b5424c6af6637b8c32899c8d679b1d851624a688c497d","download_count":8,"created_at":"2026-11-02T20:57:15Z","updated_at":"2026-11-02T20:57:15Z"},{"id":703151522,"node_id":"RA_kwDOCtXHDs4p6T2i","name":"typos-v1.52.0-aarch64-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":7222226,"digest":"sha256:63b7d4478d467a61fe47cdb3162f720c6797856e61a04f7e125d1cdc282488b8","download_count":214,"created_at":"2026-11-02T20:54:53Z","updated_at":"2026-11-02T20:54:53Z"},{"id":703158123,"node_id":"RA_kwDOCtXHDs4p6Vdr","name":"typos-v1.52.0-x86_64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":3474111,"digest":"sha256:8de057f425909b02c0184892539755d70ecc3244c4b214ae9382cedd691127e0","download_count":45,"created_at":"2026-11-02T20:57:16Z","updated_at":"2026-11-02T20:57:17Z"},{"id":703159242,"node_id":"RA_kwDOCtXHDs4p6VvK","name":"typos-v1.52.0-x86_64-pc-windows-msvc.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3262295,"digest":"sha256:7da6eb1932ad86921420a7198dbc9e62a10bcd995144704dc19b81d3fb802182","download_count":171,"created_at":"2026-11-02T20:57:47Z","updated_at":"2026-11-02T20:57:47Z"},{"id":703158772,"node_id":"RA_kwDOCtXHDs4p6Vn0","name":"typos-v1.52.0-x86_64-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":8282701,"digest":"sha256:6155d4114f9a0f5b8f6d4fda96266c9d5f6add71df80da7f684ee5e72eb14588","download_count":4077,"created_at":"2026-11-02T20:57:33Z","updated_at":"2026-11-02T20:57:34Z"}],"body":"## [1.52.0] - 2026-11-02\n\n### Features\n\n- Updated the dictionary with the [October 2026](https://github.com/crate-ci/typos/issues/1626) changes"}
+{"id":431956818,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCtXHDs4ZvyNS","tag_name":"v1.52.0","target_commitish":"main","name":"v1.52.0","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-11-02T20:51:04Z","updated_at":"2026-11-02T21:00:37Z","published_at":"2026-11-02T21:00:37Z","assets":[{"id":703166489,"node_id":"RA_kwDOCtXHDs4p6XgZ","name":"typos-v1.52.0-aarch64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":3362010,"digest":"sha256:90724dd2905cb1ce033343c71ed60e52fe898674f882803e3110cd228e09e1c5","download_count":435,"created_at":"2026-11-02T21:00:21Z","updated_at":"2026-11-02T21:00:22Z"},{"id":703158061,"node_id":"RA_kwDOCtXHDs4p6Vct","name":"typos-v1.52.0-aarch64-pc-windows-msvc.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3092222,"digest":"sha256:bbee0a3b8826ae6fcf9b5424c6af6637b8c32899c8d679b1d851624a688c497d","download_count":13,"created_at":"2026-11-02T20:57:15Z","updated_at":"2026-11-02T20:57:15Z"},{"id":703151522,"node_id":"RA_kwDOCtXHDs4p6T2i","name":"typos-v1.52.0-aarch64-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":7222226,"digest":"sha256:63b7d4478d467a61fe47cdb3162f720c6797856e61a04f7e125d1cdc282488b8","download_count":428,"created_at":"2026-11-02T20:54:53Z","updated_at":"2026-11-02T20:54:53Z"},{"id":703158123,"node_id":"RA_kwDOCtXHDs4p6Vdr","name":"typos-v1.52.0-x86_64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":3474111,"digest":"sha256:8de057f425909b02c0184892539755d70ecc3244c4b214ae9382cedd691127e0","download_count":73,"created_at":"2026-11-02T20:57:16Z","updated_at":"2026-11-02T20:57:17Z"},{"id":703159242,"node_id":"RA_kwDOCtXHDs4p6VvK","name":"typos-v1.52.0-x86_64-pc-windows-msvc.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":3262295,"digest":"sha256:7da6eb1932ad86921420a7198dbc9e62a10bcd995144704dc19b81d3fb802182","download_count":284,"created_at":"2026-11-02T20:57:47Z","updated_at":"2026-11-02T20:57:47Z"},{"id":703158772,"node_id":"RA_kwDOCtXHDs4p6Vn0","name":"typos-v1.52.0-x86_64-unknown-linux-musl.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":8282701,"digest":"sha256:6155d4114f9a0f5b8f6d4fda96266c9d5f6add71df80da7f684ee5e72eb14588","download_count":8359,"created_at":"2026-11-02T20:57:33Z","updated_at":"2026-11-02T20:57:34Z"}],"body":"## [1.52.0] - 2026-11-02\n\n### Features\n\n- Updated the dictionary with the [October 2026](https://github.com/crate-ci/typos/issues/1626) changes"}

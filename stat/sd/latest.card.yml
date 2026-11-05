@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.1.0"
   latestRelease: "v1.1.0"
   latestPrerelease: "1.0.0-beta.0"
-  collectedAt: 2026-11-04T06:01:06Z
+  collectedAt: 2026-11-05T06:27:41Z
 timeline:
   created: 2018-12-23
   lastCommit: 2026-02-25
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-02-25
   lastPrerelease: 2023-11-05
 popularity:
-  star: 7404
+  star: 7413
   watcher: 31
   fork: 175
   release: 12
@@ -31,7 +31,7 @@ language:
 totalBytes: 71852
 recent:
   last30d:
-    since: 2026-10-05
+    since: 2026-10-06
     release: 0
     mergedPR: 0
     openPR: 2
@@ -39,7 +39,7 @@ recent:
     openIssue: 4
     commit: 0
   last60d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 0
     mergedPR: 0
     openPR: 5
@@ -47,7 +47,7 @@ recent:
     openIssue: 4
     commit: 0
   last90d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 0
     mergedPR: 0
     openPR: 9
@@ -55,7 +55,7 @@ recent:
     openIssue: 4
     commit: 0
   last180d:
-    since: 2026-05-08
+    since: 2026-05-09
     release: 0
     mergedPR: 0
     openPR: 15
@@ -63,7 +63,7 @@ recent:
     openIssue: 5
     commit: 0
   last360d:
-    since: 2025-11-09
+    since: 2025-11-10
     release: 1
     mergedPR: 3
     openPR: 18
@@ -71,7 +71,7 @@ recent:
     openIssue: 11
     commit: 8
   last720d:
-    since: 2024-11-14
+    since: 2024-11-15
     release: 1
     mergedPR: 4
     openPR: 19
@@ -87,7 +87,7 @@ total:
   commit: 336
 ---
 path: /home/runner/.x-repo/github.com/chmln/sd
-collectedAt: 2026-11-04T06:01:06Z
+collectedAt: 2026-11-05T06:27:41Z
 loc:
   Rust:
     code: 1700
@@ -135,7 +135,7 @@ total:
   blanks: 534
   files: 28
 ---
-date: "2026-10-26"
+date: "2026-11-02"
 repo:
   name: github.com/chmln/sd
   commit: 44febdf86343c653255ae4f20f5e1882dad6be17
@@ -148,18 +148,18 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
+  - name: Code-Review
+    score: 4
+    reason: Found 7/16 approved changesets -- score normalized to 4
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Binary-Artifacts
+  - name: Dangerous-Workflow
     score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Code-Review
-    score: 4
-    reason: Found 7/16 approved changesets -- score normalized to 4
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -168,9 +168,9 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/publish.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
+  - name: Binary-Artifacts
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: no binaries found in the repo
     details: null
   - name: Pinned-Dependencies
     score: 0
@@ -206,6 +206,10 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -220,10 +224,6 @@ checks:
       - 'Warn: release artifact 1.0.0-beta.0 does not have provenance: https://api.github.com/repos/chmln/sd/releases/128038624'
       - 'Warn: release artifact 1.0.0-pre-alpha.5 does not have provenance: https://api.github.com/repos/chmln/sd/releases/127061165'
       - 'Warn: release artifact 1.0.0-alpha.0 does not have provenance: https://api.github.com/repos/chmln/sd/releases/127281873'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

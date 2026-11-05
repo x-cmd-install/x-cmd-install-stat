@@ -7,7 +7,7 @@ about:
   latestVersion: "2.4"
   latestRelease: "2.4"
   latestPrerelease: ""
-  collectedAt: 2026-11-04T06:17:58Z
+  collectedAt: 2026-11-05T06:48:43Z
 timeline:
   created: 2014-11-21
   lastCommit: 2026-09-26
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-04-11
   lastPrerelease: 
 popularity:
-  star: 8564
+  star: 8565
   watcher: 159
   fork: 507
   release: 5
@@ -27,15 +27,15 @@ language:
 totalBytes: 124337
 recent:
   last30d:
-    since: 2026-10-05
+    since: 2026-10-06
     release: 0
     mergedPR: 0
     openPR: 4
     closedIssue: 0
-    openIssue: 1
+    openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 0
     mergedPR: 1
     openPR: 4
@@ -43,7 +43,7 @@ recent:
     openIssue: 2
     commit: 5
   last90d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 0
     mergedPR: 1
     openPR: 4
@@ -51,7 +51,7 @@ recent:
     openIssue: 2
     commit: 5
   last180d:
-    since: 2026-05-08
+    since: 2026-05-09
     release: 0
     mergedPR: 3
     openPR: 4
@@ -59,7 +59,7 @@ recent:
     openIssue: 4
     commit: 5
   last360d:
-    since: 2025-11-09
+    since: 2025-11-10
     release: 1
     mergedPR: 19
     openPR: 4
@@ -67,7 +67,7 @@ recent:
     openIssue: 6
     commit: 28
   last720d:
-    since: 2024-11-14
+    since: 2024-11-15
     release: 1
     mergedPR: 22
     openPR: 6
@@ -83,7 +83,7 @@ total:
   commit: 198
 ---
 path: /home/runner/.x-repo/github.com/schachmat/wego
-collectedAt: 2026-11-04T06:17:59Z
+collectedAt: 2026-11-05T06:48:44Z
 loc:
   Go:
     code: 3366
@@ -106,7 +106,7 @@ total:
   blanks: 447
   files: 18
 ---
-date: "2026-10-19"
+date: "2026-11-02"
 repo:
   name: github.com/schachmat/wego
   commit: 14b1e3643badf55963df2889aacd31094a13ac99
@@ -115,18 +115,6 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Code-Review
-    score: 4
-    reason: Found 5/12 approved changesets -- score normalized to 4
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -136,15 +124,18 @@ checks:
     score: 4
     reason: 5 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 4
     details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/go-build-test.yml:1'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/golangci-lint.yml:10'
-      - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/golangci-lint.yml:12'
-      - 'Warn: topLevel ''checks'' permission set to ''write'': .github/workflows/golangci-lint.yml:14'
-      - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Code-Review
+    score: 4
+    reason: Found 5/12 approved changesets -- score normalized to 4
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -156,6 +147,15 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/golangci-lint.yml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/schachmat/wego/golangci-lint.yml/master?enable=pin'
       - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/go-build-test.yml:1'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/golangci-lint.yml:10'
+      - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/golangci-lint.yml:12'
+      - 'Warn: topLevel ''checks'' permission set to ''write'': .github/workflows/golangci-lint.yml:14'
+      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -168,17 +168,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: ISC License: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: -1
     reason: no releases found

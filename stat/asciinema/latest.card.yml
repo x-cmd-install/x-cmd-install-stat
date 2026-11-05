@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.2.1"
   latestRelease: "v3.2.1"
   latestPrerelease: "v3.0.0-rc.4"
-  collectedAt: 2026-11-04T05:21:38Z
+  collectedAt: 2026-11-05T05:40:37Z
 timeline:
   created: 2011-11-21
   lastCommit: 2026-10-27
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-06-16
   lastPrerelease: 2025-05-07
 popularity:
-  star: 17934
+  star: 17940
   watcher: 272
   fork: 1048
   release: 26
@@ -31,7 +31,7 @@ language:
 totalBytes: 304995
 recent:
   last30d:
-    since: 2026-10-05
+    since: 2026-10-06
     release: 0
     mergedPR: 0
     openPR: 2
@@ -39,15 +39,15 @@ recent:
     openIssue: 0
     commit: 2
   last60d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 0
     mergedPR: 0
-    openPR: 4
+    openPR: 3
     closedIssue: 0
     openIssue: 1
     commit: 2
   last90d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 0
     mergedPR: 0
     openPR: 5
@@ -55,7 +55,7 @@ recent:
     openIssue: 1
     commit: 6
   last180d:
-    since: 2026-05-08
+    since: 2026-05-09
     release: 1
     mergedPR: 1
     openPR: 8
@@ -63,7 +63,7 @@ recent:
     openIssue: 2
     commit: 27
   last360d:
-    since: 2025-11-09
+    since: 2025-11-10
     release: 3
     mergedPR: 4
     openPR: 9
@@ -71,7 +71,7 @@ recent:
     openIssue: 4
     commit: 70
   last720d:
-    since: 2024-11-14
+    since: 2024-11-15
     release: 7
     mergedPR: 21
     openPR: 9
@@ -87,7 +87,7 @@ total:
   commit: 1715
 ---
 path: /home/runner/.x-repo/github.com/asciinema/asciinema
-collectedAt: 2026-11-04T05:21:38Z
+collectedAt: 2026-11-05T05:40:38Z
 loc:
   Rust:
     code: 7388
@@ -145,32 +145,32 @@ total:
   blanks: 1852
   files: 58
 ---
-date: "2026-10-26"
+date: "2026-11-02"
 repo:
   name: github.com/asciinema/asciinema
-  commit: 77498061982889f68ba1f6e8b666dd8d13246250
+  commit: cf66ef4c9b01171816cd668aa2e3781c2483a134
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 3
+score: 3.2
 checks:
   - name: Code-Review
     score: 0
     reason: Found 1/30 approved changesets -- score normalized to 0
     details: null
   - name: Maintained
-    score: 5
-    reason: 7 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5
+    score: 7
+    reason: 9 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 7
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -209,10 +209,18 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:59: update your workflow using https://app.stepsecurity.io/secureworkflow/asciinema/asciinema/release.yml/develop?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:65: update your workflow using https://app.stepsecurity.io/secureworkflow/asciinema/asciinema/release.yml/develop?enable=pin'
       - 'Warn: containerImage not pinned by hash: Dockerfile:2: pin your Docker image by updating rust:1.90.0-slim-trixie to rust:1.90.0-slim-trixie@sha256:7fa728f3678acf5980d5db70960cf8491aff9411976789086676bdf0c19db39e'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:18: pin your Docker image by updating debian:trixie-slim to debian:trixie-slim@sha256:62bd423aeee912639ca8ee681c2b762cb3e25137e0a92b20be455898a9f034ad'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:18: pin your Docker image by updating debian:trixie-slim to debian:trixie-slim@sha256:f6b08b09a05725f9431502d3b5714f5c4576e82c1a84fa1debe0c24a7e0c3ec4'
       - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -227,23 +235,15 @@ checks:
       - 'Warn: release artifact v3.1.0 does not have provenance: https://api.github.com/repos/asciinema/asciinema/releases/276649464'
       - 'Warn: release artifact v3.0.1 does not have provenance: https://api.github.com/repos/asciinema/asciinema/releases/257014366'
       - 'Warn: release artifact v3.0.0 does not have provenance: https://api.github.com/repos/asciinema/asciinema/releases/247353490'
-  - name: Security-Policy
+  - name: SAST
     score: 0
-    reason: security policy file not detected
+    reason: SAST tool is not run on all commits -- score normalized to 0
     details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
+      - 'Warn: 0 commits out of 1 are checked with a SAST tool'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''develop'''
       - 'Warn: branch protection not enabled for branch ''main'''
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 1 are checked with a SAST tool'
 ---

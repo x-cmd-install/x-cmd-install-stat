@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.7.0"
   latestRelease: "v1.7.0"
   latestPrerelease: "v1.0.0-beta.2"
-  collectedAt: 2026-11-04T07:15:43Z
+  collectedAt: 2026-11-05T07:37:23Z
 timeline:
   created: 2020-11-22
   lastCommit: 2026-10-17
@@ -29,7 +29,7 @@ language:
 totalBytes: 561121
 recent:
   last30d:
-    since: 2026-10-05
+    since: 2026-10-06
     release: 0
     mergedPR: 1
     openPR: 4
@@ -37,7 +37,7 @@ recent:
     openIssue: 4
     commit: 2
   last60d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 0
     mergedPR: 2
     openPR: 8
@@ -45,7 +45,7 @@ recent:
     openIssue: 8
     commit: 3
   last90d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 0
     mergedPR: 3
     openPR: 14
@@ -53,7 +53,7 @@ recent:
     openIssue: 11
     commit: 6
   last180d:
-    since: 2026-05-08
+    since: 2026-05-09
     release: 0
     mergedPR: 10
     openPR: 17
@@ -61,7 +61,7 @@ recent:
     openIssue: 15
     commit: 15
   last360d:
-    since: 2025-11-09
+    since: 2025-11-10
     release: 0
     mergedPR: 19
     openPR: 42
@@ -69,7 +69,7 @@ recent:
     openIssue: 34
     commit: 20
   last720d:
-    since: 2024-11-14
+    since: 2024-11-15
     release: 2
     mergedPR: 41
     openPR: 56
@@ -85,7 +85,7 @@ total:
   commit: 482
 ---
 path: /home/runner/.x-repo/github.com/ankitpokhrel/jira-cli
-collectedAt: 2026-11-04T07:15:47Z
+collectedAt: 2026-11-05T07:37:29Z
 loc:
   Go:
     code: 18713
@@ -128,26 +128,26 @@ total:
   blanks: 3627
   files: 174
 ---
-date: "2026-10-26"
+date: "2026-11-02"
 repo:
   name: github.com/ankitpokhrel/jira-cli
   commit: 9b593fd47518d207897878cc31ac3000231151f1
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 4.7
+score: 4.4
 checks:
+  - name: Code-Review
+    score: 4
+    reason: Found 14/30 approved changesets -- score normalized to 4
+    details: null
   - name: Maintained
-    score: 10
-    reason: 15 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10
+    score: 7
+    reason: 6 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 7
     details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Code-Review
-    score: 4
-    reason: Found 14/30 approved changesets -- score normalized to 4
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -202,11 +202,17 @@ checks:
       - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   5 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
+  - name: Branch-Protection
+    score: 6
+    reason: branch protection is not maximal on development and all release branches
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker.yml:14'
+      - 'Info: ''allow deletion'' disabled on branch ''main'''
+      - 'Info: ''force pushes'' disabled on branch ''main'''
+      - 'Info: ''branch protection settings apply to administrators'' is required to merge on branch ''main'''
+      - 'Warn: required approving review count is 1 on branch ''main'''
+      - 'Warn: codeowners review is not required on branch ''main'''
+      - 'Warn: no status checks found to merge onto branch ''main'''
+      - 'Info: PRs are required in order to make changes on branch ''main'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -221,17 +227,11 @@ checks:
       - 'Warn: release artifact v1.5.2 does not have provenance: https://api.github.com/repos/ankitpokhrel/jira-cli/releases/176269120'
       - 'Warn: release artifact v1.5.1 does not have provenance: https://api.github.com/repos/ankitpokhrel/jira-cli/releases/138831493'
       - 'Warn: release artifact v1.5.0 does not have provenance: https://api.github.com/repos/ankitpokhrel/jira-cli/releases/136444295'
-  - name: Branch-Protection
-    score: 6
-    reason: branch protection is not maximal on development and all release branches
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
     details:
-      - 'Info: ''allow deletion'' disabled on branch ''main'''
-      - 'Info: ''force pushes'' disabled on branch ''main'''
-      - 'Info: ''branch protection settings apply to administrators'' is required to merge on branch ''main'''
-      - 'Warn: required approving review count is 1 on branch ''main'''
-      - 'Warn: codeowners review is not required on branch ''main'''
-      - 'Warn: no status checks found to merge onto branch ''main'''
-      - 'Info: PRs are required in order to make changes on branch ''main'''
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker.yml:14'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

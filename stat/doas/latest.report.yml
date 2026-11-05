@@ -7,7 +7,7 @@ about:
   latestVersion: "6.3p12"
   latestRelease: "6.3p12"
   latestPrerelease: ""
-  collectedAt: 2026-11-04T07:23:54Z
+  collectedAt: 2026-11-05T07:34:21Z
 timeline:
   created: 2016-06-22
   lastCommit: 2025-09-06
@@ -31,7 +31,7 @@ language:
 totalBytes: 108950
 recent:
   last30d:
-    since: 2026-10-05
+    since: 2026-10-06
     release: 0
     mergedPR: 0
     openPR: 0
@@ -39,7 +39,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 0
     mergedPR: 0
     openPR: 0
@@ -47,7 +47,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 0
     mergedPR: 0
     openPR: 0
@@ -55,7 +55,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-08
+    since: 2026-05-09
     release: 0
     mergedPR: 0
     openPR: 0
@@ -63,7 +63,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-09
+    since: 2025-11-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -71,7 +71,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-14
+    since: 2024-11-15
     release: 0
     mergedPR: 2
     openPR: 0
@@ -87,7 +87,7 @@ total:
   commit: 214
 ---
 path: /home/runner/.x-repo/github.com/slicer69/doas
-collectedAt: 2026-11-04T07:23:54Z
+collectedAt: 2026-11-05T07:34:22Z
 loc:
   C:
     code: 1239
@@ -125,7 +125,7 @@ total:
   blanks: 449
   files: 24
 ---
-date: "2026-10-19"
+date: "2026-11-02"
 repo:
   name: github.com/slicer69/doas
   commit: 8452488a959c0fd110b3c7285131af21ca029114
@@ -134,6 +134,16 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.7
 checks:
+  - name: Token-Permissions
+    score: 10
+    reason: GitHub workflow tokens follow principle of least privilege
+    details:
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/linux.yml:8'
+      - 'Info: no jobLevel write permissions found'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -142,6 +152,11 @@ checks:
     score: 2
     reason: Found 3/13 approved changesets -- score normalized to 2
     details: null
+  - name: Pinned-Dependencies
+    score: 10
+    reason: all dependencies are pinned
+    details:
+      - 'Info:   1 out of   1 GitHub-owned GitHubAction dependencies pinned'
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -152,21 +167,6 @@ checks:
     reason: project is archived
     details:
       - 'Warn: Repository is archived.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Token-Permissions
-    score: 10
-    reason: GitHub workflow tokens follow principle of least privilege
-    details:
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/linux.yml:8'
-      - 'Info: no jobLevel write permissions found'
-  - name: Pinned-Dependencies
-    score: 10
-    reason: all dependencies are pinned
-    details:
-      - 'Info:   1 out of   1 GitHub-owned GitHubAction dependencies pinned'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -194,15 +194,15 @@ checks:
     score: -1
     reason: no releases found
     details: null
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 20 are checked with a SAST tool'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''master'''
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 20 are checked with a SAST tool'
 ---
 {"id":167355236,"author":{"login":"slicer69","id":7461921,"node_id":"MDQ6VXNlcjc0NjE5MjE=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOA63qCs4J-aNk","tag_name":"6.3p12","target_commitish":"master","name":"Updates to documentation and doasedit","draft":false,"immutable":false,"prerelease":false,"created_at":"2024-05-10T17:16:18Z","updated_at":"2024-07-26T12:15:59Z","published_at":"2024-07-26T12:15:59Z","assets":[],"body":"This release focuses on fixing issues with the doasedit script which is used to more safely edit files as another user. The main change is doasedit now properly handles situations where the full path name of a text file is used, in other words path names with a leading slash character, like \"/etc/doas.conf\".\r\n\r\nAlso updated manual page to indicate limitations when using piping on Linux.\r\n\r\nCleaned up error checking when dealing with temporary text files.","reactions":{"total_count":4,"+1":2,"-1":0,"laugh":0,"hooray":2,"confused":0,"heart":0,"rocket":0,"eyes":0}}

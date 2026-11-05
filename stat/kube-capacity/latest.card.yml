@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.8.0"
   latestRelease: "v0.8.0"
   latestPrerelease: "v0.8.0-rc3"
-  collectedAt: 2026-11-04T06:09:59Z
+  collectedAt: 2026-11-05T06:33:12Z
 timeline:
   created: 2019-02-02
   lastCommit: 2025-08-18
@@ -28,7 +28,7 @@ language:
 totalBytes: 81603
 recent:
   last30d:
-    since: 2026-10-05
+    since: 2026-10-06
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 0
     mergedPR: 0
     openPR: 1
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 0
     mergedPR: 0
     openPR: 2
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-08
+    since: 2026-05-09
     release: 0
     mergedPR: 0
     openPR: 4
@@ -60,15 +60,15 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-09
+    since: 2025-11-10
     release: 0
     mergedPR: 0
-    openPR: 9
+    openPR: 8
     closedIssue: 1
     openIssue: 2
     commit: 0
   last720d:
-    since: 2024-11-14
+    since: 2024-11-15
     release: 0
     mergedPR: 13
     openPR: 15
@@ -84,7 +84,7 @@ total:
   commit: 134
 ---
 path: /home/runner/.x-repo/github.com/robscott/kube-capacity
-collectedAt: 2026-11-04T06:10:05Z
+collectedAt: 2026-11-05T06:33:19Z
 loc:
   Go:
     code: 2179
@@ -107,7 +107,7 @@ total:
   blanks: 347
   files: 18
 ---
-date: "2026-10-26"
+date: "2026-11-02"
 repo:
   name: github.com/robscott/kube-capacity
   commit: 0400896336388d438649f5bb5af6f03f97eb0224
@@ -120,6 +120,10 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
+  - name: Code-Review
+    score: 9
+    reason: Found 13/14 approved changesets -- score normalized to 9
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -128,6 +132,15 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/golangci-lint.yaml:11'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/goreleaser-build.yaml:11'
+      - 'Warn: no topLevel permission defined: .github/workflows/release.yaml:1'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yaml:12'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -146,28 +159,10 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yaml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/robscott/kube-capacity/test.yaml/main?enable=pin'
       - 'Info:   0 out of   8 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 third-party GitHubAction dependencies pinned'
-  - name: Code-Review
-    score: 9
-    reason: Found 13/14 approved changesets -- score normalized to 9
-    details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/golangci-lint.yaml:11'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/goreleaser-build.yaml:11'
-      - 'Warn: no topLevel permission defined: .github/workflows/release.yaml:1'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yaml:12'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -176,21 +171,26 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/goreleaser-build.yaml:13'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.

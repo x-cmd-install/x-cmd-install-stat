@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.2610.0"
   latestRelease: "v0.2610.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-04T07:29:40Z
+  collectedAt: 2026-11-05T07:49:01Z
 timeline:
   created: 2018-02-24
   lastCommit: 2026-11-02
@@ -16,11 +16,11 @@ timeline:
   lastPrerelease: 
 popularity:
   star: 1731
-  watcher: 23
+  watcher: 22
   fork: 157
   release: 22
   contributor: 34
-  pullRequest: 226
+  pullRequest: 227
   issue: 547
 language:
   Go: 1036629
@@ -34,7 +34,7 @@ language:
 totalBytes: 2178245
 recent:
   last30d:
-    since: 2026-10-05
+    since: 2026-10-06
     release: 1
     mergedPR: 0
     openPR: 0
@@ -42,7 +42,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 2
     mergedPR: 0
     openPR: 0
@@ -50,7 +50,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 3
     mergedPR: 0
     openPR: 0
@@ -58,7 +58,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-08
+    since: 2026-05-09
     release: 6
     mergedPR: 0
     openPR: 0
@@ -66,7 +66,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-09
+    since: 2025-11-10
     release: 12
     mergedPR: 0
     openPR: 0
@@ -74,7 +74,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-14
+    since: 2024-11-15
     release: 12
     mergedPR: 0
     openPR: 0
@@ -84,13 +84,13 @@ recent:
 total:
   release: 22
   mergedPR: 126
-  openPR: 24
+  openPR: 25
   closedIssue: 487
   openIssue: 60
   commit: 2544
 ---
 path: /home/runner/.x-repo/github.com/tulir/gomuks
-collectedAt: 2026-11-04T07:29:43Z
+collectedAt: 2026-11-05T07:49:04Z
 loc:
   Json:
     code: 33541
@@ -173,19 +173,15 @@ total:
   blanks: 5874
   files: 560
 ---
-date: "2026-10-19"
+date: "2026-11-02"
 repo:
   name: github.com/tulir/gomuks
-  commit: 43fc7222a05ea7cdbebb1d04827aeae12e5e4002
+  commit: 3c97ff1343a9a8e6ab86bd85dc7e7161b80397ec
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.9
 checks:
-  - name: Code-Review
-    score: 0
-    reason: Found 0/30 approved changesets -- score normalized to 0
-    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 4 issue activity found in the last 90 days -- score normalized to 10
@@ -194,6 +190,15 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 0
+    reason: Found 2/30 approved changesets -- score normalized to 0
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -201,16 +206,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/go.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/js.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: SAST
-    score: 0
-    reason: no SAST tool detected
-    details:
-      - 'Warn: no pull requests merged into dev branch'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -255,6 +250,10 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: GNU Affero General Public License v3.0: LICENSE:0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -269,8 +268,9 @@ checks:
       - 'Warn: release artifact v0.2608.0 does not have provenance: https://api.github.com/repos/gomuks/gomuks/releases/371331267'
       - 'Warn: release artifact v0.2607.0 does not have provenance: https://api.github.com/repos/gomuks/gomuks/releases/355001460'
       - 'Warn: release artifact v0.2606.0 does not have provenance: https://api.github.com/repos/gomuks/gomuks/releases/339811179'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 2 are checked with a SAST tool'
 ---

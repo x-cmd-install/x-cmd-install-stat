@@ -7,7 +7,7 @@ about:
   latestVersion: "v12.13.0"
   latestRelease: "v12.13.0"
   latestPrerelease: "v6.0.0-pre"
-  collectedAt: 2026-11-04T07:19:23Z
+  collectedAt: 2026-11-05T07:30:04Z
 timeline:
   created: 2013-08-13
   lastCommit: 2026-02-16
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2025-10-31
   lastPrerelease: 2015-11-17
 popularity:
-  star: 25239
+  star: 25242
   watcher: 304
   fork: 1427
   release: 71
@@ -33,7 +33,7 @@ language:
 totalBytes: 584089
 recent:
   last30d:
-    since: 2026-10-05
+    since: 2026-10-06
     release: 0
     mergedPR: 0
     openPR: 1
@@ -41,7 +41,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 0
     mergedPR: 0
     openPR: 2
@@ -49,7 +49,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 0
     mergedPR: 0
     openPR: 3
@@ -57,7 +57,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-05-08
+    since: 2026-05-09
     release: 0
     mergedPR: 0
     openPR: 5
@@ -65,7 +65,7 @@ recent:
     openIssue: 1
     commit: 0
   last360d:
-    since: 2025-11-09
+    since: 2025-11-10
     release: 0
     mergedPR: 0
     openPR: 11
@@ -73,7 +73,7 @@ recent:
     openIssue: 11
     commit: 1
   last720d:
-    since: 2024-11-14
+    since: 2024-11-15
     release: 1
     mergedPR: 0
     openPR: 19
@@ -89,7 +89,7 @@ total:
   commit: 741
 ---
 path: /home/runner/.x-repo/github.com/tsenart/vegeta
-collectedAt: 2026-11-04T07:19:23Z
+collectedAt: 2026-11-05T07:30:05Z
 loc:
   Go:
     code: 20110
@@ -147,7 +147,7 @@ total:
   blanks: 1384
   files: 57
 ---
-date: "2026-10-19"
+date: "2026-11-02"
 repo:
   name: github.com/tsenart/vegeta
   commit: cf5811269046c672a604b1eb352204d30f16ae4a
@@ -160,13 +160,22 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 0
+    reason: Found 0/22 approved changesets -- score normalized to 0
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Code-Review
-    score: 0
-    reason: Found 0/22 approved changesets -- score normalized to 0
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -174,19 +183,15 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -195,11 +200,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -217,8 +217,8 @@ checks:
       - 'Warn: goCommand not pinned by hash: .github/workflows/ci.yml:32'
       - 'Info:   0 out of   7 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   1 goCommand dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
+      - 'Info:   0 out of   1 goCommand dependencies pinned'
   - name: License
     score: 10
     reason: license file detected

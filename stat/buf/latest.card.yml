@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.75.0"
   latestRelease: "v1.75.0"
   latestPrerelease: "v1.32.0-beta.1"
-  collectedAt: 2026-11-04T06:34:44Z
+  collectedAt: 2026-11-05T06:56:36Z
 timeline:
   created: 2019-10-03
   lastCommit: 2026-11-02
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2026-10-22
   lastPrerelease: 2024-04-23
 popularity:
-  star: 11513
+  star: 11515
   watcher: 72
   fork: 373
   release: 198
   contributor: 95
-  pullRequest: 3662
+  pullRequest: 3664
   issue: 1036
 language:
   Go: 6382401
@@ -32,63 +32,63 @@ language:
 totalBytes: 6477930
 recent:
   last30d:
-    since: 2026-10-05
+    since: 2026-10-06
     release: 2
-    mergedPR: 33
-    openPR: 5
+    mergedPR: 32
+    openPR: 6
     closedIssue: 2
     openIssue: 2
     commit: 32
   last60d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 3
     mergedPR: 64
-    openPR: 5
+    openPR: 6
     closedIssue: 6
     openIssue: 2
     commit: 64
   last90d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 3
     mergedPR: 80
-    openPR: 5
+    openPR: 6
     closedIssue: 9
     openIssue: 2
     commit: 81
   last180d:
-    since: 2026-05-08
+    since: 2026-05-09
     release: 6
     mergedPR: 128
-    openPR: 5
+    openPR: 6
     closedIssue: 19
     openIssue: 3
     commit: 130
   last360d:
-    since: 2025-11-09
+    since: 2025-11-10
     release: 22
-    mergedPR: 374
-    openPR: 5
-    closedIssue: 50
+    mergedPR: 372
+    openPR: 6
+    closedIssue: 48
     openIssue: 13
     commit: 368
   last720d:
-    since: 2024-11-14
-    release: 41
-    mergedPR: 750
-    openPR: 5
+    since: 2024-11-15
+    release: 39
+    mergedPR: 749
+    openPR: 6
     closedIssue: 140
     openIssue: 27
-    commit: 758
+    commit: 754
 total:
   release: 198
   mergedPR: 2815
-  openPR: 5
+  openPR: 6
   closedIssue: 985
   openIssue: 51
   commit: 2962
 ---
 path: /home/runner/.x-repo/github.com/bufbuild/buf
-collectedAt: 2026-11-04T06:34:49Z
+collectedAt: 2026-11-05T06:56:42Z
 loc:
   Go:
     code: 215344
@@ -166,10 +166,10 @@ total:
   blanks: 31056
   files: 2843
 ---
-date: "2026-10-26"
+date: "2026-11-02"
 repo:
   name: github.com/bufbuild/buf
-  commit: 21cc90004a6e16897c25326bf6c8fed145755f3a
+  commit: 0dbc23dc7347c6b351e3766f4d5f67d011bfbc7d
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
@@ -188,6 +188,10 @@ checks:
     reason: dangerous workflow patterns detected
     details:
       - 'Warn: script injection with untrusted input '' github.event.inputs.version || github.head_ref'': .github/workflows/build-and-draft-release.yaml:19'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -202,10 +206,10 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/buf-ci.yaml:8'
       - 'Warn: no topLevel permission defined: .github/workflows/build-and-draft-release.yaml:1'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/ci.yaml:10'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yaml:8'
       - 'Info: topLevel ''pull-requests'' permission set to ''read'': .github/workflows/codeql.yaml:9'
       - 'Warn: topLevel ''security-events'' permission set to ''write'': .github/workflows/codeql.yaml:10'
       - 'Info: topLevel ''actions'' permission set to ''read'': .github/workflows/codeql.yaml:7'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yaml:8'
       - 'Warn: no topLevel permission defined: .github/workflows/create-release-pr.yaml:1'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/docker-publish.yaml:18'
       - 'Warn: no topLevel permission defined: .github/workflows/make-upgrade.yaml:1'
@@ -217,25 +221,21 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/verify-changelog.yaml:1'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/windows.yaml:10'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -249,6 +249,11 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/buf-ci.yaml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/buf-ci.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-and-draft-release.yaml:29: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/build-and-draft-release.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build-and-draft-release.yaml:33: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/build-and-draft-release.yaml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:99: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/ci.yaml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:105: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/ci.yaml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:107: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/ci.yaml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:113: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/ci.yaml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:125: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/ci.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/ci.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/ci.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:28: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/ci.yaml/main?enable=pin'
@@ -256,11 +261,6 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:62: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/ci.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:64: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/ci.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yaml:69: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/ci.yaml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:99: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/ci.yaml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:105: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/ci.yaml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:107: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/ci.yaml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:113: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/ci.yaml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yaml:125: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/ci.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yaml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/codeql.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yaml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/codeql.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yaml:27: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/codeql.yaml/main?enable=pin'
@@ -282,28 +282,28 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/previous.yaml:24: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/previous.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/previous.yaml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/previous.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/previous.yaml:31: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/previous.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish-npm.yaml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-npm.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish-npm.yaml:30: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-npm.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish-npm.yaml:36: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-npm.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish-npm.yaml:61: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-npm.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish-npm.yaml:65: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-npm.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish-npm.yaml:69: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-npm.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish-npm.yaml:88: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-npm.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish-npm.yaml:92: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-npm.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish-npm.yaml:97: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-npm.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish-npm.yaml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-npm.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish-npm.yaml:30: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-npm.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish-npm.yaml:36: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-npm.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish-pypi.yaml:41: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-pypi.yaml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/publish-pypi.yaml:46: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-pypi.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish-pypi.yaml:59: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-pypi.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/publish-pypi.yaml:64: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-pypi.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish-pypi.yaml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-pypi.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish-pypi.yaml:28: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-pypi.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish-pypi.yaml:41: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-pypi.yaml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/publish-pypi.yaml:46: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/publish-pypi.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/verify-changelog.yaml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/verify-changelog.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/windows.yaml:28: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/windows.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/windows.yaml:30: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/windows.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/windows.yaml:36: update your workflow using https://app.stepsecurity.io/secureworkflow/bufbuild/buf/windows.yaml/main?enable=pin'
       - 'Warn: containerImage not pinned by hash: Dockerfile.buf:1: pin your Docker image by updating golang:1.27-alpine3.24 to golang:1.27-alpine3.24@sha256:d200d2dd76b03a99b52651fd1325aff7dcd35422c35c01bac56571b0507f3deb'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.buf:16: pin your Docker image by updating alpine:3.24.2 to alpine:3.24.2@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6'
-      - 'Warn: containerImage not pinned by hash: make/buf/docker/Dockerfile.release:1: pin your Docker image by updating golang:1.27-bookworm to golang:1.27-bookworm@sha256:972b4110ba0f47539a975c31e52c64765e1ff19f2d74469ae4a595c6676e80a5'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.buf:16: pin your Docker image by updating alpine:3.24.3 to alpine:3.24.3@sha256:be2656061b536c1883c4034790e21d0a09c5aaaf51968b89368a3c0371ea2c9a'
+      - 'Warn: containerImage not pinned by hash: make/buf/docker/Dockerfile.release:1: pin your Docker image by updating golang:1.27-bookworm to golang:1.27-bookworm@sha256:d9b6a1beb9474adc2a1ce842573639b44b2a0dd49b6669f51d3821baf9ec37c9'
       - 'Warn: npmCommand not pinned by hash: packaging/npm/scripts/generate_packages.bash:70'
       - 'Warn: npmCommand not pinned by hash: packaging/npm/scripts/smoke_test.bash:127'
       - 'Warn: npmCommand not pinned by hash: packaging/npm/scripts/smoke_test.bash:139'

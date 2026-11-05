@@ -2,12 +2,12 @@ about:
   description: "CLI tool and library for generating a Software Bill of Materials from container images and filesystems"
   license: Apache-2.0
   homepage: 
-  head: 551442b
+  head: fa02ff2
   archived: false
   latestVersion: "v1.56.0"
   latestRelease: "v1.56.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-04T06:58:02Z
+  collectedAt: 2026-11-05T07:14:04Z
 timeline:
   created: 2020-05-07
   lastCommit: 2026-11-04
@@ -15,90 +15,90 @@ timeline:
   lastRelease: 2026-11-02
   lastPrerelease: 
 popularity:
-  star: 9827
+  star: 9832
   watcher: 70
-  fork: 1041
+  fork: 1042
   release: 246
-  contributor: 293
-  pullRequest: 3866
-  issue: 1626
+  contributor: 295
+  pullRequest: 3869
+  issue: 1628
 language:
-  Go: 7268544
+  Go: 7285700
   Shell: 65187
   Makefile: 5786
   Python: 5206
   Dockerfile: 384
-totalBytes: 7345107
+totalBytes: 7362263
 recent:
   last30d:
-    since: 2026-10-05
+    since: 2026-10-06
     release: 3
-    mergedPR: 53
-    openPR: 58
+    mergedPR: 54
+    openPR: 55
     closedIssue: 2
-    openIssue: 25
-    commit: 58
+    openIssue: 27
+    commit: 60
   last60d:
-    since: 2026-09-05
+    since: 2026-09-06
     release: 5
-    mergedPR: 137
-    openPR: 74
+    mergedPR: 139
+    openPR: 73
     closedIssue: 10
-    openIssue: 36
-    commit: 148
+    openIssue: 38
+    commit: 150
   last90d:
-    since: 2026-08-06
+    since: 2026-08-07
     release: 7
-    mergedPR: 182
+    mergedPR: 179
     openPR: 97
     closedIssue: 17
-    openIssue: 50
-    commit: 192
+    openIssue: 52
+    commit: 194
   last180d:
-    since: 2026-05-08
+    since: 2026-05-09
     release: 13
-    mergedPR: 323
+    mergedPR: 325
     openPR: 125
     closedIssue: 46
-    openIssue: 73
-    commit: 342
+    openIssue: 75
+    commit: 344
   last360d:
-    since: 2025-11-09
+    since: 2025-11-10
     release: 28
-    mergedPR: 605
-    openPR: 153
+    mergedPR: 604
+    openPR: 154
     closedIssue: 122
-    openIssue: 116
-    commit: 604
+    openIssue: 118
+    commit: 606
   last720d:
-    since: 2024-11-14
+    since: 2024-11-15
     release: 55
     mergedPR: 1196
-    openPR: 176
+    openPR: 177
     closedIssue: 220
     openIssue: 235
-    commit: 1215
+    commit: 1212
 total:
   release: 246
-  mergedPR: 3249
-  openPR: 182
+  mergedPR: 3251
+  openPR: 183
   closedIssue: 1098
-  openIssue: 528
-  commit: 3671
+  openIssue: 530
+  commit: 3673
 ---
 path: /home/runner/.x-repo/github.com/anchore/syft
-collectedAt: 2026-11-04T06:58:07Z
+collectedAt: 2026-11-05T07:14:08Z
 loc:
   Json:
-    code: 587282
+    code: 591987
     comments: 0
     blanks: 4
-    files: 261
+    files: 262
   Go:
-    code: 193398
-    comments: 16194
-    blanks: 23470
-    files: 1284
+    code: 193789
+    comments: 16225
+    blanks: 23522
+    files: 1286
   Xml:
     code: 27749
     comments: 261
@@ -225,25 +225,28 @@ loc:
     blanks: 101
     files: 93
 total:
-  code: 822988
-  comments: 20259
-  blanks: 26651
-  files: 2068
+  code: 828084
+  comments: 20290
+  blanks: 26703
+  files: 2071
 ---
-date: "2026-10-26"
+date: "2026-11-02"
 repo:
   name: github.com/anchore/syft
-  commit: fb56f1eef1908ad249a59ea7b2fe913bae16304f
+  commit: 551442b1bca34bb06c175cfccb48cf6073e138fd
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 8.7
 checks:
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
     details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+      - 'Info: security policy file detected: SECURITY.md:1'
+      - 'Info: Found linked content: SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
+      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
@@ -256,6 +259,11 @@ checks:
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -264,35 +272,27 @@ checks:
       - 'Info: jobLevel ''packages'' permission set to ''read'': .github/workflows/codeql.yaml:19'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql.yaml:20'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yaml:21'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:34'
-      - 'Info: jobLevel ''checks'' permission set to ''read'': .github/workflows/release.yaml:43'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:42'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yaml:74'
       - 'Warn: jobLevel ''packages'' permission set to ''write'': .github/workflows/release.yaml:75'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:131'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:34'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yaml:42'
+      - 'Info: jobLevel ''checks'' permission set to ''read'': .github/workflows/release.yaml:43'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validate-github-actions.yaml:20'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validations.yaml:120'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validations.yaml:212'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validations.yaml:93'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validations.yaml:182'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validations.yaml:321'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validations.yaml:243'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validations.yaml:284'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validations.yaml:32'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validations.yaml:93'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validations.yaml:120'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validations.yaml:321'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validations.yaml:212'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validations.yaml:243'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validations.yaml:72'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validations.yaml:153'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validations.yaml:182'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validations.yaml:72'
       - 'Info: found token with ''none'' permissions: .github/workflows/codeql.yaml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/release.yaml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/validate-github-actions.yaml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/validations.yaml:1'
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: SECURITY.md:1'
-      - 'Info: Found linked content: SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
-      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -330,24 +330,24 @@ checks:
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
     details:
+      - 'Info: signed release artifact: syft_1.56.0_checksums.txt.sigstore.json: https://github.com/anchore/syft/releases/tag/v1.56.0'
       - 'Info: signed release artifact: syft_1.55.0_checksums.txt.sigstore.json: https://github.com/anchore/syft/releases/tag/v1.55.0'
       - 'Info: signed release artifact: syft_1.54.1_checksums.txt.sigstore.json: https://github.com/anchore/syft/releases/tag/v1.54.1'
       - 'Info: signed release artifact: syft_1.54.0_checksums.txt.sigstore.json: https://github.com/anchore/syft/releases/tag/v1.54.0'
       - 'Info: signed release artifact: syft_1.52.0_checksums.txt.sig: https://github.com/anchore/syft/releases/tag/v1.52.0'
-      - 'Info: signed release artifact: syft_1.51.1_checksums.txt.sig: https://github.com/anchore/syft/releases/tag/v1.51.1'
+      - 'Warn: release artifact v1.56.0 does not have provenance: https://api.github.com/repos/anchore/syft/releases/431720418'
       - 'Warn: release artifact v1.55.0 does not have provenance: https://api.github.com/repos/anchore/syft/releases/417638733'
       - 'Warn: release artifact v1.54.1 does not have provenance: https://api.github.com/repos/anchore/syft/releases/404889400'
       - 'Warn: release artifact v1.54.0 does not have provenance: https://api.github.com/repos/anchore/syft/releases/401347535'
       - 'Warn: release artifact v1.52.0 does not have provenance: https://api.github.com/repos/anchore/syft/releases/390800128'
-      - 'Warn: release artifact v1.51.1 does not have provenance: https://api.github.com/repos/anchore/syft/releases/377988884'
   - name: Pinned-Dependencies
     score: 6
     reason: dependency not pinned by hash detected -- score normalized to 6
     details:
-      - 'Warn: containerImage not pinned by hash: Dockerfile:2: pin your Docker image by updating gcr.io/distroless/static-debian13:latest to gcr.io/distroless/static-debian13:latest@sha256:15f8637509792e05b97d83451b0b6ccfa4abd548f997e406ac1e72c87fe1fa78'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.debug:2: pin your Docker image by updating gcr.io/distroless/static-debian13:debug to gcr.io/distroless/static-debian13:debug@sha256:6a5e9a4921c51d613ab8128402badf19d27b16627f92f97146f4597d2c593104'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.debug-nonroot:2: pin your Docker image by updating gcr.io/distroless/static-debian13:debug-nonroot to gcr.io/distroless/static-debian13:debug-nonroot@sha256:c7b8faacc4439b8f5c41ca7ce4a3f8ff3e8520cb0c3444fae7292f687b00d0dd'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.nonroot:2: pin your Docker image by updating gcr.io/distroless/static-debian13:nonroot to gcr.io/distroless/static-debian13:nonroot@sha256:18f4cc26c9ffa7f20a359298be7deadac5c607c8e03a02b8119f1a5fc2f82c99'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:2: pin your Docker image by updating gcr.io/distroless/static-debian13:latest to gcr.io/distroless/static-debian13:latest@sha256:448810357cc8e67b7208988abdba0f5ec3d3aebee0a5b13eb624979792cffc0f'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.debug:2: pin your Docker image by updating gcr.io/distroless/static-debian13:debug to gcr.io/distroless/static-debian13:debug@sha256:63b4c0065ff7bd68753510400b2d5cedd5d5571d15eac4be0b6b0dd236a2d148'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.debug-nonroot:2: pin your Docker image by updating gcr.io/distroless/static-debian13:debug-nonroot to gcr.io/distroless/static-debian13:debug-nonroot@sha256:12c2026b21e05857a4c730b4dbf812becf02b396cb7916166c8305f45f140ab0'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.nonroot:2: pin your Docker image by updating gcr.io/distroless/static-debian13:nonroot to gcr.io/distroless/static-debian13:nonroot@sha256:25ac8f0c3b2334a9eb05452266bd4697864a8c8ef0ef71e5e6480d7f92868329'
       - 'Warn: containerImage not pinned by hash: test/install/environments/Dockerfile-alpine-3.6:1: pin your Docker image by updating alpine:3.6 to alpine:3.6@sha256:66790a2b79e1ea3e1dabac43990c54aca5d1ddf268d9a5a0285e4167c8b24475'
       - 'Warn: containerImage not pinned by hash: test/install/environments/Dockerfile-busybox-1.36:1'
       - 'Warn: containerImage not pinned by hash: test/install/environments/Dockerfile-busybox-1.36:6: pin your Docker image by updating busybox:1.36.1-musl to busybox:1.36.1-musl@sha256:3c6ae8008e2c2eedd141725c30b20d9c36b026eb796688f88205845ef17aa213'
