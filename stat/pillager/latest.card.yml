@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.12.4"
   latestRelease: "v0.12.4"
   latestPrerelease: ""
-  collectedAt: 2026-11-02T05:46:52Z
+  collectedAt: 2026-11-06T06:20:15Z
 timeline:
   created: 2020-12-06
   lastCommit: 2025-11-28
@@ -28,7 +28,7 @@ language:
 totalBytes: 93784
 recent:
   last30d:
-    since: 2026-10-03
+    since: 2026-10-07
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-03
+    since: 2026-09-07
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-04
+    since: 2026-08-08
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-06
+    since: 2026-05-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-07
+    since: 2025-11-11
     release: 2
     mergedPR: 2
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 5
   last720d:
-    since: 2024-11-12
+    since: 2024-11-16
     release: 8
     mergedPR: 4
     openPR: 6
@@ -84,7 +84,7 @@ total:
   commit: 138
 ---
 path: /home/runner/.x-repo/github.com/brittonhayes/pillager
-collectedAt: 2026-11-02T05:46:55Z
+collectedAt: 2026-11-06T06:20:16Z
 loc:
   Go:
     code: 2896
@@ -122,26 +122,26 @@ total:
   blanks: 797
   files: 37
 ---
-date: "2026-10-26"
+date: "2026-11-02"
 repo:
   name: github.com/brittonhayes/pillager
   commit: 32ff84ac9f49704ea03a08b8d6e74b30999e5359
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 3.2
+score: 3.4
 checks:
   - name: Code-Review
     score: 0
     reason: Found 0/21 approved changesets -- score normalized to 0
     details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -187,11 +187,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
@@ -202,7 +197,16 @@ checks:
     score: 10
     reason: packaging workflow detected
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:36'
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:16'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -217,13 +221,8 @@ checks:
       - 'Warn: release artifact v0.11.6 does not have provenance: https://api.github.com/repos/brittonhayes/pillager/releases/187947281'
       - 'Warn: release artifact v0.11.5 does not have provenance: https://api.github.com/repos/brittonhayes/pillager/releases/187946882'
       - 'Warn: release artifact v0.11.4 does not have provenance: https://api.github.com/repos/brittonhayes/pillager/releases/187944660'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 20 are checked with a SAST tool'
+    score: -1
+    reason: 'internal error: internal error: Client.Checks.ListCheckRunsForRef: error during graphqlHandler.setupCheckRuns: Although you appear to have the correct authorization credentials, the `cursor` organization has an IP allow list enabled, and your IP address is not permitted to access this resource.'
+    details: null
 ---

@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.35.0"
   latestRelease: "v1.35.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-02T06:19:26Z
+  collectedAt: 2026-11-06T06:55:44Z
 timeline:
   created: 2020-10-21
   lastCommit: 2026-10-25
@@ -17,11 +17,11 @@ timeline:
 popularity:
   star: 4914
   watcher: 24
-  fork: 180
+  fork: 181
   release: 28
   contributor: 65
-  pullRequest: 216
-  issue: 165
+  pullRequest: 217
+  issue: 166
 language:
   Go: 195884
   Makefile: 2020
@@ -31,63 +31,63 @@ language:
 totalBytes: 198780
 recent:
   last30d:
-    since: 2026-10-03
+    since: 2026-10-07
     release: 1
     mergedPR: 10
-    openPR: 3
+    openPR: 4
     closedIssue: 5
-    openIssue: 2
+    openIssue: 3
     commit: 13
   last60d:
-    since: 2026-09-03
+    since: 2026-09-07
     release: 1
     mergedPR: 10
-    openPR: 3
+    openPR: 4
     closedIssue: 6
-    openIssue: 2
+    openIssue: 3
     commit: 15
   last90d:
-    since: 2026-08-04
+    since: 2026-08-08
     release: 1
     mergedPR: 14
-    openPR: 4
+    openPR: 5
     closedIssue: 7
-    openIssue: 2
+    openIssue: 3
     commit: 16
   last180d:
-    since: 2026-05-06
+    since: 2026-05-10
     release: 1
     mergedPR: 19
-    openPR: 4
+    openPR: 5
     closedIssue: 8
-    openIssue: 2
+    openIssue: 3
     commit: 19
   last360d:
-    since: 2025-11-07
+    since: 2025-11-11
     release: 2
     mergedPR: 25
-    openPR: 4
+    openPR: 5
     closedIssue: 9
-    openIssue: 3
+    openIssue: 4
     commit: 25
   last720d:
-    since: 2024-11-12
+    since: 2024-11-16
     release: 5
     mergedPR: 39
-    openPR: 4
+    openPR: 5
     closedIssue: 20
-    openIssue: 9
-    commit: 41
+    openIssue: 10
+    commit: 40
 total:
   release: 28
   mergedPR: 200
-  openPR: 4
+  openPR: 5
   closedIssue: 137
-  openIssue: 28
+  openIssue: 29
   commit: 333
 ---
 path: /home/runner/.x-repo/github.com/stern/stern
-collectedAt: 2026-11-02T06:19:27Z
+collectedAt: 2026-11-06T06:55:45Z
 loc:
   Go:
     code: 6318
@@ -130,7 +130,7 @@ total:
   blanks: 993
   files: 50
 ---
-date: "2026-10-26"
+date: "2026-11-02"
 repo:
   name: github.com/stern/stern
   commit: e79a65421a1ecd752a74b683037bf528a0567b94
@@ -143,14 +143,6 @@ checks:
     score: 10
     reason: all changesets reviewed
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Maintained
     score: 10
     reason: 16 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
@@ -160,6 +152,14 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -172,6 +172,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -180,11 +185,12 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
+  - name: License
+    score: 10
+    reason: license file detected
     details:
-      - 'Warn: no fuzzer integrations found'
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -195,16 +201,10 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yaml:12: update your workflow using https://app.stepsecurity.io/secureworkflow/stern/stern/release.yaml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yaml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/stern/stern/release.yaml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yaml:29: update your workflow using https://app.stepsecurity.io/secureworkflow/stern/stern/release.yaml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating gcr.io/distroless/static-debian13 to gcr.io/distroless/static-debian13@sha256:15f8637509792e05b97d83451b0b6ccfa4abd548f997e406ac1e72c87fe1fa78'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating gcr.io/distroless/static-debian13 to gcr.io/distroless/static-debian13@sha256:448810357cc8e67b7208988abdba0f5ec3d3aebee0a5b13eb624979792cffc0f'
       - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'

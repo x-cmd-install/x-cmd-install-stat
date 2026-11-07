@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.4.2"
   latestRelease: "v0.4.2"
   latestPrerelease: "0.2"
-  collectedAt: 2026-11-02T06:28:39Z
+  collectedAt: 2026-11-06T07:03:41Z
 timeline:
   created: 2020-03-14
   lastCommit: 2026-09-28
@@ -29,7 +29,7 @@ language:
 totalBytes: 35946
 recent:
   last30d:
-    since: 2026-10-03
+    since: 2026-10-07
     release: 0
     mergedPR: 0
     openPR: 0
@@ -37,15 +37,15 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-03
+    since: 2026-09-07
     release: 0
     mergedPR: 0
-    openPR: 1
+    openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 1
   last90d:
-    since: 2026-08-04
+    since: 2026-08-08
     release: 0
     mergedPR: 0
     openPR: 1
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 1
   last180d:
-    since: 2026-05-06
+    since: 2026-05-10
     release: 0
     mergedPR: 2
     openPR: 1
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 2
   last360d:
-    since: 2025-11-07
+    since: 2025-11-11
     release: 1
     mergedPR: 7
     openPR: 1
@@ -69,13 +69,13 @@ recent:
     openIssue: 0
     commit: 10
   last720d:
-    since: 2024-11-12
+    since: 2024-11-16
     release: 2
     mergedPR: 20
     openPR: 1
     closedIssue: 0
     openIssue: 1
-    commit: 55
+    commit: 54
 total:
   release: 10
   mergedPR: 63
@@ -85,7 +85,7 @@ total:
   commit: 502
 ---
 path: /home/runner/.x-repo/github.com/edoardottt/pwdsafety
-collectedAt: 2026-11-02T06:28:42Z
+collectedAt: 2026-11-06T07:03:43Z
 loc:
   Go:
     code: 912
@@ -123,7 +123,7 @@ total:
   blanks: 327
   files: 19
 ---
-date: "2026-10-19"
+date: "2026-11-02"
 repo:
   name: github.com/edoardottt/pwdsafety
   commit: 5f6ef41ac81beb23626aa167d669bd216e2f33c6
@@ -140,13 +140,13 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Code-Review
-    score: 0
-    reason: Found 0/8 approved changesets -- score normalized to 0
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
+    details: null
+  - name: Code-Review
+    score: 0
+    reason: Found 0/8 approved changesets -- score normalized to 0
     details: null
   - name: Pinned-Dependencies
     score: 0
@@ -197,6 +197,11 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release-binary.yml:10'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -207,11 +212,6 @@ checks:
       - 'Warn: release artifact v0.4.2 does not have provenance: https://api.github.com/repos/edoardottt/pwdsafety/releases/299698227'
       - 'Warn: release artifact v0.4.1 does not have provenance: https://api.github.com/repos/edoardottt/pwdsafety/releases/247208509'
       - 'Warn: release artifact v0.4.0 does not have provenance: https://api.github.com/repos/edoardottt/pwdsafety/releases/151887044'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release-binary.yml:10'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches

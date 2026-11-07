@@ -2,26 +2,26 @@ about:
   description: "It's not just a linter that annoys you!"
   license: GPL-2.0
   homepage: https://pylint.readthedocs.io/en/latest/
-  head: 43fbbc8
+  head: 79c8d0c
   archived: false
   latestVersion: "v4.1.3"
   latestRelease: "v4.1.3"
   latestPrerelease: "v3.3.5a0"
-  collectedAt: 2026-11-02T05:59:07Z
+  collectedAt: 2026-11-06T06:49:29Z
 timeline:
   created: 2015-12-09
-  lastCommit: 2026-11-01
+  lastCommit: 2026-11-03
   lastVersion: 2026-10-11
   lastRelease: 2026-10-11
   lastPrerelease: 2025-03-08
 popularity:
-  star: 5748
+  star: 5747
   watcher: 73
-  fork: 1420
+  fork: 1425
   release: 120
   contributor: 633
-  pullRequest: 5671
-  issue: 6071
+  pullRequest: 5680
+  issue: 6072
 language:
   Python: 4014807
   Mermaid: 25746
@@ -30,63 +30,63 @@ language:
 totalBytes: 4043468
 recent:
   last30d:
-    since: 2026-10-03
+    since: 2026-10-07
     release: 1
-    mergedPR: 85
-    openPR: 87
-    closedIssue: 14
-    openIssue: 22
-    commit: 110
+    mergedPR: 58
+    openPR: 89
+    closedIssue: 8
+    openIssue: 20
+    commit: 112
   last60d:
-    since: 2026-09-03
+    since: 2026-09-07
     release: 6
-    mergedPR: 183
-    openPR: 111
+    mergedPR: 178
+    openPR: 115
     closedIssue: 34
-    openIssue: 26
-    commit: 330
+    openIssue: 27
+    commit: 332
   last90d:
-    since: 2026-08-04
+    since: 2026-08-08
     release: 8
-    mergedPR: 259
-    openPR: 124
-    closedIssue: 52
-    openIssue: 28
-    commit: 436
+    mergedPR: 258
+    openPR: 128
+    closedIssue: 51
+    openIssue: 29
+    commit: 438
   last180d:
-    since: 2026-05-06
+    since: 2026-05-10
     release: 9
     mergedPR: 392
-    openPR: 138
-    closedIssue: 96
-    openIssue: 33
-    commit: 637
+    openPR: 144
+    closedIssue: 95
+    openIssue: 34
+    commit: 639
   last360d:
-    since: 2025-11-07
+    since: 2025-11-11
     release: 12
-    mergedPR: 549
-    openPR: 148
-    closedIssue: 154
+    mergedPR: 541
+    openPR: 154
+    closedIssue: 153
     openIssue: 54
-    commit: 838
+    commit: 840
   last720d:
-    since: 2024-11-12
+    since: 2024-11-16
     release: 24
-    mergedPR: 921
-    openPR: 156
-    closedIssue: 318
+    mergedPR: 924
+    openPR: 162
+    closedIssue: 317
     openIssue: 113
     commit: 1085
 total:
   release: 120
-  mergedPR: 4879
-  openPR: 165
+  mergedPR: 4882
+  openPR: 171
   closedIssue: 5180
-  openIssue: 891
-  commit: 10500
+  openIssue: 892
+  commit: 10502
 ---
 path: /home/runner/.x-repo/github.com/pylint-dev/pylint
-collectedAt: 2026-11-02T05:59:17Z
+collectedAt: 2026-11-06T06:49:39Z
 loc:
   Python:
     code: 100855
@@ -184,15 +184,19 @@ total:
   blanks: 36237
   files: 3825
 ---
-date: "2026-10-26"
+date: "2026-11-02"
 repo:
   name: github.com/pylint-dev/pylint
-  commit: 2d34d00cd23de53e4f953296c9fc2c0e0ebf4b0c
+  commit: 79c8d0c9813b0c402c3890778c6d777b162dde8b
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 8.2
+score: 8.3
 checks:
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
   - name: Security-Policy
     score: 9
     reason: security policy file detected
@@ -201,10 +205,6 @@ checks:
       - 'Info: Found linked content: .github/SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: .github/SECURITY.md:1'
-  - name: Code-Review
-    score: 9
-    reason: Found 17/18 approved changesets -- score normalized to 9
-    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 10 issue activity found in the last 90 days -- score normalized to 10
@@ -217,8 +217,8 @@ checks:
     score: 9
     reason: detected GitHub workflow tokens with excessive permissions
     details:
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:37'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:38'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:37'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:68'
       - 'Warn: jobLevel ''actions'' permission set to ''write'': .github/workflows/stale.yml:12'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/backport.yml:9'
@@ -236,25 +236,14 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:12'
       - 'Warn: no topLevel permission defined: .github/workflows/stale.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/tests.yaml:29'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 5
     reason: 'badge detected: Passing'
     details: null
-  - name: License
+  - name: Binary-Artifacts
     score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: GNU General Public License v2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
+    reason: no binaries found in the repo
+    details: null
   - name: Pinned-Dependencies
     score: 3
     reason: dependency not pinned by hash detected -- score normalized to 3
@@ -290,16 +279,27 @@ checks:
       - 'Warn: pipCommand not pinned by hash: .github/workflows/pyreverse_primer_run_pr.yaml:187'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/pyreverse_primer_run_pr.yaml:206'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/release.yml:34'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/tests.yaml:173'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/tests.yaml:174'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/tests.yaml:90'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/tests.yaml:91'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/tests.yaml:96'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/tests.yaml:102'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/tests.yaml:173'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/tests.yaml:174'
       - 'Info:  97 out of  97 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   5 out of   5 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   0 out of  36 pipCommand dependencies pinned'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: GNU General Public License v2.0: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.

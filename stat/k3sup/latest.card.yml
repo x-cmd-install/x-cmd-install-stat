@@ -7,7 +7,7 @@ about:
   latestVersion: "0.13.14"
   latestRelease: "0.13.14"
   latestPrerelease: "0.13.7"
-  collectedAt: 2026-11-02T06:15:04Z
+  collectedAt: 2026-11-06T06:54:03Z
 timeline:
   created: 2019-08-15
   lastCommit: 2026-10-23
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-10-23
   lastPrerelease: 2024-08-09
 popularity:
-  star: 7447
+  star: 7451
   watcher: 74
   fork: 433
   release: 134
@@ -29,7 +29,7 @@ language:
 totalBytes: 82378
 recent:
   last30d:
-    since: 2026-10-03
+    since: 2026-10-07
     release: 1
     mergedPR: 1
     openPR: 1
@@ -37,15 +37,15 @@ recent:
     openIssue: 1
     commit: 2
   last60d:
-    since: 2026-09-03
-    release: 2
+    since: 2026-09-07
+    release: 1
     mergedPR: 1
     openPR: 1
     closedIssue: 0
     openIssue: 1
     commit: 2
   last90d:
-    since: 2026-08-04
+    since: 2026-08-08
     release: 2
     mergedPR: 1
     openPR: 2
@@ -53,7 +53,7 @@ recent:
     openIssue: 1
     commit: 3
   last180d:
-    since: 2026-05-06
+    since: 2026-05-10
     release: 2
     mergedPR: 2
     openPR: 3
@@ -61,7 +61,7 @@ recent:
     openIssue: 3
     commit: 4
   last360d:
-    since: 2025-11-07
+    since: 2025-11-11
     release: 3
     mergedPR: 2
     openPR: 3
@@ -69,7 +69,7 @@ recent:
     openIssue: 5
     commit: 11
   last720d:
-    since: 2024-11-12
+    since: 2024-11-16
     release: 7
     mergedPR: 3
     openPR: 5
@@ -85,7 +85,7 @@ total:
   commit: 471
 ---
 path: /home/runner/.x-repo/github.com/alexellis/k3sup
-collectedAt: 2026-11-02T06:15:06Z
+collectedAt: 2026-11-06T06:54:05Z
 loc:
   Go:
     code: 243384
@@ -138,7 +138,7 @@ total:
   blanks: 35881
   files: 894
 ---
-date: "2026-10-26"
+date: "2026-11-02"
 repo:
   name: github.com/alexellis/k3sup
   commit: 07ee3911f65dc978899f036586c7a99317a31996
@@ -147,6 +147,10 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 2.9
 checks:
+  - name: Maintained
+    score: 2
+    reason: 3 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 2
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
@@ -156,6 +160,10 @@ checks:
     score: 0
     reason: Found 2/28 approved changesets -- score normalized to 0
     details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -163,14 +171,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/build.yaml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/publish.yaml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Maintained
-    score: 2
-    reason: 3 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 2
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -201,10 +201,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -213,11 +209,10 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 5 are checked with a SAST tool'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -232,4 +227,9 @@ checks:
       - 'Warn: release artifact 0.13.12 does not have provenance: https://api.github.com/repos/alexellis/k3sup/releases/292985366'
       - 'Warn: release artifact 0.13.11 does not have provenance: https://api.github.com/repos/alexellis/k3sup/releases/241154612'
       - 'Warn: release artifact 0.13.10 does not have provenance: https://api.github.com/repos/alexellis/k3sup/releases/227978274'
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 5 are checked with a SAST tool'
 ---

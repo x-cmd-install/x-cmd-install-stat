@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.10.0"
   latestRelease: "v0.10.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-02T07:39:16Z
+  collectedAt: 2026-11-06T07:58:37Z
 timeline:
   created: 2012-03-02
   lastCommit: 2026-10-25
@@ -15,75 +15,75 @@ timeline:
   lastRelease: 2025-05-09
   lastPrerelease: 
 popularity:
-  star: 14402
-  watcher: 164
-  fork: 764
+  star: 14401
+  watcher: 163
+  fork: 766
   release: 20
   contributor: 90
-  pullRequest: 635
+  pullRequest: 640
   issue: 650
 language:
   JavaScript: 362306
 totalBytes: 362306
 recent:
   last30d:
-    since: 2026-10-03
+    since: 2026-10-07
     release: 0
-    mergedPR: 3
-    openPR: 13
+    mergedPR: 2
+    openPR: 16
     closedIssue: 0
     openIssue: 0
     commit: 4
   last60d:
-    since: 2026-09-03
+    since: 2026-09-07
     release: 0
     mergedPR: 4
-    openPR: 20
+    openPR: 24
     closedIssue: 1
     openIssue: 0
     commit: 5
   last90d:
-    since: 2026-08-04
+    since: 2026-08-08
     release: 0
     mergedPR: 4
-    openPR: 21
+    openPR: 26
     closedIssue: 1
     openIssue: 0
     commit: 5
   last180d:
-    since: 2026-05-06
+    since: 2026-05-10
     release: 0
     mergedPR: 7
-    openPR: 25
+    openPR: 30
     closedIssue: 1
     openIssue: 0
     commit: 7
   last360d:
-    since: 2025-11-07
+    since: 2025-11-11
     release: 0
     mergedPR: 21
-    openPR: 27
+    openPR: 32
     closedIssue: 1
     openIssue: 1
     commit: 21
   last720d:
-    since: 2024-11-12
+    since: 2024-11-16
     release: 4
     mergedPR: 57
-    openPR: 27
+    openPR: 32
     closedIssue: 13
     openIssue: 3
     commit: 68
 total:
   release: 20
   mergedPR: 462
-  openPR: 35
+  openPR: 40
   closedIssue: 564
   openIssue: 86
   commit: 905
 ---
 path: /home/runner/.x-repo/github.com/shelljs/shelljs
-collectedAt: 2026-11-02T07:39:17Z
+collectedAt: 2026-11-06T07:58:38Z
 loc:
   JavaScript:
     code: 9080
@@ -111,7 +111,7 @@ total:
   blanks: 1987
   files: 103
 ---
-date: "2026-10-26"
+date: "2026-11-02"
 repo:
   name: github.com/shelljs/shelljs
   commit: 060e8ac15aa32b1311db15c5e12cd64016637932
@@ -120,6 +120,10 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.9
 checks:
+  - name: Maintained
+    score: 5
+    reason: 5 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 5
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -129,14 +133,16 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
-    score: 5
-    reason: 5 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 5
-    details: null
   - name: Code-Review
     score: 4
     reason: Found 9/22 approved changesets -- score normalized to 4
     details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -145,12 +151,6 @@ checks:
       - 'Info: Found linked content: .github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: .github/SECURITY.md:1'
       - 'Info: Found text in security policy: .github/SECURITY.md:1'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -170,24 +170,24 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: BSD 3-Clause "New" or "Revised" License: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
     details: null
   - name: SAST
     score: 0

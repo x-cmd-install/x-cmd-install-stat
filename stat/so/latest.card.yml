@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.4.10"
   latestRelease: "v0.4.10"
   latestPrerelease: ""
-  collectedAt: 2026-11-02T06:25:52Z
+  collectedAt: 2026-11-06T07:01:48Z
 timeline:
   created: 2020-05-30
   lastCommit: 2025-06-30
@@ -29,7 +29,7 @@ language:
 totalBytes: 114954
 recent:
   last30d:
-    since: 2026-10-03
+    since: 2026-10-07
     release: 0
     mergedPR: 0
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-03
+    since: 2026-09-07
     release: 0
     mergedPR: 0
     openPR: 0
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-04
+    since: 2026-08-08
     release: 0
     mergedPR: 0
     openPR: 0
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-06
+    since: 2026-05-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -61,15 +61,15 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-07
+    since: 2025-11-11
     release: 0
     mergedPR: 0
-    openPR: 4
+    openPR: 3
     closedIssue: 0
     openIssue: 1
     commit: 0
   last720d:
-    since: 2024-11-12
+    since: 2024-11-16
     release: 0
     mergedPR: 1
     openPR: 4
@@ -85,7 +85,7 @@ total:
   commit: 207
 ---
 path: /home/runner/.x-repo/github.com/samtay/so
-collectedAt: 2026-11-02T06:25:54Z
+collectedAt: 2026-11-06T07:01:50Z
 loc:
   Rust:
     code: 2919
@@ -128,7 +128,7 @@ total:
   blanks: 2363
   files: 35
 ---
-date: "2026-10-26"
+date: "2026-11-02"
 repo:
   name: github.com/samtay/so
   commit: 4969956b4aab1bb3aa8705627f71a1ad269ffe31
@@ -137,14 +137,9 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 2.9
 checks:
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Code-Review
     score: 1
@@ -154,10 +149,15 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -178,10 +178,10 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:28: update your workflow using https://app.stepsecurity.io/secureworkflow/samtay/so/ci.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:33: update your workflow using https://app.stepsecurity.io/secureworkflow/samtay/so/ci.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:39: update your workflow using https://app.stepsecurity.io/secureworkflow/samtay/so/ci.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yaml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/samtay/so/release.yaml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yaml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/samtay/so/release.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yaml:43: update your workflow using https://app.stepsecurity.io/secureworkflow/samtay/so/release.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yaml:44: update your workflow using https://app.stepsecurity.io/secureworkflow/samtay/so/release.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yaml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/samtay/so/release.yaml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yaml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/samtay/so/release.yaml/main?enable=pin'
       - 'Warn: downloadThenRun not pinned by hash: ci/install.sh:39'
       - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   9 third-party GitHubAction dependencies pinned'
@@ -198,21 +198,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -227,6 +223,10 @@ checks:
       - 'Warn: release artifact v0.4.8 does not have provenance: https://api.github.com/repos/samtay/so/releases/74948337'
       - 'Warn: release artifact v0.4.7 does not have provenance: https://api.github.com/repos/samtay/so/releases/74937337'
       - 'Warn: release artifact v0.4.6 does not have provenance: https://api.github.com/repos/samtay/so/releases/60168464'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

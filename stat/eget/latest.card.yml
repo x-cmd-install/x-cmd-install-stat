@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.3.4"
   latestRelease: "v1.3.4"
   latestPrerelease: ""
-  collectedAt: 2026-11-02T06:49:31Z
+  collectedAt: 2026-11-06T07:14:02Z
 timeline:
   created: 2021-08-17
   lastCommit: 2024-07-09
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2024-06-07
   lastPrerelease: 
 popularity:
-  star: 2098
+  star: 2099
   watcher: 13
   fork: 75
   release: 17
@@ -28,7 +28,7 @@ language:
 totalBytes: 60847
 recent:
   last30d:
-    since: 2026-10-03
+    since: 2026-10-07
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-09-03
+    since: 2026-09-07
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-08-04
+    since: 2026-08-08
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-05-06
+    since: 2026-05-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 1
     commit: 0
   last360d:
-    since: 2025-11-07
+    since: 2025-11-11
     release: 0
     mergedPR: 0
     openPR: 1
@@ -68,7 +68,7 @@ recent:
     openIssue: 5
     commit: 0
   last720d:
-    since: 2024-11-12
+    since: 2024-11-16
     release: 0
     mergedPR: 0
     openPR: 5
@@ -84,7 +84,7 @@ total:
   commit: 185
 ---
 path: /home/runner/.x-repo/github.com/zyedidia/eget
-collectedAt: 2026-11-02T06:49:32Z
+collectedAt: 2026-11-06T07:14:02Z
 loc:
   Go:
     code: 2000
@@ -112,7 +112,7 @@ total:
   blanks: 508
   files: 19
 ---
-date: "2026-10-19"
+date: "2026-11-02"
 repo:
   name: github.com/zyedidia/eget
   commit: 0983deab36378a1536bf9dc97d5d56f6e5dd3477
@@ -121,9 +121,13 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 2
 checks:
-  - name: Code-Review
-    score: 2
-    reason: Found 8/30 approved changesets -- score normalized to 2
+  - name: Dangerous-Workflow
+    score: -1
+    reason: no workflows found
+    details: null
+  - name: Token-Permissions
+    score: -1
+    reason: No tokens found
     details: null
   - name: Packaging
     score: -1
@@ -134,21 +138,17 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Dangerous-Workflow
-    score: -1
-    reason: no workflows found
-    details: null
   - name: Pinned-Dependencies
     score: -1
     reason: no dependencies found
     details: null
+  - name: Code-Review
+    score: 2
+    reason: Found 8/30 approved changesets -- score normalized to 2
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
-    details: null
-  - name: Token-Permissions
-    score: -1
-    reason: No tokens found
     details: null
   - name: CII-Best-Practices
     score: 0
@@ -173,6 +173,11 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -187,11 +192,6 @@ checks:
       - 'Warn: release artifact v1.3.2 does not have provenance: https://api.github.com/repos/zyedidia/eget/releases/91403962'
       - 'Warn: release artifact v1.3.1 does not have provenance: https://api.github.com/repos/zyedidia/eget/releases/84509912'
       - 'Warn: release artifact v1.3.0 does not have provenance: https://api.github.com/repos/zyedidia/eget/releases/82117285'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
