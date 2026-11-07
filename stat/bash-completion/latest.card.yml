@@ -7,7 +7,7 @@ about:
   latestVersion: "2.18.0"
   latestRelease: "2.18.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-06T07:41:49Z
+  collectedAt: 2026-11-07T07:01:00Z
 timeline:
   created: 2016-02-09
   lastCommit: 2026-11-03
@@ -35,7 +35,7 @@ language:
 totalBytes: 1604870
 recent:
   last30d:
-    since: 2026-10-07
+    since: 2026-10-08
     release: 0
     mergedPR: 6
     openPR: 7
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 8
   last60d:
-    since: 2026-09-07
+    since: 2026-09-08
     release: 0
     mergedPR: 13
     openPR: 12
@@ -51,15 +51,15 @@ recent:
     openIssue: 1
     commit: 16
   last90d:
-    since: 2026-08-08
+    since: 2026-08-09
     release: 0
-    mergedPR: 24
+    mergedPR: 22
     openPR: 14
     closedIssue: 0
     openIssue: 3
     commit: 27
   last180d:
-    since: 2026-05-10
+    since: 2026-05-11
     release: 1
     mergedPR: 98
     openPR: 18
@@ -67,7 +67,7 @@ recent:
     openIssue: 7
     commit: 156
   last360d:
-    since: 2025-11-11
+    since: 2025-11-12
     release: 1
     mergedPR: 193
     openPR: 22
@@ -75,12 +75,12 @@ recent:
     openIssue: 11
     commit: 297
   last720d:
-    since: 2024-11-16
+    since: 2024-11-17
     release: 4
     mergedPR: 357
     openPR: 30
     closedIssue: 40
-    openIssue: 24
+    openIssue: 23
     commit: 745
 total:
   release: 17
@@ -91,7 +91,7 @@ total:
   commit: 7551
 ---
 path: /home/runner/.x-repo/github.com/scop/bash-completion
-collectedAt: 2026-11-06T07:41:53Z
+collectedAt: 2026-11-07T07:01:03Z
 loc:
   Bash:
     code: 25898
@@ -209,7 +209,7 @@ total:
   blanks: 7078
   files: 1413
 ---
-date: "2026-11-03T20:12:23Z"
+date: "2026-11-07T04:45:53Z"
 repo:
   name: github.com/scop/bash-completion
   commit: 5ffa3d71c7f1f77f44dd9b37abf71570a61583ed
@@ -218,23 +218,15 @@ scorecard:
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
 score: 6.7
 checks:
-  - name: Code-Review
-    score: 5
-    reason: Found 10/19 approved changesets -- score normalized to 5
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Dependency-Update-Tool
     score: 10
     reason: update tool detected
     details:
       - 'Info: detected update tool: RenovateBot: .github/renovate.json:1'
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -247,25 +239,29 @@ checks:
       - 'Info: found token with ''none'' permissions: .github/workflows/release-please.yaml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/scorecard.yaml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/update-docker-images.yml:1'
+  - name: Code-Review
+    score: 5
+    reason: Found 10/19 approved changesets -- score normalized to 5
+    details: null
   - name: Binary-Artifacts
     score: 9
     reason: binaries present in source code
     details:
       - 'Warn: binary detected: test/fixtures/java/bashcomp.jar:1'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: SAST
-    score: 7
-    reason: SAST tool is not run on all commits -- score normalized to 7
-    details:
-      - 'Warn: 21 commits out of 30 are checked with a SAST tool'
-  - name: Packaging
+  - name: License
     score: 10
-    reason: packaging workflow detected
+    reason: license file detected
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/update-docker-images.yml:21'
+      - 'Info: project has a license file: COPYING:0'
+      - 'Info: FSF or OSI recognized license: GNU General Public License v2.0: COPYING:0'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -276,7 +272,7 @@ checks:
     reason: dependency not pinned by hash detected -- score normalized to 4
     details:
       - 'Warn: containerImage not pinned by hash: test/docker/almalinux9/Dockerfile:1: pin your Docker image by updating almalinux:9 to almalinux:9@sha256:245f8aab832fe800aa42bdab5fad75ebbd8e0b4c9f24820a83c638b177857ae2'
-      - 'Warn: containerImage not pinned by hash: test/docker/alpine/Dockerfile:1: pin your Docker image by updating alpine to alpine@sha256:be2656061b536c1883c4034790e21d0a09c5aaaf51968b89368a3c0371ea2c9a'
+      - 'Warn: containerImage not pinned by hash: test/docker/alpine/Dockerfile:1: pin your Docker image by updating alpine to alpine@sha256:3f4d6b32e26703c6082839234f43769d5046b3ac7c910033911d1e71d8cd630a'
       - 'Warn: containerImage not pinned by hash: test/docker/centos7/Dockerfile:1: pin your Docker image by updating centos:7 to centos:7@sha256:be65f488b7764ad3638f236b7b515b3678369a5124c47b8d32916d6487418ea4'
       - 'Warn: containerImage not pinned by hash: test/docker/debian10/Dockerfile:1: pin your Docker image by updating debian:10 to debian:10@sha256:58ce6f1271ae1c8a2006ff7d3e54e9874d839f573d8009c20154ad0f2fb0a225'
       - 'Warn: containerImage not pinned by hash: test/docker/fedoradev/Dockerfile:1: pin your Docker image by updating registry.fedoraproject.org/fedora:rawhide to registry.fedoraproject.org/fedora:rawhide@sha256:02031526999d46c9f9c6490eeccf4cafd735438b9d0fb5e1d9fc941d7886e2ff'
@@ -286,27 +282,23 @@ checks:
       - 'Warn: pipCommand not pinned by hash: .github/workflows/ci.yaml:33'
       - 'Info:  12 out of  12 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   5 out of   5 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   1 npmCommand dependencies pinned'
       - 'Info:   0 out of   6 containerImage dependencies pinned'
       - 'Info:   0 out of   2 pipCommand dependencies pinned'
-      - 'Info:   0 out of   1 npmCommand dependencies pinned'
-  - name: License
-    score: 10
-    reason: license file detected
+  - name: SAST
+    score: 7
+    reason: SAST tool is not run on all commits -- score normalized to 7
     details:
-      - 'Info: project has a license file: COPYING:0'
-      - 'Info: FSF or OSI recognized license: GNU General Public License v2.0: COPYING:0'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
+      - 'Warn: 21 commits out of 30 are checked with a SAST tool'
   - name: Vulnerabilities
     score: 10
     reason: 0 existing vulnerabilities detected
     details: null
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/update-docker-images.yml:21'
   - name: Branch-Protection
     score: 3
     reason: branch protection is not maximal on development and all release branches
@@ -317,6 +309,14 @@ checks:
       - 'Warn: could not determine whether codeowners review is allowed'
       - 'Warn: no status checks found to merge onto branch ''main'''
       - 'Warn: PRs are not required to make changes on branch ''main''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.

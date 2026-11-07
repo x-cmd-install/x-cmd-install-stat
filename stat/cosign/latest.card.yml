@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.1.4"
   latestRelease: "v3.1.4"
   latestPrerelease: "v2.0.0-rc.3"
-  collectedAt: 2026-11-06T08:03:15Z
+  collectedAt: 2026-11-07T07:15:08Z
 timeline:
   created: 2021-02-04
   lastCommit: 2026-11-05
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-10-20
   lastPrerelease: 2023-02-16
 popularity:
-  star: 6416
+  star: 6418
   watcher: 62
   fork: 839
   release: 76
@@ -31,23 +31,23 @@ language:
 totalBytes: 2063622
 recent:
   last30d:
-    since: 2026-10-07
+    since: 2026-10-08
     release: 1
     mergedPR: 20
-    openPR: 4
+    openPR: 3
     closedIssue: 4
     openIssue: 6
     commit: 26
   last60d:
-    since: 2026-09-07
+    since: 2026-09-08
     release: 1
-    mergedPR: 38
+    mergedPR: 37
     openPR: 9
     closedIssue: 9
     openIssue: 9
     commit: 44
   last90d:
-    since: 2026-08-08
+    since: 2026-08-09
     release: 1
     mergedPR: 71
     openPR: 19
@@ -55,15 +55,15 @@ recent:
     openIssue: 10
     commit: 81
   last180d:
-    since: 2026-05-10
+    since: 2026-05-11
     release: 6
-    mergedPR: 170
+    mergedPR: 164
     openPR: 25
     closedIssue: 37
     openIssue: 14
     commit: 180
   last360d:
-    since: 2025-11-11
+    since: 2025-11-12
     release: 12
     mergedPR: 317
     openPR: 30
@@ -71,7 +71,7 @@ recent:
     openIssue: 31
     commit: 325
   last720d:
-    since: 2024-11-16
+    since: 2024-11-17
     release: 22
     mergedPR: 667
     openPR: 35
@@ -87,7 +87,7 @@ total:
   commit: 3276
 ---
 path: /home/runner/.x-repo/github.com/sigstore/cosign
-collectedAt: 2026-11-06T08:03:21Z
+collectedAt: 2026-11-07T07:15:11Z
 loc:
   Go:
     code: 49120
@@ -145,7 +145,7 @@ total:
   blanks: 9090
   files: 434
 ---
-date: "2026-11-05T00:12:18Z"
+date: "2026-11-07T01:30:37Z"
 repo:
   name: github.com/sigstore/cosign
   commit: 92514f9fedfabaf562f4946469a29b18c1ea68e7
@@ -154,6 +154,11 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 8.5
 checks:
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 10
@@ -162,19 +167,14 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
     details: null
-  - name: Dependency-Update-Tool
+  - name: Dangerous-Workflow
     score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -190,12 +190,12 @@ checks:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/golangci-lint.yml:62'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/golangci-lint.yml:31'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/kind-verify-attestation.yaml:43'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/scorecard-action.yml:38'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/scorecard-action.yml:37'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/tests.yaml:230'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/scorecard-action.yml:38'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/tests.yaml:35'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/tests.yaml:91'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/tests.yaml:194'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/tests.yaml:230'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validate-release.yml:31'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/validate-release.yml:51'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/verify-docgen.yaml:34'
@@ -218,6 +218,16 @@ checks:
       - 'Info: found token with ''none'' permissions: .github/workflows/verify-docgen.yaml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/whitespace.yaml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: CII-Best-Practices
+    score: 2
+    reason: 'badge detected: InProgress'
+    details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Pinned-Dependencies
     score: 8
     reason: dependency not pinned by hash detected -- score normalized to 8
@@ -225,34 +235,43 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/conformance-nightly.yml:48: update your workflow using https://app.stepsecurity.io/secureworkflow/sigstore/cosign/conformance-nightly.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/cut-release.yml:39: update your workflow using https://app.stepsecurity.io/secureworkflow/sigstore/cosign/cut-release.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/depsreview.yml:29: update your workflow using https://app.stepsecurity.io/secureworkflow/sigstore/cosign/depsreview.yml/main?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:18: pin your Docker image by updating golang:1.27.3 to golang:1.27.3@sha256:c292963ad0e5f51e843c726edc204a4e4c26a859ba1e4d736d91028aa3633048'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:18: pin your Docker image by updating golang:1.27.3 to golang:1.27.3@sha256:e519d3b0a5b285e5aa53ab9eef02bc6bbb9cb04608389b743a136a9ce75f0d1e'
       - 'Warn: goCommand not pinned by hash: .github/workflows/tests.yaml:247'
       - 'Info:  49 out of  49 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  25 out of  28 third-party GitHubAction dependencies pinned'
-      - 'Info:   2 out of   3 goCommand dependencies pinned'
       - 'Info:   1 out of   2 containerImage dependencies pinned'
-  - name: CII-Best-Practices
-    score: 2
-    reason: 'badge detected: InProgress'
-    details: null
+      - 'Info:   2 out of   3 goCommand dependencies pinned'
   - name: Vulnerabilities
     score: 8
     reason: 2 existing vulnerabilities detected
     details:
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6225'
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5932'
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: OSSFuzz integration found'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/cosign/attestation/fuzz_test.go:23'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/cosign/cue/fuzz_test.go:22'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/cosign/fuzz_test.go:40'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/cosign/fuzz_test.go:71'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/cosign/rego/fuzz_test.go:22'
   - name: SAST
     score: 7
     reason: SAST tool detected but not run on all commits
     details:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
-  - name: License
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: Packaging
     score: 10
-    reason: license file detected
+    reason: packaging workflow detected
     details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/build.yaml:35'
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -267,25 +286,6 @@ checks:
       - 'Warn: release artifact v2.6.5 does not have provenance: https://api.github.com/repos/sigstore/cosign/releases/365901838'
       - 'Warn: release artifact v3.1.2 does not have provenance: https://api.github.com/repos/sigstore/cosign/releases/355751884'
       - 'Warn: release artifact v2.6.4 does not have provenance: https://api.github.com/repos/sigstore/cosign/releases/355700562'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: OSSFuzz integration found'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/cosign/attestation/fuzz_test.go:23'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/cosign/cue/fuzz_test.go:22'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/cosign/fuzz_test.go:40'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/cosign/fuzz_test.go:71'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/cosign/rego/fuzz_test.go:22'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/build.yaml:35'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected

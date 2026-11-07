@@ -2,96 +2,96 @@ about:
   description: "Text-based interface for BitTorrent clients (Transmission, qBittorrent, Deluge, rTorrent)"
   license: GPL-3.0
   homepage: 
-  head: d6963f6
+  head: a083ab9
   archived: false
-  latestVersion: "v3.1.0"
-  latestRelease: "v3.1.0"
+  latestVersion: "v4.0.0"
+  latestRelease: "v4.0.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-06T06:39:33Z
+  collectedAt: 2026-11-07T05:59:04Z
 timeline:
   created: 2024-10-04
-  lastCommit: 2026-11-05
-  lastVersion: 2026-10-31
-  lastRelease: 2026-10-31
+  lastCommit: 2026-11-06
+  lastVersion: 2026-11-06
+  lastRelease: 2026-11-06
   lastPrerelease: 
 popularity:
   star: 187
   watcher: 1
   fork: 2
-  release: 27
+  release: 28
   contributor: 3
   pullRequest: 94
   issue: 93
 language:
-  Python: 854364
+  Python: 857663
   CSS: 14000
   Shell: 3824
   Makefile: 2399
-totalBytes: 874587
+totalBytes: 877886
 recent:
   last30d:
-    since: 2026-10-07
-    release: 2
+    since: 2026-10-08
+    release: 3
     mergedPR: 3
     openPR: 0
     closedIssue: 1
     openIssue: 0
-    commit: 64
+    commit: 72
   last60d:
-    since: 2026-09-07
-    release: 3
-    mergedPR: 8
-    openPR: 0
-    closedIssue: 2
-    openIssue: 0
-    commit: 109
-  last90d:
-    since: 2026-08-08
-    release: 3
+    since: 2026-09-08
+    release: 4
     mergedPR: 8
     openPR: 0
     closedIssue: 2
     openIssue: 0
     commit: 117
+  last90d:
+    since: 2026-08-09
+    release: 4
+    mergedPR: 8
+    openPR: 0
+    closedIssue: 2
+    openIssue: 0
+    commit: 125
   last180d:
-    since: 2026-05-10
-    release: 6
+    since: 2026-05-11
+    release: 7
     mergedPR: 13
     openPR: 0
     closedIssue: 3
     openIssue: 0
-    commit: 144
+    commit: 152
   last360d:
-    since: 2025-11-11
-    release: 15
+    since: 2025-11-12
+    release: 16
     mergedPR: 47
     openPR: 0
     closedIssue: 43
     openIssue: 1
-    commit: 398
+    commit: 406
   last720d:
-    since: 2024-11-16
-    release: 21
+    since: 2024-11-17
+    release: 22
     mergedPR: 76
     openPR: 0
     closedIssue: 58
     openIssue: 1
-    commit: 492
+    commit: 500
 total:
-  release: 27
+  release: 28
   mergedPR: 90
   openPR: 0
   closedIssue: 92
   openIssue: 1
-  commit: 653
+  commit: 661
 ---
 path: /home/runner/.x-repo/github.com/anlar/tewi
-collectedAt: 2026-11-06T06:39:34Z
+collectedAt: 2026-11-07T05:59:05Z
 loc:
   Python:
-    code: 20897
-    comments: 1315
-    blanks: 3991
+    code: 20963
+    comments: 1316
+    blanks: 4007
     files: 91
   Yaml:
     code: 199
@@ -130,8 +130,8 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 532
-    blanks: 195
+    comments: 536
+    blanks: 198
     files: 2
   Text:
     code: 0
@@ -139,11 +139,11 @@ loc:
     blanks: 121
     files: 2
 total:
-  code: 21608
-  comments: 2438
-  blanks: 4395
+  code: 21674
+  comments: 2443
+  blanks: 4414
   files: 105
 ---
 
 ---
-{"id":430111516,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOM7gUDM4Zovsc","tag_name":"v3.1.0","target_commitish":"master","name":"v3.1.0","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-10-31T18:29:15Z","updated_at":"2026-10-31T18:32:03Z","published_at":"2026-10-31T18:32:03Z","assets":[],"body":"## [3.1.0] - 2026-10-31 - Spectrum Rabbit\r\n\r\n### Added\r\n\r\n- Complete available profile names for `--profile` in shell completion\r\n- Add custom color themes via `[theme.NAME]` config sections: define new theme (optionally based on existing one with `base` option) or override colors of built-in theme, using Textual color names or hex codes\r\n- Add `--themes` CLI flag to print available themes (built-in and custom), one per line\r\n\r\n### Changed\r\n\r\n- Fix crash when opening torrent details on older Textual caused by unsupported column keys in files table\r\n- Show connection status in top panel only when disconnected, as readable badge after host (connection dot colors were unreadable in some themes)\r\n- Fix unreadable, faint or missing colors in non-default, light and ANSI themes: top and bottom panels, torrent status, badges, speeds, progress bar and secondary details (peers, speeds, sizes) on highlighted row, file priorities, freeleech tag, titles and key hints on panel borders, and inactive tabs in torrent details\r\n- Make dialogs readable in all themes and stand out more: primary color borders, solid background and stronger dimming behind them\r\n- `--profiles` prints a machine-readable list of profile names, one per line (nothing when no profiles exist)\r\n- Unknown theme from `--theme` or config stops the app with error instead of falling back to default theme\r\n- Config file created by `--create-config` ends with vim modeline for INI syntax highlighting\r\n\r\n### Removed\r\n\r\n- Remove `--list-themes` CLI flag, replaced by `--themes`\r\n\r\n"}
+{"id":436690648,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOM7gUDM4aB17Y","tag_name":"v4.0.0","target_commitish":"master","name":"v4.0.0","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-11-06T15:46:53Z","updated_at":"2026-11-06T15:51:27Z","published_at":"2026-11-06T15:51:27Z","assets":[],"body":"## [4.0.0] - 2026-11-06 - Lucky Handshake\r\n\r\n### Added\r\n\r\n- Add multiple sort orders for torrent list: press `m` in sort dialog to chain orders, where following orders break ties of previous ones (e.g. progress, then age)\r\n- Add HTTPS connection to torrent client with `--tls` option or `https://` prefix in host, with certificate verification (`--no-tls-verify` to disable) and custom CA or self-signed certificate (`--ca-cert`)\r\n- Show connection security badge in status line: `TLS`, `TLS unverified` or `No TLS` (for unencrypted connection to another machine)\r\n\r\n### Changed\r\n\r\n- **Breaking:** Restrict profile and theme names to letters, digits, `.`, `_` and `-`, starting with letter or digit: `--profile` with other name and config with such `[theme.NAME]` section stop with error, profile files with such names are not listed in `--profiles` and shell completion\r\n- **Breaking:** Require Textual 3.1.0 or newer: older versions crash on notifications and, before 2.0, parse markup in labels which must show text literally (ANSI themes need Textual 8.2.5 or newer)\r\n- **Breaking:** Require requests 2.33.0 or newer, as older versions have known vulnerabilities (CVE-2024-47081, CVE-2026-25645)\r\n- **Breaking:** Require transmission-rpc 7.0.12 or newer and stop using its APIs removed in transmission-rpc 8\r\n- Load Jackett indexers without searching trackers [#188](https://github.com/anlar/tewi/pull/188)\r\n- Fix showing square brackets in torrent list name filter without extra backslash\r\n- Show text from torrents, peers, trackers, search providers and torrent client literally, without parsing it as markup (prevent action injection on mouse click)\r\n- Accept only magnet and HTTP(S) links from web search and open only HTTP(S) links, skip search results with malformed info hash, allow only HTTP(S) search provider URLs\r\n- Limit torrent file download from URL: follow up to 5 redirects to magnet or HTTP(S) links only, download files up to 100 MiB, add torrents in background without blocking UI\r\n- Log warning when password is sent to torrent client on another machine without TLS\r\n- Warn in `--password` help that the value is visible in process list and shell history, suggest config file instead\r\n- Limit size of caches for formatted values and peer countries, which grew during whole session\r\n- Create config file and log directory accessible only by owner, restrict existing log directory too\r\n- Remove control characters from text of torrents, peers, trackers and search results, so terminal escape sequences in them aren't passed to terminal\r\n- Add 30 seconds timeout to Deluge requests, so not responding daemon doesn't block refresh forever\r\n- Limit search provider responses to 20 MiB\r\n- Pass search term to Bitmagnet as GraphQL variable instead of inserting it into query\r\n- Fix crash of web search when provider returns several results with empty info hash\r\n- Escape line breaks and control characters in log messages and indent tracebacks, so text from torrent clients and search providers can't forge log entries\r\n- Don't write password and API keys to log on startup\r\n- Mask passwords, API keys and passkeys of URLs and auth headers in log and notifications\r\n- Don't load GeoIP database from current directory, as file with the same name was loaded from there and could run code, and don't fail on start if database can't be loaded\r\n- Don't show GeoIP error text like `<invalid ip address>` as peer country\r\n- Fix Deluge torrent details failing to load and showing client as offline when torrent has IPv6 peers\r\n- Require setuptools 77.0 or newer to build package, as older versions don't support SPDX license field\r\n- Replace geoip2fast with built-in peer country lookup by [ip-location-db](https://github.com/sapics/ip-location-db) data, downloaded on release: adds IPv6 peers, updates data from 2024, loads on first lookup in 25 ms and uses ~5 MiB of memory instead of ~40 MiB on start\r\n- Show Deluge peer country by name instead of code\r\n- Run tests on minimum supported dependency versions in CI\r\n\r\n### Removed\r\n\r\n- Remove `geoip2fast` dependency, replaced by built-in peer country lookup\r\n\r\n"}
