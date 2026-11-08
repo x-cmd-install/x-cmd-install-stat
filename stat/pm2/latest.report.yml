@@ -7,7 +7,7 @@ about:
   latestVersion: "v7.1.2"
   latestRelease: "v7.1.2"
   latestPrerelease: "4.0.0-rc1"
-  collectedAt: 2026-11-07T07:22:27Z
+  collectedAt: 2026-11-08T07:20:56Z
 timeline:
   created: 2013-05-21
   lastCommit: 2026-11-03
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-11-03
   lastPrerelease: 2019-10-08
 popularity:
-  star: 43325
+  star: 43323
   watcher: 624
-  fork: 2732
+  fork: 2730
   release: 142
   contributor: 288
   pullRequest: 991
@@ -34,23 +34,23 @@ language:
 totalBytes: 2229609
 recent:
   last30d:
-    since: 2026-10-08
+    since: 2026-10-09
     release: 3
     mergedPR: 0
-    openPR: 4
+    openPR: 3
     closedIssue: 4
     openIssue: 2
     commit: 29
   last60d:
-    since: 2026-09-08
+    since: 2026-09-09
     release: 3
     mergedPR: 1
-    openPR: 12
+    openPR: 10
     closedIssue: 4
-    openIssue: 4
+    openIssue: 3
     commit: 30
   last90d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 4
     mergedPR: 1
     openPR: 19
@@ -58,7 +58,7 @@ recent:
     openIssue: 6
     commit: 53
   last180d:
-    since: 2026-05-11
+    since: 2026-05-12
     release: 6
     mergedPR: 1
     openPR: 28
@@ -66,7 +66,7 @@ recent:
     openIssue: 13
     commit: 68
   last360d:
-    since: 2025-11-12
+    since: 2025-11-13
     release: 9
     mergedPR: 2
     openPR: 40
@@ -74,7 +74,7 @@ recent:
     openIssue: 24
     commit: 130
   last720d:
-    since: 2024-11-17
+    since: 2024-11-18
     release: 18
     mergedPR: 8
     openPR: 54
@@ -90,7 +90,7 @@ total:
   commit: 5288
 ---
 path: /home/runner/.x-repo/github.com/Unitech/pm2
-collectedAt: 2026-11-07T07:22:29Z
+collectedAt: 2026-11-08T07:20:58Z
 loc:
   JavaScript:
     code: 58045
@@ -306,4 +306,4 @@ checks:
       - 'Info:   0 out of   3 downloadThenRun dependencies pinned'
       - 'Info:   0 out of   5 containerImage dependencies pinned'
 ---
-{"id":432658493,"author":{"login":"Unitech","id":757747,"node_id":"MDQ6VXNlcjc1Nzc0Nw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAJtxSs4Zydg9","tag_name":"v7.1.2","target_commitish":"master","name":"v7.1.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-03T11:12:24Z","updated_at":"2026-11-03T12:20:22Z","published_at":"2026-11-03T12:20:22Z","assets":[],"body":"## 7.1.2\n\n### Bug Fixes\n\n- `pm2 update` under a `pm2 startup` systemd unit no longer gets its new daemon and apps killed by `ExecStop=pm2 kill` (systemd >= 232) #5000\n- `filter_env: true` works again (ignored since 4.4.1): apps only inherit PATH, HOME, USER, locales and a few OS variables besides their `env` #6176\n- `filter_env` also applies to `--update-env` restart/reload and to cluster workers; `--filter-env` alone means `true` #6176\n- `pm2.disconnect()` no longer throws nor calls back twice when a socket takes more than 200ms to close\n- `pm2 start --container` uses `keymetrics/pm2:<node>-trixie` (was the 2018 `latest` image, and `--node-version` pointed to tags that do not exist)\n\n### Breaking change\n\n- `filter_env: true` apps no longer inherit other shell variables (NODE_ENV, NODE_OPTIONS, HTTP_PROXY...): declare them in `env` #6176\n- An app keeps the shell env it already received when the filter comes later (started before 7.1.2 or without `filter_env`, dump.pm2 included): `pm2 delete` it and start it again #6176\n\n"}
+{"id":432658493,"author":{"login":"Unitech","id":757747,"node_id":"MDQ6VXNlcjc1Nzc0Nw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAJtxSs4Zydg9","tag_name":"v7.1.2","target_commitish":"master","name":"v7.1.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-03T11:12:24Z","updated_at":"2026-11-03T12:20:22Z","published_at":"2026-11-03T12:20:22Z","assets":[],"body":"## 7.1.2\n\n### Bug Fixes\n\n- `pm2 update` under a `pm2 startup` systemd unit no longer gets its new daemon and apps killed by `ExecStop=pm2 kill` (systemd >= 232) #5000\n- `filter_env: true` works again (ignored since 4.4.1): apps only inherit PATH, HOME, USER, locales and a few OS variables besides their `env` #6176\n- `filter_env` also applies to `--update-env` restart/reload and to cluster workers; `--filter-env` alone means `true` #6176\n- `pm2.disconnect()` no longer throws nor calls back twice when a socket takes more than 200ms to close\n- `pm2 start --container` uses `keymetrics/pm2:<node>-trixie` (was the 2018 `latest` image, and `--node-version` pointed to tags that do not exist)\n\n### Breaking change\n\n- `filter_env: true` apps no longer inherit other shell variables (NODE_ENV, NODE_OPTIONS, HTTP_PROXY...): declare them in `env` #6176\n- An app keeps the shell env it already received when the filter comes later (started before 7.1.2 or without `filter_env`, dump.pm2 included): `pm2 delete` it and start it again #6176\n\n","reactions":{"total_count":1,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":1}}

@@ -2,25 +2,25 @@ about:
   description: "Real-time, local speech-to-text with streaming ASR, speaker diarization, translation, and OpenAI/Deepgram-compatible APIs."
   license: Apache-2.0
   homepage: 
-  head: 13ee851
+  head: ada82d4
   archived: false
-  latestVersion: "v0.2.26"
-  latestRelease: "v0.2.26"
+  latestVersion: "v0.2.27"
+  latestRelease: "v0.2.27"
   latestPrerelease: ""
-  collectedAt: 2026-11-07T07:26:58Z
+  collectedAt: 2026-11-08T07:18:37Z
 timeline:
   created: 2024-12-19
-  lastCommit: 2026-10-31
-  lastVersion: 2026-08-29
-  lastRelease: 2026-08-29
+  lastCommit: 2026-11-07
+  lastVersion: 2026-11-07
+  lastRelease: 2026-11-07
   lastPrerelease: 
 popularity:
   star: 11221
   watcher: 59
-  fork: 1160
-  release: 33
+  fork: 1159
+  release: 34
   contributor: 45
-  pullRequest: 175
+  pullRequest: 178
   issue: 261
 language:
   Python: 1429986
@@ -28,67 +28,67 @@ language:
   JavaScript: 38604
   CSS: 11055
   HTML: 3335
-  Dockerfile: 2213
-totalBytes: 1545335
+  Dockerfile: 2212
+totalBytes: 1545334
 recent:
   last30d:
-    since: 2026-10-08
-    release: 0
-    mergedPR: 5
-    openPR: 2
+    since: 2026-10-09
+    release: 1
+    mergedPR: 10
+    openPR: 0
     closedIssue: 1
     openIssue: 0
-    commit: 5
+    commit: 9
   last60d:
-    since: 2026-09-08
-    release: 0
-    mergedPR: 8
-    openPR: 4
+    since: 2026-09-09
+    release: 1
+    mergedPR: 13
+    openPR: 2
     closedIssue: 3
     openIssue: 0
-    commit: 9
+    commit: 12
   last90d:
-    since: 2026-08-09
-    release: 1
-    mergedPR: 41
-    openPR: 8
+    since: 2026-08-10
+    release: 2
+    mergedPR: 45
+    openPR: 6
     closedIssue: 8
     openIssue: 0
-    commit: 75
+    commit: 64
   last180d:
-    since: 2026-05-11
-    release: 5
-    mergedPR: 50
-    openPR: 8
+    since: 2026-05-12
+    release: 6
+    mergedPR: 55
+    openPR: 6
     closedIssue: 29
     openIssue: 0
-    commit: 115
+    commit: 116
   last360d:
-    since: 2025-11-12
-    release: 13
-    mergedPR: 59
-    openPR: 8
+    since: 2025-11-13
+    release: 14
+    mergedPR: 64
+    openPR: 6
     closedIssue: 92
     openIssue: 0
-    commit: 266
+    commit: 256
   last720d:
-    since: 2024-11-17
-    release: 33
-    mergedPR: 106
-    openPR: 8
+    since: 2024-11-18
+    release: 34
+    mergedPR: 111
+    openPR: 6
     closedIssue: 261
     openIssue: 0
-    commit: 480
+    commit: 492
 total:
-  release: 33
-  mergedPR: 106
-  openPR: 8
+  release: 34
+  mergedPR: 111
+  openPR: 6
   closedIssue: 261
   openIssue: 0
-  commit: 947
+  commit: 959
 ---
 path: /home/runner/.x-repo/github.com/QuentinFuxa/WhisperLiveKit
-collectedAt: 2026-11-07T07:27:05Z
+collectedAt: 2026-11-08T07:18:42Z
 loc:
   Python:
     code: 30688
@@ -116,8 +116,8 @@ loc:
     blanks: 42
     files: 9
   Toml:
-    code: 234
-    comments: 6
+    code: 232
+    comments: 9
     blanks: 13
     files: 1
   Html:
@@ -142,8 +142,8 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 2012
-    blanks: 681
+    comments: 2049
+    blanks: 690
     files: 25
   Text:
     code: 0
@@ -151,11 +151,11 @@ loc:
     blanks: 2
     files: 1
 total:
-  code: 44338
-  comments: 3425
-  blanks: 6571
+  code: 44336
+  comments: 3465
+  blanks: 6580
   files: 206
 ---
 
 ---
-{"id":379014768,"author":{"login":"QuentinFuxa","id":38427957,"node_id":"MDQ6VXNlcjM4NDI3OTU3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDONfvYSs4Wl05w","tag_name":"v0.2.26","target_commitish":"aceed595a43e9eed5008c142d90a3f6e86747fbf","name":"v0.2.26","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-29T14:35:24Z","updated_at":"2026-08-29T16:00:31Z","published_at":"2026-08-29T16:00:31Z","assets":[],"body":"New ASR options, stronger diarization, and predictable Deepgram-compatible streaming.\r\n\r\n## Added\r\n- NVIDIA Canary-1b-v2 backend (`--backend canary`) with native timestamps, 25 European languages, and optional automatic language detection. Install with the `canary` extra. (#387, thanks @wuxuedaifu)\r\n- Non-real-time transcription responses can now include diarization, duration, and real word timestamps. (#396, thanks @felixmr1)\r\n- Opt-in ASR call coalescing (`--asr-coalesce-min-s`) can trade update cadence for lower repeated encoder work. It remains disabled by default. (#391, thanks @Eoin-Houstoun)\r\n- Configurable pause segmentation and a tested maximum-speaker cap for Sortformer. (#414, #415)\r\n\r\n## Fixed\r\n- Deepgram-compatible streams now preserve stable deltas, words, timestamps, speakers, punctuation, and causal event ordering; raw `linear16`, endpointing, `UtteranceEnd`, errors, and `CloseStream` are handled consistently. (#419)\r\n- Diarized transcripts are split at speaker turns instead of allowing a segment to straddle two speakers. (#407)\r\n- LocalAgreement consumes its pending buffer at end of input instead of losing the final deferred audio. (#411)\r\n\r\n## Maintenance and security\r\n- Added manual PyPI Trusted Publishing with a protected GitHub environment and minimal OIDC permissions. (#417)\r\n- Hardened repository workflows and distribution builds, including a patched Setuptools floor. (#400, #416)\r\n- Refreshed Python dependency profiles and constrained Docker dependency updates. (#402, #406, #408, #420)\r\n- Added community governance and support templates. (#412)\r\n\r\n## New contributors\r\n- @wuxuedaifu made their first contribution in #387.\r\n- @Eoin-Houstoun made their first contribution in #391.\r\n- @felixmr1 made their first contribution in #396.\r\n\r\n**Full changelog**: https://github.com/QuentinFuxa/WhisperLiveKit/compare/v0.2.25...v0.2.26","mentions_count":3}
+{"id":437764563,"author":{"login":"QuentinFuxa","id":38427957,"node_id":"MDQ6VXNlcjM4NDI3OTU3","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDONfvYSs4aF8HT","tag_name":"v0.2.27","target_commitish":"ada82d4dc47f1b9d55dca31207829c77c2136a8f","name":"v0.2.27","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-07T18:35:59Z","updated_at":"2026-11-07T18:36:08Z","published_at":"2026-11-07T18:36:08Z","assets":[],"body":"Local MLX translation, bounded WebSocket sessions, and a security refresh of the locked dependencies.\n\n## Added\n- Local sentence translation on Apple Silicon through mlx-lm (`mlx-llm-mt` extra: Hunyuan-MT, TranslateGemma), with shared model weights and per-session languages and buffers. (#422, thanks @clkao)\n- Simultaneous MLX translation with calibrated attention (AlignAtt commit policy), and the zh→en calibration for Hy-MT2 1.8B 8bit. (#423, #448, thanks @clkao)\n- Per-session decoder context: a `context` query option on the native and Deepgram-compatible WebSockets, and the OpenAI-compatible REST `prompt` field now conditions the decoder. (#424)\n- `--max-concurrent-sessions` (64 per worker by default) and `--session-idle-timeout` (60 s by default) for WebSocket sessions. Upgrades beyond the limit are refused with HTTP 403 before any decoder or FFmpeg process is created. (#465)\n\n## Fixed\n- Sortformer inference no longer blocks the event loop. (#461, thanks @guhyun9454)\n- SimulStreaming reads the no-speech probability at the start-of-transcript token once the context buffer holds text. (#468, fixes #467 reported by @AuCourDe)\n- Closing a translation no longer waits behind the inference it needs to interrupt. (#445)\n- Final ASR output is no longer lost at the end of a stream, and decoder and diarization failures are reported to clients. (#440, #441)\n- Sessions requesting another language on non-Whisper backends no longer fail at construction. (#439)\n- Streaming queues are bounded, FFmpeg processes are reaped on disconnect, and failed requests no longer leave collector tasks running. (#432, #435)\n\n## Maintenance and security\n- Locked dependencies refreshed with the October security fixes (certifi, urllib3, filelock, fsspec, msgpack, Pillow, PyJWT, aiohttp and others), plus AnyIO and HTTPX2. Remaining blocked upgrades are listed in `docs/dependency-audit.md`. (#466, #472)\n- Checkpoint loading is restricted to weights-only tensors. (#438)\n- The `qwen3-vllm-metal` extra no longer pins the vllm-metal GitHub wheel, which was blocking Dependabot. Install vllm-metal with its official installer, then install the extra into that environment. (#473)\n- Transport security documented for remote AlignAtt translation servers. (#469)\n- Audio input and translation are separated from session orchestration. (#436)\n- Benchmark reports are reproducible, keep failures, and pace audio without artificial EOF delays. (#437, #442, #443)\n- CI, Docker and dependency updates. (#429, #430, #433, #457, #458, #470, #471)\n\n## New contributors\n- @clkao made their first contribution in #422.\n- @guhyun9454 made their first contribution in #461.\n\n**Full changelog**: https://github.com/QuentinFuxa/WhisperLiveKit/compare/v0.2.26...v0.2.27\n","mentions_count":3}

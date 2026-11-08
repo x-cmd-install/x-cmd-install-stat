@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.2.0"
   latestRelease: "v0.2.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-07T05:43:18Z
+  collectedAt: 2026-11-08T05:46:53Z
 timeline:
   created: 2025-12-24
   lastCommit: 2026-11-04
@@ -31,39 +31,39 @@ language:
 totalBytes: 1405840
 recent:
   last30d:
-    since: 2026-10-08
+    since: 2026-10-09
     release: 1
     mergedPR: 71
     openPR: 1
     closedIssue: 0
     openIssue: 0
-    commit: 87
+    commit: 84
   last60d:
-    since: 2026-09-08
+    since: 2026-09-09
     release: 1
     mergedPR: 83
     openPR: 1
     closedIssue: 0
     openIssue: 0
-    commit: 104
+    commit: 100
   last90d:
-    since: 2026-08-09
+    since: 2026-08-10
     release: 2
-    mergedPR: 107
+    mergedPR: 103
     openPR: 1
     closedIssue: 0
     openIssue: 0
-    commit: 129
+    commit: 124
   last180d:
-    since: 2026-05-11
+    since: 2026-05-12
     release: 2
     mergedPR: 142
     openPR: 1
     closedIssue: 0
     openIssue: 0
-    commit: 168
+    commit: 165
   last360d:
-    since: 2025-11-12
+    since: 2025-11-13
     release: 20
     mergedPR: 206
     openPR: 1
@@ -71,7 +71,7 @@ recent:
     openIssue: 0
     commit: 447
   last720d:
-    since: 2024-11-17
+    since: 2024-11-18
     release: 20
     mergedPR: 206
     openPR: 1
@@ -87,7 +87,7 @@ total:
   commit: 643
 ---
 path: /home/runner/.x-repo/github.com/kpumuk/lazykiq
-collectedAt: 2026-11-07T05:43:20Z
+collectedAt: 2026-11-08T05:46:55Z
 loc:
   Go:
     code: 42456
@@ -150,7 +150,7 @@ total:
   blanks: 5585
   files: 265
 ---
-date: "2026-11-04T04:17:37Z"
+date: "2026-11-07T07:30:06Z"
 repo:
   name: github.com/kpumuk/lazykiq
   commit: 845d060189ec95be7977f1c9d6828f24f4fdb19a
@@ -159,13 +159,18 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 8
 checks:
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Code-Review
     score: 0
     reason: Found 0/10 approved changesets -- score normalized to 0
     details: null
-  - name: Maintained
+  - name: Dangerous-Workflow
     score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Security-Policy
     score: 10
@@ -175,19 +180,10 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Binary-Artifacts
+  - name: Maintained
     score: 10
-    reason: no binaries found in the repo
+    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Pinned-Dependencies
     score: 10
     reason: all dependencies are pinned
@@ -195,6 +191,10 @@ checks:
       - 'Info:  21 out of  21 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   8 out of   8 third-party GitHubAction dependencies pinned'
       - 'Info:   1 out of   1 containerImage dependencies pinned'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -211,6 +211,12 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/scorecards.yml:11'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yml:12'
       - 'Info: no jobLevel write permissions found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: CII-Best-Practices
     score: 2
     reason: 'badge detected: InProgress'
@@ -227,12 +233,25 @@ checks:
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-g3hv-75wg-m249'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-rj75-hqrm-r3gf'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-68fv-2mgg-jv7q'
-  - name: License
+  - name: Packaging
     score: 10
-    reason: license file detected
+    reason: packaging workflow detected
     details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:16'
+  - name: SAST
+    score: 10
+    reason: SAST tool is run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Info: all commits (30) are checked with a SAST tool'
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: GoBuiltInFuzzer integration found: internal/sidekiq/errors_test.go:436'
+      - 'Info: GoBuiltInFuzzer integration found: internal/ui/components/jsonview/scroll_test.go:50'
+      - 'Info: GoBuiltInFuzzer integration found: internal/ui/components/table/retained_widths_test.go:81'
+      - 'Info: GoBuiltInFuzzer integration found: internal/ui/display/display_test.go:254'
   - name: Signed-Releases
     score: 10
     reason: 5 out of the last 5 releases have a total of 10 signed artifacts.
@@ -247,25 +266,6 @@ checks:
       - 'Info: provenance for release artifact: checksums.txt.intoto.jsonl: https://github.com/kpumuk/lazykiq/releases/tag/v0.1.1'
       - 'Info: provenance for release artifact: checksums.txt.intoto.jsonl: https://github.com/kpumuk/lazykiq/releases/tag/v0.1.0'
       - 'Info: provenance for release artifact: checksums.txt.intoto.jsonl: https://github.com/kpumuk/lazykiq/releases/tag/v0.0.16'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: GoBuiltInFuzzer integration found: internal/sidekiq/errors_test.go:436'
-      - 'Info: GoBuiltInFuzzer integration found: internal/ui/components/jsonview/scroll_test.go:50'
-      - 'Info: GoBuiltInFuzzer integration found: internal/ui/components/table/retained_widths_test.go:81'
-      - 'Info: GoBuiltInFuzzer integration found: internal/ui/display/display_test.go:254'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:16'
-  - name: SAST
-    score: 10
-    reason: SAST tool is run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Info: all commits (30) are checked with a SAST tool'
   - name: Branch-Protection
     score: 4
     reason: branch protection is not maximal on development and all release branches

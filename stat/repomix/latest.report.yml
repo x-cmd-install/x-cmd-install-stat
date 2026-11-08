@@ -2,28 +2,28 @@ about:
   description: "📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more."
   license: MIT
   homepage: https://repomix.com
-  head: 8c7165c
+  head: 53fabcd
   archived: false
-  latestVersion: "v1.18.1"
-  latestRelease: "v1.18.1"
+  latestVersion: "v1.19.0"
+  latestRelease: "v1.19.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-07T05:59:27Z
+  collectedAt: 2026-11-08T06:03:48Z
 timeline:
   created: 2024-07-13
-  lastCommit: 2026-11-07
-  lastVersion: 2026-09-21
-  lastRelease: 2026-09-21
+  lastCommit: 2026-11-08
+  lastVersion: 2026-11-08
+  lastRelease: 2026-11-08
   lastPrerelease: 
 popularity:
-  star: 29174
+  star: 29182
   watcher: 74
-  fork: 1626
-  release: 102
+  fork: 1628
+  release: 103
   contributor: 79
-  pullRequest: 1675
-  issue: 285
+  pullRequest: 1681
+  issue: 286
 language:
-  TypeScript: 2331206
+  TypeScript: 2344606
   Vue: 89141
   JavaScript: 8494
   CSS: 7211
@@ -42,74 +42,74 @@ language:
   Python: 660
   Solidity: 379
   C++: 303
-totalBytes: 2472533
+totalBytes: 2485933
 recent:
   last30d:
-    since: 2026-10-08
-    release: 0
-    mergedPR: 71
-    openPR: 12
+    since: 2026-10-09
+    release: 1
+    mergedPR: 81
+    openPR: 8
     closedIssue: 1
-    openIssue: 5
-    commit: 133
+    openIssue: 6
+    commit: 145
   last60d:
-    since: 2026-09-08
-    release: 1
-    mergedPR: 125
-    openPR: 15
+    since: 2026-09-09
+    release: 2
+    mergedPR: 135
+    openPR: 11
     closedIssue: 8
-    openIssue: 17
-    commit: 196
+    openIssue: 18
+    commit: 204
   last90d:
-    since: 2026-08-09
-    release: 1
-    mergedPR: 163
-    openPR: 15
+    since: 2026-08-10
+    release: 2
+    mergedPR: 173
+    openPR: 11
     closedIssue: 9
-    openIssue: 17
-    commit: 255
+    openIssue: 18
+    commit: 262
   last180d:
-    since: 2026-05-11
-    release: 7
-    mergedPR: 350
-    openPR: 19
+    since: 2026-05-12
+    release: 8
+    mergedPR: 360
+    openPR: 15
     closedIssue: 19
-    openIssue: 22
-    commit: 615
+    openIssue: 23
+    commit: 611
   last360d:
-    since: 2025-11-12
-    release: 18
-    mergedPR: 771
-    openPR: 31
+    since: 2025-11-13
+    release: 19
+    mergedPR: 781
+    openPR: 27
     closedIssue: 57
-    openIssue: 33
-    commit: 1637
+    openIssue: 34
+    commit: 1651
   last720d:
-    since: 2024-11-17
-    release: 70
-    mergedPR: 1263
-    openPR: 38
+    since: 2024-11-18
+    release: 71
+    mergedPR: 1271
+    openPR: 34
     closedIssue: 146
-    openIssue: 100
-    commit: 4464
+    openIssue: 101
+    commit: 4495
 total:
-  release: 102
-  mergedPR: 1376
-  openPR: 39
+  release: 103
+  mergedPR: 1386
+  openPR: 35
   closedIssue: 170
-  openIssue: 115
-  commit: 4856
+  openIssue: 116
+  commit: 4887
 ---
 path: /home/runner/.x-repo/github.com/yamadashy/repomix
-collectedAt: 2026-11-07T05:59:31Z
+collectedAt: 2026-11-08T06:03:53Z
 loc:
   TypeScript:
-    code: 47896
-    comments: 6165
-    blanks: 7608
-    files: 382
+    code: 48094
+    comments: 6207
+    blanks: 7591
+    files: 384
   Json:
-    code: 32736
+    code: 32692
     comments: 0
     blanks: 0
     files: 66
@@ -254,11 +254,11 @@ loc:
     blanks: 90
     files: 16
 total:
-  code: 95412
-  comments: 44210
-  blanks: 26479
-  files: 1008
+  code: 95566
+  comments: 44252
+  blanks: 26462
+  files: 1010
 ---
 
 ---
-{"id":392799044,"author":{"login":"yamadashy","id":5019072,"node_id":"MDQ6VXNlcjUwMTkwNzI=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOMVwZR84XaaNE","tag_name":"v1.18.1","target_commitish":"main","name":"v1.18.1","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-09-21T06:09:54Z","updated_at":"2026-09-21T08:34:49Z","published_at":"2026-09-21T08:34:49Z","assets":[],"body":"This patch release fixes a security issue in the CLI's git handling, along with the Windows `.gitignore` crash and a set of contributor bug fixes!\n\n## Security Fix 🔒\n\n### Repository-Level Git Config Is No Longer Executed (GHSA-4p5g-gh74-q524)\n\nRepomix runs `git log` in the target directory to sort files by change frequency, and `git diff` / `git log` for `--include-diffs` / `--include-logs`. Git honors settings from the repository's own `.git/config` that name an executable, such as `gpg.program`, `diff.external`, textconv drivers, and `core.fsmonitor`. A directory shipped with a crafted `.git` (for example inside a zip archive) could therefore run arbitrary commands when Repomix was invoked inside it. A normal `git clone` does not carry the remote's `.git/config`, and `--remote` removes the clone's `.git` before processing, so those paths were not affected.\n\nAll git commands Repomix runs in a target directory now disable these settings. Output for a normal repository is unchanged.\n\nSee the security advisory for details. Thanks to @kinehoo77-debug for the report! 🙏\nhttps://github.com/yamadashy/repomix/security/advisories/GHSA-4p5g-gh74-q524\n\n## Bug Fixes 🐛\n\n### Windows Crash on `.gitignore` with Backslash Escapes (#1765, #1775)\n\nOn Windows, packing failed with ``path should be a `path.relative()`d string`` when a `.gitignore` mixed a backslash-escaped rule with a negation rule. The bug was in globby and is fixed in globby 16.2.3, which this release picks up. Thanks to @iki for the report and for sticking with it! 🙏\n\n### `--remove-comments` No Longer Corrupts Shell and YAML Files (#1752)\n\nShell and YAML files were stripped with the Perl profile, which treats every unquoted `#` as a comment. In these languages `#` only starts a comment at the beginning of a line or after whitespace, so constructs like `${name##*/}`, `$#`, and URL fragments were being cut. Shell and YAML now use a dedicated handler that respects this rule, heredocs, and block scalars. Thanks @serhiizghama!\n\n### `--include-full-directory-structure` Keeps Non-Included Files (#1749)\n\nWhen combined with `--include`, the Directory Structure section is meant to show the whole repository tree while packing only the included files' contents. Non-included files were being dropped from the tree. Thanks @serhiizghama!\n\n### Split Output Shows Each Part's Own Directory Tree (#1815, #1822)\n\nWith `--split-output`, every part listed the directory tree of the entire output instead of the files in that part. Each part now renders only its own files. Thanks @Elioooon!\n\n### Remote URLs Whose Repository Name Starts with a Dot (#1772)\n\n`https://github.com/microsoft/.github` and similar org profile repositories were rejected as invalid. Thanks @serhiizghama!\n\n### Data URI Parameters Preserved When Truncating Base64 (#1819, #1820)\n\nTruncating long base64 payloads kept only the last `;param` before `;base64,`, dropping the others. Thanks @cyphercodes!\n\n### Small CLI Fixes (#1808, #1809, #1810)\n\n- `--split-output` sizes that round down to zero bytes (such as `0.5b`) are now rejected instead of looping forever.\n- Output and skill paths are classified by real directory boundaries, so a sibling directory with a matching prefix is no longer treated as inside the base.\n- Remote skill names are derived from the owner and repository of GitHub URLs.\n\nThanks @Whxuan0701!\n\n## How to Update\n\n```bash\nnpm update -g repomix\n```\n","mentions_count":6}
+{"id":437999641,"author":{"login":"yamadashy","id":5019072,"node_id":"MDQ6VXNlcjUwMTkwNzI=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOMVwZR84aG1gZ","tag_name":"v1.19.0","target_commitish":"20cc7837e9a72e646c7dbfeeb20dbf7b6f5ea12d","name":"v1.19.0","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-11-08T02:59:59Z","updated_at":"2026-11-08T03:08:40Z","published_at":"2026-11-08T03:04:45Z","assets":[],"body":"This release moves the MCP server to SDK v2 with live progress and cancellation, makes `--compress` output far more accurate, and brings a big round of bug fixes from first-time contributors!\n\n## What's New 🚀\n\n### MCP Server on SDK v2 and the 2026-07-28 Protocol (#1952, #1954)\n\nThe MCP server now runs on the MCP TypeScript SDK v2. Clients that support the 2026-07-28 protocol negotiate it automatically, and existing clients work as before.\n\n- The server exits cleanly when the client closes stdin, so no `repomix --mcp` processes are left behind.\n- The install pulls in about half as many packages (171 to 84), since the v1 SDK brought HTTP transport dependencies such as Express that the stdio-only server never used.\n\nFor client authors: tool schemas now declare JSON Schema 2020-12 (bodies unchanged), and validation errors no longer start with `MCP error -32602: `.\n\n### MCP: Progress and Cancellation for Long-Running Packs (#1955, #1958)\n\n`pack_codebase`, `pack_remote_repository` and `generate_skill` now send `notifications/progress` when the client passes a `progressToken`, so long packs show live status, and clients that reset their timeout on progress no longer cut them off. In `--sandbox` mode, messages carry only the stage name, never a host path.\n\nCancelling a call or disconnecting now stops the pack and cleans up its partial output.\n\n## Improvements ⚡\n\n### More Accurate `--compress` Output (#2003)\n\nGolden tests for every supported language exposed a set of bugs, now fixed:\n\n- Code from function bodies no longer leaks into the output as if it were a declaration.\n- Duplicate lines are removed.\n- Declarations that were silently dropped are kept, such as C/C++ `typedef` and `#define`, C# and Java fields, Rust struct fields, Ruby `attr_*` calls and CSS at-rules.\n\nOutput changes for C, C++, C#, CSS, Dart, Go, Java, JavaScript/TypeScript, Ruby, Rust, Swift and Vue. If you rely on `--compress` in a pipeline, expect a diff from v1.18.\n\n### Skill Generation: Better Tech-Stack Detection (#1995)\n\n`--skill-generate` now reads dependencies from Gradle Kotlin DSL (`build.gradle.kts`) and from the PEP 621 and Poetry forms of `pyproject.toml`.\n\n### Warning When a Remote URL Path Is Ignored (#1980, #1984, #433)\n\nA URL like `https://github.com/owner/repo/tree/main/src/shared` packed the whole repository and silently dropped the path. Repomix now warns and suggests an `--include` pattern:\n\n```\nThe path \"src/shared\" in the remote URL is ignored, and the whole repository will be packed.\nTo pack only that path, add: --include \"src/shared/**\"\n```\n\n## Bug Fixes 🐛\n\n### Ignore Patterns Ending in a Wildcard Now Exclude Files (#1963, #1876, #320)\n\nPatterns such as `**/npm-debug.log*` and `**/repomix-output.*` only excluded directory contents, so files like `npm-debug.log.1` and `docs/repomix-output.xml` slipped into the output. They are now excluded. Nothing that was excluded before becomes included.\n\n### `.git/info/exclude` Follows Git's Matching Rules (#1871, #1870)\n\nA slash-free pattern such as `secret.txt` now matches at any depth, as in Git, so `sub/secret.txt` is no longer packed.\n\nSpecial thanks to @sxh313 for this contribution! 🎉\n\n### Negated Custom Ignore Patterns No Longer Invert (#1975, #400)\n\n`!main.ts` in `ignore.customPatterns` or `--ignore` excluded `main.ts` instead of re-including it. Negated patterns are now skipped with a warning until proper support lands (#400).\n\n### Split Output Files No Longer Packed into the Next Run (#1921, #1920)\n\nWith `--split-output`, files like `repomix-output.1.xml` from a previous run are no longer picked up as input.\n\nSpecial thanks to @lorenzozanee for their first contribution! 🎉\n\n### `--remove-comments` Keeps URLs in CSS, SCSS, Less, Vue and Svelte (#1912, #1965, #1911)\n\n`url(http://example.com/logo.png)` was cut to `url(http:` because `//` was treated as a comment. Each language now uses its own comment rules, and Vue and Svelte files are handled per `<script>`, `<style>` and markup section.\n\nSpecial thanks to @plox-sumit for their first contribution! 🎉\n\n### Non-ASCII File Names in Git Logs and Diffs (#1940, #1979)\n\nNames like `日本語.txt` no longer appear as `\"\\346\\227\\245...\"` in git logs and diffs, and `output.git.sortByChanges` now sorts these files correctly.\n\nSpecial thanks to @feiiiiii5 for their first contribution! 🎉\n\n### `--token-count-tree 0` Shows the Full Tree (#1941)\n\nIt printed nothing before; it now shows every file.\n\nSpecial thanks to @feiiiiii5 for this contribution! 🎉\n\n### Nested `--stdin` Paths on Windows (#1922)\n\nPiping paths such as `src/(routes)/page[1].ts` into `repomix --stdin` on Windows packed only root-level files. Nested paths now match.\n\nSpecial thanks to @lux-liang for their first contribution! 🎉\n\n### Fatal Errors Visible Under `--quiet` and `--stdout` (#1875, #1874)\n\nA failed pack under `--quiet` or `--stdout` exited with code 1 and printed nothing. The error now goes to stderr.\n\nSpecial thanks to @sxh313 for this contribution! 🎉\n\n### MCP Server Fixes (#1867, #1866, #1865, #1864, #1869, #1868)\n\n- `--mcp --verbose` no longer writes diagnostics to stdout, where clients read them as protocol frames. (#1867)\n- Error logging is no longer silenced for the rest of the session after a `generate_skill` or `pack_remote_repository` call. (#1865)\n- `grep_repomix_output` now formats context like `grep -C` and handles very large outputs. (#1869)\n\nSpecial thanks to @sxh313 for their first contribution! 🎉\n\n## Security Hardening 🔒\n\n### MCP `pack_codebase` Always Runs the Secret Scan (#1960)\n\nA `repomix.config.json` in the packed directory could turn off the secret scan for MCP packs with `security.enableSecurityCheck: false`. The scan now always runs for MCP packs; plain CLI runs still follow the config file.\n\n## Documentation 📚\n\nThe MCP docs now state that without `--sandbox`, `pack_codebase` trusts the `repomix.config.*` in the directory it packs, just like running the CLI there. Use `--sandbox` when your assistant may pack untrusted directories, such as cloned third-party repositories. (#1961)\n\nSee [MCP Server: Sandbox Mode](https://repomix.com/guide/mcp-server#sandbox-mode) and [Why a config file is code](https://repomix.com/guide/security#why-a-config-file-is-code).\n\n## How to Update\n\n```bash\nnpm update -g repomix\n```\n\n---\n\nAs always, if you have any issues or suggestions, please let us know on GitHub issues or our [Discord community](https://discord.gg/wNYzTwZFku).\n","mentions_count":5}
