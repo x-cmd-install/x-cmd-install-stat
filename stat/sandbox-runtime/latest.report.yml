@@ -2,42 +2,42 @@ about:
   description: "A lightweight sandboxing tool for enforcing filesystem and network restrictions on arbitrary processes at the OS level, without requiring a container."
   license: Apache-2.0
   homepage: 
-  head: 27fce0d
+  head: f7a0f19
   archived: false
-  latestVersion: "v0.0.81"
-  latestRelease: "v0.0.81"
+  latestVersion: "v0.0.82"
+  latestRelease: "v0.0.82"
   latestPrerelease: ""
-  collectedAt: 2026-11-09T07:33:09Z
+  collectedAt: 2026-11-10T08:35:35Z
 timeline:
   created: 2025-10-20
-  lastCommit: 2026-11-06
-  lastVersion: 2026-10-20
-  lastRelease: 2026-10-20
+  lastCommit: 2026-11-09
+  lastVersion: 2026-11-09
+  lastRelease: 2026-11-09
   lastPrerelease: 
 popularity:
-  star: 7040
+  star: 7055
   watcher: 25
   fork: 630
-  release: 44
+  release: 45
   contributor: 43
-  pullRequest: 619
-  issue: 191
+  pullRequest: 621
+  issue: 194
 language:
-  TypeScript: 4072167
+  TypeScript: 4105394
   JavaScript: 6649
   Shell: 34
-totalBytes: 4078850
+totalBytes: 4112077
 recent:
   last30d:
-    since: 2026-10-10
-    release: 2
+    since: 2026-10-11
+    release: 3
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-10
+    since: 2026-09-11
     release: 6
     mergedPR: 0
     openPR: 0
@@ -45,57 +45,57 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-11
-    release: 10
+    since: 2026-08-12
+    release: 11
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-13
-    release: 30
+    since: 2026-05-14
+    release: 31
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-14
-    release: 44
+    since: 2025-11-15
+    release: 45
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-19
-    release: 44
+    since: 2024-11-20
+    release: 45
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
 total:
-  release: 44
-  mergedPR: 360
-  openPR: 173
+  release: 45
+  mergedPR: 363
+  openPR: 172
   closedIssue: 41
-  openIssue: 150
-  commit: 890
+  openIssue: 153
+  commit: 893
 ---
 path: /home/runner/.x-repo/github.com/anthropic-experimental/sandbox-runtime
-collectedAt: 2026-11-09T07:33:12Z
+collectedAt: 2026-11-10T08:35:39Z
 loc:
   TypeScript:
-    code: 86277
-    comments: 17167
-    blanks: 7818
+    code: 86988
+    comments: 17281
+    blanks: 7854
     files: 196
   Rust:
-    code: 24312
-    comments: 1154
-    blanks: 1089
+    code: 27590
+    comments: 1221
+    blanks: 1137
     files: 29
   Json:
     code: 5490
@@ -103,9 +103,9 @@ loc:
     blanks: 4
     files: 5
   PowerShell:
-    code: 4342
-    comments: 839
-    blanks: 229
+    code: 4588
+    comments: 883
+    blanks: 236
     files: 9
   C:
     code: 999
@@ -129,8 +129,8 @@ loc:
     files: 3
   Markdown:
     code: 0
-    comments: 965
-    blanks: 416
+    comments: 980
+    blanks: 420
     files: 4
   Text:
     code: 0
@@ -138,11 +138,11 @@ loc:
     blanks: 23
     files: 3
 total:
-  code: 122855
-  comments: 23937
-  blanks: 9876
+  code: 127090
+  comments: 24317
+  blanks: 9971
   files: 256
 ---
 
 ---
-{"id":417897858,"author":{"login":"ig-ant","id":278458262,"node_id":"U_kgDOEJjvlg","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQFjJqM4Y6J2C","tag_name":"v0.0.81","target_commitish":"c40cf14a65d025e3cd27f071f13a73c12b3b1f92","name":"v0.0.81","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-20T00:58:17Z","updated_at":"2026-10-20T01:01:41Z","published_at":"2026-10-20T01:01:41Z","assets":[],"body":"Every change in this release is on Windows. Nothing changes on macOS or Linux.\n\n### Read this first\n\n- **Run the install again.** The setup version changed: a session on an earlier install rejects with `reinstall_required` and the command to run. The network filters also change only when the install is run. (#708, #745)\n- **Sandboxed commands run under a write-restricted token.** The sandbox account is a member of `Users`, so a command could create and modify files wherever `Users` or `Authenticated Users` hold write access, whatever the allow list said. It no longer can. This is the only mode: `windows.writeRestrictedToken` is accepted and ignored. Schannel-based tools (the system `curl.exe`, .NET and PowerShell web requests) do not work under this token and have to run outside the sandbox. (#708)\n- **The install makes the user's profile readable to sandboxed commands**, read and execute only, minus a built-in list of credential stores, as the home directory is on macOS and Linux. Tools installed in the profile run, and package managers find the user's configuration. Configuration that can hold feed tokens is readable on purpose: `.npmrc`, pip and NuGet config, Maven settings, Gradle properties, `.gitconfig`. `skipProfileGrant` at install, or `srt-win profile forget` later, leaves a working sandbox without it. The sandbox account is one per machine, so skip the grant on a shared machine. (#708)\n- **`network.allowLocalBinding: true` now means something.** It opens loopback to sandboxed commands, as on macOS, and needs an install made with `--allow-loopback`. A session that asks for the other mode than the installed one is refused with `wfp_loopback_mismatch` before anything is launched. Off by default. (#745)\n- **Proxy variables are in the command's environment in lower case only** (`http_proxy`, `https_proxy`, …). (#739)\n\n### Fixed: the sandbox could be left\n\n- **AppContainer children.** The network block matched only tokens that pass an access check for the sandbox account; an AppContainer token of that account did not, so a sandboxed process could start an AppContainer child that connected directly. (#745)\n- **The stdin pipe.** A sandboxed command inherited the server end of its stdin pipe and could impersonate the pipe's client, the real user. It now gets a client end of a named pipe that only the launching user can open. (#724)\n- **Denies at session end.** Deny entries were restored even when a grant could not be revoked, so a deny could come off while an allow was still on disk. They now come off only when every grant is gone or still held by another session. (#708)\n\n### Fixed: other\n\n- **Large projects.** Granting a project root rewrote the ACL of every file beneath it at each session start and end. Write grants on a root are now kept between sessions: the first session in a root walks the tree once, and a later session start reads one ACL per root and writes nothing. Entries other programs wrote on a root are left as they are. (#708)\n- **.NET process starts.** The environment held each proxy variable in upper and lower case, and .NET refuses such a block: MSBuild's compiler task, PowerShell's `Start-Process` with redirected output and `dotnet watch` failed inside the sandbox. (#739)\n- **Node's built-in HTTP clients** (`fetch`, `http`, `https`) use the sandbox's proxy: `NODE_USE_ENV_PROXY=1` is set with the proxy variables. A value the caller sets is kept. (#738)\n- **A disabled Secondary Logon service** is reported by name, with the typed error `seclogon_disabled`, before anything is granted. The launch used to fail with an unrelated error from the network check. (#709)\n- **A session start does not block the event loop.** The fence check and the profile status call ran `srt-win` synchronously inside `initialize()`. (#748)\n\n### New\n\n- **Profile read grant:** `srt-win profile grant|forget|status`; `grantWindowsProfileRead`, `forgetWindowsProfileRead{,Async}`, `getWindowsProfileReadStatus{,Async}`, `windowsProfileReadEnv` and `windowsProfileExclusionConflicts`; `SandboxManager.getWindowsProfileRead()` and `getWindowsProfileReadWarnings()`. (#708, #748)\n- **Kept write grants:** `srt-win acl forget [<root>… | --all [--force]]` removes them; uninstall does too. (#708)\n- **`srt-win install --allow-loopback`**, and `allowLoopback` in the library's install options. One loopback port, `1`, stays blocked in either mode, so the fence check always has a target that must be refused. (#745)\n- **The fence check tries each token shape** a sandboxed process can put on a thread, and returns what is not fenced as `residuals` with `warnings`. (#745)\n- README: what the network fence does not cover (SMB, WSL, the anonymous token). (#726, #745)\n\n### For whoever upgrades\n\n- **Typed errors an embedder may want to handle:** `reinstall_required`, `seclogon_disabled` (exit 18), `wfp_loopback_mismatch` (exit 19), `profile_grant_outdated`, `session_ended`.\n- **Kept grants:** a kept root can be written only by a session that lists it, and read by any sandboxed session on the machine.\n- **Not covered by the write restriction:** deleting or moving a file out of a folder where `Users` or `Authenticated Users` hold Full control, and any folder open to `Everyone`.\n- **Not fenced, and reported by the fence check instead:** a connect made under the anonymous token, or under a copy of the command's token with the user SID deny-only. See the README's known limitations.\n- **Environment:** a script on the MSYS2 runtime that reads only the upper-case `$HTTP_PROXY` no longer finds it. Native Windows programs find either spelling.\n- **Exports:** thirteen added, none removed. `ISandboxManager` has two new members, `getWindowsProfileRead` and `getWindowsProfileReadWarnings`.\n","reactions":{"total_count":1,"+1":0,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":0,"rocket":0,"eyes":0}}
+{"id":439771825,"author":{"login":"ig-ant","id":278458262,"node_id":"U_kgDOEJjvlg","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQFjJqM4aNmKx","tag_name":"v0.0.82","target_commitish":"f7a0f19fd3b4437bcf808f9c18c1f73e9f1a9889","name":"v0.0.82","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-09T23:19:19Z","updated_at":"2026-11-09T23:38:47Z","published_at":"2026-11-09T23:38:47Z","assets":[],"body":"### Changed\r\n\r\n- **Windows: the profile read grant is narrower.** It now covers a built-in list of tool directories instead of the whole profile, and `initialize()` upgrades an older grant by itself. Tools only in `scoop`, `.local`, uv's folders or elsewhere under `.config` need adding with `srt-win profile grant --include`. (#767)\r\n- **`network.mitmProxy`:** a SOCKS connection to a `mitmProxy.domains` host now goes through the MITM socket, as an HTTP CONNECT already did, so a TLS client on it has to trust that proxy's CA. (#764)\r\n\r\n### New\r\n\r\n- **Windows: opt-in MXC BaseContainer backend.** Set `windows.backend: 'mxc'` and start commands with `SandboxManager.spawnSandboxed()`. Needs Node 24+ and the optional dependency `@microsoft/mxc-sdk`. MSYS2 programs, Git Bash included, don't run under it yet. (#766)\r\n\r\n### Fixed\r\n\r\n- The HTTP proxy logs only fixed fields of an upstream error, since a message or stack can carry credentials. (#766)\r\n- Windows error messages print the correct `npx @anthropic-ai/sandbox-runtime windows-install`. (#774)"}

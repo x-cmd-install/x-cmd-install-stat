@@ -2,26 +2,26 @@ about:
   description: "🔧 pyinfra turns Python code into shell commands and runs them on your servers. Execute ad-hoc commands and write declarative operations. Target SSH servers, local machine and Docker containers. Fast and scales from one server to thousands."
   license: MIT
   homepage: https://pyinfra.com
-  head: 0b797bc
+  head: e674604
   archived: false
-  latestVersion: "v3.10.0"
-  latestRelease: "v3.10.0"
+  latestVersion: "v3.11.0"
+  latestRelease: "v3.11.0"
   latestPrerelease: "v3.0.beta2"
-  collectedAt: 2026-11-09T07:28:25Z
+  collectedAt: 2026-11-10T08:05:37Z
 timeline:
   created: 2014-10-19
-  lastCommit: 2026-11-03
-  lastVersion: 2026-07-27
-  lastRelease: 2026-07-27
+  lastCommit: 2026-11-09
+  lastVersion: 2026-11-09
+  lastRelease: 2026-11-09
   lastPrerelease: 2024-06-08
 popularity:
-  star: 6085
+  star: 6091
   watcher: 39
   fork: 559
-  release: 119
+  release: 120
   contributor: 225
   pullRequest: 948
-  issue: 1019
+  issue: 1021
 language:
   Python: 1563499
   Shell: 7520
@@ -30,63 +30,63 @@ language:
 totalBytes: 1575998
 recent:
   last30d:
-    since: 2026-10-10
-    release: 0
+    since: 2026-10-11
+    release: 1
     mergedPR: 22
-    openPR: 29
+    openPR: 28
     closedIssue: 5
-    openIssue: 12
-    commit: 19
-  last60d:
-    since: 2026-09-10
-    release: 0
-    mergedPR: 44
-    openPR: 31
-    closedIssue: 12
     openIssue: 14
-    commit: 49
-  last90d:
-    since: 2026-08-11
-    release: 0
-    mergedPR: 63
-    openPR: 34
-    closedIssue: 20
+    commit: 21
+  last60d:
+    since: 2026-09-11
+    release: 1
+    mergedPR: 44
+    openPR: 29
+    closedIssue: 12
     openIssue: 16
-    commit: 83
+    commit: 51
+  last90d:
+    since: 2026-08-12
+    release: 1
+    mergedPR: 63
+    openPR: 33
+    closedIssue: 20
+    openIssue: 18
+    commit: 85
   last180d:
-    since: 2026-05-13
-    release: 4
-    mergedPR: 151
-    openPR: 48
-    closedIssue: 61
-    openIssue: 25
-    commit: 175
+    since: 2026-05-14
+    release: 5
+    mergedPR: 148
+    openPR: 47
+    closedIssue: 60
+    openIssue: 27
+    commit: 177
   last360d:
-    since: 2025-11-14
-    release: 8
+    since: 2025-11-15
+    release: 9
     mergedPR: 284
-    openPR: 53
+    openPR: 52
     closedIssue: 108
-    openIssue: 39
-    commit: 324
+    openIssue: 41
+    commit: 326
   last720d:
-    since: 2024-11-19
-    release: 15
+    since: 2024-11-20
+    release: 16
     mergedPR: 399
-    openPR: 54
-    closedIssue: 187
-    openIssue: 58
-    commit: 498
+    openPR: 53
+    closedIssue: 186
+    openIssue: 60
+    commit: 500
 total:
-  release: 119
+  release: 120
   mergedPR: 772
-  openPR: 54
+  openPR: 53
   closedIssue: 904
-  openIssue: 115
-  commit: 4617
+  openIssue: 117
+  commit: 4619
 ---
 path: /home/runner/.x-repo/github.com/pyinfra-dev/pyinfra
-collectedAt: 2026-11-09T07:28:27Z
+collectedAt: 2026-11-10T08:05:39Z
 loc:
   Python:
     code: 38693
@@ -130,8 +130,8 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 2557
-    blanks: 1137
+    comments: 2648
+    blanks: 1150
     files: 42
   Text:
     code: 0
@@ -140,10 +140,10 @@ loc:
     files: 1
 total:
   code: 72327
-  comments: 5190
-  blanks: 10169
+  comments: 5281
+  blanks: 10182
   files: 2012
 ---
 
 ---
-{"id":360671617,"author":{"login":"Fizzadar","id":1026154,"node_id":"MDQ6VXNlcjEwMjYxNTQ=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAYQmos4Vf2mB","tag_name":"v3.10.0","target_commitish":"3.x","name":null,"draft":false,"immutable":true,"prerelease":false,"created_at":"2026-07-27T19:50:22Z","updated_at":"2026-07-27T19:51:14Z","published_at":"2026-07-27T19:51:14Z","assets":[],"body":"Another bumper update with lots of security fixes in user input quoting and many other improvements. Thank you all new and returning contributors (there are many of you!).\n\n- facts.files: render import example as a code block (#1801) (@wowi42)\n- operations.files.line: strip regex anchors from appended lines (#1802) (@wowi42)\n- operations.zfs: avoid mutable default properties leaking across operation calls (#1792) (@mvanhorn)\n- facts.zfs,facts.server.KernelModules: zfs operations broken on freebsd (#1791) (@jgelens)\n- facts.deb: DebPackage failing when file/directory with same name exists in cwd (#1829) (@bendigg)\n- operations.files: clear error for file-like src with directory dest (#1144) (#1849) (@vjsai)\n- operations.server: detach reboot from SSH session (#1711) (@wowi42)\n- facts.server: resolve major.minor from distro release file (#1859) (@wlix13)\n- operations.go,facts.go: implement go operations and facts (#1776) (@yagarea)\n- facts.server: Add OpenBSD support to server.Mounts (#1863) (@epicrazzmatazz)\n- operations.docker: add container_exec operation (#1821) (@wowi42)\n- facts.hardware: use JSON from ip address show in NetworkDevices to cope with lack of prefix length and/or broadcast (#1851) (@morrison12)\n- operations.selinux: harden commands with QuoteString and remove asserts (#1846) (@Muhammad-Ikhwan-Fathulloh)\n- operations.files: type annotation for mode in files.template (#1866) (@bbonf)\n- operations.git: update origin remote when src changes (#1763) (#1843) (@vjsai)\n- facts.pacman: parse packages with uppercase version strings (#1865) (@zlangbert)\n- operations.zypper: fix gpg validation, auto-import keys, and permissions (#1833) (@doraem-on)\n- operations.server.Mount: generalize remount to more BSDs (#1872) (@epicrazzmatazz)\n- operations.docker.volume: allow options to be passed when creating docker volumes (#1882) (@DonDebonair)\n- facts.git: GitLocalCommit fact failing on nonlocal ref (#1881) (@yagarea)\n- operations.brew, facts.brew: add support for brew trust (#1836) (@morrison12)\n- operations.brew: use enum value strings in brew.trust fixtures (#1887) (@wowi42)\n- facts.deb: clarify package resolution (#1897) (@Sanjays2402)\n- operations.{apt,crontab,dnf,docker,flatpak,lxd,openrc,puppet,server,sysvinit,vzctl,yum,zfs},facts.{crontab,mysql,server}: quote user input (#1803-#1809, #1811-#1818) (@wowi42)\n\nConnectors:\n\n- connectors.ssh: respect ssh_key_password over ssh_config IdentityFile (#1855) (@wowi42)\n- connectors: allow HiddenValue in _env (#1853) (@Jesse-11)\n- connectors: add @fake no-op execution connector (#1888) (@noirbizarre)\n\nCLI:\n\n- cli: preserve Windows paths in module errors (#1884) (@0xTaoZ)\n\nDocs/meta:\n\n- docs: add llms.txt and llms-full.txt for LLM consumption (#1800) (@wowi42)\n- docs: clarify server.shell shell usage (#1835) (@Himanshuagrawal4)\n- docs: fix version banner\n- ci: add shellcheck workflow and fix scripts (#1827) (@wowi42)\n- docs: correct documentation rendering  of operations that no parameters (#1840) (@morrison12)\n- test: Enable tests from fixtures to work with string-valued Enum params (#1841) (@morrison12)\n- chore: keep ruff away from fixtures (#1871) (@morrison12)\n- style: fix ruff lint errors (PEP 585/604, f-strings, imports) (#1856) (@wowi42)\n- test: move freezegun; `dev`→`test` (#1868) (@ScegfOd)\n- docs: clarify commit message format and PR linting (#1879) (@DonDebonair)\n- test: use pyinfra-testing harness for facts and operations tests (#1878) (@DonDebonair)\n- chore: fix mypy warning (#1890) (@simonhammes)\n- chore: deduplicate shellcheck lint command (#1891) (@0xTaoZ)\n\nOther:\n\n- feat: add --exclude CLI argument to restrict target hosts (#1789) (@mvanhorn)\n- fix: allow SSH connections when an ED25519-SK (FIDO2) key is present in the agent (#1858) (@mvanhorn)\n- refactor: replace os.path usage with pathlib (#1753) (@wowi42)\n- ci: use uv.lock for ruff action","reactions":{"total_count":5,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":5,"rocket":0,"eyes":0},"mentions_count":22}
+{"id":439194798,"author":{"login":"Fizzadar","id":1026154,"node_id":"MDQ6VXNlcjEwMjYxNTQ=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAYQmos4aLZSu","tag_name":"v3.11.0","target_commitish":"3.x","name":null,"draft":false,"immutable":true,"prerelease":false,"created_at":"2026-11-09T11:01:44Z","updated_at":"2026-11-09T13:53:58Z","published_at":"2026-11-09T13:53:58Z","assets":[],"body":"Core:\n\n- api: include name and arguments in operation hash (#1942) (@wowi42)\n- api.facts: use _is_executing boolean over CLI only stage\n- api: strip su password prompt from fact output (#1981) (@0xTaoZ)\n- api: omit variadic kwargs from auto labels (#1983) (@0xTaoZ)\n- api: document BaseStateCallback, fix reported doc typos (#1985) (@maisim)\n- api: unmask a HiddenValue wrapped in another one (#1987) (@maisim)\n- api: give check_preconditions the fact's own arguments (#1988) (@maisim)\n- api: skip connectors whose module cannot be imported (#1974) (@maisim)\n- api: tolerate missing connector kwargs in fact execution (#1995) (@wowi42)\n- api: mark the hosts that fail when running with no_wait (#2016) (@maisim)\n- api: honour fail percent between _serial hosts and _parallel batches (#2021) (@1sakshm)\n\nOperations/facts:\n\n- facts.sysvinit: allow underscores in service names (#1923) (@NoiceHax)\n- operations.dnf: install pinned package versions (#1913) (@0xTaoZ)\n- operations.iptables,facts.iptables: extras comparison losing duplicate flags and quoted values (#1712) (@JustScreaMy)\n- operations.pnpm, facts.pnpm: pnpm facts and operations with support of package manager and build tool (#1928) (@yagarea)\n- operations.server: mention shell executable (#1941) (@0xTaoZ)\n- facts.podman: add more basic facts (#1900) (@lsg551)\n- facts.files: read checksum targets via stdin to fix backslash escaping (#1911) (#1912) (@wowi42)\n- facts.server: preserve full executable names and args on macOS (#1953) (@ynaamane)\n- operations.files: Ensure file ops don't fail if source missing in prepare phase (#1915) (@aktiur)\n- operations.apt: add wait_for_lock argument to apt operations (#1937) (@wowi42)\n- operations.git.repo: pass depth argument to fetch and pull (#1934) (@evilham)\n- operations.bsdinit: enable OpenBSD services with rcctl (#1916) (@0xTaoZ)\n- operations.ssh: add keyscan option to command (#1960) (@StasShk)\n- operations.git: support ssh://, raise explicit error on bad proto/keyscan combination (#1785) (@maisim)\n- operations.ssh: make keyscan checks port-aware (#1969)\n- operations.files: make files.link idempotent for existing hard links (#1962) (@ethanstoner)\n- operations.files: warn rsync deletes extra files (#1979) (@0xTaoZ)\n- operations.git: allow chowned repo pulls (#1982) (@0xTaoZ)\n- facts.brew: handle third-party tap packages idempotently (#1280) (#1990) (@Macejdo)\n- facts.flatpak: Optimize FlatpakPackage.process (#1993) (@antoinenicls)\n- operations.files: handle missing directory destinations in put (#1966) (@StasShk)\n- operations.files: don't fail files.block on an unneeded chown (#1973) (@ynaamane)\n- operations.bsdinit: Use the service command to enable/disable services on FreeBSD (#2012) (@abergeron)\n- operations.flatpak: Correct examples and touch-up remote text (#2022) (@jbjorkang)\n- operations.xbps: update xbps itself before installing packages (#2018) (@1sakshm)\n- operations.apt: add apt.hold operation and AptHeldPackages fact (#2017) (@1sakshm)\n- operations.server: add password_lock option to server.user (#2014) (@1sakshm)\n- operations.crontab: match existing commands literally in sed (#2030) (@SparkDrago05)\n- operations.flatpak: Add 'user' installation option to flatpak install operation (#1968) (@isFakeAccount)\n- operations: match documented argument names to signatures (#2033) (@mmporong)\n- operations.crontab: don't escape ^ and $ in the matched command (#2040) (@SparkDrago05)\n- operations.files: don't show a text diff for a binary file in put (#2043) (@SparkDrago05)\n- operations.iptables: quote user input in iptables commands (#1810) (@wowi42)\n\nConnectors:\n\n- connectors.ssh: skip unparsable known_hosts lines instead of dropping the file (#1926) (@NoiceHax)\n- connectors.docker: strip sha256 prefix instead of slicing image ID (#1925) (@NoiceHax)\n- connectors.ssh: treat ProxyJump none as no jump host (#1445) (#1922) (@NoiceHax)\n- connectors.ssh: prompt for encrypted ssh_config IdentityFile passphrase (#1917) (#1921) (@NoiceHax)\n- connectors.ssh: don't truncate local file when download fails (#1440) (#1924) (@NoiceHax)\n- connectors.ssh: retry NFSv4 ACL handover (#1955) (@0xTaoZ)\n- connectors.docker: add docker_user connector data option (#1938) (@wowi42)\n- connectors.ssh: trust known_hosts certificate authorities (#1945) (@0xTaoZ)\n- connectors.ssh: support sudo passwords with rsync (#1950) (@0xTaoZ)\n- connectors.util: prompt for sudo password up front with --use-sudo-password (#1961) (@anandghegde)\n- connectors.ssh: preserve nested ProxyJump sockets (#1980) (@0xTaoZ)\n- connectors.ssh: require paramiko>=3.2 (#1992) (@wolfgang-aura)\n- connectors.ssh: match host CAs on custom ports (#1971) (@0xTaoZ)\n- connectors: add _sudo_set_home argument to control sudo -H (#1998) (@1sakshm)\n- connectors: skip futile re-run after sudo password prompt (#2013) (@wowi42)\n- connectors: default optional args in read_output_buffers (#2001) (@wowi42)\n- connectors.ssh: unflake SFTP client mock assertions (#2003) (@wowi42)\n\nCLI:\n\n- cli: migrate argument parsing from Click to Cyclopts (#1901) (@noirbizarre)\n- cli: parse literal list arguments (#1892) (@0xTaoZ)\n- cli: size result table columns by terminal cell width (#1977) (@xqliu)\n- cli: allow make_inventory without CLI context state (#2011) (@wowi42)\n- cli: Rich-based output, prints and debug-inventory (#1902) (@noirbizarre)\n\nDocs/meta:\n\n- docs: add debugging guide (#1919) (@Himanshuagrawal4)\n- docs: fix links to connector and fact guides (#1918) (@Himanshuagrawal4)\n- docs: add mode example to files.directory operation (#1933) (@evilham)\n- docs: fix links to connectors, operations, and facts indexes (#1956) (@castanearie)\n- chore: allow paramiko 5.0.0 to avoid CVE-2026-44405 (#1743) (@dpinol)\n- docs: fix connectors index link (#1958) (@0xTaoZ)\n- docs: correct claims that fact results are cached (#2000) (@1sakshm)\n- docs: add Simplified Chinese translation of README (#2027) (@WanderLandWalker)\n- ci: remove retired macOS 14 runners (#2051) (@wowi42)\n- docs: add deploy testing guide (#2052) (@wowi42)\n\nOther:\n\n- fix: add target, slice and device substates to systemd status check (#1914) (@kevinschweikert)\n- fix: parse packages with a brew \"version\" correctly. (#1601) (@morrison12)\n- feat: Allow `fetch_tags=\"force\"` in `git.repo` (#1766) (@inducer)\n- feat: add files.rename operation (#1932) (@wowi42)\n- refactor: make AI skills harness generic\n- fix: handle long inline keys in server.user_authorized_keys (#1908) (@wowi42)\n- fix: explicitly re-export context objects from the pyinfra package (#2042) (@sarankumar1325)\n- feat: add supervisorctl operations and facts (#1822) (@wowi42)","mentions_count":32}

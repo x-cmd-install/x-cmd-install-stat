@@ -2,97 +2,97 @@ about:
   description: "A library for building fast, reliable and evolvable network services."
   license: Apache-2.0
   homepage: 
-  head: 1adcb38
+  head: 3f87e92
   archived: false
   latestVersion: "0.9.1"
   latestRelease: "0.9.1"
   latestPrerelease: ""
-  collectedAt: 2026-11-08T06:10:57Z
+  collectedAt: 2026-11-10T07:20:06Z
 timeline:
   created: 2023-05-05
-  lastCommit: 2026-10-31
+  lastCommit: 2026-11-09
   lastVersion: 2026-11-03
   lastRelease: 2026-11-03
   lastPrerelease: 
 popularity:
-  star: 27816
+  star: 27837
   watcher: 184
-  fork: 1809
+  fork: 1814
   release: 11
-  contributor: 223
-  pullRequest: 560
-  issue: 492
+  contributor: 226
+  pullRequest: 563
+  issue: 494
 language:
-  Rust: 5567121
+  Rust: 5737220
   Dockerfile: 941
   Shell: 137
   HTML: 13
-totalBytes: 5568212
+totalBytes: 5738311
 recent:
   last30d:
-    since: 2026-10-09
+    since: 2026-10-11
     release: 1
-    mergedPR: 4
-    openPR: 21
-    closedIssue: 18
-    openIssue: 13
-    commit: 21
-  last60d:
-    since: 2026-09-09
-    release: 2
     mergedPR: 5
-    openPR: 36
+    openPR: 23
+    closedIssue: 18
+    openIssue: 14
+    commit: 27
+  last60d:
+    since: 2026-09-11
+    release: 1
+    mergedPR: 5
+    openPR: 34
     closedIssue: 23
-    openIssue: 30
-    commit: 40
+    openIssue: 31
+    commit: 51
   last90d:
-    since: 2026-08-10
+    since: 2026-08-12
     release: 2
-    mergedPR: 7
-    openPR: 52
+    mergedPR: 8
+    openPR: 54
     closedIssue: 32
-    openIssue: 40
-    commit: 74
+    openIssue: 42
+    commit: 81
   last180d:
-    since: 2026-05-12
+    since: 2026-05-14
     release: 3
-    mergedPR: 14
-    openPR: 68
+    mergedPR: 15
+    openPR: 70
     closedIssue: 44
-    openIssue: 56
-    commit: 181
+    openIssue: 58
+    commit: 188
   last360d:
-    since: 2025-11-13
+    since: 2025-11-15
     release: 5
-    mergedPR: 30
-    openPR: 90
+    mergedPR: 31
+    openPR: 92
     closedIssue: 66
-    openIssue: 71
-    commit: 330
+    openIssue: 73
+    commit: 341
   last720d:
-    since: 2024-11-18
+    since: 2024-11-20
     release: 7
-    mergedPR: 62
-    openPR: 118
+    mergedPR: 63
+    openPR: 119
     closedIssue: 130
-    openIssue: 113
-    commit: 546
+    openIssue: 114
+    commit: 562
 total:
   release: 11
-  mergedPR: 122
-  openPR: 128
+  mergedPR: 123
+  openPR: 130
   closedIssue: 299
-  openIssue: 193
-  commit: 815
+  openIssue: 195
+  commit: 831
 ---
 path: /home/runner/.x-repo/github.com/cloudflare/pingora
-collectedAt: 2026-11-08T06:10:58Z
+collectedAt: 2026-11-10T07:20:08Z
 loc:
   Rust:
-    code: 113160
-    comments: 10881
-    blanks: 15074
-    files: 290
+    code: 116728
+    comments: 11060
+    blanks: 15491
+    files: 296
   Toml:
     code: 1083
     comments: 94
@@ -125,15 +125,15 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 1491
+    comments: 1492
     blanks: 491
     files: 27
 total:
-  code: 115380
-  comments: 22118
-  blanks: 17472
-  files: 354
+  code: 118965
+  comments: 22602
+  blanks: 17928
+  files: 360
 ---
 
 ---
-{"id":432140653,"author":{"login":"drcaramelsyrup","id":834403,"node_id":"MDQ6VXNlcjgzNDQwMw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOJfWe5M4ZwfFt","tag_name":"0.9.1","target_commitish":"main","name":"Pingora 0.9.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-02T23:26:47Z","updated_at":"2026-11-03T01:07:23Z","published_at":"2026-11-03T01:07:23Z","assets":[],"body":"## [0.9.1](https://github.com/cloudflare/pingora/compare/0.9.0...0.9.1) - 2026-11-02\n\n\n**🐛 Bug Fixes**\n\n* Fix a panic on every accepted and outgoing connection with tokio 1.54 and later, which rejects zero-capacity buffered readers (#1059).\n* Fix the docs.rs build of the `pingora` crate, which failed for 0.9.0 (#1018).\n* Fix a panic in `pingora-limits` `Estimator::incr` when a counter overflows in builds with overflow checks enabled (#1041).\n\n**🔒 Security**\n\n* Require zstd 0.14.3, and through it zstd-safe 8.2.0 and zstd-sys 2.1.2, so dependency resolution cannot select zstd crates affected by RUSTSEC-2026-0391, RUSTSEC-2026-0395 through RUSTSEC-2026-0406, or RUSTSEC-2026-0410.\n\n**⚙️ Miscellaneous Tasks**\n\n* Ignore RustSec advisories for rustls 0.21, webpki-roots 0.26, rustls-webpki 0.101 and crypto-bigint 0.5.5, which reach the lockfile only through optional transitive dependencies and have no compatible fixed release.\n* Update HTTP/2 rejection tests for h2 releases that reject conflicting Content-Length headers in the codec.\n"}
+{"id":432140653,"author":{"login":"drcaramelsyrup","id":834403,"node_id":"MDQ6VXNlcjgzNDQwMw==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOJfWe5M4ZwfFt","tag_name":"0.9.1","target_commitish":"main","name":"Pingora 0.9.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-02T23:26:47Z","updated_at":"2026-11-03T01:07:23Z","published_at":"2026-11-03T01:07:23Z","assets":[],"body":"## [0.9.1](https://github.com/cloudflare/pingora/compare/0.9.0...0.9.1) - 2026-11-02\n\n\n**🐛 Bug Fixes**\n\n* Fix a panic on every accepted and outgoing connection with tokio 1.54 and later, which rejects zero-capacity buffered readers (#1059).\n* Fix the docs.rs build of the `pingora` crate, which failed for 0.9.0 (#1018).\n* Fix a panic in `pingora-limits` `Estimator::incr` when a counter overflows in builds with overflow checks enabled (#1041).\n\n**🔒 Security**\n\n* Require zstd 0.14.3, and through it zstd-safe 8.2.0 and zstd-sys 2.1.2, so dependency resolution cannot select zstd crates affected by RUSTSEC-2026-0391, RUSTSEC-2026-0395 through RUSTSEC-2026-0406, or RUSTSEC-2026-0410.\n\n**⚙️ Miscellaneous Tasks**\n\n* Ignore RustSec advisories for rustls 0.21, webpki-roots 0.26, rustls-webpki 0.101 and crypto-bigint 0.5.5, which reach the lockfile only through optional transitive dependencies and have no compatible fixed release.\n* Update HTTP/2 rejection tests for h2 releases that reject conflicting Content-Length headers in the codec.\n","reactions":{"total_count":2,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":2,"rocket":0,"eyes":0}}

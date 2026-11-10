@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.13.1"
   latestRelease: "v0.13.1"
   latestPrerelease: "v0.10.0-alpha.1"
-  collectedAt: 2026-11-09T06:45:52Z
+  collectedAt: 2026-11-10T07:31:35Z
 timeline:
   created: 2017-10-16
   lastCommit: 2019-02-05
@@ -32,7 +32,7 @@ language:
 totalBytes: 5552221
 recent:
   last30d:
-    since: 2026-10-10
+    since: 2026-10-11
     release: 0
     mergedPR: 0
     openPR: 0
@@ -40,7 +40,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-10
+    since: 2026-09-11
     release: 0
     mergedPR: 0
     openPR: 0
@@ -48,7 +48,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-11
+    since: 2026-08-12
     release: 0
     mergedPR: 0
     openPR: 0
@@ -56,7 +56,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-13
+    since: 2026-05-14
     release: 0
     mergedPR: 0
     openPR: 0
@@ -64,7 +64,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-14
+    since: 2025-11-15
     release: 0
     mergedPR: 0
     openPR: 0
@@ -72,7 +72,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-19
+    since: 2024-11-20
     release: 0
     mergedPR: 0
     openPR: 0
@@ -88,7 +88,7 @@ total:
   commit: 1097
 ---
 path: /home/runner/.x-repo/github.com/ksonnet/ksonnet
-collectedAt: 2026-11-09T06:45:56Z
+collectedAt: 2026-11-10T07:31:41Z
 loc:
   Go:
     code: 1364119
@@ -191,7 +191,7 @@ total:
   blanks: 102790
   files: 4453
 ---
-date: "2026-11-02"
+date: "2026-11-09"
 repo:
   name: github.com/ksonnet/ksonnet
   commit: 04138b998cb26049626280a0c32be21bdd902d3b
@@ -226,6 +226,10 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -234,25 +238,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -271,8 +267,8 @@ checks:
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating golang:alpine to golang:alpine@sha256:d200d2dd76b03a99b52651fd1325aff7dcd35422c35c01bac56571b0507f3deb'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:7: pin your Docker image by updating alpine:latest to alpine:latest@sha256:be2656061b536c1883c4034790e21d0a09c5aaaf51968b89368a3c0371ea2c9a'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating golang:alpine to golang:alpine@sha256:fa3d596898d9f126af7c01d14ee7597bab3f39cccf392ef36b69fe77cd681f18'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:7: pin your Docker image by updating alpine:latest to alpine:latest@sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf'
       - 'Warn: goCommand not pinned by hash: vendor/github.com/googleapis/gnostic/extensions/COMPILE-EXTENSION.sh:1'
       - 'Warn: goCommand not pinned by hash: vendor/github.com/json-iterator/go/build.sh:10'
       - 'Warn: goCommand not pinned by hash: vendor/github.com/pelletier/go-toml/benchmark.sh:10'
@@ -283,6 +279,10 @@ checks:
       - 'Warn: goCommand not pinned by hash: vendor/github.com/pelletier/go-toml/test.sh:29'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
       - 'Info:   0 out of   8 goCommand dependencies pinned'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

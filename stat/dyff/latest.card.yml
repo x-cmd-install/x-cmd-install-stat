@@ -2,15 +2,15 @@ about:
   description: "/ˈdʏf/ - diff tool for YAML files, and sometimes JSON"
   license: MIT
   homepage: 
-  head: 40af364
+  head: 5f946d6
   archived: false
   latestVersion: "v1.12.0"
   latestRelease: "v1.12.0"
   latestPrerelease: "v0.4-alpha"
-  collectedAt: 2026-11-09T07:12:49Z
+  collectedAt: 2026-11-10T08:08:07Z
 timeline:
   created: 2018-03-09
-  lastCommit: 2026-11-06
+  lastCommit: 2026-11-09
   lastVersion: 2026-04-26
   lastRelease: 2026-04-26
   lastPrerelease: 2018-04-20
@@ -20,7 +20,7 @@ popularity:
   fork: 103
   release: 86
   contributor: 31
-  pullRequest: 597
+  pullRequest: 598
   issue: 132
 language:
   Go: 215332
@@ -29,63 +29,63 @@ language:
 totalBytes: 220254
 recent:
   last30d:
-    since: 2026-10-10
+    since: 2026-10-11
     release: 0
-    mergedPR: 12
+    mergedPR: 13
     openPR: 2
     closedIssue: 0
     openIssue: 0
-    commit: 7
+    commit: 8
   last60d:
-    since: 2026-09-10
+    since: 2026-09-11
     release: 0
-    mergedPR: 23
+    mergedPR: 21
     openPR: 3
     closedIssue: 0
     openIssue: 0
-    commit: 18
+    commit: 19
   last90d:
-    since: 2026-08-11
+    since: 2026-08-12
     release: 0
-    mergedPR: 33
+    mergedPR: 34
     openPR: 4
     closedIssue: 0
     openIssue: 0
-    commit: 30
+    commit: 31
   last180d:
-    since: 2026-05-13
+    since: 2026-05-14
     release: 0
-    mergedPR: 66
+    mergedPR: 67
     openPR: 7
     closedIssue: 1
     openIssue: 3
-    commit: 66
+    commit: 67
   last360d:
-    since: 2025-11-14
+    since: 2025-11-15
     release: 9
-    mergedPR: 133
+    mergedPR: 134
     openPR: 9
     closedIssue: 4
     openIssue: 3
-    commit: 134
+    commit: 135
   last720d:
-    since: 2024-11-19
+    since: 2024-11-20
     release: 13
-    mergedPR: 226
+    mergedPR: 227
     openPR: 16
     closedIssue: 9
     openIssue: 14
-    commit: 454
+    commit: 456
 total:
   release: 86
-  mergedPR: 462
+  mergedPR: 463
   openPR: 18
   closedIssue: 77
   openIssue: 55
-  commit: 1113
+  commit: 1115
 ---
 path: /home/runner/.x-repo/github.com/homeport/dyff
-collectedAt: 2026-11-09T07:12:50Z
+collectedAt: 2026-11-10T08:08:08Z
 loc:
   Yaml:
     code: 5803
@@ -133,18 +133,18 @@ total:
   blanks: 1396
   files: 109
 ---
-date: "2026-11-02"
+date: "2026-11-09"
 repo:
   name: github.com/homeport/dyff
-  commit: e617f7906aa3bbdb431b8b68ca1198faae87967e
+  commit: 40af364bfc70d91767805fb7e1aa4dcd44e6ff9f
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 5.4
+score: 5.3
 checks:
   - name: Code-Review
     score: -1
-    reason: Found no human activity in the last 16 changesets
+    reason: Found no human activity in the last 15 changesets
     details: null
   - name: Maintained
     score: 10
@@ -153,10 +153,6 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -168,6 +164,10 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/tests.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Pinned-Dependencies
     score: 1
     reason: dependency not pinned by hash detected -- score normalized to 1
@@ -192,6 +192,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -200,17 +205,16 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Packaging
     score: 10
     reason: packaging workflow detected
@@ -230,13 +234,9 @@ checks:
       - 'Warn: release artifact v1.11.3 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/297954045'
       - 'Warn: release artifact v1.11.2 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/291814002'
       - 'Warn: release artifact v1.11.1 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/291772752'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
-    score: 10
-    reason: SAST tool is run on all commits
+    score: 8
+    reason: SAST tool is not run on all commits -- score normalized to 8
     details:
-      - 'Info: all commits (30) are checked with a SAST tool'
+      - 'Warn: 24 commits out of 30 are checked with a SAST tool'
 ---

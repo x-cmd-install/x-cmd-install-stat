@@ -7,7 +7,7 @@ about:
   latestVersion: "nightly-0.7.3-43-g2366d92"
   latestRelease: "0.7.3"
   latestPrerelease: "nightly-0.7.3-43-g2366d92"
-  collectedAt: 2026-11-08T05:55:35Z
+  collectedAt: 2026-11-10T07:10:19Z
 timeline:
   created: 2020-04-08
   lastCommit: 2025-01-11
@@ -31,7 +31,7 @@ language:
 totalBytes: 129484
 recent:
   last30d:
-    since: 2026-10-09
+    since: 2026-10-11
     release: 0
     mergedPR: 0
     openPR: 0
@@ -39,7 +39,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-09
+    since: 2026-09-11
     release: 0
     mergedPR: 0
     openPR: 2
@@ -47,7 +47,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-10
+    since: 2026-08-12
     release: 0
     mergedPR: 0
     openPR: 7
@@ -55,7 +55,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-12
+    since: 2026-05-14
     release: 0
     mergedPR: 0
     openPR: 7
@@ -63,7 +63,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-13
+    since: 2025-11-15
     release: 0
     mergedPR: 0
     openPR: 7
@@ -71,13 +71,13 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-18
+    since: 2024-11-20
     release: 3
     mergedPR: 2
     openPR: 8
     closedIssue: 8
     openIssue: 1
-    commit: 7
+    commit: 5
 total:
   release: 118
   mergedPR: 221
@@ -87,7 +87,7 @@ total:
   commit: 585
 ---
 path: /home/runner/.x-repo/github.com/doitintl/kube-no-trouble
-collectedAt: 2026-11-08T05:55:36Z
+collectedAt: 2026-11-10T07:10:20Z
 loc:
   Go:
     code: 3320
@@ -150,7 +150,7 @@ total:
   blanks: 838
   files: 118
 ---
-date: "2026-11-02"
+date: "2026-11-09"
 repo:
   name: github.com/doitintl/kube-no-trouble
   commit: 2366d92156c0cf94c31453593368077f13c183b7
@@ -159,21 +159,21 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.5
 checks:
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
     details: null
-  - name: Dangerous-Workflow
+  - name: Binary-Artifacts
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -220,11 +220,6 @@ checks:
       - 'Info:   0 out of  16 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   8 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -233,12 +228,27 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Branch-Protection
+    score: 8
+    reason: branch protection is not maximal on development and all release branches
+    details:
+      - 'Info: ''allow deletion'' disabled on branch ''master'''
+      - 'Info: ''force pushes'' disabled on branch ''master'''
+      - 'Info: required approving review count is 2 on branch ''master'''
+      - 'Warn: codeowners review is required - but no codeowners file found in repo'
+      - 'Info: status check found to merge onto on branch ''master'''
+      - 'Info: PRs are required in order to make changes on branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -257,17 +267,7 @@ checks:
     score: 10
     reason: packaging workflow detected
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/main.yaml:173'
-  - name: Branch-Protection
-    score: 8
-    reason: branch protection is not maximal on development and all release branches
-    details:
-      - 'Info: ''allow deletion'' disabled on branch ''master'''
-      - 'Info: ''force pushes'' disabled on branch ''master'''
-      - 'Info: required approving review count is 2 on branch ''master'''
-      - 'Warn: codeowners review is required - but no codeowners file found in repo'
-      - 'Info: status check found to merge onto on branch ''master'''
-      - 'Info: PRs are required in order to make changes on branch ''master'''
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/main.yaml:70'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

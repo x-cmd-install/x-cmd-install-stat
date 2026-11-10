@@ -7,7 +7,7 @@ about:
   latestVersion: "1.0.22-RELEASE"
   latestRelease: "1.0.22-RELEASE"
   latestPrerelease: ""
-  collectedAt: 2026-11-09T04:53:03Z
+  collectedAt: 2026-11-10T06:07:44Z
 timeline:
   created: 2013-01-20
   lastCommit: 2026-11-08
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-04-09
   lastPrerelease: 
 popularity:
-  star: 14047
+  star: 14053
   watcher: 376
   fork: 1887
   release: 35
@@ -38,7 +38,7 @@ language:
 totalBytes: 6029590
 recent:
   last30d:
-    since: 2026-10-10
+    since: 2026-10-11
     release: 0
     mergedPR: 2
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 0
     commit: 13
   last60d:
-    since: 2026-09-10
+    since: 2026-09-11
     release: 0
     mergedPR: 2
     openPR: 0
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 38
   last90d:
-    since: 2026-08-11
+    since: 2026-08-12
     release: 0
     mergedPR: 2
     openPR: 0
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 48
   last180d:
-    since: 2026-05-13
+    since: 2026-05-14
     release: 0
     mergedPR: 2
     openPR: 0
@@ -70,7 +70,7 @@ recent:
     openIssue: 0
     commit: 63
   last360d:
-    since: 2025-11-14
+    since: 2025-11-15
     release: 2
     mergedPR: 5
     openPR: 0
@@ -78,7 +78,7 @@ recent:
     openIssue: 0
     commit: 279
   last720d:
-    since: 2024-11-19
+    since: 2024-11-20
     release: 2
     mergedPR: 7
     openPR: 0
@@ -94,7 +94,7 @@ total:
   commit: 4738
 ---
 path: /home/runner/.x-repo/github.com/jedisct1/libsodium
-collectedAt: 2026-11-09T04:53:06Z
+collectedAt: 2026-11-10T06:07:47Z
 loc:
   C:
     code: 49239
@@ -212,38 +212,42 @@ total:
   blanks: 10213
   files: 616
 ---
-date: "2026-10-19"
+date: "2026-11-09"
 repo:
   name: github.com/jedisct1/libsodium
-  commit: 60b751cd14418fae2d17e6f1003e43622b3e5a25
+  commit: bbccd06144cc26d5c67d554bd87abb8dc1edcb30
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 6.9
 checks:
-  - name: Code-Review
-    score: 0
-    reason: Found 0/30 approved changesets -- score normalized to 0
-    details: null
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 5 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Code-Review
+    score: 0
+    reason: Found 2/30 approved changesets -- score normalized to 0
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
     details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:22'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql-analysis.yml:21'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:22'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/dotnet-core.yml:188'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:12'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/cifuzz.yml:10'
@@ -251,16 +255,6 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/dotnet-core.yml:10'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/zizmor.yml:16'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: SAST
-    score: 10
-    reason: 'SAST tool detected: CodeQL'
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: no pull requests merged into dev branch'
   - name: Pinned-Dependencies
     score: 9
     reason: dependency not pinned by hash detected -- score normalized to 9
@@ -281,17 +275,22 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: OSSFuzz integration found'
   - name: License
     score: 9
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
     details:
-      - 'Info: OSSFuzz integration found'
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -306,9 +305,10 @@ checks:
       - 'Warn: release artifact 1.0.20-RELEASE does not have provenance: https://api.github.com/repos/jedisct1/libsodium/releases/157452971'
       - 'Warn: release artifact 1.0.19-RELEASE does not have provenance: https://api.github.com/repos/jedisct1/libsodium/releases/120921128'
       - 'Warn: release artifact 1.0.18-RELEASE does not have provenance: https://api.github.com/repos/jedisct1/libsodium/releases/17691644'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
+  - name: SAST
+    score: 10
+    reason: SAST tool is run on all commits
     details:
-      - 'Warn: branch protection not enabled for branch ''master'''
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Info: all commits (2) are checked with a SAST tool'
 ---

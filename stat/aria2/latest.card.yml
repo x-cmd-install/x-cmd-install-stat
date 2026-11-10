@@ -7,7 +7,7 @@ about:
   latestVersion: "release-1.37.0"
   latestRelease: "release-1.37.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-08T05:52:32Z
+  collectedAt: 2026-11-10T07:12:34Z
 timeline:
   created: 2010-11-27
   lastCommit: 2026-06-25
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2023-11-15
   lastPrerelease: 
 popularity:
-  star: 43432
+  star: 43455
   watcher: 734
   fork: 3960
   release: 24
@@ -32,7 +32,7 @@ language:
 totalBytes: 6015930
 recent:
   last30d:
-    since: 2026-10-09
+    since: 2026-10-11
     release: 0
     mergedPR: 0
     openPR: 2
@@ -40,7 +40,7 @@ recent:
     openIssue: 3
     commit: 0
   last60d:
-    since: 2026-09-09
+    since: 2026-09-11
     release: 0
     mergedPR: 0
     openPR: 5
@@ -48,7 +48,7 @@ recent:
     openIssue: 6
     commit: 0
   last90d:
-    since: 2026-08-10
+    since: 2026-08-12
     release: 0
     mergedPR: 0
     openPR: 6
@@ -56,15 +56,15 @@ recent:
     openIssue: 25
     commit: 0
   last180d:
-    since: 2026-05-12
+    since: 2026-05-14
     release: 0
     mergedPR: 2
     openPR: 16
     closedIssue: 0
-    openIssue: 33
-    commit: 2
+    openIssue: 32
+    commit: 1
   last360d:
-    since: 2025-11-13
+    since: 2025-11-15
     release: 0
     mergedPR: 5
     openPR: 20
@@ -72,7 +72,7 @@ recent:
     openIssue: 46
     commit: 5
   last720d:
-    since: 2024-11-18
+    since: 2024-11-20
     release: 0
     mergedPR: 6
     openPR: 24
@@ -88,7 +88,7 @@ total:
   commit: 5447
 ---
 path: /home/runner/.x-repo/github.com/aria2/aria2
-collectedAt: 2026-11-08T05:52:42Z
+collectedAt: 2026-11-10T07:12:47Z
 loc:
   Cpp:
     code: 93732
@@ -181,7 +181,7 @@ total:
   blanks: 28188
   files: 1272
 ---
-date: "2026-11-02"
+date: "2026-11-09"
 repo:
   name: github.com/aria2/aria2
   commit: 9e7273583f83e881e3ec067b523ba88724088d2f
@@ -190,10 +190,6 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.3
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Code-Review
     score: 1
     reason: Found 1/8 approved changesets -- score normalized to 1
@@ -202,6 +198,10 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -209,13 +209,13 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/android.yml:10'
       - 'Warn: no topLevel permission defined: .github/workflows/build.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Security-Policy
     score: 0
@@ -236,6 +236,10 @@ checks:
     details:
       - 'Info: project has a license file: COPYING:0'
       - 'Info: FSF or OSI recognized license: GNU General Public License v2.0: COPYING:0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -250,10 +254,6 @@ checks:
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 containerImage dependencies pinned'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -268,14 +268,14 @@ checks:
       - 'Warn: release artifact release-1.35.0 does not have provenance: https://api.github.com/repos/aria2/aria2/releases/20496544'
       - 'Warn: release artifact release-1.34.0 does not have provenance: https://api.github.com/repos/aria2/aria2/releases/11006068'
       - 'Warn: release artifact release-1.33.1 does not have provenance: https://api.github.com/repos/aria2/aria2/releases/8432218'
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/android.yml:13'
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---

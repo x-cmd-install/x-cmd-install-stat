@@ -7,7 +7,7 @@ about:
   latestVersion: "v10.2.6"
   latestRelease: "v10.2.6"
   latestPrerelease: ""
-  collectedAt: 2026-11-08T07:18:55Z
+  collectedAt: 2026-11-10T09:00:29Z
 timeline:
   created: 2018-11-15
   lastCommit: 2026-11-06
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-11-03
   lastPrerelease: 
 popularity:
-  star: 3400
+  star: 3401
   watcher: 48
   fork: 229
   release: 112
@@ -32,31 +32,31 @@ language:
 totalBytes: 299528
 recent:
   last30d:
-    since: 2026-10-09
+    since: 2026-10-11
     release: 1
     mergedPR: 8
     openPR: 3
     closedIssue: 2
-    openIssue: 3
+    openIssue: 2
     commit: 10
   last60d:
-    since: 2026-09-09
+    since: 2026-09-11
     release: 4
     mergedPR: 20
     openPR: 3
     closedIssue: 3
-    openIssue: 4
+    openIssue: 3
     commit: 23
   last90d:
-    since: 2026-08-10
-    release: 5
+    since: 2026-08-12
+    release: 4
     mergedPR: 33
     openPR: 3
     closedIssue: 3
     openIssue: 4
     commit: 40
   last180d:
-    since: 2026-05-12
+    since: 2026-05-14
     release: 6
     mergedPR: 44
     openPR: 3
@@ -64,7 +64,7 @@ recent:
     openIssue: 5
     commit: 52
   last360d:
-    since: 2025-11-13
+    since: 2025-11-15
     release: 13
     mergedPR: 54
     openPR: 3
@@ -72,7 +72,7 @@ recent:
     openIssue: 5
     commit: 73
   last720d:
-    since: 2024-11-18
+    since: 2024-11-20
     release: 21
     mergedPR: 73
     openPR: 3
@@ -88,7 +88,7 @@ total:
   commit: 1136
 ---
 path: /home/runner/.x-repo/github.com/FairwindsOps/polaris
-collectedAt: 2026-11-08T07:18:59Z
+collectedAt: 2026-11-10T09:00:37Z
 loc:
   Yaml:
     code: 9504
@@ -146,22 +146,31 @@ total:
   blanks: 1438
   files: 520
 ---
-date: "2026-11-02"
+date: "2026-11-09"
 repo:
   name: github.com/FairwindsOps/polaris
-  commit: 6231fc3b5f81d4c2cae637e3ded1e6c84a299145
+  commit: ff72eb2d3c0113b96fb3a79fa642e371cd3a2481
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 5
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
+  - name: Code-Review
+    score: 4
+    reason: Found 5/12 approved changesets -- score normalized to 4
     details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -169,15 +178,6 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/test_setup.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Code-Review
-    score: 4
-    reason: Found 4/10 approved changesets -- score normalized to 4
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -186,6 +186,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -194,16 +199,11 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test_setup.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/FairwindsOps/polaris/test_setup.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test_setup.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/FairwindsOps/polaris/test_setup.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test_setup.yml:10: update your workflow using https://app.stepsecurity.io/secureworkflow/FairwindsOps/polaris/test_setup.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: .github/actions/setup-polaris/Dockerfile:3: pin your Docker image by updating alpine:3.24 to alpine:3.24@sha256:be2656061b536c1883c4034790e21d0a09c5aaaf51968b89368a3c0371ea2c9a'
+      - 'Warn: containerImage not pinned by hash: .github/actions/setup-polaris/Dockerfile:3: pin your Docker image by updating alpine:3.24 to alpine:3.24@sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf'
       - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating alpine:3.24.3 to alpine:3.24.3@sha256:be2656061b536c1883c4034790e21d0a09c5aaaf51968b89368a3c0371ea2c9a'
       - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
@@ -214,20 +214,6 @@ checks:
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
-  - name: Signed-Releases
-    score: 8
-    reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
-    details:
-      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/FairwindsOps/polaris/releases/tag/v10.2.5'
-      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/FairwindsOps/polaris/releases/tag/v10.2.4'
-      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/FairwindsOps/polaris/releases/tag/v10.2.3'
-      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/FairwindsOps/polaris/releases/tag/v10.2.2'
-      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/FairwindsOps/polaris/releases/tag/v10.2.1'
-      - 'Warn: release artifact v10.2.5 does not have provenance: https://api.github.com/repos/FairwindsOps/polaris/releases/391548447'
-      - 'Warn: release artifact v10.2.4 does not have provenance: https://api.github.com/repos/FairwindsOps/polaris/releases/390042616'
-      - 'Warn: release artifact v10.2.3 does not have provenance: https://api.github.com/repos/FairwindsOps/polaris/releases/389343116'
-      - 'Warn: release artifact v10.2.2 does not have provenance: https://api.github.com/repos/FairwindsOps/polaris/releases/367937733'
-      - 'Warn: release artifact v10.2.1 does not have provenance: https://api.github.com/repos/FairwindsOps/polaris/releases/357485605'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -236,9 +222,23 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Signed-Releases
+    score: 8
+    reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
+    details:
+      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/FairwindsOps/polaris/releases/tag/v10.2.6'
+      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/FairwindsOps/polaris/releases/tag/v10.2.5'
+      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/FairwindsOps/polaris/releases/tag/v10.2.4'
+      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/FairwindsOps/polaris/releases/tag/v10.2.3'
+      - 'Info: signed release artifact: checksums.txt.sigstore.json: https://github.com/FairwindsOps/polaris/releases/tag/v10.2.2'
+      - 'Warn: release artifact v10.2.6 does not have provenance: https://api.github.com/repos/FairwindsOps/polaris/releases/433114747'
+      - 'Warn: release artifact v10.2.5 does not have provenance: https://api.github.com/repos/FairwindsOps/polaris/releases/391548447'
+      - 'Warn: release artifact v10.2.4 does not have provenance: https://api.github.com/repos/FairwindsOps/polaris/releases/390042616'
+      - 'Warn: release artifact v10.2.3 does not have provenance: https://api.github.com/repos/FairwindsOps/polaris/releases/389343116'
+      - 'Warn: release artifact v10.2.2 does not have provenance: https://api.github.com/repos/FairwindsOps/polaris/releases/367937733'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
-      - 'Warn: 0 commits out of 24 are checked with a SAST tool'
+      - 'Warn: 0 commits out of 23 are checked with a SAST tool'
 ---

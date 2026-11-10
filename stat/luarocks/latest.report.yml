@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.13.0"
   latestRelease: "v3.13.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-08T07:15:02Z
+  collectedAt: 2026-11-10T09:08:32Z
 timeline:
   created: 2010-03-20
   lastCommit: 2026-10-29
@@ -17,7 +17,7 @@ timeline:
 popularity:
   star: 3756
   watcher: 91
-  fork: 482
+  fork: 481
   release: 69
   contributor: 121
   pullRequest: 776
@@ -34,15 +34,15 @@ language:
 totalBytes: 1787384
 recent:
   last30d:
-    since: 2026-10-09
+    since: 2026-10-11
     release: 0
-    mergedPR: 12
+    mergedPR: 8
     openPR: 2
     closedIssue: 1
     openIssue: 0
     commit: 5
   last60d:
-    since: 2026-09-09
+    since: 2026-09-11
     release: 0
     mergedPR: 15
     openPR: 5
@@ -50,15 +50,15 @@ recent:
     openIssue: 1
     commit: 21
   last90d:
-    since: 2026-08-10
+    since: 2026-08-12
     release: 0
-    mergedPR: 24
+    mergedPR: 22
     openPR: 6
-    closedIssue: 4
+    closedIssue: 3
     openIssue: 1
     commit: 21
   last180d:
-    since: 2026-05-12
+    since: 2026-05-14
     release: 0
     mergedPR: 41
     openPR: 6
@@ -66,7 +66,7 @@ recent:
     openIssue: 4
     commit: 57
   last360d:
-    since: 2025-11-13
+    since: 2025-11-15
     release: 1
     mergedPR: 55
     openPR: 10
@@ -74,7 +74,7 @@ recent:
     openIssue: 15
     commit: 84
   last720d:
-    since: 2024-11-18
+    since: 2024-11-20
     release: 69
     mergedPR: 90
     openPR: 16
@@ -90,7 +90,7 @@ total:
   commit: 2995
 ---
 path: /home/runner/.x-repo/github.com/luarocks/luarocks
-collectedAt: 2026-11-08T07:15:15Z
+collectedAt: 2026-11-10T09:08:42Z
 loc:
   Lua:
     code: 27508
@@ -153,10 +153,10 @@ total:
   blanks: 9664
   files: 266
 ---
-date: "2026-10-26"
+date: "2026-11-09"
 repo:
   name: github.com/luarocks/luarocks
-  commit: 2b492f82dfcc37e247a69435eee051af1a2bb478
+  commit: 85bfe36c812465b2f377877939d884a4db829a25
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
@@ -164,16 +164,11 @@ score: 5.7
 checks:
   - name: Code-Review
     score: 8
-    reason: Found 22/25 approved changesets -- score normalized to 8
+    reason: Found 19/22 approved changesets -- score normalized to 8
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 5 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 4 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Security-Policy
     score: 10
@@ -215,6 +210,11 @@ checks:
       - 'Warn: binary detected: win32/tools/mv.exe:1'
       - 'Warn: binary detected: win32/tools/uname.exe:1'
       - 'Warn: binary detected: win32/tools/wget.exe:1'
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -230,25 +230,21 @@ checks:
     score: 8
     reason: dependency not pinned by hash detected -- score normalized to 8
     details:
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/test.yml:92'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/test.yml:93'
       - 'Info:  15 out of  15 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   6 out of   6 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 pipCommand dependencies pinned'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: COPYING:0'
       - 'Info: FSF or OSI recognized license: MIT License: COPYING:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 8
     reason: 4 out of the last 4 releases have a total of 4 signed artifacts.
@@ -261,6 +257,10 @@ checks:
       - 'Warn: release artifact v3.12.1 does not have provenance: https://api.github.com/repos/luarocks/luarocks/releases/228226128'
       - 'Warn: release artifact v3.12.0 does not have provenance: https://api.github.com/repos/luarocks/luarocks/releases/228226091'
       - 'Warn: release artifact v3.11.1 does not have provenance: https://api.github.com/repos/luarocks/luarocks/releases/228226048'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

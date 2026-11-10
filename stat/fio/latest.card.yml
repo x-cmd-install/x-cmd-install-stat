@@ -7,7 +7,7 @@ about:
   latestVersion: "fio-3.43"
   latestRelease: "fio-3.43"
   latestPrerelease: ""
-  collectedAt: 2026-11-08T07:09:55Z
+  collectedAt: 2026-11-10T08:46:52Z
 timeline:
   created: 2012-10-22
   lastCommit: 2026-11-05
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2026-09-23
   lastPrerelease: 
 popularity:
-  star: 6420
+  star: 6419
   watcher: 161
-  fork: 1442
+  fork: 1443
   release: 13
   contributor: 338
-  pullRequest: 959
+  pullRequest: 961
   issue: 1134
 language:
   C: 2738052
@@ -35,63 +35,63 @@ language:
 totalBytes: 3678347
 recent:
   last30d:
-    since: 2026-10-09
+    since: 2026-10-11
     release: 0
     mergedPR: 10
-    openPR: 9
-    closedIssue: 0
-    openIssue: 1
-    commit: 11
-  last60d:
-    since: 2026-09-09
-    release: 1
-    mergedPR: 15
     openPR: 10
     closedIssue: 0
+    openIssue: 1
+    commit: 10
+  last60d:
+    since: 2026-09-11
+    release: 1
+    mergedPR: 15
+    openPR: 12
+    closedIssue: 0
     openIssue: 3
-    commit: 22
+    commit: 18
   last90d:
-    since: 2026-08-10
+    since: 2026-08-12
     release: 1
     mergedPR: 21
-    openPR: 12
+    openPR: 14
     closedIssue: 1
     openIssue: 4
-    commit: 33
+    commit: 31
   last180d:
-    since: 2026-05-12
+    since: 2026-05-14
     release: 1
-    mergedPR: 43
-    openPR: 14
+    mergedPR: 42
+    openPR: 16
     closedIssue: 9
     openIssue: 8
-    commit: 108
+    commit: 104
   last360d:
-    since: 2025-11-13
+    since: 2025-11-15
     release: 2
     mergedPR: 74
-    openPR: 14
+    openPR: 16
     closedIssue: 26
     openIssue: 16
-    commit: 207
+    commit: 204
   last720d:
-    since: 2024-11-18
+    since: 2024-11-20
     release: 5
     mergedPR: 115
-    openPR: 16
-    closedIssue: 95
+    openPR: 18
+    closedIssue: 94
     openIssue: 38
     commit: 529
 total:
   release: 13
   mergedPR: 669
-  openPR: 31
+  openPR: 33
   closedIssue: 924
   openIssue: 210
   commit: 9010
 ---
 path: /home/runner/.x-repo/github.com/axboe/fio
-collectedAt: 2026-11-08T07:09:59Z
+collectedAt: 2026-11-10T08:46:59Z
 loc:
   C:
     code: 74970
@@ -154,23 +154,28 @@ total:
   blanks: 21681
   files: 438
 ---
-date: "2026-11-02"
+date: "2026-11-09"
 repo:
   name: github.com/axboe/fio
-  commit: d645e90502dd740f8c7b6df8b17d35151df8bf3e
+  commit: bfffdcd1ec9ca694c7ce780975f73e9ef0dbfaa2
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 4.6
+score: 4.8
 checks:
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 7 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Code-Review
-    score: 6
-    reason: Found 12/18 approved changesets -- score normalized to 6
+    score: 8
+    reason: Found 14/16 approved changesets -- score normalized to 8
     details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -183,11 +188,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/cifuzz.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/qemu.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -238,11 +238,6 @@ checks:
       - 'Info: CLibFuzzer integration found: t/fuzz/fuzz_parseini.c:10'
       - 'Info: CLibFuzzer integration found: t/fuzz/onefile.c:5'
       - 'Info: CLibFuzzer integration found: t/fuzz/onefile.c:46'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -257,9 +252,14 @@ checks:
       - 'Warn: release artifact fio-3.41 does not have provenance: https://api.github.com/repos/axboe/fio/releases/245175288'
       - 'Warn: release artifact fio-3.40 does not have provenance: https://api.github.com/repos/axboe/fio/releases/219863733'
       - 'Warn: release artifact fio-3.39 does not have provenance: https://api.github.com/repos/axboe/fio/releases/200963661'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
-      - 'Warn: 0 commits out of 24 are checked with a SAST tool'
+      - 'Warn: 0 commits out of 28 are checked with a SAST tool'
 ---

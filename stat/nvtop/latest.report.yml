@@ -2,93 +2,93 @@ about:
   description: "GPU & Accelerator process monitoring for AMD, Apple, Huawei, Intel, NVIDIA and Qualcomm"
   license: NOASSERTION
   homepage: 
-  head: 8529058
+  head: b625724
   archived: false
   latestVersion: "3.4.0"
   latestRelease: "3.4.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-09T07:24:10Z
+  collectedAt: 2026-11-10T08:11:02Z
 timeline:
   created: 2017-06-16
-  lastCommit: 2026-11-08
+  lastCommit: 2026-11-09
   lastVersion: 2026-11-08
   lastRelease: 2026-11-08
   lastPrerelease: 
 popularity:
-  star: 11131
+  star: 11134
   watcher: 81
   fork: 460
   release: 25
-  contributor: 98
-  pullRequest: 187
+  contributor: 99
+  pullRequest: 189
   issue: 344
 language:
   C: 1086279
-  CMake: 57028
+  CMake: 57201
   C++: 16804
   Objective-C: 9272
   Shell: 4877
   Dockerfile: 1252
-totalBytes: 1175512
+totalBytes: 1175685
 recent:
   last30d:
-    since: 2026-10-10
+    since: 2026-10-11
     release: 1
-    mergedPR: 7
+    mergedPR: 9
     openPR: 4
     closedIssue: 3
     openIssue: 0
-    commit: 19
+    commit: 26
   last60d:
-    since: 2026-09-10
+    since: 2026-09-11
     release: 1
-    mergedPR: 13
+    mergedPR: 15
     openPR: 10
     closedIssue: 6
     openIssue: 1
-    commit: 60
+    commit: 67
   last90d:
-    since: 2026-08-11
+    since: 2026-08-12
     release: 1
-    mergedPR: 20
+    mergedPR: 22
     openPR: 12
     closedIssue: 7
     openIssue: 2
-    commit: 82
+    commit: 89
   last180d:
-    since: 2026-05-13
+    since: 2026-05-14
     release: 1
-    mergedPR: 31
+    mergedPR: 33
     openPR: 14
     closedIssue: 9
     openIssue: 11
-    commit: 98
+    commit: 105
   last360d:
-    since: 2025-11-14
+    since: 2025-11-15
     release: 4
-    mergedPR: 52
+    mergedPR: 54
     openPR: 16
     closedIssue: 25
     openIssue: 20
-    commit: 172
+    commit: 179
   last720d:
-    since: 2024-11-19
+    since: 2024-11-20
     release: 5
-    mergedPR: 77
+    mergedPR: 78
     openPR: 16
     closedIssue: 46
     openIssue: 49
-    commit: 335
+    commit: 342
 total:
   release: 25
-  mergedPR: 134
+  mergedPR: 136
   openPR: 16
   closedIssue: 227
   openIssue: 117
-  commit: 808
+  commit: 818
 ---
 path: /home/runner/.x-repo/github.com/Syllo/nvtop
-collectedAt: 2026-11-09T07:24:10Z
+collectedAt: 2026-11-10T08:11:03Z
 loc:
   C:
     code: 15850
@@ -101,7 +101,7 @@ loc:
     blanks: 984
     files: 30
   CMake:
-    code: 1065
+    code: 1069
     comments: 305
     blanks: 205
     files: 15
@@ -151,43 +151,46 @@ loc:
     blanks: 4
     files: 1
 total:
-  code: 22112
+  code: 22116
   comments: 5173
   blanks: 4277
   files: 103
 ---
-date: "2026-11-02"
+date: "2026-11-09"
 repo:
   name: github.com/Syllo/nvtop
-  commit: 71094a9f7dfbfe7cbe9faebfdf055e580a034283
+  commit: b625724b59dfd0193e0146b6f6ed000d36de942a
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 4.2
+score: 5.2
 checks:
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Code-Review
+    score: 6
+    reason: Found 7/11 approved changesets -- score normalized to 6
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/compile.yml:1'
-      - 'Info: no jobLevel write permissions found'
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Code-Review
-    score: 9
-    reason: Found 10/11 approved changesets -- score normalized to 9
-    details: null
+  - name: Token-Permissions
+    score: 10
+    reason: GitHub workflow tokens follow principle of least privilege
+    details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/appimage.yml:32'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/appimage.yml:74'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/appimage.yml:75'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/appimage.yml:13'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/compile.yml:8'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -204,21 +207,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Pinned-Dependencies
-    score: 0
-    reason: dependency not pinned by hash detected -- score normalized to 0
-    details:
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/compile.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/Syllo/nvtop/compile.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/compile.yml:39: update your workflow using https://app.stepsecurity.io/secureworkflow/Syllo/nvtop/compile.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:9: pin your Docker image by updating nvidia/opengl:1.2-glvnd-runtime-ubuntu20.04 to nvidia/opengl:1.2-glvnd-runtime-ubuntu20.04@sha256:4480cecadba0bd3763d7c4934225620210527e3d985dff0e34855cb87e2fc1db'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:33: pin your Docker image by updating nvidia/opengl:1.2-glvnd-runtime-ubuntu20.04 to nvidia/opengl:1.2-glvnd-runtime-ubuntu20.04@sha256:4480cecadba0bd3763d7c4934225620210527e3d985dff0e34855cb87e2fc1db'
-      - 'Warn: pipCommand not pinned by hash: Dockerfile:18-21'
-      - 'Warn: pipCommand not pinned by hash: Dockerfile:18-21'
-      - 'Warn: downloadThenRun not pinned by hash: AppImage/make_appimage.sh:60'
-      - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   0 out of   2 pipCommand dependencies pinned'
-      - 'Info:   0 out of   1 downloadThenRun dependencies pinned'
-      - 'Info:   0 out of   2 containerImage dependencies pinned'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -230,29 +218,40 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
+  - name: Pinned-Dependencies
+    score: 5
+    reason: dependency not pinned by hash detected -- score normalized to 5
+    details:
+      - 'Warn: containerImage not pinned by hash: Dockerfile:9: pin your Docker image by updating nvidia/opengl:1.2-glvnd-runtime-ubuntu20.04 to nvidia/opengl:1.2-glvnd-runtime-ubuntu20.04@sha256:4480cecadba0bd3763d7c4934225620210527e3d985dff0e34855cb87e2fc1db'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:33: pin your Docker image by updating nvidia/opengl:1.2-glvnd-runtime-ubuntu20.04 to nvidia/opengl:1.2-glvnd-runtime-ubuntu20.04@sha256:4480cecadba0bd3763d7c4934225620210527e3d985dff0e34855cb87e2fc1db'
+      - 'Warn: pipCommand not pinned by hash: Dockerfile:18-21'
+      - 'Warn: pipCommand not pinned by hash: Dockerfile:18-21'
+      - 'Info:   5 out of   5 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   0 out of   2 containerImage dependencies pinned'
+      - 'Info:   0 out of   2 pipCommand dependencies pinned'
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact 3.4.0 not signed: https://api.github.com/repos/Syllo/nvtop/releases/438363505'
+      - 'Warn: release artifact 3.3.2 not signed: https://api.github.com/repos/Syllo/nvtop/releases/284194152'
+      - 'Warn: release artifact 3.3.1 not signed: https://api.github.com/repos/Syllo/nvtop/releases/277712378'
+      - 'Warn: release artifact 3.3.0 not signed: https://api.github.com/repos/Syllo/nvtop/releases/277399448'
+      - 'Warn: release artifact 3.2.0 not signed: https://api.github.com/repos/Syllo/nvtop/releases/209145558'
+      - 'Warn: release artifact 3.4.0 does not have provenance: https://api.github.com/repos/Syllo/nvtop/releases/438363505'
+      - 'Warn: release artifact 3.3.2 does not have provenance: https://api.github.com/repos/Syllo/nvtop/releases/284194152'
+      - 'Warn: release artifact 3.3.1 does not have provenance: https://api.github.com/repos/Syllo/nvtop/releases/277712378'
+      - 'Warn: release artifact 3.3.0 does not have provenance: https://api.github.com/repos/Syllo/nvtop/releases/277399448'
+      - 'Warn: release artifact 3.2.0 does not have provenance: https://api.github.com/repos/Syllo/nvtop/releases/209145558'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''master'''
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact 3.3.2 not signed: https://api.github.com/repos/Syllo/nvtop/releases/284194152'
-      - 'Warn: release artifact 3.3.1 not signed: https://api.github.com/repos/Syllo/nvtop/releases/277712378'
-      - 'Warn: release artifact 3.3.0 not signed: https://api.github.com/repos/Syllo/nvtop/releases/277399448'
-      - 'Warn: release artifact 3.2.0 not signed: https://api.github.com/repos/Syllo/nvtop/releases/209145558'
-      - 'Warn: release artifact 3.1.0 not signed: https://api.github.com/repos/Syllo/nvtop/releases/143369078'
-      - 'Warn: release artifact 3.3.2 does not have provenance: https://api.github.com/repos/Syllo/nvtop/releases/284194152'
-      - 'Warn: release artifact 3.3.1 does not have provenance: https://api.github.com/repos/Syllo/nvtop/releases/277712378'
-      - 'Warn: release artifact 3.3.0 does not have provenance: https://api.github.com/repos/Syllo/nvtop/releases/277399448'
-      - 'Warn: release artifact 3.2.0 does not have provenance: https://api.github.com/repos/Syllo/nvtop/releases/209145558'
-      - 'Warn: release artifact 3.1.0 does not have provenance: https://api.github.com/repos/Syllo/nvtop/releases/143369078'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
-      - 'Warn: 0 commits out of 29 are checked with a SAST tool'
+      - 'Warn: 0 commits out of 28 are checked with a SAST tool'
 ---
-{"id":438363505,"author":{"login":"Syllo","id":2741868,"node_id":"MDQ6VXNlcjI3NDE4Njg=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBaJscs4aIOVx","tag_name":"3.4.0","target_commitish":"master","name":"Release 3.4.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-08T16:20:10Z","updated_at":"2026-11-08T16:22:07Z","published_at":"2026-11-08T16:20:15Z","assets":[{"id":724484368,"node_id":"RA_kwDOBaJscs4rLsEQ","name":"nvtop-3.4.0-aarch64.AppImage","label":"","uploader":{"login":"Syllo","id":2741868,"node_id":"MDQ6VXNlcjI3NDE4Njg=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/vnd.appimage","state":"uploaded","size":1358344,"digest":"sha256:b24de1eb0f18c53461613a00c68561bec810de31604f56895cf02fa335a0f2df","download_count":8,"created_at":"2026-11-08T16:22:06Z","updated_at":"2026-11-08T16:22:07Z"},{"id":724484370,"node_id":"RA_kwDOBaJscs4rLsES","name":"nvtop-3.4.0-x86_64.AppImage","label":"","uploader":{"login":"Syllo","id":2741868,"node_id":"MDQ6VXNlcjI3NDE4Njg=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/vnd.appimage","state":"uploaded","size":1374712,"digest":"sha256:61a0c11d9b0f7e78193acc9991d00b0dcc5ae1facd58a984414ae0cfbcd5ae6d","download_count":33,"created_at":"2026-11-08T16:22:06Z","updated_at":"2026-11-08T16:22:07Z"}],"body":"# New in this release\n\n## Target support\n\n- Radeon GPUs - @gusteivos\n- Tenstorrent accelerators - @OctopusET\n- Iluvatar CoreX GPUs (ixML) - @lxzlxzliuxuzhao\n- Qualcomm NPUs - @Srinivas-Kandagatla\n  - HVX/HMX utilization plots\n- Ascend NPUs - @KaranocaVe, @yulink1981\n  - DCMI telemetry backend\n  - DDR memory support and 310P3 device enumeration\n- MSM: more GPU IDs, current clock and temperature reporting - @robclark, @fromdisposition\n\n## Improvements\n\n- NVIDIA:\n  - NVLink support - @danbedford\n  - ECC support for professional GPUs - @LH-and-FPGA\n  - Extra clock domains not reported by NVML (XBAR, SYS, NVD) - @Panchovix\n  - Real memory usage on unified-memory platforms - @sudoingX, @johnnynunez\n- Interface:\n  - PCIe RX/TX load in the utilization charts - @Basavaraja-MS\n  - Dynamic memory units with `-u`/`--dynamic-memory-units` - @unstable-code\n  - Configurable plot line colors - @graysky2\n  - Number keys to select a signal after F9 - @abpaudel\n- Snapshot:\n  - GPU architecture in JSON output - @Mahsuba\n\n# Fixes\n\n- NVIDIA:\n  - Correct MIG mode handling for process utilization - @Henry-ZHR\n  - UMA memory fallback and unified-memory accounting - @redyuan43, @sudoingX, @johnnynunez\n  - Do not report a fake PCIe link on unified-memory SoC GPUs - @Code4me2\n  - Show 0% instead of N/A when there are no new utilization samples - @wuzhonglijz\n  - Fix extra-clock flicker and use-after-free on re-monitored GPUs - @intel00000\n  - Fix startup segfault and NVIDIA detection under WSL2 - @zzccppp\n- AMDGPU:\n  - Count GTT in per-process memory on integrated GPUs - @rborkow\n  - Fall back to hwmon junction temperature on SMU13.0.6 - @jason34105533\n  - Fix divide-by-zero when the power limit is missing - @JoseOliveira-beep\n- Intel:\n  - Fix ~20 MB/hour heap growth from per-refresh udev devices - @bqv\n  - Read the xe GT frequency from sysfs instead of a perf event - @stolk\n  - Fixes for Intel Xe cards and memory frequency reporting - @Steve-Tech\n- fdinfo:\n  - Apply the graphical default per process, not per fd - @stolk\n  - Cap the engine busy percentage instead of dropping samples, avoiding a division by zero - @ViderStar\n- Interface and snapshot:\n  - Make `--no-processes` work with `--snapshot` and `--loop` - @yinghao-w\n  - Fix null cmdline in snapshot output - @gitfool\n  - Fix window cleanup leaks - @danbedford\n  - Respect the hide-processes option from the config file - @yinghao-w\n  - Increase the elapsed-time buffer on the timeline - @aadamowski\n  - Clamp GPU and memory clock percentages to 100 - @bqv\n  - Fix the shader core count field - @Panchovix\n  - Guard clock-rate plots against a zero maximum, drop stale processes of unmonitored GPUs\n- Other:\n  - MSM temperature and current clock reporting - @fromdisposition\n  - Various Ascend, Qualcomm and V3D fixes\n\n# Misc\n\n- Dockerfile fix for Docker builds on Windows 11 - @piro4you\n- Documentation for invalid TERM/ncurses errors - @raravind007\n- Snap: terminfo packages for more terminals - @simonjgreen\n- Snap: migrate to the core26 base - @Syllo\n- AppImage: rebuild on AlmaLinux 8 without bundling glibc, add aarch64, and automate release builds - @Syllo\n  - Requires glibc 2.28+ (Ubuntu 20.04+, Debian 10+, RHEL 8+)\n  - RHEL 7 is no longer supported (EOL)\n\nA huge thanks to all the contributors and testers :tada:\n\n**Full Changelog**: https://github.com/Syllo/nvtop/compare/3.3.2...3.4.0\n","reactions":{"total_count":4,"+1":4,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"mentions_count":38}
+{"id":438363505,"author":{"login":"Syllo","id":2741868,"node_id":"MDQ6VXNlcjI3NDE4Njg=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBaJscs4aIOVx","tag_name":"3.4.0","target_commitish":"master","name":"Release 3.4.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-08T16:20:10Z","updated_at":"2026-11-08T16:22:07Z","published_at":"2026-11-08T16:20:15Z","assets":[{"id":724484368,"node_id":"RA_kwDOBaJscs4rLsEQ","name":"nvtop-3.4.0-aarch64.AppImage","label":"","uploader":{"login":"Syllo","id":2741868,"node_id":"MDQ6VXNlcjI3NDE4Njg=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/vnd.appimage","state":"uploaded","size":1358344,"digest":"sha256:b24de1eb0f18c53461613a00c68561bec810de31604f56895cf02fa335a0f2df","download_count":14,"created_at":"2026-11-08T16:22:06Z","updated_at":"2026-11-08T16:22:07Z"},{"id":724484370,"node_id":"RA_kwDOBaJscs4rLsES","name":"nvtop-3.4.0-x86_64.AppImage","label":"","uploader":{"login":"Syllo","id":2741868,"node_id":"MDQ6VXNlcjI3NDE4Njg=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/vnd.appimage","state":"uploaded","size":1374712,"digest":"sha256:61a0c11d9b0f7e78193acc9991d00b0dcc5ae1facd58a984414ae0cfbcd5ae6d","download_count":86,"created_at":"2026-11-08T16:22:06Z","updated_at":"2026-11-08T16:22:07Z"}],"body":"# New in this release\n\n## Target support\n\n- Radeon GPUs - @gusteivos\n- Tenstorrent accelerators - @OctopusET\n- Iluvatar CoreX GPUs (ixML) - @lxzlxzliuxuzhao\n- Qualcomm NPUs - @Srinivas-Kandagatla\n  - HVX/HMX utilization plots\n- Ascend NPUs - @KaranocaVe, @yulink1981\n  - DCMI telemetry backend\n  - DDR memory support and 310P3 device enumeration\n- MSM: more GPU IDs, current clock and temperature reporting - @robclark, @fromdisposition\n\n## Improvements\n\n- NVIDIA:\n  - NVLink support - @danbedford\n  - ECC support for professional GPUs - @LH-and-FPGA\n  - Extra clock domains not reported by NVML (XBAR, SYS, NVD) - @Panchovix\n  - Real memory usage on unified-memory platforms - @sudoingX, @johnnynunez\n- Interface:\n  - PCIe RX/TX load in the utilization charts - @Basavaraja-MS\n  - Dynamic memory units with `-u`/`--dynamic-memory-units` - @unstable-code\n  - Configurable plot line colors - @graysky2\n  - Number keys to select a signal after F9 - @abpaudel\n- Snapshot:\n  - GPU architecture in JSON output - @Mahsuba\n\n# Fixes\n\n- NVIDIA:\n  - Correct MIG mode handling for process utilization - @Henry-ZHR\n  - UMA memory fallback and unified-memory accounting - @redyuan43, @sudoingX, @johnnynunez\n  - Do not report a fake PCIe link on unified-memory SoC GPUs - @Code4me2\n  - Show 0% instead of N/A when there are no new utilization samples - @wuzhonglijz\n  - Fix extra-clock flicker and use-after-free on re-monitored GPUs - @intel00000\n  - Fix startup segfault and NVIDIA detection under WSL2 - @zzccppp\n- AMDGPU:\n  - Count GTT in per-process memory on integrated GPUs - @rborkow\n  - Fall back to hwmon junction temperature on SMU13.0.6 - @jason34105533\n  - Fix divide-by-zero when the power limit is missing - @JoseOliveira-beep\n- Intel:\n  - Fix ~20 MB/hour heap growth from per-refresh udev devices - @bqv\n  - Read the xe GT frequency from sysfs instead of a perf event - @stolk\n  - Fixes for Intel Xe cards and memory frequency reporting - @Steve-Tech\n- fdinfo:\n  - Apply the graphical default per process, not per fd - @stolk\n  - Cap the engine busy percentage instead of dropping samples, avoiding a division by zero - @ViderStar\n- Interface and snapshot:\n  - Make `--no-processes` work with `--snapshot` and `--loop` - @yinghao-w\n  - Fix null cmdline in snapshot output - @gitfool\n  - Fix window cleanup leaks - @danbedford\n  - Respect the hide-processes option from the config file - @yinghao-w\n  - Increase the elapsed-time buffer on the timeline - @aadamowski\n  - Clamp GPU and memory clock percentages to 100 - @bqv\n  - Fix the shader core count field - @Panchovix\n  - Guard clock-rate plots against a zero maximum, drop stale processes of unmonitored GPUs\n- Other:\n  - MSM temperature and current clock reporting - @fromdisposition\n  - Various Ascend, Qualcomm and V3D fixes\n\n# Misc\n\n- Dockerfile fix for Docker builds on Windows 11 - @piro4you\n- Documentation for invalid TERM/ncurses errors - @raravind007\n- Snap: terminfo packages for more terminals - @simonjgreen\n- Snap: migrate to the core26 base - @Syllo\n- AppImage: rebuild on AlmaLinux 8 without bundling glibc, add aarch64, and automate release builds - @Syllo\n  - Requires glibc 2.28+ (Ubuntu 20.04+, Debian 10+, RHEL 8+)\n  - RHEL 7 is no longer supported (EOL)\n\nA huge thanks to all the contributors and testers :tada:\n\n**Full Changelog**: https://github.com/Syllo/nvtop/compare/3.3.2...3.4.0\n","reactions":{"total_count":7,"+1":7,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"mentions_count":38}

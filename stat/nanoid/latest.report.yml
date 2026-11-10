@@ -7,7 +7,7 @@ about:
   latestVersion: "6.0.2"
   latestRelease: "6.0.2"
   latestPrerelease: ""
-  collectedAt: 2026-11-09T06:45:38Z
+  collectedAt: 2026-11-10T07:35:16Z
 timeline:
   created: 2017-08-05
   lastCommit: 2026-11-05
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-10-05
   lastPrerelease: 
 popularity:
-  star: 27128
+  star: 27130
   watcher: 157
   fork: 895
   release: 37
@@ -29,7 +29,7 @@ language:
 totalBytes: 36020
 recent:
   last30d:
-    since: 2026-10-10
+    since: 2026-10-11
     release: 0
     mergedPR: 2
     openPR: 0
@@ -37,15 +37,15 @@ recent:
     openIssue: 0
     commit: 4
   last60d:
-    since: 2026-09-10
-    release: 3
+    since: 2026-09-11
+    release: 2
     mergedPR: 8
     openPR: 1
     closedIssue: 4
     openIssue: 0
     commit: 15
   last90d:
-    since: 2026-08-11
+    since: 2026-08-12
     release: 3
     mergedPR: 9
     openPR: 1
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 22
   last180d:
-    since: 2026-05-13
+    since: 2026-05-14
     release: 16
     mergedPR: 17
     openPR: 1
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 81
   last360d:
-    since: 2025-11-14
+    since: 2025-11-15
     release: 22
     mergedPR: 45
     openPR: 1
@@ -69,7 +69,7 @@ recent:
     openIssue: 0
     commit: 139
   last720d:
-    since: 2024-11-19
+    since: 2024-11-20
     release: 33
     mergedPR: 66
     openPR: 1
@@ -85,7 +85,7 @@ total:
   commit: 1293
 ---
 path: /home/runner/.x-repo/github.com/ai/nanoid
-collectedAt: 2026-11-09T06:45:40Z
+collectedAt: 2026-11-10T07:35:17Z
 loc:
   Yaml:
     code: 1084
@@ -128,31 +128,15 @@ total:
   blanks: 1461
   files: 34
 ---
-date: "2026-11-02"
+date: "2026-11-09"
 repo:
   name: github.com/ai/nanoid
-  commit: 35ea7d02c9f01d7f3d2293cc97829ff16d1e8117
+  commit: 055d1700cc67ac843e3efb5235d806b419ec7b2b
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 6.4
+score: 6.5
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Code-Review
-    score: 2
-    reason: Found 8/30 approved changesets -- score normalized to 2
-    details: null
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: SECURITY.md:1'
-      - 'Info: Found linked content: SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
-      - 'Info: Found text in security policy: SECURITY.md:1'
   - name: Maintained
     score: 10
     reason: 22 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10
@@ -166,12 +150,22 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Pinned-Dependencies
+  - name: Security-Policy
     score: 10
-    reason: all dependencies are pinned
+    reason: security policy file detected
     details:
-      - 'Info:   6 out of   6 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   5 out of   5 third-party GitHubAction dependencies pinned'
+      - 'Info: security policy file detected: SECURITY.md:1'
+      - 'Info: Found linked content: SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
+      - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Code-Review
+    score: 3
+    reason: Found 9/30 approved changesets -- score normalized to 3
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 9
     reason: detected GitHub workflow tokens with excessive permissions
@@ -181,21 +175,27 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/benchmark.yml:8'
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yml:9'
+  - name: Pinned-Dependencies
+    score: 10
+    reason: all dependencies are pinned
+    details:
+      - 'Info:   6 out of   6 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   5 out of   5 third-party GitHubAction dependencies pinned'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: -1
     reason: no releases found
@@ -209,6 +209,6 @@ checks:
     score: 1
     reason: SAST tool is not run on all commits -- score normalized to 1
     details:
-      - 'Warn: 1 commits out of 9 are checked with a SAST tool'
+      - 'Warn: 1 commits out of 10 are checked with a SAST tool'
 ---
 {"id":404099311,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBey-U84YFhDv","tag_name":"6.0.2","target_commitish":"main","name":"6.0.2","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-10-05T21:16:44Z","updated_at":"2026-10-05T21:22:03Z","published_at":"2026-10-05T21:22:03Z","assets":[],"body":"- Reduced JS bundle size (by @bayandin).\n- Fixed floats in size of `customRandom` (by @lost-signals).\n- Fixed performance of `customRandom` on changes size (by @00200200).\n- Fixed docs (by @Likio3000 & @lenamonj).","mentions_count":5}

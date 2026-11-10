@@ -2,26 +2,26 @@ about:
   description: "Programmable completion functions for bash"
   license: GPL-2.0
   homepage: 
-  head: 5ffa3d7
+  head: ad7182b
   archived: false
   latestVersion: "2.18.0"
   latestRelease: "2.18.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-08T07:04:47Z
+  collectedAt: 2026-11-10T08:34:14Z
 timeline:
   created: 2016-02-09
-  lastCommit: 2026-11-03
+  lastCommit: 2026-11-08
   lastVersion: 2026-07-05
   lastRelease: 2026-07-05
   lastPrerelease: 
 popularity:
   star: 3543
   watcher: 49
-  fork: 425
+  fork: 426
   release: 17
   contributor: 185
-  pullRequest: 1206
-  issue: 518
+  pullRequest: 1208
+  issue: 519
 language:
   Shell: 1061896
   Python: 484207
@@ -35,63 +35,63 @@ language:
 totalBytes: 1604870
 recent:
   last30d:
-    since: 2026-10-09
+    since: 2026-10-11
     release: 0
-    mergedPR: 6
-    openPR: 8
-    closedIssue: 0
-    openIssue: 0
-    commit: 5
-  last60d:
-    since: 2026-09-09
-    release: 0
-    mergedPR: 13
-    openPR: 13
+    mergedPR: 7
+    openPR: 9
     closedIssue: 0
     openIssue: 1
-    commit: 16
-  last90d:
-    since: 2026-08-10
+    commit: 6
+  last60d:
+    since: 2026-09-11
     release: 0
-    mergedPR: 20
-    openPR: 15
+    mergedPR: 14
+    openPR: 14
     closedIssue: 0
-    openIssue: 3
-    commit: 20
+    openIssue: 2
+    commit: 17
+  last90d:
+    since: 2026-08-12
+    release: 0
+    mergedPR: 18
+    openPR: 16
+    closedIssue: 0
+    openIssue: 4
+    commit: 21
   last180d:
-    since: 2026-05-12
+    since: 2026-05-14
     release: 1
-    mergedPR: 97
+    mergedPR: 98
     openPR: 19
     closedIssue: 5
-    openIssue: 7
-    commit: 153
+    openIssue: 8
+    commit: 154
   last360d:
-    since: 2025-11-13
+    since: 2025-11-15
     release: 1
-    mergedPR: 193
-    openPR: 23
-    closedIssue: 17
-    openIssue: 11
-    commit: 293
+    mergedPR: 189
+    openPR: 24
+    closedIssue: 16
+    openIssue: 12
+    commit: 294
   last720d:
-    since: 2024-11-18
+    since: 2024-11-20
     release: 4
     mergedPR: 357
-    openPR: 31
+    openPR: 32
     closedIssue: 40
-    openIssue: 23
-    commit: 744
+    openIssue: 24
+    commit: 739
 total:
   release: 17
-  mergedPR: 966
-  openPR: 77
+  mergedPR: 967
+  openPR: 78
   closedIssue: 360
-  openIssue: 158
-  commit: 7551
+  openIssue: 159
+  commit: 7552
 ---
 path: /home/runner/.x-repo/github.com/scop/bash-completion
-collectedAt: 2026-11-08T07:04:50Z
+collectedAt: 2026-11-10T08:34:17Z
 loc:
   Bash:
     code: 25898
@@ -209,10 +209,10 @@ total:
   blanks: 7078
   files: 1413
 ---
-date: "2026-11-07T04:45:53Z"
+date: "2026-11-08T20:28:58Z"
 repo:
   name: github.com/scop/bash-completion
-  commit: 5ffa3d71c7f1f77f44dd9b37abf71570a61583ed
+  commit: ad7182bc93eb132e79826c553854c9f5e0c813a6
 scorecard:
   version: v5.5.0
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
@@ -239,84 +239,34 @@ checks:
       - 'Info: found token with ''none'' permissions: .github/workflows/release-please.yaml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/scorecard.yaml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/update-docker-images.yml:1'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Code-Review
     score: 5
-    reason: Found 10/19 approved changesets -- score normalized to 5
+    reason: Found 10/20 approved changesets -- score normalized to 5
     details: null
   - name: Binary-Artifacts
     score: 9
     reason: binaries present in source code
     details:
       - 'Warn: binary detected: test/fixtures/java/bashcomp.jar:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: SAST
+    score: 6
+    reason: SAST tool is not run on all commits -- score normalized to 6
+    details:
+      - 'Warn: 20 commits out of 30 are checked with a SAST tool'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: COPYING:0'
       - 'Info: FSF or OSI recognized license: GNU General Public License v2.0: COPYING:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Pinned-Dependencies
-    score: 4
-    reason: dependency not pinned by hash detected -- score normalized to 4
-    details:
-      - 'Warn: containerImage not pinned by hash: test/docker/almalinux9/Dockerfile:1: pin your Docker image by updating almalinux:9 to almalinux:9@sha256:245f8aab832fe800aa42bdab5fad75ebbd8e0b4c9f24820a83c638b177857ae2'
-      - 'Warn: containerImage not pinned by hash: test/docker/alpine/Dockerfile:1: pin your Docker image by updating alpine to alpine@sha256:3f4d6b32e26703c6082839234f43769d5046b3ac7c910033911d1e71d8cd630a'
-      - 'Warn: containerImage not pinned by hash: test/docker/centos7/Dockerfile:1: pin your Docker image by updating centos:7 to centos:7@sha256:be65f488b7764ad3638f236b7b515b3678369a5124c47b8d32916d6487418ea4'
-      - 'Warn: containerImage not pinned by hash: test/docker/debian10/Dockerfile:1: pin your Docker image by updating debian:10 to debian:10@sha256:58ce6f1271ae1c8a2006ff7d3e54e9874d839f573d8009c20154ad0f2fb0a225'
-      - 'Warn: containerImage not pinned by hash: test/docker/fedoradev/Dockerfile:1: pin your Docker image by updating registry.fedoraproject.org/fedora:rawhide to registry.fedoraproject.org/fedora:rawhide@sha256:02031526999d46c9f9c6490eeccf4cafd735438b9d0fb5e1d9fc941d7886e2ff'
-      - 'Warn: containerImage not pinned by hash: test/docker/ubuntu14/Dockerfile:1: pin your Docker image by updating ubuntu:14.04 to ubuntu:14.04@sha256:64483f3496c1373bfd55348e88694d1c4d0c9b660dee6bfef5e12f43b9933b30'
-      - 'Warn: pipCommand not pinned by hash: test/docker/centos7/Dockerfile:28-29'
-      - 'Warn: npmCommand not pinned by hash: test/docker/debian10/install-packages.sh:22'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/ci.yaml:33'
-      - 'Info:  12 out of  12 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   5 out of   5 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   1 npmCommand dependencies pinned'
-      - 'Info:   0 out of   6 containerImage dependencies pinned'
-      - 'Info:   0 out of   2 pipCommand dependencies pinned'
-  - name: SAST
-    score: 7
-    reason: SAST tool is not run on all commits -- score normalized to 7
-    details:
-      - 'Warn: 21 commits out of 30 are checked with a SAST tool'
-  - name: Vulnerabilities
-    score: 10
-    reason: 0 existing vulnerabilities detected
-    details: null
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/update-docker-images.yml:21'
-  - name: Branch-Protection
-    score: 3
-    reason: branch protection is not maximal on development and all release branches
-    details:
-      - 'Info: ''allow deletion'' disabled on branch ''main'''
-      - 'Info: ''force pushes'' disabled on branch ''main'''
-      - 'Info: ''branch protection settings apply to administrators'' is required to merge on branch ''main'''
-      - 'Warn: could not determine whether codeowners review is allowed'
-      - 'Warn: no status checks found to merge onto branch ''main'''
-      - 'Warn: PRs are not required to make changes on branch ''main''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -331,9 +281,59 @@ checks:
       - 'Warn: release artifact 2.16.0 does not have provenance: https://api.github.com/repos/scop/bash-completion/releases/192296285'
       - 'Warn: release artifact 2.15.0 does not have provenance: https://api.github.com/repos/scop/bash-completion/releases/187181220'
       - 'Warn: release artifact 2.14.0 does not have provenance: https://api.github.com/repos/scop/bash-completion/releases/154902226'
+  - name: Pinned-Dependencies
+    score: 4
+    reason: dependency not pinned by hash detected -- score normalized to 4
+    details:
+      - 'Warn: containerImage not pinned by hash: test/docker/almalinux9/Dockerfile:1: pin your Docker image by updating almalinux:9 to almalinux:9@sha256:245f8aab832fe800aa42bdab5fad75ebbd8e0b4c9f24820a83c638b177857ae2'
+      - 'Warn: containerImage not pinned by hash: test/docker/alpine/Dockerfile:1: pin your Docker image by updating alpine to alpine@sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf'
+      - 'Warn: containerImage not pinned by hash: test/docker/centos7/Dockerfile:1: pin your Docker image by updating centos:7 to centos:7@sha256:be65f488b7764ad3638f236b7b515b3678369a5124c47b8d32916d6487418ea4'
+      - 'Warn: containerImage not pinned by hash: test/docker/debian10/Dockerfile:1: pin your Docker image by updating debian:10 to debian:10@sha256:58ce6f1271ae1c8a2006ff7d3e54e9874d839f573d8009c20154ad0f2fb0a225'
+      - 'Warn: containerImage not pinned by hash: test/docker/fedoradev/Dockerfile:1: pin your Docker image by updating registry.fedoraproject.org/fedora:rawhide to registry.fedoraproject.org/fedora:rawhide@sha256:02031526999d46c9f9c6490eeccf4cafd735438b9d0fb5e1d9fc941d7886e2ff'
+      - 'Warn: containerImage not pinned by hash: test/docker/ubuntu14/Dockerfile:1: pin your Docker image by updating ubuntu:14.04 to ubuntu:14.04@sha256:64483f3496c1373bfd55348e88694d1c4d0c9b660dee6bfef5e12f43b9933b30'
+      - 'Warn: pipCommand not pinned by hash: test/docker/centos7/Dockerfile:28-29'
+      - 'Warn: npmCommand not pinned by hash: test/docker/debian10/install-packages.sh:22'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/ci.yaml:37'
+      - 'Info:  12 out of  12 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   5 out of   5 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   6 containerImage dependencies pinned'
+      - 'Info:   0 out of   2 pipCommand dependencies pinned'
+      - 'Info:   0 out of   1 npmCommand dependencies pinned'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Branch-Protection
+    score: 3
+    reason: branch protection is not maximal on development and all release branches
+    details:
+      - 'Info: ''allow deletion'' disabled on branch ''main'''
+      - 'Info: ''force pushes'' disabled on branch ''main'''
+      - 'Info: ''branch protection settings apply to administrators'' is required to merge on branch ''main'''
+      - 'Warn: could not determine whether codeowners review is allowed'
+      - 'Warn: no status checks found to merge onto branch ''main'''
+      - 'Warn: PRs are not required to make changes on branch ''main''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
+  - name: Vulnerabilities
+    score: 10
+    reason: 0 existing vulnerabilities detected
+    details: null
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/update-docker-images.yml:21'
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: CI-Tests
     score: 9
-    reason: 23 out of 24 merged PRs checked by a CI test -- score normalized to 9
+    reason: 23 out of 25 merged PRs checked by a CI test -- score normalized to 9
     details: null
   - name: Contributors
     score: 10

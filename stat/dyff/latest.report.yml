@@ -2,15 +2,15 @@ about:
   description: "/ˈdʏf/ - diff tool for YAML files, and sometimes JSON"
   license: MIT
   homepage: 
-  head: 40af364
+  head: 5f946d6
   archived: false
   latestVersion: "v1.12.0"
   latestRelease: "v1.12.0"
   latestPrerelease: "v0.4-alpha"
-  collectedAt: 2026-11-09T07:12:49Z
+  collectedAt: 2026-11-10T08:08:07Z
 timeline:
   created: 2018-03-09
-  lastCommit: 2026-11-06
+  lastCommit: 2026-11-09
   lastVersion: 2026-04-26
   lastRelease: 2026-04-26
   lastPrerelease: 2018-04-20
@@ -20,7 +20,7 @@ popularity:
   fork: 103
   release: 86
   contributor: 31
-  pullRequest: 597
+  pullRequest: 598
   issue: 132
 language:
   Go: 215332
@@ -29,63 +29,63 @@ language:
 totalBytes: 220254
 recent:
   last30d:
-    since: 2026-10-10
+    since: 2026-10-11
     release: 0
-    mergedPR: 12
+    mergedPR: 13
     openPR: 2
     closedIssue: 0
     openIssue: 0
-    commit: 7
+    commit: 8
   last60d:
-    since: 2026-09-10
+    since: 2026-09-11
     release: 0
-    mergedPR: 23
+    mergedPR: 21
     openPR: 3
     closedIssue: 0
     openIssue: 0
-    commit: 18
+    commit: 19
   last90d:
-    since: 2026-08-11
+    since: 2026-08-12
     release: 0
-    mergedPR: 33
+    mergedPR: 34
     openPR: 4
     closedIssue: 0
     openIssue: 0
-    commit: 30
+    commit: 31
   last180d:
-    since: 2026-05-13
+    since: 2026-05-14
     release: 0
-    mergedPR: 66
+    mergedPR: 67
     openPR: 7
     closedIssue: 1
     openIssue: 3
-    commit: 66
+    commit: 67
   last360d:
-    since: 2025-11-14
+    since: 2025-11-15
     release: 9
-    mergedPR: 133
+    mergedPR: 134
     openPR: 9
     closedIssue: 4
     openIssue: 3
-    commit: 134
+    commit: 135
   last720d:
-    since: 2024-11-19
+    since: 2024-11-20
     release: 13
-    mergedPR: 226
+    mergedPR: 227
     openPR: 16
     closedIssue: 9
     openIssue: 14
-    commit: 454
+    commit: 456
 total:
   release: 86
-  mergedPR: 462
+  mergedPR: 463
   openPR: 18
   closedIssue: 77
   openIssue: 55
-  commit: 1113
+  commit: 1115
 ---
 path: /home/runner/.x-repo/github.com/homeport/dyff
-collectedAt: 2026-11-09T07:12:50Z
+collectedAt: 2026-11-10T08:08:08Z
 loc:
   Yaml:
     code: 5803
@@ -133,18 +133,18 @@ total:
   blanks: 1396
   files: 109
 ---
-date: "2026-11-02"
+date: "2026-11-09"
 repo:
   name: github.com/homeport/dyff
-  commit: e617f7906aa3bbdb431b8b68ca1198faae87967e
+  commit: 40af364bfc70d91767805fb7e1aa4dcd44e6ff9f
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 5.4
+score: 5.3
 checks:
   - name: Code-Review
     score: -1
-    reason: Found no human activity in the last 16 changesets
+    reason: Found no human activity in the last 15 changesets
     details: null
   - name: Maintained
     score: 10
@@ -153,10 +153,6 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -168,6 +164,10 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/tests.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Pinned-Dependencies
     score: 1
     reason: dependency not pinned by hash detected -- score normalized to 1
@@ -192,6 +192,11 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -200,17 +205,16 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Packaging
     score: 10
     reason: packaging workflow detected
@@ -230,14 +234,10 @@ checks:
       - 'Warn: release artifact v1.11.3 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/297954045'
       - 'Warn: release artifact v1.11.2 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/291814002'
       - 'Warn: release artifact v1.11.1 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/291772752'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
-    score: 10
-    reason: SAST tool is run on all commits
+    score: 8
+    reason: SAST tool is not run on all commits -- score normalized to 8
     details:
-      - 'Info: all commits (30) are checked with a SAST tool'
+      - 'Warn: 24 commits out of 30 are checked with a SAST tool'
 ---
-{"id":313813966,"author":{"login":"harbourmaster","id":79510596,"node_id":"MDQ6VXNlcjc5NTEwNTk2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOB20f3M4StGvO","tag_name":"v1.12.0","target_commitish":"main","name":"dyff release v1.12.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-04-26T20:39:02Z","updated_at":"2026-04-26T20:43:08Z","published_at":"2026-04-26T20:41:34Z","assets":[{"id":406097928,"node_id":"RA_kwDOB20f3M4YNJAI","name":"checksums.txt","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":588,"digest":"sha256:6ca6b707a86bfc729f7e420ef5222bfc8b51cb8c7c99b3364cebcd3b01df339e","download_count":35066,"created_at":"2026-04-26T20:43:08Z","updated_at":"2026-04-26T20:43:08Z"},{"id":406097926,"node_id":"RA_kwDOB20f3M4YNJAG","name":"dyff_1.12.0_darwin_amd64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":4170364,"digest":"sha256:f791c83f055cc651c8a2f70894b51461594bc6f41f2876168cc72d4bb81abc91","download_count":450,"created_at":"2026-04-26T20:43:08Z","updated_at":"2026-04-26T20:43:08Z"},{"id":406097911,"node_id":"RA_kwDOB20f3M4YNI_3","name":"dyff_1.12.0_darwin_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":3854083,"digest":"sha256:3c1bbefb44ec92675c9fc1349a102a41d2568f294fd1fd4e468dc0804944040f","download_count":6028,"created_at":"2026-04-26T20:43:07Z","updated_at":"2026-04-26T20:43:07Z"},{"id":406097913,"node_id":"RA_kwDOB20f3M4YNI_5","name":"dyff_1.12.0_linux_amd64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":4098051,"digest":"sha256:50b43017a7474c2216694d0b5387439488a1d3c2b5eefe1674cd0e5c18bc0316","download_count":615383,"created_at":"2026-04-26T20:43:07Z","updated_at":"2026-04-26T20:43:07Z"},{"id":406097912,"node_id":"RA_kwDOB20f3M4YNI_4","name":"dyff_1.12.0_linux_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":3708437,"digest":"sha256:c9710f57940306abc1e34e2bf1a1ba94e6a92c543cde4e5dfaea169ded06e832","download_count":28296,"created_at":"2026-04-26T20:43:07Z","updated_at":"2026-04-26T20:43:07Z"},{"id":406097914,"node_id":"RA_kwDOB20f3M4YNI_6","name":"dyff_1.12.0_windows_amd64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":4234804,"digest":"sha256:63d237debecd0188287df4de01ded6dbede28ee15a616d5eeaf061c0cdd9a394","download_count":966,"created_at":"2026-04-26T20:43:07Z","updated_at":"2026-04-26T20:43:07Z"},{"id":406097924,"node_id":"RA_kwDOB20f3M4YNJAE","name":"dyff_1.12.0_windows_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":3783308,"digest":"sha256:9b5acc2a9d7fefd5e8160e2ab667676eb1a4649dbc2907bccd3656f77bdfbe1d","download_count":81,"created_at":"2026-04-26T20:43:08Z","updated_at":"2026-04-26T20:43:08Z"}],"body":"## What's Changed\n* Omit YAML document start marker for single-document output by @HeavyWombat in https://github.com/homeport/dyff/pull/639\n\n\n**Full Changelog**: https://github.com/homeport/dyff/compare/v1.11.4...v1.12.0","mentions_count":1}
+{"id":313813966,"author":{"login":"harbourmaster","id":79510596,"node_id":"MDQ6VXNlcjc5NTEwNTk2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOB20f3M4StGvO","tag_name":"v1.12.0","target_commitish":"main","name":"dyff release v1.12.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-04-26T20:39:02Z","updated_at":"2026-04-26T20:43:08Z","published_at":"2026-04-26T20:41:34Z","assets":[{"id":406097928,"node_id":"RA_kwDOB20f3M4YNJAI","name":"checksums.txt","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":588,"digest":"sha256:6ca6b707a86bfc729f7e420ef5222bfc8b51cb8c7c99b3364cebcd3b01df339e","download_count":35575,"created_at":"2026-04-26T20:43:08Z","updated_at":"2026-04-26T20:43:08Z"},{"id":406097926,"node_id":"RA_kwDOB20f3M4YNJAG","name":"dyff_1.12.0_darwin_amd64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":4170364,"digest":"sha256:f791c83f055cc651c8a2f70894b51461594bc6f41f2876168cc72d4bb81abc91","download_count":453,"created_at":"2026-04-26T20:43:08Z","updated_at":"2026-04-26T20:43:08Z"},{"id":406097911,"node_id":"RA_kwDOB20f3M4YNI_3","name":"dyff_1.12.0_darwin_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":3854083,"digest":"sha256:3c1bbefb44ec92675c9fc1349a102a41d2568f294fd1fd4e468dc0804944040f","download_count":6088,"created_at":"2026-04-26T20:43:07Z","updated_at":"2026-04-26T20:43:07Z"},{"id":406097913,"node_id":"RA_kwDOB20f3M4YNI_5","name":"dyff_1.12.0_linux_amd64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":4098051,"digest":"sha256:50b43017a7474c2216694d0b5387439488a1d3c2b5eefe1674cd0e5c18bc0316","download_count":623608,"created_at":"2026-04-26T20:43:07Z","updated_at":"2026-04-26T20:43:07Z"},{"id":406097912,"node_id":"RA_kwDOB20f3M4YNI_4","name":"dyff_1.12.0_linux_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":3708437,"digest":"sha256:c9710f57940306abc1e34e2bf1a1ba94e6a92c543cde4e5dfaea169ded06e832","download_count":28774,"created_at":"2026-04-26T20:43:07Z","updated_at":"2026-04-26T20:43:07Z"},{"id":406097914,"node_id":"RA_kwDOB20f3M4YNI_6","name":"dyff_1.12.0_windows_amd64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":4234804,"digest":"sha256:63d237debecd0188287df4de01ded6dbede28ee15a616d5eeaf061c0cdd9a394","download_count":974,"created_at":"2026-04-26T20:43:07Z","updated_at":"2026-04-26T20:43:07Z"},{"id":406097924,"node_id":"RA_kwDOB20f3M4YNJAE","name":"dyff_1.12.0_windows_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":3783308,"digest":"sha256:9b5acc2a9d7fefd5e8160e2ab667676eb1a4649dbc2907bccd3656f77bdfbe1d","download_count":83,"created_at":"2026-04-26T20:43:08Z","updated_at":"2026-04-26T20:43:08Z"}],"body":"## What's Changed\n* Omit YAML document start marker for single-document output by @HeavyWombat in https://github.com/homeport/dyff/pull/639\n\n\n**Full Changelog**: https://github.com/homeport/dyff/compare/v1.11.4...v1.12.0","mentions_count":1}
