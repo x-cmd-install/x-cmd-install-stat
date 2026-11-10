@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.3.0"
   latestRelease: "v2.3.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-08T06:34:59Z
+  collectedAt: 2026-11-09T07:20:30Z
 timeline:
   created: 2018-11-08
   lastCommit: 2026-09-26
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-09-09
   lastPrerelease: 
 popularity:
-  star: 17010
+  star: 17012
   watcher: 162
-  fork: 1626
+  fork: 1627
   release: 28
   contributor: 53
   pullRequest: 384
@@ -27,7 +27,7 @@ language:
 totalBytes: 441590
 recent:
   last30d:
-    since: 2026-10-09
+    since: 2026-10-10
     release: 0
     mergedPR: 0
     openPR: 10
@@ -35,15 +35,15 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-09
-    release: 1
+    since: 2026-09-10
+    release: 0
     mergedPR: 5
     openPR: 17
     closedIssue: 1
     openIssue: 2
-    commit: 9
+    commit: 5
   last90d:
-    since: 2026-08-10
+    since: 2026-08-11
     release: 1
     mergedPR: 10
     openPR: 18
@@ -51,7 +51,7 @@ recent:
     openIssue: 2
     commit: 10
   last180d:
-    since: 2026-05-12
+    since: 2026-05-13
     release: 3
     mergedPR: 31
     openPR: 21
@@ -59,7 +59,7 @@ recent:
     openIssue: 5
     commit: 32
   last360d:
-    since: 2025-11-13
+    since: 2025-11-14
     release: 3
     mergedPR: 31
     openPR: 33
@@ -67,7 +67,7 @@ recent:
     openIssue: 13
     commit: 32
   last720d:
-    since: 2024-11-18
+    since: 2024-11-19
     release: 3
     mergedPR: 32
     openPR: 51
@@ -83,7 +83,7 @@ total:
   commit: 285
 ---
 path: /home/runner/.x-repo/github.com/ffuf/ffuf
-collectedAt: 2026-11-08T06:35:00Z
+collectedAt: 2026-11-09T07:20:31Z
 loc:
   Go:
     code: 11204
@@ -101,22 +101,26 @@ total:
   blanks: 1590
   files: 107
 ---
-date: "2026-11-02"
+date: "2026-11-09"
 repo:
   name: github.com/ffuf/ffuf
   commit: 8d65e0373e5f223530174e5694285af849770078
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 5.7
+score: 5.6
 checks:
+  - name: Maintained
+    score: 9
+    reason: 10 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 9
+    details: null
   - name: Code-Review
     score: 1
     reason: Found 4/30 approved changesets -- score normalized to 1
     details: null
-  - name: Maintained
+  - name: Dangerous-Workflow
     score: 10
-    reason: 10 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Security-Policy
     score: 10
@@ -126,14 +130,19 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/codeql-analysis.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/golangci-lint.yml:1'
+      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:9'
+      - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -159,30 +168,21 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:64: update your workflow using https://app.stepsecurity.io/secureworkflow/ffuf/ffuf/test.yml/master?enable=pin'
       - 'Info:   0 out of  16 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 third-party GitHubAction dependencies pinned'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/codeql-analysis.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/golangci-lint.yml:1'
-      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:9'
-      - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Packaging
     score: 10
     reason: packaging workflow detected

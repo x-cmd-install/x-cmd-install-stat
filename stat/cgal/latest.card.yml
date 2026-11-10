@@ -7,7 +7,7 @@ about:
   latestVersion: "v6.1.3"
   latestRelease: "v6.1.3"
   latestPrerelease: "v6.2-beta1"
-  collectedAt: 2026-11-08T04:02:56Z
+  collectedAt: 2026-11-09T04:18:16Z
 timeline:
   created: 2014-10-01
   lastCommit: 2026-11-05
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2026-09-04
   lastPrerelease: 2026-05-21
 popularity:
-  star: 6118
+  star: 6120
   watcher: 169
-  fork: 1622
+  fork: 1621
   release: 99
   contributor: 219
-  pullRequest: 5968
+  pullRequest: 5970
   issue: 3476
 language:
   C++: 68567929
@@ -51,63 +51,63 @@ language:
 totalBytes: 79289796
 recent:
   last30d:
-    since: 2026-10-09
+    since: 2026-10-10
     release: 0
     mergedPR: 37
-    openPR: 58
+    openPR: 60
     closedIssue: 5
     openIssue: 9
     commit: 132
   last60d:
-    since: 2026-09-09
+    since: 2026-09-10
     release: 0
-    mergedPR: 75
-    openPR: 71
-    closedIssue: 15
-    openIssue: 16
+    mergedPR: 70
+    openPR: 73
+    closedIssue: 13
+    openIssue: 15
     commit: 490
   last90d:
-    since: 2026-08-10
+    since: 2026-08-11
     release: 2
-    mergedPR: 99
-    openPR: 76
+    mergedPR: 98
+    openPR: 78
     closedIssue: 25
     openIssue: 20
     commit: 817
   last180d:
-    since: 2026-05-12
+    since: 2026-05-13
     release: 5
-    mergedPR: 181
-    openPR: 84
+    mergedPR: 180
+    openPR: 86
     closedIssue: 40
     openIssue: 25
     commit: 1373
   last360d:
-    since: 2025-11-13
+    since: 2025-11-14
     release: 7
     mergedPR: 352
-    openPR: 121
+    openPR: 123
     closedIssue: 86
     openIssue: 48
     commit: 3034
   last720d:
-    since: 2024-11-18
+    since: 2024-11-19
     release: 12
-    mergedPR: 624
-    openPR: 147
+    mergedPR: 623
+    openPR: 149
     closedIssue: 202
     openIssue: 93
-    commit: 6349
+    commit: 6348
 total:
   release: 99
   mergedPR: 5312
-  openPR: 212
+  openPR: 214
   closedIssue: 2984
   openIssue: 492
   commit: 118163
 ---
 path: /home/runner/.x-repo/github.com/CGAL/cgal
-collectedAt: 2026-11-08T04:05:10Z
+collectedAt: 2026-11-09T04:19:14Z
 loc:
   CHeader:
     code: 1013072
@@ -270,18 +270,18 @@ total:
   blanks: 369998
   files: 11714
 ---
-date: "2026-11-02"
+date: "2026-11-09"
 repo:
   name: github.com/CGAL/cgal
-  commit: ae6d8844b02954aad8bd1219c6322bfd2ba2ecf1
+  commit: 44ab808c25399fc6dbd89a6e114f3fd6b5ae8142
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 4.5
+score: 4.7
 checks:
   - name: Code-Review
-    score: 3
-    reason: Found 8/21 approved changesets -- score normalized to 3
+    score: 5
+    reason: Found 10/18 approved changesets -- score normalized to 5
     details: null
   - name: Maintained
     score: 10
@@ -301,9 +301,9 @@ checks:
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/build_doc.yml:84'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:40'
       - 'Info: jobLevel ''packages'' permission set to ''read'': .github/workflows/codeql.yml:36'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql.yml:39'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:40'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/delete_doc.yml:18'
       - 'Warn: no topLevel permission defined: .github/workflows/Remove_labels.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/build_doc.yml:38'
@@ -334,10 +334,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE.md:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Branch-Protection
     score: 3
     reason: branch protection is not maximal on development and all release branches
@@ -348,6 +344,10 @@ checks:
       - 'Warn: could not determine whether codeowners review is allowed'
       - 'Warn: no status checks found to merge onto branch ''main'''
       - 'Warn: PRs are not required to make changes on branch ''main''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -374,11 +374,11 @@ checks:
       - 'Info: Possibly incomplete results: error parsing shell code: `then` must be followed by a statement list: Scripts/developer_scripts/update_git_svn_clone:0'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/Remove_labels.yml:13: update your workflow using https://app.stepsecurity.io/secureworkflow/CGAL/cgal/Remove_labels.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/Remove_labels.yml:24: update your workflow using https://app.stepsecurity.io/secureworkflow/CGAL/cgal/Remove_labels.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build_doc.yml:61: update your workflow using https://app.stepsecurity.io/secureworkflow/CGAL/cgal/build_doc.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build_doc.yml:95: update your workflow using https://app.stepsecurity.io/secureworkflow/CGAL/cgal/build_doc.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build_doc.yml:105: update your workflow using https://app.stepsecurity.io/secureworkflow/CGAL/cgal/build_doc.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build_doc.yml:222: update your workflow using https://app.stepsecurity.io/secureworkflow/CGAL/cgal/build_doc.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build_doc.yml:238: update your workflow using https://app.stepsecurity.io/secureworkflow/CGAL/cgal/build_doc.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/build_doc.yml:61: update your workflow using https://app.stepsecurity.io/secureworkflow/CGAL/cgal/build_doc.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/checks.yml:13: update your workflow using https://app.stepsecurity.io/secureworkflow/CGAL/cgal/checks.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cmake-all.yml:13: update your workflow using https://app.stepsecurity.io/secureworkflow/CGAL/cgal/cmake-all.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/cmake-all.yml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/CGAL/cgal/cmake-all.yml/main?enable=pin'
@@ -399,9 +399,9 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/reuse.yml:34: update your workflow using https://app.stepsecurity.io/secureworkflow/CGAL/cgal/reuse.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/update-conflicts-label.yml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/CGAL/cgal/update-conflicts-label.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/wiki_notification.yml:12: update your workflow using https://app.stepsecurity.io/secureworkflow/CGAL/cgal/wiki_notification.yml/main?enable=pin'
-      - 'Warn: containerImage not pinned by hash: .devcontainer/doxygen-cgal/Dockerfile:2: pin your Docker image by updating fedora:latest to fedora:latest@sha256:43b29f65a41eb9c35e1cd5323e3bdf3b655c2357a9f4f1ff2f9c2798e5045d80'
+      - 'Warn: containerImage not pinned by hash: .devcontainer/doxygen-cgal/Dockerfile:2: pin your Docker image by updating fedora:latest to fedora:latest@sha256:a7d72ba2745b100a3351087472e5ee7b2450af7cf331e7673007e3817612839c'
       - 'Warn: containerImage not pinned by hash: .devcontainer/doxygen-cgal/Dockerfile:24'
-      - 'Warn: containerImage not pinned by hash: .devcontainer/doxygen-cgal/Dockerfile:45: pin your Docker image by updating fedora:latest to fedora:latest@sha256:43b29f65a41eb9c35e1cd5323e3bdf3b655c2357a9f4f1ff2f9c2798e5045d80'
+      - 'Warn: containerImage not pinned by hash: .devcontainer/doxygen-cgal/Dockerfile:45: pin your Docker image by updating fedora:latest to fedora:latest@sha256:a7d72ba2745b100a3351087472e5ee7b2450af7cf331e7673007e3817612839c'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/checks.yml:19'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/checks.yml:20'
       - 'Info:   0 out of  23 GitHub-owned GitHubAction dependencies pinned'
@@ -409,9 +409,9 @@ checks:
       - 'Info:   0 out of   3 containerImage dependencies pinned'
       - 'Info:   0 out of   2 pipCommand dependencies pinned'
   - name: SAST
-    score: 8
+    score: 9
     reason: SAST tool detected but not run on all commits
     details:
       - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 11 commits out of 21 are checked with a SAST tool'
+      - 'Warn: 23 commits out of 26 are checked with a SAST tool'
 ---

@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.9.23"
   latestRelease: "v0.9.23"
   latestPrerelease: ""
-  collectedAt: 2026-11-08T06:39:50Z
+  collectedAt: 2026-11-09T06:50:45Z
 timeline:
   created: 2017-11-10
   lastCommit: 2026-06-26
@@ -34,7 +34,7 @@ language:
 totalBytes: 19837223
 recent:
   last30d:
-    since: 2026-10-09
+    since: 2026-10-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -42,7 +42,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-09
+    since: 2026-09-10
     release: 0
     mergedPR: 0
     openPR: 0
@@ -50,7 +50,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-10
+    since: 2026-08-11
     release: 0
     mergedPR: 0
     openPR: 0
@@ -58,7 +58,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-12
+    since: 2026-05-13
     release: 0
     mergedPR: 0
     openPR: 0
@@ -66,7 +66,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-13
+    since: 2025-11-14
     release: 0
     mergedPR: 0
     openPR: 0
@@ -74,7 +74,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-18
+    since: 2024-11-19
     release: 0
     mergedPR: 0
     openPR: 0
@@ -90,7 +90,7 @@ total:
   commit: 20985
 ---
 path: /home/runner/.x-repo/github.com/facebook/pyre-check
-collectedAt: 2026-11-08T06:41:09Z
+collectedAt: 2026-11-09T06:51:54Z
 loc:
   OCaml:
     code: 322650
@@ -188,7 +188,7 @@ total:
   blanks: 66361
   files: 1608
 ---
-date: "2026-11-02"
+date: "2026-11-09"
 repo:
   name: github.com/facebook/pyre-check
   commit: d5614e0a75f539443225fce3c3c55a77cfbfb72c
@@ -197,24 +197,14 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.9
 checks:
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Maintained
-    score: 0
-    reason: project is archived
-    details:
-      - 'Warn: Repository is archived.'
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -223,15 +213,25 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/pysa.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/tests.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 0
+    reason: project is archived
+    details:
+      - 'Warn: Repository is archived.'
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
   - name: SAST
     score: 0
     reason: no SAST tool detected
     details:
       - 'Warn: no pull requests merged into dev branch'
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -248,13 +248,8 @@ checks:
       - 'Warn: pipCommand not pinned by hash: .github/workflows/tests.yml:29'
       - 'Info:   5 out of   5 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   1 out of   1 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   6 pipCommand dependencies pinned'
       - 'Info:   1 out of   1 containerImage dependencies pinned'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
+      - 'Info:   0 out of   6 pipCommand dependencies pinned'
   - name: License
     score: 10
     reason: license file detected
@@ -265,6 +260,11 @@ checks:
     score: -1
     reason: no releases found
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 9
     reason: security policy file detected
