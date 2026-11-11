@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.0.0-alpha.3"
   latestRelease: "v1.0.1"
   latestPrerelease: "v2.0.0-alpha.3"
-  collectedAt: 2026-11-10T07:05:42Z
+  collectedAt: 2026-11-11T05:56:35Z
 timeline:
   created: 2015-08-16
   lastCommit: 2017-12-13
@@ -32,7 +32,7 @@ language:
 totalBytes: 66569
 recent:
   last30d:
-    since: 2026-10-11
+    since: 2026-10-12
     release: 0
     mergedPR: 0
     openPR: 0
@@ -40,7 +40,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-11
+    since: 2026-09-12
     release: 0
     mergedPR: 0
     openPR: 1
@@ -48,7 +48,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-12
+    since: 2026-08-13
     release: 0
     mergedPR: 0
     openPR: 1
@@ -56,7 +56,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-14
+    since: 2026-05-15
     release: 0
     mergedPR: 0
     openPR: 1
@@ -64,7 +64,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-15
+    since: 2025-11-16
     release: 0
     mergedPR: 0
     openPR: 1
@@ -72,7 +72,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-20
+    since: 2024-11-21
     release: 0
     mergedPR: 0
     openPR: 2
@@ -88,7 +88,7 @@ total:
   commit: 230
 ---
 path: /home/runner/.x-repo/github.com/yudai/gotty
-collectedAt: 2026-11-10T07:05:43Z
+collectedAt: 2026-11-11T05:56:37Z
 loc:
   Go:
     code: 8822
@@ -156,7 +156,7 @@ total:
   blanks: 2430
   files: 140
 ---
-date: "2026-10-19"
+date: "2026-11-09"
 repo:
   name: github.com/yudai/gotty
   commit: a080c85cbc59226c94c6941ad8c395232d72d517
@@ -165,13 +165,17 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 1.7
 checks:
-  - name: Dangerous-Workflow
-    score: -1
-    reason: no workflows found
-    details: null
   - name: Code-Review
     score: 0
     reason: Found 1/28 approved changesets -- score normalized to 0
+    details: null
+  - name: Token-Permissions
+    score: -1
+    reason: No tokens found
+    details: null
+  - name: Dangerous-Workflow
+    score: -1
+    reason: no workflows found
     details: null
   - name: Packaging
     score: -1
@@ -181,10 +185,6 @@ checks:
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
-  - name: Token-Permissions
-    score: -1
-    reason: No tokens found
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -206,22 +206,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Branch-Protection
+  - name: Fuzzing
     score: 0
-    reason: branch protection not enabled on development/release branches
+    reason: project is not fuzzed
     details:
-      - 'Warn: branch protection not enabled for branch ''master'''
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -236,6 +231,11 @@ checks:
       - 'Warn: release artifact v1.0.0 does not have provenance: https://api.github.com/repos/yudai/gotty/releases/6453863'
       - 'Warn: release artifact v0.0.13 does not have provenance: https://api.github.com/repos/yudai/gotty/releases/3008382'
       - 'Warn: release artifact v0.0.12 does not have provenance: https://api.github.com/repos/yudai/gotty/releases/1977565'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

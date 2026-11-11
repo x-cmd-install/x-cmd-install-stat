@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.8.3"
   latestRelease: "v0.8.3"
   latestPrerelease: "0.0.1"
-  collectedAt: 2026-11-10T07:36:27Z
+  collectedAt: 2026-11-11T06:36:58Z
 timeline:
   created: 2020-08-13
   lastCommit: 2026-11-04
@@ -30,7 +30,7 @@ language:
 totalBytes: 725828
 recent:
   last30d:
-    since: 2026-10-11
+    since: 2026-10-12
     release: 0
     mergedPR: 7
     openPR: 9
@@ -38,7 +38,7 @@ recent:
     openIssue: 2
     commit: 7
   last60d:
-    since: 2026-09-11
+    since: 2026-09-12
     release: 0
     mergedPR: 15
     openPR: 14
@@ -46,7 +46,7 @@ recent:
     openIssue: 2
     commit: 18
   last90d:
-    since: 2026-08-12
+    since: 2026-08-13
     release: 0
     mergedPR: 29
     openPR: 15
@@ -54,7 +54,7 @@ recent:
     openIssue: 5
     commit: 33
   last180d:
-    since: 2026-05-14
+    since: 2026-05-15
     release: 0
     mergedPR: 67
     openPR: 21
@@ -62,7 +62,7 @@ recent:
     openIssue: 11
     commit: 69
   last360d:
-    since: 2025-11-15
+    since: 2025-11-16
     release: 3
     mergedPR: 179
     openPR: 21
@@ -70,13 +70,13 @@ recent:
     openIssue: 14
     commit: 181
   last720d:
-    since: 2024-11-20
+    since: 2024-11-21
     release: 8
     mergedPR: 323
     openPR: 21
     closedIssue: 18
     openIssue: 18
-    commit: 323
+    commit: 321
 total:
   release: 41
   mergedPR: 876
@@ -86,7 +86,7 @@ total:
   commit: 889
 ---
 path: /home/runner/.x-repo/github.com/stackrox/kube-linter
-collectedAt: 2026-11-10T07:36:28Z
+collectedAt: 2026-11-11T06:36:59Z
 loc:
   Go:
     code: 22094
@@ -159,7 +159,7 @@ total:
   blanks: 4455
   files: 585
 ---
-date: "2026-11-02"
+date: "2026-11-09"
 repo:
   name: github.com/stackrox/kube-linter
   commit: b85fd8f85b48085e5cde5ba2a4258758c6e39585
@@ -172,6 +172,10 @@ checks:
     score: 10
     reason: all changesets reviewed
     details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -183,10 +187,6 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Token-Permissions
     score: 0
@@ -229,7 +229,7 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yaml:56: update your workflow using https://app.stepsecurity.io/secureworkflow/stackrox/kube-linter/release.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yaml:61: update your workflow using https://app.stepsecurity.io/secureworkflow/stackrox/kube-linter/release.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yaml:66: update your workflow using https://app.stepsecurity.io/secureworkflow/stackrox/kube-linter/release.yaml/main?enable=pin'
-      - 'Warn: containerImage not pinned by hash: image/Dockerfile_alpine:1: pin your Docker image by updating alpine:latest to alpine:latest@sha256:be2656061b536c1883c4034790e21d0a09c5aaaf51968b89368a3c0371ea2c9a'
+      - 'Warn: containerImage not pinned by hash: image/Dockerfile_alpine:1: pin your Docker image by updating alpine:latest to alpine:latest@sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf'
       - 'Info:   0 out of  15 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   3 out of   9 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
@@ -238,17 +238,17 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yaml:15'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yaml:15'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'

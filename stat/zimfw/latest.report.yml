@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.21.0"
   latestRelease: "v1.21.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-10T08:22:57Z
+  collectedAt: 2026-11-11T07:11:48Z
 timeline:
   created: 2015-12-15
   lastCommit: 2026-11-09
@@ -29,7 +29,7 @@ language:
 totalBytes: 162037
 recent:
   last30d:
-    since: 2026-10-11
+    since: 2026-10-12
     release: 2
     mergedPR: 0
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 14
   last60d:
-    since: 2026-09-11
+    since: 2026-09-12
     release: 2
     mergedPR: 0
     openPR: 0
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 14
   last90d:
-    since: 2026-08-12
+    since: 2026-08-13
     release: 3
     mergedPR: 0
     openPR: 0
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 17
   last180d:
-    since: 2026-05-14
+    since: 2026-05-15
     release: 3
     mergedPR: 0
     openPR: 0
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 19
   last360d:
-    since: 2025-11-15
+    since: 2025-11-16
     release: 5
     mergedPR: 1
     openPR: 0
@@ -69,11 +69,11 @@ recent:
     openIssue: 2
     commit: 29
   last720d:
-    since: 2024-11-20
+    since: 2024-11-21
     release: 10
     mergedPR: 1
     openPR: 0
-    closedIssue: 10
+    closedIssue: 9
     openIssue: 5
     commit: 79
 total:
@@ -85,7 +85,7 @@ total:
   commit: 765
 ---
 path: /home/runner/.x-repo/github.com/zimfw/zimfw
-collectedAt: 2026-11-10T08:22:58Z
+collectedAt: 2026-11-11T07:11:49Z
 loc:
   RubyHtml:
     code: 1178
@@ -118,18 +118,31 @@ total:
   blanks: 242
   files: 35
 ---
-date: "2026-11-02"
+date: "2026-11-09"
 repo:
   name: github.com/zimfw/zimfw
-  commit: 5ca7c421760324307dacdbf23a91a1dd5cbeec5c
+  commit: 8ba1a51ce7f96a3b95fdbb594314687d94a2745b
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.8
 checks:
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Code-Review
     score: 0
     reason: Found 0/30 approved changesets -- score normalized to 0
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 19 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -137,23 +150,15 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
-    score: 10
-    reason: 11 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: SAST
+    score: 0
+    reason: no SAST tool detected
+    details:
+      - 'Warn: no pull requests merged into dev branch'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -163,38 +168,38 @@ checks:
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:8: update your workflow using https://app.stepsecurity.io/secureworkflow/zimfw/zimfw/main.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: .github/action/Dockerfile:1: pin your Docker image by updating alpine:latest to alpine:latest@sha256:be2656061b536c1883c4034790e21d0a09c5aaaf51968b89368a3c0371ea2c9a'
+      - 'Warn: containerImage not pinned by hash: .github/action/Dockerfile:1: pin your Docker image by updating alpine:latest to alpine:latest@sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf'
       - 'Info:   0 out of   1 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Signed-Releases
+  - name: Fuzzing
     score: 0
-    reason: Project has not signed or included provenance with any releases.
+    reason: project is not fuzzed
     details:
-      - 'Warn: release artifact v1.20.2 not signed: https://api.github.com/repos/zimfw/zimfw/releases/428581863'
-      - 'Warn: release artifact v1.20.1 not signed: https://api.github.com/repos/zimfw/zimfw/releases/371451364'
-      - 'Warn: release artifact v1.20.0 not signed: https://api.github.com/repos/zimfw/zimfw/releases/271759411'
-      - 'Warn: release artifact v1.19.1 not signed: https://api.github.com/repos/zimfw/zimfw/releases/263818754'
-      - 'Warn: release artifact v1.19.0 not signed: https://api.github.com/repos/zimfw/zimfw/releases/260088138'
-      - 'Warn: release artifact v1.20.2 does not have provenance: https://api.github.com/repos/zimfw/zimfw/releases/428581863'
-      - 'Warn: release artifact v1.20.1 does not have provenance: https://api.github.com/repos/zimfw/zimfw/releases/371451364'
-      - 'Warn: release artifact v1.20.0 does not have provenance: https://api.github.com/repos/zimfw/zimfw/releases/271759411'
-      - 'Warn: release artifact v1.19.1 does not have provenance: https://api.github.com/repos/zimfw/zimfw/releases/263818754'
-      - 'Warn: release artifact v1.19.0 does not have provenance: https://api.github.com/repos/zimfw/zimfw/releases/260088138'
+      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v1.21.0 not signed: https://api.github.com/repos/zimfw/zimfw/releases/439188068'
+      - 'Warn: release artifact v1.20.2 not signed: https://api.github.com/repos/zimfw/zimfw/releases/428581863'
+      - 'Warn: release artifact v1.20.1 not signed: https://api.github.com/repos/zimfw/zimfw/releases/371451364'
+      - 'Warn: release artifact v1.20.0 not signed: https://api.github.com/repos/zimfw/zimfw/releases/271759411'
+      - 'Warn: release artifact v1.19.1 not signed: https://api.github.com/repos/zimfw/zimfw/releases/263818754'
+      - 'Warn: release artifact v1.21.0 does not have provenance: https://api.github.com/repos/zimfw/zimfw/releases/439188068'
+      - 'Warn: release artifact v1.20.2 does not have provenance: https://api.github.com/repos/zimfw/zimfw/releases/428581863'
+      - 'Warn: release artifact v1.20.1 does not have provenance: https://api.github.com/repos/zimfw/zimfw/releases/371451364'
+      - 'Warn: release artifact v1.20.0 does not have provenance: https://api.github.com/repos/zimfw/zimfw/releases/271759411'
+      - 'Warn: release artifact v1.19.1 does not have provenance: https://api.github.com/repos/zimfw/zimfw/releases/263818754'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -203,10 +208,5 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 1 are checked with a SAST tool'
 ---
-{"id":439188068,"author":{"login":"ericbn","id":4120606,"node_id":"MDQ6VXNlcjQxMjA2MDY=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAty-ac4aLXpk","tag_name":"v1.21.0","target_commitish":"master","name":"v1.21.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-09T13:45:33Z","updated_at":"2026-11-09T13:49:07Z","published_at":"2026-11-09T13:49:07Z","assets":[{"id":727649705,"node_id":"RA_kwDOAty-ac4rXw2p","name":"zimfw.zsh","label":null,"uploader":{"login":"ericbn","id":4120606,"node_id":"MDQ6VXNlcjQxMjA2MDY=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":53761,"digest":"sha256:8f631937bc6afdfdf26f91a8080dad86e84051f92bb1d91db8004dd1c3383cbd","download_count":154,"created_at":"2026-11-09T13:47:44Z","updated_at":"2026-11-09T13:47:45Z"},{"id":727649877,"node_id":"RA_kwDOAty-ac4rXw5V","name":"zimfw.zsh.gz","label":null,"uploader":{"login":"ericbn","id":4120606,"node_id":"MDQ6VXNlcjQxMjA2MDY=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gzip","state":"uploaded","size":13897,"digest":"sha256:7efe046c039b8732f8d8163517cffc4459892870c8e148d4fb3f33c5f1a583eb","download_count":277,"created_at":"2026-11-09T13:47:49Z","updated_at":"2026-11-09T13:47:49Z"}],"body":"### Added\r\n- `ZIMFW_VENDOR` build variable for package maintainers. When set, `zimfw info` shows it next to the version, and the version check and the `check-version` and `upgrade` actions are disabled.\r\n\r\n### Changed\r\n- Make zimfw.zsh build reproducible, by not showing the build time and the previous commit in `zimfw info` anymore.\r\n\r\n### Fixed\r\n- `clean-compiled` and the detection of default initialization files ignoring symlinked directories and files.\r\n- `uninstall` deleting a module still in use, because it compared paths without resolving symlinks.\r\n- `${HOME}` being replaced in the middle of paths in init.zsh.\r\n"}
+{"id":439188068,"author":{"login":"ericbn","id":4120606,"node_id":"MDQ6VXNlcjQxMjA2MDY=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAty-ac4aLXpk","tag_name":"v1.21.0","target_commitish":"master","name":"v1.21.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-09T13:45:33Z","updated_at":"2026-11-09T13:49:07Z","published_at":"2026-11-09T13:49:07Z","assets":[{"id":727649705,"node_id":"RA_kwDOAty-ac4rXw2p","name":"zimfw.zsh","label":null,"uploader":{"login":"ericbn","id":4120606,"node_id":"MDQ6VXNlcjQxMjA2MDY=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":53761,"digest":"sha256:8f631937bc6afdfdf26f91a8080dad86e84051f92bb1d91db8004dd1c3383cbd","download_count":362,"created_at":"2026-11-09T13:47:44Z","updated_at":"2026-11-09T13:47:45Z"},{"id":727649877,"node_id":"RA_kwDOAty-ac4rXw5V","name":"zimfw.zsh.gz","label":null,"uploader":{"login":"ericbn","id":4120606,"node_id":"MDQ6VXNlcjQxMjA2MDY=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-gzip","state":"uploaded","size":13897,"digest":"sha256:7efe046c039b8732f8d8163517cffc4459892870c8e148d4fb3f33c5f1a583eb","download_count":610,"created_at":"2026-11-09T13:47:49Z","updated_at":"2026-11-09T13:47:49Z"}],"body":"### Added\r\n- `ZIMFW_VENDOR` build variable for package maintainers. When set, `zimfw info` shows it next to the version, and the version check and the `check-version` and `upgrade` actions are disabled.\r\n\r\n### Changed\r\n- Make zimfw.zsh build reproducible, by not showing the build time and the previous commit in `zimfw info` anymore.\r\n\r\n### Fixed\r\n- `clean-compiled` and the detection of default initialization files ignoring symlinked directories and files.\r\n- `uninstall` deleting a module still in use, because it compared paths without resolving symlinks.\r\n- `${HOME}` being replaced in the middle of paths in init.zsh.\r\n"}

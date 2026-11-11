@@ -2,20 +2,20 @@ about:
   description: "Universal command-line interface for SQL databases"
   license: MIT
   homepage: 
-  head: 8f014ba
+  head: d5299d1
   archived: false
   latestVersion: "v0.21.6"
   latestRelease: "v0.21.6"
   latestPrerelease: ""
-  collectedAt: 2026-11-10T07:59:16Z
+  collectedAt: 2026-11-11T06:55:03Z
 timeline:
   created: 2017-03-02
-  lastCommit: 2026-11-10
+  lastCommit: 2026-11-11
   lastVersion: 2026-09-22
   lastRelease: 2026-09-22
   lastPrerelease: 
 popularity:
-  star: 10168
+  star: 10169
   watcher: 114
   fork: 408
   release: 96
@@ -23,75 +23,75 @@ popularity:
   pullRequest: 0
   issue: 0
 language:
-  Go: 840272
+  Go: 842466
   Shell: 13345
   PLpgSQL: 2996
   TSQL: 1008
-totalBytes: 857621
+totalBytes: 859815
 recent:
   last30d:
-    since: 2026-10-11
+    since: 2026-10-12
     release: 0
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 40
+    commit: 46
   last60d:
-    since: 2026-09-11
+    since: 2026-09-12
     release: 2
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 144
+    commit: 150
   last90d:
-    since: 2026-08-12
+    since: 2026-08-13
     release: 2
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 149
+    commit: 155
   last180d:
-    since: 2026-05-14
+    since: 2026-05-15
     release: 2
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 149
+    commit: 155
   last360d:
-    since: 2025-11-15
+    since: 2025-11-16
     release: 16
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 171
+    commit: 177
   last720d:
-    since: 2024-11-20
+    since: 2024-11-21
     release: 28
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 188
+    commit: 194
 total:
   release: 96
   mergedPR: 0
   openPR: 0
   closedIssue: 0
   openIssue: 0
-  commit: 1335
+  commit: 1341
 ---
 path: /home/runner/.x-repo/github.com/xo/usql
-collectedAt: 2026-11-10T07:59:18Z
+collectedAt: 2026-11-11T06:55:04Z
 loc:
   Go:
-    code: 24945
-    comments: 4492
-    blanks: 1730
+    code: 24952
+    comments: 4511
+    blanks: 1737
     files: 191
   Sql:
     code: 1066
@@ -120,8 +120,8 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 8948
-    blanks: 2201
+    comments: 8997
+    blanks: 2211
     files: 33
   Text:
     code: 0
@@ -129,20 +129,24 @@ loc:
     blanks: 277
     files: 19
 total:
-  code: 27841
-  comments: 15377
-  blanks: 4747
+  code: 27848
+  comments: 15445
+  blanks: 4764
   files: 275
 ---
-date: "2026-11-02"
+date: "2026-11-09"
 repo:
   name: github.com/xo/usql
-  commit: f23f592460ef7c8949b3e376693782685bb095d9
+  commit: ca28358d086c9f63302bc6669a66e6c0c3fe22fe
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.1
 checks:
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Code-Review
     score: 0
     reason: Found 0/30 approved changesets -- score normalized to 0
@@ -156,14 +160,15 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: SAST
+    score: 0
+    reason: no SAST tool detected
+    details:
+      - 'Warn: no pull requests merged into dev branch'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -172,16 +177,14 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: SAST
-    score: 0
-    reason: no SAST tool detected
-    details:
-      - 'Warn: no pull requests merged into dev branch'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
       - 'Info: Possibly incomplete results: error parsing shell code: array element values must be words: build.sh:0'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:36: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/release.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:38: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/release.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:49: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:66: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:68: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:75: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/release.yml/main?enable=pin'
@@ -192,34 +195,24 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:194: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:210: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:216: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/release.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:241: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/release.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:280: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/release.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:36: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/release.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:38: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/release.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:49: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/release.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:144: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/test.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:146: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/test.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:157: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/test.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:171: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/test.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:206: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/test.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:208: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/test.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:245: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/release.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yml:284: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/test.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:28: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/test.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:123: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/test.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:125: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/test.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:144: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/test.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:146: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/test.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:157: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/test.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:171: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/test.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:207: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/test.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:209: update your workflow using https://app.stepsecurity.io/secureworkflow/xo/usql/test.yml/main?enable=pin'
       - 'Info:   0 out of  23 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: GoBuiltInFuzzer integration found: feed/fuzz_test.go:182'
-      - 'Info: GoBuiltInFuzzer integration found: feed/fuzz_test.go:320'
-      - 'Info: GoBuiltInFuzzer integration found: feed/fuzz_test.go:360'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -228,6 +221,13 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: GoBuiltInFuzzer integration found: feed/fuzz_test.go:182'
+      - 'Info: GoBuiltInFuzzer integration found: feed/fuzz_test.go:320'
+      - 'Info: GoBuiltInFuzzer integration found: feed/fuzz_test.go:360'
   - name: License
     score: 10
     reason: license file detected

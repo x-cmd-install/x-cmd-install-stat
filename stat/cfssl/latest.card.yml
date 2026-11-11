@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.7.1"
   latestRelease: "v1.7.1"
   latestPrerelease: "v1.4.0-rc1"
-  collectedAt: 2026-11-10T07:13:44Z
+  collectedAt: 2026-11-11T06:07:06Z
 timeline:
   created: 2014-07-07
   lastCommit: 2026-10-22
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-10-06
   lastPrerelease: 2019-10-31
 popularity:
-  star: 9499
+  star: 9508
   watcher: 199
-  fork: 1155
+  fork: 1156
   release: 18
   contributor: 240
   pullRequest: 868
@@ -33,7 +33,7 @@ language:
 totalBytes: 1939825
 recent:
   last30d:
-    since: 2026-10-11
+    since: 2026-10-12
     release: 0
     mergedPR: 2
     openPR: 7
@@ -41,7 +41,7 @@ recent:
     openIssue: 3
     commit: 1
   last60d:
-    since: 2026-09-11
+    since: 2026-09-12
     release: 2
     mergedPR: 5
     openPR: 9
@@ -49,7 +49,7 @@ recent:
     openIssue: 3
     commit: 8
   last90d:
-    since: 2026-08-12
+    since: 2026-08-13
     release: 2
     mergedPR: 6
     openPR: 9
@@ -57,7 +57,7 @@ recent:
     openIssue: 4
     commit: 8
   last180d:
-    since: 2026-05-14
+    since: 2026-05-15
     release: 2
     mergedPR: 6
     openPR: 13
@@ -65,7 +65,7 @@ recent:
     openIssue: 7
     commit: 8
   last360d:
-    since: 2025-11-15
+    since: 2025-11-16
     release: 2
     mergedPR: 8
     openPR: 14
@@ -73,7 +73,7 @@ recent:
     openIssue: 8
     commit: 14
   last720d:
-    since: 2024-11-20
+    since: 2024-11-21
     release: 2
     mergedPR: 14
     openPR: 16
@@ -89,7 +89,7 @@ total:
   commit: 1582
 ---
 path: /home/runner/.x-repo/github.com/cloudflare/cfssl
-collectedAt: 2026-11-10T07:13:48Z
+collectedAt: 2026-11-11T06:07:10Z
 loc:
   Go:
     code: 452804
@@ -192,7 +192,7 @@ total:
   blanks: 66146
   files: 1907
 ---
-date: "2026-11-02"
+date: "2026-11-09"
 repo:
   name: github.com/cloudflare/cfssl
   commit: e5d686ddb7af3fc31911ddd5c385c3d8715307e4
@@ -223,13 +223,13 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/semgrep.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/snapshot.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
+    details: null
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
     details: null
   - name: Fuzzing
     score: 0
@@ -261,22 +261,19 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/semgrep.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/cloudflare/cfssl/semgrep.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/snapshot.yml:12: update your workflow using https://app.stepsecurity.io/secureworkflow/cloudflare/cfssl/snapshot.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/snapshot.yml:15: update your workflow using https://app.stepsecurity.io/secureworkflow/cloudflare/cfssl/snapshot.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating golang:1.27 to golang:1.27@sha256:c292963ad0e5f51e843c726edc204a4e4c26a859ba1e4d736d91028aa3633048'
-      - 'Warn: containerImage not pinned by hash: Dockerfile.alpine:1: pin your Docker image by updating golang:1.27-alpine to golang:1.27-alpine@sha256:d200d2dd76b03a99b52651fd1325aff7dcd35422c35c01bac56571b0507f3deb'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating golang:1.27 to golang:1.27@sha256:e519d3b0a5b285e5aa53ab9eef02bc6bbb9cb04608389b743a136a9ce75f0d1e'
+      - 'Warn: containerImage not pinned by hash: Dockerfile.alpine:1: pin your Docker image by updating golang:1.27-alpine to golang:1.27-alpine@sha256:fa3d596898d9f126af7c01d14ee7597bab3f39cccf392ef36b69fe77cd681f18'
       - 'Warn: containerImage not pinned by hash: Dockerfile.alpine:13: pin your Docker image by updating alpine:3.11 to alpine:3.11@sha256:bcae378eacedab83da66079d9366c8f5df542d7ed9ab23bf487e3e1a8481375d'
       - 'Warn: goCommand not pinned by hash: vendor/github.com/pelletier/go-toml/benchmark.sh:10'
       - 'Info:   0 out of   8 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   7 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 containerImage dependencies pinned'
       - 'Info:   0 out of   1 goCommand dependencies pinned'
-  - name: Security-Policy
+  - name: Packaging
     score: 10
-    reason: security policy file detected
+    reason: packaging workflow detected
     details:
-      - 'Info: security policy file detected: github.com/cloudflare/.github/SECURITY.md:1'
-      - 'Info: Found linked content: github.com/cloudflare/.github/SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/cloudflare/.github/SECURITY.md:1'
-      - 'Info: Found text in security policy: github.com/cloudflare/.github/SECURITY.md:1'
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker-builds.yml:11'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -291,16 +288,19 @@ checks:
       - 'Warn: release artifact v1.6.5 does not have provenance: https://api.github.com/repos/cloudflare/cfssl/releases/144917396'
       - 'Warn: release artifact v1.6.4 does not have provenance: https://api.github.com/repos/cloudflare/cfssl/releases/98831034'
       - 'Warn: release artifact v1.6.3 does not have provenance: https://api.github.com/repos/cloudflare/cfssl/releases/78976306'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker-builds.yml:11'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''master'''
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: github.com/cloudflare/.github/SECURITY.md:1'
+      - 'Info: Found linked content: github.com/cloudflare/.github/SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/cloudflare/.github/SECURITY.md:1'
+      - 'Info: Found text in security policy: github.com/cloudflare/.github/SECURITY.md:1'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
