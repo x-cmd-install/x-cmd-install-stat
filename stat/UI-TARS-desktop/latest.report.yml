@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.3.1"
   latestRelease: "v0.3.1"
   latestPrerelease: "@agent-tars@0.3.0-beta.8"
-  collectedAt: 2026-11-11T06:52:32Z
+  collectedAt: 2026-11-12T08:17:34Z
 timeline:
   created: 2025-01-19
   lastCommit: 2026-10-09
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-10-08
   lastPrerelease: 2025-09-07
 popularity:
-  star: 39594
+  star: 39598
   watcher: 278
-  fork: 4031
+  fork: 4034
   release: 39
   contributor: 53
   pullRequest: 1406
@@ -34,7 +34,7 @@ language:
 totalBytes: 6592574
 recent:
   last30d:
-    since: 2026-10-12
+    since: 2026-10-13
     release: 0
     mergedPR: 0
     openPR: 8
@@ -42,7 +42,7 @@ recent:
     openIssue: 2
     commit: 0
   last60d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 1
     mergedPR: 5
     openPR: 41
@@ -50,31 +50,31 @@ recent:
     openIssue: 30
     commit: 8
   last90d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 1
     mergedPR: 5
-    openPR: 61
+    openPR: 60
     closedIssue: 0
     openIssue: 39
     commit: 8
   last180d:
-    since: 2026-05-15
+    since: 2026-05-16
     release: 1
     mergedPR: 9
     openPR: 81
     closedIssue: 0
-    openIssue: 47
+    openIssue: 46
     commit: 9
   last360d:
-    since: 2025-11-16
+    since: 2025-11-17
     release: 1
     mergedPR: 33
     openPR: 120
     closedIssue: 6
-    openIssue: 94
+    openIssue: 93
     commit: 32
   last720d:
-    since: 2024-11-21
+    since: 2024-11-22
     release: 39
     mergedPR: 1082
     openPR: 153
@@ -90,7 +90,7 @@ total:
   commit: 1118
 ---
 path: /home/runner/.x-repo/github.com/bytedance/UI-TARS-desktop
-collectedAt: 2026-11-11T06:52:42Z
+collectedAt: 2026-11-12T08:17:53Z
 loc:
   TypeScript:
     code: 112242
@@ -410,4 +410,4 @@ checks:
       - 'Warn: Project is vulnerable to: GHSA-x574-m823-4x7w'
       - 'Warn: Project is vulnerable to: GHSA-xcj6-pq6g-qj4x'
 ---
-{"id":407269092,"author":{"login":"ulivz","id":23133919,"node_id":"MDQ6VXNlcjIzMTMzOTE5","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDONsXMe84YRm7k","tag_name":"v0.3.1","target_commitish":"main","name":"v0.3.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-08T21:12:36Z","updated_at":"2026-10-08T21:14:26Z","published_at":"2026-10-08T21:14:26Z","assets":[],"body":"This release closes several security issues in the Agent TARS CLI server (`@agent-tars/cli`, `@tarko/agent-server`). It changes how the server can be reached, so please read **Upgrading from 0.3.0** before you update.\n\n## Upgrading from 0.3.0\n\n**If you run the CLI on your own machine and open it at `http://localhost`, nothing changes.**\n\nOtherwise:\n\n- **The server only listens on `127.0.0.1` by default.** It used to listen on all network interfaces. To reach it from another machine or from outside a container, pass `--host`, e.g. `--host 0.0.0.0`.\n- **A non-loopback `--host` requires an access token.** Set one with `--auth-token` or `TARKO_AUTH_TOKEN` (at least 16 characters). If you set none, a random token is generated on every start and printed with a ready-to-open `?token=` link, so old links stop working after a restart. Set a fixed token if you need stable links.\n- **Domains, reverse proxies and port forwarding need `TARKO_ALLOWED_HOSTS`.** Requests whose `Host` header is not a loopback name, an IP address or the configured `--host` are rejected with `403 Invalid Host header`. Add your hostname, comma-separated: `TARKO_ALLOWED_HOSTS=agent.example.com`.\n- **A Web UI served from a non-localhost origin needs `TARKO_ALLOWED_ORIGINS`.** Otherwise creating a session fails with `403 Origin not allowed`. Use the full origin: `TARKO_ALLOWED_ORIGINS=https://agent.example.com`.\n- **`agentOptions` from requests and URLs only accepts `agentMode`.** This applies to `/creating?agentOptions=...`, welcome cards and `POST /api/v1/sessions/create`. Any other key (`mcpServers`, `model`, `aioSandbox`, ...) is rejected with `400`. Configure those on the server instead.\n- **Direct API calls need a CSRF token.** Fetch one from `GET /api/v1/csrf-token` and send it as the `x-csrf-token` header on `POST` requests. When the server requires an access token, also send `Authorization: Bearer <token>`.\n\nExample for a remote server behind a domain:\n\n```bash\nTARKO_AUTH_TOKEN=<a long random string> \\\nTARKO_ALLOWED_HOSTS=agent.example.com \\\nTARKO_ALLOWED_ORIGINS=https://agent.example.com \\\nagent-tars --host 0.0.0.0 --port 8888\n```\n\nSee the [CLI docs](https://agent-tars.com/guide/basic/cli) for details.\n\n## Security\n\n- Block request-body injection into agent constructor options; the server now binds to `127.0.0.1` by default (#1939)\n- Require an access token once the server leaves loopback (#2026)\n- Validate the `Host` header to prevent DNS rebinding (#1975)\n- Add CSRF protection, a CORS allowlist and security headers (#1853)\n- Stop HTML previews from escaping their iframe sandbox (#1938)\n\n## Bug Fixes\n\n- Answer a disallowed origin with 403 instead of 500 (#2044)\n- Repair unterminated strings in truncated tool call JSON (#1836)\n- Handle unknown model providers by defaulting to OpenAI-compatible (#1823)\n- Support streaming usage on LLM responses (#1737)\n\n## Features\n\n- Add embed-frame support for nav items (#1761)\n- Optimize the session status action design (#1766)\n- Set the remote browser viewport to the default viewport (#1748)\n- Add `@gui-agent/cli`, a CLI for GUI Agent automation (#1741)\n\n## Documentation\n\n- Document remote access settings for the agent server (#2043)\n\n**Full Changelog**: https://github.com/bytedance/UI-TARS-desktop/compare/v0.3.0...v0.3.1\n","reactions":{"total_count":2,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":2,"rocket":0,"eyes":0}}
+{"id":407269092,"author":{"login":"ulivz","id":23133919,"node_id":"MDQ6VXNlcjIzMTMzOTE5","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDONsXMe84YRm7k","tag_name":"v0.3.1","target_commitish":"main","name":"v0.3.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-08T21:12:36Z","updated_at":"2026-10-08T21:14:26Z","published_at":"2026-10-08T21:14:26Z","assets":[],"body":"This release closes several security issues in the Agent TARS CLI server (`@agent-tars/cli`, `@tarko/agent-server`). It changes how the server can be reached, so please read **Upgrading from 0.3.0** before you update.\n\n## Upgrading from 0.3.0\n\n**If you run the CLI on your own machine and open it at `http://localhost`, nothing changes.**\n\nOtherwise:\n\n- **The server only listens on `127.0.0.1` by default.** It used to listen on all network interfaces. To reach it from another machine or from outside a container, pass `--host`, e.g. `--host 0.0.0.0`.\n- **A non-loopback `--host` requires an access token.** Set one with `--auth-token` or `TARKO_AUTH_TOKEN` (at least 16 characters). If you set none, a random token is generated on every start and printed with a ready-to-open `?token=` link, so old links stop working after a restart. Set a fixed token if you need stable links.\n- **Domains, reverse proxies and port forwarding need `TARKO_ALLOWED_HOSTS`.** Requests whose `Host` header is not a loopback name, an IP address or the configured `--host` are rejected with `403 Invalid Host header`. Add your hostname, comma-separated: `TARKO_ALLOWED_HOSTS=agent.example.com`.\n- **A Web UI served from a non-localhost origin needs `TARKO_ALLOWED_ORIGINS`.** Otherwise creating a session fails with `403 Origin not allowed`. Use the full origin: `TARKO_ALLOWED_ORIGINS=https://agent.example.com`.\n- **`agentOptions` from requests and URLs only accepts `agentMode`.** This applies to `/creating?agentOptions=...`, welcome cards and `POST /api/v1/sessions/create`. Any other key (`mcpServers`, `model`, `aioSandbox`, ...) is rejected with `400`. Configure those on the server instead.\n- **Direct API calls need a CSRF token.** Fetch one from `GET /api/v1/csrf-token` and send it as the `x-csrf-token` header on `POST` requests. When the server requires an access token, also send `Authorization: Bearer <token>`.\n\nExample for a remote server behind a domain:\n\n```bash\nTARKO_AUTH_TOKEN=<a long random string> \\\nTARKO_ALLOWED_HOSTS=agent.example.com \\\nTARKO_ALLOWED_ORIGINS=https://agent.example.com \\\nagent-tars --host 0.0.0.0 --port 8888\n```\n\nSee the [CLI docs](https://agent-tars.com/guide/basic/cli) for details.\n\n## Security\n\n- Block request-body injection into agent constructor options; the server now binds to `127.0.0.1` by default (#1939)\n- Require an access token once the server leaves loopback (#2026)\n- Validate the `Host` header to prevent DNS rebinding (#1975)\n- Add CSRF protection, a CORS allowlist and security headers (#1853)\n- Stop HTML previews from escaping their iframe sandbox (#1938)\n\n## Bug Fixes\n\n- Answer a disallowed origin with 403 instead of 500 (#2044)\n- Repair unterminated strings in truncated tool call JSON (#1836)\n- Handle unknown model providers by defaulting to OpenAI-compatible (#1823)\n- Support streaming usage on LLM responses (#1737)\n\n## Features\n\n- Add embed-frame support for nav items (#1761)\n- Optimize the session status action design (#1766)\n- Set the remote browser viewport to the default viewport (#1748)\n- Add `@gui-agent/cli`, a CLI for GUI Agent automation (#1741)\n\n## Documentation\n\n- Document remote access settings for the agent server (#2043)\n\n**Full Changelog**: https://github.com/bytedance/UI-TARS-desktop/compare/v0.3.0...v0.3.1\n","reactions":{"total_count":3,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":3,"rocket":0,"eyes":0}}

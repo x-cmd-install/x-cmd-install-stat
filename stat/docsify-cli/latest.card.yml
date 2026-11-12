@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-11-11T07:13:28Z
+  collectedAt: 2026-11-12T08:40:05Z
 timeline:
   created: 
   lastCommit: 
@@ -24,7 +24,7 @@ popularity:
   issue: 0
 recent:
   last30d:
-    since: 2026-10-12
+    since: 2026-10-13
     release: 0
     mergedPR: 0
     openPR: 0
@@ -32,7 +32,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 0
     mergedPR: 0
     openPR: 0
@@ -40,7 +40,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 0
     mergedPR: 0
     openPR: 0
@@ -48,7 +48,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-15
+    since: 2026-05-16
     release: 0
     mergedPR: 0
     openPR: 0
@@ -56,7 +56,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-16
+    since: 2025-11-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -64,7 +64,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-21
+    since: 2024-11-22
     release: 0
     mergedPR: 0
     openPR: 0
@@ -83,7 +83,7 @@ graphqlErrors:
   - Could not resolve to a Repository with the name 'docsifyjs/docsify-cli#readme'.
 ---
 ---
-date: "2026-11-02"
+date: "2026-11-09"
 repo:
   name: github.com/docsifyjs/docsify-cli
   commit: 2ad4dcaa28299b242da1e9b2261544e93440281e
@@ -92,26 +92,28 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4
 checks:
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Maintained
     score: 0
     reason: 1 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/docsify-cli.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Code-Review
     score: 3
     reason: Found 4/11 approved changesets -- score normalized to 3
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
     details: null
   - name: Pinned-Dependencies
     score: 3
@@ -121,12 +123,10 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/docsify-cli.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/docsifyjs/docsify-cli/docsify-cli.yml/master?enable=pin'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   1 out of   1 npmCommand dependencies pinned'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/docsify-cli.yml:1'
-      - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -136,12 +136,6 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Signed-Releases
     score: -1
     reason: no releases found
@@ -159,6 +153,12 @@ checks:
       - 'Info: Found linked content: github.com/docsifyjs/.github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/docsifyjs/.github/SECURITY.md:1'
       - 'Info: Found text in security policy: github.com/docsifyjs/.github/SECURITY.md:1'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

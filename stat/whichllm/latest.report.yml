@@ -2,94 +2,94 @@ about:
   description: "Find the local LLM that actually runs and performs best on your hardware. Ranked by real, recency-aware benchmarks, not parameter count. One command, run it instantly."
   license: MIT
   homepage: 
-  head: 0ab8dea
+  head: 3f631fb
   archived: false
-  latestVersion: "v0.6.5"
-  latestRelease: "v0.6.5"
+  latestVersion: "v0.6.6"
+  latestRelease: "v0.6.6"
   latestPrerelease: ""
-  collectedAt: 2026-11-11T05:38:47Z
+  collectedAt: 2026-11-12T06:44:16Z
 timeline:
   created: 2026-03-04
-  lastCommit: 2026-11-10
-  lastVersion: 2026-11-10
-  lastRelease: 2026-11-10
+  lastCommit: 2026-11-11
+  lastVersion: 2026-11-11
+  lastRelease: 2026-11-11
   lastPrerelease: 
 popularity:
   star: 6832
   watcher: 24
   fork: 378
-  release: 29
+  release: 30
   contributor: 33
-  pullRequest: 214
+  pullRequest: 217
   issue: 80
 language:
-  Python: 1467537
+  Python: 1469086
   Tape: 1400
-totalBytes: 1468937
+totalBytes: 1470486
 recent:
   last30d:
-    since: 2026-10-12
-    release: 8
-    mergedPR: 104
+    since: 2026-10-13
+    release: 9
+    mergedPR: 107
     openPR: 0
     closedIssue: 2
     openIssue: 5
-    commit: 102
+    commit: 104
   last60d:
-    since: 2026-09-12
-    release: 12
-    mergedPR: 116
+    since: 2026-09-13
+    release: 13
+    mergedPR: 119
     openPR: 0
     closedIssue: 5
     openIssue: 6
-    commit: 125
+    commit: 127
   last90d:
-    since: 2026-08-13
-    release: 13
-    mergedPR: 126
+    since: 2026-08-14
+    release: 14
+    mergedPR: 125
     openPR: 0
-    closedIssue: 10
+    closedIssue: 7
     openIssue: 6
-    commit: 130
+    commit: 132
   last180d:
-    since: 2026-05-15
+    since: 2026-05-16
     release: 27
-    mergedPR: 194
+    mergedPR: 187
     openPR: 0
-    closedIssue: 65
+    closedIssue: 52
     openIssue: 6
-    commit: 202
+    commit: 204
   last360d:
-    since: 2025-11-16
-    release: 29
-    mergedPR: 200
+    since: 2025-11-17
+    release: 30
+    mergedPR: 203
     openPR: 0
     closedIssue: 74
     openIssue: 6
-    commit: 353
+    commit: 355
   last720d:
-    since: 2024-11-21
-    release: 29
-    mergedPR: 200
+    since: 2024-11-22
+    release: 30
+    mergedPR: 203
     openPR: 0
     closedIssue: 74
     openIssue: 6
-    commit: 448
+    commit: 451
 total:
-  release: 29
-  mergedPR: 201
+  release: 30
+  mergedPR: 204
   openPR: 0
   closedIssue: 74
   openIssue: 6
-  commit: 448
+  commit: 451
 ---
 path: /home/runner/.x-repo/github.com/Andyyyy64/whichllm
-collectedAt: 2026-11-11T05:38:48Z
+collectedAt: 2026-11-12T06:44:20Z
 loc:
   Python:
-    code: 34711
-    comments: 1400
-    blanks: 6696
+    code: 34743
+    comments: 1403
+    blanks: 6703
     files: 204
   Json:
     code: 4909
@@ -103,15 +103,15 @@ loc:
     files: 2
   Markdown:
     code: 0
-    comments: 3123
-    blanks: 943
+    comments: 3135
+    blanks: 946
     files: 12
 total:
-  code: 40409
-  comments: 4546
-  blanks: 7712
+  code: 40441
+  comments: 4561
+  blanks: 7722
   files: 240
 ---
 
 ---
-{"id":440560981,"author":{"login":"Andyyyy64","id":105579829,"node_id":"U_kgDOBksFNQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOReQROs4aQm1V","tag_name":"v0.6.5","target_commitish":"0ab8dea1d9dc0a9a7a9bbeb9e84d0a99bade6a72","name":"v0.6.5","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-10T15:44:13Z","updated_at":"2026-11-10T15:44:29Z","published_at":"2026-11-10T15:44:29Z","assets":[],"body":"# whichllm 0.6.5\n\nThis release adds Abyss to the engines whichllm knows, stops refusing PCs that are exactly the size a pack asks for, and brings seven engine cards up to date.\n\n## Abyss\n\n[Abyss](https://github.com/zephel01/Abyss) is a fork of Project Maya that runs DeepSeek V4 and V4.1 Flash, GLM-5.3-Flash, Qwen3.8-Flash-Next, Ornith-1.5 and Qwen3.5-122B-A10B on one GPU, with the experts spread over VRAM, RAM and the SSD. Its card lists the 15 packs its setup installs with one command.\n\nThe author's packs are named for the PC they target, such as 16G64G for a 16 GB GPU with 64 GB of RAM, and each one fits in memory on a machine of that size. The two DeepSeek V4.1 packs are the exception, since that model's experts don't fit a 32 GB GPU with 96 GB of RAM and some are read from the SSD. On a 16 GB GPU with 64 GB of RAM, Abyss shows up under Qwen3.8-Flash-Next.\n\n```\n  #2 also runs with Abyss (zephel01 IQ3_M 16G64G, 70.7 tok/s in its docs on RTX 5090 limited to 16 GB, 58 GB memory limit, with its MTP drafter):\n    ./setup-deepseek.sh --model qwen38\n```\n\nOn a 12 GB GPU with 32 GB, where llama.cpp can't place the model at all, Abyss's 12G32G pack puts it in the ranking as a row of its own.\n\n```\n  Run #7 with Abyss:\n    ./setup-deepseek.sh --model qwen38 --quant 12G32G\n```\n\nThree things to know. The speeds are the author's, measured on a Ryzen AI Max+ 395 whose RAM is about three times as fast as a usual DDR5 desktop's, so expect less on one. Abyss doesn't run under WSL, and `whichllm engines` says so there. And Ornith-1.5 has no benchmark score yet, so its packs count in `whichllm engines` but don't reach the ranking.\n\n## A PC the size a pack asks for\n\nA PC reports a little less than the size it's sold as. An RTX 5070 \"12 GB\" has 11.9 GiB of VRAM, and a \"32 GB\" PC has about 31.2 GiB of RAM. whichllm compared those numbers with the round ones in the engines' docs, so two kinds of machine were turned away.\n\n- Strata's packs need a 12 GB GPU. On an RTX 5070 they were refused with \"needs a GPU with 12 GB, the largest here has 12 GB\".\n- Project Maya's packs run from 32 GB of RAM. On a 32 GB PC they were refused with \"needs 32 GB of RAM, this machine has 31 GB\".\n\nAn amount within 4% of the size a pack names now counts as that size, for VRAM, RAM and the two together.\n\n## Engine cards, re-read\n\nThe weekly check of cards against their upstream ran for the first time on Monday and listed seven. I re-read each one against what changed in its sources.\n\n- **Project Maya 1.1.57.** Maya's new memory page gives each pack the VRAM and RAM together it recommends, and the card uses those now. Maya-S of GLM-5.3-Flash needs 128 GB, not the 96.5 GB of its file. Maya-S of DeepSeek V4.1 needs 224 GB, not 340, since the Engram tables stay on the SSD. GLM-5.3, the 744B model, is new, and MiniMax-M3.1-Flash has an experimental Mac build.\n- **Strata 0.2.13.** DeepSeek V4.1 on a Mac reads pictures too. Strata also runs seven of Unsloth's re-uploaded Qwen3.8-Flash-Next files, but its docs don't give the memory they need yet, so they aren't packs on the card.\n- **ik_llama.cpp** loads mainline NVFP4 GGUFs now.\n- **llama.cpp b12247, Ollama 0.40.16, Lemonade 2026.45.3.** Nothing the cards state changed.\n\nAbyss and Maya ship a release most days, which would put them on that list every week. Their cards now follow minor versions, and come due again after 30 days.\n\n## How it was checked\n\nAll 1,980 tests pass, and the wheel carries all 14 engine cards. Every pack on Abyss's card matches its files on Hugging Face, and its setup options exist in Abyss's setup script. I ran the CLI on eleven simulated machines, from a 12 GB GPU with 16 GB of RAM to a 32 GB GPU with 128 GB, a Radeon, a Mac and CPU only, with no crash and the fits its docs describe. I haven't run Abyss itself, and this release wasn't run natively on Windows.\n\n## Upgrade\n\n```bash\nuv tool upgrade whichllm\npip install -U whichllm\nbrew upgrade whichllm\n```\n\nEverything else is in [CHANGELOG.md](https://github.com/Andyyyy64/whichllm/blob/main/CHANGELOG.md).\n"}
+{"id":441985506,"author":{"login":"Andyyyy64","id":105579829,"node_id":"U_kgDOBksFNQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOReQROs4aWCni","tag_name":"v0.6.6","target_commitish":"3f631fb4f28def136115a268877e1bb069ef05d4","name":"v0.6.6","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-11T17:15:40Z","updated_at":"2026-11-11T17:15:45Z","published_at":"2026-11-11T17:15:45Z","assets":[],"body":"# whichllm 0.6.6\n\nA fix for a crash at start. If you installed or upgraded whichllm since November 9 and it stopped with the error below, this release is for you.\n\n```\nTypeError: Option() got an unexpected keyword argument 'click_type'\n```\n\n## What happened\n\ntyper, the library whichllm's command line is built on, released 0.29.0 on November 9 and removed an argument that `--context-length` used. whichllm asked for `typer>=0.9` with no upper bound, so a fresh `pip install whichllm` or `uvx whichllm` got the new typer and failed at import. That hit every whichllm release, not only the newest. Homebrew installs pin their dependencies and kept working, and so did any install from before November 9.\n\nI found it on November 12, running 0.6.5 on Windows from a clean environment. Nobody had reported it. My tests run against locked dependencies, with an older typer, so they kept passing.\n\n## What changed\n\n- `--context-length` no longer uses the removed argument. It behaves as before. `64k` is 65536, and a bad value says why.\n- whichllm now asks for typer 0.15 or newer. typer 0.9, the old lower bound, doesn't work with current click anyway.\n- The tests now also run against the newest release of every dependency, on every push and once a day. A failed daily run opens an issue, so the next break of this kind shows up within a day and not when a user hits it.\n\n## How it was checked\n\nAll 1,986 tests pass with the locked dependencies and with the newest ones (typer 0.29.1). The same option code was tried on typer 0.15.4, 0.24.1, 0.28.0 and 0.29.1. A wheel of this release, installed on Windows with the newest dependencies, ran the ranking, `engines`, `plan`, `upgrade`, `hardware` and the JSON output.\n\n## Upgrade\n\n```bash\nuv tool upgrade whichllm\npip install -U whichllm\nbrew upgrade whichllm\n```\n\nEverything else is in [CHANGELOG.md](https://github.com/Andyyyy64/whichllm/blob/main/CHANGELOG.md).\n"}

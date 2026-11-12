@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.6.1"
   latestRelease: "v2.6.1"
   latestPrerelease: ""
-  collectedAt: 2026-11-11T07:39:13Z
+  collectedAt: 2026-11-12T08:53:02Z
 timeline:
   created: 2025-07-06
   lastCommit: 2026-11-06
@@ -17,10 +17,10 @@ timeline:
 popularity:
   star: 1240
   watcher: 4
-  fork: 78
+  fork: 77
   release: 57
   contributor: 15
-  pullRequest: 314
+  pullRequest: 313
   issue: 65
 language:
   Python: 477889
@@ -31,63 +31,63 @@ language:
 totalBytes: 484241
 recent:
   last30d:
-    since: 2026-10-12
+    since: 2026-10-13
     release: 2
     mergedPR: 8
-    openPR: 8
+    openPR: 7
     closedIssue: 0
     openIssue: 2
     commit: 12
   last60d:
-    since: 2026-09-12
+    since: 2026-09-13
     release: 3
     mergedPR: 16
-    openPR: 8
-    closedIssue: 1
+    openPR: 7
+    closedIssue: 0
     openIssue: 2
     commit: 19
   last90d:
-    since: 2026-08-13
+    since: 2026-08-14
     release: 14
-    mergedPR: 83
-    openPR: 8
+    mergedPR: 81
+    openPR: 7
     closedIssue: 5
     openIssue: 2
     commit: 72
   last180d:
-    since: 2026-05-15
+    since: 2026-05-16
     release: 14
     mergedPR: 83
-    openPR: 8
+    openPR: 7
     closedIssue: 8
     openIssue: 2
     commit: 85
   last360d:
-    since: 2025-11-16
+    since: 2025-11-17
     release: 24
-    mergedPR: 177
-    openPR: 9
+    mergedPR: 170
+    openPR: 8
     closedIssue: 26
     openIssue: 2
     commit: 142
   last720d:
-    since: 2024-11-21
+    since: 2024-11-22
     release: 57
     mergedPR: 291
-    openPR: 9
+    openPR: 8
     closedIssue: 63
     openIssue: 2
     commit: 417
 total:
   release: 57
   mergedPR: 291
-  openPR: 9
+  openPR: 8
   closedIssue: 63
   openIssue: 2
   commit: 417
 ---
 path: /home/runner/.x-repo/github.com/stabldev/torrra
-collectedAt: 2026-11-11T07:39:16Z
+collectedAt: 2026-11-12T08:53:06Z
 loc:
   Python:
     code: 10972
@@ -152,4 +152,4 @@ total:
 ---
 
 ---
-{"id":431165486,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOPHxSXM4ZsxAu","tag_name":"v2.6.1","target_commitish":"main","name":"v2.6.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-02T07:14:49Z","updated_at":"2026-11-02T07:44:01Z","published_at":"2026-11-02T07:17:44Z","assets":[{"id":700878044,"node_id":"RA_kwDOPHxSXM4pxozc","name":"torrra_v2.6.1_linux_x86_64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":45289208,"digest":"sha256:7dc76bb00e10793ff463f68fe074623690bc45aa1acd75b18787fcb4eafd27b9","download_count":54,"created_at":"2026-11-02T07:17:42Z","updated_at":"2026-11-02T07:17:43Z"},{"id":700878174,"node_id":"RA_kwDOPHxSXM4pxo1e","name":"torrra_v2.6.1_macos_arm64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":23063472,"digest":"sha256:6bfb05985238e1996893e98d14218d33b1f9673beffb4979a81deee7a3620f0b","download_count":2,"created_at":"2026-11-02T07:17:45Z","updated_at":"2026-11-02T07:17:47Z"},{"id":700878221,"node_id":"RA_kwDOPHxSXM4pxo2N","name":"torrra_v2.6.1_windows_x86_64.exe","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-msdos-program","state":"uploaded","size":24319016,"digest":"sha256:dd6bace601d7b2a08f449885c046a59edd93e364cdeda6593c9f339abfd89253","download_count":72,"created_at":"2026-11-02T07:17:48Z","updated_at":"2026-11-02T07:17:49Z"}],"body":"## What's Changed\n\n- **Python 3.14 installs are now rejected.** `torrra` declares `Requires-Python: <3.14` because `libtorrent` still has no cp314 wheels. Previously, installing on Python 3.14 could silently resolve to an ancient `torrra` 0.1.2.\n- If 3.14 is your default interpreter, use `uv tool install torrra --python 3.13` (or `pipx install --python 3.13 torrra`).\n- Documented the Python requirements and the workaround in the installation guide.\n- CI now actually tests Python 3.10–3.13 (the matrix previously always ran 3.13 because `.python-version` took precedence).\n\n**Full Changelog**: https://github.com/stabldev/torrra/compare/v2.6.0...v2.6.1\n"}
+{"id":431165486,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOPHxSXM4ZsxAu","tag_name":"v2.6.1","target_commitish":"main","name":"v2.6.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-02T07:14:49Z","updated_at":"2026-11-02T07:44:01Z","published_at":"2026-11-02T07:17:44Z","assets":[{"id":700878044,"node_id":"RA_kwDOPHxSXM4pxozc","name":"torrra_v2.6.1_linux_x86_64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":45289208,"digest":"sha256:7dc76bb00e10793ff463f68fe074623690bc45aa1acd75b18787fcb4eafd27b9","download_count":58,"created_at":"2026-11-02T07:17:42Z","updated_at":"2026-11-02T07:17:43Z"},{"id":700878174,"node_id":"RA_kwDOPHxSXM4pxo1e","name":"torrra_v2.6.1_macos_arm64","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":23063472,"digest":"sha256:6bfb05985238e1996893e98d14218d33b1f9673beffb4979a81deee7a3620f0b","download_count":2,"created_at":"2026-11-02T07:17:45Z","updated_at":"2026-11-02T07:17:47Z"},{"id":700878221,"node_id":"RA_kwDOPHxSXM4pxo2N","name":"torrra_v2.6.1_windows_x86_64.exe","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-msdos-program","state":"uploaded","size":24319016,"digest":"sha256:dd6bace601d7b2a08f449885c046a59edd93e364cdeda6593c9f339abfd89253","download_count":82,"created_at":"2026-11-02T07:17:48Z","updated_at":"2026-11-02T07:17:49Z"}],"body":"## What's Changed\n\n- **Python 3.14 installs are now rejected.** `torrra` declares `Requires-Python: <3.14` because `libtorrent` still has no cp314 wheels. Previously, installing on Python 3.14 could silently resolve to an ancient `torrra` 0.1.2.\n- If 3.14 is your default interpreter, use `uv tool install torrra --python 3.13` (or `pipx install --python 3.13 torrra`).\n- Documented the Python requirements and the workaround in the installation guide.\n- CI now actually tests Python 3.10–3.13 (the matrix previously always ran 3.13 because `.python-version` took precedence).\n\n**Full Changelog**: https://github.com/stabldev/torrra/compare/v2.6.0...v2.6.1\n"}

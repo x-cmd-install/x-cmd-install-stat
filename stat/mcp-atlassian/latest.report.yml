@@ -2,97 +2,97 @@ about:
   description: "MCP server for Atlassian tools (Confluence, Jira)"
   license: MIT
   homepage: https://mcp-atlassian.soomiles.com
-  head: 4773efc
+  head: 545c31c
   archived: false
-  latestVersion: "v0.24.1"
-  latestRelease: "v0.24.1"
+  latestVersion: "v0.24.2"
+  latestRelease: "v0.24.2"
   latestPrerelease: ""
-  collectedAt: 2026-11-11T06:27:39Z
+  collectedAt: 2026-11-12T07:34:35Z
 timeline:
   created: 2024-12-03
-  lastCommit: 2026-11-10
-  lastVersion: 2026-11-08
-  lastRelease: 2026-11-08
+  lastCommit: 2026-11-12
+  lastVersion: 2026-11-12
+  lastRelease: 2026-11-12
   lastPrerelease: 
 popularity:
-  star: 6112
+  star: 6114
   watcher: 23
-  fork: 1449
-  release: 76
+  fork: 1452
+  release: 77
   contributor: 220
-  pullRequest: 1086
+  pullRequest: 1089
   issue: 619
 language:
-  Python: 4979813
+  Python: 4995025
   Shell: 14636
   Jinja: 5658
   Dockerfile: 2417
   Go Template: 1668
-totalBytes: 5004192
+totalBytes: 5019404
 recent:
   last30d:
-    since: 2026-10-12
-    release: 2
+    since: 2026-10-13
+    release: 3
     mergedPR: 7
-    openPR: 47
+    openPR: 49
     closedIssue: 0
-    openIssue: 27
-    commit: 37
+    openIssue: 26
+    commit: 38
   last60d:
-    since: 2026-09-12
-    release: 2
-    mergedPR: 11
-    openPR: 86
+    since: 2026-09-13
+    release: 3
+    mergedPR: 10
+    openPR: 83
     closedIssue: 3
     openIssue: 50
-    commit: 38
+    commit: 39
   last90d:
-    since: 2026-08-13
-    release: 3
-    mergedPR: 36
-    openPR: 109
+    since: 2026-08-14
+    release: 4
+    mergedPR: 35
+    openPR: 111
     closedIssue: 16
-    openIssue: 73
-    commit: 61
+    openIssue: 72
+    commit: 62
   last180d:
-    since: 2026-05-15
-    release: 6
+    since: 2026-05-16
+    release: 7
     mergedPR: 115
-    openPR: 129
+    openPR: 131
     closedIssue: 56
     openIssue: 93
-    commit: 199
+    commit: 200
   last360d:
-    since: 2025-11-16
-    release: 27
+    since: 2025-11-17
+    release: 28
     mergedPR: 376
-    openPR: 149
+    openPR: 151
     closedIssue: 173
     openIssue: 153
-    commit: 427
+    commit: 428
   last720d:
-    since: 2024-11-21
-    release: 76
+    since: 2024-11-22
+    release: 77
     mergedPR: 681
-    openPR: 149
+    openPR: 151
     closedIssue: 422
     openIssue: 197
-    commit: 760
+    commit: 761
 total:
-  release: 76
+  release: 77
   mergedPR: 681
-  openPR: 149
+  openPR: 151
   closedIssue: 422
   openIssue: 197
-  commit: 760
+  commit: 761
 ---
 path: /home/runner/.x-repo/github.com/sooperset/mcp-atlassian
-collectedAt: 2026-11-11T06:27:41Z
+collectedAt: 2026-11-12T07:34:38Z
 loc:
   Python:
-    code: 112693
-    comments: 6149
-    blanks: 18036
+    code: 113037
+    comments: 6152
+    blanks: 18115
     files: 301
   Yaml:
     code: 1118
@@ -145,11 +145,11 @@ loc:
     blanks: 29
     files: 1
 total:
-  code: 114922
-  comments: 7032
-  blanks: 18582
+  code: 115266
+  comments: 7035
+  blanks: 18661
   files: 378
 ---
 
 ---
-{"id":438330261,"author":{"login":"sooperset","id":32061883,"node_id":"MDQ6VXNlcjMyMDYxODgz","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDONYN7OM4aIGOV","tag_name":"v0.24.1","target_commitish":"73879ec28e8aebdb9b2d012c2b6eeaa7da63f63e","name":"v0.24.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-08T13:32:46Z","updated_at":"2026-11-08T15:23:06Z","published_at":"2026-11-08T15:23:06Z","assets":[],"body":"## 🔒 Security\n\nThis release fixes security issues reported privately. Details are in each advisory. Upgrade if you run the HTTP transports (`sse`, `streamable-http`), use `JIRA_PROJECTS_FILTER` / `CONFLUENCE_SPACES_FILTER`, or let tools read and write files on the server.\n\n**Project and space filters**\n- GHSA-xv8h-26ch-vfh9: the project and space filters now apply to every tool, including writes and header-PAT requests.\n- GHSA-7vjf-5wh5-87q7: user JQL and CQL can no longer step outside the filter.\n\n**Server-side requests and credentials**\n- GHSA-rh5v-38gg-q3jj, GHSA-jpxv-989p-f3pf: URLs supplied in request headers are no longer trusted like the operator's URLs.\n- GHSA-3c6h-qwx8-hjcm, GHSA-3qhx-3fh4-8w9v: credentials, custom headers and the operator proxy go only to the exact configured origin.\n- GHSA-pwx2-x8g8-prvm: Forms API calls use the hardened session.\n- GHSA-85p8-f4j5-j5jp: IPv6 transition addresses are judged by their embedded IPv4.\n\n**Files and attachments**\n- GHSA-qh7q-jmc7-rc7j, GHSA-823g-2jmv-9gmc: tool file paths stay inside an explicit directory.\n- GHSA-cf68-pxw7-c8fr: Confluence attachment ids are validated.\n- GHSA-8ffx-6c2g-75cc: `remove_issue_link` takes only a numeric `link_id`.\n\n**Authentication and logs**\n- GHSA-2w5r-h8v2-c9cx: every method on the MCP transport paths is authenticated.\n- GHSA-5w8q-mmhc-55fp, GHSA-rwqj-c54w-32jr, GHSA-7876-w4xp-76fv: the OAuth setup callback binds to loopback, rejects a mismatched state, escapes its output and keeps secrets out of logs.\n- GHSA-cffg-pgvw-r443: debug header logs redact every non-standard header.\n\n## ⚠️ Upgrade notes\n\n- **File directory.** On `sse` and `streamable-http`, tools that read or write server files use `MCP_ATLASSIAN_FILES_DIR`, or `~/.mcp-atlassian/files` when it is unset. They no longer use the working directory. The server refuses to start if that directory is `/` or your home directory. stdio is unchanged.\n- **Filters apply everywhere.** With `JIRA_PROJECTS_FILTER` or `CONFLUENCE_SPACES_FILTER` set, each tool looks up the target's project or space before running and refuses if it can't confirm it. JQL and CQL must be one balanced expression. Issue output drops parent, subtask, link and epic references outside the filter. Boards without a project location are allowed only when all their projects are allowed.\n- **Exact origin for credentials.** Credentials go only to the scheme, host and port in `JIRA_URL` / `CONFLUENCE_URL`. If your Jira or Confluence base URL differs from that value (for example `http://` or `:8080`), attachment downloads can return 401. Add that host to `MCP_ALLOWED_URL_DOMAINS`.\n- **Transport auth.** All methods under `/mcp`, `/sse` and `/messages/` are authenticated, including `OPTIONS`. Handle CORS preflight in your reverse proxy.\n- **Warnings.** HTTP transports warn at startup when `MCP_ALLOWED_URL_DOMAINS` is unset; it becomes required in v0.25. Passing secrets as command-line options (`--jira-token` and similar) now warns; use environment variables or `--env-file`.\n- **OAuth setup.** `--oauth-setup` listens on 127.0.0.1 only. Use SSH port forwarding if your browser runs on another machine.\n- **Forms.** `form_id` must be a UUID.\n\n## Contributors\n\nThanks to everyone who reported these issues privately. Reporters are credited on each advisory.\n\n**Full Changelog**: https://github.com/sooperset/mcp-atlassian/compare/v0.24.0...v0.24.1\n"}
+{"id":442523568,"author":{"login":"sooperset","id":32061883,"node_id":"MDQ6VXNlcjMyMDYxODgz","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDONYN7OM4aYF-w","tag_name":"v0.24.2","target_commitish":"545c31ca6f59eb772daebe484d4e6ab25e099d12","name":"v0.24.2","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-12T03:43:30Z","updated_at":"2026-11-12T05:14:25Z","published_at":"2026-11-12T05:14:25Z","assets":[],"body":"## 🔒 Security\n\n- **Project filter: epic and parent references.** With `JIRA_PROJECTS_FILTER` set, `jira_get_issue` no longer fetches an epic in a project outside the filter, and no longer returns that epic's name or key. Creating, updating or transitioning an issue now refuses a parent, epic link or issue link that points outside the filter. This closes a gap left by the 0.24.1 filter fix. Advisory: GHSA-qx5g-fhgg-wm59. Thanks to @zohuyhieuzo03 for the report.\n\n## ✨ Features\n\n- **Transitions: required fields and `update_data`.** `jira_get_transitions` can list the fields a transition screen requires (`expand_fields`), and `jira_transition_issue` accepts `update_data`, for example a worklog when the screen requires Time Spent (#1335). Thanks to @0w1afk.\n\n## Upgrade notes\n\n- With `JIRA_PROJECTS_FILTER` set, `jira_get_issue` makes one extra Jira API call when the issue has an epic link, to check the epic's project.\n","mentions_count":2}
