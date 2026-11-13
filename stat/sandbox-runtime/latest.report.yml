@@ -2,26 +2,26 @@ about:
   description: "A lightweight sandboxing tool for enforcing filesystem and network restrictions on arbitrary processes at the OS level, without requiring a container."
   license: Apache-2.0
   homepage: 
-  head: 41501a6
+  head: 0bbebed
   archived: false
-  latestVersion: "v0.0.82"
-  latestRelease: "v0.0.82"
+  latestVersion: "v0.0.83"
+  latestRelease: "v0.0.83"
   latestPrerelease: ""
-  collectedAt: 2026-11-12T08:41:59Z
+  collectedAt: 2026-11-13T07:58:36Z
 timeline:
   created: 2025-10-20
-  lastCommit: 2026-11-11
-  lastVersion: 2026-11-09
-  lastRelease: 2026-11-09
+  lastCommit: 2026-11-12
+  lastVersion: 2026-11-13
+  lastRelease: 2026-11-13
   lastPrerelease: 
 popularity:
-  star: 7091
+  star: 7106
   watcher: 26
-  fork: 635
-  release: 45
+  fork: 634
+  release: 46
   contributor: 43
-  pullRequest: 623
-  issue: 195
+  pullRequest: 624
+  issue: 198
 language:
   TypeScript: 4115417
   JavaScript: 6649
@@ -29,63 +29,63 @@ language:
 totalBytes: 4122100
 recent:
   last30d:
-    since: 2026-10-13
-    release: 3
+    since: 2026-10-14
+    release: 4
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-13
-    release: 6
+    since: 2026-09-14
+    release: 7
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-14
-    release: 9
+    since: 2026-08-15
+    release: 10
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-16
-    release: 31
+    since: 2026-05-17
+    release: 32
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-17
-    release: 45
+    since: 2025-11-18
+    release: 46
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-22
-    release: 45
+    since: 2024-11-23
+    release: 46
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
 total:
-  release: 45
-  mergedPR: 365
-  openPR: 171
+  release: 46
+  mergedPR: 366
+  openPR: 168
   closedIssue: 41
-  openIssue: 154
-  commit: 895
+  openIssue: 157
+  commit: 896
 ---
 path: /home/runner/.x-repo/github.com/anthropic-experimental/sandbox-runtime
-collectedAt: 2026-11-12T08:42:04Z
+collectedAt: 2026-11-13T07:58:40Z
 loc:
   TypeScript:
     code: 87208
@@ -145,4 +145,4 @@ total:
 ---
 
 ---
-{"id":439771825,"author":{"login":"ig-ant","id":278458262,"node_id":"U_kgDOEJjvlg","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQFjJqM4aNmKx","tag_name":"v0.0.82","target_commitish":"f7a0f19fd3b4437bcf808f9c18c1f73e9f1a9889","name":"v0.0.82","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-09T23:19:19Z","updated_at":"2026-11-09T23:38:47Z","published_at":"2026-11-09T23:38:47Z","assets":[],"body":"### Changed\r\n\r\n- **Windows: the profile read grant is narrower.** It now covers a built-in list of tool directories instead of the whole profile, and `initialize()` upgrades an older grant by itself. Tools only in `scoop`, `.local`, uv's folders or elsewhere under `.config` need adding with `srt-win profile grant --include`. (#767)\r\n- **`network.mitmProxy`:** a SOCKS connection to a `mitmProxy.domains` host now goes through the MITM socket, as an HTTP CONNECT already did, so a TLS client on it has to trust that proxy's CA. (#764)\r\n\r\n### New\r\n\r\n- **Windows: opt-in MXC BaseContainer backend.** Set `windows.backend: 'mxc'` and start commands with `SandboxManager.spawnSandboxed()`. Needs Node 24+ and the optional dependency `@microsoft/mxc-sdk`. MSYS2 programs, Git Bash included, don't run under it yet. (#766)\r\n\r\n### Fixed\r\n\r\n- The HTTP proxy logs only fixed fields of an upstream error, since a message or stack can carry credentials. (#766)\r\n- Windows error messages print the correct `npx @anthropic-ai/sandbox-runtime windows-install`. (#774)"}
+{"id":443739498,"author":{"login":"ig-ant","id":278458262,"node_id":"U_kgDOEJjvlg","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQFjJqM4acu1q","tag_name":"v0.0.83","target_commitish":"0bbebed0aa9a8e628dc4df8bc30293550a1988eb","name":"v0.0.83","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-12T22:34:05Z","updated_at":"2026-11-13T02:21:12Z","published_at":"2026-11-13T02:21:12Z","assets":[],"body":"### Changed\r\n\r\n- **Windows MXC backend:** `@microsoft/mxc-sdk` is now an optional peer dependency. npm users of `windows.backend: 'mxc'` must install it themselves or pass `windowsMxcSdk`. (#822)\r\n\r\n### New\r\n\r\n- **Windows MXC backend:** `initialize()` accepts `windowsMxcSdk`, so an embedding program can supply its own MXC SDK. The `MxcSdk` types are exported. (#820)\r\n- **Windows MXC backend:** `spawnSandboxed()` accepts `env` for the child process. (#822)"}

@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.13.3"
   latestRelease: "v0.13.3"
   latestPrerelease: ""
-  collectedAt: 2026-11-12T06:47:29Z
+  collectedAt: 2026-11-13T06:03:55Z
 timeline:
   created: 2023-10-06
   lastCommit: 2026-11-08
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-11-08
   lastPrerelease: 
 popularity:
-  star: 158442
-  watcher: 683
-  fork: 23036
+  star: 158527
+  watcher: 682
+  fork: 23046
   release: 181
   contributor: 881
-  pullRequest: 12881
-  issue: 11076
+  pullRequest: 12925
+  issue: 11143
 language:
   Svelte: 5460653
   Python: 5336795
@@ -38,63 +38,63 @@ language:
 totalBytes: 14489259
 recent:
   last30d:
-    since: 2026-10-13
+    since: 2026-10-14
     release: 9
-    mergedPR: 611
-    openPR: 69
-    closedIssue: 623
-    openIssue: 131
+    mergedPR: 609
+    openPR: 75
+    closedIssue: 650
+    openIssue: 155
     commit: 1081
   last60d:
-    since: 2026-09-13
+    since: 2026-09-14
     release: 11
-    mergedPR: 1104
-    openPR: 69
-    closedIssue: 1166
-    openIssue: 167
+    mergedPR: 1131
+    openPR: 75
+    closedIssue: 1196
+    openIssue: 188
     commit: 2058
   last90d:
-    since: 2026-08-14
+    since: 2026-08-15
     release: 14
-    mergedPR: 1315
-    openPR: 70
-    closedIssue: 1549
-    openIssue: 192
+    mergedPR: 1337
+    openPR: 76
+    closedIssue: 1585
+    openIssue: 217
     commit: 2664
   last180d:
-    since: 2026-05-16
+    since: 2026-05-17
     release: 19
-    mergedPR: 1776
-    openPR: 72
-    closedIssue: 2365
-    openIssue: 205
+    mergedPR: 1800
+    openPR: 78
+    closedIssue: 2401
+    openIssue: 229
     commit: 4285
   last360d:
-    since: 2025-11-17
+    since: 2025-11-18
     release: 48
-    mergedPR: 2526
-    openPR: 74
-    closedIssue: 3937
-    openIssue: 216
+    mergedPR: 2552
+    openPR: 80
+    closedIssue: 3973
+    openIssue: 241
     commit: 6968
   last720d:
-    since: 2024-11-22
+    since: 2024-11-23
     release: 100
-    mergedPR: 3965
-    openPR: 75
-    closedIssue: 8068
-    openIssue: 229
-    commit: 13258
+    mergedPR: 3988
+    openPR: 81
+    closedIssue: 8097
+    openIssue: 254
+    commit: 13220
 total:
   release: 181
-  mergedPR: 5383
-  openPR: 75
-  closedIssue: 10839
-  openIssue: 237
+  mergedPR: 5410
+  openPR: 81
+  closedIssue: 10881
+  openIssue: 262
   commit: 20598
 ---
 path: /home/runner/.x-repo/github.com/open-webui/open-webui
-collectedAt: 2026-11-12T06:48:03Z
+collectedAt: 2026-11-13T06:04:33Z
 loc:
   Json:
     code: 329933
@@ -199,4 +199,4 @@ total:
 ---
 
 ---
-{"id":438605486,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOKdDCc84aJJau","tag_name":"v0.13.3","target_commitish":"main","name":"v0.13.3","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-08T23:48:12Z","updated_at":"2026-11-08T23:48:24Z","published_at":"2026-11-08T23:48:24Z","assets":[],"body":"\n### Added\n\n- 🦾 **Agents in automations.** The automation editor now lets you choose a terminal and working folder, then select a coding agent available there. Scheduled runs use that saved terminal and folder, and check that the terminal and agent are still available before starting. Agent automations send their results to a chat; channel destinations remain available for ordinary models. [Commit](https://github.com/open-webui/open-webui/commit/21fc016141c73a0e11b428c61bde20527bbc228a)\n- 📂 **Change terminal and folder during a chat.** You can now choose a different terminal or working folder after sending messages, including in temporary chats. Both controls remain disabled while a reply is being generated. [Commit](https://github.com/open-webui/open-webui/commit/a518ff1630b74ed6edd62538c5da4bb26cc6dd20)\n- 🇧🇷 **Brazilian Portuguese translations.** Added missing translations for terminal and folder controls, Git actions, spreadsheet editing, voice notes, tab shortcuts, notification sounds and tool settings. Updated the explanations for document retrieval, tool permissions and voice settings. [#33945](https://github.com/open-webui/open-webui/pull/33945)\n\n### Fixed\n\n- 📂 **Files tabs follow terminal changes.** Switching a chat to another terminal now updates its open Files tabs to show that terminal's files, instead of leaving the previous terminal's folders on screen. With a terminal set to \"Per chat\", the Files tab also switches to the chat's own files after the first message. [#33954](https://github.com/open-webui/open-webui/pull/33954)\n- 🧭 **Agents in unsupported model pickers.** Connecting a terminal no longer adds its coding agents to Admin Models, base-model selectors, Arena candidates, task-model settings, group defaults, sub-agent settings, channel mentions or the Playground. Notes also stop choosing a terminal agent for title generation. Agents cannot be saved or imported as custom models or their base models, and their chat menu no longer offers Edit. [Commit](https://github.com/open-webui/open-webui/commit/21fc016141c73a0e11b428c61bde20527bbc228a), [Commit](https://github.com/open-webui/open-webui/commit/6d3123b5b4a90962bff44c69c7e0bae0c65557d5)\n- 🔌 **Agent list after switching terminals.** Changing terminals immediately removes the previous terminal's agents from the chat's model list while the new list loads. A model-list request from a chat you have left can no longer replace the current list. [Commit](https://github.com/open-webui/open-webui/commit/21fc016141c73a0e11b428c61bde20527bbc228a)\n- 📋 **Copy buttons over plain HTTP.** At a plain HTTP address on your local network, copying comment links, search links, shared-chat links, webhook URLs, chat IDs, Git branch names, commit hashes and spreadsheet cells now works. Copy Formatted Text preserves formatting, and copied text keeps its final line break. [#33939](https://github.com/open-webui/open-webui/pull/33939)\n- 📝 **Clipboard prompts and Auto-Copy Response over plain HTTP.** Prompts using the clipboard placeholder now insert into chats and channels even when the browser blocks clipboard access, with a message explaining that the clipboard could not be read. Auto-Copy Response stays off and shows a permission message instead of silently failing to turn on; turning it off no longer requires clipboard access. [#33939](https://github.com/open-webui/open-webui/pull/33939)\n- 🧠 **DeepSeek thinking mode with skills, knowledge and memories.** These chats no longer fail with a missing reasoning error when the connection's Provider is set to \"llama.cpp\". DeepSeek thinking mode still requires that setting; connections using \"Default\" are unchanged. [#33950](https://github.com/open-webui/open-webui/pull/33950)\n- 🏷️ **Labels on grouped tool calls.** With Tool Call Labels enabled, a group of tool calls keeps the labels that are present even if one call has none. The unlabeled call shows its tool name instead of making the whole group lose its labels. [#33932](https://github.com/open-webui/open-webui/pull/33932)\n- 💬 **Tool labels in later replies.** The model now sees the labels it wrote for earlier tool calls when continuing a reply or answering another message, removing a reason it could stop writing labels as the conversation continued. [#33953](https://github.com/open-webui/open-webui/pull/33953)\n- 🔎 **Knowledge searches containing punctuation.** Searches in knowledge files now find text such as \"Art. 40\" when the model marks the period as literal punctuation, instead of returning no matches. [#33936](https://github.com/open-webui/open-webui/pull/33936)\n- 🪟 **Side Chat with Temporary Chat disabled.** Leaving Enforce Temporary Chat switched on while disabling Temporary Chat no longer prevents users from sending and saving side chats or dragging an existing chat into the side panel. [#33930](https://github.com/open-webui/open-webui/pull/33930)\n- 🏠 **Home folder tab title.** A Files tab at the connected machine's home directory now says \"Home\" instead of showing the directory name, including when reopening saved tabs. Other folders keep their names. [Commit](https://github.com/open-webui/open-webui/commit/241c8c0e47e19b0adeb13d577ca538d2252b0ad4)\n- 🦙 **Missing Ollama in Docker images.** Building the image that includes Ollama now fails if Ollama was not installed, instead of producing an image that cannot start Ollama after its download failed. [#33944](https://github.com/open-webui/open-webui/pull/33944)\n- 📄 **Errors after leaving a chat.** Closing or leaving a chat while its tab layout is being saved no longer fills the server log with an error report for the dropped connection. [#33929](https://github.com/open-webui/open-webui/pull/33929)\n\n","reactions":{"total_count":58,"+1":28,"-1":0,"laugh":3,"hooray":7,"confused":0,"heart":10,"rocket":5,"eyes":5}}
+{"id":438605486,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOKdDCc84aJJau","tag_name":"v0.13.3","target_commitish":"main","name":"v0.13.3","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-08T23:48:12Z","updated_at":"2026-11-08T23:48:24Z","published_at":"2026-11-08T23:48:24Z","assets":[],"body":"\n### Added\n\n- 🦾 **Agents in automations.** The automation editor now lets you choose a terminal and working folder, then select a coding agent available there. Scheduled runs use that saved terminal and folder, and check that the terminal and agent are still available before starting. Agent automations send their results to a chat; channel destinations remain available for ordinary models. [Commit](https://github.com/open-webui/open-webui/commit/21fc016141c73a0e11b428c61bde20527bbc228a)\n- 📂 **Change terminal and folder during a chat.** You can now choose a different terminal or working folder after sending messages, including in temporary chats. Both controls remain disabled while a reply is being generated. [Commit](https://github.com/open-webui/open-webui/commit/a518ff1630b74ed6edd62538c5da4bb26cc6dd20)\n- 🇧🇷 **Brazilian Portuguese translations.** Added missing translations for terminal and folder controls, Git actions, spreadsheet editing, voice notes, tab shortcuts, notification sounds and tool settings. Updated the explanations for document retrieval, tool permissions and voice settings. [#33945](https://github.com/open-webui/open-webui/pull/33945)\n\n### Fixed\n\n- 📂 **Files tabs follow terminal changes.** Switching a chat to another terminal now updates its open Files tabs to show that terminal's files, instead of leaving the previous terminal's folders on screen. With a terminal set to \"Per chat\", the Files tab also switches to the chat's own files after the first message. [#33954](https://github.com/open-webui/open-webui/pull/33954)\n- 🧭 **Agents in unsupported model pickers.** Connecting a terminal no longer adds its coding agents to Admin Models, base-model selectors, Arena candidates, task-model settings, group defaults, sub-agent settings, channel mentions or the Playground. Notes also stop choosing a terminal agent for title generation. Agents cannot be saved or imported as custom models or their base models, and their chat menu no longer offers Edit. [Commit](https://github.com/open-webui/open-webui/commit/21fc016141c73a0e11b428c61bde20527bbc228a), [Commit](https://github.com/open-webui/open-webui/commit/6d3123b5b4a90962bff44c69c7e0bae0c65557d5)\n- 🔌 **Agent list after switching terminals.** Changing terminals immediately removes the previous terminal's agents from the chat's model list while the new list loads. A model-list request from a chat you have left can no longer replace the current list. [Commit](https://github.com/open-webui/open-webui/commit/21fc016141c73a0e11b428c61bde20527bbc228a)\n- 📋 **Copy buttons over plain HTTP.** At a plain HTTP address on your local network, copying comment links, search links, shared-chat links, webhook URLs, chat IDs, Git branch names, commit hashes and spreadsheet cells now works. Copy Formatted Text preserves formatting, and copied text keeps its final line break. [#33939](https://github.com/open-webui/open-webui/pull/33939)\n- 📝 **Clipboard prompts and Auto-Copy Response over plain HTTP.** Prompts using the clipboard placeholder now insert into chats and channels even when the browser blocks clipboard access, with a message explaining that the clipboard could not be read. Auto-Copy Response stays off and shows a permission message instead of silently failing to turn on; turning it off no longer requires clipboard access. [#33939](https://github.com/open-webui/open-webui/pull/33939)\n- 🧠 **DeepSeek thinking mode with skills, knowledge and memories.** These chats no longer fail with a missing reasoning error when the connection's Provider is set to \"llama.cpp\". DeepSeek thinking mode still requires that setting; connections using \"Default\" are unchanged. [#33950](https://github.com/open-webui/open-webui/pull/33950)\n- 🏷️ **Labels on grouped tool calls.** With Tool Call Labels enabled, a group of tool calls keeps the labels that are present even if one call has none. The unlabeled call shows its tool name instead of making the whole group lose its labels. [#33932](https://github.com/open-webui/open-webui/pull/33932)\n- 💬 **Tool labels in later replies.** The model now sees the labels it wrote for earlier tool calls when continuing a reply or answering another message, removing a reason it could stop writing labels as the conversation continued. [#33953](https://github.com/open-webui/open-webui/pull/33953)\n- 🔎 **Knowledge searches containing punctuation.** Searches in knowledge files now find text such as \"Art. 40\" when the model marks the period as literal punctuation, instead of returning no matches. [#33936](https://github.com/open-webui/open-webui/pull/33936)\n- 🪟 **Side Chat with Temporary Chat disabled.** Leaving Enforce Temporary Chat switched on while disabling Temporary Chat no longer prevents users from sending and saving side chats or dragging an existing chat into the side panel. [#33930](https://github.com/open-webui/open-webui/pull/33930)\n- 🏠 **Home folder tab title.** A Files tab at the connected machine's home directory now says \"Home\" instead of showing the directory name, including when reopening saved tabs. Other folders keep their names. [Commit](https://github.com/open-webui/open-webui/commit/241c8c0e47e19b0adeb13d577ca538d2252b0ad4)\n- 🦙 **Missing Ollama in Docker images.** Building the image that includes Ollama now fails if Ollama was not installed, instead of producing an image that cannot start Ollama after its download failed. [#33944](https://github.com/open-webui/open-webui/pull/33944)\n- 📄 **Errors after leaving a chat.** Closing or leaving a chat while its tab layout is being saved no longer fills the server log with an error report for the dropped connection. [#33929](https://github.com/open-webui/open-webui/pull/33929)\n\n","reactions":{"total_count":63,"+1":32,"-1":0,"laugh":3,"hooray":7,"confused":0,"heart":10,"rocket":5,"eyes":6}}

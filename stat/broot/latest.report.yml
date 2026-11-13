@@ -2,20 +2,20 @@ about:
   description: "A new way to see and navigate directory trees"
   license: MIT
   homepage: https://dystroy.org/broot
-  head: 8becd44
+  head: deed475
   archived: false
   latestVersion: "v1.62.0"
   latestRelease: "v1.62.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-12T07:26:40Z
+  collectedAt: 2026-11-13T06:54:54Z
 timeline:
   created: 2018-11-15
-  lastCommit: 2026-11-11
+  lastCommit: 2026-11-12
   lastVersion: 2026-11-01
   lastRelease: 2026-11-01
   lastPrerelease: 
 popularity:
-  star: 13165
+  star: 13174
   watcher: 58
   fork: 328
   release: 228
@@ -23,73 +23,73 @@ popularity:
   pullRequest: 353
   issue: 834
 language:
-  Rust: 1380167
+  Rust: 1380119
   Shell: 33475
   CSS: 14269
   JavaScript: 2002
-totalBytes: 1429913
+totalBytes: 1429865
 recent:
   last30d:
-    since: 2026-10-13
+    since: 2026-10-14
     release: 1
     mergedPR: 1
     openPR: 0
     closedIssue: 1
     openIssue: 1
-    commit: 13
+    commit: 15
   last60d:
-    since: 2026-09-13
+    since: 2026-09-14
     release: 3
     mergedPR: 4
     openPR: 2
     closedIssue: 3
     openIssue: 4
-    commit: 50
+    commit: 52
   last90d:
-    since: 2026-08-14
+    since: 2026-08-15
     release: 6
-    mergedPR: 13
+    mergedPR: 12
     openPR: 2
     closedIssue: 7
     openIssue: 7
-    commit: 95
+    commit: 97
   last180d:
-    since: 2026-05-16
+    since: 2026-05-17
     release: 8
     mergedPR: 34
     openPR: 3
     closedIssue: 15
     openIssue: 7
-    commit: 158
+    commit: 160
   last360d:
-    since: 2025-11-17
+    since: 2025-11-18
     release: 15
     mergedPR: 53
     openPR: 5
     closedIssue: 39
     openIssue: 11
-    commit: 229
+    commit: 231
   last720d:
-    since: 2024-11-22
+    since: 2024-11-23
     release: 36
     mergedPR: 107
     openPR: 5
     closedIssue: 107
     openIssue: 29
-    commit: 434
+    commit: 436
 total:
   release: 228
   mergedPR: 291
   openPR: 9
   closedIssue: 739
   openIssue: 95
-  commit: 2167
+  commit: 2169
 ---
 path: /home/runner/.x-repo/github.com/Canop/broot
-collectedAt: 2026-11-12T07:26:42Z
+collectedAt: 2026-11-13T06:54:56Z
 loc:
   Rust:
-    code: 36350
+    code: 36349
     comments: 1027
     blanks: 1993
     files: 239
@@ -124,7 +124,7 @@ loc:
     blanks: 1708
     files: 33
 total:
-  code: 38862
+  code: 38861
   comments: 7095
   blanks: 4006
   files: 300
@@ -221,4 +221,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 2 are checked with a SAST tool'
 ---
-{"id":430713003,"author":{"login":"Canop","id":617006,"node_id":"MDQ6VXNlcjYxNzAwNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCWdTec4ZrCir","tag_name":"v1.62.0","target_commitish":"main","name":"broot v1.62.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-01T16:03:34Z","updated_at":"2026-11-01T16:41:53Z","published_at":"2026-11-01T16:41:53Z","assets":[{"id":698888099,"node_id":"RA_kwDOCWdTec4pqC-j","name":"broot_1.62.0.zip","label":null,"uploader":{"login":"Canop","id":617006,"node_id":"MDQ6VXNlcjYxNzAwNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":68129888,"digest":"sha256:13630ae5d3b011ddc81fca05cb80dbee6189dad3ba393dd477f5f687c7b5106d","download_count":2471,"created_at":"2026-11-01T16:41:31Z","updated_at":"2026-11-01T16:41:47Z"}],"body":"- fix nushell launcher rejected by upcoming nushell versions (reserved `--help` flag) - Fix #1230\r\n- an invalid flag in a verb argument, eg `{file:space_separated}`, is now reported as a configuration error\r\n- a flag in the `terminal_title` pattern, where flags have no effect, is now a configuration error\r\n- an unknown argument in a verb, eg `{flie}`, is now reported as a configuration error\r\n- an unknown argument in the `terminal_title` pattern is now a configuration error\r\n- a `path-from-parent` or `path-from-directory` flag on an argument provided by broot, eg `{file:path-from-parent}`, is now a configuration error\r\n- contradictory or repeated flags on a verb argument, eg `{file:space-separated,comma-separated}`, are now a configuration error\r\n- a space between the flags of a verb argument no longer breaks the argument when the execution is given as a single string\r\n- fix quotes in verb executions, broken since 1.56: quotes of an execution given as a single string were passed to the program, and items of an array with spaces weren't quoted when run through a shell\r\n- in a command run through a shell, all inserted values are now escaped, not only paths (eg `{file-name}`), and an empty value is passed as an empty argument\r\n- a `path-from-parent` argument now starts from the selection itself when it has no parent (the filesystem root), instead of being empty\r\n- an invalid verb in the configuration now prevents broot from starting, with an error giving its file and definition\r\n- errors displayed on exit are now highlighted\r\n- a verb argument defined in the invocation, eg `{file}` in `invocation: \"say {file}\"`, now takes precedence over the standard argument with the same name\r\n- tab completion of the argument of `:copy`, `:move`, or of verbs using `path-from-parent` or `path-from-directory`, now starts from the directory the command will use\r\n- client-server features (`--listen`, `--send`, `--get-root`) now available on Windows - Fix #1206\r\n- on Windows, a trailing `\\` in a verb argument path is now kept after normalization\r\n- the `mode` of a preview transformer is now applied when no preview mode is requested - Thanks @matthewhadley\r\n- more nerdfont icons: hjson, Docker, README, envrc, LLVM, CMake, gdb, ghci, Cabal, fish, Nix, Just, ignore files, jsonc, jsonl - Thanks @noahkawaguchi\r\n","reactions":{"total_count":7,"+1":4,"-1":0,"laugh":1,"hooray":0,"confused":0,"heart":2,"rocket":0,"eyes":0},"mentions_count":2}
+{"id":430713003,"author":{"login":"Canop","id":617006,"node_id":"MDQ6VXNlcjYxNzAwNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCWdTec4ZrCir","tag_name":"v1.62.0","target_commitish":"main","name":"broot v1.62.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-01T16:03:34Z","updated_at":"2026-11-01T16:41:53Z","published_at":"2026-11-01T16:41:53Z","assets":[{"id":698888099,"node_id":"RA_kwDOCWdTec4pqC-j","name":"broot_1.62.0.zip","label":null,"uploader":{"login":"Canop","id":617006,"node_id":"MDQ6VXNlcjYxNzAwNg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":68129888,"digest":"sha256:13630ae5d3b011ddc81fca05cb80dbee6189dad3ba393dd477f5f687c7b5106d","download_count":2651,"created_at":"2026-11-01T16:41:31Z","updated_at":"2026-11-01T16:41:47Z"}],"body":"- fix nushell launcher rejected by upcoming nushell versions (reserved `--help` flag) - Fix #1230\r\n- an invalid flag in a verb argument, eg `{file:space_separated}`, is now reported as a configuration error\r\n- a flag in the `terminal_title` pattern, where flags have no effect, is now a configuration error\r\n- an unknown argument in a verb, eg `{flie}`, is now reported as a configuration error\r\n- an unknown argument in the `terminal_title` pattern is now a configuration error\r\n- a `path-from-parent` or `path-from-directory` flag on an argument provided by broot, eg `{file:path-from-parent}`, is now a configuration error\r\n- contradictory or repeated flags on a verb argument, eg `{file:space-separated,comma-separated}`, are now a configuration error\r\n- a space between the flags of a verb argument no longer breaks the argument when the execution is given as a single string\r\n- fix quotes in verb executions, broken since 1.56: quotes of an execution given as a single string were passed to the program, and items of an array with spaces weren't quoted when run through a shell\r\n- in a command run through a shell, all inserted values are now escaped, not only paths (eg `{file-name}`), and an empty value is passed as an empty argument\r\n- a `path-from-parent` argument now starts from the selection itself when it has no parent (the filesystem root), instead of being empty\r\n- an invalid verb in the configuration now prevents broot from starting, with an error giving its file and definition\r\n- errors displayed on exit are now highlighted\r\n- a verb argument defined in the invocation, eg `{file}` in `invocation: \"say {file}\"`, now takes precedence over the standard argument with the same name\r\n- tab completion of the argument of `:copy`, `:move`, or of verbs using `path-from-parent` or `path-from-directory`, now starts from the directory the command will use\r\n- client-server features (`--listen`, `--send`, `--get-root`) now available on Windows - Fix #1206\r\n- on Windows, a trailing `\\` in a verb argument path is now kept after normalization\r\n- the `mode` of a preview transformer is now applied when no preview mode is requested - Thanks @matthewhadley\r\n- more nerdfont icons: hjson, Docker, README, envrc, LLVM, CMake, gdb, ghci, Cabal, fish, Nix, Just, ignore files, jsonc, jsonl - Thanks @noahkawaguchi\r\n","reactions":{"total_count":7,"+1":4,"-1":0,"laugh":1,"hooray":0,"confused":0,"heart":2,"rocket":0,"eyes":0},"mentions_count":2}

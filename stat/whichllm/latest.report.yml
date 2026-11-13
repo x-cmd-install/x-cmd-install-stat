@@ -2,94 +2,94 @@ about:
   description: "Find the local LLM that actually runs and performs best on your hardware. Ranked by real, recency-aware benchmarks, not parameter count. One command, run it instantly."
   license: MIT
   homepage: 
-  head: 3f631fb
+  head: f72d41f
   archived: false
-  latestVersion: "v0.6.6"
-  latestRelease: "v0.6.6"
+  latestVersion: "v0.6.7"
+  latestRelease: "v0.6.7"
   latestPrerelease: ""
-  collectedAt: 2026-11-12T06:44:16Z
+  collectedAt: 2026-11-13T06:00:09Z
 timeline:
   created: 2026-03-04
-  lastCommit: 2026-11-11
-  lastVersion: 2026-11-11
-  lastRelease: 2026-11-11
+  lastCommit: 2026-11-12
+  lastVersion: 2026-11-12
+  lastRelease: 2026-11-12
   lastPrerelease: 
 popularity:
-  star: 6832
-  watcher: 24
+  star: 6830
+  watcher: 23
   fork: 378
-  release: 30
+  release: 31
   contributor: 33
-  pullRequest: 217
+  pullRequest: 225
   issue: 80
 language:
-  Python: 1469086
+  Python: 1471918
   Tape: 1400
-totalBytes: 1470486
+totalBytes: 1473318
 recent:
   last30d:
-    since: 2026-10-13
-    release: 9
-    mergedPR: 107
-    openPR: 0
+    since: 2026-10-14
+    release: 10
+    mergedPR: 112
+    openPR: 3
     closedIssue: 2
     openIssue: 5
-    commit: 104
+    commit: 106
   last60d:
-    since: 2026-09-13
-    release: 13
-    mergedPR: 119
-    openPR: 0
+    since: 2026-09-14
+    release: 14
+    mergedPR: 121
+    openPR: 3
     closedIssue: 5
     openIssue: 6
-    commit: 127
+    commit: 129
   last90d:
-    since: 2026-08-14
+    since: 2026-08-15
     release: 14
-    mergedPR: 125
-    openPR: 0
+    mergedPR: 129
+    openPR: 3
     closedIssue: 7
     openIssue: 6
-    commit: 132
+    commit: 134
   last180d:
-    since: 2026-05-16
-    release: 27
-    mergedPR: 187
-    openPR: 0
-    closedIssue: 52
+    since: 2026-05-17
+    release: 25
+    mergedPR: 189
+    openPR: 3
+    closedIssue: 49
     openIssue: 6
-    commit: 204
+    commit: 206
   last360d:
-    since: 2025-11-17
-    release: 30
-    mergedPR: 203
-    openPR: 0
+    since: 2025-11-18
+    release: 31
+    mergedPR: 208
+    openPR: 3
     closedIssue: 74
     openIssue: 6
-    commit: 355
+    commit: 357
   last720d:
-    since: 2024-11-22
-    release: 30
-    mergedPR: 203
-    openPR: 0
+    since: 2024-11-23
+    release: 31
+    mergedPR: 208
+    openPR: 3
     closedIssue: 74
     openIssue: 6
-    commit: 451
+    commit: 454
 total:
-  release: 30
-  mergedPR: 204
-  openPR: 0
+  release: 31
+  mergedPR: 209
+  openPR: 3
   closedIssue: 74
   openIssue: 6
-  commit: 451
+  commit: 454
 ---
 path: /home/runner/.x-repo/github.com/Andyyyy64/whichllm
-collectedAt: 2026-11-12T06:44:20Z
+collectedAt: 2026-11-13T06:00:10Z
 loc:
   Python:
-    code: 34743
-    comments: 1403
-    blanks: 6703
+    code: 34786
+    comments: 1413
+    blanks: 6713
     files: 204
   Json:
     code: 4909
@@ -103,15 +103,15 @@ loc:
     files: 2
   Markdown:
     code: 0
-    comments: 3135
-    blanks: 946
+    comments: 3153
+    blanks: 949
     files: 12
 total:
-  code: 40441
-  comments: 4561
-  blanks: 7722
+  code: 40484
+  comments: 4589
+  blanks: 7735
   files: 240
 ---
 
 ---
-{"id":441985506,"author":{"login":"Andyyyy64","id":105579829,"node_id":"U_kgDOBksFNQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOReQROs4aWCni","tag_name":"v0.6.6","target_commitish":"3f631fb4f28def136115a268877e1bb069ef05d4","name":"v0.6.6","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-11T17:15:40Z","updated_at":"2026-11-11T17:15:45Z","published_at":"2026-11-11T17:15:45Z","assets":[],"body":"# whichllm 0.6.6\n\nA fix for a crash at start. If you installed or upgraded whichllm since November 9 and it stopped with the error below, this release is for you.\n\n```\nTypeError: Option() got an unexpected keyword argument 'click_type'\n```\n\n## What happened\n\ntyper, the library whichllm's command line is built on, released 0.29.0 on November 9 and removed an argument that `--context-length` used. whichllm asked for `typer>=0.9` with no upper bound, so a fresh `pip install whichllm` or `uvx whichllm` got the new typer and failed at import. That hit every whichllm release, not only the newest. Homebrew installs pin their dependencies and kept working, and so did any install from before November 9.\n\nI found it on November 12, running 0.6.5 on Windows from a clean environment. Nobody had reported it. My tests run against locked dependencies, with an older typer, so they kept passing.\n\n## What changed\n\n- `--context-length` no longer uses the removed argument. It behaves as before. `64k` is 65536, and a bad value says why.\n- whichllm now asks for typer 0.15 or newer. typer 0.9, the old lower bound, doesn't work with current click anyway.\n- The tests now also run against the newest release of every dependency, on every push and once a day. A failed daily run opens an issue, so the next break of this kind shows up within a day and not when a user hits it.\n\n## How it was checked\n\nAll 1,986 tests pass with the locked dependencies and with the newest ones (typer 0.29.1). The same option code was tried on typer 0.15.4, 0.24.1, 0.28.0 and 0.29.1. A wheel of this release, installed on Windows with the newest dependencies, ran the ranking, `engines`, `plan`, `upgrade`, `hardware` and the JSON output.\n\n## Upgrade\n\n```bash\nuv tool upgrade whichllm\npip install -U whichllm\nbrew upgrade whichllm\n```\n\nEverything else is in [CHANGELOG.md](https://github.com/Andyyyy64/whichllm/blob/main/CHANGELOG.md).\n"}
+{"id":442925536,"author":{"login":"Andyyyy64","id":105579829,"node_id":"U_kgDOBksFNQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOReQROs4aZoHg","tag_name":"v0.6.7","target_commitish":"f72d41f75979a0430c358c56fac7a2da3fdcb626","name":"v0.6.7","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-12T12:35:34Z","updated_at":"2026-11-12T12:35:49Z","published_at":"2026-11-12T12:35:49Z","assets":[],"body":"# whichllm 0.6.7\n\nA fix for the pack whichllm names under a model. On some PCs it named a pack built for a PC one size bigger, with the speed measured on that bigger PC.\n\n## What happened\n\nOn my PC, an RTX 5080 with 16 GB and 64 GB of RAM, 0.6.6 named Abyss's 24G64G pack under Qwen3.8-Flash-Next, with the 69.9 tok/s its docs measured on a 24 GB GPU. `whichllm engines` counted 8 of Abyss's 15 packs where 6 fit. It only showed up once the disk had room for the bigger pack.\n\nTwo things added up.\n\n- Abyss's card gave each pack's memory as the GPU plus the memory limit the author tests with, 58 GB for a 64 GB PC. whichllm compares that with all of a PC's RAM, so the PC started 5 GB ahead.\n- The 4% allowance from 0.6.5, for a PC that reports under the size it is sold as, was taken off what a pack needs. That also shrank needs that are measured figures and no PC size.\n\nThe PC reports 15.9 + 63.3 = 79.2 GB, and the pack's 82 GB less 4% is 78.7.\n\n## What changed\n\n- The allowance is now on the machine's side. RAM or VRAM within 4% under a size PCs are sold with counts as that size, so 63.3 GB is 64 and 15.9 is 16. A pack's need is compared as written.\n- Abyss's packs give the GPU and RAM of the PC they are named for, together. 24G64G is 88 GB.\n- Strata's Coder IQ1_M pack needs 33 GB of RAM and no longer counts as in memory on a 32 GB PC that reports 31.9 GB. It reads from the SSD there, as its docs say.\n- Strata's DeepSeek V4.1 packs at 1.75 and 2.25 bpw need 121 and 155 GB. They no longer count as in memory on a 24 GB GPU with 96 and 128 GB of RAM.\n\nEvery fit the new rule allows, the old one allowed too, so nothing new starts to fit. If 0.6.6 named a pack for you and 0.6.7 names a smaller one, the smaller one is the one built for your PC.\n\n## How it was checked\n\nI compared the new rule with 0.6.6 over 154 PCs, 11 GPU sizes by 14 RAM sizes as they report themselves, for every engine but Abyss. The three Strata packs above are the only ones that change. A new test walks every Abyss pack named for a PC. The pack fits that PC as it reports itself, and doesn't fit in memory on the next PC down. With my PC's sizes whichllm names the 16G64G pack with 70.7 tok/s and counts 6 of 15. All 1,989 tests pass.\n\n## Upgrade\n\n```bash\nuv tool upgrade whichllm\npip install -U whichllm\nbrew upgrade whichllm\n```\n\nEverything else is in [CHANGELOG.md](https://github.com/Andyyyy64/whichllm/blob/main/CHANGELOG.md).\n"}
