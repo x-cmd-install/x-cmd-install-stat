@@ -2,26 +2,26 @@ about:
   description: "Linux virtual machines, with a focus on running containers"
   license: Apache-2.0
   homepage: https://lima-vm.io/
-  head: 66561e7
+  head: 55fb022
   archived: false
   latestVersion: "v2.3.0"
   latestRelease: "v2.3.0"
   latestPrerelease: "v2.3.0-rc.0"
-  collectedAt: 2026-11-13T06:56:38Z
+  collectedAt: 2026-11-14T06:25:49Z
 timeline:
   created: 2021-05-14
-  lastCommit: 2026-11-12
+  lastCommit: 2026-11-13
   lastVersion: 2026-11-06
   lastRelease: 2026-11-06
   lastPrerelease: 2026-10-30
 popularity:
-  star: 22338
+  star: 22347
   watcher: 88
-  fork: 1002
+  fork: 1003
   release: 106
   contributor: 243
-  pullRequest: 3690
-  issue: 1633
+  pullRequest: 3695
+  issue: 1635
 language:
   Go: 2087480
   Shell: 495157
@@ -35,63 +35,63 @@ language:
 totalBytes: 2644530
 recent:
   last30d:
-    since: 2026-10-14
+    since: 2026-10-15
     release: 2
-    mergedPR: 82
-    openPR: 25
-    closedIssue: 23
-    openIssue: 25
-    commit: 100
+    mergedPR: 79
+    openPR: 29
+    closedIssue: 19
+    openIssue: 26
+    commit: 101
   last60d:
-    since: 2026-09-14
+    since: 2026-09-15
     release: 4
-    mergedPR: 149
-    openPR: 31
+    mergedPR: 148
+    openPR: 35
     closedIssue: 47
-    openIssue: 37
-    commit: 173
+    openIssue: 38
+    commit: 174
   last90d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 5
     mergedPR: 206
-    openPR: 32
-    closedIssue: 62
-    openIssue: 42
-    commit: 242
+    openPR: 36
+    closedIssue: 61
+    openIssue: 43
+    commit: 243
   last180d:
-    since: 2026-05-17
+    since: 2026-05-18
     release: 11
-    mergedPR: 448
-    openPR: 45
-    closedIssue: 126
-    openIssue: 72
-    commit: 505
+    mergedPR: 446
+    openPR: 49
+    closedIssue: 125
+    openIssue: 74
+    commit: 506
   last360d:
-    since: 2025-11-18
+    since: 2025-11-19
     release: 22
-    mergedPR: 790
-    openPR: 67
-    closedIssue: 257
-    openIssue: 117
-    commit: 879
+    mergedPR: 784
+    openPR: 71
+    closedIssue: 256
+    openIssue: 118
+    commit: 880
   last720d:
-    since: 2024-11-23
+    since: 2024-11-24
     release: 45
-    mergedPR: 1614
-    openPR: 74
+    mergedPR: 1615
+    openPR: 78
     closedIssue: 553
-    openIssue: 226
-    commit: 3475
+    openIssue: 228
+    commit: 3472
 total:
   release: 106
-  mergedPR: 3104
-  openPR: 78
+  mergedPR: 3105
+  openPR: 82
   closedIssue: 1191
-  openIssue: 442
-  commit: 6995
+  openIssue: 444
+  commit: 6997
 ---
 path: /home/runner/.x-repo/github.com/lima-vm/lima
-collectedAt: 2026-11-13T06:56:40Z
+collectedAt: 2026-11-14T06:25:51Z
 loc:
   Go:
     code: 58500
@@ -184,10 +184,10 @@ total:
   blanks: 11103
   files: 797
 ---
-date: "2026-11-12T13:24:43Z"
+date: "2026-11-13T08:53:50Z"
 repo:
   name: github.com/lima-vm/lima
-  commit: 66561e737dc9ed7c2b922f56e2ef7d195ac074a7
+  commit: 55fb02294a4199dcc49db4946f6b126f94d4f3a9
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
@@ -198,22 +198,17 @@ checks:
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Code-Review
+    score: 8
+    reason: Found 7/8 approved changesets -- score normalized to 8
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 20 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Code-Review
-    score: 9
-    reason: Found 9/10 approved changesets -- score normalized to 9
     details: null
   - name: Token-Permissions
     score: 10
@@ -227,9 +222,14 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:16'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/spell.yml:12'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yml:22'
-  - name: Dangerous-Workflow
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Binary-Artifacts
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: no binaries found in the repo
     details: null
   - name: CII-Best-Practices
     score: 5
@@ -245,12 +245,18 @@ checks:
       - 'Info:  12 out of  12 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   1 out of   1 goCommand dependencies pinned'
-  - name: SAST
-    score: 8
-    reason: SAST tool detected but not run on all commits
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
     details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 12 commits out of 29 are checked with a SAST tool'
+      - 'Info: OSSFuzz integration found'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/cidata/fuzz_test.go:12'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/downloader/fuzz_test.go:17'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/imgutil/nativeimgutil/fuzz_test.go:15'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/iso9660util/fuzz_test.go:14'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/store/fuzz_test.go:16'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/store/fuzz_test.go:25'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/yqutil/fuzz_test.go:10'
   - name: Vulnerabilities
     score: 0
     reason: 12 existing vulnerabilities detected
@@ -267,6 +273,20 @@ checks:
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-xcpc-8h2w-3j85'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-2v37-7h3g-55p8'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-48c2-rrv3-qjmp'
+  - name: SAST
+    score: 8
+    reason: SAST tool detected but not run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: 14 commits out of 29 are checked with a SAST tool'
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: github.com/lima-vm/.github/SECURITY.md:1'
+      - 'Info: Found linked content: github.com/lima-vm/.github/SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/lima-vm/.github/SECURITY.md:1'
+      - 'Info: Found text in security policy: github.com/lima-vm/.github/SECURITY.md:1'
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -287,33 +307,13 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: OSSFuzz integration found'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/cidata/fuzz_test.go:12'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/downloader/fuzz_test.go:17'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/imgutil/nativeimgutil/fuzz_test.go:15'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/iso9660util/fuzz_test.go:14'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/store/fuzz_test.go:16'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/store/fuzz_test.go:25'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/yqutil/fuzz_test.go:10'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: github.com/lima-vm/.github/SECURITY.md:1'
-      - 'Info: Found linked content: github.com/lima-vm/.github/SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: github.com/lima-vm/.github/SECURITY.md:1'
-      - 'Info: Found text in security policy: github.com/lima-vm/.github/SECURITY.md:1'
   - name: CI-Tests
     score: 10
-    reason: 15 out of 15 merged PRs checked by a CI test -- score normalized to 10
+    reason: 14 out of 14 merged PRs checked by a CI test -- score normalized to 10
     details: null
   - name: Contributors
     score: 10

@@ -2,96 +2,96 @@ about:
   description: "Open-source Python library for AI browser agents, plus Browser Use Cloud: stealth browsers and a hosted agent API."
   license: MIT
   homepage: https://browser-use.com
-  head: 48d9fe0
+  head: e717df1
   archived: false
-  latestVersion: "1.0.3"
-  latestRelease: "1.0.3"
-  latestPrerelease: "1.0.3rc1"
-  collectedAt: 2026-11-13T08:36:15Z
+  latestVersion: "1.0.5"
+  latestRelease: "1.0.5"
+  latestPrerelease: "1.0.4rc1"
+  collectedAt: 2026-11-14T08:24:55Z
 timeline:
   created: 2024-10-31
-  lastCommit: 2026-11-13
-  lastVersion: 2026-11-12
-  lastRelease: 2026-11-12
-  lastPrerelease: 2026-11-12
+  lastCommit: 2026-11-14
+  lastVersion: 2026-11-14
+  lastRelease: 2026-11-14
+  lastPrerelease: 2026-11-13
 popularity:
-  star: 120878
+  star: 120973
   watcher: 473
-  fork: 13517
-  release: 150
+  fork: 13530
+  release: 153
   contributor: 360
-  pullRequest: 4155
+  pullRequest: 4168
   issue: 1744
 language:
-  Python: 1526787
+  Python: 1554511
   Dockerfile: 10120
   Shell: 9514
-totalBytes: 1546421
+totalBytes: 1574145
 recent:
   last30d:
-    since: 2026-10-14
-    release: 12
-    mergedPR: 36
-    openPR: 186
+    since: 2026-10-15
+    release: 15
+    mergedPR: 34
+    openPR: 184
     closedIssue: 8
     openIssue: 22
-    commit: 1154
+    commit: 1188
   last60d:
-    since: 2026-09-14
-    release: 13
-    mergedPR: 49
-    openPR: 341
-    closedIssue: 11
-    openIssue: 77
-    commit: 1249
-  last90d:
-    since: 2026-08-15
+    since: 2026-09-15
     release: 16
-    mergedPR: 107
-    openPR: 386
-    closedIssue: 37
+    mergedPR: 55
+    openPR: 336
+    closedIssue: 11
+    openIssue: 71
+    commit: 1283
+  last90d:
+    since: 2026-08-16
+    release: 19
+    mergedPR: 112
+    openPR: 385
+    closedIssue: 36
     openIssue: 106
-    commit: 1472
+    commit: 1506
   last180d:
-    since: 2026-05-17
-    release: 27
+    since: 2026-05-18
+    release: 30
     mergedPR: 244
-    openPR: 407
+    openPR: 405
     closedIssue: 88
-    openIssue: 139
-    commit: 2309
+    openIssue: 137
+    commit: 2343
   last360d:
-    since: 2025-11-18
-    release: 52
-    mergedPR: 569
-    openPR: 410
-    closedIssue: 313
+    since: 2025-11-19
+    release: 54
+    mergedPR: 573
+    openPR: 408
+    closedIssue: 312
     openIssue: 169
-    commit: 3779
+    commit: 3813
   last720d:
-    since: 2024-11-23
+    since: 2024-11-24
     release: 100
-    mergedPR: 1982
-    openPR: 410
-    closedIssue: 1560
+    mergedPR: 1987
+    openPR: 408
+    closedIssue: 1559
     openIssue: 169
-    commit: 10771
+    commit: 10778
 total:
-  release: 150
-  mergedPR: 2012
-  openPR: 410
+  release: 153
+  mergedPR: 2018
+  openPR: 408
   closedIssue: 1575
   openIssue: 169
-  commit: 11005
+  commit: 11025
 ---
 path: /home/runner/.x-repo/github.com/browser-use/browser-use
-collectedAt: 2026-11-13T08:36:21Z
+collectedAt: 2026-11-14T08:25:02Z
 loc:
   Python:
-    code: 27244
-    comments: 559
-    blanks: 4813
-    files: 70
+    code: 27919
+    comments: 571
+    blanks: 4976
+    files: 73
   Sh:
     code: 216
     comments: 56
@@ -119,15 +119,15 @@ loc:
     files: 4
   Markdown:
     code: 0
-    comments: 2603
+    comments: 2607
     blanks: 1070
     files: 28
 total:
-  code: 28662
-  comments: 3383
-  blanks: 6095
-  files: 109
+  code: 29337
+  comments: 3399
+  blanks: 6258
+  files: 112
 ---
 
 ---
-{"id":443245664,"author":{"login":"gregpr07","id":36313686,"node_id":"MDQ6VXNlcjM2MzEzNjg2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDONIn9t84aa2Rg","tag_name":"1.0.3","target_commitish":"dfb6a73d520809341c975c6a01c228327991e88b","name":"browser-use 1.0.3","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-12T16:52:44Z","updated_at":"2026-11-12T16:52:54Z","published_at":"2026-11-12T16:52:54Z","assets":[],"body":"`pip install 'browser-use==1.0.3'`\n\n- `--cli-mcp` exits cleanly when the client closed the pipe before the reply (was exit 1 with `ExceptionGroup`).\n- The CLI runs its own Chromium when no browser has remote debugging on or there is no display, like `--cli-mcp`. It persists across calls; `browser-use --reload` closes it.\n- A `BU_CDP_URL` nothing listens on fails in 3 s with one message naming the value and both ways out (was a 30 s wait).\n- Chrome in another pid namespace (containers, Cursor on Linux) is accepted via its DevToolsActivePort.\n- A cancelled cloud run copies downloads within 10 s instead of holding the browser up to 300 s per pass.\n- `ActionResult` drops and warns about every ignored 0.x field, not only the first (#6379).\n\nPR: https://github.com/browser-use/browser-use/pull/6383\n"}
+{"id":445143150,"author":{"login":"sarath-menon","id":38050249,"node_id":"MDQ6VXNlcjM4MDUwMjQ5","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDONIn9t84aiFhu","tag_name":"1.0.5","target_commitish":"e717df1839a2d7368b108de6694f01e9c659b0de","name":"browser-use 1.0.5","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-14T08:24:13Z","updated_at":"2026-11-14T08:24:22Z","published_at":"2026-11-14T08:24:22Z","assets":[],"body":"`pip install 'browser-use==1.0.5'`\n\n- Every run is judged by your own model: one more low-effort request checks the run against the task and fills `result.judgement` with `success`, `failure_reason`, `description`, `prompt_injection_detected`, `bot_block_or_captcha_detected` and `gotchas`. `judge_context=` gives it your criteria; `judge=False` turns it off; the 0.x `use_judge` / `ground_truth` work again (#6398).\n- The judge sees the trace, the run's last screenshots and the final page (unless `use_vision=False`). It writes gotchas whenever the site rejected input, errored, blocked or rate-limited the agent, also on a successful run, e.g. \"The form requires phone numbers in (###) ###-#### format\" (#6403).\n\n13 real runs, each judged 3 times: gotchas on 15/15 verdicts where the site pushed back (6/15 before), 2/24 on clean runs, success verdicts unchanged.\n\nPRs: https://github.com/browser-use/browser-use/pull/6398, https://github.com/browser-use/browser-use/pull/6403, https://github.com/browser-use/browser-use/pull/6404\n"}

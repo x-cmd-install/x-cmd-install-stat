@@ -7,7 +7,7 @@ about:
   latestVersion: "2.18.0"
   latestRelease: "2.18.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-13T08:10:19Z
+  collectedAt: 2026-11-14T07:52:52Z
 timeline:
   created: 2016-02-09
   lastCommit: 2026-11-12
@@ -20,7 +20,7 @@ popularity:
   fork: 427
   release: 17
   contributor: 185
-  pullRequest: 1214
+  pullRequest: 1215
   issue: 519
 language:
   Shell: 1061896
@@ -35,63 +35,63 @@ language:
 totalBytes: 1604870
 recent:
   last30d:
-    since: 2026-10-14
+    since: 2026-10-15
     release: 0
-    mergedPR: 8
-    openPR: 13
-    closedIssue: 0
-    openIssue: 1
+    mergedPR: 7
+    openPR: 14
+    closedIssue: 1
+    openIssue: 0
     commit: 8
   last60d:
-    since: 2026-09-14
+    since: 2026-09-15
     release: 0
-    mergedPR: 16
-    openPR: 17
-    closedIssue: 0
-    openIssue: 2
+    mergedPR: 15
+    openPR: 18
+    closedIssue: 1
+    openIssue: 1
     commit: 19
   last90d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 0
     mergedPR: 19
-    openPR: 20
-    closedIssue: 0
-    openIssue: 4
+    openPR: 21
+    closedIssue: 1
+    openIssue: 3
     commit: 23
   last180d:
-    since: 2026-05-17
+    since: 2026-05-18
     release: 1
     mergedPR: 100
-    openPR: 23
-    closedIssue: 5
-    openIssue: 8
+    openPR: 24
+    closedIssue: 6
+    openIssue: 7
     commit: 156
   last360d:
-    since: 2025-11-18
+    since: 2025-11-19
     release: 1
     mergedPR: 191
-    openPR: 28
-    closedIssue: 16
-    openIssue: 12
+    openPR: 29
+    closedIssue: 17
+    openIssue: 11
     commit: 296
   last720d:
-    since: 2024-11-23
+    since: 2024-11-24
     release: 4
     mergedPR: 358
-    openPR: 36
-    closedIssue: 40
-    openIssue: 24
+    openPR: 37
+    closedIssue: 41
+    openIssue: 23
     commit: 741
 total:
   release: 17
   mergedPR: 969
-  openPR: 82
-  closedIssue: 360
-  openIssue: 159
+  openPR: 83
+  closedIssue: 361
+  openIssue: 158
   commit: 7554
 ---
 path: /home/runner/.x-repo/github.com/scop/bash-completion
-collectedAt: 2026-11-13T08:10:30Z
+collectedAt: 2026-11-14T07:52:54Z
 loc:
   Bash:
     code: 25898
@@ -209,7 +209,7 @@ total:
   blanks: 7078
   files: 1413
 ---
-date: "2026-11-12T03:43:57Z"
+date: "2026-11-14T04:45:44Z"
 repo:
   name: github.com/scop/bash-completion
   commit: 695e3cbc2d4a91f6631ffa7104e279a84681e9df
@@ -221,6 +221,10 @@ checks:
   - name: Code-Review
     score: 4
     reason: Found 10/22 approved changesets -- score normalized to 4
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 25 commit(s) and 4 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Dangerous-Workflow
     score: 10
@@ -243,10 +247,6 @@ checks:
     reason: update tool detected
     details:
       - 'Info: detected update tool: RenovateBot: .github/renovate.json:1'
-  - name: Maintained
-    score: 10
-    reason: 26 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Binary-Artifacts
     score: 9
     reason: binaries present in source code
@@ -256,17 +256,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: COPYING:0'
-      - 'Info: FSF or OSI recognized license: GNU General Public License v2.0: COPYING:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -281,6 +270,17 @@ checks:
       - 'Warn: release artifact 2.16.0 does not have provenance: https://api.github.com/repos/scop/bash-completion/releases/192296285'
       - 'Warn: release artifact 2.15.0 does not have provenance: https://api.github.com/repos/scop/bash-completion/releases/187181220'
       - 'Warn: release artifact 2.14.0 does not have provenance: https://api.github.com/repos/scop/bash-completion/releases/154902226'
+  - name: SAST
+    score: 7
+    reason: SAST tool is not run on all commits -- score normalized to 7
+    details:
+      - 'Warn: 21 commits out of 30 are checked with a SAST tool'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: COPYING:0'
+      - 'Info: FSF or OSI recognized license: GNU General Public License v2.0: COPYING:0'
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
@@ -299,19 +299,15 @@ checks:
       - 'Info:   0 out of   6 containerImage dependencies pinned'
       - 'Info:   0 out of   2 pipCommand dependencies pinned'
       - 'Info:   0 out of   1 npmCommand dependencies pinned'
-  - name: SAST
-    score: 7
-    reason: SAST tool is not run on all commits -- score normalized to 7
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
     details:
-      - 'Warn: 21 commits out of 30 are checked with a SAST tool'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/update-docker-images.yml:21'
+  - name: Vulnerabilities
+    score: 10
+    reason: 0 existing vulnerabilities detected
+    details: null
   - name: Branch-Protection
     score: 3
     reason: branch protection is not maximal on development and all release branches
@@ -322,15 +318,19 @@ checks:
       - 'Warn: could not determine whether codeowners review is allowed'
       - 'Warn: no status checks found to merge onto branch ''main'''
       - 'Warn: PRs are not required to make changes on branch ''main''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
-  - name: Vulnerabilities
-    score: 10
-    reason: 0 existing vulnerabilities detected
-    details: null
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/update-docker-images.yml:21'
+      - 'Warn: no fuzzer integrations found'
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: CI-Tests
     score: 9
     reason: 25 out of 26 merged PRs checked by a CI test -- score normalized to 9

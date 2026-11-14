@@ -7,7 +7,7 @@ about:
   latestVersion: "3.4.0"
   latestRelease: "3.4.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-13T07:48:55Z
+  collectedAt: 2026-11-14T07:44:53Z
 timeline:
   created: 2017-06-16
   lastCommit: 2026-11-12
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-11-08
   lastPrerelease: 
 popularity:
-  star: 11147
+  star: 11150
   watcher: 81
-  fork: 460
+  fork: 461
   release: 25
   contributor: 99
   pullRequest: 191
@@ -32,7 +32,7 @@ language:
 totalBytes: 1175811
 recent:
   last30d:
-    since: 2026-10-14
+    since: 2026-10-15
     release: 1
     mergedPR: 11
     openPR: 4
@@ -40,23 +40,23 @@ recent:
     openIssue: 0
     commit: 28
   last60d:
-    since: 2026-09-14
+    since: 2026-09-15
     release: 1
     mergedPR: 16
     openPR: 10
-    closedIssue: 7
+    closedIssue: 6
     openIssue: 1
     commit: 69
   last90d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 1
-    mergedPR: 24
-    openPR: 12
+    mergedPR: 23
+    openPR: 11
     closedIssue: 8
     openIssue: 2
     commit: 91
   last180d:
-    since: 2026-05-17
+    since: 2026-05-18
     release: 1
     mergedPR: 34
     openPR: 14
@@ -64,7 +64,7 @@ recent:
     openIssue: 10
     commit: 107
   last360d:
-    since: 2025-11-18
+    since: 2025-11-19
     release: 4
     mergedPR: 55
     openPR: 16
@@ -72,11 +72,11 @@ recent:
     openIssue: 20
     commit: 181
   last720d:
-    since: 2024-11-23
+    since: 2024-11-24
     release: 5
     mergedPR: 80
     openPR: 16
-    closedIssue: 48
+    closedIssue: 47
     openIssue: 48
     commit: 343
 total:
@@ -88,7 +88,7 @@ total:
   commit: 822
 ---
 path: /home/runner/.x-repo/github.com/Syllo/nvtop
-collectedAt: 2026-11-13T07:48:55Z
+collectedAt: 2026-11-14T07:44:54Z
 loc:
   C:
     code: 15848
@@ -254,4 +254,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 28 are checked with a SAST tool'
 ---
-{"id":438363505,"author":{"login":"Syllo","id":2741868,"node_id":"MDQ6VXNlcjI3NDE4Njg=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBaJscs4aIOVx","tag_name":"3.4.0","target_commitish":"master","name":"Release 3.4.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-08T16:20:10Z","updated_at":"2026-11-08T16:22:07Z","published_at":"2026-11-08T16:20:15Z","assets":[{"id":724484368,"node_id":"RA_kwDOBaJscs4rLsEQ","name":"nvtop-3.4.0-aarch64.AppImage","label":"","uploader":{"login":"Syllo","id":2741868,"node_id":"MDQ6VXNlcjI3NDE4Njg=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/vnd.appimage","state":"uploaded","size":1358344,"digest":"sha256:b24de1eb0f18c53461613a00c68561bec810de31604f56895cf02fa335a0f2df","download_count":23,"created_at":"2026-11-08T16:22:06Z","updated_at":"2026-11-08T16:22:07Z"},{"id":724484370,"node_id":"RA_kwDOBaJscs4rLsES","name":"nvtop-3.4.0-x86_64.AppImage","label":"","uploader":{"login":"Syllo","id":2741868,"node_id":"MDQ6VXNlcjI3NDE4Njg=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/vnd.appimage","state":"uploaded","size":1374712,"digest":"sha256:61a0c11d9b0f7e78193acc9991d00b0dcc5ae1facd58a984414ae0cfbcd5ae6d","download_count":199,"created_at":"2026-11-08T16:22:06Z","updated_at":"2026-11-08T16:22:07Z"}],"body":"# New in this release\n\n## Target support\n\n- Radeon GPUs - @gusteivos\n- Tenstorrent accelerators - @OctopusET\n- Iluvatar CoreX GPUs (ixML) - @lxzlxzliuxuzhao\n- Qualcomm NPUs - @Srinivas-Kandagatla\n  - HVX/HMX utilization plots\n- Ascend NPUs - @KaranocaVe, @yulink1981\n  - DCMI telemetry backend\n  - DDR memory support and 310P3 device enumeration\n- MSM: more GPU IDs, current clock and temperature reporting - @robclark, @fromdisposition\n\n## Improvements\n\n- NVIDIA:\n  - NVLink support - @danbedford\n  - ECC support for professional GPUs - @LH-and-FPGA\n  - Extra clock domains not reported by NVML (XBAR, SYS, NVD) - @Panchovix\n  - Real memory usage on unified-memory platforms - @sudoingX, @johnnynunez\n- Interface:\n  - PCIe RX/TX load in the utilization charts - @Basavaraja-MS\n  - Dynamic memory units with `-u`/`--dynamic-memory-units` - @unstable-code\n  - Configurable plot line colors - @graysky2\n  - Number keys to select a signal after F9 - @abpaudel\n- Snapshot:\n  - GPU architecture in JSON output - @Mahsuba\n\n# Fixes\n\n- NVIDIA:\n  - Correct MIG mode handling for process utilization - @Henry-ZHR\n  - UMA memory fallback and unified-memory accounting - @redyuan43, @sudoingX, @johnnynunez\n  - Do not report a fake PCIe link on unified-memory SoC GPUs - @Code4me2\n  - Show 0% instead of N/A when there are no new utilization samples - @wuzhonglijz\n  - Fix extra-clock flicker and use-after-free on re-monitored GPUs - @intel00000\n  - Fix startup segfault and NVIDIA detection under WSL2 - @zzccppp\n- AMDGPU:\n  - Count GTT in per-process memory on integrated GPUs - @rborkow\n  - Fall back to hwmon junction temperature on SMU13.0.6 - @jason34105533\n  - Fix divide-by-zero when the power limit is missing - @JoseOliveira-beep\n- Intel:\n  - Fix ~20 MB/hour heap growth from per-refresh udev devices - @bqv\n  - Read the xe GT frequency from sysfs instead of a perf event - @stolk\n  - Fixes for Intel Xe cards and memory frequency reporting - @Steve-Tech\n- fdinfo:\n  - Apply the graphical default per process, not per fd - @stolk\n  - Cap the engine busy percentage instead of dropping samples, avoiding a division by zero - @ViderStar\n- Interface and snapshot:\n  - Make `--no-processes` work with `--snapshot` and `--loop` - @yinghao-w\n  - Fix null cmdline in snapshot output - @gitfool\n  - Fix window cleanup leaks - @danbedford\n  - Respect the hide-processes option from the config file - @yinghao-w\n  - Increase the elapsed-time buffer on the timeline - @aadamowski\n  - Clamp GPU and memory clock percentages to 100 - @bqv\n  - Fix the shader core count field - @Panchovix\n  - Guard clock-rate plots against a zero maximum, drop stale processes of unmonitored GPUs\n- Other:\n  - MSM temperature and current clock reporting - @fromdisposition\n  - Various Ascend, Qualcomm and V3D fixes\n\n# Misc\n\n- Dockerfile fix for Docker builds on Windows 11 - @piro4you\n- Documentation for invalid TERM/ncurses errors - @raravind007\n- Snap: terminfo packages for more terminals - @simonjgreen\n- Snap: migrate to the core26 base - @Syllo\n- AppImage: rebuild on AlmaLinux 8 without bundling glibc, add aarch64, and automate release builds - @Syllo\n  - Requires glibc 2.28+ (Ubuntu 20.04+, Debian 10+, RHEL 8+)\n  - RHEL 7 is no longer supported (EOL)\n\nA huge thanks to all the contributors and testers :tada:\n\n**Full Changelog**: https://github.com/Syllo/nvtop/compare/3.3.2...3.4.0\n","reactions":{"total_count":7,"+1":7,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"mentions_count":38}
+{"id":438363505,"author":{"login":"Syllo","id":2741868,"node_id":"MDQ6VXNlcjI3NDE4Njg=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBaJscs4aIOVx","tag_name":"3.4.0","target_commitish":"master","name":"Release 3.4.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-08T16:20:10Z","updated_at":"2026-11-08T16:22:07Z","published_at":"2026-11-08T16:20:15Z","assets":[{"id":724484368,"node_id":"RA_kwDOBaJscs4rLsEQ","name":"nvtop-3.4.0-aarch64.AppImage","label":"","uploader":{"login":"Syllo","id":2741868,"node_id":"MDQ6VXNlcjI3NDE4Njg=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/vnd.appimage","state":"uploaded","size":1358344,"digest":"sha256:b24de1eb0f18c53461613a00c68561bec810de31604f56895cf02fa335a0f2df","download_count":28,"created_at":"2026-11-08T16:22:06Z","updated_at":"2026-11-08T16:22:07Z"},{"id":724484370,"node_id":"RA_kwDOBaJscs4rLsES","name":"nvtop-3.4.0-x86_64.AppImage","label":"","uploader":{"login":"Syllo","id":2741868,"node_id":"MDQ6VXNlcjI3NDE4Njg=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/vnd.appimage","state":"uploaded","size":1374712,"digest":"sha256:61a0c11d9b0f7e78193acc9991d00b0dcc5ae1facd58a984414ae0cfbcd5ae6d","download_count":253,"created_at":"2026-11-08T16:22:06Z","updated_at":"2026-11-08T16:22:07Z"}],"body":"# New in this release\n\n## Target support\n\n- Radeon GPUs - @gusteivos\n- Tenstorrent accelerators - @OctopusET\n- Iluvatar CoreX GPUs (ixML) - @lxzlxzliuxuzhao\n- Qualcomm NPUs - @Srinivas-Kandagatla\n  - HVX/HMX utilization plots\n- Ascend NPUs - @KaranocaVe, @yulink1981\n  - DCMI telemetry backend\n  - DDR memory support and 310P3 device enumeration\n- MSM: more GPU IDs, current clock and temperature reporting - @robclark, @fromdisposition\n\n## Improvements\n\n- NVIDIA:\n  - NVLink support - @danbedford\n  - ECC support for professional GPUs - @LH-and-FPGA\n  - Extra clock domains not reported by NVML (XBAR, SYS, NVD) - @Panchovix\n  - Real memory usage on unified-memory platforms - @sudoingX, @johnnynunez\n- Interface:\n  - PCIe RX/TX load in the utilization charts - @Basavaraja-MS\n  - Dynamic memory units with `-u`/`--dynamic-memory-units` - @unstable-code\n  - Configurable plot line colors - @graysky2\n  - Number keys to select a signal after F9 - @abpaudel\n- Snapshot:\n  - GPU architecture in JSON output - @Mahsuba\n\n# Fixes\n\n- NVIDIA:\n  - Correct MIG mode handling for process utilization - @Henry-ZHR\n  - UMA memory fallback and unified-memory accounting - @redyuan43, @sudoingX, @johnnynunez\n  - Do not report a fake PCIe link on unified-memory SoC GPUs - @Code4me2\n  - Show 0% instead of N/A when there are no new utilization samples - @wuzhonglijz\n  - Fix extra-clock flicker and use-after-free on re-monitored GPUs - @intel00000\n  - Fix startup segfault and NVIDIA detection under WSL2 - @zzccppp\n- AMDGPU:\n  - Count GTT in per-process memory on integrated GPUs - @rborkow\n  - Fall back to hwmon junction temperature on SMU13.0.6 - @jason34105533\n  - Fix divide-by-zero when the power limit is missing - @JoseOliveira-beep\n- Intel:\n  - Fix ~20 MB/hour heap growth from per-refresh udev devices - @bqv\n  - Read the xe GT frequency from sysfs instead of a perf event - @stolk\n  - Fixes for Intel Xe cards and memory frequency reporting - @Steve-Tech\n- fdinfo:\n  - Apply the graphical default per process, not per fd - @stolk\n  - Cap the engine busy percentage instead of dropping samples, avoiding a division by zero - @ViderStar\n- Interface and snapshot:\n  - Make `--no-processes` work with `--snapshot` and `--loop` - @yinghao-w\n  - Fix null cmdline in snapshot output - @gitfool\n  - Fix window cleanup leaks - @danbedford\n  - Respect the hide-processes option from the config file - @yinghao-w\n  - Increase the elapsed-time buffer on the timeline - @aadamowski\n  - Clamp GPU and memory clock percentages to 100 - @bqv\n  - Fix the shader core count field - @Panchovix\n  - Guard clock-rate plots against a zero maximum, drop stale processes of unmonitored GPUs\n- Other:\n  - MSM temperature and current clock reporting - @fromdisposition\n  - Various Ascend, Qualcomm and V3D fixes\n\n# Misc\n\n- Dockerfile fix for Docker builds on Windows 11 - @piro4you\n- Documentation for invalid TERM/ncurses errors - @raravind007\n- Snap: terminfo packages for more terminals - @simonjgreen\n- Snap: migrate to the core26 base - @Syllo\n- AppImage: rebuild on AlmaLinux 8 without bundling glibc, add aarch64, and automate release builds - @Syllo\n  - Requires glibc 2.28+ (Ubuntu 20.04+, Debian 10+, RHEL 8+)\n  - RHEL 7 is no longer supported (EOL)\n\nA huge thanks to all the contributors and testers :tada:\n\n**Full Changelog**: https://github.com/Syllo/nvtop/compare/3.3.2...3.4.0\n","reactions":{"total_count":7,"+1":7,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"mentions_count":38}

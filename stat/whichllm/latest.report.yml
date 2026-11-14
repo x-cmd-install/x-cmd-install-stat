@@ -2,100 +2,100 @@ about:
   description: "Find the local LLM that actually runs and performs best on your hardware. Ranked by real, recency-aware benchmarks, not parameter count. One command, run it instantly."
   license: MIT
   homepage: 
-  head: f72d41f
+  head: 6062dce
   archived: false
-  latestVersion: "v0.6.7"
-  latestRelease: "v0.6.7"
+  latestVersion: "v0.6.8"
+  latestRelease: "v0.6.8"
   latestPrerelease: ""
-  collectedAt: 2026-11-13T06:00:09Z
+  collectedAt: 2026-11-14T05:49:19Z
 timeline:
   created: 2026-03-04
-  lastCommit: 2026-11-12
-  lastVersion: 2026-11-12
-  lastRelease: 2026-11-12
+  lastCommit: 2026-11-13
+  lastVersion: 2026-11-13
+  lastRelease: 2026-11-13
   lastPrerelease: 
 popularity:
-  star: 6830
+  star: 6835
   watcher: 23
-  fork: 378
-  release: 31
+  fork: 379
+  release: 32
   contributor: 33
-  pullRequest: 225
+  pullRequest: 227
   issue: 80
 language:
-  Python: 1471918
+  Python: 1510249
   Tape: 1400
-totalBytes: 1473318
+totalBytes: 1511649
 recent:
   last30d:
-    since: 2026-10-14
-    release: 10
-    mergedPR: 112
-    openPR: 3
+    since: 2026-10-15
+    release: 11
+    mergedPR: 115
+    openPR: 2
     closedIssue: 2
     openIssue: 5
-    commit: 106
+    commit: 110
   last60d:
-    since: 2026-09-14
-    release: 14
-    mergedPR: 121
-    openPR: 3
+    since: 2026-09-15
+    release: 15
+    mergedPR: 124
+    openPR: 2
     closedIssue: 5
     openIssue: 6
-    commit: 129
+    commit: 133
   last90d:
-    since: 2026-08-15
-    release: 14
-    mergedPR: 129
-    openPR: 3
-    closedIssue: 7
+    since: 2026-08-16
+    release: 15
+    mergedPR: 132
+    openPR: 2
+    closedIssue: 6
     openIssue: 6
-    commit: 134
+    commit: 138
   last180d:
-    since: 2026-05-17
+    since: 2026-05-18
     release: 25
-    mergedPR: 189
-    openPR: 3
-    closedIssue: 49
+    mergedPR: 191
+    openPR: 2
+    closedIssue: 46
     openIssue: 6
-    commit: 206
+    commit: 210
   last360d:
-    since: 2025-11-18
-    release: 31
-    mergedPR: 208
-    openPR: 3
+    since: 2025-11-19
+    release: 32
+    mergedPR: 211
+    openPR: 2
     closedIssue: 74
     openIssue: 6
-    commit: 357
+    commit: 361
   last720d:
-    since: 2024-11-23
-    release: 31
-    mergedPR: 208
-    openPR: 3
+    since: 2024-11-24
+    release: 32
+    mergedPR: 211
+    openPR: 2
     closedIssue: 74
     openIssue: 6
-    commit: 454
+    commit: 459
 total:
-  release: 31
-  mergedPR: 209
-  openPR: 3
+  release: 32
+  mergedPR: 212
+  openPR: 2
   closedIssue: 74
   openIssue: 6
-  commit: 454
+  commit: 459
 ---
 path: /home/runner/.x-repo/github.com/Andyyyy64/whichllm
-collectedAt: 2026-11-13T06:00:10Z
+collectedAt: 2026-11-14T05:49:20Z
 loc:
   Python:
-    code: 34786
-    comments: 1413
-    blanks: 6713
-    files: 204
+    code: 35595
+    comments: 1475
+    blanks: 6821
+    files: 206
   Json:
-    code: 4909
+    code: 5014
     comments: 0
     blanks: 0
-    files: 22
+    files: 24
   Toml:
     code: 566
     comments: 20
@@ -103,15 +103,15 @@ loc:
     files: 2
   Markdown:
     code: 0
-    comments: 3153
-    blanks: 949
+    comments: 3219
+    blanks: 959
     files: 12
 total:
-  code: 40484
-  comments: 4589
-  blanks: 7735
-  files: 240
+  code: 41398
+  comments: 4717
+  blanks: 7853
+  files: 244
 ---
 
 ---
-{"id":442925536,"author":{"login":"Andyyyy64","id":105579829,"node_id":"U_kgDOBksFNQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOReQROs4aZoHg","tag_name":"v0.6.7","target_commitish":"f72d41f75979a0430c358c56fac7a2da3fdcb626","name":"v0.6.7","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-12T12:35:34Z","updated_at":"2026-11-12T12:35:49Z","published_at":"2026-11-12T12:35:49Z","assets":[],"body":"# whichllm 0.6.7\n\nA fix for the pack whichllm names under a model. On some PCs it named a pack built for a PC one size bigger, with the speed measured on that bigger PC.\n\n## What happened\n\nOn my PC, an RTX 5080 with 16 GB and 64 GB of RAM, 0.6.6 named Abyss's 24G64G pack under Qwen3.8-Flash-Next, with the 69.9 tok/s its docs measured on a 24 GB GPU. `whichllm engines` counted 8 of Abyss's 15 packs where 6 fit. It only showed up once the disk had room for the bigger pack.\n\nTwo things added up.\n\n- Abyss's card gave each pack's memory as the GPU plus the memory limit the author tests with, 58 GB for a 64 GB PC. whichllm compares that with all of a PC's RAM, so the PC started 5 GB ahead.\n- The 4% allowance from 0.6.5, for a PC that reports under the size it is sold as, was taken off what a pack needs. That also shrank needs that are measured figures and no PC size.\n\nThe PC reports 15.9 + 63.3 = 79.2 GB, and the pack's 82 GB less 4% is 78.7.\n\n## What changed\n\n- The allowance is now on the machine's side. RAM or VRAM within 4% under a size PCs are sold with counts as that size, so 63.3 GB is 64 and 15.9 is 16. A pack's need is compared as written.\n- Abyss's packs give the GPU and RAM of the PC they are named for, together. 24G64G is 88 GB.\n- Strata's Coder IQ1_M pack needs 33 GB of RAM and no longer counts as in memory on a 32 GB PC that reports 31.9 GB. It reads from the SSD there, as its docs say.\n- Strata's DeepSeek V4.1 packs at 1.75 and 2.25 bpw need 121 and 155 GB. They no longer count as in memory on a 24 GB GPU with 96 and 128 GB of RAM.\n\nEvery fit the new rule allows, the old one allowed too, so nothing new starts to fit. If 0.6.6 named a pack for you and 0.6.7 names a smaller one, the smaller one is the one built for your PC.\n\n## How it was checked\n\nI compared the new rule with 0.6.6 over 154 PCs, 11 GPU sizes by 14 RAM sizes as they report themselves, for every engine but Abyss. The three Strata packs above are the only ones that change. A new test walks every Abyss pack named for a PC. The pack fits that PC as it reports itself, and doesn't fit in memory on the next PC down. With my PC's sizes whichllm names the 16G64G pack with 70.7 tok/s and counts 6 of 15. All 1,989 tests pass.\n\n## Upgrade\n\n```bash\nuv tool upgrade whichllm\npip install -U whichllm\nbrew upgrade whichllm\n```\n\nEverything else is in [CHANGELOG.md](https://github.com/Andyyyy64/whichllm/blob/main/CHANGELOG.md).\n"}
+{"id":443985964,"author":{"login":"Andyyyy64","id":105579829,"node_id":"U_kgDOBksFNQ","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOReQROs4adrAs","tag_name":"v0.6.8","target_commitish":"6062dceced482452a0dfa8969fb2ddf9de154b58","name":"v0.6.8","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-13T08:29:07Z","updated_at":"2026-11-13T08:29:23Z","published_at":"2026-11-13T08:29:23Z","assets":[],"body":"# whichllm 0.6.8\n\nvLLM and SGLang are in. A row of a repository's own Hugging Face weights, which whichllm ranks on Linux with an NVIDIA GPU and under WSL, now names the server that runs it and the command. That holds when the weights split over several GPUs too, and when an MoE pages its experts in from RAM.\n\n## vLLM and SGLang\n\nAWQ, GPTQ, FP8, NVFP4, MXFP4, INT8 and BF16 repos had no engine and no run line before. Now such a row names vLLM with `vllm serve <repo> --max-model-len auto`, or SGLang with `sglang serve <repo>` when SGLang is the one running or the only one installed. The cards are written from vLLM 0.33.0 and SGLang 0.5.23. On NVIDIA both need Linux, compute capability 7.5 or newer and a driver for CUDA 13, and both run under WSL. (#310)\n\nThese rows used to take llama.cpp's fit and speed, with MoE experts or whole layers in RAM, and neither server runs them that way. Their RAM offload streams the weights on every token, 2.9 to 16.6 tok/s on a 16 GB card in SGLang's own measurements. So a row of Hugging Face weights now shows only where vLLM or SGLang hold it, and the model's GGUF covers the rest.\n\n## Several GPUs\n\nWeights too big for one GPU now split evenly over 2, 4 or 8 GPUs with tensor parallelism, and the run line adds `--tensor-parallel-size N` for vLLM or `--tp-size N` for SGLang. Every card holds the same share, so the smallest card in the group bounds the split, and three cards use two. On four 4090s, 13 rows of the top 60 now name vLLM with TP=4, among them Qwen3.5-122B-A10B GPTQ-Int4 at 27.8 tok/s. Discussion #110 asked for this. (#311)\n\nThe speed stays at a layer split's for now, which undersells it. A community test of vLLM with TP=2 on two 3090s ran Llama 3.1 70B AWQ at 21.4 tok/s, and whichllm gives Llama 3.3 70B AWQ 10.1 tok/s there. That is one measurement, so the gain stays out until there are more. If you run vLLM or SGLang over several GPUs, a tok/s figure in #110 would help.\n\n## Paged Experts\n\nAn MoE past one GPU's VRAM in BF16, FP16, FP8, AWQ, GPTQ, NVFP4 or MXFP4 can now run with SGLang's Paged Experts. SGLang keeps K of each layer's experts on the GPU and pages the rest in from RAM, and the row shows as GPU+RAM. K is what SGLang's static budget, 0.88 of the GPU, leaves after the other weights, the KV cache and the CUDA context, as SGLang's docs work it out. The run line passes it with `--paged-experts-num-resident K --mem-fraction-static 0.88`. For Qwen3-30B-A3B GPTQ-Int4 on a 16 GB card it comes to 92, the value the docs use on that card.\n\nEvery expert stays pinned in RAM, which WSL caps at about half the RAM. The speed is llama.cpp's for the same split, and SGLang's own measurements match or beat it at one request. (#311)\n\nwhichllm doesn't check yet which architectures each server supports, and pipeline parallelism isn't modeled.\n\n## Windows on a WSL share\n\nwhichllm on Windows took itself for WSL when it ran from a folder on a WSL share, `\\\\wsl.localhost\\...`. There Windows resolves `/proc/version` to the distro's own file, which says \"microsoft\". So `whichllm engines` said Abyss and Project Maya do not run under WSL, and the ranking left out their packs. Only Linux is checked for WSL now. (#307)\n\n## How it was checked\n\n- I compared the top 60 with 0.6.7 for a simulated RTX 3060, 4060 Ti, 5080, 4090 and 5090 and for two 3090s, two 4090s and four 4090s. The top 15 is the same on all eight. Below that, rows of Hugging Face weights that fit only with part of them in RAM are gone, one or two on one GPU and four on two GPUs, all from 23rd down.\n- New tests cover the engine choice, the run lines, the even split, K and its flags, the WSL pinned limit and the new card fields. All 2,005 tests pass.\n\n## Upgrade\n\n```bash\nuv tool upgrade whichllm\npip install -U whichllm\nbrew upgrade whichllm\n```\n\nEverything else is in [CHANGELOG.md](https://github.com/Andyyyy64/whichllm/blob/main/CHANGELOG.md).\n"}

@@ -2,97 +2,97 @@ about:
   description: "MCP server for Atlassian tools (Confluence, Jira)"
   license: MIT
   homepage: https://mcp-atlassian.soomiles.com
-  head: 972fb16
+  head: b3344ff
   archived: false
-  latestVersion: "v0.24.3"
-  latestRelease: "v0.24.3"
+  latestVersion: "v0.24.4"
+  latestRelease: "v0.24.4"
   latestPrerelease: ""
-  collectedAt: 2026-11-13T06:56:35Z
+  collectedAt: 2026-11-14T06:48:13Z
 timeline:
   created: 2024-12-03
-  lastCommit: 2026-11-13
-  lastVersion: 2026-11-12
-  lastRelease: 2026-11-12
+  lastCommit: 2026-11-14
+  lastVersion: 2026-11-13
+  lastRelease: 2026-11-13
   lastPrerelease: 
 popularity:
-  star: 6117
+  star: 6119
   watcher: 22
-  fork: 1457
-  release: 78
-  contributor: 222
-  pullRequest: 1096
+  fork: 1458
+  release: 79
+  contributor: 226
+  pullRequest: 1104
   issue: 622
 language:
-  Python: 5003259
+  Python: 5034976
   Shell: 14636
   Jinja: 5658
   Dockerfile: 2417
   Go Template: 1668
-totalBytes: 5027638
+totalBytes: 5059355
 recent:
   last30d:
-    since: 2026-10-14
-    release: 4
-    mergedPR: 10
-    openPR: 49
-    closedIssue: 2
-    openIssue: 26
-    commit: 41
-  last60d:
-    since: 2026-09-14
-    release: 4
-    mergedPR: 13
-    openPR: 86
-    closedIssue: 5
-    openIssue: 51
-    commit: 42
-  last90d:
-    since: 2026-08-15
+    since: 2026-10-15
     release: 5
-    mergedPR: 35
-    openPR: 115
-    closedIssue: 17
-    openIssue: 73
-    commit: 65
+    mergedPR: 19
+    openPR: 38
+    closedIssue: 5
+    openIssue: 13
+    commit: 52
+  last60d:
+    since: 2026-09-15
+    release: 5
+    mergedPR: 22
+    openPR: 67
+    closedIssue: 11
+    openIssue: 42
+    commit: 53
+  last90d:
+    since: 2026-08-16
+    release: 6
+    mergedPR: 45
+    openPR: 94
+    closedIssue: 29
+    openIssue: 60
+    commit: 76
   last180d:
-    since: 2026-05-17
-    release: 8
-    mergedPR: 118
-    openPR: 135
-    closedIssue: 58
-    openIssue: 94
-    commit: 203
+    since: 2026-05-18
+    release: 9
+    mergedPR: 128
+    openPR: 110
+    closedIssue: 77
+    openIssue: 75
+    commit: 214
   last360d:
-    since: 2025-11-18
-    release: 29
-    mergedPR: 379
-    openPR: 155
-    closedIssue: 176
-    openIssue: 153
-    commit: 431
+    since: 2025-11-19
+    release: 30
+    mergedPR: 390
+    openPR: 116
+    closedIssue: 218
+    openIssue: 111
+    commit: 442
   last720d:
-    since: 2024-11-23
-    release: 78
-    mergedPR: 684
-    openPR: 155
-    closedIssue: 425
-    openIssue: 197
-    commit: 764
+    since: 2024-11-24
+    release: 79
+    mergedPR: 695
+    openPR: 116
+    closedIssue: 497
+    openIssue: 125
+    commit: 775
 total:
-  release: 78
-  mergedPR: 684
-  openPR: 155
-  closedIssue: 425
-  openIssue: 197
-  commit: 764
+  release: 79
+  mergedPR: 695
+  openPR: 116
+  closedIssue: 497
+  openIssue: 125
+  commit: 775
 ---
 path: /home/runner/.x-repo/github.com/sooperset/mcp-atlassian
-collectedAt: 2026-11-13T06:56:36Z
+collectedAt: 2026-11-14T06:48:15Z
 loc:
   Python:
-    code: 113204
-    comments: 6160
-    blanks: 18156
+    code: 113904
+    comments: 6185
+    blanks: 18266
     files: 301
   Yaml:
     code: 1118
@@ -136,8 +136,8 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 634
-    blanks: 290
+    comments: 636
+    blanks: 293
     files: 10
   Text:
     code: 0
@@ -145,11 +145,11 @@ loc:
     blanks: 29
     files: 1
 total:
-  code: 115433
-  comments: 7043
-  blanks: 18702
+  code: 116133
+  comments: 7070
+  blanks: 18815
   files: 378
 ---
 
 ---
-{"id":442806395,"author":{"login":"sooperset","id":32061883,"node_id":"MDQ6VXNlcjMyMDYxODgz","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDONYN7OM4aZLB7","tag_name":"v0.24.3","target_commitish":"caebfa0f01719ad1e0a32265d70449a94c847776","name":"v0.24.3","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-12T10:43:12Z","updated_at":"2026-11-12T10:43:25Z","published_at":"2026-11-12T10:43:25Z","assets":[],"body":"## 🐛 Bug Fixes\n\n- **Windows: attachments and file inputs work again.** Since 0.24.1, every file read or write through the confined file opener failed on Windows with `PermissionError: [Errno 13]`. This broke Jira attachment upload and download by path, Confluence attachments, and `content_file`. Windows now opens the file by path with the same boundary and symlink checks. Linux and macOS keep the directory-anchored open (#1832, #1835). Thanks to @Fabbul for the report and @PerryLink for the fix.\n- **Tests: macOS.** `test_stdio_keeps_wide_cwd` no longer fails on macOS, where `/etc` is a symlink (#1830). Thanks to @mhollingsworth-cs.\n","mentions_count":3}
+{"id":444372452,"author":{"login":"sooperset","id":32061883,"node_id":"MDQ6VXNlcjMyMDYxODgz","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDONYN7OM4afJXk","tag_name":"v0.24.4","target_commitish":"aca6a13470747ee28e43ac569d3218bf23bfebac","name":"v0.24.4","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-13T14:27:02Z","updated_at":"2026-11-13T15:07:36Z","published_at":"2026-11-13T15:07:36Z","assets":[],"body":"## 🐛 Bug Fixes\n\n### Server / Transport\n\n- **stdio servers exit on SIGTERM and Ctrl+C.** The signal handler set a shutdown flag that nothing read, so a stdio server kept running after the client closed or `docker stop` asked it to stop, leaving orphaned Python and Docker processes. The server now stops on SIGTERM and SIGINT, and exits after a 5-second grace period if a blocked stdin read keeps it from stopping cleanly (#909, #1856). Thanks to @rodrigoGA for the report.\n- **No more file-descriptor and CLOSE_WAIT leak under HTTP transports.** Request-scoped Jira and Confluence sessions are now closed at the end of each request, and attachment downloads close their response (#1683, #1850). Thanks to @blakeouy for the fix.\n\n### Auth\n\n- **OAuth proxy works with clients that send a `resource` parameter.** With `ATLASSIAN_OAUTH_PROXY_ENABLE=true`, clients such as Claude Code and the MCP Inspector send the RFC 8707 `resource` parameter, which Atlassian rejected. The proxy no longer forwards it upstream (#1137, #1839). Thanks to @TF88641 for the report and @chrikoch for the fix.\n- **Forced scopes now apply to every authorize request.** `ATLASSIAN_OAUTH_SCOPE` was enforced only when a client registered. A client could then request a narrower subset on `/authorize`, for example after the scope list was extended on a running deployment, and get a token that tools then failed with (`401 scope does not match`). The proxy now sends the forced scopes upstream on every authorize request (#1840). Thanks to @chrikoch.\n\n### Jira\n\n- **Editing a Cloud comment keeps its images and files.** `jira_edit_comment` rebuilt the body from Markdown and dropped existing media nodes, and Jira then deleted the attachments behind them. The edit now keeps the comment's existing media (#1678, #1855). Thanks to @prikrylmojmir-arch for the report.\n\n### Confluence\n\n- **`confluence_update_page_section` no longer wipes a page when given its title.** Passing the page's own title as `heading_text` matched the leading `<h1>` and replaced the whole body. It now returns an error that explains the title is not a section heading (#1732, #1853). Thanks to @Gerald1965 for the report.\n- **Re-uploading an existing attachment works on Cloud OAuth.** The version lookup used a v1 endpoint that returns 410 under OAuth. It now uses the v2 API and falls back to v1 only where v2 is unavailable (#1770, #1854). Thanks to @jasandov for the report.\n\n### Deployment\n\n- **fastmcp 3.4.7 or later is required.** Earlier versions built the `private_key_jwt` audience as `//token` when `PUBLIC_BASE_URL` had no path, so CIMD clients such as the ChatGPT connector failed at `/token`. certifi is refreshed to 2026.10.23 (#1716, #1851). Thanks to @rokeeffe-thp for the report.\n- **cryptography 48 and later are allowed.** The `<47` ceiling blocked fixes for published cryptography advisories. The floor is now 50.0.0 (#1638, #1641). Thanks to @dibyanduroy.\n\n## Contributors\n\nThanks to @blakeouy, @chrikoch, @dibyanduroy, and to @rodrigoGA, @TF88641, @prikrylmojmir-arch, @Gerald1965, @jasandov and @rokeeffe-thp for the reports.\n\n**Full Changelog**: https://github.com/sooperset/mcp-atlassian/compare/v0.24.3...v0.24.4\n","mentions_count":9}

@@ -2,32 +2,32 @@ about:
   description: "Programmatic access to Gemini Notebook - via command-line interface (CLI), Model Context Protocol (MCP) server, and AI agent skills."
   license: MIT
   homepage: 
-  head: 7c685f0
+  head: f373dcb
   archived: false
-  latestVersion: "v0.16.2"
-  latestRelease: "v0.16.2"
+  latestVersion: "v0.16.4"
+  latestRelease: "v0.16.4"
   latestPrerelease: ""
-  collectedAt: 2026-11-13T07:12:55Z
+  collectedAt: 2026-11-14T06:56:14Z
 timeline:
   created: 2025-12-23
-  lastCommit: 2026-11-11
-  lastVersion: 2026-11-08
-  lastRelease: 2026-11-08
+  lastCommit: 2026-11-13
+  lastVersion: 2026-11-13
+  lastRelease: 2026-11-13
   lastPrerelease: 
 popularity:
-  star: 6502
+  star: 6507
   watcher: 42
-  fork: 979
-  release: 166
-  contributor: 64
+  fork: 980
+  release: 167
+  contributor: 65
   pullRequest: 218
   issue: 182
 language:
-  Python: 3386821
-totalBytes: 3386821
+  Python: 3397284
+totalBytes: 3397284
 recent:
   last30d:
-    since: 2026-10-14
+    since: 2026-10-15
     release: 8
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-14
+    since: 2026-09-15
     release: 20
     mergedPR: 0
     openPR: 0
@@ -43,23 +43,23 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-15
-    release: 29
+    since: 2026-08-16
+    release: 30
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-17
-    release: 63
+    since: 2026-05-18
+    release: 64
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-18
+    since: 2025-11-19
     release: 100
     mergedPR: 0
     openPR: 0
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-23
+    since: 2024-11-24
     release: 100
     mergedPR: 0
     openPR: 0
@@ -75,21 +75,21 @@ recent:
     openIssue: 0
     commit: 0
 total:
-  release: 166
-  mergedPR: 169
-  openPR: 2
-  closedIssue: 178
-  openIssue: 4
-  commit: 990
+  release: 167
+  mergedPR: 171
+  openPR: 0
+  closedIssue: 179
+  openIssue: 3
+  commit: 996
 ---
 path: /home/runner/.x-repo/github.com/jacob-bd/notebooklm-mcp-cli
-collectedAt: 2026-11-13T07:12:57Z
+collectedAt: 2026-11-14T06:56:16Z
 loc:
   Python:
-    code: 73380
-    comments: 2894
-    blanks: 14698
-    files: 329
+    code: 73586
+    comments: 2908
+    blanks: 14761
+    files: 332
   Json:
     code: 83
     comments: 0
@@ -102,15 +102,15 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 9547
-    blanks: 4165
-    files: 41
+    comments: 9565
+    blanks: 4178
+    files: 42
 total:
-  code: 75859
-  comments: 13020
-  blanks: 19236
-  files: 372
+  code: 76065
+  comments: 13052
+  blanks: 19312
+  files: 376
 ---
 
 ---
-{"id":438481582,"author":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQtfMFM4aIrKu","tag_name":"v0.16.2","target_commitish":"main","name":"v0.16.2: safer setup errors and current notebook chat requests","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-08T19:47:40Z","updated_at":"2026-11-08T19:53:28Z","published_at":"2026-11-08T19:51:29Z","assets":[{"id":725023717,"node_id":"RA_kwDOQtfMFM4rNvvl","name":"notebooklm-mcp-0.16.2.mcpb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":2605,"digest":"sha256:3bdf8a810abbe7d8bce9924783f3160f11bcf033ad2c001150a6402bf3acaf45","download_count":49,"created_at":"2026-11-08T19:53:28Z","updated_at":"2026-11-08T19:53:28Z"}],"body":"# v0.16.2: safer setup errors and current notebook chat requests\n\n### Fixed\n\n- Empty or whitespace-only MCP client config files can now be initialized. Malformed JSON and TOML files remain untouched and are reported clearly. `nlm setup list` continues past an unreadable client config, while `nlm setup add` and `nlm setup remove` show the affected path instead of a traceback (#400).\n- Notebook chat sends the current 9-slot consumer request while preserving Enterprise behavior (#398). Live checks covered fresh conversations, follow-ups, selected sources, and citations. The previous request format also worked during verification, so treat this as a compatibility update rather than a confirmed fix for a production failure.\n\n### Credits\n\nThanks to @pengqun for #400 and the report in #399, and to @saariuslystoned for #398.\n","mentions_count":2}
+{"id":444734515,"author":{"login":"jacob-bd","id":47641890,"node_id":"MDQ6VXNlcjQ3NjQxODkw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOQtfMFM4aghwz","tag_name":"v0.16.4","target_commitish":"main","name":"v0.16.4: login prompt fix for Typer 0.29","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-13T21:01:47Z","updated_at":"2026-11-13T21:04:01Z","published_at":"2026-11-13T21:01:57Z","assets":[{"id":745177394,"node_id":"RA_kwDOQtfMFM4saoEy","name":"notebooklm-mcp-0.16.4.mcpb","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":2606,"digest":"sha256:420ed8a9883cad6d04011eecd96247c3d3158c5e9fb42060f81354222524cf3c","download_count":2,"created_at":"2026-11-13T21:04:01Z","updated_at":"2026-11-13T21:04:01Z"}],"body":"# v0.16.4: login storage question works on Typer 0.29\n\n### Changed\n\n- The CLI and MCP server reach shared core primitives only through the service layer. A new test fails on any direct `core/` import, so the boundary stays enforced (#405).\n\n### Fixed\n\n- Manual login reads cookies from Chrome DevTools \"Copy as cURL\" exports that pass them with `-b` or `--cookie`, including multiline input. Unrecognized input fails with a message naming the accepted formats (#403).\n- `nlm login` asked the new-login plain-or-protected question with a Click range type. Typer 0.29 no longer accepts that type, so the question ended the command with a bare `AssertionError`, and Typer 0.26 to 0.28 stopped on an out-of-range answer instead of asking again. The question now reads the number itself and repeats with \"Please enter 1 or 2.\" until the answer is valid. Enter still chooses protected ([#406](https://github.com/jacob-bd/gemini-notebook-mcp-cli/issues/406), [#407](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/407)).\n\n### Credits\n\nThanks to @renepf for the fix and regression tests in #407, and to @Zir0-93 for the layering audit in #405.\n","mentions_count":2}

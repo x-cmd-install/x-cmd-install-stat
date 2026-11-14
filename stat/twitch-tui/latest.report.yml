@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.0.0"
   latestRelease: "v3.0.0"
   latestPrerelease: "v3.0.0-alpha.4"
-  collectedAt: 2026-11-13T06:37:26Z
+  collectedAt: 2026-11-14T06:10:17Z
 timeline:
   created: 2021-08-23
   lastCommit: 2026-11-12
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2026-11-12
   lastPrerelease: 2026-10-11
 popularity:
-  star: 635
+  star: 636
   watcher: 8
   fork: 47
   release: 64
   contributor: 19
-  pullRequest: 553
+  pullRequest: 554
   issue: 167
 language:
   Rust: 388531
@@ -29,63 +29,63 @@ language:
 totalBytes: 389995
 recent:
   last30d:
-    since: 2026-10-14
+    since: 2026-10-15
     release: 1
     mergedPR: 3
-    openPR: 0
+    openPR: 1
     closedIssue: 0
     openIssue: 0
     commit: 6
   last60d:
-    since: 2026-09-14
+    since: 2026-09-15
     release: 2
     mergedPR: 4
-    openPR: 0
+    openPR: 1
     closedIssue: 0
     openIssue: 0
     commit: 10
   last90d:
-    since: 2026-08-15
+    since: 2026-08-16
     release: 2
     mergedPR: 4
-    openPR: 1
+    openPR: 2
     closedIssue: 0
     openIssue: 0
     commit: 11
   last180d:
-    since: 2026-05-17
+    since: 2026-05-18
     release: 2
     mergedPR: 5
-    openPR: 1
+    openPR: 2
     closedIssue: 0
     openIssue: 0
     commit: 12
   last360d:
-    since: 2025-11-18
+    since: 2025-11-19
     release: 2
     mergedPR: 28
-    openPR: 1
+    openPR: 2
     closedIssue: 1
     openIssue: 0
     commit: 54
   last720d:
-    since: 2024-11-23
+    since: 2024-11-24
     release: 7
     mergedPR: 50
-    openPR: 1
+    openPR: 2
     closedIssue: 15
     openIssue: 3
     commit: 102
 total:
   release: 64
   mergedPR: 254
-  openPR: 1
+  openPR: 2
   closedIssue: 160
   openIssue: 7
   commit: 891
 ---
 path: /home/runner/.x-repo/github.com/xithrius/twitch-tui
-collectedAt: 2026-11-13T06:37:27Z
+collectedAt: 2026-11-14T06:10:18Z
 loc:
   Rust:
     code: 10460
@@ -120,4 +120,4 @@ total:
 ---
 
 ---
-{"id":442484716,"author":{"login":"Xithrius","id":15021300,"node_id":"MDQ6VXNlcjE1MDIxMzAw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOF8xJRs4aX8fs","tag_name":"v3.0.0","target_commitish":"main","name":"v3.0.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-12T03:43:56Z","updated_at":"2026-11-12T04:07:07Z","published_at":"2026-11-12T04:07:07Z","assets":[],"body":"# What's changed\r\n\r\nIt's been quite a while since the last stable release of [v2.6.19](https://github.com/Xithrius/twitch-tui/releases/tag/v2.6.19), so this changelog will be a bit more extensive than usual. Changes between this stable release and the [previous alpha release](https://github.com/Xithrius/twitch-tui/releases/tag/v3.0.0-alpha.4) are included in the next section.\r\n\r\nBe aware that with the migration from IRC to websockets, you'll need to update `twitch.server` in your config to contain `\"wss://eventsub.wss.twitch.tv/ws\"` instead of `\"irc.chat.twitch.tv\"` in order to connect to Twitch chats. Otherwise, the application will exit with an error, explaining possible solutions.\r\n\r\n* Fix typo in window size warning message (#676)\r\n* Migrating Twitch connection from IRC to WebSockets (#677)\r\n* Add further websocket commands (#679)\r\n* Fix grammar typo in follower command message (#681)\r\n* Remove config storage.channels check for autofill (#682)\r\n* Add more websocket commands (#683)\r\n* Access dashboard favorite channel index > 9 (#686)\r\n* Update dockerfile rust image (#688)\r\n* User will no longer be able to see token when typing/pasting it into the autoconfig wizard (2d6ce8aa10116576473410b9f212f9ad7dcbaa09)\r\n* `oauth:` is automatically prepended to the token in the autoconfig wizard if it is not provided by the user (#680)\r\n* Clamp following widget to frame size (#691)\r\n* Corrected quick authentication URL scopes in configuration docs (#695)\r\n* Changed search widget selected foreground text color to black (#697)\r\n* Clean channel names in the following widget such that they only contain broadcaster names (17ece42dfe9f03c5e93ba93b11ba8c61a41bccd5)\r\n* Custom keybinds (#692)\r\n* Allow opening an external player for the current channel (#684)\r\n* Track unique chatters in storage (#687)\r\n* Removed manual panic activation keybind (65e2ed90802062a3b0fb6e29cc4462f128bed61e)\r\n* Immutable configuration after construction (985875bbcc8988fe18818abf9cdc7a9a31039b16)\r\n* Centralized events and OAuth (#707, #708)\r\n* Username filtering (#710)\r\n* Properly immutable keybinds (#711)\r\n* Don't send a message when a command is executed (#713)\r\n* Simplify & de-duplicate Twitch API requests (#714)\r\n* Targeted correct rust version in nix flake (#719)\r\n* Optional content classification labels (#724)\r\n* Added support for emotes TMUX passthrough (#694)\r\n\r\n## What's changed since v3.0.0-alpha.4\r\n\r\n* Fixed shared chat messages failing to deserialize (#730) \r\n* Validate format of configured websocket server string (112cc2c9d8637e7cbd083b0dbc80387f0472e503)\r\n* `--verbose` no longer requires a boolean to be passed (6da8c80b9dec211e90af5bc67e9057010d4072bb)\r\n\r\n# Contributors\r\n\r\nThank you @fisher60, @kaizoplant, @kshpin, @porant, @erys, @BlueCloudDev, @tripplehelix, @Nogesma, @emneo-dev, and @JingzOoi!\r\n\r\n# More information\r\n\r\nRelease available on [crates.io](https://crates.io/crates/twitch-tui).\r\n\r\nDownload the binary through `cargo install twitch-tui --version \"3.0.0\"`.\r\n\r\nDocumentation available [here](https://xithrius.github.io/twitch-tui/).\r\n\r\nIf you have any problems/suggestions don't hesitate to [submit an issue](https://github.com/Xithrius/twitch-tui/issues/new/choose)! \r\n\r\nFull changelog since last stable release (v2.6.19): https://github.com/Xithrius/twitch-tui/compare/v2.6.19...v3.0.0\r\nFull changelog since last alpha release (v3.0.0-alpha.4): https://github.com/Xithrius/twitch-tui/compare/v3.0.0-alpha.4...v3.0.0","mentions_count":10}
+{"id":442484716,"author":{"login":"Xithrius","id":15021300,"node_id":"MDQ6VXNlcjE1MDIxMzAw","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOF8xJRs4aX8fs","tag_name":"v3.0.0","target_commitish":"main","name":"v3.0.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-12T03:43:56Z","updated_at":"2026-11-12T04:07:07Z","published_at":"2026-11-12T04:07:07Z","assets":[],"body":"# What's changed\r\n\r\nIt's been quite a while since the last stable release of [v2.6.19](https://github.com/Xithrius/twitch-tui/releases/tag/v2.6.19), so this changelog will be a bit more extensive than usual. Changes between this stable release and the [previous alpha release](https://github.com/Xithrius/twitch-tui/releases/tag/v3.0.0-alpha.4) are included in the next section.\r\n\r\nBe aware that with the migration from IRC to websockets, you'll need to update `twitch.server` in your config to contain `\"wss://eventsub.wss.twitch.tv/ws\"` instead of `\"irc.chat.twitch.tv\"` in order to connect to Twitch chats. Otherwise, the application will exit with an error, explaining possible solutions.\r\n\r\n* Fix typo in window size warning message (#676)\r\n* Migrating Twitch connection from IRC to WebSockets (#677)\r\n* Add further websocket commands (#679)\r\n* Fix grammar typo in follower command message (#681)\r\n* Remove config storage.channels check for autofill (#682)\r\n* Add more websocket commands (#683)\r\n* Access dashboard favorite channel index > 9 (#686)\r\n* Update dockerfile rust image (#688)\r\n* User will no longer be able to see token when typing/pasting it into the autoconfig wizard (2d6ce8aa10116576473410b9f212f9ad7dcbaa09)\r\n* `oauth:` is automatically prepended to the token in the autoconfig wizard if it is not provided by the user (#680)\r\n* Clamp following widget to frame size (#691)\r\n* Corrected quick authentication URL scopes in configuration docs (#695)\r\n* Changed search widget selected foreground text color to black (#697)\r\n* Clean channel names in the following widget such that they only contain broadcaster names (17ece42dfe9f03c5e93ba93b11ba8c61a41bccd5)\r\n* Custom keybinds (#692)\r\n* Allow opening an external player for the current channel (#684)\r\n* Track unique chatters in storage (#687)\r\n* Removed manual panic activation keybind (65e2ed90802062a3b0fb6e29cc4462f128bed61e)\r\n* Immutable configuration after construction (985875bbcc8988fe18818abf9cdc7a9a31039b16)\r\n* Centralized events and OAuth (#707, #708)\r\n* Username filtering (#710)\r\n* Properly immutable keybinds (#711)\r\n* Don't send a message when a command is executed (#713)\r\n* Simplify & de-duplicate Twitch API requests (#714)\r\n* Targeted correct rust version in nix flake (#719)\r\n* Optional content classification labels (#724)\r\n* Added support for emotes TMUX passthrough (#694)\r\n\r\n## What's changed since v3.0.0-alpha.4\r\n\r\n* Fixed shared chat messages failing to deserialize (#730) \r\n* Validate format of configured websocket server string (112cc2c9d8637e7cbd083b0dbc80387f0472e503)\r\n* `--verbose` no longer requires a boolean to be passed (6da8c80b9dec211e90af5bc67e9057010d4072bb)\r\n\r\n# Contributors\r\n\r\nThank you @fisher60, @kaizoplant, @kshpin, @porant, @erys, @BlueCloudDev, @tripplehelix, @Nogesma, @emneo-dev, and @JingzOoi!\r\n\r\n# More information\r\n\r\nRelease available on [crates.io](https://crates.io/crates/twitch-tui).\r\n\r\nDownload the binary through `cargo install twitch-tui --version \"3.0.0\"`.\r\n\r\nDocumentation available [here](https://xithrius.github.io/twitch-tui/).\r\n\r\nIf you have any problems/suggestions don't hesitate to [submit an issue](https://github.com/Xithrius/twitch-tui/issues/new/choose)! \r\n\r\nFull changelog since last stable release (v2.6.19): https://github.com/Xithrius/twitch-tui/compare/v2.6.19...v3.0.0\r\nFull changelog since last alpha release (v3.0.0-alpha.4): https://github.com/Xithrius/twitch-tui/compare/v3.0.0-alpha.4...v3.0.0","reactions":{"total_count":1,"+1":1,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"mentions_count":10}

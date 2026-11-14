@@ -2,96 +2,96 @@ about:
   description: "🦀🌡️ Real-time system monitor for Apple Silicon Macs. No sudo. TUI, JSON/Prometheus metrics server, and Rust library."
   license: MIT
   homepage: https://docs.rs/macmon
-  head: 850812f
+  head: bb8b686
   archived: false
   latestVersion: "dev"
   latestRelease: "v0.11.0"
   latestPrerelease: "dev"
-  collectedAt: 2026-11-13T06:27:29Z
+  collectedAt: 2026-11-14T06:14:55Z
 timeline:
   created: 2024-06-16
-  lastCommit: 2026-11-11
+  lastCommit: 2026-11-14
   lastVersion: 2026-10-07
   lastRelease: 2026-11-06
   lastPrerelease: 2026-10-07
 popularity:
-  star: 2108
+  star: 2111
   watcher: 12
   fork: 103
   release: 25
-  contributor: 21
-  pullRequest: 84
+  contributor: 22
+  pullRequest: 85
   issue: 57
 language:
-  Rust: 677633
+  Rust: 681424
   Python: 73700
   Shell: 4331
   Makefile: 1172
-totalBytes: 756836
+totalBytes: 760627
 recent:
   last30d:
-    since: 2026-10-14
-    release: 2
-    mergedPR: 24
-    openPR: 2
-    closedIssue: 2
-    openIssue: 5
-    commit: 29
-  last60d:
-    since: 2026-09-14
-    release: 4
-    mergedPR: 45
-    openPR: 3
+    since: 2026-10-15
+    release: 1
+    mergedPR: 26
+    openPR: 1
     closedIssue: 4
-    openIssue: 6
-    commit: 66
-  last90d:
-    since: 2026-08-15
+    openIssue: 3
+    commit: 31
+  last60d:
+    since: 2026-09-15
     release: 4
-    mergedPR: 45
-    openPR: 3
-    closedIssue: 5
-    openIssue: 6
-    commit: 66
-  last180d:
-    since: 2026-05-17
-    release: 7
     mergedPR: 47
-    openPR: 3
-    closedIssue: 10
-    openIssue: 7
-    commit: 95
+    openPR: 1
+    closedIssue: 6
+    openIssue: 3
+    commit: 68
+  last90d:
+    since: 2026-08-16
+    release: 4
+    mergedPR: 47
+    openPR: 1
+    closedIssue: 8
+    openIssue: 3
+    commit: 68
+  last180d:
+    since: 2026-05-18
+    release: 7
+    mergedPR: 49
+    openPR: 1
+    closedIssue: 13
+    openIssue: 4
+    commit: 97
   last360d:
-    since: 2025-11-18
+    since: 2025-11-19
     release: 10
-    mergedPR: 53
-    openPR: 4
-    closedIssue: 25
-    openIssue: 7
-    commit: 116
+    mergedPR: 55
+    openPR: 1
+    closedIssue: 28
+    openIssue: 4
+    commit: 118
   last720d:
-    since: 2024-11-23
+    since: 2024-11-24
     release: 17
-    mergedPR: 58
-    openPR: 4
-    closedIssue: 39
-    openIssue: 9
-    commit: 153
+    mergedPR: 60
+    openPR: 1
+    closedIssue: 42
+    openIssue: 6
+    commit: 155
 total:
   release: 25
-  mergedPR: 59
-  openPR: 4
-  closedIssue: 47
-  openIssue: 10
-  commit: 183
+  mergedPR: 61
+  openPR: 1
+  closedIssue: 50
+  openIssue: 7
+  commit: 185
 ---
 path: /home/runner/.x-repo/github.com/vladkens/macmon
-collectedAt: 2026-11-13T06:27:30Z
+collectedAt: 2026-11-14T06:14:56Z
 loc:
   Rust:
-    code: 14295
-    comments: 633
-    blanks: 1922
+    code: 14414
+    comments: 634
+    blanks: 1926
     files: 26
   Python:
     code: 1792
@@ -129,11 +129,11 @@ loc:
     blanks: 515
     files: 21
 total:
-  code: 17187
-  comments: 3258
-  blanks: 2686
+  code: 17306
+  comments: 3259
+  blanks: 2690
   files: 59
 ---
 
 ---
-{"id":436859259,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOMKBR7c4aCfF7","tag_name":"v0.11.0","target_commitish":"main","name":"v0.11.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-06T18:39:32Z","updated_at":"2026-11-06T18:41:44Z","published_at":"2026-11-06T18:41:44Z","assets":[{"id":718162465,"node_id":"RA_kwDOMKBR7c4qzkoh","name":"macmon-v0.11.0-aarch64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":969630,"digest":"sha256:51a3fc694f303fc6ad3904423be7c0437b3133b3359d2986b4066cbf5753c4f1","download_count":793,"created_at":"2026-11-06T18:41:43Z","updated_at":"2026-11-06T18:41:43Z"}],"body":"### Breaking Changes\n\n- `macmon serve --install` now installs a LaunchDaemon that starts at boot with nobody logged in, and needs `sudo`; it replaces your login agent if you have one. `--install --agent` installs the login agent as before, and `--uninstall` removes whichever is there (#121)\n- `macmon serve` now exits when it can't listen on its port, instead of running with no server (#121)\n- Spaces in the process filter now combine words: `google chrome` means both words, not that exact text (#122)\n- Added `pressure_level` and `pressure_percent` to `MemMetrics` in the Rust library, so code that builds this struct or matches it exhaustively needs updating (#120)\n\n### Features\n\n- Added memory pressure: the RAM box graph shows it as Activity Monitor does, in green, yellow or red by level, with `memory.pressure_percent` and `memory.pressure_level` in JSON and Prometheus (#120)\n- Added queries to the process filter: `cpu:`, `gpu:`, `power:`, `mem:` and `time:` with a number, `user:` and `path:` with text, and `!` before any word; a word with a bad value shows in red (#122)\n- Added `dir:` to the process filter, to find processes by working directory (#123)\n- Added `app:` to the process filter, to find an app with all its processes, such as Safari with its tabs (#124)\n- Added pausing the process list with `Space` and turning a filter off and on with `f` (#108, by @ratniel)\n\n### Fixes\n\n- Fixed `ram_power` reading 0 on M1 Macs (#119)\n- Fixed rare `ram_power` spikes of hundreds of watts on macOS 27 (#125)\n\n**Full Changelog**: https://github.com/vladkens/macmon/compare/v0.10.0...v0.11.0","reactions":{"total_count":4,"+1":1,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":1,"rocket":1,"eyes":0},"mentions_count":1}
+{"id":436859259,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOMKBR7c4aCfF7","tag_name":"v0.11.0","target_commitish":"main","name":"v0.11.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-06T18:39:32Z","updated_at":"2026-11-06T18:41:44Z","published_at":"2026-11-06T18:41:44Z","assets":[{"id":718162465,"node_id":"RA_kwDOMKBR7c4qzkoh","name":"macmon-v0.11.0-aarch64-apple-darwin.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/x-gtar","state":"uploaded","size":969630,"digest":"sha256:51a3fc694f303fc6ad3904423be7c0437b3133b3359d2986b4066cbf5753c4f1","download_count":926,"created_at":"2026-11-06T18:41:43Z","updated_at":"2026-11-06T18:41:43Z"}],"body":"### Breaking Changes\n\n- `macmon serve --install` now installs a LaunchDaemon that starts at boot with nobody logged in, and needs `sudo`; it replaces your login agent if you have one. `--install --agent` installs the login agent as before, and `--uninstall` removes whichever is there (#121)\n- `macmon serve` now exits when it can't listen on its port, instead of running with no server (#121)\n- Spaces in the process filter now combine words: `google chrome` means both words, not that exact text (#122)\n- Added `pressure_level` and `pressure_percent` to `MemMetrics` in the Rust library, so code that builds this struct or matches it exhaustively needs updating (#120)\n\n### Features\n\n- Added memory pressure: the RAM box graph shows it as Activity Monitor does, in green, yellow or red by level, with `memory.pressure_percent` and `memory.pressure_level` in JSON and Prometheus (#120)\n- Added queries to the process filter: `cpu:`, `gpu:`, `power:`, `mem:` and `time:` with a number, `user:` and `path:` with text, and `!` before any word; a word with a bad value shows in red (#122)\n- Added `dir:` to the process filter, to find processes by working directory (#123)\n- Added `app:` to the process filter, to find an app with all its processes, such as Safari with its tabs (#124)\n- Added pausing the process list with `Space` and turning a filter off and on with `f` (#108, by @ratniel)\n\n### Fixes\n\n- Fixed `ram_power` reading 0 on M1 Macs (#119)\n- Fixed rare `ram_power` spikes of hundreds of watts on macOS 27 (#125)\n\n**Full Changelog**: https://github.com/vladkens/macmon/compare/v0.10.0...v0.11.0","reactions":{"total_count":4,"+1":1,"-1":0,"laugh":0,"hooray":1,"confused":0,"heart":1,"rocket":1,"eyes":0},"mentions_count":1}
