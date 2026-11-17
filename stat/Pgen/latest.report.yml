@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-11-15T07:37:26Z
+  collectedAt: 2026-11-16T08:03:25Z
 timeline:
   created: 2018-01-03
   lastCommit: 2024-11-30
@@ -27,7 +27,7 @@ language:
 totalBytes: 36159
 recent:
   last30d:
-    since: 2026-10-16
+    since: 2026-10-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-16
+    since: 2026-09-17
     release: 0
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-17
+    since: 2026-08-18
     release: 0
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-19
+    since: 2026-05-20
     release: 0
     mergedPR: 0
     openPR: 0
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-20
+    since: 2025-11-21
     release: 0
     mergedPR: 0
     openPR: 1
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-25
+    since: 2024-11-26
     release: 0
     mergedPR: 0
     openPR: 2
@@ -83,7 +83,7 @@ total:
   commit: 169
 ---
 path: /home/runner/.x-repo/github.com/ctsrc/Pgen
-collectedAt: 2026-11-15T07:37:30Z
+collectedAt: 2026-11-16T08:03:32Z
 loc:
   Rust:
     code: 382
@@ -111,7 +111,7 @@ total:
   blanks: 161
   files: 18
 ---
-date: "2026-11-09"
+date: "2026-11-16"
 repo:
   name: github.com/ctsrc/Pgen
   commit: 7f54478e9f5947b5b146d6e5eab4c3bd224fa566
@@ -124,29 +124,29 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/rust.yml:1'
-      - 'Info: no jobLevel write permissions found'
-  - name: Code-Review
-    score: 0
-    reason: Found 0/30 approved changesets -- score normalized to 0
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 0
+    reason: Found 0/30 approved changesets -- score normalized to 0
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/rust.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: SAST
     score: 0
     reason: no SAST tool detected
@@ -156,14 +156,19 @@ checks:
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/rust.yml:31: update your workflow using https://app.stepsecurity.io/secureworkflow/ctsrc/Pgen/rust.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/rust.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/ctsrc/Pgen/rust.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/rust.yml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/ctsrc/Pgen/rust.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/rust.yml:31: update your workflow using https://app.stepsecurity.io/secureworkflow/ctsrc/Pgen/rust.yml/master?enable=pin'
       - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -172,21 +177,16 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: ISC License: LICENSE:0'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
