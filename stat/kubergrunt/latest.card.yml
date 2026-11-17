@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.19.1"
   latestRelease: "v0.19.1"
   latestPrerelease: "v0.17.3-alpha-1"
-  collectedAt: 2026-11-16T08:17:54Z
+  collectedAt: 2026-11-17T08:59:43Z
 timeline:
   created: 2019-01-13
   lastCommit: 2026-11-04
@@ -28,7 +28,7 @@ language:
 totalBytes: 338703
 recent:
   last30d:
-    since: 2026-10-17
+    since: 2026-10-18
     release: 1
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 1
   last60d:
-    since: 2026-09-17
+    since: 2026-09-18
     release: 1
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 1
   last90d:
-    since: 2026-08-18
+    since: 2026-08-19
     release: 1
     mergedPR: 1
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 2
   last180d:
-    since: 2026-05-20
+    since: 2026-05-21
     release: 1
     mergedPR: 4
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 5
   last360d:
-    since: 2025-11-21
+    since: 2025-11-22
     release: 3
     mergedPR: 9
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 10
   last720d:
-    since: 2024-11-26
+    since: 2024-11-27
     release: 13
     mergedPR: 23
     openPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 374
 ---
 path: /home/runner/.x-repo/github.com/gruntwork-io/kubergrunt
-collectedAt: 2026-11-16T08:17:55Z
+collectedAt: 2026-11-17T08:59:45Z
 loc:
   Go:
     code: 7960
@@ -112,32 +112,33 @@ total:
   blanks: 1495
   files: 92
 ---
-date: "2026-11-02"
+date: "2026-11-16"
 repo:
   name: github.com/gruntwork-io/kubergrunt
-  commit: 9ee00463670cfb34f785d897ae2bd5f134d2a4fa
+  commit: 5cd371104667169a4345df00087d82b45475442a
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 4.6
+score: 4.5
 checks:
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
   - name: Dangerous-Workflow
     score: -1
     reason: no workflows found
     details: null
-  - name: Maintained
-    score: 1
-    reason: 2 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 1
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
     details: null
+  - name: Maintained
+    score: 0
+    reason: project is archived
+    details:
+      - 'Warn: Repository is archived.'
   - name: Token-Permissions
     score: -1
     reason: No tokens found
@@ -181,16 +182,10 @@ checks:
       - 'Warn: release artifact v0.18.5 not signed: https://api.github.com/repos/gruntwork-io/kubergrunt/releases/268992678'
       - 'Warn: release artifact v0.18.4 not signed: https://api.github.com/repos/gruntwork-io/kubergrunt/releases/244617150'
       - 'Warn: release artifact v0.18.3 not signed: https://api.github.com/repos/gruntwork-io/kubergrunt/releases/243455781'
-      - 'Warn: release artifact v0.18.2 not signed: https://api.github.com/repos/gruntwork-io/kubergrunt/releases/241531018'
       - 'Warn: release artifact v0.19.0 does not have provenance: https://api.github.com/repos/gruntwork-io/kubergrunt/releases/276557227'
       - 'Warn: release artifact v0.18.5 does not have provenance: https://api.github.com/repos/gruntwork-io/kubergrunt/releases/268992678'
       - 'Warn: release artifact v0.18.4 does not have provenance: https://api.github.com/repos/gruntwork-io/kubergrunt/releases/244617150'
       - 'Warn: release artifact v0.18.3 does not have provenance: https://api.github.com/repos/gruntwork-io/kubergrunt/releases/243455781'
-      - 'Warn: release artifact v0.18.2 does not have provenance: https://api.github.com/repos/gruntwork-io/kubergrunt/releases/241531018'
-  - name: SAST
-    score: -1
-    reason: 'internal error: internal error: Client.Checks.ListCheckRunsForRef: error during graphqlHandler.setupCheckRuns: Although you appear to have the correct authorization credentials, the `cursor` organization has an IP allow list enabled, and your IP address is not permitted to access this resource.'
-    details: null
   - name: Branch-Protection
     score: 8
     reason: branch protection is not maximal on development and all release branches
@@ -202,4 +197,8 @@ checks:
       - 'Warn: codeowners review is not required on branch ''main'''
       - 'Info: status check found to merge onto on branch ''main'''
       - 'Info: PRs are required in order to make changes on branch ''main'''
+  - name: SAST
+    score: -1
+    reason: 'internal error: internal error: Client.Checks.ListCheckRunsForRef: error during graphqlHandler.setupCheckRuns: Although you appear to have the correct authorization credentials, the `cursor` organization has an IP allow list enabled, and your IP address is not permitted to access this resource.'
+    details: null
 ---

@@ -7,7 +7,7 @@ about:
   latestVersion: "v9.0.0"
   latestRelease: "v9.0.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-16T06:22:09Z
+  collectedAt: 2026-11-17T08:03:19Z
 timeline:
   created: 2020-03-19
   lastCommit: 2026-10-14
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-10-14
   lastPrerelease: 
 popularity:
-  star: 11313
+  star: 11314
   watcher: 28
   fork: 276
   release: 207
@@ -29,7 +29,7 @@ language:
 totalBytes: 177438
 recent:
   last30d:
-    since: 2026-10-17
+    since: 2026-10-18
     release: 0
     mergedPR: 0
     openPR: 4
@@ -37,7 +37,7 @@ recent:
     openIssue: 4
     commit: 0
   last60d:
-    since: 2026-09-17
+    since: 2026-09-18
     release: 1
     mergedPR: 0
     openPR: 17
@@ -45,7 +45,7 @@ recent:
     openIssue: 4
     commit: 13
   last90d:
-    since: 2026-08-18
+    since: 2026-08-19
     release: 1
     mergedPR: 0
     openPR: 17
@@ -53,15 +53,15 @@ recent:
     openIssue: 6
     commit: 13
   last180d:
-    since: 2026-05-20
+    since: 2026-05-21
     release: 1
     mergedPR: 0
-    openPR: 22
+    openPR: 21
     closedIssue: 3
     openIssue: 7
     commit: 13
   last360d:
-    since: 2025-11-21
+    since: 2025-11-22
     release: 1
     mergedPR: 1
     openPR: 23
@@ -69,7 +69,7 @@ recent:
     openIssue: 10
     commit: 14
   last720d:
-    since: 2024-11-26
+    since: 2024-11-27
     release: 5
     mergedPR: 13
     openPR: 34
@@ -85,7 +85,7 @@ total:
   commit: 793
 ---
 path: /home/runner/.x-repo/github.com/egoist/tsup
-collectedAt: 2026-11-16T06:22:10Z
+collectedAt: 2026-11-17T08:03:23Z
 loc:
   TypeScript:
     code: 5639
@@ -123,7 +123,7 @@ total:
   blanks: 1720
   files: 59
 ---
-date: "2026-11-09"
+date: "2026-11-16"
 repo:
   name: github.com/egoist/tsup
   commit: 198479b814f5981032dc0b7cd52c4b9e4b699ac3
@@ -153,6 +153,15 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:15'
+      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/format.yml:1'
+      - 'Info: found token with ''none'' permissions: .github/workflows/release-continuous.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
@@ -163,15 +172,6 @@ checks:
       - 'Info:   4 out of   4 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   2 out of   4 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:15'
-      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/format.yml:1'
-      - 'Info: found token with ''none'' permissions: .github/workflows/release-continuous.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -187,10 +187,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: -1
     reason: no releases found
@@ -203,6 +199,10 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

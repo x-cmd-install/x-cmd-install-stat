@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.9.4"
   latestRelease: "v1.9.4"
   latestPrerelease: "v1.8.4"
-  collectedAt: 2026-11-16T06:38:28Z
+  collectedAt: 2026-11-17T10:16:23Z
 timeline:
   created: 2017-11-20
   lastCommit: 2026-11-02
@@ -15,8 +15,8 @@ timeline:
   lastRelease: 2026-08-31
   lastPrerelease: 2021-10-07
 popularity:
-  star: 12881
-  watcher: 73
+  star: 12883
+  watcher: 72
   fork: 586
   release: 28
   contributor: 72
@@ -30,7 +30,7 @@ language:
 totalBytes: 207177
 recent:
   last30d:
-    since: 2026-10-17
+    since: 2026-10-18
     release: 0
     mergedPR: 1
     openPR: 3
@@ -38,7 +38,7 @@ recent:
     openIssue: 2
     commit: 1
   last60d:
-    since: 2026-09-17
+    since: 2026-09-18
     release: 0
     mergedPR: 2
     openPR: 5
@@ -46,7 +46,7 @@ recent:
     openIssue: 2
     commit: 2
   last90d:
-    since: 2026-08-18
+    since: 2026-08-19
     release: 1
     mergedPR: 6
     openPR: 7
@@ -54,15 +54,15 @@ recent:
     openIssue: 4
     commit: 6
   last180d:
-    since: 2026-05-20
+    since: 2026-05-21
     release: 1
     mergedPR: 15
     openPR: 7
     closedIssue: 5
-    openIssue: 6
+    openIssue: 5
     commit: 17
   last360d:
-    since: 2025-11-21
+    since: 2025-11-22
     release: 1
     mergedPR: 21
     openPR: 7
@@ -70,12 +70,12 @@ recent:
     openIssue: 10
     commit: 21
   last720d:
-    since: 2024-11-26
+    since: 2024-11-27
     release: 3
     mergedPR: 42
     openPR: 8
     closedIssue: 20
-    openIssue: 19
+    openIssue: 18
     commit: 43
 total:
   release: 28
@@ -86,7 +86,7 @@ total:
   commit: 253
 ---
 path: /home/runner/.x-repo/github.com/fullstorydev/grpcurl
-collectedAt: 2026-11-16T06:38:29Z
+collectedAt: 2026-11-17T10:16:24Z
 loc:
   Go:
     code: 9161
@@ -129,22 +129,30 @@ total:
   blanks: 1486
   files: 43
 ---
-date: "2026-11-09"
+date: "2026-11-16"
 repo:
   name: github.com/fullstorydev/grpcurl
   commit: bcfae43127a61c609af2312c98187d8d09051e58
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 6.3
+score: 6.2
 checks:
+  - name: Maintained
+    score: 9
+    reason: 7 commit(s) and 4 issue activity found in the last 90 days -- score normalized to 9
+    details: null
   - name: Code-Review
     score: 8
     reason: Found 18/21 approved changesets -- score normalized to 8
     details: null
-  - name: Maintained
+  - name: Binary-Artifacts
     score: 10
-    reason: 8 commit(s) and 4 issue activity found in the last 90 days -- score normalized to 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 10
@@ -154,37 +162,10 @@ checks:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:96'
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/codesee-arch-diagram.yml:12'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:21'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -207,11 +188,30 @@ checks:
       - 'Info:   0 out of   6 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
       - 'Info:   0 out of   2 goCommand dependencies pinned'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:91'
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'

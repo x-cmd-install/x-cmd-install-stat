@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.27.0"
   latestRelease: "v3.27.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-16T07:17:21Z
+  collectedAt: 2026-11-17T08:35:20Z
 timeline:
   created: 2017-02-05
   lastCommit: 2026-11-12
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-11-12
   lastPrerelease: 
 popularity:
-  star: 6392
+  star: 6397
   watcher: 28
   fork: 241
   release: 207
@@ -31,7 +31,7 @@ language:
 totalBytes: 1481648
 recent:
   last30d:
-    since: 2026-10-17
+    since: 2026-10-18
     release: 4
     mergedPR: 0
     openPR: 0
@@ -39,15 +39,15 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-17
-    release: 7
+    since: 2026-09-18
+    release: 6
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-18
+    since: 2026-08-19
     release: 11
     mergedPR: 0
     openPR: 0
@@ -55,7 +55,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-20
+    since: 2026-05-21
     release: 17
     mergedPR: 0
     openPR: 0
@@ -63,7 +63,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-21
+    since: 2025-11-22
     release: 21
     mergedPR: 0
     openPR: 0
@@ -71,7 +71,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-26
+    since: 2024-11-27
     release: 32
     mergedPR: 0
     openPR: 0
@@ -87,7 +87,7 @@ total:
   commit: 2236
 ---
 path: /home/runner/.x-repo/github.com/errata-ai/vale
-collectedAt: 2026-11-16T07:17:27Z
+collectedAt: 2026-11-17T08:35:25Z
 loc:
   Xml:
     code: 83732
@@ -285,15 +285,19 @@ total:
   blanks: 16053
   files: 1122
 ---
-date: "2026-11-09"
+date: "2026-11-16"
 repo:
   name: github.com/errata-ai/vale
-  commit: 66bbb85a1a78a5b5497331e04d4033357caced4d
+  commit: 4ce91ef208b37f9ac2894766e8cd7b33ffe3baed
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 5.3
+score: 5.1
 checks:
+  - name: Code-Review
+    score: 0
+    reason: Found 1/30 approved changesets -- score normalized to 0
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -302,43 +306,33 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 7 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Code-Review
-    score: 0
-    reason: Found 0/30 approved changesets -- score normalized to 0
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 5 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: SAST
+  - name: Binary-Artifacts
     score: 10
-    reason: 'SAST tool detected: CodeQL'
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: no pull requests merged into dev branch'
+    reason: no binaries found in the repo
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql.yml:17'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:18'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql.yml:17'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/bench.yml:33'
+      - 'Warn: topLevel ''statuses'' permission set to ''write'': .github/workflows/cla.yml:25'
       - 'Warn: topLevel ''actions'' permission set to ''write'': .github/workflows/cla.yml:22'
       - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/cla.yml:23'
-      - 'Warn: topLevel ''statuses'' permission set to ''write'': .github/workflows/cla.yml:25'
       - 'Warn: no topLevel permission defined: .github/workflows/codeql.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/commits.yml:9'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/golangci-lint.yml:9'
@@ -405,16 +399,16 @@ checks:
       - 'Warn: containerImage not pinned by hash: Dockerfile:25: pin your Docker image by updating alpine to alpine@sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf'
       - 'Warn: npmCommand not pinned by hash: Dockerfile:33'
       - 'Warn: goCommand not pinned by hash: .github/workflows/bench.yml:55'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/test.yml:58'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/test.yml:116'
       - 'Warn: chocoCommand not pinned by hash: .github/workflows/test.yml:119'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/test.yml:58'
       - 'Info:   0 out of  26 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   9 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   2 pipCommand dependencies pinned'
-      - 'Info:   0 out of   1 chocoCommand dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
       - 'Info:   0 out of   1 npmCommand dependencies pinned'
       - 'Info:   0 out of   1 goCommand dependencies pinned'
+      - 'Info:   0 out of   2 pipCommand dependencies pinned'
+      - 'Info:   0 out of   1 chocoCommand dependencies pinned'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
@@ -424,12 +418,18 @@ checks:
     score: 0
     reason: Project has not signed or included provenance with any releases.
     details:
+      - 'Warn: release artifact v3.27.0 not signed: https://api.github.com/repos/vale-cli/vale/releases/443408213'
       - 'Warn: release artifact v3.26.0 not signed: https://api.github.com/repos/vale-cli/vale/releases/430004807'
       - 'Warn: release artifact v3.25.1 not signed: https://api.github.com/repos/vale-cli/vale/releases/421183147'
       - 'Warn: release artifact v3.24.0 not signed: https://api.github.com/repos/vale-cli/vale/releases/401244195'
-      - 'Warn: release artifact v3.23.0 not signed: https://api.github.com/repos/vale-cli/vale/releases/396854801'
+      - 'Warn: release artifact v3.27.0 does not have provenance: https://api.github.com/repos/vale-cli/vale/releases/443408213'
       - 'Warn: release artifact v3.26.0 does not have provenance: https://api.github.com/repos/vale-cli/vale/releases/430004807'
       - 'Warn: release artifact v3.25.1 does not have provenance: https://api.github.com/repos/vale-cli/vale/releases/421183147'
       - 'Warn: release artifact v3.24.0 does not have provenance: https://api.github.com/repos/vale-cli/vale/releases/401244195'
-      - 'Warn: release artifact v3.23.0 does not have provenance: https://api.github.com/repos/vale-cli/vale/releases/396854801'
+  - name: SAST
+    score: 7
+    reason: SAST tool detected but not run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: 0 commits out of 1 are checked with a SAST tool'
 ---

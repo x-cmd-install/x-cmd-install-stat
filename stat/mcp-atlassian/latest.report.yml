@@ -2,12 +2,12 @@ about:
   description: "MCP server for Atlassian tools (Confluence, Jira)"
   license: MIT
   homepage: https://mcp-atlassian.soomiles.com
-  head: 5e86d41
+  head: a423ea5
   archived: false
-  latestVersion: "v0.24.5"
-  latestRelease: "v0.24.5"
+  latestVersion: "v0.24.6"
+  latestRelease: "v0.24.6"
   latestPrerelease: ""
-  collectedAt: 2026-11-16T06:39:29Z
+  collectedAt: 2026-11-17T09:18:10Z
 timeline:
   created: 2024-12-03
   lastCommit: 2026-11-16
@@ -15,84 +15,84 @@ timeline:
   lastRelease: 2026-11-16
   lastPrerelease: 
 popularity:
-  star: 6124
+  star: 6129
   watcher: 22
-  fork: 1458
-  release: 80
+  fork: 1461
+  release: 81
   contributor: 234
-  pullRequest: 1124
+  pullRequest: 1126
   issue: 632
 language:
-  Python: 5384941
+  Python: 5389265
   Shell: 14636
   Jinja: 5658
   Dockerfile: 2417
   Go Template: 1668
-totalBytes: 5409320
+totalBytes: 5413644
 recent:
   last30d:
-    since: 2026-10-17
-    release: 6
-    mergedPR: 32
+    since: 2026-10-18
+    release: 7
+    mergedPR: 33
     openPR: 39
-    closedIssue: 7
+    closedIssue: 5
     openIssue: 20
-    commit: 67
+    commit: 68
   last60d:
-    since: 2026-09-17
-    release: 6
-    mergedPR: 37
-    openPR: 68
+    since: 2026-09-18
+    release: 7
+    mergedPR: 36
+    openPR: 69
     closedIssue: 15
     openIssue: 46
-    commit: 67
+    commit: 68
   last90d:
-    since: 2026-08-18
-    release: 7
-    mergedPR: 56
-    openPR: 92
-    closedIssue: 32
+    since: 2026-08-19
+    release: 8
+    mergedPR: 52
+    openPR: 93
+    closedIssue: 28
     openIssue: 63
-    commit: 81
+    commit: 82
   last180d:
-    since: 2026-05-20
-    release: 10
-    mergedPR: 143
-    openPR: 111
-    closedIssue: 83
-    openIssue: 79
-    commit: 229
+    since: 2026-05-21
+    release: 11
+    mergedPR: 142
+    openPR: 112
+    closedIssue: 79
+    openIssue: 77
+    commit: 230
   last360d:
-    since: 2025-11-21
-    release: 31
-    mergedPR: 405
-    openPR: 117
+    since: 2025-11-22
+    release: 32
+    mergedPR: 406
+    openPR: 118
     closedIssue: 222
     openIssue: 115
-    commit: 456
+    commit: 457
   last720d:
-    since: 2024-11-26
-    release: 80
-    mergedPR: 710
-    openPR: 117
+    since: 2024-11-27
+    release: 81
+    mergedPR: 711
+    openPR: 118
     closedIssue: 503
     openIssue: 129
-    commit: 790
+    commit: 791
 total:
-  release: 80
-  mergedPR: 710
-  openPR: 117
+  release: 81
+  mergedPR: 711
+  openPR: 118
   closedIssue: 503
   openIssue: 129
-  commit: 790
+  commit: 791
 ---
 path: /home/runner/.x-repo/github.com/sooperset/mcp-atlassian
-collectedAt: 2026-11-16T06:39:32Z
+collectedAt: 2026-11-17T09:18:12Z
 loc:
   Python:
-    code: 121810
-    comments: 6353
-    blanks: 19454
+    code: 121899
+    comments: 6356
+    blanks: 19467
     files: 307
   Yaml:
     code: 1118
@@ -145,11 +145,11 @@ loc:
     blanks: 29
     files: 1
 total:
-  code: 124039
-  comments: 7238
-  blanks: 20003
+  code: 124128
+  comments: 7241
+  blanks: 20016
   files: 384
 ---
 
 ---
-{"id":446601069,"author":{"login":"sooperset","id":32061883,"node_id":"MDQ6VXNlcjMyMDYxODgz","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDONYN7OM4anpdt","tag_name":"v0.24.5","target_commitish":"5e86d413c345422c3305a8e491c9a9e4953db1bc","name":"v0.24.5","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-16T04:17:09Z","updated_at":"2026-11-16T04:17:52Z","published_at":"2026-11-16T04:17:52Z","assets":[],"body":"## 🔒 Security\n\nThis release fixes security issues found in an internal audit of the server. Upgrade if you run the HTTP transports (`sse`, `streamable-http`), use `JIRA_PROJECTS_FILTER`, `CONFLUENCE_SPACES_FILTER` or `JIRA_INTERNAL_ONLY_PROJECTS`, or let callers choose the Atlassian URL with request headers. Details are in each advisory. The fixes are in #1886.\n\n**Project and space filters**\n\n- GHSA-f5qp-f5cw-2r8f: tool arguments that become part of a request path (comment, queue, request type, issue type, version, field and context IDs, and the page move position) can no longer address a resource outside the allowlist.\n- GHSA-vhwv-5pg8-hh56: with a filter set, empty scoped arguments are refused, and changelog items, Confluence comment bodies, templates and space lookups stay inside the allowlist.\n\n**Server-side requests and operator settings**\n\n- GHSA-cvhg-qx9x-fv7g: Jira attachments are downloaded only from the Jira instance the request is for, and `JIRA_SSL_VERIFY=false` / `CONFLUENCE_SSL_VERIFY=false` apply only to the configured origin. Operator policy settings (`JIRA_INTERNAL_ONLY_PROJECTS`, timeouts, markup translation) now also apply to requests that authenticate with URL and token headers.\n\n**HTTP transports**\n\n- GHSA-qx98-vrcc-c5w9: when requests can be served with the operator's own credentials (`ALLOW_GLOBAL_CRED_FALLBACK` or `IGNORE_HEADER_AUTH`), the server checks the `Origin` header on every address and the `Host` header on loopback.\n- GHSA-xqr5-x7vp-hmg9: Jira and Confluence calls no longer block the server for every other caller. They run in worker threads with a limit per upstream site, circuit breaker state is kept per site, and large comment, worklog and paged reads are bounded.\n- GHSA-3jvr-xc3p-xhgr: converting Jira and Confluence markup takes time in proportion to the size of the text.\n\n**Hardening**\n\n- **mcp 1.30.0.** Picks up the fix for GHSA-fmmv-w9g8-j3gc in the MCP SDK (#1799).\n- **Attachment downloads stop at the size limit** (#1881), and one tool call returns at most 50 MB of attachment data inline.\n- **Token characters stay out of debug logs** (#1881).\n- Confined file opens do not follow symbolic links, and one dynamic client registration is limited in size.\n\n## ⚠️ Behavior changes to check before upgrading\n\nMost deployments need no change. Two settings may need attention:\n\n1. **`ALLOW_GLOBAL_CRED_FALLBACK` or `IGNORE_HEADER_AUTH` with a browser client or a same-host proxy.** A request with an `Origin` header gets 403 unless the origin is local or listed in `FASTMCP_HTTP_ALLOWED_ORIGINS`. A request that arrives on a loopback address with a non-local `Host` gets 421 unless the host is listed in `FASTMCP_HTTP_ALLOWED_HOSTS`. Clients that send no `Origin` header are not affected.\n2. **`JIRA_SSL_VERIFY=false` or `CONFLUENCE_SSL_VERIFY=false` with URL headers.** Certificate checks are off only for the configured origin. A request that names another host in its URL header gets this only when that host is under `MCP_ALLOWED_URL_DOMAINS`. Redirect targets and other hosts verify certificates.\n\nOther changes:\n\n- **IDs are validated.** `jira_edit_comment`, `jira_get_queue_issues`, `jira_get_request_type_fields`, `jira_create_customer_request`, `jira_get_create_fields` and `jira_update_version` refuse an ID that is not numeric. `jira_get_field_options` refuses a `field_id` with characters other than letters, digits and underscores.\n- **`confluence_move_page`** accepts `append`, `above`, `below`, `before` and `after`, with the same meaning on every auth path. On Cloud OAuth `above` and `below` used to fail.\n- **Large reads stop early and say so.** `confluence_get_comments` and `confluence_get_inline_comments` read at most 200 comments per collection. When a read stops early, list responses end with one `{\"truncated\": true, \"message\": ...}` item and object responses carry `\"truncated\": true` and a `hint`. Jira worklog reads stop at 5000 entries.\n- **Mentions.** One converted Confluence page or comment looks up at most 50 different users. Mentions past that show the stored ID.\n- **With `JIRA_PROJECTS_FILTER` or `CONFLUENCE_SPACES_FILTER` set:** an empty string for a project, issue, space or content argument is refused. Changelog output drops link, parent, epic, project and sprint changes that name issues outside the allowlist. Confluence comment bodies are converted from storage format, so include and listing macros show as placeholders. A template with no space must be a global template.\n- **With `JIRA_INTERNAL_ONLY_PROJECTS` set:** comment writes on other projects make one more issue lookup and are refused if it fails.\n- **`ATLASSIAN_CIRCUIT_BREAKER_THRESHOLD`** now opens the breaker for one upstream site at a time. **`JIRA_FETCHER_MAX_WORKERS`** (default 8) is a limit per upstream site for both Jira and Confluence.\n- **Diagram blocks.** Fenced `mermaid` and `plantuml` blocks in Confluence Markdown are stored as code blocks, and draw.io processing is off. The earlier mermaid macro pointed at an attachment that was never uploaded.\n- **Jira text conversion.** Bracketed text right after a wiki link no longer breaks the link: `See [docs|http://x] and [PROJ-1] now` becomes `See [docs](http://x) and PROJ-1 now`.\n- **Dynamic client registration** refuses a `client_name` over 256 characters or metadata over 16 KiB.\n\n## 🐛 Bug Fixes\n\n### Server / Transport\n\n- **The configured timeout applies to every request.** Requests that the server sends directly through the HTTP session, such as attachment uploads, had no timeout. One stalled upload could block a shared `streamable-http` server until the process was killed. These requests now use `JIRA_TIMEOUT` and `CONFLUENCE_TIMEOUT` (#1795). Thanks to @JosXa for the diagnosis and the fix.\n\n### Jira\n\n- **`jira_create_issue` accepts its own parameters inside `additional_fields`.** Passing `components`, `assignee` or another named parameter in `additional_fields` raised `got multiple values for keyword argument` before any request was sent. The tool now merges them, combines components from both places, accepts components by id, and rejects only values that contradict each other (#1796, #1834). Thanks to @vkpeter for the report and @star7js for the fix.\n- **`expand=renderedFields` returns the rendered content.** `jira_get_issue` and `jira_search` now return a `rendered_fields` object keyed by field id (#1733, #1739). Thanks to @kenneth-burgener-sndk for the report and @vishalhabib99 for the fix.\n\n### Confluence\n\n- **Cloud OAuth: labels, comments, the space page tree, page history and page diff work again.** Atlassian removed the Confluence v1 content endpoints from the OAuth gateway (410 Gone). `confluence_get_comments` returned an empty list, and the others failed. These reads now use the v2 API (#1598, #1373, #1783). Thanks to @jasandov for the fix and @Code-by-AB for the report.\n- **A comma in an attachment comment no longer fails the upload on Cloud.** Confluence Cloud reads the `comment` field of a new upload as a comma-separated list, so such a comment returned HTTP 400. The comment is now set right after the upload and is stored as written. Upload errors include Confluence's reason (#1803, #1857, #1883). Thanks to @generalpurpose123 for the report and @TejasLamba2006 for the diagnosis.\n- **`confluence_upload_attachments` reports failed files.** The summary counts uploaded and failed files, and a batch in which no file was uploaded returns `success: false` (#1883).\n- **Page history and space page reads return the stored body unchanged with `convert_to_markdown=false`.** They used to run the body through the preprocessor, which flattened user mentions and could change macros. Writing that output back lost the original structure (#1725). Thanks to @zifter.\n- **Macro parameter values no longer leak into Markdown.** A panel rendered as `#deebff#f4f5f71Title` and a status as `BlueIN PROGRESS`, because parameters of macros without a dedicated handler were kept as text (#1750, #1838). Thanks to @HeeyunCho for the report and @TejasLamba2006 for the fix.\n- **A page that was created is no longer reported as failed.** Confluence Cloud can answer 404 for a new page for a moment after it was created. `confluence_create_page` then reported a failure, and a second attempt made a second page. The read after a create is now tried again, and if it still fails the error says the page was created and gives its ID (#1885).\n- **A refused page move is reported as an error.** With an API token, Confluence can refuse a move with a status below 400. The tool then reported success for a page that had not moved (#1833). Thanks to @davekim917.\n- **Pages with many code macros convert faster.** The converter re-serialized the whole page once per code macro (#1880).\n\n### Docs and CI\n\n- Installation instructions for GitHub Copilot in VS Code (#1836). Thanks to @frazar.\n- Every GitHub Action is pinned to a commit, workflows are audited with zizmor, and an unused workflow is removed (#1882, #1884).\n\n## Contributors\n\nThanks to @JosXa, @star7js, @vishalhabib99, @jasandov, @TejasLamba2006, @zifter, @davekim917 and @frazar, and to @vkpeter, @kenneth-burgener-sndk, @Code-by-AB, @generalpurpose123 and @HeeyunCho for the reports.\n\n**Full Changelog**: https://github.com/sooperset/mcp-atlassian/compare/v0.24.4...v0.24.5\n","mentions_count":13}
+{"id":446858582,"author":{"login":"sooperset","id":32061883,"node_id":"MDQ6VXNlcjMyMDYxODgz","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDONYN7OM4aooVW","tag_name":"v0.24.6","target_commitish":"a423ea579955bd4e00bf97ef64effea21f6ad1a3","name":"v0.24.6","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-16T09:59:10Z","updated_at":"2026-11-16T09:59:27Z","published_at":"2026-11-16T09:59:27Z","assets":[],"body":"## 🔒 Security\n\n- GHSA-3c26-hw8g-vvc9: Confluence write calls with Markdown content that ran at the same time could store malformed content or content from another call. Only 0.24.5 is affected. The fix is in #1887.\n\n## 🐛 Bug Fixes\n\n### Confluence\n\n- **Markdown writes that run at the same time no longer affect each other.** 0.24.5 started running Confluence calls in parallel, and the Markdown converter was shared between them. A page or comment written while another Markdown write was converting could be stored with broken formatting or with text from the other call. Each conversion now uses its own converter, so a conversion that fails also no longer affects the ones after it (#1887).\n\n## ⚠️ If you ran 0.24.5\n\nReview the pages and comments that were written with Markdown content while 0.24.5 was running, if several users shared the server or a client sent write calls in parallel. Content that was already stored in Confluence was not read or changed by this issue.\n\n**Full Changelog**: https://github.com/sooperset/mcp-atlassian/compare/v0.24.5...v0.24.6\n"}

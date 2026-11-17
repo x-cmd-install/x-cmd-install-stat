@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.17.0"
   latestRelease: "v0.17.0"
   latestPrerelease: "v0.17.0-rc2"
-  collectedAt: 2026-11-16T08:13:08Z
+  collectedAt: 2026-11-17T11:03:38Z
 timeline:
   created: 2016-02-18
   lastCommit: 2026-11-06
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-04-06
   lastPrerelease: 2026-04-02
 popularity:
-  star: 66197
+  star: 66202
   watcher: 448
-  fork: 3720
+  fork: 3718
   release: 108
   contributor: 464
   pullRequest: 2646
@@ -30,7 +30,7 @@ language:
 totalBytes: 1195112
 recent:
   last30d:
-    since: 2026-10-17
+    since: 2026-10-18
     release: 0
     mergedPR: 3
     openPR: 6
@@ -38,7 +38,7 @@ recent:
     openIssue: 2
     commit: 3
   last60d:
-    since: 2026-09-17
+    since: 2026-09-18
     release: 0
     mergedPR: 5
     openPR: 7
@@ -46,35 +46,35 @@ recent:
     openIssue: 3
     commit: 5
   last90d:
-    since: 2026-08-18
+    since: 2026-08-19
     release: 0
     mergedPR: 7
     openPR: 9
     closedIssue: 34
-    openIssue: 5
+    openIssue: 4
     commit: 7
   last180d:
-    since: 2026-05-20
+    since: 2026-05-21
     release: 0
     mergedPR: 14
     openPR: 11
-    closedIssue: 78
+    closedIssue: 77
     openIssue: 9
     commit: 13
   last360d:
-    since: 2025-11-21
+    since: 2025-11-22
     release: 3
     mergedPR: 35
     openPR: 12
-    closedIssue: 188
+    closedIssue: 185
     openIssue: 23
     commit: 32
   last720d:
-    since: 2024-11-26
+    since: 2024-11-27
     release: 12
     mergedPR: 121
     openPR: 14
-    closedIssue: 463
+    closedIssue: 459
     openIssue: 40
     commit: 114
 total:
@@ -86,7 +86,7 @@ total:
   commit: 2498
 ---
 path: /home/runner/.x-repo/github.com/alacritty/alacritty
-collectedAt: 2026-11-16T08:13:12Z
+collectedAt: 2026-11-17T11:03:41Z
 loc:
   Rust:
     code: 25086
@@ -149,7 +149,7 @@ total:
   blanks: 5916
   files: 256
 ---
-date: "2026-11-09"
+date: "2026-11-16"
 repo:
   name: github.com/alacritty/alacritty
   commit: aa5d942f46c40184a3f214830ff5f7989f4733a1
@@ -158,27 +158,23 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.8
 checks:
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
   - name: Maintained
     score: 10
-    reason: 8 commit(s) and 11 issue activity found in the last 90 days -- score normalized to 10
+    reason: 7 commit(s) and 12 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -186,20 +182,14 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Pinned-Dependencies
-    score: 0
-    reason: dependency not pinned by hash detected -- score normalized to 0
-    details:
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/alacritty/alacritty/ci.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:33: update your workflow using https://app.stepsecurity.io/secureworkflow/alacritty/alacritty/ci.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:40: update your workflow using https://app.stepsecurity.io/secureworkflow/alacritty/alacritty/release.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:66: update your workflow using https://app.stepsecurity.io/secureworkflow/alacritty/alacritty/release.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/alacritty/alacritty/release.yml/master?enable=pin'
-      - 'Info:   0 out of   5 GitHub-owned GitHubAction dependencies pinned'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -208,6 +198,16 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Pinned-Dependencies
+    score: 0
+    reason: dependency not pinned by hash detected -- score normalized to 0
+    details:
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/alacritty/alacritty/ci.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:33: update your workflow using https://app.stepsecurity.io/secureworkflow/alacritty/alacritty/ci.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:66: update your workflow using https://app.stepsecurity.io/secureworkflow/alacritty/alacritty/release.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:16: update your workflow using https://app.stepsecurity.io/secureworkflow/alacritty/alacritty/release.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:40: update your workflow using https://app.stepsecurity.io/secureworkflow/alacritty/alacritty/release.yml/master?enable=pin'
+      - 'Info:   0 out of   5 GitHub-owned GitHubAction dependencies pinned'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
