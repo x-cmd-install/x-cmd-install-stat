@@ -7,7 +7,7 @@ about:
   latestVersion: "rel_1_4_3"
   latestRelease: "rel_1_4_3"
   latestPrerelease: ""
-  collectedAt: 2026-11-17T05:43:56Z
+  collectedAt: 2026-11-18T05:10:41Z
 timeline:
   created: 2018-11-26
   lastCommit: 2026-09-22
@@ -29,7 +29,7 @@ language:
 totalBytes: 651339
 recent:
   last30d:
-    since: 2026-10-18
+    since: 2026-10-19
     release: 0
     mergedPR: 0
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-18
+    since: 2026-09-19
     release: 2
     mergedPR: 0
     openPR: 0
@@ -45,7 +45,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-08-19
+    since: 2026-08-20
     release: 2
     mergedPR: 0
     openPR: 0
@@ -53,7 +53,7 @@ recent:
     openIssue: 1
     commit: 6
   last180d:
-    since: 2026-05-21
+    since: 2026-05-22
     release: 4
     mergedPR: 0
     openPR: 0
@@ -61,7 +61,7 @@ recent:
     openIssue: 1
     commit: 28
   last360d:
-    since: 2025-11-22
+    since: 2025-11-23
     release: 6
     mergedPR: 0
     openPR: 0
@@ -69,7 +69,7 @@ recent:
     openIssue: 2
     commit: 42
   last720d:
-    since: 2024-11-27
+    since: 2024-11-28
     release: 10
     mergedPR: 1
     openPR: 2
@@ -85,7 +85,7 @@ total:
   commit: 1023
 ---
 path: /home/runner/.x-repo/github.com/sqlalchemy/mako
-collectedAt: 2026-11-17T05:43:57Z
+collectedAt: 2026-11-18T05:10:42Z
 loc:
   Python:
     code: 17117
@@ -138,34 +138,36 @@ total:
   blanks: 4366
   files: 114
 ---
-date: "2026-11-02"
+date: "2026-11-16"
 repo:
   name: github.com/sqlalchemy/mako
   commit: 14889bc0feacd12102ee61f0769677be2fddbc1b
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 5.2
+score: 4.8
 checks:
-  - name: Code-Review
-    score: 0
-    reason: Found 0/30 approved changesets -- score normalized to 0
-    details: null
   - name: Maintained
-    score: 10
-    reason: 9 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10
+    score: 6
+    reason: 6 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 6
     details: null
+  - name: Security-Policy
+    score: 10
+    reason: security policy file detected
+    details:
+      - 'Info: security policy file detected: .github/SECURITY.md:1'
+      - 'Info: Found linked content: .github/SECURITY.md:1'
+      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: .github/SECURITY.md:1'
+      - 'Info: Found text in security policy: .github/SECURITY.md:1'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
     details:
-      - 'Warn: no topLevel permission defined: .github/workflows/run-on-pr.yaml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/run-test.yaml:1'
-      - 'Info: no jobLevel write permissions found'
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: SAST
     score: 0
     reason: no SAST tool detected
@@ -175,19 +177,10 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Security-Policy
-    score: 10
-    reason: security policy file detected
-    details:
-      - 'Info: security policy file detected: .github/SECURITY.md:1'
-      - 'Info: Found linked content: .github/SECURITY.md:1'
-      - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: .github/SECURITY.md:1'
-      - 'Info: Found text in security policy: .github/SECURITY.md:1'
+  - name: Code-Review
+    score: 0
+    reason: Found 0/30 approved changesets -- score normalized to 0
+    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -202,6 +195,13 @@ checks:
       - 'Warn: pipCommand not pinned by hash: .github/workflows/run-test.yaml:55'
       - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 pipCommand dependencies pinned'
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/run-on-pr.yaml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/run-test.yaml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -217,14 +217,14 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''main'''
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
 ---
 {"id":394113303,"author":{"login":"sqla-tester","id":8250554,"node_id":"MDQ6VXNlcjgyNTA1NTQ=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOCX3SNs4XfbEX","tag_name":"rel_1_4_3","target_commitish":"main","name":"1.4.3","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-22T20:53:48Z","updated_at":"2026-09-22T20:54:36Z","published_at":"2026-09-22T20:54:36Z","assets":[],"body":"\n# 1.4.3\n\nReleased: Tue Sep 22 2026\n## bug\n\n\n-   **[bug] [tests]** Fixed regression caused in 1.4.2 where tests added to the suite were\n    unable to run directly on Windows, due to posix mechanics: the tests force\n    `os.path` to `posixpath`, whereas\n    `TemplateLookup.get_template()` converts the configured directory\n    using `os.path.sep`.  These tests are now skipped on that platform,\n    where the traversal check is instead exercised against `ntpath`\n    natively.\n    \n    References: [#441](https://github.com/sqlalchemy/mako/issues/441)\n"}

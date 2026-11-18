@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.8.0"
   latestRelease: "v0.8.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-17T06:34:58Z
+  collectedAt: 2026-11-18T05:56:19Z
 timeline:
   created: 2020-09-12
   lastCommit: 2026-01-19
@@ -29,7 +29,7 @@ language:
 totalBytes: 99206
 recent:
   last30d:
-    since: 2026-10-18
+    since: 2026-10-19
     release: 0
     mergedPR: 0
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-18
+    since: 2026-09-19
     release: 0
     mergedPR: 0
     openPR: 0
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-19
+    since: 2026-08-20
     release: 0
     mergedPR: 0
     openPR: 0
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-21
+    since: 2026-05-22
     release: 0
     mergedPR: 0
     openPR: 0
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-22
+    since: 2025-11-23
     release: 1
     mergedPR: 4
     openPR: 0
@@ -69,7 +69,7 @@ recent:
     openIssue: 0
     commit: 6
   last720d:
-    since: 2024-11-27
+    since: 2024-11-28
     release: 1
     mergedPR: 4
     openPR: 0
@@ -85,7 +85,7 @@ total:
   commit: 280
 ---
 path: /home/runner/.x-repo/github.com/nakabonne/ali
-collectedAt: 2026-11-17T06:35:00Z
+collectedAt: 2026-11-18T05:56:21Z
 loc:
   Go:
     code: 3513
@@ -123,7 +123,7 @@ total:
   blanks: 557
   files: 32
 ---
-date: "2026-10-19"
+date: "2026-11-16"
 repo:
   name: github.com/nakabonne/ali
   commit: 200c15970c4d314fa2cd85b4827c9a25461a26da
@@ -132,21 +132,17 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.2
 checks:
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Code-Review
     score: 3
     reason: Found 7/23 approved changesets -- score normalized to 3
     details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Token-Permissions
     score: 0
@@ -156,18 +152,14 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -181,26 +173,34 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/nakabonne/ali/test.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:29: update your workflow using https://app.stepsecurity.io/secureworkflow/nakabonne/ali/test.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:35: update your workflow using https://app.stepsecurity.io/secureworkflow/nakabonne/ali/test.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating alpine to alpine@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating alpine to alpine@sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf'
       - 'Info:   0 out of   6 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:8'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:8'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
