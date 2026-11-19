@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.20.0"
   latestRelease: "v1.20.0"
   latestPrerelease: "v0.1.0-beta1"
-  collectedAt: 2026-11-18T05:38:24Z
+  collectedAt: 2026-11-19T05:34:43Z
 timeline:
   created: 2018-09-16
   lastCommit: 2026-05-20
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2025-04-28
   lastPrerelease: 2018-09-26
 popularity:
-  star: 3105
+  star: 3104
   watcher: 25
   fork: 204
   release: 40
@@ -34,7 +34,7 @@ language:
 totalBytes: 336891
 recent:
   last30d:
-    since: 2026-10-19
+    since: 2026-10-20
     release: 0
     mergedPR: 0
     openPR: 0
@@ -42,7 +42,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-19
+    since: 2026-09-20
     release: 0
     mergedPR: 0
     openPR: 2
@@ -50,7 +50,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-20
+    since: 2026-08-21
     release: 0
     mergedPR: 0
     openPR: 3
@@ -58,7 +58,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-05-22
+    since: 2026-05-23
     release: 0
     mergedPR: 0
     openPR: 5
@@ -66,7 +66,7 @@ recent:
     openIssue: 1
     commit: 0
   last360d:
-    since: 2025-11-23
+    since: 2025-11-24
     release: 0
     mergedPR: 3
     openPR: 9
@@ -74,7 +74,7 @@ recent:
     openIssue: 2
     commit: 3
   last720d:
-    since: 2024-11-28
+    since: 2024-11-29
     release: 1
     mergedPR: 17
     openPR: 11
@@ -90,7 +90,7 @@ total:
   commit: 784
 ---
 path: /home/runner/.x-repo/github.com/zegl/kube-score
-collectedAt: 2026-11-18T05:38:25Z
+collectedAt: 2026-11-19T05:34:44Z
 loc:
   Go:
     code: 8227
@@ -163,7 +163,7 @@ total:
   blanks: 2794
   files: 293
 ---
-date: "2026-10-19"
+date: "2026-11-16"
 repo:
   name: github.com/zegl/kube-score
   commit: 06dedc9ccce58bff50a4f42a3ce0633dc72b0dfa
@@ -172,10 +172,6 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.3
 checks:
-  - name: Code-Review
-    score: 5
-    reason: Found 4/8 approved changesets -- score normalized to 5
-    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -185,13 +181,13 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
+    details: null
+  - name: Code-Review
+    score: 5
+    reason: Found 4/8 approved changesets -- score normalized to 5
     details: null
   - name: Token-Permissions
     score: 0
@@ -199,6 +195,10 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/test.yaml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -218,14 +218,6 @@ checks:
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -240,6 +232,14 @@ checks:
       - 'Warn: release artifact v1.18.0 does not have provenance: https://api.github.com/repos/zegl/kube-score/releases/139920148'
       - 'Warn: release artifact v1.17.0 does not have provenance: https://api.github.com/repos/zegl/kube-score/releases/111213795'
       - 'Warn: release artifact v1.16.1 does not have provenance: https://api.github.com/repos/zegl/kube-score/releases/86308129'
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -250,7 +250,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: Dockerfile:9'
       - 'Warn: containerImage not pinned by hash: Dockerfile:13'
       - 'Warn: containerImage not pinned by hash: Dockerfile:20'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:40: pin your Docker image by updating golang:1.26-alpine to golang:1.26-alpine@sha256:9ce231b28998b32e116927c61aa5c406183061d4f3f2d61b292c88e7f6bdf7ca'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:40: pin your Docker image by updating golang:1.26-alpine to golang:1.26-alpine@sha256:ecb67f987aa1a57794c91d19ade7ae0209f2f0f5496aaef9e6ae85ddf92d02ab'
       - 'Warn: containerImage not pinned by hash: Dockerfile:59: pin your Docker image by updating alpine:3.17.0 to alpine:3.17.0@sha256:8914eb54f968791faf6a8638949e480fef81e697984fba772b3976835194c6d4'
       - 'Warn: containerImage not pinned by hash: cmd/kube-score/helm.Dockerfile:1: pin your Docker image by updating debian:stretch to debian:stretch@sha256:c5c5200ff1e9c73ffbf188b4a67eb1c91531b644856b4aefe86a58d2f0cb05be'
       - 'Warn: containerImage not pinned by hash: cmd/kube-score/helm.Dockerfile:13: pin your Docker image by updating alpine:3.14.2 to alpine:3.14.2@sha256:e1c082e3d3c45cccac829840a25941e679c25d438cc8412c2fa221cf1a824e6a'

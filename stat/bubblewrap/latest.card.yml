@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.13.1"
   latestRelease: "v0.13.1"
   latestPrerelease: ""
-  collectedAt: 2026-11-17T10:33:37Z
+  collectedAt: 2026-11-19T09:01:06Z
 timeline:
   created: 2016-02-16
   lastCommit: 2026-10-14
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-10-14
   lastPrerelease: 
 popularity:
-  star: 9529
+  star: 9555
   watcher: 63
-  fork: 412
+  fork: 413
   release: 28
   contributor: 72
   pullRequest: 423
@@ -31,15 +31,15 @@ language:
 totalBytes: 313279
 recent:
   last30d:
-    since: 2026-10-18
+    since: 2026-10-20
     release: 0
     mergedPR: 0
-    openPR: 8
+    openPR: 7
     closedIssue: 0
     openIssue: 5
     commit: 0
   last60d:
-    since: 2026-09-18
+    since: 2026-09-20
     release: 2
     mergedPR: 3
     openPR: 16
@@ -47,7 +47,7 @@ recent:
     openIssue: 10
     commit: 5
   last90d:
-    since: 2026-08-19
+    since: 2026-08-21
     release: 3
     mergedPR: 19
     openPR: 21
@@ -55,7 +55,7 @@ recent:
     openIssue: 15
     commit: 42
   last180d:
-    since: 2026-05-21
+    since: 2026-05-23
     release: 3
     mergedPR: 21
     openPR: 25
@@ -63,7 +63,7 @@ recent:
     openIssue: 18
     commit: 60
   last360d:
-    since: 2025-11-22
+    since: 2025-11-24
     release: 5
     mergedPR: 28
     openPR: 28
@@ -71,7 +71,7 @@ recent:
     openIssue: 28
     commit: 86
   last720d:
-    since: 2024-11-27
+    since: 2024-11-29
     release: 5
     mergedPR: 30
     openPR: 31
@@ -87,7 +87,7 @@ total:
   commit: 750
 ---
 path: /home/runner/.x-repo/github.com/containers/bubblewrap
-collectedAt: 2026-11-17T10:33:38Z
+collectedAt: 2026-11-19T09:01:07Z
 loc:
   C:
     code: 4871
@@ -145,7 +145,7 @@ total:
   blanks: 1731
   files: 44
 ---
-date: "2026-11-09"
+date: "2026-11-16"
 repo:
   name: github.com/containers/bubblewrap
   commit: 1fb0aa26d3eb66254f7742e704add7f82f41a582
@@ -154,15 +154,6 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 6.8
 checks:
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 13 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -171,9 +162,17 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Code-Review
     score: 5
     reason: Found 9/18 approved changesets -- score normalized to 5
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 13 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Token-Permissions
     score: 10
@@ -181,10 +180,11 @@ checks:
     details:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/check.yml:12'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -229,14 +229,14 @@ checks:
       - 'Warn: release artifact v0.12.0 does not have provenance: https://api.github.com/repos/containers/bubblewrap/releases/377041403'
       - 'Warn: release artifact v0.11.2 does not have provenance: https://api.github.com/repos/containers/bubblewrap/releases/312611313'
       - 'Warn: release artifact v0.11.1 does not have provenance: https://api.github.com/repos/containers/bubblewrap/releases/299780424'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits
     details:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Info: all commits (22) are checked with a SAST tool'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
 ---

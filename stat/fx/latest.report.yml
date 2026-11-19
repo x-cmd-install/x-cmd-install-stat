@@ -7,7 +7,7 @@ about:
   latestVersion: "40.0.1"
   latestRelease: "40.0.1"
   latestPrerelease: ""
-  collectedAt: 2026-11-17T09:16:37Z
+  collectedAt: 2026-11-19T07:25:50Z
 timeline:
   created: 2018-01-25
   lastCommit: 2026-10-22
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-10-22
   lastPrerelease: 
 popularity:
-  star: 20717
+  star: 20721
   watcher: 114
-  fork: 503
+  fork: 504
   release: 79
   contributor: 43
   pullRequest: 135
@@ -30,7 +30,7 @@ language:
 totalBytes: 728813
 recent:
   last30d:
-    since: 2026-10-18
+    since: 2026-10-20
     release: 1
     mergedPR: 0
     openPR: 7
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-18
+    since: 2026-09-20
     release: 2
     mergedPR: 4
     openPR: 8
@@ -46,7 +46,7 @@ recent:
     openIssue: 0
     commit: 97
   last90d:
-    since: 2026-08-19
+    since: 2026-08-21
     release: 2
     mergedPR: 4
     openPR: 8
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 98
   last180d:
-    since: 2026-05-21
+    since: 2026-05-23
     release: 2
     mergedPR: 5
     openPR: 8
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 99
   last360d:
-    since: 2025-11-22
+    since: 2025-11-24
     release: 2
     mergedPR: 12
     openPR: 8
@@ -70,7 +70,7 @@ recent:
     openIssue: 0
     commit: 144
   last720d:
-    since: 2024-11-27
+    since: 2024-11-29
     release: 17
     mergedPR: 23
     openPR: 8
@@ -86,7 +86,7 @@ total:
   commit: 893
 ---
 path: /home/runner/.x-repo/github.com/antonmedv/fx
-collectedAt: 2026-11-17T09:16:38Z
+collectedAt: 2026-11-19T07:25:51Z
 loc:
   Go:
     code: 24258
@@ -139,7 +139,7 @@ total:
   blanks: 2771
   files: 147
 ---
-date: "2026-11-09"
+date: "2026-11-16"
 repo:
   name: github.com/antonmedv/fx
   commit: 5d57637b00f4329b3cd563330e159d181e4ead85
@@ -148,17 +148,21 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.8
 checks:
-  - name: Maintained
+  - name: Dangerous-Workflow
     score: 10
-    reason: 30 commit(s) and 21 issue activity found in the last 90 days -- score normalized to 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Code-Review
     score: 0
     reason: Found 1/29 approved changesets -- score normalized to 0
     details: null
-  - name: Dangerous-Workflow
+  - name: Maintained
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: 30 commit(s) and 21 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -169,19 +173,10 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/snap.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -201,27 +196,32 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/antonmedv/fx/test.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:24: update your workflow using https://app.stepsecurity.io/secureworkflow/antonmedv/fx/test.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:33: update your workflow using https://app.stepsecurity.io/secureworkflow/antonmedv/fx/test.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating golang:latest to golang:latest@sha256:e519d3b0a5b285e5aa53ab9eef02bc6bbb9cb04608389b743a136a9ce75f0d1e'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating golang:latest to golang:latest@sha256:205c7636d74e0ffbe3d007162df7d74f859f5a8c8322dfb9f907977686c126cf'
       - 'Warn: containerImage not pinned by hash: Dockerfile:13: pin your Docker image by updating alpine to alpine@sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf'
       - 'Info:   0 out of   7 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   8 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker.yml:6'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -250,4 +250,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 2 are checked with a SAST tool'
 ---
-{"id":420783689,"author":{"login":"antonmedv","id":141232,"node_id":"MDQ6VXNlcjE0MTIzMg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBxb1Xs4ZFKZJ","tag_name":"40.0.1","target_commitish":"master","name":"fx 40.0.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-22T13:49:22Z","updated_at":"2026-10-22T13:50:27Z","published_at":"2026-10-22T13:49:58Z","assets":[{"id":666017508,"node_id":"RA_kwDOBxb1Xs4nsp7k","name":"fx_darwin_amd64","label":"","uploader":{"login":"antonmedv","id":141232,"node_id":"MDQ6VXNlcjE0MTIzMg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":21627056,"digest":"sha256:40b8b253cf578b69ab0b6464918ddb14a66a45ee1d87320a58611141721ae511","download_count":220,"created_at":"2026-10-22T13:50:20Z","updated_at":"2026-10-22T13:50:27Z"},{"id":666017507,"node_id":"RA_kwDOBxb1Xs4nsp7j","name":"fx_darwin_arm64","label":"","uploader":{"login":"antonmedv","id":141232,"node_id":"MDQ6VXNlcjE0MTIzMg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":20640674,"digest":"sha256:c03fead7e2d5ccedbe54e905b0b7ad4b38042d89829a766744bce0c9600f4d80","download_count":760,"created_at":"2026-10-22T13:50:20Z","updated_at":"2026-10-22T13:50:27Z"},{"id":666017503,"node_id":"RA_kwDOBxb1Xs4nsp7f","name":"fx_linux_amd64","label":"","uploader":{"login":"antonmedv","id":141232,"node_id":"MDQ6VXNlcjE0MTIzMg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":21323893,"digest":"sha256:9f0cc5a29d2940dd28fdc7df7b5e19bf16856d388e60d1c9f1116890967c604a","download_count":3023,"created_at":"2026-10-22T13:50:20Z","updated_at":"2026-10-22T13:50:27Z"},{"id":666017521,"node_id":"RA_kwDOBxb1Xs4nsp7x","name":"fx_linux_arm64","label":"","uploader":{"login":"antonmedv","id":141232,"node_id":"MDQ6VXNlcjE0MTIzMg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":20193994,"digest":"sha256:90377fbdbe3a01f791032a289986867ff1f8fe20ce94b45f20ecb399f7b69411","download_count":671,"created_at":"2026-10-22T13:50:21Z","updated_at":"2026-10-22T13:50:27Z"},{"id":666017512,"node_id":"RA_kwDOBxb1Xs4nsp7o","name":"fx_windows_amd64.exe","label":"","uploader":{"login":"antonmedv","id":141232,"node_id":"MDQ6VXNlcjE0MTIzMg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-msdownload","state":"uploaded","size":21801472,"digest":"sha256:6482626d21f8f09e3b89836651e7fbac4d612e2e699abc7b324aab9bb0915e94","download_count":1297,"created_at":"2026-10-22T13:50:20Z","updated_at":"2026-10-22T13:50:27Z"},{"id":666017505,"node_id":"RA_kwDOBxb1Xs4nsp7h","name":"fx_windows_arm64.exe","label":"","uploader":{"login":"antonmedv","id":141232,"node_id":"MDQ6VXNlcjE0MTIzMg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-msdownload","state":"uploaded","size":20424192,"digest":"sha256:c56c14976bd4f85fd5ac5322c1dca25b5fbe948fb707dd7b2339051269d41328","download_count":171,"created_at":"2026-10-22T13:50:20Z","updated_at":"2026-10-22T13:50:27Z"}],"body":"## Fixes\n\n- Fixed rendering of Unicode characters in go-to-symbol matches (#440). Thanks @Rajvira10!\n\n## Maintenance\n\n- Bumped `golang.org/x/net` to 0.55.0 (#439).\n","reactions":{"total_count":1,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":1,"eyes":0},"mentions_count":1}
+{"id":420783689,"author":{"login":"antonmedv","id":141232,"node_id":"MDQ6VXNlcjE0MTIzMg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBxb1Xs4ZFKZJ","tag_name":"40.0.1","target_commitish":"master","name":"fx 40.0.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-22T13:49:22Z","updated_at":"2026-10-22T13:50:27Z","published_at":"2026-10-22T13:49:58Z","assets":[{"id":666017508,"node_id":"RA_kwDOBxb1Xs4nsp7k","name":"fx_darwin_amd64","label":"","uploader":{"login":"antonmedv","id":141232,"node_id":"MDQ6VXNlcjE0MTIzMg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":21627056,"digest":"sha256:40b8b253cf578b69ab0b6464918ddb14a66a45ee1d87320a58611141721ae511","download_count":234,"created_at":"2026-10-22T13:50:20Z","updated_at":"2026-10-22T13:50:27Z"},{"id":666017507,"node_id":"RA_kwDOBxb1Xs4nsp7j","name":"fx_darwin_arm64","label":"","uploader":{"login":"antonmedv","id":141232,"node_id":"MDQ6VXNlcjE0MTIzMg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":20640674,"digest":"sha256:c03fead7e2d5ccedbe54e905b0b7ad4b38042d89829a766744bce0c9600f4d80","download_count":837,"created_at":"2026-10-22T13:50:20Z","updated_at":"2026-10-22T13:50:27Z"},{"id":666017503,"node_id":"RA_kwDOBxb1Xs4nsp7f","name":"fx_linux_amd64","label":"","uploader":{"login":"antonmedv","id":141232,"node_id":"MDQ6VXNlcjE0MTIzMg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":21323893,"digest":"sha256:9f0cc5a29d2940dd28fdc7df7b5e19bf16856d388e60d1c9f1116890967c604a","download_count":3315,"created_at":"2026-10-22T13:50:20Z","updated_at":"2026-10-22T13:50:27Z"},{"id":666017521,"node_id":"RA_kwDOBxb1Xs4nsp7x","name":"fx_linux_arm64","label":"","uploader":{"login":"antonmedv","id":141232,"node_id":"MDQ6VXNlcjE0MTIzMg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":20193994,"digest":"sha256:90377fbdbe3a01f791032a289986867ff1f8fe20ce94b45f20ecb399f7b69411","download_count":720,"created_at":"2026-10-22T13:50:21Z","updated_at":"2026-10-22T13:50:27Z"},{"id":666017512,"node_id":"RA_kwDOBxb1Xs4nsp7o","name":"fx_windows_amd64.exe","label":"","uploader":{"login":"antonmedv","id":141232,"node_id":"MDQ6VXNlcjE0MTIzMg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-msdownload","state":"uploaded","size":21801472,"digest":"sha256:6482626d21f8f09e3b89836651e7fbac4d612e2e699abc7b324aab9bb0915e94","download_count":1405,"created_at":"2026-10-22T13:50:20Z","updated_at":"2026-10-22T13:50:27Z"},{"id":666017505,"node_id":"RA_kwDOBxb1Xs4nsp7h","name":"fx_windows_arm64.exe","label":"","uploader":{"login":"antonmedv","id":141232,"node_id":"MDQ6VXNlcjE0MTIzMg==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-msdownload","state":"uploaded","size":20424192,"digest":"sha256:c56c14976bd4f85fd5ac5322c1dca25b5fbe948fb707dd7b2339051269d41328","download_count":183,"created_at":"2026-10-22T13:50:20Z","updated_at":"2026-10-22T13:50:27Z"}],"body":"## Fixes\n\n- Fixed rendering of Unicode characters in go-to-symbol matches (#440). Thanks @Rajvira10!\n\n## Maintenance\n\n- Bumped `golang.org/x/net` to 0.55.0 (#439).\n","reactions":{"total_count":1,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":1,"eyes":0},"mentions_count":1}

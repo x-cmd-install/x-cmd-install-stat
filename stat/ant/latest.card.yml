@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-11-17T07:43:26Z
+  collectedAt: 2026-11-19T07:09:00Z
 timeline:
   created: 2014-05-28
   lastCommit: 2026-11-05
@@ -35,7 +35,7 @@ language:
 totalBytes: 12686873
 recent:
   last30d:
-    since: 2026-10-18
+    since: 2026-10-20
     release: 0
     mergedPR: 0
     openPR: 1
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 1
   last60d:
-    since: 2026-09-18
+    since: 2026-09-20
     release: 0
     mergedPR: 0
     openPR: 1
@@ -51,7 +51,7 @@ recent:
     openIssue: 0
     commit: 4
   last90d:
-    since: 2026-08-19
+    since: 2026-08-21
     release: 0
     mergedPR: 1
     openPR: 4
@@ -59,7 +59,7 @@ recent:
     openIssue: 0
     commit: 10
   last180d:
-    since: 2026-05-21
+    since: 2026-05-23
     release: 0
     mergedPR: 2
     openPR: 4
@@ -67,7 +67,7 @@ recent:
     openIssue: 0
     commit: 60
   last360d:
-    since: 2025-11-22
+    since: 2025-11-24
     release: 0
     mergedPR: 5
     openPR: 4
@@ -75,7 +75,7 @@ recent:
     openIssue: 0
     commit: 129
   last720d:
-    since: 2024-11-27
+    since: 2024-11-29
     release: 0
     mergedPR: 12
     openPR: 5
@@ -91,7 +91,7 @@ total:
   commit: 15184
 ---
 path: /home/runner/.x-repo/github.com/apache/ant
-collectedAt: 2026-11-17T07:43:35Z
+collectedAt: 2026-11-19T07:09:14Z
 loc:
   Java:
     code: 147988
@@ -174,7 +174,7 @@ total:
   blanks: 39685
   files: 2187
 ---
-date: "2026-11-09"
+date: "2026-11-16"
 repo:
   name: github.com/apache/ant
   commit: e75209d539f7076223d8dbd5946fd0d403cf9a56
@@ -183,9 +183,22 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 3.9
 checks:
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Maintained
+    score: 10
+    reason: 18 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Code-Review
     score: 0
     reason: Found 1/29 approved changesets -- score normalized to 0
+    details: null
+  - name: Token-Permissions
+    score: -1
+    reason: No tokens found
     details: null
   - name: Dangerous-Workflow
     score: -1
@@ -199,19 +212,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Maintained
-    score: 10
-    reason: 23 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Token-Permissions
-    score: -1
-    reason: No tokens found
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -230,21 +230,21 @@ checks:
     score: -1
     reason: no dependencies found
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: License
     score: 9
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: 3
     reason: branch protection is not maximal on development and all release branches
