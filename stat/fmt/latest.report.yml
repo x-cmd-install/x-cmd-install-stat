@@ -7,7 +7,7 @@ about:
   latestVersion: "12.2.1"
   latestRelease: "12.2.1"
   latestPrerelease: ""
-  collectedAt: 2026-11-19T07:52:28Z
+  collectedAt: 2026-11-20T07:35:58Z
 timeline:
   created: 2012-12-07
   lastCommit: 2026-11-16
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-11-07
   lastPrerelease: 
 popularity:
-  star: 25932
+  star: 25938
   watcher: 321
-  fork: 3108
+  fork: 3112
   release: 59
   contributor: 611
-  pullRequest: 1973
-  issue: 3040
+  pullRequest: 1976
+  issue: 3041
 language:
   C++: 2649361
   Python: 61191
@@ -33,63 +33,63 @@ language:
 totalBytes: 2775492
 recent:
   last30d:
-    since: 2026-10-20
+    since: 2026-10-21
     release: 1
     mergedPR: 11
-    openPR: 10
+    openPR: 11
     closedIssue: 6
-    openIssue: 1
+    openIssue: 2
     commit: 57
   last60d:
-    since: 2026-09-20
+    since: 2026-09-21
     release: 1
     mergedPR: 34
-    openPR: 10
+    openPR: 12
     closedIssue: 13
-    openIssue: 1
+    openIssue: 2
     commit: 87
   last90d:
-    since: 2026-08-21
+    since: 2026-08-22
     release: 1
     mergedPR: 69
-    openPR: 10
+    openPR: 12
     closedIssue: 30
-    openIssue: 1
+    openIssue: 2
     commit: 151
   last180d:
-    since: 2026-05-23
+    since: 2026-05-24
     release: 2
     mergedPR: 101
-    openPR: 10
-    closedIssue: 72
-    openIssue: 1
+    openPR: 12
+    closedIssue: 71
+    openIssue: 2
     commit: 254
   last360d:
-    since: 2025-11-24
+    since: 2025-11-25
     release: 2
     mergedPR: 159
-    openPR: 10
+    openPR: 12
     closedIssue: 140
-    openIssue: 2
+    openIssue: 3
     commit: 392
   last720d:
-    since: 2024-11-29
+    since: 2024-11-30
     release: 10
     mergedPR: 261
-    openPR: 10
+    openPR: 12
     closedIssue: 349
-    openIssue: 3
-    commit: 771
+    openIssue: 4
+    commit: 770
 total:
   release: 59
   mergedPR: 1392
-  openPR: 10
+  openPR: 12
   closedIssue: 3037
-  openIssue: 3
+  openIssue: 4
   commit: 8101
 ---
 path: /home/runner/.x-repo/github.com/fmtlib/fmt
-collectedAt: 2026-11-19T07:52:32Z
+collectedAt: 2026-11-20T07:36:03Z
 loc:
   CHeader:
     code: 28720
@@ -320,4 +320,4 @@ checks:
     details:
       - 'Info: found contributions from: Efficient-Large-Model, EpicGames, Kernel-SU, LSPosed, NVIDIA, NVIDIAGameWorks, PixArt-alpha, WiscADSL, cplusplus, department of mathematics duke university, fastfetch-cli, googlers, jump trading, llvm, maystreet, meta, meta-math, optics11, personal work, pybind, sandia national laboratories, simdjson, think-cell, zhejiang university'
 ---
-{"id":437699696,"author":{"login":"vitaut","id":576385,"node_id":"MDQ6VXNlcjU3NjM4NQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAGurSs4aFsRw","tag_name":"12.2.1","target_commitish":"12.x","name":"12.2.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-07T16:39:43Z","updated_at":"2026-11-07T16:45:44Z","published_at":"2026-11-07T16:45:44Z","assets":[{"id":721277505,"node_id":"RA_kwDOAGurSs4q_dJB","name":"fmt-12.2.1.intoto.jsonl","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":20187,"digest":"sha256:86010a88095de62f0592338ba9d6f7fd90a632c3ac1a7c49065641560d48f7f5","download_count":44,"created_at":"2026-11-07T16:42:52Z","updated_at":"2026-11-07T16:42:53Z"},{"id":721275137,"node_id":"RA_kwDOAGurSs4q_ckB","name":"fmt-12.2.1.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":1487547,"digest":"sha256:870a49acec5bcdab236aeea834ebd7f0b8548a7d8cea33c996b6873a37f2d50c","download_count":46814,"created_at":"2026-11-07T16:41:38Z","updated_at":"2026-11-07T16:41:38Z"}],"body":"- Fixed a heap buffer overflow on 32-bit targets when the size of a formatting buffer overflows, e.g. `fmt::format(L\"{:>{}}\", s, 1100000000)`. Such allocations now throw `std::bad_alloc`.\r\n\r\n- Fixed an out-of-bounds read when parsing format specifiers of `std::error_code` (https://github.com/fmtlib/fmt/pull/4934). Thanks @IfkumRfnl.\r\n\r\n- Fixed a crash when formatting `nullptr` with `FMT_COMPILE` and an exception in `fmt::to_string(nullptr)`; both now format it as `0x0` (https://github.com/fmtlib/fmt/pull/4993). Thanks @INo-xious.\r\n\r\n","reactions":{"total_count":18,"+1":5,"-1":0,"laugh":0,"hooray":5,"confused":0,"heart":8,"rocket":0,"eyes":0},"mentions_count":2}
+{"id":437699696,"author":{"login":"vitaut","id":576385,"node_id":"MDQ6VXNlcjU3NjM4NQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAGurSs4aFsRw","tag_name":"12.2.1","target_commitish":"12.x","name":"12.2.1","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-07T16:39:43Z","updated_at":"2026-11-07T16:45:44Z","published_at":"2026-11-07T16:45:44Z","assets":[{"id":721277505,"node_id":"RA_kwDOAGurSs4q_dJB","name":"fmt-12.2.1.intoto.jsonl","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":20187,"digest":"sha256:86010a88095de62f0592338ba9d6f7fd90a632c3ac1a7c49065641560d48f7f5","download_count":47,"created_at":"2026-11-07T16:42:52Z","updated_at":"2026-11-07T16:42:53Z"},{"id":721275137,"node_id":"RA_kwDOAGurSs4q_ckB","name":"fmt-12.2.1.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":1487547,"digest":"sha256:870a49acec5bcdab236aeea834ebd7f0b8548a7d8cea33c996b6873a37f2d50c","download_count":50691,"created_at":"2026-11-07T16:41:38Z","updated_at":"2026-11-07T16:41:38Z"}],"body":"- Fixed a heap buffer overflow on 32-bit targets when the size of a formatting buffer overflows, e.g. `fmt::format(L\"{:>{}}\", s, 1100000000)`. Such allocations now throw `std::bad_alloc`.\r\n\r\n- Fixed an out-of-bounds read when parsing format specifiers of `std::error_code` (https://github.com/fmtlib/fmt/pull/4934). Thanks @IfkumRfnl.\r\n\r\n- Fixed a crash when formatting `nullptr` with `FMT_COMPILE` and an exception in `fmt::to_string(nullptr)`; both now format it as `0x0` (https://github.com/fmtlib/fmt/pull/4993). Thanks @INo-xious.\r\n\r\n","reactions":{"total_count":18,"+1":5,"-1":0,"laugh":0,"hooray":5,"confused":0,"heart":8,"rocket":0,"eyes":0},"mentions_count":2}
