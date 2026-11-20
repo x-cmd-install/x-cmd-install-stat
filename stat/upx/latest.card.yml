@@ -2,28 +2,28 @@ about:
   description: "UPX - the Ultimate Packer for eXecutables"
   license: NOASSERTION
   homepage: https://upx.github.io
-  head: 932ea7f
+  head: b9dd3d3
   archived: false
   latestVersion: "v5.3.0"
   latestRelease: "v5.3.0"
   latestPrerelease: "v3.99"
-  collectedAt: 2026-11-17T06:49:16Z
+  collectedAt: 2026-11-19T06:09:48Z
 timeline:
   created: 2016-08-31
-  lastCommit: 2026-11-16
+  lastCommit: 2026-11-18
   lastVersion: 2026-10-28
   lastRelease: 2026-10-28
   lastPrerelease: 2022-10-27
 popularity:
-  star: 18009
+  star: 18011
   watcher: 267
-  fork: 1547
+  fork: 1549
   release: 25
   contributor: 26
-  pullRequest: 162
-  issue: 879
+  pullRequest: 163
+  issue: 880
 language:
-  C++: 2791415
+  C++: 2791952
   Assembly: 1205149
   C: 549529
   Makefile: 136983
@@ -33,66 +33,66 @@ language:
   Linker Script: 25950
   Dockerfile: 5688
   sed: 498
-totalBytes: 4902645
+totalBytes: 4903182
 recent:
   last30d:
-    since: 2026-10-18
+    since: 2026-10-20
     release: 1
-    mergedPR: 20
+    mergedPR: 18
     openPR: 0
-    closedIssue: 5
+    closedIssue: 6
     openIssue: 0
-    commit: 45
+    commit: 48
   last60d:
-    since: 2026-09-18
+    since: 2026-09-20
     release: 1
     mergedPR: 31
     openPR: 0
-    closedIssue: 15
+    closedIssue: 16
     openIssue: 1
-    commit: 122
+    commit: 125
   last90d:
-    since: 2026-08-19
+    since: 2026-08-21
     release: 2
     mergedPR: 31
     openPR: 0
     closedIssue: 27
     openIssue: 2
-    commit: 143
+    commit: 146
   last180d:
-    since: 2026-05-21
+    since: 2026-05-23
     release: 3
     mergedPR: 56
     openPR: 0
-    closedIssue: 45
+    closedIssue: 46
     openIssue: 2
-    commit: 242
+    commit: 245
   last360d:
-    since: 2025-11-22
+    since: 2025-11-24
     release: 5
     mergedPR: 56
     openPR: 0
-    closedIssue: 71
+    closedIssue: 72
     openIssue: 3
-    commit: 383
+    commit: 386
   last720d:
-    since: 2024-11-27
+    since: 2024-11-29
     release: 8
     mergedPR: 56
     openPR: 0
-    closedIssue: 139
+    closedIssue: 140
     openIssue: 4
-    commit: 296
+    commit: 299
 total:
   release: 25
   mergedPR: 93
   openPR: 0
-  closedIssue: 865
+  closedIssue: 866
   openIssue: 14
-  commit: 4961
+  commit: 4964
 ---
 path: /home/runner/.x-repo/github.com/upx/upx
-collectedAt: 2026-11-17T06:49:25Z
+collectedAt: 2026-11-19T06:09:56Z
 loc:
   CHeader:
     code: 110871
@@ -100,9 +100,9 @@ loc:
     blanks: 2597
     files: 195
   Cpp:
-    code: 38948
-    comments: 5841
-    blanks: 4646
+    code: 38956
+    comments: 5842
+    blanks: 4656
     files: 65
   AssemblyGAS:
     code: 36817
@@ -170,27 +170,27 @@ loc:
     blanks: 327
     files: 9
 total:
-  code: 206346
-  comments: 27276
-  blanks: 15238
+  code: 206354
+  comments: 27277
+  blanks: 15248
   files: 668
 ---
-date: "2026-11-09"
+date: "2026-11-16"
 repo:
   name: github.com/upx/upx
-  commit: f8cda4018efe0961365d0568d332e52482e987b1
+  commit: 932ea7f4852c7642ce1821200a5c35168db21437
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 3.4
+score: 3.5
 checks:
+  - name: Code-Review
+    score: 5
+    reason: Found 12/24 approved changesets -- score normalized to 5
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 17 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Code-Review
-    score: 4
-    reason: Found 10/24 approved changesets -- score normalized to 4
     details: null
   - name: Security-Policy
     score: 3
@@ -212,6 +212,10 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
+    details: null
   - name: Dangerous-Workflow
     score: 0
     reason: dangerous workflow patterns detected
@@ -229,15 +233,24 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/llvm-mingw-arm64.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/llvm-mingw.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
+  - name: License
+    score: 9
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Warn: project license file does not contain an FSF or OSI license.'
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: OSSFuzz integration found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/alpine-mingw.yml:118: update your workflow using https://app.stepsecurity.io/secureworkflow/upx/upx/alpine-mingw.yml/devel?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:854: update your workflow using https://app.stepsecurity.io/secureworkflow/upx/upx/ci.yml/devel?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:971: update your workflow using https://app.stepsecurity.io/secureworkflow/upx/upx/ci.yml/devel?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:176: update your workflow using https://app.stepsecurity.io/secureworkflow/upx/upx/ci.yml/devel?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:217: update your workflow using https://app.stepsecurity.io/secureworkflow/upx/upx/ci.yml/devel?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:246: update your workflow using https://app.stepsecurity.io/secureworkflow/upx/upx/ci.yml/devel?enable=pin'
@@ -251,27 +264,14 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:696: update your workflow using https://app.stepsecurity.io/secureworkflow/upx/upx/ci.yml/devel?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:710: update your workflow using https://app.stepsecurity.io/secureworkflow/upx/upx/ci.yml/devel?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:770: update your workflow using https://app.stepsecurity.io/secureworkflow/upx/upx/ci.yml/devel?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:854: update your workflow using https://app.stepsecurity.io/secureworkflow/upx/upx/ci.yml/devel?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:971: update your workflow using https://app.stepsecurity.io/secureworkflow/upx/upx/ci.yml/devel?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/extra-cross-builds.yml:349: update your workflow using https://app.stepsecurity.io/secureworkflow/upx/upx/extra-cross-builds.yml/devel?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/github-close-stale-issues.yml:28: update your workflow using https://app.stepsecurity.io/secureworkflow/upx/upx/github-close-stale-issues.yml/devel?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/llvm-mingw-arm64.yml:179: update your workflow using https://app.stepsecurity.io/secureworkflow/upx/upx/llvm-mingw-arm64.yml/devel?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/llvm-mingw.yml:236: update your workflow using https://app.stepsecurity.io/secureworkflow/upx/upx/llvm-mingw.yml/devel?enable=pin'
-      - 'Warn: containerImage not pinned by hash: misc/podman/rebuild-stubs/Dockerfile:2: pin your Docker image by updating docker.io/library/ubuntu:24.04 to docker.io/library/ubuntu:24.04@sha256:fe81560990fae86dc4743202b2cb4d3df98d0bcf949173cecef15ce1127ef852'
+      - 'Warn: containerImage not pinned by hash: misc/podman/rebuild-stubs/Dockerfile:2: pin your Docker image by updating docker.io/library/ubuntu:24.04 to docker.io/library/ubuntu:24.04@sha256:73b999393d07f2bf65a40373778a44dc9a6d54ad7718d29247d8ff9413c4d6a8'
       - 'Info:   0 out of  18 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: OSSFuzz integration found'
-  - name: License
-    score: 9
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Warn: project license file does not contain an FSF or OSI license.'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
@@ -294,5 +294,5 @@ checks:
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
-      - 'Warn: 0 commits out of 16 are checked with a SAST tool'
+      - 'Warn: 0 commits out of 18 are checked with a SAST tool'
 ---

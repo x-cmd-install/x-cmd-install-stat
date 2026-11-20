@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-11-17T11:15:31Z
+  collectedAt: 2026-11-19T08:33:46Z
 timeline:
   created: 2015-03-13
   lastCommit: 2026-10-27
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 
   lastPrerelease: 
 popularity:
-  star: 2261
+  star: 2262
   watcher: 34
-  fork: 171
+  fork: 172
   release: 0
   contributor: 140
-  pullRequest: 395
+  pullRequest: 396
   issue: 434
 language:
   Python: 315714
@@ -28,63 +28,63 @@ language:
 totalBytes: 316444
 recent:
   last30d:
-    since: 2026-10-18
+    since: 2026-10-20
     release: 0
     mergedPR: 6
-    openPR: 0
+    openPR: 1
     closedIssue: 1
     openIssue: 1
     commit: 16
   last60d:
-    since: 2026-09-18
+    since: 2026-09-20
     release: 0
     mergedPR: 11
-    openPR: 2
+    openPR: 3
     closedIssue: 1
     openIssue: 1
     commit: 22
   last90d:
-    since: 2026-08-19
+    since: 2026-08-21
     release: 0
     mergedPR: 15
-    openPR: 2
+    openPR: 3
     closedIssue: 1
     openIssue: 1
     commit: 29
   last180d:
-    since: 2026-05-21
+    since: 2026-05-23
     release: 0
     mergedPR: 26
-    openPR: 3
+    openPR: 4
     closedIssue: 6
     openIssue: 1
     commit: 48
   last360d:
-    since: 2025-11-22
+    since: 2025-11-24
     release: 0
     mergedPR: 35
-    openPR: 4
+    openPR: 5
     closedIssue: 8
     openIssue: 2
     commit: 60
   last720d:
-    since: 2024-11-27
+    since: 2024-11-29
     release: 0
     mergedPR: 78
-    openPR: 5
+    openPR: 6
     closedIssue: 24
     openIssue: 9
     commit: 240
 total:
   release: 0
   mergedPR: 307
-  openPR: 22
+  openPR: 23
   closedIssue: 330
   openIssue: 104
   commit: 1471
 ---
 path: /home/runner/.x-repo/github.com/pypa/flit
-collectedAt: 2026-11-17T11:15:32Z
+collectedAt: 2026-11-19T08:33:47Z
 loc:
   Python:
     code: 7789
@@ -152,7 +152,7 @@ total:
   blanks: 2075
   files: 231
 ---
-date: "2026-11-09"
+date: "2026-11-16"
 repo:
   name: github.com/pypa/flit
   commit: eeaf9e783c87c331f1d73bb2f5553fc79016aae1
@@ -161,13 +161,17 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 6
 checks:
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 4 issue activity found in the last 90 days -- score normalized to 10
+  - name: Code-Review
+    score: 6
+    reason: Found 8/12 approved changesets -- score normalized to 6
     details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 5 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Security-Policy
     score: 10
@@ -183,10 +187,6 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Code-Review
-    score: 6
-    reason: Found 8/12 approved changesets -- score normalized to 6
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -202,9 +202,9 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:78: update your workflow using https://app.stepsecurity.io/secureworkflow/pypa/flit/test.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:84: update your workflow using https://app.stepsecurity.io/secureworkflow/pypa/flit/test.yml/main?enable=pin'
       - 'Warn: pipCommand not pinned by hash: flit_core/update-vendored-tomli.sh:9'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/test.yml:73'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/test.yml:44'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/test.yml:45'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/test.yml:73'
       - 'Info:   0 out of   5 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 pipCommand dependencies pinned'
@@ -217,10 +217,6 @@ checks:
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: License
     score: 10
     reason: license file detected
@@ -230,6 +226,10 @@ checks:
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
     details: null
   - name: Packaging
     score: 10

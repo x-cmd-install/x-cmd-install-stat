@@ -7,7 +7,7 @@ about:
   latestVersion: "v5.24.5"
   latestRelease: "v5.24.5"
   latestPrerelease: ""
-  collectedAt: 2026-11-16T09:03:22Z
+  collectedAt: 2026-11-19T08:35:52Z
 timeline:
   created: 2020-03-24
   lastCommit: 2026-11-06
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-11-03
   lastPrerelease: 
 popularity:
-  star: 2606
+  star: 2608
   watcher: 23
   fork: 142
   release: 134
@@ -31,7 +31,7 @@ language:
 totalBytes: 144233
 recent:
   last30d:
-    since: 2026-10-17
+    since: 2026-10-20
     release: 1
     mergedPR: 2
     openPR: 3
@@ -39,7 +39,7 @@ recent:
     openIssue: 0
     commit: 4
   last60d:
-    since: 2026-09-17
+    since: 2026-09-20
     release: 1
     mergedPR: 2
     openPR: 3
@@ -47,15 +47,15 @@ recent:
     openIssue: 0
     commit: 4
   last90d:
-    since: 2026-08-18
+    since: 2026-08-21
     release: 2
-    mergedPR: 5
+    mergedPR: 4
     openPR: 3
     closedIssue: 1
     openIssue: 1
     commit: 12
   last180d:
-    since: 2026-05-20
+    since: 2026-05-23
     release: 4
     mergedPR: 7
     openPR: 5
@@ -63,7 +63,7 @@ recent:
     openIssue: 2
     commit: 18
   last360d:
-    since: 2025-11-21
+    since: 2025-11-24
     release: 9
     mergedPR: 19
     openPR: 5
@@ -71,7 +71,7 @@ recent:
     openIssue: 2
     commit: 35
   last720d:
-    since: 2024-11-26
+    since: 2024-11-29
     release: 24
     mergedPR: 35
     openPR: 5
@@ -86,8 +86,71 @@ total:
   openIssue: 6
   commit: 356
 ---
+path: /home/runner/.x-repo/github.com/FairwindsOps/pluto
+collectedAt: 2026-11-19T08:35:53Z
+loc:
+  Go:
+    code: 3394
+    comments: 624
+    blanks: 381
+    files: 19
+  Json:
+    code: 2936
+    comments: 0
+    blanks: 0
+    files: 7
+  Yaml:
+    code: 1617
+    comments: 45
+    blanks: 41
+    files: 28
+  Sh:
+    code: 70
+    comments: 6
+    blanks: 29
+    files: 6
+  Pan:
+    code: 58
+    comments: 0
+    blanks: 5
+    files: 1
+  Makefile:
+    code: 36
+    comments: 2
+    blanks: 1
+    files: 1
+  JavaScript:
+    code: 26
+    comments: 4
+    blanks: 3
+    files: 1
+  Svg:
+    code: 24
+    comments: 1
+    blanks: 0
+    files: 1
+  Dockerfile:
+    code: 14
+    comments: 1
+    blanks: 4
+    files: 1
+  Markdown:
+    code: 0
+    comments: 457
+    blanks: 202
+    files: 10
+  Text:
+    code: 0
+    comments: 24
+    blanks: 0
+    files: 2
+total:
+  code: 8264
+  comments: 1164
+  blanks: 668
+  files: 77
 ---
-date: "2026-11-09"
+date: "2026-11-16"
 repo:
   name: github.com/FairwindsOps/pluto
   commit: ed98c5d42b0d7903b3792acea95df469974fc70f
@@ -96,6 +159,15 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 5
 checks:
+  - name: Code-Review
+    score: 4
+    reason: Found 14/29 approved changesets -- score normalized to 4
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Maintained
     score: 10
     reason: 12 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 10
@@ -104,25 +176,16 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 4
-    reason: Found 14/29 approved changesets -- score normalized to 4
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/github-action-test.yml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -138,21 +201,17 @@ checks:
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   0 out of   1 goCommand dependencies pinned'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -175,6 +234,10 @@ checks:
       - 'Warn: release artifact v5.24.3 does not have provenance: https://api.github.com/repos/FairwindsOps/pluto/releases/367937983'
       - 'Warn: release artifact v5.24.1 does not have provenance: https://api.github.com/repos/FairwindsOps/pluto/releases/352204293'
       - 'Warn: release artifact v5.24.0 does not have provenance: https://api.github.com/repos/FairwindsOps/pluto/releases/314227495'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

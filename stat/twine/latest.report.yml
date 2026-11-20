@@ -7,7 +7,7 @@ about:
   latestVersion: "7.0.0"
   latestRelease: "7.0.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-17T08:44:31Z
+  collectedAt: 2026-11-19T08:08:26Z
 timeline:
   created: 2013-08-13
   lastCommit: 2026-11-11
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-07-28
   lastPrerelease: 
 popularity:
-  star: 1793
+  star: 1794
   watcher: 37
-  fork: 422
+  fork: 444
   release: 17
   contributor: 176
   pullRequest: 824
@@ -27,7 +27,7 @@ language:
 totalBytes: 210510
 recent:
   last30d:
-    since: 2026-10-18
+    since: 2026-10-20
     release: 0
     mergedPR: 1
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 1
   last60d:
-    since: 2026-09-18
+    since: 2026-09-20
     release: 0
     mergedPR: 1
     openPR: 5
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 1
   last90d:
-    since: 2026-08-19
+    since: 2026-08-21
     release: 0
     mergedPR: 1
     openPR: 6
@@ -51,7 +51,7 @@ recent:
     openIssue: 2
     commit: 1
   last180d:
-    since: 2026-05-21
+    since: 2026-05-23
     release: 1
     mergedPR: 10
     openPR: 7
@@ -59,7 +59,7 @@ recent:
     openIssue: 3
     commit: 10
   last360d:
-    since: 2025-11-22
+    since: 2025-11-24
     release: 1
     mergedPR: 37
     openPR: 8
@@ -67,11 +67,11 @@ recent:
     openIssue: 3
     commit: 37
   last720d:
-    since: 2024-11-27
+    since: 2024-11-29
     release: 5
-    mergedPR: 93
+    mergedPR: 91
     openPR: 14
-    closedIssue: 27
+    closedIssue: 26
     openIssue: 7
     commit: 131
 total:
@@ -83,7 +83,7 @@ total:
   commit: 1388
 ---
 path: /home/runner/.x-repo/github.com/pypa/twine
-collectedAt: 2026-11-17T08:44:32Z
+collectedAt: 2026-11-19T08:08:28Z
 loc:
   Python:
     code: 4905
@@ -116,23 +116,15 @@ total:
   blanks: 1706
   files: 55
 ---
-date: "2026-11-02"
+date: "2026-11-16"
 repo:
   name: github.com/pypa/twine
-  commit: f536ac5d0c77a24a997854328e64644f576b4992
+  commit: ecad921d4a44091bf01d5b9ec8833d51bfdf58eb
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 7.3
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 5
-    reason: 1 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 5
-    details: null
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
@@ -143,6 +135,14 @@ checks:
     details:
       - 'Warn: binary detected: tests/fixtures/twine-4.0.2-py3-none-any.whl:1'
       - 'Warn: binary detected: tests/fixtures/twine-6.2.0-py3-none-any.whl:1'
+  - name: Maintained
+    score: 5
+    reason: 1 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 5
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -157,11 +157,11 @@ checks:
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
     details:
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/main.yml:134'
+      - 'Warn: pipCommand not pinned by hash: .github/workflows/main.yml:36'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/main.yml:64'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/main.yml:84'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/main.yml:98'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/main.yml:134'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/main.yml:36'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/release.yml:31'
       - 'Info:  18 out of  18 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   2 out of   2 third-party GitHubAction dependencies pinned'
@@ -170,26 +170,22 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:45'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 10
     reason: 4 out of the last 4 releases have a total of 4 signed artifacts.
@@ -198,6 +194,10 @@ checks:
       - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/pypa/twine/releases/tag/6.1.0'
       - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/pypa/twine/releases/tag/6.0.1'
       - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/pypa/twine/releases/tag/6.0.0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
   - name: Security-Policy
     score: 0
     reason: security policy file not detected

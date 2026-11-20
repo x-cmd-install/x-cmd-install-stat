@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.1.2"
   latestRelease: "v1.1.2"
   latestPrerelease: ""
-  collectedAt: 2026-11-17T07:13:44Z
+  collectedAt: 2026-11-19T06:39:14Z
 timeline:
   created: 2020-09-11
   lastCommit: 2023-02-21
@@ -28,7 +28,7 @@ language:
 totalBytes: 699514
 recent:
   last30d:
-    since: 2026-10-18
+    since: 2026-10-20
     release: 0
     mergedPR: 0
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-18
+    since: 2026-09-20
     release: 0
     mergedPR: 0
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-19
+    since: 2026-08-21
     release: 0
     mergedPR: 0
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-21
+    since: 2026-05-23
     release: 0
     mergedPR: 0
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-22
+    since: 2025-11-24
     release: 0
     mergedPR: 0
     openPR: 0
@@ -68,7 +68,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-11-27
+    since: 2024-11-29
     release: 0
     mergedPR: 0
     openPR: 0
@@ -84,7 +84,7 @@ total:
   commit: 322
 ---
 path: /home/runner/.x-repo/github.com/chriswalz/bit
-collectedAt: 2026-11-17T07:13:45Z
+collectedAt: 2026-11-19T06:39:15Z
 loc:
   Go:
     code: 6072
@@ -107,7 +107,7 @@ total:
   blanks: 674
   files: 30
 ---
-date: "2026-11-09"
+date: "2026-11-16"
 repo:
   name: github.com/chriswalz/bit
   commit: b70261c36b30b8118fbe5269a1cea698ff388700
@@ -125,9 +125,17 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
+    details: null
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Token-Permissions
     score: 9
@@ -137,14 +145,6 @@ checks:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql-analysis.yml:29'
       - 'Warn: no topLevel permission defined: .github/workflows/codeql-analysis.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -166,17 +166,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.

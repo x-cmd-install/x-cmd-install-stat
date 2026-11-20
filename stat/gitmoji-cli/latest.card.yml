@@ -7,7 +7,7 @@ about:
   latestVersion: "v9.7.0"
   latestRelease: "v9.7.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-17T09:26:58Z
+  collectedAt: 2026-11-19T09:48:42Z
 timeline:
   created: 2016-11-17
   lastCommit: 2026-11-02
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2025-05-16
   lastPrerelease: 
 popularity:
-  star: 4829
+  star: 4830
   watcher: 19
   fork: 213
   release: 117
@@ -28,7 +28,7 @@ language:
 totalBytes: 91500
 recent:
   last30d:
-    since: 2026-10-18
+    since: 2026-10-20
     release: 0
     mergedPR: 2
     openPR: 0
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 3
   last60d:
-    since: 2026-09-18
+    since: 2026-09-20
     release: 0
     mergedPR: 8
     openPR: 0
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 8
   last90d:
-    since: 2026-08-19
+    since: 2026-08-21
     release: 0
     mergedPR: 12
     openPR: 0
@@ -52,7 +52,7 @@ recent:
     openIssue: 1
     commit: 15
   last180d:
-    since: 2026-05-21
+    since: 2026-05-23
     release: 0
     mergedPR: 21
     openPR: 0
@@ -60,7 +60,7 @@ recent:
     openIssue: 1
     commit: 24
   last360d:
-    since: 2025-11-22
+    since: 2025-11-24
     release: 0
     mergedPR: 55
     openPR: 1
@@ -68,7 +68,7 @@ recent:
     openIssue: 2
     commit: 55
   last720d:
-    since: 2024-11-27
+    since: 2024-11-29
     release: 2
     mergedPR: 147
     openPR: 1
@@ -84,7 +84,7 @@ total:
   commit: 1279
 ---
 path: /home/runner/.x-repo/github.com/carloscuesta/gitmoji-cli
-collectedAt: 2026-11-17T09:27:04Z
+collectedAt: 2026-11-19T09:48:44Z
 loc:
   JavaScript:
     code: 2612
@@ -112,7 +112,7 @@ total:
   blanks: 538
   files: 61
 ---
-date: "2026-11-09"
+date: "2026-11-16"
 repo:
   name: github.com/carloscuesta/gitmoji-cli
   commit: 8f370b30271e41d33cff531dbc5b6d15b70bf869
@@ -121,9 +121,9 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.2
 checks:
-  - name: Maintained
-    score: 10
-    reason: 15 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+  - name: Code-Review
+    score: -1
+    reason: Found no human activity in the last 30 changesets
     details: null
   - name: Dangerous-Workflow
     score: 10
@@ -134,14 +134,22 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: -1
-    reason: Found no human activity in the last 30 changesets
+  - name: Maintained
+    score: 10
+    reason: 15 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/lock.yml:1'
+      - 'Warn: no topLevel permission defined: .github/workflows/release.yaml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -155,14 +163,6 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yaml:31: update your workflow using https://app.stepsecurity.io/secureworkflow/carloscuesta/gitmoji-cli/release.yaml/master?enable=pin'
       - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 third-party GitHubAction dependencies pinned'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/ci.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/lock.yml:1'
-      - 'Warn: no topLevel permission defined: .github/workflows/release.yaml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
