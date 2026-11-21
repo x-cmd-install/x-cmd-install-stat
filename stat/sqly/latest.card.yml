@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.7.5"
   latestRelease: "v1.7.5"
   latestPrerelease: "v1.0.0-rc8"
-  collectedAt: 2026-11-20T05:41:16Z
+  collectedAt: 2026-11-21T05:34:35Z
 timeline:
   created: 2022-10-30
   lastCommit: 2026-11-20
@@ -33,7 +33,7 @@ language:
 totalBytes: 2252855
 recent:
   last30d:
-    since: 2026-10-21
+    since: 2026-10-22
     release: 2
     mergedPR: 22
     openPR: 0
@@ -41,15 +41,15 @@ recent:
     openIssue: 0
     commit: 27
   last60d:
-    since: 2026-09-21
-    release: 5
-    mergedPR: 49
+    since: 2026-09-22
+    release: 4
+    mergedPR: 48
     openPR: 0
     closedIssue: 1
     openIssue: 0
     commit: 70
   last90d:
-    since: 2026-08-22
+    since: 2026-08-23
     release: 18
     mergedPR: 102
     openPR: 0
@@ -57,7 +57,7 @@ recent:
     openIssue: 0
     commit: 152
   last180d:
-    since: 2026-05-24
+    since: 2026-05-25
     release: 49
     mergedPR: 414
     openPR: 0
@@ -65,7 +65,7 @@ recent:
     openIssue: 0
     commit: 664
   last360d:
-    since: 2025-11-25
+    since: 2025-11-26
     release: 52
     mergedPR: 430
     openPR: 0
@@ -73,7 +73,7 @@ recent:
     openIssue: 0
     commit: 747
   last720d:
-    since: 2024-11-30
+    since: 2024-12-01
     release: 61
     mergedPR: 487
     openPR: 0
@@ -89,7 +89,7 @@ total:
   commit: 1483
 ---
 path: /home/runner/.x-repo/github.com/nao1215/sqly
-collectedAt: 2026-11-20T05:41:18Z
+collectedAt: 2026-11-21T05:34:38Z
 loc:
   Go:
     code: 48327
@@ -162,23 +162,31 @@ total:
   blanks: 8429
   files: 385
 ---
-date: "2026-11-20T03:01:28Z"
+date: "2026-11-21T01:36:00Z"
 repo:
   name: github.com/nao1215/sqly
   commit: 230dd8bf3537310bbb114f95ba1e7951cd438e6b
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 8.2
+score: 8.3
 checks:
   - name: Dependency-Update-Tool
     score: 10
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Maintained
+  - name: Dangerous-Workflow
     score: 10
-    reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Code-Review
+    score: 0
+    reason: Found 0/19 approved changesets -- score normalized to 0
     details: null
   - name: Security-Policy
     score: 10
@@ -188,13 +196,9 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
+  - name: Maintained
     score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Code-Review
-    score: 0
-    reason: Found 0/19 approved changesets -- score normalized to 0
+    reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Token-Permissions
     score: 10
@@ -236,10 +240,6 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/trivy.yml:13'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/unit_test.yml:11'
       - 'Info: found token with ''none'' permissions: .github/workflows/website.yml:1'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Pinned-Dependencies
     score: 9
     reason: dependency not pinned by hash detected -- score normalized to 9
@@ -248,6 +248,12 @@ checks:
       - 'Info:  62 out of  62 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  18 out of  19 third-party GitHubAction dependencies pinned'
       - 'Info:   6 out of   6 goCommand dependencies pinned'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -256,12 +262,15 @@ checks:
     score: 10
     reason: 0 existing vulnerabilities detected
     details: null
-  - name: License
+  - name: Fuzzing
     score: 10
-    reason: license file detected
+    reason: project is fuzzed
     details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+      - 'Info: GoBuiltInFuzzer integration found: domain/model/table_property_test.go:98'
+      - 'Info: GoBuiltInFuzzer integration found: infrastructure/sql_property_test.go:22'
+      - 'Info: GoBuiltInFuzzer integration found: infrastructure/sql_property_test.go:48'
+      - 'Info: GoBuiltInFuzzer integration found: shell/batch_fuzz_test.go:16'
+      - 'Info: GoBuiltInFuzzer integration found: shell/batch_fuzz_test.go:53'
   - name: Signed-Releases
     score: 9
     reason: 5 out of the last 5 releases have a total of 8 signed artifacts.
@@ -276,26 +285,11 @@ checks:
       - 'Info: provenance for release artifact: multiple.intoto.jsonl: https://github.com/nao1215/sqly/releases/tag/v1.7.3'
       - 'Warn: release artifact v1.7.2 does not have provenance: https://api.github.com/repos/nao1215/sqly/releases/397229556'
       - 'Warn: release artifact v1.7.1 does not have provenance: https://api.github.com/repos/nao1215/sqly/releases/392797297'
-  - name: SAST
-    score: 10
-    reason: SAST tool is run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Info: all commits (30) are checked with a SAST tool'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release-smoke.yml:23'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: GoBuiltInFuzzer integration found: domain/model/table_property_test.go:98'
-      - 'Info: GoBuiltInFuzzer integration found: infrastructure/sql_property_test.go:22'
-      - 'Info: GoBuiltInFuzzer integration found: infrastructure/sql_property_test.go:48'
-      - 'Info: GoBuiltInFuzzer integration found: shell/batch_fuzz_test.go:16'
-      - 'Info: GoBuiltInFuzzer integration found: shell/batch_fuzz_test.go:53'
   - name: Branch-Protection
     score: 3
     reason: branch protection is not maximal on development and all release branches
@@ -307,10 +301,17 @@ checks:
       - 'Info: ''up-to-date branches'' is required to merge on branch ''main'''
       - 'Info: status check found to merge onto on branch ''main'''
       - 'Warn: PRs are not required to make changes on branch ''main''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
+  - name: SAST
+    score: 10
+    reason: SAST tool is run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Info: all commits (30) are checked with a SAST tool'
   - name: Contributors
-    score: 0
-    reason: project has 0 contributing companies or organizations -- score normalized to 0
-    details: null
+    score: 3
+    reason: project has 1 contributing companies or organizations -- score normalized to 3
+    details:
+      - 'Info: found contributions from: datachainlab'
   - name: CI-Tests
     score: 10
     reason: 20 out of 20 merged PRs checked by a CI test -- score normalized to 10
