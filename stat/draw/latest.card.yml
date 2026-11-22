@@ -2,15 +2,15 @@ about:
   description: "Draw service for human and agents."
   license: Apache-2.0
   homepage: https://x-cmd.com/draw
-  head: b5dadb8
+  head: d4deb53
   archived: false
   latestVersion: "v0.4.7"
   latestRelease: "v0.4.7"
   latestPrerelease: ""
-  collectedAt: 2026-11-21T07:51:26Z
+  collectedAt: 2026-11-22T08:01:46Z
 timeline:
   created: 2026-09-24
-  lastCommit: 2026-11-20
+  lastCommit: 2026-11-22
   lastVersion: 2026-11-19
   lastRelease: 2026-11-19
   lastPrerelease: 
@@ -21,75 +21,75 @@ popularity:
   release: 15
   contributor: 7
   pullRequest: 14
-  issue: 28
+  issue: 30
 language:
-  TypeScript: 4614433
+  TypeScript: 4617867
   JavaScript: 69516
   Shell: 5020
-totalBytes: 4688969
+totalBytes: 4692403
 recent:
   last30d:
-    since: 2026-10-22
-    release: 11
+    since: 2026-10-23
+    release: 10
     mergedPR: 11
     openPR: 0
     closedIssue: 3
-    openIssue: 23
-    commit: 268
+    openIssue: 25
+    commit: 252
   last60d:
-    since: 2026-09-22
+    since: 2026-09-23
     release: 15
     mergedPR: 11
     openPR: 0
     closedIssue: 3
-    openIssue: 25
-    commit: 318
+    openIssue: 27
+    commit: 319
   last90d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 15
     mergedPR: 11
     openPR: 0
     closedIssue: 3
-    openIssue: 25
-    commit: 318
+    openIssue: 27
+    commit: 320
   last180d:
-    since: 2026-05-25
+    since: 2026-05-26
     release: 15
     mergedPR: 11
     openPR: 0
     closedIssue: 3
-    openIssue: 25
-    commit: 318
+    openIssue: 27
+    commit: 320
   last360d:
-    since: 2025-11-26
+    since: 2025-11-27
     release: 15
     mergedPR: 11
     openPR: 0
     closedIssue: 3
-    openIssue: 25
-    commit: 318
+    openIssue: 27
+    commit: 320
   last720d:
-    since: 2024-12-01
+    since: 2024-12-02
     release: 15
     mergedPR: 11
     openPR: 0
     closedIssue: 3
-    openIssue: 25
-    commit: 327
+    openIssue: 27
+    commit: 330
 total:
   release: 15
   mergedPR: 11
   openPR: 0
   closedIssue: 3
-  openIssue: 25
-  commit: 327
+  openIssue: 27
+  commit: 330
 ---
 path: /home/runner/.x-repo/github.com/x-cmd/draw
-collectedAt: 2026-11-21T07:51:28Z
+collectedAt: 2026-11-22T08:01:48Z
 loc:
   TypeScript:
-    code: 29780
-    comments: 10892
+    code: 29816
+    comments: 10895
     blanks: 1468
     files: 142
   Json:
@@ -97,16 +97,16 @@ loc:
     comments: 0
     blanks: 0
     files: 9
+  Yaml:
+    code: 2920
+    comments: 36
+    blanks: 128
+    files: 67
   JavaScript:
     code: 2905
     comments: 535
     blanks: 188
     files: 34
-  Yaml:
-    code: 2853
-    comments: 36
-    blanks: 127
-    files: 66
   Sh:
     code: 77
     comments: 18
@@ -114,29 +114,37 @@ loc:
     files: 1
   Markdown:
     code: 0
-    comments: 21928
-    blanks: 8918
-    files: 456
+    comments: 22052
+    blanks: 8997
+    files: 459
   Text:
     code: 0
     comments: 151
     blanks: 35
     files: 2
 total:
-  code: 42559
-  comments: 33570
-  blanks: 10748
-  files: 710
+  code: 42662
+  comments: 33697
+  blanks: 10828
+  files: 714
 ---
-date: "2026-11-20T18:36:27Z"
+date: "2026-11-22T01:56:57Z"
 repo:
   name: github.com/x-cmd/draw
-  commit: b5dadb8a79eb18725e6cd3883a054e0d21ef38c0
+  commit: d4deb53a928579db0b918ce89e83baed1da7658c
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 4.9
 checks:
+  - name: Code-Review
+    score: 0
+    reason: Found 0/30 approved changesets -- score normalized to 0
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Maintained
     score: 0
     reason: project was created within the last 90 days. Please review its contents carefully
@@ -147,10 +155,22 @@ checks:
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Token-Permissions
+    score: 9
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:19'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/publish.yml:62'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/publish.yml:16'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/ci.yml:10'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/codeql.yml:11'
+      - 'Warn: no topLevel permission defined: .github/workflows/publish.yml:1'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:16'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -159,30 +179,10 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Code-Review
-    score: 0
-    reason: Found 0/30 approved changesets -- score normalized to 0
-    details: null
-  - name: Token-Permissions
-    score: 9
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:19'
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/publish.yml:16'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/publish.yml:62'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/ci.yml:10'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/codeql.yml:11'
-      - 'Warn: no topLevel permission defined: .github/workflows/publish.yml:1'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:16'
   - name: Pinned-Dependencies
     score: 3
     reason: dependency not pinned by hash detected -- score normalized to 3
@@ -192,11 +192,11 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/codeql.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/codeql.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/codeql.yml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/codeql.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish.yml:65: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/publish.yml/main?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/publish.yml:66: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/publish.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish.yml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/publish.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish.yml:24: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/publish.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/publish.yml:39: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/publish.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish.yml:65: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/publish.yml/main?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/publish.yml:66: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/publish.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/scorecard.yml:30: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/scorecard.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/scorecard.yml:35: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/scorecard.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/scorecard.yml:42: update your workflow using https://app.stepsecurity.io/secureworkflow/x-cmd/draw/scorecard.yml/main?enable=pin'
@@ -212,12 +212,6 @@ checks:
     score: -1
     reason: no releases found
     details: null
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Vulnerabilities
     score: 0
     reason: 32 existing vulnerabilities detected
@@ -254,16 +248,22 @@ checks:
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-r825-w8mm-5pxw'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-rq7h-c2jc-7f22'
       - 'Warn: Project is vulnerable to: https://osv.dev/GHSA-mrhx-c7xc-m3w5'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''main'''
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: SAST
     score: 7
     reason: SAST tool detected but not run on all commits

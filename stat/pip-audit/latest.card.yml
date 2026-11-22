@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.10.1"
   latestRelease: "v2.10.1"
   latestPrerelease: "v0.0.1-rc.2"
-  collectedAt: 2026-11-21T07:35:52Z
+  collectedAt: 2026-11-22T07:28:39Z
 timeline:
   created: 2021-09-02
   lastCommit: 2026-11-19
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-06-10
   lastPrerelease: 2021-10-12
 popularity:
-  star: 1409
+  star: 1411
   watcher: 27
   fork: 169
   release: 63
@@ -28,7 +28,7 @@ language:
 totalBytes: 260304
 recent:
   last30d:
-    since: 2026-10-22
+    since: 2026-10-23
     release: 0
     mergedPR: 6
     openPR: 1
@@ -36,7 +36,7 @@ recent:
     openIssue: 1
     commit: 11
   last60d:
-    since: 2026-09-22
+    since: 2026-09-23
     release: 0
     mergedPR: 12
     openPR: 1
@@ -44,7 +44,7 @@ recent:
     openIssue: 1
     commit: 13
   last90d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 0
     mergedPR: 19
     openPR: 1
@@ -52,15 +52,15 @@ recent:
     openIssue: 1
     commit: 21
   last180d:
-    since: 2026-05-25
+    since: 2026-05-26
     release: 1
-    mergedPR: 45
+    mergedPR: 44
     openPR: 1
-    closedIssue: 7
+    closedIssue: 5
     openIssue: 1
     commit: 49
   last360d:
-    since: 2025-11-26
+    since: 2025-11-27
     release: 2
     mergedPR: 73
     openPR: 4
@@ -68,7 +68,7 @@ recent:
     openIssue: 3
     commit: 77
   last720d:
-    since: 2024-12-01
+    since: 2024-12-02
     release: 4
     mergedPR: 166
     openPR: 5
@@ -84,7 +84,7 @@ total:
   commit: 866
 ---
 path: /home/runner/.x-repo/github.com/pypa/pip-audit
-collectedAt: 2026-11-21T07:35:53Z
+collectedAt: 2026-11-22T07:28:39Z
 loc:
   Python:
     code: 5942
@@ -112,7 +112,7 @@ total:
   blanks: 1830
   files: 67
 ---
-date: "2026-11-19T21:09:49Z"
+date: "2026-11-22T04:24:52Z"
 repo:
   name: github.com/pypa/pip-audit
   commit: 864264baeb9a9e30115a0f2838fe4769cf5a0840
@@ -121,10 +121,6 @@ scorecard:
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
 score: 8.4
 checks:
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
   - name: Dependency-Update-Tool
     score: 10
     reason: update tool detected
@@ -137,6 +133,10 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
     details: null
   - name: Pinned-Dependencies
     score: 8
@@ -170,22 +170,35 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Signed-Releases
-    score: 8
-    reason: 1 out of the last 1 releases have a total of 1 signed artifacts.
-    details:
-      - 'Info: signed release artifact: pip_audit-2.7.3-py3-none-any.whl.sigstore: https://github.com/pypa/pip-audit/releases/tag/v2.7.3'
-      - 'Warn: release artifact v2.7.3 does not have provenance: https://api.github.com/repos/pypa/pip-audit/releases/153572767'
-  - name: SAST
-    score: 10
-    reason: SAST tool is run on all commits
-    details:
-      - 'Info: all commits (30) are checked with a SAST tool'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:38'
+  - name: SAST
+    score: 10
+    reason: SAST tool is run on all commits
+    details:
+      - 'Info: all commits (30) are checked with a SAST tool'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Branch-Protection
     score: 8
     reason: branch protection is not maximal on development and all release branches
@@ -196,25 +209,12 @@ checks:
       - 'Warn: codeowners review is not required on branch ''main'''
       - 'Info: status check found to merge onto on branch ''main'''
       - 'Info: PRs are required in order to make changes on branch ''main'''
-  - name: License
-    score: 10
-    reason: license file detected
+  - name: Signed-Releases
+    score: 8
+    reason: 1 out of the last 1 releases have a total of 1 signed artifacts.
     details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
+      - 'Info: signed release artifact: pip_audit-2.7.3-py3-none-any.whl.sigstore: https://github.com/pypa/pip-audit/releases/tag/v2.7.3'
+      - 'Warn: release artifact v2.7.3 does not have provenance: https://api.github.com/repos/pypa/pip-audit/releases/153572767'
   - name: CI-Tests
     score: 10
     reason: 30 out of 30 merged PRs checked by a CI test -- score normalized to 10

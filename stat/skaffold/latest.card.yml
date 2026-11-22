@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.25.0"
   latestRelease: "v2.25.0"
   latestPrerelease: "v2.0.0-beta3"
-  collectedAt: 2026-11-21T07:33:21Z
+  collectedAt: 2026-11-22T07:17:29Z
 timeline:
   created: 2018-01-23
   lastCommit: 2026-11-20
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-16
   lastPrerelease: 2022-09-21
 popularity:
-  star: 15918
+  star: 15919
   watcher: 180
   fork: 1713
   release: 201
@@ -45,7 +45,7 @@ language:
 totalBytes: 9999612
 recent:
   last30d:
-    since: 2026-10-22
+    since: 2026-10-23
     release: 0
     mergedPR: 7
     openPR: 5
@@ -53,7 +53,7 @@ recent:
     openIssue: 1
     commit: 7
   last60d:
-    since: 2026-09-22
+    since: 2026-09-23
     release: 0
     mergedPR: 9
     openPR: 13
@@ -61,7 +61,7 @@ recent:
     openIssue: 2
     commit: 10
   last90d:
-    since: 2026-08-23
+    since: 2026-08-24
     release: 1
     mergedPR: 20
     openPR: 21
@@ -69,7 +69,7 @@ recent:
     openIssue: 3
     commit: 24
   last180d:
-    since: 2026-05-25
+    since: 2026-05-26
     release: 4
     mergedPR: 49
     openPR: 31
@@ -77,7 +77,7 @@ recent:
     openIssue: 15
     commit: 50
   last360d:
-    since: 2025-11-26
+    since: 2025-11-27
     release: 14
     mergedPR: 120
     openPR: 53
@@ -85,12 +85,12 @@ recent:
     openIssue: 30
     commit: 116
   last720d:
-    since: 2024-12-01
+    since: 2024-12-02
     release: 21
     mergedPR: 292
     openPR: 71
     closedIssue: 42
-    openIssue: 82
+    openIssue: 80
     commit: 291
 total:
   release: 201
@@ -101,7 +101,7 @@ total:
   commit: 9260
 ---
 path: /home/runner/.x-repo/github.com/GoogleContainerTools/skaffold
-collectedAt: 2026-11-21T07:33:37Z
+collectedAt: 2026-11-22T07:17:45Z
 loc:
   Go:
     code: 2259227
@@ -279,7 +279,7 @@ total:
   blanks: 358992
   files: 13995
 ---
-date: "2026-11-20T18:34:11Z"
+date: "2026-11-22T06:33:05Z"
 repo:
   name: github.com/GoogleContainerTools/skaffold
   commit: 9504a7c4464a384c677130081fd1f56c57e6c37f
@@ -288,10 +288,6 @@ scorecard:
   commit: c22063e786c11f9dd714d777a687ff7c4599b600
 score: 7.2
 checks:
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
   - name: Maintained
     score: 10
     reason: 24 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 10
@@ -301,6 +297,10 @@ checks:
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+  - name: Code-Review
+    score: 10
+    reason: all changesets reviewed
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -309,15 +309,15 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -347,6 +347,12 @@ checks:
       - 'Warn: binary detected: examples/jib-sync/gradle/wrapper/gradle-wrapper.jar:1'
       - 'Warn: binary detected: integration/examples/jib-gradle/gradle/wrapper/gradle-wrapper.jar:1'
       - 'Warn: binary detected: integration/examples/jib-sync/gradle/wrapper/gradle-wrapper.jar:1'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -361,23 +367,12 @@ checks:
       - 'Warn: release artifact v2.23.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/345534770'
       - 'Warn: release artifact v2.22.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/336055187'
       - 'Warn: release artifact v2.21.0 does not have provenance: https://api.github.com/repos/GoogleContainerTools/skaffold/releases/326280646'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: SAST
     score: 7
     reason: SAST tool detected but not run on all commits
     details:
       - 'Info: SAST configuration detected: CodeQL'
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Branch-Protection
     score: 6
     reason: branch protection is not maximal on development and all release branches
@@ -392,6 +387,11 @@ checks:
       - 'Info: ''up-to-date branches'' is required to merge on branch ''main'''
       - 'Warn: no status checks found to merge onto branch ''main'''
       - 'Info: PRs are required in order to make changes on branch ''main'''
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Vulnerabilities
     score: 0
     reason: 178 existing vulnerabilities detected
@@ -607,7 +607,7 @@ checks:
       - 'Warn: containerImage not pinned by hash: deploy/docs-v2/Dockerfile:31: pin your Docker image by updating alpine:3.10 to alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
       - 'Warn: containerImage not pinned by hash: deploy/docs-v2/Dockerfile:37: pin your Docker image by updating alpine:3.10 to alpine:3.10@sha256:451eee8bedcb2f029756dc3e9d73bab0e7943c1ac55cff3a4861c52a0fdd3e98'
       - 'Warn: containerImage not pinned by hash: deploy/docs-v2/Dockerfile:43: pin your Docker image by updating node:20-bookworm to node:20-bookworm@sha256:8f693eaa7e0a8e71560c9a82b55fd54c2ae920a2ba5d2cde28bac7d1c01c9ba5'
-      - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:16: pin your Docker image by updating gcr.io/k8s-skaffold/build_deps:latest to gcr.io/k8s-skaffold/build_deps:latest@sha256:9998e34dfd00c460491798a0ce9506d094b1795de7a042fb4a4babee443b7e27'
+      - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:16: pin your Docker image by updating gcr.io/k8s-skaffold/build_deps:latest to gcr.io/k8s-skaffold/build_deps:latest@sha256:76e290d5f733424a65d1febc1de8bc09f8d96f309121d642eb4a2f9423f31e6e'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:19'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile:24'
       - 'Warn: containerImage not pinned by hash: deploy/skaffold/Dockerfile.deps:18: pin your Docker image by updating mirror.gcr.io/library/docker:28.1.1 to mirror.gcr.io/library/docker:28.1.1@sha256:eceba5b0fc2fcf83a74c298391c2ed9e1adbdaf04ee173611bd6282ec973e7ba'
