@@ -7,7 +7,7 @@ about:
   latestVersion: "v4.1.27"
   latestRelease: "v4.1.27"
   latestPrerelease: "desktop-v0.0.23-beta.1"
-  collectedAt: 2026-11-22T07:41:01Z
+  collectedAt: 2026-11-23T09:25:47Z
 timeline:
   created: 2024-07-06
   lastCommit: 2026-11-21
@@ -15,13 +15,13 @@ timeline:
   lastRelease: 2026-11-21
   lastPrerelease: 2026-09-03
 popularity:
-  star: 71814
-  watcher: 293
-  fork: 7944
+  star: 71842
+  watcher: 294
+  fork: 7951
   release: 472
   contributor: 377
-  pullRequest: 8742
-  issue: 5078
+  pullRequest: 8749
+  issue: 5083
 language:
   TypeScript: 32666382
   JavaScript: 297701
@@ -35,63 +35,63 @@ language:
 totalBytes: 33396028
 recent:
   last30d:
-    since: 2026-10-23
+    since: 2026-10-24
     release: 8
-    mergedPR: 79
-    openPR: 178
+    mergedPR: 69
+    openPR: 179
     closedIssue: 16
     openIssue: 123
-    commit: 118
+    commit: 65
   last60d:
-    since: 2026-09-23
+    since: 2026-09-24
     release: 46
-    mergedPR: 319
-    openPR: 366
-    closedIssue: 67
+    mergedPR: 309
+    openPR: 364
+    closedIssue: 64
     openIssue: 327
-    commit: 387
+    commit: 296
   last90d:
-    since: 2026-08-24
-    release: 84
-    mergedPR: 626
-    openPR: 536
-    closedIssue: 158
-    openIssue: 512
-    commit: 695
+    since: 2026-08-25
+    release: 82
+    mergedPR: 601
+    openPR: 540
+    closedIssue: 153
+    openIssue: 509
+    commit: 616
   last180d:
-    since: 2026-05-26
+    since: 2026-05-27
     release: 100
-    mergedPR: 1617
-    openPR: 824
-    closedIssue: 452
+    mergedPR: 1612
+    openPR: 830
+    closedIssue: 450
     openIssue: 769
-    commit: 1809
+    commit: 1767
   last360d:
-    since: 2025-11-27
+    since: 2025-11-28
     release: 100
-    mergedPR: 2666
-    openPR: 868
-    closedIssue: 1283
-    openIssue: 925
-    commit: 3630
+    mergedPR: 2664
+    openPR: 875
+    closedIssue: 1277
+    openIssue: 927
+    commit: 3569
   last720d:
-    since: 2024-12-02
+    since: 2024-12-03
     release: 100
     mergedPR: 5164
-    openPR: 870
+    openPR: 877
     closedIssue: 3606
-    openIssue: 942
+    openIssue: 944
     commit: 6850
 total:
   release: 472
   mergedPR: 5176
-  openPR: 870
-  closedIssue: 4136
-  openIssue: 942
+  openPR: 877
+  closedIssue: 4139
+  openIssue: 944
   commit: 7786
 ---
 path: /home/runner/.x-repo/github.com/cline/cline
-collectedAt: 2026-11-22T07:41:33Z
+collectedAt: 2026-11-23T09:26:28Z
 loc:
   TypeScript:
     code: 828584
@@ -186,4 +186,4 @@ total:
 ---
 
 ---
-{"id":453479600,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOMSqWwc4bB4yw","tag_name":"v4.1.27","target_commitish":"main","name":"v4.1.27","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-21T05:37:41Z","updated_at":"2026-11-21T06:05:06Z","published_at":"2026-11-21T06:05:04Z","assets":[{"id":774609644,"node_id":"RA_kwDOMSqWwc4uK5rs","name":"cline-4.1.27.vsix","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":14420212,"digest":"sha256:62437813fc43e09b3c532e0bd50d924ad8625153db05b74d71a73ce87fe3754d","download_count":171,"created_at":"2026-11-21T06:05:05Z","updated_at":"2026-11-21T06:05:06Z"}],"body":"\n### Added\n\n- LM Studio settings have an API key field, for servers with \"Require Authentication\" turned on.\n- The MCP tab shows a \"read-only\" badge on tools whose server declares them read-only.\n- The Account view has a Privacy settings link to the Cline web app's data-use preferences.\n- The extension package now includes its third-party license notices.\n\n### Changed\n\n- With no saved model, the Cline provider now starts on the first free model instead of Claude Sonnet 5.5. Saved selections are untouched.\n- The reasoning effort dropdown shows the effort a new task will actually use, and has a Default entry that clears the saved setting.\n- A provider's model list refreshes after you save its API key or base URL, and a failed refresh (such as a rejected key) shows as an error in the model picker.\n- `read_files` results are no longer cut to 8k characters on the way to the model. A read now arrives in full, up to the tool's own limit of 2000 lines or about 48k characters.\n- Refreshed the model catalog. Adds 94 providers from models.dev and drops Lilac and Tempr. The Cline recommended list adds Muse Ember. The Cline free list drops Reflection Beam, Laguna S 2.1 and Solar Mini 4. ClinePass drops DeepSeek V4.1 Flash, Mimo V2.6 Flash, Mimo V2.6 Pro, MiniMax M3, Qwen3.7 Plus and Qwen3.7 Max. Default models change for 67 other providers, mostly to Kimi K3.1 Pro, Gemini 4 Neon (including the `gemini` and `vertex` providers) or DeepSeek V4.1 Flash 1017.\n\n### Fixed\n\n- Picking \"None\" for reasoning effort is now saved and sent. Before, GPT-6 on Azure kept its default effort and rejected tool calls.\n- Turning reasoning off now reaches custom models that have saved Model Configuration overrides. Before, gpt-5.6 and gpt-6 chat-completions endpoints rejected every tool call.\n- On the native OpenAI provider, the reasoning level is fitted to what each model supports, so `max` and Extra High are no longer rejected by GPT-5.x and o-series models.\n- Reflection Beam no longer fails every turn with `400 Missing required parameter: 'messages[n].reasoning_content'` after a compaction or a model switch.\n- Compaction no longer falls back to the basic summary on models the catalog doesn't describe.\n- LiteLLM: the legacy `max_tokens` field is no longer used as the input budget when the model reports `max_output_tokens`.\n- Reasoning text from a turn that was cancelled or failed no longer shows up at the start of the next turn's reasoning.\n- Commit search passes your query to git as arguments instead of shell text, so a quoted search matches the exact phrase.\n- Security: undici raised to 7.30.1, which fixes two process-crash issues.\n\n**Full Changelog**: https://github.com/cline/cline/compare/v4.1.26...v4.1.27\n"}
+{"id":453479600,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOMSqWwc4bB4yw","tag_name":"v4.1.27","target_commitish":"main","name":"v4.1.27","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-21T05:37:41Z","updated_at":"2026-11-21T06:05:06Z","published_at":"2026-11-21T06:05:04Z","assets":[{"id":774609644,"node_id":"RA_kwDOMSqWwc4uK5rs","name":"cline-4.1.27.vsix","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":14420212,"digest":"sha256:62437813fc43e09b3c532e0bd50d924ad8625153db05b74d71a73ce87fe3754d","download_count":388,"created_at":"2026-11-21T06:05:05Z","updated_at":"2026-11-21T06:05:06Z"}],"body":"\n### Added\n\n- LM Studio settings have an API key field, for servers with \"Require Authentication\" turned on.\n- The MCP tab shows a \"read-only\" badge on tools whose server declares them read-only.\n- The Account view has a Privacy settings link to the Cline web app's data-use preferences.\n- The extension package now includes its third-party license notices.\n\n### Changed\n\n- With no saved model, the Cline provider now starts on the first free model instead of Claude Sonnet 5.5. Saved selections are untouched.\n- The reasoning effort dropdown shows the effort a new task will actually use, and has a Default entry that clears the saved setting.\n- A provider's model list refreshes after you save its API key or base URL, and a failed refresh (such as a rejected key) shows as an error in the model picker.\n- `read_files` results are no longer cut to 8k characters on the way to the model. A read now arrives in full, up to the tool's own limit of 2000 lines or about 48k characters.\n- Refreshed the model catalog. Adds 94 providers from models.dev and drops Lilac and Tempr. The Cline recommended list adds Muse Ember. The Cline free list drops Reflection Beam, Laguna S 2.1 and Solar Mini 4. ClinePass drops DeepSeek V4.1 Flash, Mimo V2.6 Flash, Mimo V2.6 Pro, MiniMax M3, Qwen3.7 Plus and Qwen3.7 Max. Default models change for 67 other providers, mostly to Kimi K3.1 Pro, Gemini 4 Neon (including the `gemini` and `vertex` providers) or DeepSeek V4.1 Flash 1017.\n\n### Fixed\n\n- Picking \"None\" for reasoning effort is now saved and sent. Before, GPT-6 on Azure kept its default effort and rejected tool calls.\n- Turning reasoning off now reaches custom models that have saved Model Configuration overrides. Before, gpt-5.6 and gpt-6 chat-completions endpoints rejected every tool call.\n- On the native OpenAI provider, the reasoning level is fitted to what each model supports, so `max` and Extra High are no longer rejected by GPT-5.x and o-series models.\n- Reflection Beam no longer fails every turn with `400 Missing required parameter: 'messages[n].reasoning_content'` after a compaction or a model switch.\n- Compaction no longer falls back to the basic summary on models the catalog doesn't describe.\n- LiteLLM: the legacy `max_tokens` field is no longer used as the input budget when the model reports `max_output_tokens`.\n- Reasoning text from a turn that was cancelled or failed no longer shows up at the start of the next turn's reasoning.\n- Commit search passes your query to git as arguments instead of shell text, so a quoted search matches the exact phrase.\n- Security: undici raised to 7.30.1, which fixes two process-crash issues.\n\n**Full Changelog**: https://github.com/cline/cline/compare/v4.1.26...v4.1.27\n"}

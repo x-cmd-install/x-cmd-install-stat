@@ -7,7 +7,7 @@ about:
   latestVersion: "REL_1_5_0"
   latestRelease: "REL_1_5_0"
   latestPrerelease: ""
-  collectedAt: 2026-11-22T08:19:02Z
+  collectedAt: 2026-11-23T11:23:08Z
 timeline:
   created: 2008-11-30
   lastCommit: 2026-11-16
@@ -30,47 +30,47 @@ language:
 totalBytes: 449940
 recent:
   last30d:
-    since: 2026-10-23
+    since: 2026-10-24
     release: 0
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 16
+    commit: 0
   last60d:
-    since: 2026-09-23
+    since: 2026-09-24
     release: 0
     mergedPR: 0
     openPR: 0
     closedIssue: 0
     openIssue: 0
-    commit: 16
+    commit: 0
   last90d:
-    since: 2026-08-24
+    since: 2026-08-25
     release: 0
     mergedPR: 0
     openPR: 0
     closedIssue: 1
     openIssue: 0
-    commit: 16
+    commit: 0
   last180d:
-    since: 2026-05-26
+    since: 2026-05-27
     release: 0
     mergedPR: 0
     openPR: 0
     closedIssue: 3
     openIssue: 0
-    commit: 17
+    commit: 0
   last360d:
-    since: 2025-11-27
+    since: 2025-11-28
     release: 0
     mergedPR: 0
     openPR: 0
     closedIssue: 6
     openIssue: 0
-    commit: 23
+    commit: 0
   last720d:
-    since: 2024-12-02
+    since: 2024-12-03
     release: 0
     mergedPR: 0
     openPR: 1
@@ -86,7 +86,7 @@ total:
   commit: 1166
 ---
 path: /home/runner/.x-repo/github.com/gettalong/kramdown
-collectedAt: 2026-11-22T08:19:03Z
+collectedAt: 2026-11-23T11:23:09Z
 loc:
   Ruby:
     code: 8026
@@ -139,15 +139,20 @@ total:
   blanks: 3447
   files: 499
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/gettalong/kramdown
   commit: a3667baaf52fd33fab902eeba69cce2405f66255
 scorecard:
-  version: v5.6.0
-  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
 score: 4
 checks:
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Maintained
     score: 10
     reason: 17 commit(s) and 9 issue activity found in the last 90 days -- score normalized to 10
@@ -162,11 +167,6 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/test.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
@@ -180,14 +180,6 @@ checks:
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Pinned-Dependencies
-    score: 0
-    reason: dependency not pinned by hash detected -- score normalized to 0
-    details:
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:12: update your workflow using https://app.stepsecurity.io/secureworkflow/gettalong/kramdown/test.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:13: update your workflow using https://app.stepsecurity.io/secureworkflow/gettalong/kramdown/test.yml/master?enable=pin'
-      - 'Info:   0 out of   1 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -209,13 +201,18 @@ checks:
     details:
       - 'Warn: release artifact REL_1_5_0 not signed: https://api.github.com/repos/gettalong/kramdown/releases/653829'
       - 'Warn: release artifact REL_1_4_0 not signed: https://api.github.com/repos/gettalong/kramdown/releases/380646'
+      - 'Warn: release artifact REL_1_5_0 is not immutable: https://api.github.com/repos/gettalong/kramdown/releases/653829'
+      - 'Warn: release artifact REL_1_4_0 is not immutable: https://api.github.com/repos/gettalong/kramdown/releases/380646'
       - 'Warn: release artifact REL_1_5_0 does not have provenance: https://api.github.com/repos/gettalong/kramdown/releases/653829'
       - 'Warn: release artifact REL_1_4_0 does not have provenance: https://api.github.com/repos/gettalong/kramdown/releases/380646'
-  - name: Branch-Protection
+  - name: Pinned-Dependencies
     score: 0
-    reason: branch protection not enabled on development/release branches
+    reason: dependency not pinned by hash detected -- score normalized to 0
     details:
-      - 'Warn: branch protection not enabled for branch ''master'''
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:12: update your workflow using https://app.stepsecurity.io/secureworkflow/gettalong/kramdown/test.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:13: update your workflow using https://app.stepsecurity.io/secureworkflow/gettalong/kramdown/test.yml/master?enable=pin'
+      - 'Info:   0 out of   1 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
   - name: Security-Policy
     score: 9
     reason: security policy file detected
@@ -224,5 +221,10 @@ checks:
       - 'Info: Found linked content: github.com/gettalong/.github/SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: github.com/gettalong/.github/SECURITY.md:1'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
 ---
 {"id":653829,"author":{"login":"gettalong","id":4104,"node_id":"MDQ6VXNlcjQxMDQ=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"MDc6UmVsZWFzZTY1MzgyOQ==","tag_name":"REL_1_5_0","target_commitish":"master","name":"","draft":false,"immutable":false,"prerelease":false,"created_at":"2014-10-25T21:28:29Z","updated_at":"2014-10-25T21:30:13Z","published_at":"2014-10-25T21:30:13Z","assets":[{"id":282097,"node_id":"MDEyOlJlbGVhc2VBc3NldDI4MjA5Nw==","name":"kramdown-1.5.0.tgz","label":null,"uploader":{"login":"gettalong","id":4104,"node_id":"MDQ6VXNlcjQxMDQ=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-compressed-tar","state":"uploaded","size":234718,"digest":null,"download_count":156,"created_at":"2014-10-25T21:29:56Z","updated_at":"2014-10-25T21:30:00Z"},{"id":282096,"node_id":"MDEyOlJlbGVhc2VBc3NldDI4MjA5Ng==","name":"kramdown-1.5.0.zip","label":null,"uploader":{"login":"gettalong","id":4104,"node_id":"MDQ6VXNlcjQxMDQ=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":396714,"digest":null,"download_count":230,"created_at":"2014-10-25T21:29:56Z","updated_at":"2014-10-25T21:29:59Z"}],"body":""}

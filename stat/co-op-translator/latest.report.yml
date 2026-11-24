@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.24.1"
   latestRelease: "v0.24.1"
   latestPrerelease: "v0.10.0rc3"
-  collectedAt: 2026-11-22T07:33:18Z
+  collectedAt: 2026-11-23T10:31:03Z
 timeline:
   created: 2024-09-19
   lastCommit: 2026-11-21
@@ -21,7 +21,7 @@ popularity:
   release: 76
   contributor: 28
   pullRequest: 487
-  issue: 103
+  issue: 104
 language:
   Python: 1366165
   JavaScript: 6726
@@ -30,63 +30,63 @@ language:
 totalBytes: 1375108
 recent:
   last30d:
-    since: 2026-10-23
+    since: 2026-10-24
     release: 3
     mergedPR: 12
     openPR: 2
     closedIssue: 2
-    openIssue: 0
+    openIssue: 1
     commit: 13
   last60d:
-    since: 2026-09-23
+    since: 2026-09-24
     release: 7
     mergedPR: 35
     openPR: 5
     closedIssue: 4
-    openIssue: 3
+    openIssue: 4
     commit: 37
   last90d:
-    since: 2026-08-24
+    since: 2026-08-25
     release: 9
-    mergedPR: 64
+    mergedPR: 60
     openPR: 5
     closedIssue: 5
-    openIssue: 3
+    openIssue: 4
     commit: 56
   last180d:
-    since: 2026-05-26
+    since: 2026-05-27
     release: 13
     mergedPR: 133
     openPR: 5
     closedIssue: 7
-    openIssue: 6
+    openIssue: 7
     commit: 136
   last360d:
-    since: 2025-11-27
+    since: 2025-11-28
     release: 39
     mergedPR: 237
     openPR: 5
     closedIssue: 25
-    openIssue: 8
+    openIssue: 9
     commit: 239
   last720d:
-    since: 2024-12-02
+    since: 2024-12-03
     release: 73
     mergedPR: 416
     openPR: 5
     closedIssue: 67
-    openIssue: 14
+    openIssue: 15
     commit: 436
 total:
   release: 76
   mergedPR: 453
   openPR: 5
   closedIssue: 86
-  openIssue: 17
+  openIssue: 18
   commit: 517
 ---
 path: /home/runner/.x-repo/github.com/Azure/co-op-translator
-collectedAt: 2026-11-22T07:33:31Z
+collectedAt: 2026-11-23T10:31:15Z
 loc:
   Python:
     code: 31941
@@ -149,7 +149,7 @@ total:
   blanks: 55385
   files: 1146
 ---
-date: "2026-11-21T14:57:38Z"
+date: "2026-11-23T04:48:09Z"
 repo:
   name: github.com/Azure/co-op-translator
   commit: 47a4dea0a3b81d4567e76bf40900a3ce10882c71
@@ -158,13 +158,9 @@ scorecard:
   commit: c22063e786c11f9dd714d777a687ff7c4599b600
 score: 5.9
 checks:
-  - name: Code-Review
-    score: 1
-    reason: Found 3/23 approved changesets -- score normalized to 1
-    details: null
-  - name: Dangerous-Workflow
+  - name: Maintained
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: 30 commit(s) and 7 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Security-Policy
     score: 10
@@ -174,9 +170,17 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Maintained
+  - name: Code-Review
+    score: 1
+    reason: Found 3/23 approved changesets -- score normalized to 1
+    details: null
+  - name: Dangerous-Workflow
     score: 10
-    reason: 30 commit(s) and 7 issue activity found in the last 90 days -- score normalized to 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -197,10 +201,6 @@ checks:
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/python-publish.yml:8'
       - 'Info: found token with ''none'' permissions: .github/workflows/scorecard.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -223,8 +223,8 @@ checks:
       - 'Warn: pipCommand not pinned by hash: .github/workflows/python-publish.yml:28'
       - 'Info:  18 out of  18 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   7 out of   7 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   2 containerImage dependencies pinned'
       - 'Info:   0 out of  10 pipCommand dependencies pinned'
+      - 'Info:   0 out of   2 containerImage dependencies pinned'
   - name: Vulnerabilities
     score: 0
     reason: 50 existing vulnerabilities detected
@@ -291,30 +291,30 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: :0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''main'''
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker-publish.yml:18'
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: :0'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''main'''
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: CI-Tests
     score: 10
     reason: 28 out of 28 merged PRs checked by a CI test -- score normalized to 10

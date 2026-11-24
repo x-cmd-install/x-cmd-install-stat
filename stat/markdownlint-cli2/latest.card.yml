@@ -7,7 +7,7 @@ about:
   latestVersion: ""
   latestRelease: ""
   latestPrerelease: ""
-  collectedAt: 2026-11-22T03:47:09Z
+  collectedAt: 2026-11-23T04:24:11Z
 timeline:
   created: 2020-07-03
   lastCommit: 2026-11-20
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 
   lastPrerelease: 
 popularity:
-  star: 986
+  star: 987
   watcher: 8
   fork: 86
   release: 0
@@ -29,7 +29,7 @@ language:
 totalBytes: 226311
 recent:
   last30d:
-    since: 2026-10-23
+    since: 2026-10-24
     release: 0
     mergedPR: 17
     openPR: 0
@@ -37,23 +37,23 @@ recent:
     openIssue: 0
     commit: 17
   last60d:
-    since: 2026-09-23
+    since: 2026-09-24
     release: 0
-    mergedPR: 48
+    mergedPR: 47
     openPR: 0
     closedIssue: 2
     openIssue: 0
     commit: 61
   last90d:
-    since: 2026-08-24
+    since: 2026-08-25
     release: 0
-    mergedPR: 70
+    mergedPR: 68
     openPR: 0
     closedIssue: 5
     openIssue: 0
     commit: 101
   last180d:
-    since: 2026-05-26
+    since: 2026-05-27
     release: 0
     mergedPR: 140
     openPR: 0
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 222
   last360d:
-    since: 2025-11-27
+    since: 2025-11-28
     release: 0
     mergedPR: 214
     openPR: 0
@@ -69,13 +69,13 @@ recent:
     openIssue: 1
     commit: 359
   last720d:
-    since: 2024-12-02
+    since: 2024-12-03
     release: 0
     mergedPR: 435
     openPR: 0
     closedIssue: 52
     openIssue: 1
-    commit: 670
+    commit: 668
 total:
   release: 0
   mergedPR: 750
@@ -85,7 +85,7 @@ total:
   commit: 1481
 ---
 path: /home/runner/.x-repo/github.com/DavidAnson/markdownlint-cli2
-collectedAt: 2026-11-22T03:47:11Z
+collectedAt: 2026-11-23T04:24:12Z
 loc:
   Json:
     code: 7318
@@ -133,26 +133,26 @@ total:
   blanks: 1843
   files: 510
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/DavidAnson/markdownlint-cli2
-  commit: c01a1853c19b175aee6a09f24e2ad9b748c485ad
+  commit: d4df4cec471ce155946474590d7b95920f623ccb
 scorecard:
-  version: v5.6.0
-  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
 score: 5.4
 checks:
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 6 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Code-Review
     score: 0
     reason: Found 0/6 approved changesets -- score normalized to 0
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 5 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -173,11 +173,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -186,6 +181,11 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
@@ -196,13 +196,28 @@ checks:
     score: -1
     reason: no releases found
     details: null
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/publish-container-image.yml:11'
+  - name: SAST
+    score: 10
+    reason: SAST tool is run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Info: all commits (24) are checked with a SAST tool'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/checkers.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/DavidAnson/markdownlint-cli2/checkers.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/checkers.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/DavidAnson/markdownlint-cli2/checkers.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/checkers.yml:24: update your workflow using https://app.stepsecurity.io/secureworkflow/DavidAnson/markdownlint-cli2/checkers.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/checkers.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/DavidAnson/markdownlint-cli2/checkers.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:53: update your workflow using https://app.stepsecurity.io/secureworkflow/DavidAnson/markdownlint-cli2/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:54: update your workflow using https://app.stepsecurity.io/secureworkflow/DavidAnson/markdownlint-cli2/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:62: update your workflow using https://app.stepsecurity.io/secureworkflow/DavidAnson/markdownlint-cli2/ci.yml/main?enable=pin'
@@ -232,7 +247,7 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/smoke-test.yml:24: update your workflow using https://app.stepsecurity.io/secureworkflow/DavidAnson/markdownlint-cli2/smoke-test.yml/main?enable=pin'
       - 'Warn: containerImage not pinned by hash: docker/Dockerfile:3: pin your Docker image by updating node:lts-alpine to node:lts-alpine@sha256:6bd9ab43c0ec0190ca7b2d193906cb8b7edf6e7f4afa43ddeccd6452710bffb5'
       - 'Warn: containerImage not pinned by hash: docker/Dockerfile:16: pin your Docker image by updating node:lts-alpine to node:lts-alpine@sha256:6bd9ab43c0ec0190ca7b2d193906cb8b7edf6e7f4afa43ddeccd6452710bffb5'
-      - 'Warn: containerImage not pinned by hash: docker/Dockerfile-rules:4: pin your Docker image by updating davidanson/markdownlint-cli2:latest to davidanson/markdownlint-cli2:latest@sha256:caf0698eaea0268bcf35b5e2d7ba946b5899d323e765bc2862054405658cd948'
+      - 'Warn: containerImage not pinned by hash: docker/Dockerfile-rules:4: pin your Docker image by updating davidanson/markdownlint-cli2:latest to davidanson/markdownlint-cli2:latest@sha256:c768e94d8bb161c449bde28f60656929ca1f02c3010a405f65c9cac71563a889'
       - 'Warn: npmCommand not pinned by hash: docker/Dockerfile:18'
       - 'Warn: npmCommand not pinned by hash: docker/Dockerfile-rules:9-41'
       - 'Warn: npmCommand not pinned by hash: .github/workflows/ci.yml:30'
@@ -245,21 +260,6 @@ checks:
       - 'Warn: npmCommand not pinned by hash: .github/workflows/smoke-test.yml:32'
       - 'Info:   0 out of  20 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of  10 third-party GitHubAction dependencies pinned'
-      - 'Info:   1 out of  11 npmCommand dependencies pinned'
       - 'Info:   0 out of   3 containerImage dependencies pinned'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/publish-container-image.yml:11'
-  - name: SAST
-    score: 10
-    reason: SAST tool is run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Info: all commits (24) are checked with a SAST tool'
+      - 'Info:   1 out of  11 npmCommand dependencies pinned'
 ---

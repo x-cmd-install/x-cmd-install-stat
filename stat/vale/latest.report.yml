@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.28.1"
   latestRelease: "v3.28.1"
   latestPrerelease: ""
-  collectedAt: 2026-11-22T07:21:18Z
+  collectedAt: 2026-11-23T09:27:54Z
 timeline:
   created: 2017-02-05
   lastCommit: 2026-11-21
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-11-19
   lastPrerelease: 
 popularity:
-  star: 6416
+  star: 6419
   watcher: 28
   fork: 243
   release: 209
@@ -31,7 +31,7 @@ language:
 totalBytes: 1547543
 recent:
   last30d:
-    since: 2026-10-23
+    since: 2026-10-24
     release: 4
     mergedPR: 0
     openPR: 0
@@ -39,7 +39,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-23
+    since: 2026-09-24
     release: 8
     mergedPR: 0
     openPR: 0
@@ -47,7 +47,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-24
+    since: 2026-08-25
     release: 12
     mergedPR: 0
     openPR: 0
@@ -55,7 +55,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-26
+    since: 2026-05-27
     release: 19
     mergedPR: 0
     openPR: 0
@@ -63,7 +63,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-27
+    since: 2025-11-28
     release: 23
     mergedPR: 0
     openPR: 0
@@ -71,7 +71,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-12-02
+    since: 2024-12-03
     release: 34
     mergedPR: 0
     openPR: 0
@@ -87,7 +87,7 @@ total:
   commit: 2269
 ---
 path: /home/runner/.x-repo/github.com/errata-ai/vale
-collectedAt: 2026-11-22T07:21:24Z
+collectedAt: 2026-11-23T09:28:01Z
 loc:
   Xml:
     code: 83732
@@ -285,18 +285,18 @@ total:
   blanks: 16219
   files: 1150
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/errata-ai/vale
-  commit: 4ce91ef208b37f9ac2894766e8cd7b33ffe3baed
+  commit: d5eaeab7b7d833b66ac9ff7d148c8e290854b791
 scorecard:
-  version: v5.6.0
-  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 5.1
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
+score: 6.4
 checks:
-  - name: Code-Review
-    score: 0
-    reason: Found 1/30 approved changesets -- score normalized to 0
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 9 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Security-Policy
     score: 10
@@ -306,19 +306,14 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Code-Review
+    score: 0
+    reason: Found 2/30 approved changesets -- score normalized to 0
+    details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 5 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -327,14 +322,15 @@ checks:
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
     details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:18'
       - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql.yml:17'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:18'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/bench.yml:33'
+      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/cla.yml:23'
       - 'Warn: topLevel ''statuses'' permission set to ''write'': .github/workflows/cla.yml:25'
       - 'Warn: topLevel ''actions'' permission set to ''write'': .github/workflows/cla.yml:22'
-      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/cla.yml:23'
       - 'Warn: no topLevel permission defined: .github/workflows/codeql.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/commits.yml:9'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/docker.yml:17'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/golangci-lint.yml:9'
       - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test.yml:12'
@@ -349,13 +345,38 @@ checks:
     details:
       - 'Info: GoBuiltInFuzzer integration found: internal/check/existence_test.go:49'
       - 'Info: GoBuiltInFuzzer integration found: internal/check/existence_test.go:56'
-      - 'Info: GoBuiltInFuzzer integration found: internal/core/location_test.go:190'
+      - 'Info: GoBuiltInFuzzer integration found: internal/core/location_test.go:192'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker.yml:23'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''v3'''
+  - name: Signed-Releases
+    score: 10
+    reason: 5 out of the last 5 releases have a total of 0 signed artifacts and 5 immutable releases.
+    details:
+      - 'Info: immutable release: v3.28.1: https://api.github.com/repos/vale-cli/vale/releases/451504344'
+      - 'Info: immutable release: v3.28.0: https://api.github.com/repos/vale-cli/vale/releases/451439652'
+      - 'Info: immutable release: v3.27.0: https://api.github.com/repos/vale-cli/vale/releases/443408213'
+      - 'Info: immutable release: v3.26.0: https://api.github.com/repos/vale-cli/vale/releases/430004807'
+      - 'Info: immutable release: v3.25.1: https://api.github.com/repos/vale-cli/vale/releases/421183147'
+  - name: SAST
+    score: 8
+    reason: SAST tool detected but not run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: 2 commits out of 3 are checked with a SAST tool'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -371,66 +392,43 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/commits.yml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/commits.yml/v3?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/commits.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/commits.yml/v3?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/contributing.yml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/contributing.yml/v3?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/docker.yml:26: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/docker.yml/v3?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker.yml:29: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/docker.yml/v3?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker.yml:31: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/docker.yml/v3?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker.yml:34: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/docker.yml/v3?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker.yml:57: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/docker.yml/v3?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker.yml:64: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/docker.yml/v3?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/docker.yml:72: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/docker.yml/v3?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/golangci-lint.yml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/golangci-lint.yml/v3?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/golangci-lint.yml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/golangci-lint.yml/v3?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/golangci-lint.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/golangci-lint.yml/v3?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:10: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/main.yml/v3?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:15: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/main.yml/v3?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/main.yml:24: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/main.yml/v3?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:53: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/main.yml/v3?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/main.yml:54: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/main.yml/v3?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/main.yml:57: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/main.yml/v3?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/main.yml:58: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/main.yml/v3?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:29: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:33: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:38: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:42: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:46: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:66: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:37: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:55: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:83: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:87: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:91: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:95: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:100: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:104: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:108: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:126: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:151: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:155: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:159: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:163: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:3: pin your Docker image by updating golang:1.25-alpine to golang:1.25-alpine@sha256:1ae0735f00daffa3aaf1363a5184c0d2dc55c78e3db4ec70241cdac97bf84b59'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:25: pin your Docker image by updating alpine to alpine@sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf'
-      - 'Warn: npmCommand not pinned by hash: Dockerfile:33'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:108: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:136: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:140: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test.yml:144: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/test.yml:148: update your workflow using https://app.stepsecurity.io/secureworkflow/vale-cli/vale/test.yml/v3?enable=pin'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:8: pin your Docker image by updating golang:1.27-alpine to golang:1.27-alpine@sha256:70bd7ddea8b6cbe5d6943cde279d6b67feb10cc924fb9100d1d8757c1575b280'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:43: pin your Docker image by updating tonistiigi/xx:1.6.1 to tonistiigi/xx:1.6.1@sha256:923441d7c25f1e2eb5789f82d987693c47b8ed987c4ab3b075d6ed2b5d6779a3'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:45: pin your Docker image by updating rust:1-alpine to rust:1-alpine@sha256:8d0e82abfdf9a38071e07cabc5afba4ddbe077631a80e4e742a760c38beadc33'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:58: pin your Docker image by updating alpine:3.23 to alpine:3.23@sha256:469c9ea410b9215eaee7976ba6c0639039b444be8e5d638f7abbada189971eb2'
       - 'Warn: goCommand not pinned by hash: .github/workflows/bench.yml:55'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/test.yml:116'
-      - 'Warn: chocoCommand not pinned by hash: .github/workflows/test.yml:119'
-      - 'Warn: pipCommand not pinned by hash: .github/workflows/test.yml:58'
-      - 'Info:   0 out of  26 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   0 out of   9 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   2 containerImage dependencies pinned'
-      - 'Info:   0 out of   1 npmCommand dependencies pinned'
+      - 'Warn: chocoCommand not pinned by hash: .github/workflows/test.yml:101'
+      - 'Info:   0 out of  25 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   0 out of  13 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 goCommand dependencies pinned'
-      - 'Info:   0 out of   2 pipCommand dependencies pinned'
       - 'Info:   0 out of   1 chocoCommand dependencies pinned'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''v3'''
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v3.27.0 not signed: https://api.github.com/repos/vale-cli/vale/releases/443408213'
-      - 'Warn: release artifact v3.26.0 not signed: https://api.github.com/repos/vale-cli/vale/releases/430004807'
-      - 'Warn: release artifact v3.25.1 not signed: https://api.github.com/repos/vale-cli/vale/releases/421183147'
-      - 'Warn: release artifact v3.24.0 not signed: https://api.github.com/repos/vale-cli/vale/releases/401244195'
-      - 'Warn: release artifact v3.27.0 does not have provenance: https://api.github.com/repos/vale-cli/vale/releases/443408213'
-      - 'Warn: release artifact v3.26.0 does not have provenance: https://api.github.com/repos/vale-cli/vale/releases/430004807'
-      - 'Warn: release artifact v3.25.1 does not have provenance: https://api.github.com/repos/vale-cli/vale/releases/421183147'
-      - 'Warn: release artifact v3.24.0 does not have provenance: https://api.github.com/repos/vale-cli/vale/releases/401244195'
-  - name: SAST
-    score: 7
-    reason: SAST tool detected but not run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 0 commits out of 1 are checked with a SAST tool'
+      - 'Info:   0 out of   4 containerImage dependencies pinned'
 ---
-{"id":451504344,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBNRFV84a6WjY","tag_name":"v3.28.1","target_commitish":"v3","name":"v3.28.1","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-11-19T14:53:37Z","updated_at":"2026-11-19T15:04:13Z","published_at":"2026-11-19T15:04:13Z","assets":[{"id":768121229,"node_id":"RA_kwDOBNRFV84tyJmN","name":"grammar-bash.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":777984,"digest":"sha256:b5716b70c5d3bfc8b92bd3fcf9e6e50299786dcad6ce1c35e6077707d5c4acb9","download_count":20,"created_at":"2026-11-19T15:02:53Z","updated_at":"2026-11-19T15:02:53Z"},{"id":768121230,"node_id":"RA_kwDOBNRFV84tyJmO","name":"grammar-c.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":616436,"digest":"sha256:d79b2c12b2314d91704a0a1959b3faa33176566d6bbfecc3c4029ed1b25bc8c7","download_count":43,"created_at":"2026-11-19T15:02:53Z","updated_at":"2026-11-19T15:02:53Z"},{"id":768121151,"node_id":"RA_kwDOBNRFV84tyJk_","name":"grammar-cpp.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":818730,"digest":"sha256:dd51fe5571448e474b6444ab44c1b8414d9d7010ac3b030f5015f8482103e567","download_count":59,"created_at":"2026-11-19T15:02:52Z","updated_at":"2026-11-19T15:02:52Z"},{"id":768121010,"node_id":"RA_kwDOBNRFV84tyJiy","name":"grammar-csharp.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":905718,"digest":"sha256:0d157009744c2dce9f06a6efe12f1a0316ddc532e216c60000361c4ad9039b40","download_count":27,"created_at":"2026-11-19T15:02:49Z","updated_at":"2026-11-19T15:02:50Z"},{"id":768121126,"node_id":"RA_kwDOBNRFV84tyJkm","name":"grammar-css.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":558230,"digest":"sha256:1694157c02573d7b6531e64b16121ace59cc848e94f214c40a3d9d396afa5f71","download_count":129,"created_at":"2026-11-19T15:02:51Z","updated_at":"2026-11-19T15:02:52Z"},{"id":768121125,"node_id":"RA_kwDOBNRFV84tyJkl","name":"grammar-elixir.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":838661,"digest":"sha256:d574e6995fa4d45d1c959386f3c9d3db0f1f1b284da25d379ac6387ba2c257f5","download_count":26,"created_at":"2026-11-19T15:02:51Z","updated_at":"2026-11-19T15:02:52Z"},{"id":768121029,"node_id":"RA_kwDOBNRFV84tyJjF","name":"grammar-elm.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":614171,"digest":"sha256:23976b8dc5d44154610742c3c9e775c29edc818cb68ddc0af5b599e8738d46f1","download_count":13,"created_at":"2026-11-19T15:02:50Z","updated_at":"2026-11-19T15:02:50Z"},{"id":768121050,"node_id":"RA_kwDOBNRFV84tyJja","name":"grammar-go.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":570174,"digest":"sha256:f5b8f9b64d1084abd36a56512d43058ec7290419bcf25bf07456a1d89f56f51e","download_count":278,"created_at":"2026-11-19T15:02:50Z","updated_at":"2026-11-19T15:02:50Z"},{"id":768121074,"node_id":"RA_kwDOBNRFV84tyJjy","name":"grammar-java.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":622960,"digest":"sha256:a17cf883206363c84a00c6d1ef6bafc6cd6d66d2738ba96e4aec6c900a783d48","download_count":151,"created_at":"2026-11-19T15:02:50Z","updated_at":"2026-11-19T15:02:51Z"},{"id":768121076,"node_id":"RA_kwDOBNRFV84tyJj0","name":"grammar-javascript.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":586476,"digest":"sha256:d213619537fb447fbab292844b4f9214f2627a92c28547e289a6ee3be6caa7e0","download_count":244,"created_at":"2026-11-19T15:02:50Z","updated_at":"2026-11-19T15:02:51Z"},{"id":768121045,"node_id":"RA_kwDOBNRFV84tyJjV","name":"grammar-julia.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":1102637,"digest":"sha256:11b065f912647689bc54633839d3a0a5f4b1252c2b1211bce02ae2600c5cd6d6","download_count":12,"created_at":"2026-11-19T15:02:50Z","updated_at":"2026-11-19T15:02:50Z"},{"id":768121160,"node_id":"RA_kwDOBNRFV84tyJlI","name":"grammar-kotlin.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":890763,"digest":"sha256:4f6013064f62c2397f9d141c2105cab309f796ba8cfd5648dbe7cf789c6027df","download_count":30,"created_at":"2026-11-19T15:02:52Z","updated_at":"2026-11-19T15:02:52Z"},{"id":768121182,"node_id":"RA_kwDOBNRFV84tyJle","name":"grammar-lua.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":588854,"digest":"sha256:51b4a2a9c4cbb0c71f51e7c1225b4c579c2fb69b7b57dd81a290ff43125dea14","download_count":13,"created_at":"2026-11-19T15:02:52Z","updated_at":"2026-11-19T15:02:52Z"},{"id":768120977,"node_id":"RA_kwDOBNRFV84tyJiR","name":"grammar-php.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":646502,"digest":"sha256:706dfffd3b9678bce182b3aa351146123d61ed749eca7b2441534cb553ebde65","download_count":17,"created_at":"2026-11-19T15:02:49Z","updated_at":"2026-11-19T15:02:49Z"},{"id":768121184,"node_id":"RA_kwDOBNRFV84tyJlg","name":"grammar-proto.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":547282,"digest":"sha256:be3bc757e25fca3b7b1afd5424d75b449182c75820b1fc970d3ba11e40f0aeda","download_count":17,"created_at":"2026-11-19T15:02:52Z","updated_at":"2026-11-19T15:02:52Z"},{"id":768121030,"node_id":"RA_kwDOBNRFV84tyJjG","name":"grammar-python.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":612576,"digest":"sha256:48761749cbbe01305386fdcf8c44a628e9b61ab4f9dc4988d646b6a50f436e18","download_count":256,"created_at":"2026-11-19T15:02:50Z","updated_at":"2026-11-19T15:02:50Z"},{"id":768121205,"node_id":"RA_kwDOBNRFV84tyJl1","name":"grammar-ruby.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":728617,"digest":"sha256:4dc459b3ba7863a06e5905862394376876a47e287043ead7a1e964a4f0bbe498","download_count":47,"created_at":"2026-11-19T15:02:52Z","updated_at":"2026-11-19T15:02:53Z"},{"id":768120979,"node_id":"RA_kwDOBNRFV84tyJiT","name":"grammar-rust.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":659295,"digest":"sha256:0c0b7805d793ddbaadd199d6cde73fd4319f5688ee4dfee914e9aec7b44ed812","download_count":80,"created_at":"2026-11-19T15:02:49Z","updated_at":"2026-11-19T15:02:49Z"},{"id":768121207,"node_id":"RA_kwDOBNRFV84tyJl3","name":"grammar-toml.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":537690,"digest":"sha256:2aea031c9c67b2ae874a87a490ee2edb857fbeb41a02a3fd1114080252bda42b","download_count":33,"created_at":"2026-11-19T15:02:52Z","updated_at":"2026-11-19T15:02:53Z"},{"id":768121100,"node_id":"RA_kwDOBNRFV84tyJkM","name":"grammar-tsx.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":691739,"digest":"sha256:70154e2052f6ef3cb58c5730fd1119da4a3939e6a78fff600d43d12de35955d5","download_count":131,"created_at":"2026-11-19T15:02:51Z","updated_at":"2026-11-19T15:02:51Z"},{"id":768121112,"node_id":"RA_kwDOBNRFV84tyJkY","name":"grammar-typescript.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":693729,"digest":"sha256:fe1518289a3b21497b9ff6e246bc08ab440f4ade01bddb1812cd09ce80b591b3","download_count":307,"created_at":"2026-11-19T15:02:51Z","updated_at":"2026-11-19T15:02:51Z"},{"id":768121007,"node_id":"RA_kwDOBNRFV84tyJiv","name":"grammar-yaml.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":596617,"digest":"sha256:384e2d70112a4038621aaa349bac42be0816eb68b9998abf10a586a6bd6a1f08","download_count":192,"created_at":"2026-11-19T15:02:49Z","updated_at":"2026-11-19T15:02:50Z"},{"id":768120933,"node_id":"RA_kwDOBNRFV84tyJhl","name":"vale_3.28.1_checksums.txt","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":673,"digest":"sha256:8c56d56b7cbcf492c4f4f5264b562713a8b76bc70569e3496142977b46db6c41","download_count":6977,"created_at":"2026-11-19T15:02:48Z","updated_at":"2026-11-19T15:02:49Z"},{"id":768120835,"node_id":"RA_kwDOBNRFV84tyJgD","name":"vale_3.28.1_Linux_64-bit.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":11990025,"digest":"sha256:068954ad869ebec24b8dec6ebcd1cbb1fd5f5a83e966a35baedfae8b2cdc093a","download_count":10232,"created_at":"2026-11-19T15:02:47Z","updated_at":"2026-11-19T15:02:48Z"},{"id":768120906,"node_id":"RA_kwDOBNRFV84tyJhK","name":"vale_3.28.1_Linux_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":10952017,"digest":"sha256:af0ca36ec6133ba20093295591e43ed2823b2632520d1f3811293aa4cbe758f2","download_count":262,"created_at":"2026-11-19T15:02:48Z","updated_at":"2026-11-19T15:02:49Z"},{"id":768120831,"node_id":"RA_kwDOBNRFV84tyJf_","name":"vale_3.28.1_macOS_64-bit.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":12160384,"digest":"sha256:4a59f52678b4e6bd55846fb6c22371ed531a274a614ea8e4d51a365c365b563e","download_count":41,"created_at":"2026-11-19T15:02:47Z","updated_at":"2026-11-19T15:02:47Z"},{"id":768120908,"node_id":"RA_kwDOBNRFV84tyJhM","name":"vale_3.28.1_macOS_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":11347700,"digest":"sha256:b5362c16d2c95db9d773078b957f5bd59cef27d05dac34c5248a93fed130e9f1","download_count":341,"created_at":"2026-11-19T15:02:48Z","updated_at":"2026-11-19T15:02:49Z"},{"id":768120921,"node_id":"RA_kwDOBNRFV84tyJhZ","name":"vale_3.28.1_wasm.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":9873173,"digest":"sha256:7faca3c9dff78099b1f5fad6d21aaa853afbb3859daf1a9c8fd146a64a16a084","download_count":108,"created_at":"2026-11-19T15:02:48Z","updated_at":"2026-11-19T15:02:49Z"},{"id":768120833,"node_id":"RA_kwDOBNRFV84tyJgB","name":"vale_3.28.1_Windows_64-bit.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":12205137,"digest":"sha256:5ad37282f16f3903bb2ec89a7b7b9e718ef838577ffc1657f892a0068cd9b0f3","download_count":606,"created_at":"2026-11-19T15:02:47Z","updated_at":"2026-11-19T15:02:47Z"},{"id":768120834,"node_id":"RA_kwDOBNRFV84tyJgC","name":"vale_3.28.1_Windows_arm64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":11084350,"digest":"sha256:8ac31442594dc3c6774ac6d7b5996a9c16629f1c2a93e255e54907c2cd851a87","download_count":24,"created_at":"2026-11-19T15:02:47Z","updated_at":"2026-11-19T15:02:48Z"}],"body":"## Changelog\r\n* 58f0dbfb fix: A raw-scoped rule keeps its spaces literal\r\n* 36d46a8f fix: Only a space between words matches a line wrap\r\n\r\n"}
+{"id":451504344,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOBNRFV84a6WjY","tag_name":"v3.28.1","target_commitish":"v3","name":"v3.28.1","draft":false,"immutable":true,"prerelease":false,"created_at":"2026-11-19T14:53:37Z","updated_at":"2026-11-19T15:04:13Z","published_at":"2026-11-19T15:04:13Z","assets":[{"id":768121229,"node_id":"RA_kwDOBNRFV84tyJmN","name":"grammar-bash.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":777984,"digest":"sha256:b5716b70c5d3bfc8b92bd3fcf9e6e50299786dcad6ce1c35e6077707d5c4acb9","download_count":37,"created_at":"2026-11-19T15:02:53Z","updated_at":"2026-11-19T15:02:53Z"},{"id":768121230,"node_id":"RA_kwDOBNRFV84tyJmO","name":"grammar-c.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":616436,"digest":"sha256:d79b2c12b2314d91704a0a1959b3faa33176566d6bbfecc3c4029ed1b25bc8c7","download_count":99,"created_at":"2026-11-19T15:02:53Z","updated_at":"2026-11-19T15:02:53Z"},{"id":768121151,"node_id":"RA_kwDOBNRFV84tyJk_","name":"grammar-cpp.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":818730,"digest":"sha256:dd51fe5571448e474b6444ab44c1b8414d9d7010ac3b030f5015f8482103e567","download_count":164,"created_at":"2026-11-19T15:02:52Z","updated_at":"2026-11-19T15:02:52Z"},{"id":768121010,"node_id":"RA_kwDOBNRFV84tyJiy","name":"grammar-csharp.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":905718,"digest":"sha256:0d157009744c2dce9f06a6efe12f1a0316ddc532e216c60000361c4ad9039b40","download_count":52,"created_at":"2026-11-19T15:02:49Z","updated_at":"2026-11-19T15:02:50Z"},{"id":768121126,"node_id":"RA_kwDOBNRFV84tyJkm","name":"grammar-css.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":558230,"digest":"sha256:1694157c02573d7b6531e64b16121ace59cc848e94f214c40a3d9d396afa5f71","download_count":203,"created_at":"2026-11-19T15:02:51Z","updated_at":"2026-11-19T15:02:52Z"},{"id":768121125,"node_id":"RA_kwDOBNRFV84tyJkl","name":"grammar-elixir.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":838661,"digest":"sha256:d574e6995fa4d45d1c959386f3c9d3db0f1f1b284da25d379ac6387ba2c257f5","download_count":61,"created_at":"2026-11-19T15:02:51Z","updated_at":"2026-11-19T15:02:52Z"},{"id":768121029,"node_id":"RA_kwDOBNRFV84tyJjF","name":"grammar-elm.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":614171,"digest":"sha256:23976b8dc5d44154610742c3c9e775c29edc818cb68ddc0af5b599e8738d46f1","download_count":20,"created_at":"2026-11-19T15:02:50Z","updated_at":"2026-11-19T15:02:50Z"},{"id":768121050,"node_id":"RA_kwDOBNRFV84tyJja","name":"grammar-go.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":570174,"digest":"sha256:f5b8f9b64d1084abd36a56512d43058ec7290419bcf25bf07456a1d89f56f51e","download_count":556,"created_at":"2026-11-19T15:02:50Z","updated_at":"2026-11-19T15:02:50Z"},{"id":768121074,"node_id":"RA_kwDOBNRFV84tyJjy","name":"grammar-java.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":622960,"digest":"sha256:a17cf883206363c84a00c6d1ef6bafc6cd6d66d2738ba96e4aec6c900a783d48","download_count":195,"created_at":"2026-11-19T15:02:50Z","updated_at":"2026-11-19T15:02:51Z"},{"id":768121076,"node_id":"RA_kwDOBNRFV84tyJj0","name":"grammar-javascript.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":586476,"digest":"sha256:d213619537fb447fbab292844b4f9214f2627a92c28547e289a6ee3be6caa7e0","download_count":454,"created_at":"2026-11-19T15:02:50Z","updated_at":"2026-11-19T15:02:51Z"},{"id":768121045,"node_id":"RA_kwDOBNRFV84tyJjV","name":"grammar-julia.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":1102637,"digest":"sha256:11b065f912647689bc54633839d3a0a5f4b1252c2b1211bce02ae2600c5cd6d6","download_count":18,"created_at":"2026-11-19T15:02:50Z","updated_at":"2026-11-19T15:02:50Z"},{"id":768121160,"node_id":"RA_kwDOBNRFV84tyJlI","name":"grammar-kotlin.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":890763,"digest":"sha256:4f6013064f62c2397f9d141c2105cab309f796ba8cfd5648dbe7cf789c6027df","download_count":47,"created_at":"2026-11-19T15:02:52Z","updated_at":"2026-11-19T15:02:52Z"},{"id":768121182,"node_id":"RA_kwDOBNRFV84tyJle","name":"grammar-lua.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":588854,"digest":"sha256:51b4a2a9c4cbb0c71f51e7c1225b4c579c2fb69b7b57dd81a290ff43125dea14","download_count":20,"created_at":"2026-11-19T15:02:52Z","updated_at":"2026-11-19T15:02:52Z"},{"id":768120977,"node_id":"RA_kwDOBNRFV84tyJiR","name":"grammar-php.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":646502,"digest":"sha256:706dfffd3b9678bce182b3aa351146123d61ed749eca7b2441534cb553ebde65","download_count":33,"created_at":"2026-11-19T15:02:49Z","updated_at":"2026-11-19T15:02:49Z"},{"id":768121184,"node_id":"RA_kwDOBNRFV84tyJlg","name":"grammar-proto.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":547282,"digest":"sha256:be3bc757e25fca3b7b1afd5424d75b449182c75820b1fc970d3ba11e40f0aeda","download_count":24,"created_at":"2026-11-19T15:02:52Z","updated_at":"2026-11-19T15:02:52Z"},{"id":768121030,"node_id":"RA_kwDOBNRFV84tyJjG","name":"grammar-python.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":612576,"digest":"sha256:48761749cbbe01305386fdcf8c44a628e9b61ab4f9dc4988d646b6a50f436e18","download_count":516,"created_at":"2026-11-19T15:02:50Z","updated_at":"2026-11-19T15:02:50Z"},{"id":768121205,"node_id":"RA_kwDOBNRFV84tyJl1","name":"grammar-ruby.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":728617,"digest":"sha256:4dc459b3ba7863a06e5905862394376876a47e287043ead7a1e964a4f0bbe498","download_count":78,"created_at":"2026-11-19T15:02:52Z","updated_at":"2026-11-19T15:02:53Z"},{"id":768120979,"node_id":"RA_kwDOBNRFV84tyJiT","name":"grammar-rust.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":659295,"digest":"sha256:0c0b7805d793ddbaadd199d6cde73fd4319f5688ee4dfee914e9aec7b44ed812","download_count":295,"created_at":"2026-11-19T15:02:49Z","updated_at":"2026-11-19T15:02:49Z"},{"id":768121207,"node_id":"RA_kwDOBNRFV84tyJl3","name":"grammar-toml.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":537690,"digest":"sha256:2aea031c9c67b2ae874a87a490ee2edb857fbeb41a02a3fd1114080252bda42b","download_count":58,"created_at":"2026-11-19T15:02:52Z","updated_at":"2026-11-19T15:02:53Z"},{"id":768121100,"node_id":"RA_kwDOBNRFV84tyJkM","name":"grammar-tsx.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":691739,"digest":"sha256:70154e2052f6ef3cb58c5730fd1119da4a3939e6a78fff600d43d12de35955d5","download_count":179,"created_at":"2026-11-19T15:02:51Z","updated_at":"2026-11-19T15:02:51Z"},{"id":768121112,"node_id":"RA_kwDOBNRFV84tyJkY","name":"grammar-typescript.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":693729,"digest":"sha256:fe1518289a3b21497b9ff6e246bc08ab440f4ade01bddb1812cd09ce80b591b3","download_count":431,"created_at":"2026-11-19T15:02:51Z","updated_at":"2026-11-19T15:02:51Z"},{"id":768121007,"node_id":"RA_kwDOBNRFV84tyJiv","name":"grammar-yaml.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":596617,"digest":"sha256:384e2d70112a4038621aaa349bac42be0816eb68b9998abf10a586a6bd6a1f08","download_count":314,"created_at":"2026-11-19T15:02:49Z","updated_at":"2026-11-19T15:02:50Z"},{"id":768120933,"node_id":"RA_kwDOBNRFV84tyJhl","name":"vale_3.28.1_checksums.txt","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":673,"digest":"sha256:8c56d56b7cbcf492c4f4f5264b562713a8b76bc70569e3496142977b46db6c41","download_count":9571,"created_at":"2026-11-19T15:02:48Z","updated_at":"2026-11-19T15:02:49Z"},{"id":768120835,"node_id":"RA_kwDOBNRFV84tyJgD","name":"vale_3.28.1_Linux_64-bit.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":11990025,"digest":"sha256:068954ad869ebec24b8dec6ebcd1cbb1fd5f5a83e966a35baedfae8b2cdc093a","download_count":14596,"created_at":"2026-11-19T15:02:47Z","updated_at":"2026-11-19T15:02:48Z"},{"id":768120906,"node_id":"RA_kwDOBNRFV84tyJhK","name":"vale_3.28.1_Linux_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":10952017,"digest":"sha256:af0ca36ec6133ba20093295591e43ed2823b2632520d1f3811293aa4cbe758f2","download_count":406,"created_at":"2026-11-19T15:02:48Z","updated_at":"2026-11-19T15:02:49Z"},{"id":768120831,"node_id":"RA_kwDOBNRFV84tyJf_","name":"vale_3.28.1_macOS_64-bit.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":12160384,"digest":"sha256:4a59f52678b4e6bd55846fb6c22371ed531a274a614ea8e4d51a365c365b563e","download_count":51,"created_at":"2026-11-19T15:02:47Z","updated_at":"2026-11-19T15:02:47Z"},{"id":768120908,"node_id":"RA_kwDOBNRFV84tyJhM","name":"vale_3.28.1_macOS_arm64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":11347700,"digest":"sha256:b5362c16d2c95db9d773078b957f5bd59cef27d05dac34c5248a93fed130e9f1","download_count":510,"created_at":"2026-11-19T15:02:48Z","updated_at":"2026-11-19T15:02:49Z"},{"id":768120921,"node_id":"RA_kwDOBNRFV84tyJhZ","name":"vale_3.28.1_wasm.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":9873173,"digest":"sha256:7faca3c9dff78099b1f5fad6d21aaa853afbb3859daf1a9c8fd146a64a16a084","download_count":118,"created_at":"2026-11-19T15:02:48Z","updated_at":"2026-11-19T15:02:49Z"},{"id":768120833,"node_id":"RA_kwDOBNRFV84tyJgB","name":"vale_3.28.1_Windows_64-bit.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":12205137,"digest":"sha256:5ad37282f16f3903bb2ec89a7b7b9e718ef838577ffc1657f892a0068cd9b0f3","download_count":783,"created_at":"2026-11-19T15:02:47Z","updated_at":"2026-11-19T15:02:47Z"},{"id":768120834,"node_id":"RA_kwDOBNRFV84tyJgC","name":"vale_3.28.1_Windows_arm64.zip","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":11084350,"digest":"sha256:8ac31442594dc3c6774ac6d7b5996a9c16629f1c2a93e255e54907c2cd851a87","download_count":25,"created_at":"2026-11-19T15:02:47Z","updated_at":"2026-11-19T15:02:48Z"}],"body":"## Changelog\r\n* 58f0dbfb fix: A raw-scoped rule keeps its spaces literal\r\n* 36d46a8f fix: Only a space between words matches a line wrap\r\n\r\n"}

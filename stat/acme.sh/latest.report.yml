@@ -7,7 +7,7 @@ about:
   latestVersion: "3.1.7"
   latestRelease: "3.1.7"
   latestPrerelease: ""
-  collectedAt: 2026-11-22T08:48:30Z
+  collectedAt: 2026-11-23T11:06:11Z
 timeline:
   created: 2015-12-26
   lastCommit: 2026-11-19
@@ -15,76 +15,76 @@ timeline:
   lastRelease: 2026-11-19
   lastPrerelease: 
 popularity:
-  star: 47968
-  watcher: 470
-  fork: 5713
+  star: 47973
+  watcher: 469
+  fork: 5716
   release: 51
   contributor: 691
-  pullRequest: 2625
-  issue: 3837
+  pullRequest: 2627
+  issue: 3842
 language:
   Shell: 2159885
   Dockerfile: 2548
 totalBytes: 2162433
 recent:
   last30d:
-    since: 2026-10-23
+    since: 2026-10-24
     release: 1
     mergedPR: 17
-    openPR: 12
-    closedIssue: 42
-    openIssue: 2
+    openPR: 13
+    closedIssue: 45
+    openIssue: 4
     commit: 24
   last60d:
-    since: 2026-09-23
+    since: 2026-09-24
     release: 1
     mergedPR: 36
-    openPR: 18
-    closedIssue: 84
-    openIssue: 3
+    openPR: 19
+    closedIssue: 86
+    openIssue: 5
     commit: 53
   last90d:
-    since: 2026-08-24
+    since: 2026-08-25
     release: 3
     mergedPR: 60
-    openPR: 20
-    closedIssue: 125
-    openIssue: 5
+    openPR: 21
+    closedIssue: 127
+    openIssue: 7
     commit: 96
   last180d:
-    since: 2026-05-26
+    since: 2026-05-27
     release: 4
     mergedPR: 119
-    openPR: 31
-    closedIssue: 234
-    openIssue: 10
+    openPR: 32
+    closedIssue: 236
+    openIssue: 12
     commit: 309
   last360d:
-    since: 2025-11-27
+    since: 2025-11-28
     release: 6
-    mergedPR: 206
-    openPR: 43
-    closedIssue: 408
-    openIssue: 20
+    mergedPR: 205
+    openPR: 44
+    closedIssue: 411
+    openIssue: 22
     commit: 526
   last720d:
-    since: 2024-12-02
+    since: 2024-12-03
     release: 7
     mergedPR: 324
-    openPR: 53
-    closedIssue: 673
-    openIssue: 30
+    openPR: 54
+    closedIssue: 675
+    openIssue: 32
     commit: 1127
 total:
   release: 51
   mergedPR: 1695
-  openPR: 64
-  closedIssue: 3797
-  openIssue: 40
+  openPR: 65
+  closedIssue: 3800
+  openIssue: 42
   commit: 6953
 ---
 path: /home/runner/.x-repo/github.com/acmesh-official/acme.sh
-collectedAt: 2026-11-22T08:48:33Z
+collectedAt: 2026-11-23T11:06:13Z
 loc:
   Sh:
     code: 53237
@@ -109,4 +109,4 @@ total:
 ---
 
 ---
-{"id":450862035,"author":{"login":"neilpang","id":8305679,"node_id":"MDQ6VXNlcjgzMDU2Nzk=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAuW9Zs4a35vT","tag_name":"3.1.7","target_commitish":"master","name":"3.1.7","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-19T03:58:06Z","updated_at":"2026-11-19T04:00:29Z","published_at":"2026-11-19T04:00:29Z","assets":[],"body":"1. Security: values sent by the CA can no longer run shell commands. A single\nquote in a URL from the CA (finalize, order, cert or account URL) broke out of\nthe quoting in the saved conf file, and a challenge token or URL holding `#`\ncould make acme.sh source a local file as a DNS hook. Challenge tokens and\nURLs from the CA are now validated. Exploiting either needs a malicious CA or\na broken TLS connection to the CA. Reported by Martin Arlitt and Srini\nSeethapathy (Corelight).\n2. `--insecure` now applies to the current run only and is no longer saved to\naccount.conf. A value saved by an older version is ignored and removed; see the\nwiki [Note on --insecure](https://github.com/acmesh-official/acme.sh/wiki/Options-and-Params).\n3. Signed requests are retried on transport errors, and wget2 is supported.\n4. `--install-cert` can now update the pre/post/renew hooks\n([#7346](https://github.com/acmesh-official/acme.sh/pull/7346)).\n5. Conf files: a write that changes nothing is skipped, and the file is kept\nintact when a write fails\n([#7278](https://github.com/acmesh-official/acme.sh/pull/7278)). The email\ngiven on the command line no longer overwrites the one in account.conf.\n6. New DNS providers: bergdns.at, MVMNET, Public Internet (dns_pblin), Abion,\nPrimeDNS, ConnByte, hosttech, Domain Chief, NameOcean, MizbanCloud, Timeweb\n(dns_timeweb_host). Cloudflare supports IDN domains, and Simply.com uses\nBearer auth.\n7. New deploy hooks: Nginx Proxy Manager / NPMplus, Redfish BMCs, HP printers\n(hp_ews), pfSense (pfREST), Proxmox Mail Gateway. deploy/ssh supports pfx and\nstops at the first failed step; synology_dsm can generate 2FA codes from\nSYNO_TOTP_SECRET.\n8. New notify hook: Healthchecks.io.\n9. Docker: set-default, update-account-key, list-profiles and\nmake-dns-persist-value are exposed as commands.\n10. A lot of bug fixes.\n","reactions":{"total_count":18,"+1":11,"-1":0,"laugh":0,"hooray":4,"confused":0,"heart":0,"rocket":3,"eyes":0}}
+{"id":450862035,"author":{"login":"neilpang","id":8305679,"node_id":"MDQ6VXNlcjgzMDU2Nzk=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAuW9Zs4a35vT","tag_name":"3.1.7","target_commitish":"master","name":"3.1.7","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-19T03:58:06Z","updated_at":"2026-11-19T04:00:29Z","published_at":"2026-11-19T04:00:29Z","assets":[],"body":"1. Security: values sent by the CA can no longer run shell commands. A single\nquote in a URL from the CA (finalize, order, cert or account URL) broke out of\nthe quoting in the saved conf file, and a challenge token or URL holding `#`\ncould make acme.sh source a local file as a DNS hook. Challenge tokens and\nURLs from the CA are now validated. Exploiting either needs a malicious CA or\na broken TLS connection to the CA. Reported by Martin Arlitt and Srini\nSeethapathy (Corelight).\n2. `--insecure` now applies to the current run only and is no longer saved to\naccount.conf. A value saved by an older version is ignored and removed; see the\nwiki [Note on --insecure](https://github.com/acmesh-official/acme.sh/wiki/Options-and-Params).\n3. Signed requests are retried on transport errors, and wget2 is supported.\n4. `--install-cert` can now update the pre/post/renew hooks\n([#7346](https://github.com/acmesh-official/acme.sh/pull/7346)).\n5. Conf files: a write that changes nothing is skipped, and the file is kept\nintact when a write fails\n([#7278](https://github.com/acmesh-official/acme.sh/pull/7278)). The email\ngiven on the command line no longer overwrites the one in account.conf.\n6. New DNS providers: bergdns.at, MVMNET, Public Internet (dns_pblin), Abion,\nPrimeDNS, ConnByte, hosttech, Domain Chief, NameOcean, MizbanCloud, Timeweb\n(dns_timeweb_host). Cloudflare supports IDN domains, and Simply.com uses\nBearer auth.\n7. New deploy hooks: Nginx Proxy Manager / NPMplus, Redfish BMCs, HP printers\n(hp_ews), pfSense (pfREST), Proxmox Mail Gateway. deploy/ssh supports pfx and\nstops at the first failed step; synology_dsm can generate 2FA codes from\nSYNO_TOTP_SECRET.\n8. New notify hook: Healthchecks.io.\n9. Docker: set-default, update-account-key, list-profiles and\nmake-dns-persist-value are exposed as commands.\n10. A lot of bug fixes.\n","reactions":{"total_count":21,"+1":12,"-1":0,"laugh":0,"hooray":5,"confused":0,"heart":0,"rocket":4,"eyes":0}}

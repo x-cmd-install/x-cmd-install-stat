@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.8.1"
   latestRelease: "v3.8.1"
   latestPrerelease: "v1.5.2-go1.8beta1"
-  collectedAt: 2026-11-22T07:23:29Z
+  collectedAt: 2026-11-23T08:40:50Z
 timeline:
   created: 2013-09-22
   lastCommit: 2026-11-06
@@ -15,12 +15,12 @@ timeline:
   lastRelease: 2026-10-22
   lastPrerelease: 2016-12-01
 popularity:
-  star: 14609
+  star: 14611
   watcher: 470
-  fork: 2287
+  fork: 2290
   release: 97
   contributor: 236
-  pullRequest: 2456
+  pullRequest: 2459
   issue: 3277
 language:
   Go: 1540788
@@ -32,63 +32,63 @@ language:
 totalBytes: 2625101
 recent:
   last30d:
-    since: 2026-10-23
+    since: 2026-10-24
     release: 0
     mergedPR: 0
-    openPR: 15
+    openPR: 18
     closedIssue: 0
     openIssue: 6
-    commit: 9
+    commit: 0
   last60d:
-    since: 2026-09-23
+    since: 2026-09-24
     release: 1
     mergedPR: 6
-    openPR: 25
+    openPR: 28
     closedIssue: 1
     openIssue: 11
-    commit: 30
+    commit: 0
   last90d:
-    since: 2026-08-24
+    since: 2026-08-25
     release: 2
-    mergedPR: 15
-    openPR: 26
+    mergedPR: 14
+    openPR: 29
     closedIssue: 4
     openIssue: 14
-    commit: 57
+    commit: 0
   last180d:
-    since: 2026-05-26
+    since: 2026-05-27
     release: 2
     mergedPR: 42
-    openPR: 36
+    openPR: 38
     closedIssue: 14
     openIssue: 22
-    commit: 145
+    commit: 0
   last360d:
-    since: 2025-11-27
+    since: 2025-11-28
     release: 2
     mergedPR: 84
-    openPR: 40
+    openPR: 43
     closedIssue: 47
     openIssue: 37
-    commit: 284
+    commit: 0
   last720d:
-    since: 2024-12-02
+    since: 2024-12-03
     release: 5
     mergedPR: 145
-    openPR: 46
+    openPR: 49
     closedIssue: 105
     openIssue: 85
-    commit: 737
+    commit: 734
 total:
   release: 97
   mergedPR: 2108
-  openPR: 60
+  openPR: 63
   closedIssue: 2821
   openIssue: 456
   commit: 9853
 ---
 path: /home/runner/.x-repo/github.com/git-lfs/git-lfs
-collectedAt: 2026-11-22T07:23:32Z
+collectedAt: 2026-11-23T08:40:52Z
 loc:
   Go:
     code: 42257
@@ -156,22 +156,22 @@ total:
   blanks: 18473
   files: 504
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/git-lfs/git-lfs
   commit: 33752a72ba9a30fc591a8a58ed8fc55197a36928
 scorecard:
-  version: v5.6.1-0.20261116065636-1a1d63aceae1
-  commit: 1a1d63aceae1cef7ea21b280a57f8353d8e31cf5
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
 score: 5.6
 checks:
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 15 issue activity found in the last 90 days -- score normalized to 10
-    details: null
   - name: Code-Review
     score: 2
     reason: Found 3/15 approved changesets -- score normalized to 2
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 15 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Security-Policy
     score: 10
@@ -216,11 +216,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE.md:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
-  - name: SAST
-    score: 2
-    reason: SAST tool is not run on all commits -- score normalized to 2
-    details:
-      - 'Warn: 4 commits out of 18 are checked with a SAST tool'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
@@ -239,12 +234,19 @@ checks:
       - 'Warn: release artifact v3.7.1 does not have provenance: https://api.github.com/repos/git-lfs/git-lfs/releases/255184872'
       - 'Warn: release artifact v3.7.0 does not have provenance: https://api.github.com/repos/git-lfs/git-lfs/releases/228146486'
       - 'Warn: release artifact v3.6.1 does not have provenance: https://api.github.com/repos/git-lfs/git-lfs/releases/194756408'
+  - name: SAST
+    score: 2
+    reason: SAST tool is not run on all commits -- score normalized to 2
+    details:
+      - 'Warn: 4 commits out of 18 are checked with a SAST tool'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
     details:
       - 'Info: Possibly incomplete results: error parsing shell code: unclosed here-document `EOF`: t/t-ls-files.sh:0'
       - 'Info: Possibly incomplete results: error parsing shell code: unclosed here-document `EOF`: t/t-migrate-info.sh:0'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:125: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/ci.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:130: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:149: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:154: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:170: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/ci.yml/main?enable=pin'
@@ -258,13 +260,6 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:70: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/ci.yml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/ci.yml:81: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/ci.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:114: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/ci.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:125: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/ci.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/ci.yml:130: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/ci.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:144: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/release.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:150: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/release.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:156: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/release.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:160: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/release.yml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:171: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:180: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:198: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/release.yml/main?enable=pin'
@@ -276,6 +271,11 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:111: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:117: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/release.yml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:130: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/release.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:144: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/release.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:150: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/release.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:156: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/release.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:160: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/release.yml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yml:171: update your workflow using https://app.stepsecurity.io/secureworkflow/git-lfs/git-lfs/release.yml/main?enable=pin'
       - 'Warn: goCommand not pinned by hash: script/cibuild:19'
       - 'Warn: goCommand not pinned by hash: .github/workflows/ci.yml:80'
       - 'Warn: goCommand not pinned by hash: .github/workflows/release.yml:37'

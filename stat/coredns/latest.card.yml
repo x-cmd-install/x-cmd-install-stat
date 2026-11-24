@@ -2,95 +2,95 @@ about:
   description: "CoreDNS is a DNS server that chains plugins"
   license: Apache-2.0
   homepage: https://coredns.io
-  head: 996a30d
+  head: 91e1286
   archived: false
   latestVersion: "v1.15.0"
   latestRelease: "v1.15.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-22T06:46:32Z
+  collectedAt: 2026-11-23T08:05:08Z
 timeline:
   created: 2016-03-18
-  lastCommit: 2026-11-19
+  lastCommit: 2026-11-23
   lastVersion: 2026-10-21
   lastRelease: 2026-10-21
   lastPrerelease: 
 popularity:
   star: 14446
   watcher: 221
-  fork: 2572
+  fork: 2571
   release: 86
-  contributor: 500
+  contributor: 501
   pullRequest: 6020
   issue: 2570
 language:
-  Go: 3259124
+  Go: 3259334
   Makefile: 1731
   Dockerfile: 1184
-totalBytes: 3262039
+totalBytes: 3262249
 recent:
   last30d:
-    since: 2026-10-23
+    since: 2026-10-24
     release: 0
-    mergedPR: 51
-    openPR: 41
+    mergedPR: 54
+    openPR: 38
     closedIssue: 8
     openIssue: 15
-    commit: 66
+    commit: 0
   last60d:
-    since: 2026-09-23
+    since: 2026-09-24
     release: 1
-    mergedPR: 126
-    openPR: 67
+    mergedPR: 128
+    openPR: 64
     closedIssue: 19
     openIssue: 15
-    commit: 138
+    commit: 0
   last90d:
-    since: 2026-08-24
+    since: 2026-08-25
     release: 1
-    mergedPR: 206
-    openPR: 73
+    mergedPR: 208
+    openPR: 69
     closedIssue: 24
     openIssue: 16
-    commit: 219
+    commit: 0
   last180d:
-    since: 2026-05-26
+    since: 2026-05-27
     release: 5
-    mergedPR: 466
-    openPR: 93
-    closedIssue: 46
+    mergedPR: 462
+    openPR: 90
+    closedIssue: 45
     openIssue: 22
-    commit: 471
+    commit: 0
   last360d:
-    since: 2025-11-27
+    since: 2025-11-28
     release: 10
-    mergedPR: 760
-    openPR: 100
+    mergedPR: 762
+    openPR: 97
     closedIssue: 84
     openIssue: 31
-    commit: 770
+    commit: 0
   last720d:
-    since: 2024-12-02
+    since: 2024-12-03
     release: 16
-    mergedPR: 1198
-    openPR: 107
+    mergedPR: 1201
+    openPR: 104
     closedIssue: 143
     openIssue: 82
-    commit: 1215
+    commit: 1218
 total:
   release: 86
-  mergedPR: 4752
-  openPR: 120
+  mergedPR: 4755
+  openPR: 117
   closedIssue: 2396
   openIssue: 174
-  commit: 5259
+  commit: 5262
 ---
 path: /home/runner/.x-repo/github.com/coredns/coredns
-collectedAt: 2026-11-22T06:46:40Z
+collectedAt: 2026-11-23T08:05:15Z
 loc:
   Go:
-    code: 101572
+    code: 101579
     comments: 7363
-    blanks: 13587
+    blanks: 13592
     files: 787
   ForgeConfig:
     code: 62
@@ -123,15 +123,15 @@ loc:
     blanks: 2967
     files: 156
 total:
-  code: 101902
+  code: 101909
   comments: 17843
-  blanks: 16589
+  blanks: 16594
   files: 956
 ---
-date: "2026-11-19T07:47:31Z"
+date: "2026-11-23T05:59:02Z"
 repo:
   name: github.com/coredns/coredns
-  commit: 996a30df7f5cca79a3bb34078f8897f673ac74dd
+  commit: 91e12861f10e833f0e4acddec829f3bb5a2b0691
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
@@ -139,11 +139,15 @@ score: 8.4
 checks:
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 11 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 7 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Code-Review
     score: 10
     reason: all changesets reviewed
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Dependency-Update-Tool
     score: 10
@@ -158,10 +162,6 @@ checks:
       - 'Info: Found linked content: .github/SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: .github/SECURITY.md:1'
       - 'Info: Found text in security policy: .github/SECURITY.md:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -198,17 +198,11 @@ checks:
     reason: 1 existing vulnerabilities detected
     details:
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6865'
-  - name: Pinned-Dependencies
-    score: 7
-    reason: dependency not pinned by hash detected -- score normalized to 7
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
     details:
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/cifuzz.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/coredns/coredns/cifuzz.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/cifuzz.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/coredns/coredns/cifuzz.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:4: pin your Docker image by updating debian:stable-slim to debian:stable-slim@sha256:fbfb4059d2127120aa05b6e6064523d2102552f0cf0026ddf0701c12f1f8f3e0'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:13: pin your Docker image by updating gcr.io/distroless/static-debian12:nonroot to gcr.io/distroless/static-debian12:nonroot@sha256:afa5c872c891853ca7fcf1f12c3edb23f7eeef36189728842dd51042ff57f7ab'
-      - 'Info:  34 out of  34 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   6 out of   8 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   2 containerImage dependencies pinned'
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker.yml:16'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -223,17 +217,23 @@ checks:
       - 'Warn: release artifact v1.14.6 does not have provenance: https://api.github.com/repos/coredns/coredns/releases/351913726'
       - 'Warn: release artifact v1.14.5 does not have provenance: https://api.github.com/repos/coredns/coredns/releases/351835523'
       - 'Warn: release artifact v1.14.4 does not have provenance: https://api.github.com/repos/coredns/coredns/releases/336410432'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
+  - name: Pinned-Dependencies
+    score: 7
+    reason: dependency not pinned by hash detected -- score normalized to 7
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker.yml:16'
-  - name: License
-    score: 10
-    reason: license file detected
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/cifuzz.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/coredns/coredns/cifuzz.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/cifuzz.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/coredns/coredns/cifuzz.yml/master?enable=pin'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:4: pin your Docker image by updating debian:stable-slim to debian:stable-slim@sha256:fbfb4059d2127120aa05b6e6064523d2102552f0cf0026ddf0701c12f1f8f3e0'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:13: pin your Docker image by updating gcr.io/distroless/static-debian12:nonroot to gcr.io/distroless/static-debian12:nonroot@sha256:afa5c872c891853ca7fcf1f12c3edb23f7eeef36189728842dd51042ff57f7ab'
+      - 'Info:  36 out of  36 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   7 out of   9 third-party GitHubAction dependencies pinned'
+      - 'Info:   0 out of   2 containerImage dependencies pinned'
+  - name: SAST
+    score: 9
+    reason: SAST tool detected but not run on all commits
     details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: 29 commits out of 30 are checked with a SAST tool'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -241,12 +241,6 @@ checks:
       - 'Info: OSSFuzz integration found'
       - 'Info: GoBuiltInFuzzer integration found: core/dnsserver/udp_test.go:359'
       - 'Info: GoBuiltInFuzzer integration found: plugin/dynupdate/store_test.go:502'
-  - name: SAST
-    score: 9
-    reason: SAST tool detected but not run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 29 commits out of 30 are checked with a SAST tool'
   - name: Branch-Protection
     score: 3
     reason: branch protection is not maximal on development and all release branches
@@ -261,6 +255,12 @@ checks:
       - 'Warn: ''up-to-date branches'' is disabled on branch ''master'''
       - 'Warn: no status checks found to merge onto branch ''master'''
       - 'Info: PRs are required in order to make changes on branch ''master'''
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: CI-Tests
     score: 9
     reason: 29 out of 30 merged PRs checked by a CI test -- score normalized to 9
