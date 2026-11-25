@@ -4,24 +4,24 @@ about:
   homepage: https://influxdata.com
   head: 185688a
   archived: false
-  latestVersion: "v2.10.1"
-  latestRelease: "v2.10.1"
+  latestVersion: "v3.11.10"
+  latestRelease: "v3.11.10"
   latestPrerelease: "v1.8.5rc1"
-  collectedAt: 2026-11-23T09:43:02Z
+  collectedAt: 2026-11-24T10:43:37Z
 timeline:
   created: 2013-09-26
   lastCommit: 2026-10-22
-  lastVersion: 2026-11-17
-  lastRelease: 2026-11-17
+  lastVersion: 2026-11-23
+  lastRelease: 2026-11-23
   lastPrerelease: 2021-03-25
 popularity:
-  star: 31833
-  watcher: 703
-  fork: 3766
-  release: 115
+  star: 31831
+  watcher: 701
+  fork: 3765
+  release: 117
   contributor: 536
-  pullRequest: 12935
-  issue: 14295
+  pullRequest: 12936
+  issue: 14296
 language:
   Rust: 14371105
   Answer Set Programming: 346065
@@ -31,63 +31,63 @@ language:
 totalBytes: 14905253
 recent:
   last30d:
-    since: 2026-10-24
-    release: 4
-    mergedPR: 22
+    since: 2026-10-25
+    release: 6
+    mergedPR: 23
     openPR: 10
     closedIssue: 2
-    openIssue: 11
+    openIssue: 12
     commit: 0
   last60d:
-    since: 2026-09-24
-    release: 8
-    mergedPR: 53
+    since: 2026-09-25
+    release: 10
+    mergedPR: 48
     openPR: 20
     closedIssue: 6
-    openIssue: 14
+    openIssue: 15
     commit: 2
   last90d:
-    since: 2026-08-25
-    release: 14
-    mergedPR: 77
+    since: 2026-08-26
+    release: 16
+    mergedPR: 78
     openPR: 23
-    closedIssue: 21
-    openIssue: 29
+    closedIssue: 20
+    openIssue: 23
     commit: 27
   last180d:
-    since: 2026-05-27
-    release: 15
-    mergedPR: 151
+    since: 2026-05-28
+    release: 17
+    mergedPR: 149
     openPR: 32
     closedIssue: 38
-    openIssue: 41
+    openIssue: 42
     commit: 81
   last360d:
-    since: 2025-11-28
-    release: 21
-    mergedPR: 393
+    since: 2025-11-29
+    release: 23
+    mergedPR: 394
     openPR: 45
-    closedIssue: 132
+    closedIssue: 133
     openIssue: 67
     commit: 181
   last720d:
-    since: 2024-12-03
-    release: 28
-    mergedPR: 1100
+    since: 2024-12-04
+    release: 30
+    mergedPR: 1099
     openPR: 66
-    closedIssue: 541
+    closedIssue: 540
     openIssue: 202
-    commit: 543
+    commit: 540
 total:
-  release: 115
-  mergedPR: 11166
+  release: 117
+  mergedPR: 11167
   openPR: 105
-  closedIssue: 12220
+  closedIssue: 12221
   openIssue: 2075
   commit: 49928
 ---
 path: /home/runner/.x-repo/github.com/influxdata/influxdb
-collectedAt: 2026-11-23T09:43:32Z
+collectedAt: 2026-11-24T10:44:03Z
 loc:
   Rust:
     code: 316902
@@ -230,4 +230,4 @@ checks:
     details:
       - 'Warn: 0 commits out of 30 are checked with a SAST tool'
 ---
-{"id":428375842,"author":{"login":"philjb","id":13472206,"node_id":"MDQ6VXNlcjEzNDcyMjA2","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAMhEws4ZiH8i","tag_name":"v3.12.2","target_commitish":"main","name":"v3.12.2 | 10-29-26","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-10-29T19:18:24Z","updated_at":"2026-11-02T20:03:24Z","published_at":"2026-11-02T20:03:24Z","assets":[],"body":"The following are some highlighted updates with the newest release for InfluxDB 3. Learn more via our full [Release Notes](https://docs.influxdata.com/influxdb3/core/release-notes/#v3122). \n\n## Updates\n\n### Core\n\n#### Features\n\n- **`influxdb3 debug catalog repair`**: This offline command, added in v3.11.6, is now also available on 3.12.2. It repairs a catalog that fails to load because of a duplicate table name or a reused table or database ID. Stop every node before you run it with `--execute`.\n- **Processing engine Python updated to 3.13.18**: Picks up the security fixes released since 3.13.15.\n\n#### Bug fixes\n\n- **Queries that exceed memory limits returned `500`**: The HTTP query endpoints now return `429 Too Many Requests` when a query exhausts the DataFusion memory pool. Previously, they returned `500`. For CSV, JSON, and JSON Lines output, this applies when the query fails before it returns any rows. An error after the first rows still ends the HTTP `200` response early. Some Core queries still return `500`, such as a query on a table that runs out of memory while deduplicating data. Enterprise already mapped resource-exhaustion errors to `429`.\n- **Catalog deadlock when checking a deleted table**: Checking whether a table is deleted now takes the catalog lock once. Previously, a catalog change that arrived between its two reads could deadlock the catalog.\n- **WAL plugins received values under the wrong column names**: Rows passed to a WAL trigger's plugin now use the column names of their own record batch. Previously, when a flush held batches with the same columns in a different order, later batches used the first batch's column names.\n- Other bug fixes and performance improvements\n\n### Enterprise\n\nAll Core updates are included in Enterprise.\nAdditional Enterprise-specific updates:\n\n#### Features\n\n- **Faster [file index](https://docs.influxdata.com/influxdb3/enterprise/admin/file-index/) loading (Parquet engine)**: Loading a table's file index, including during a storage engine upgrade, now sorts each posting list once. Previously, every generation re-sorted each list it touched, so a table with many generations loaded slowly and used more memory.\n- **Faster reads of compaction metadata (Parquet engine)**: Compaction and snapshot metadata files are now parsed in one pass, including during a storage engine upgrade. Previously, each was parsed twice.\n- **Table index cache starts once the server is ready (Parquet engine)**: On ingest nodes, the table index cache now starts its background work when the server reports ready, instead of at the beginning of startup.\n- **Fewer file downloads per query (upgraded storage engine)**: A query now downloads only the run set files whose key range covers the queried field family. Previously, it also downloaded files that held only the table's other field families.\n- **Faster merging of overlapping files (upgraded storage engine)**: When a query merges rows from several files, each output column is now built in one vectorized step instead of row by row.\n\n#### Bug fixes\n\n- **Storage engine upgrade completed with unconverted Parquet files**: If a Parquet file fails every conversion attempt, the ingest node now reports `failed` in `system.upgrade_parquet_node`. The `last_message` column identifies the file and its error. The cluster upgrade also fails. To resume the upgrade, follow the [retry procedure](https://docs.influxdata.com/influxdb3/enterprise/reference/cli/influxdb3/manage/retry-upgrade-to-pacha-tree/#retry-after-an-ingest-conversion-failure). Previously, the node dropped the file and reported its upgrade as complete.\n- **Storage engine upgrade stalled after an ingest node was removed**: The upgrade now drops a removed ingest node from its roster once its Parquet files are converted or absorbed. Previously, a removed ingest node held the cluster at `upgrading` forever.\n- **Overwrites lost after a query node restart (upgraded storage engine)**: After a restart, a query node now reads gen0 files in the order they were written, so the latest write to a series and timestamp wins. Previously, a query could return the value from before an overwrite until compaction.\n- **Query node could miss writes from a stopping ingest node (upgraded storage engine)**: A query node now keeps following an ingest node that is [`stopping`](https://docs.influxdata.com/influxdb3/enterprise/admin/node-lifecycle/) and fetches its remaining WAL files after it acknowledges the stop. Previously, the query node could stop fetching before the node flushed its last writes.\n- **Trailing WAL fetch could hang after an ingest node stopped (upgraded storage engine)**: A query node's fetch of a stopped ingest node's remaining WAL files now completes. Previously, it could wait forever on files its workers had already fetched.\n- **Nodes stopped applying compaction updates after falling behind (Parquet engine)**: A node that refreshes its view of compacted data no longer reads the detail of each generation the compaction removed. Previously, a node more than [`--compaction-cleanup-wait`](https://docs.influxdata.com/influxdb3/enterprise/reference/config-options/#compaction-cleanup-wait) behind the compactor failed every refresh with `generation detail not found` until it restarted.\n- **Retention stopped after Gen1 file cleanup deleted a snapshot (Parquet engine)**: The table index cache now skips a snapshot that [Gen1 file cleanup](https://docs.influxdata.com/influxdb3/enterprise/admin/gen1-file-cleanup/) already deleted. Previously, the missing snapshot failed the cache initialization, and retention didn't run until the next restart.\n- **Restarted node listed as stopped by its previous process**: A process that is shutting down no longer marks its node stopped once another process has registered under the same `--node-id`. Previously, a slow shutdown could mark the running replacement as stopped, and on the upgraded storage engine query nodes stopped following its WAL.\n- **Schema changes lost when upgrading a Core node to Enterprise**: [Upgrading from Core](https://docs.influxdata.com/influxdb3/enterprise/admin/upgrade-from-core/) now promotes the node's live catalog. Previously, if the Core node had first run a release before 3.10, the upgrade promoted a stale catalog checkpoint, so schema changes made since then were missing.\n- Other bug fixes and performance improvements\n","reactions":{"total_count":4,"+1":0,"-1":0,"laugh":2,"hooray":0,"confused":0,"heart":2,"rocket":0,"eyes":0}}
+{"id":453073353,"author":{"login":"cannonpalms","id":2457559,"node_id":"MDQ6VXNlcjI0NTc1NTk=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAMhEws4bAVnJ","tag_name":"v3.12.3","target_commitish":"main","name":"v3.12.3 | 11-20-26","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-20T19:00:28Z","updated_at":"2026-11-23T19:21:29Z","published_at":"2026-11-23T19:21:29Z","assets":[],"body":"The following are some highlighted updates with the newest release for InfluxDB 3. Learn more via our full [Release Notes](https://docs.influxdata.com/influxdb3/core/release-notes/#v3123). \n\n## Updates\n\n### Core\n\n#### Features\n\n- **`influxdb3 update trigger` re-fetches `gh:` plugins**: To load new code for a trigger whose plugin uses a `gh:` path, pass that path to [`influxdb3 update trigger --path`](https://docs.influxdata.com/influxdb3/core/reference/cli/influxdb3/update/trigger/#update-a-gh-trigger), or use the new `POST /api/v3/configure/processing_engine_trigger/refresh` endpoint. The trigger runs the new code on its next run. Previously, the command failed with `Path does not exist`, and you had to disable and re-enable the trigger.\n\n#### Bug fixes\n\n- **Shutdown hung while a Processing Engine plugin was stuck**: The server now exits while a plugin is stuck in a blocking call, waiting at most 2 seconds for the plugin's thread and 5 seconds for query threads that don't stop. Previously, it waited forever for a stuck plugin and up to 5 minutes for query threads. Enterprise already didn't wait for plugin threads.\n- Other bug fixes and performance improvements\n\n### Enterprise\n\nAll Core updates are included in Enterprise.\nAdditional Enterprise-specific updates:\n\n#### Features\n\n- **Plugin package allowlist**: The new [`--plugin-package-allowlist`](https://docs.influxdata.com/influxdb3/enterprise/reference/config-options/#plugin-package-allowlist) option takes a pip requirements file that limits what `influxdb3 install package` and the package install APIs can add to the Processing Engine environment, dependencies included. The server refuses installs that the file doesn't allow, and returns `409` for an install that would replace or upgrade an installed package. A node doesn't start if the file doesn't parse or its pip is older than 26.1.\n- **Uninstall Processing Engine packages**: The new [`influxdb3 uninstall package`](https://docs.influxdata.com/influxdb3/enterprise/reference/cli/influxdb3/uninstall/package/) command and `POST /api/v3/configure/plugin_environment/uninstall_packages` endpoint remove packages from the Processing Engine environment on the node that receives the request. Dependencies stay installed, and you can't remove `pip`, `setuptools`, or `wheel`. Previously, you had to run pip in the virtual environment yourself.\n- **Pause, resume, and stop bulk imports (upgraded storage engine)**: The new `POST /api/v3/enterprise/import/pause`, `/resume`, and `/stop` endpoints hold or cancel [bulk imports](https://docs.influxdata.com/influxdb3/enterprise/admin/import-data/) across the cluster, and `GET /api/v3/enterprise/import/status` reports the current state. A pause also holds a running storage engine upgrade. A stop discards every bulk import that isn't compacted yet, but not the upgrade, and leaves imports paused. Previously, you couldn't hold or cancel a staged import.\n- **Per-file bulk import status (upgraded storage engine)**: The new `system.import_files` table and `GET /api/v3/enterprise/import/files` endpoint report each imported file's state, attempts, row counts, and skip reason, and keep each file for 7 days after its import leaves `system.imports`. `system.imports` also gains `operation_id`, shared by the files of one request, and `pipeline_status`.\n- **Import one Parquet file from object storage (upgraded storage engine)**: [`influxdb3 import from-object-store`](https://docs.influxdata.com/influxdb3/enterprise/reference/cli/influxdb3/import/from-object-store/) and `POST /api/v3/enterprise/import` now accept a source that names a single `.parquet` file. Previously, the source had to be a prefix, and naming a file returned `400`.\n- **Faster bulk imports (upgraded storage engine)**: Uploaded files are now picked up in parallel, an object-store import stages up to four files per CPU core (8 to 64) instead of 8, and more than one import batch runs at a time. The new [`--compactor-max-concurrent-conversions`](https://docs.influxdata.com/influxdb3/enterprise/reference/storage-engine-config-options/#compactor) option sets how many conversion jobs run at once. The default stays `64`.\n- **Larger default bulk import batches (upgraded storage engine)**: [`--compactor-import-batch-size`](https://docs.influxdata.com/influxdb3/enterprise/reference/storage-engine-config-options/#compactor) now defaults to `16gb`, still capped at one quarter of `--compactor-input-size-budget`. Previously, the default was `4gb`. To keep the previous batch size, set `--compactor-import-batch-size=4gb`.\n- **Default file cache size scales with memory (upgraded storage engine)**: Without [`--file-cache-size`](https://docs.influxdata.com/influxdb3/enterprise/reference/config-options/#file-cache-size), a node now uses 30% of memory, rising to 40% from 128 GiB, 50% from 384 GiB, and 60% from 768 GiB. Previously, the default was 20%, which the Parquet engine keeps. To keep the previous size, set `--file-cache-size=20%`.\n- **Skip the file cache preload at startup (upgraded storage engine)**: On nodes that don't compact, [`--file-cache-preload skip-startup`](https://docs.influxdata.com/influxdb3/enterprise/reference/storage-engine-config-options/#file-cache) lets a node serve queries as soon as it reads the latest compaction checkpoint. Queries read from object storage until the cache fills. Previously, a node that doesn't compact always preloaded recent compacted data before it served queries.\n- **Startup check for object stores that ignore conditional writes**: On S3, Google Cloud Storage, and Azure, the server now checks at startup that the object store rejects a second create-only write of the same object. If it doesn't, the server logs an error that points to `influxdb3 debug object-store-check` and keeps starting.\n- **`object-store-check` tests conditional updates**: [`influxdb3 debug object-store-check`](https://docs.influxdata.com/influxdb3/enterprise/reference/cli/influxdb3/debug/object-store-check/) now also tests conditional updates. If an S3-compatible store rejects quoted ETags, the check fails and recommends `--aws-s3-custom-backend ceph`. Previously, it didn't test conditional updates and could pass on stores where the compactor can't start.\n- **New memory and backup metrics (upgraded storage engine)**: `influxdb3_file_cache_limit_bytes` reports the file cache budget, `influxdb3_buffer_limit_bytes` reports a query node's replica buffer limit, and `influxdb3_file_cache_evicted_bytes_total` counts bytes evicted from the file cache. On the compactor, `influxdb3_compactor_backup_deletes_held` is `1` while a backup pauses deletes, and `influxdb3_compactor_backup_holds_unreadable` is `1` while it can't read backup holds.\n- **Faster compaction planning for large backlogs (Parquet engine)**: The compactor now plans a table's re-compactions in one pass and keeps one shared list of its Gen1 files. Previously, planning time and memory grew with the number of Gen1 files times the number of compacted generations they overlapped.\n- **Explorer UI 1.12**: The [Explorer UI](https://docs.influxdata.com/influxdb3/enterprise/admin/explorer-ui/) built into `influxdb3 serve` is updated from 1.11.0 to 1.12.0.\n\n#### Bug fixes\n\n- **Writes to a `file` object store could be lost on power failure**: Writes to a `file` object store now reach disk, along with the directories that hold them, before the write completes. Previously, only the contents of conditional updates were synced, so a host crash or power loss could lose recently written files.\n- **File cache evicted the data queries read most (upgraded storage engine)**: A full file cache now evicts the least recently read entries first, and stops once it frees enough room. Previously, it evicted the earliest-loaded entries first, and queries could fail with `file access cache budget exhausted` while another eviction was running.\n- **Backups failed when the compactor deleted files they were copying (upgraded storage engine)**: A running [backup](https://docs.influxdata.com/influxdb3/enterprise/admin/backup-restore/) now pauses compactor file deletes until it ends. If the backup can't renew that pause for 4 minutes, it stops and fails. Previously, the compactor could delete a replaced file that a long backup still had to copy, and the backup failed.\n- **Compactor ran out of memory during a hard delete (upgraded storage engine)**: While a database or table hard delete is pending, the compactor now shares the input files that the delete doesn't change. Previously, it copied them for each compaction task, so the compactor could run out of memory on every restart.\n- **Processing Engine node aborted while saving trigger restart state**: A Processing Engine node now keeps running when a restart-state save conflicts with its own earlier save, such as one that returned an error but still succeeded. This fixes the v3.12.0 known issue in which a new Docker Desktop container with a bind-mounted data directory exited with code 133. Previously, the node treated the conflict as another node's write and aborted.\n- **Rows lost when importing a large Parquet file (upgraded storage engine)**: Bulk import now keeps every row of a file whose converted data passes 4 GiB, and fails the job instead of dropping rows if converted data exceeds a file format limit. Previously, the job could reach `compacted` with many of the file's rows missing.\n- **Storage engine upgrade kept a different value for duplicate points**: When two Parquet files hold the same series and timestamp, the upgrade now keeps the value that the Parquet engine returns. Previously, it could keep the other value, so queries returned a different value after the upgrade. An upgrade that started on an earlier release keeps its original order, so it can still keep the other value.\n- **Imported columns lost when the compactor's catalog lagged (upgraded storage engine)**: The compactor now converts an uploaded file only after its catalog includes the upload's table and columns. Previously, a file converted too early could lose new columns, merge series that differ only by a new tag, or be skipped as if its table had been deleted.\n- **Storage engine upgrade stalled after compactor failover**: When the compactor role moves to a compact node with a different node ID, the new compactor now resumes the upgrade with the original compactor's source files. Previously, it found no files to convert, and the upgrade never completed.\n- **Bulk import accepted uploads on the Parquet engine**: `POST /api/v3/enterprise/import` and `GET /api/v3/enterprise/import` now return `501 Not Implemented` on a server that runs the Parquet engine. Previously, the server accepted the upload and left it pending without an error.\n- Other bug fixes and performance improvements\n"}

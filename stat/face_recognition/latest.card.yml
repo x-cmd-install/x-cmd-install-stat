@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.2.2"
   latestRelease: "v1.2.2"
   latestPrerelease: ""
-  collectedAt: 2026-11-23T08:05:32Z
+  collectedAt: 2026-11-24T10:22:53Z
 timeline:
   created: 2017-03-03
   lastCommit: 2026-06-25
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2018-04-02
   lastPrerelease: 
 popularity:
-  star: 56919
+  star: 56920
   watcher: 1535
   fork: 13654
   release: 2
@@ -29,7 +29,7 @@ language:
 totalBytes: 44252
 recent:
   last30d:
-    since: 2026-10-24
+    since: 2026-10-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-24
+    since: 2026-09-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -45,7 +45,7 @@ recent:
     openIssue: 1
     commit: 0
   last90d:
-    since: 2026-08-25
+    since: 2026-08-26
     release: 0
     mergedPR: 0
     openPR: 0
@@ -53,23 +53,23 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-05-27
+    since: 2026-05-28
     release: 0
     mergedPR: 0
     openPR: 4
     closedIssue: 0
     openIssue: 2
-    commit: 0
+    commit: 1
   last360d:
-    since: 2025-11-28
+    since: 2025-11-29
     release: 0
     mergedPR: 1
     openPR: 6
     closedIssue: 2
     openIssue: 4
-    commit: 0
+    commit: 2
   last720d:
-    since: 2024-12-03
+    since: 2024-12-04
     release: 0
     mergedPR: 1
     openPR: 20
@@ -85,7 +85,7 @@ total:
   commit: 241
 ---
 path: /home/runner/.x-repo/github.com/ageitgey/face_recognition
-collectedAt: 2026-11-23T08:05:36Z
+collectedAt: 2026-11-24T10:22:57Z
 loc:
   Python:
     code: 1749
@@ -158,15 +158,19 @@ total:
   blanks: 1651
   files: 65
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/ageitgey/face_recognition
   commit: 9f3061aaeed9a8756d2c970f5dfe066617a8281d
 scorecard:
-  version: v5.6.0
-  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
 score: 4
 checks:
+  - name: Code-Review
+    score: 8
+    reason: Found 8/10 approved changesets -- score normalized to 8
+    details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
@@ -176,10 +180,12 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 8
-    reason: Found 8/10 approved changesets -- score normalized to 8
-    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
+      - 'Info: no jobLevel write permissions found'
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -188,12 +194,6 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Warn: no topLevel permission defined: .github/workflows/main.yml:1'
-      - 'Info: no jobLevel write permissions found'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -258,8 +258,8 @@ checks:
       - 'Warn: pipCommand not pinned by hash: .github/workflows/main.yml:19'
       - 'Warn: pipCommand not pinned by hash: .github/workflows/main.yml:20'
       - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   0 out of  14 pipCommand dependencies pinned'
       - 'Info:   0 out of   9 containerImage dependencies pinned'
+      - 'Info:   0 out of  14 pipCommand dependencies pinned'
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

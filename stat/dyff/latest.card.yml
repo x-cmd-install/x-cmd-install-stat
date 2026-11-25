@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.12.0"
   latestRelease: "v1.12.0"
   latestPrerelease: "v0.4-alpha"
-  collectedAt: 2026-11-23T10:19:18Z
+  collectedAt: 2026-11-24T10:21:25Z
 timeline:
   created: 2018-03-09
   lastCommit: 2026-11-20
@@ -29,7 +29,7 @@ language:
 totalBytes: 220254
 recent:
   last30d:
-    since: 2026-10-24
+    since: 2026-10-25
     release: 0
     mergedPR: 16
     openPR: 3
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 15
   last60d:
-    since: 2026-09-24
+    since: 2026-09-25
     release: 0
     mergedPR: 25
     openPR: 3
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 24
   last90d:
-    since: 2026-08-25
+    since: 2026-08-26
     release: 0
     mergedPR: 36
     openPR: 5
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 36
   last180d:
-    since: 2026-05-27
+    since: 2026-05-28
     release: 0
     mergedPR: 71
     openPR: 7
@@ -61,7 +61,7 @@ recent:
     openIssue: 3
     commit: 71
   last360d:
-    since: 2025-11-28
+    since: 2025-11-29
     release: 9
     mergedPR: 141
     openPR: 10
@@ -69,7 +69,7 @@ recent:
     openIssue: 3
     commit: 142
   last720d:
-    since: 2024-12-03
+    since: 2024-12-04
     release: 13
     mergedPR: 234
     openPR: 17
@@ -85,7 +85,7 @@ total:
   commit: 1131
 ---
 path: /home/runner/.x-repo/github.com/homeport/dyff
-collectedAt: 2026-11-23T10:19:20Z
+collectedAt: 2026-11-24T10:21:27Z
 loc:
   Yaml:
     code: 5803
@@ -133,19 +133,15 @@ total:
   blanks: 1396
   files: 109
 ---
-date: "2026-11-09"
+date: "2026-11-23"
 repo:
   name: github.com/homeport/dyff
-  commit: 40af364bfc70d91767805fb7e1aa4dcd44e6ff9f
+  commit: a98e9201a2fa3771e183393e4809a6333c67ae90
 scorecard:
-  version: v5.6.0
-  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 5.3
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
+score: 5.4
 checks:
-  - name: Code-Review
-    score: -1
-    reason: Found no human activity in the last 15 changesets
-    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
@@ -153,6 +149,14 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Code-Review
+    score: -1
+    reason: Found no human activity in the last 15 changesets
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
     details: null
   - name: Token-Permissions
     score: 0
@@ -164,10 +168,57 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/release.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/tests.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
+  - name: CII-Best-Practices
+    score: 0
+    reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:9'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v1.12.0 not signed: https://api.github.com/repos/homeport/dyff/releases/313813966'
+      - 'Warn: release artifact v1.11.4 not signed: https://api.github.com/repos/homeport/dyff/releases/313651289'
+      - 'Warn: release artifact v1.11.3 not signed: https://api.github.com/repos/homeport/dyff/releases/297954045'
+      - 'Warn: release artifact v1.11.2 not signed: https://api.github.com/repos/homeport/dyff/releases/291814002'
+      - 'Warn: release artifact v1.11.1 not signed: https://api.github.com/repos/homeport/dyff/releases/291772752'
+      - 'Warn: release artifact v1.12.0 is not immutable: https://api.github.com/repos/homeport/dyff/releases/313813966'
+      - 'Warn: release artifact v1.11.4 is not immutable: https://api.github.com/repos/homeport/dyff/releases/313651289'
+      - 'Warn: release artifact v1.11.3 is not immutable: https://api.github.com/repos/homeport/dyff/releases/297954045'
+      - 'Warn: release artifact v1.11.2 is not immutable: https://api.github.com/repos/homeport/dyff/releases/291814002'
+      - 'Warn: release artifact v1.11.1 is not immutable: https://api.github.com/repos/homeport/dyff/releases/291772752'
+      - 'Warn: release artifact v1.12.0 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/313813966'
+      - 'Warn: release artifact v1.11.4 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/313651289'
+      - 'Warn: release artifact v1.11.3 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/297954045'
+      - 'Warn: release artifact v1.11.2 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/291814002'
+      - 'Warn: release artifact v1.11.1 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/291772752'
   - name: Pinned-Dependencies
     score: 1
     reason: dependency not pinned by hash detected -- score normalized to 1
@@ -188,55 +239,9 @@ checks:
       - 'Info:   0 out of   8 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   4 third-party GitHubAction dependencies pinned'
       - 'Info:   1 out of   2 goCommand dependencies pinned'
-  - name: CII-Best-Practices
-    score: 0
-    reason: no effort to earn an OpenSSF best practices badge detected
-    details: null
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:9'
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v1.12.0 not signed: https://api.github.com/repos/homeport/dyff/releases/313813966'
-      - 'Warn: release artifact v1.11.4 not signed: https://api.github.com/repos/homeport/dyff/releases/313651289'
-      - 'Warn: release artifact v1.11.3 not signed: https://api.github.com/repos/homeport/dyff/releases/297954045'
-      - 'Warn: release artifact v1.11.2 not signed: https://api.github.com/repos/homeport/dyff/releases/291814002'
-      - 'Warn: release artifact v1.11.1 not signed: https://api.github.com/repos/homeport/dyff/releases/291772752'
-      - 'Warn: release artifact v1.12.0 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/313813966'
-      - 'Warn: release artifact v1.11.4 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/313651289'
-      - 'Warn: release artifact v1.11.3 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/297954045'
-      - 'Warn: release artifact v1.11.2 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/291814002'
-      - 'Warn: release artifact v1.11.1 does not have provenance: https://api.github.com/repos/homeport/dyff/releases/291772752'
   - name: SAST
-    score: 8
-    reason: SAST tool is not run on all commits -- score normalized to 8
+    score: 10
+    reason: SAST tool is run on all commits
     details:
-      - 'Warn: 24 commits out of 30 are checked with a SAST tool'
+      - 'Info: all commits (30) are checked with a SAST tool'
 ---

@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.5.3"
   latestRelease: "v0.5.3"
   latestPrerelease: ""
-  collectedAt: 2026-11-23T11:22:49Z
+  collectedAt: 2026-11-24T11:19:25Z
 timeline:
   created: 2015-02-23
   lastCommit: 2022-01-21
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2018-04-24
   lastPrerelease: 
 popularity:
-  star: 2510
+  star: 2511
   watcher: 61
   fork: 185
   release: 12
@@ -30,7 +30,7 @@ language:
 totalBytes: 39732
 recent:
   last30d:
-    since: 2026-10-24
+    since: 2026-10-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -38,7 +38,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-24
+    since: 2026-09-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -46,7 +46,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-25
+    since: 2026-08-26
     release: 0
     mergedPR: 0
     openPR: 0
@@ -54,7 +54,7 @@ recent:
     openIssue: 0
     commit: 0
   last180d:
-    since: 2026-05-27
+    since: 2026-05-28
     release: 0
     mergedPR: 0
     openPR: 0
@@ -62,7 +62,7 @@ recent:
     openIssue: 0
     commit: 0
   last360d:
-    since: 2025-11-28
+    since: 2025-11-29
     release: 0
     mergedPR: 0
     openPR: 1
@@ -70,7 +70,7 @@ recent:
     openIssue: 0
     commit: 0
   last720d:
-    since: 2024-12-03
+    since: 2024-12-04
     release: 0
     mergedPR: 0
     openPR: 2
@@ -86,7 +86,7 @@ total:
   commit: 267
 ---
 path: /home/runner/.x-repo/github.com/pressly/sup
-collectedAt: 2026-11-23T11:22:51Z
+collectedAt: 2026-11-24T11:19:26Z
 loc:
   Go:
     code: 1324
@@ -129,44 +129,50 @@ total:
   blanks: 363
   files: 19
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/pressly/sup
   commit: 17c751e8ca547e2ef7fb5b6b2017543cd7172a05
 scorecard:
-  version: v5.6.0
-  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
 score: 2.3
 checks:
-  - name: Token-Permissions
-    score: -1
-    reason: No tokens found
-    details: null
-  - name: Dangerous-Workflow
-    score: -1
-    reason: no workflows found
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 6
+    reason: Found 8/12 approved changesets -- score normalized to 6
+    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
     details: null
-  - name: Code-Review
-    score: 6
-    reason: Found 8/12 approved changesets -- score normalized to 6
+  - name: Token-Permissions
+    score: -1
+    reason: No tokens found
     details: null
   - name: Maintained
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
+  - name: Dangerous-Workflow
+    score: -1
+    reason: no workflows found
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Pinned-Dependencies
+    score: 0
+    reason: dependency not pinned by hash detected -- score normalized to 0
+    details:
+      - 'Warn: containerImage not pinned by hash: example/Dockerfile:5: pin your Docker image by updating ubuntu:14.04 to ubuntu:14.04@sha256:64483f3496c1373bfd55348e88694d1c4d0c9b660dee6bfef5e12f43b9933b30'
+      - 'Info:   0 out of   1 containerImage dependencies pinned'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -175,23 +181,17 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Pinned-Dependencies
-    score: 0
-    reason: dependency not pinned by hash detected -- score normalized to 0
-    details:
-      - 'Warn: containerImage not pinned by hash: example/Dockerfile:5: pin your Docker image by updating ubuntu:14.04 to ubuntu:14.04@sha256:64483f3496c1373bfd55348e88694d1c4d0c9b660dee6bfef5e12f43b9933b30'
-      - 'Info:   0 out of   1 containerImage dependencies pinned'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -201,6 +201,11 @@ checks:
       - 'Warn: release artifact v0.5.1 not signed: https://api.github.com/repos/pressly/sup/releases/9272916'
       - 'Warn: release artifact v0.5 not signed: https://api.github.com/repos/pressly/sup/releases/4042722'
       - 'Warn: release artifact v0.4.2 not signed: https://api.github.com/repos/pressly/sup/releases/3815308'
+      - 'Warn: release artifact v0.5.3 is not immutable: https://api.github.com/repos/pressly/sup/releases/10699364'
+      - 'Warn: release artifact v0.5.2 is not immutable: https://api.github.com/repos/pressly/sup/releases/9641886'
+      - 'Warn: release artifact v0.5.1 is not immutable: https://api.github.com/repos/pressly/sup/releases/9272916'
+      - 'Warn: release artifact v0.5 is not immutable: https://api.github.com/repos/pressly/sup/releases/4042722'
+      - 'Warn: release artifact v0.4.2 is not immutable: https://api.github.com/repos/pressly/sup/releases/3815308'
       - 'Warn: release artifact v0.5.3 does not have provenance: https://api.github.com/repos/pressly/sup/releases/10699364'
       - 'Warn: release artifact v0.5.2 does not have provenance: https://api.github.com/repos/pressly/sup/releases/9641886'
       - 'Warn: release artifact v0.5.1 does not have provenance: https://api.github.com/repos/pressly/sup/releases/9272916'

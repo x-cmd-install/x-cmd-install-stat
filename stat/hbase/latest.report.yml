@@ -2,12 +2,12 @@ about:
   description: "Apache HBase"
   license: Apache-2.0
   homepage: https://hbase.apache.org/
-  head: 15a5b66
+  head: 81e463a
   archived: false
   latestVersion: "rel/2.6.7"
   latestRelease: "rel/2.6.7"
   latestPrerelease: "rel/3.0.0-beta-2"
-  collectedAt: 2026-11-23T10:08:48Z
+  collectedAt: 2026-11-24T11:32:17Z
 timeline:
   created: 2014-05-23
   lastCommit: 2026-11-23
@@ -17,17 +17,17 @@ timeline:
 popularity:
   star: 5571
   watcher: 376
-  fork: 3405
+  fork: 3404
   release: 56
-  contributor: 528
-  pullRequest: 8921
+  contributor: 527
+  pullRequest: 8903
   issue: 0
 language:
-  Java: 46732651
+  Java: 46732722
   HTML: 3043679
   MDX: 1705203
   Ruby: 817920
-  Shell: 413697
+  Shell: 413918
   TypeScript: 412497
   Perl: 383739
   Python: 266183
@@ -44,70 +44,70 @@ language:
   CMake: 1437
   Makefile: 1359
   Go Template: 1139
-totalBytes: 54046575
+totalBytes: 54046867
 recent:
   last30d:
-    since: 2026-10-24
+    since: 2026-10-25
     release: 0
-    mergedPR: 79
-    openPR: 32
+    mergedPR: 84
+    openPR: 29
     closedIssue: 0
     openIssue: 0
-    commit: 47
+    commit: 49
   last60d:
-    since: 2026-09-24
+    since: 2026-09-25
     release: 2
-    mergedPR: 160
-    openPR: 50
+    mergedPR: 166
+    openPR: 45
     closedIssue: 0
     openIssue: 0
-    commit: 108
+    commit: 110
   last90d:
-    since: 2026-08-25
+    since: 2026-08-26
     release: 2
-    mergedPR: 244
-    openPR: 77
+    mergedPR: 248
+    openPR: 59
     closedIssue: 0
     openIssue: 0
-    commit: 152
+    commit: 154
   last180d:
-    since: 2026-05-27
+    since: 2026-05-28
     release: 4
-    mergedPR: 481
-    openPR: 105
+    mergedPR: 484
+    openPR: 87
     closedIssue: 0
     openIssue: 0
-    commit: 285
+    commit: 287
   last360d:
-    since: 2025-11-28
+    since: 2025-11-29
     release: 6
-    mergedPR: 1176
-    openPR: 147
+    mergedPR: 1183
+    openPR: 129
     closedIssue: 0
     openIssue: 0
-    commit: 633
+    commit: 635
   last720d:
-    since: 2024-12-03
+    since: 2024-12-04
     release: 12
-    mergedPR: 1991
-    openPR: 213
+    mergedPR: 1996
+    openPR: 190
     closedIssue: 0
     openIssue: 0
-    commit: 1031
+    commit: 1032
 total:
   release: 56
-  mergedPR: 7038
-  openPR: 437
+  mergedPR: 7043
+  openPR: 414
   closedIssue: 0
   openIssue: 0
-  commit: 21399
+  commit: 21401
 ---
 path: /home/runner/.x-repo/github.com/apache/hbase
-collectedAt: 2026-11-23T10:09:39Z
+collectedAt: 2026-11-24T11:33:21Z
 loc:
   Java:
     code: 932515
-    comments: 257800
+    comments: 257801
     blanks: 150613
     files: 5444
   Html:
@@ -151,7 +151,7 @@ loc:
     blanks: 1068
     files: 4
   Sh:
-    code: 7079
+    code: 7081
     comments: 2524
     blanks: 1173
     files: 57
@@ -271,18 +271,18 @@ loc:
     blanks: 248
     files: 18
 total:
-  code: 1151568
-  comments: 283871
+  code: 1151570
+  comments: 283872
   blanks: 170677
   files: 6233
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/apache/hbase
-  commit: dcd112b85972660312476e0b46d093b61e19f566
+  commit: 81e463a0ec11bf6c4cb959a46f2665781afa5e79
 scorecard:
-  version: v5.6.0
-  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
 score: 6.9
 checks:
   - name: Maintained
@@ -291,13 +291,29 @@ checks:
     details: null
   - name: Code-Review
     score: 9
-    reason: Found 25/27 approved changesets -- score normalized to 9
+    reason: Found 21/23 approved changesets -- score normalized to 9
     details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Token-Permissions
+    score: 9
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/yetus-general-check.yml:149'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/yetus-general-check.yml:33'
+      - 'Warn: jobLevel ''statuses'' permission set to ''write'': .github/workflows/yetus-general-check.yml:34'
+      - 'Info: found token with ''none'' permissions: .github/workflows/yetus-general-check.yml:1'
+      - 'Warn: topLevel ''statuses'' permission set to ''write'': .github/workflows/yetus-jdk17-hadoop3-compile-check.yml:28'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/yetus-jdk17-hadoop3-compile-check.yml:27'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/yetus-jdk17-hadoop3-unit-check.yml:27'
+      - 'Warn: topLevel ''statuses'' permission set to ''write'': .github/workflows/yetus-jdk17-hadoop3-unit-check.yml:28'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -306,22 +322,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Token-Permissions
-    score: 9
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/yetus-general-check.yml:33'
-      - 'Warn: jobLevel ''statuses'' permission set to ''write'': .github/workflows/yetus-general-check.yml:34'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/yetus-general-check.yml:149'
-      - 'Info: found token with ''none'' permissions: .github/workflows/yetus-general-check.yml:1'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/yetus-jdk17-hadoop3-compile-check.yml:27'
-      - 'Warn: topLevel ''statuses'' permission set to ''write'': .github/workflows/yetus-jdk17-hadoop3-compile-check.yml:28'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/yetus-jdk17-hadoop3-unit-check.yml:27'
-      - 'Warn: topLevel ''statuses'' permission set to ''write'': .github/workflows/yetus-jdk17-hadoop3-unit-check.yml:28'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -336,15 +336,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE.txt:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE.txt:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: Branch-Protection
     score: 3
     reason: branch protection is not maximal on development and all release branches
@@ -356,13 +347,27 @@ checks:
       - 'Warn: codeowners review is not required on branch ''master'''
       - 'Warn: no status checks found to merge onto branch ''master'''
       - 'Warn: PRs are not required to make changes on branch ''master''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 28 are checked with a SAST tool'
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
     details:
-      - 'Warn: containerImage not pinned by hash: dev-support/create-release/hbase-rm/Dockerfile:22: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:9abcaffc92a5279fff3a6a41635c0800ea33e528425fb389658806476e7defde'
+      - 'Warn: containerImage not pinned by hash: dev-support/create-release/hbase-rm/Dockerfile:22: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:b000e69a50ff940390233025e7a337fb8469b509e2334fa4d018ac30f3e18cdb'
       - 'Warn: containerImage not pinned by hash: dev-support/create-release/mac-sshd-gpg-agent/Dockerfile:77: pin your Docker image by updating ubuntu:18.04 to ubuntu:18.04@sha256:152dc042452c496007f07ca9127571cb9c29697f42acbfad72324b2bb2e43c98'
-      - 'Warn: containerImage not pinned by hash: dev-support/docker/Dockerfile:24: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:9abcaffc92a5279fff3a6a41635c0800ea33e528425fb389658806476e7defde'
+      - 'Warn: containerImage not pinned by hash: dev-support/docker/Dockerfile:24: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:b000e69a50ff940390233025e7a337fb8469b509e2334fa4d018ac30f3e18cdb'
       - 'Warn: containerImage not pinned by hash: dev-support/docker/Dockerfile:94'
       - 'Warn: containerImage not pinned by hash: dev-support/docker/Dockerfile:102'
       - 'Warn: containerImage not pinned by hash: dev-support/docker/Dockerfile:110'
@@ -371,18 +376,18 @@ checks:
       - 'Warn: containerImage not pinned by hash: dev-support/docker/Dockerfile:132'
       - 'Warn: containerImage not pinned by hash: dev-support/docker/Dockerfile:139'
       - 'Warn: containerImage not pinned by hash: dev-support/docker/Dockerfile:150'
-      - 'Warn: containerImage not pinned by hash: dev-support/flaky-tests/Dockerfile:23: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:9abcaffc92a5279fff3a6a41635c0800ea33e528425fb389658806476e7defde'
-      - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/Dockerfile:17: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:9abcaffc92a5279fff3a6a41635c0800ea33e528425fb389658806476e7defde'
+      - 'Warn: containerImage not pinned by hash: dev-support/flaky-tests/Dockerfile:23: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:b000e69a50ff940390233025e7a337fb8469b509e2334fa4d018ac30f3e18cdb'
+      - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/Dockerfile:17: pin your Docker image by updating ubuntu:22.04 to ubuntu:22.04@sha256:b000e69a50ff940390233025e7a337fb8469b509e2334fa4d018ac30f3e18cdb'
       - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/Dockerfile:33'
       - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/Dockerfile:42'
       - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/Dockerfile:60'
-      - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/m1/Dockerfile:17: pin your Docker image by updating amd64/ubuntu:22.04 to amd64/ubuntu:22.04@sha256:e7c4cab5723b770272dfaab468fb9e6ad9f118702433d106b5f0494836a0ecb4'
+      - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/m1/Dockerfile:17: pin your Docker image by updating amd64/ubuntu:22.04 to amd64/ubuntu:22.04@sha256:d5b9a106420e52a954f2148aef76db8cb1c1c3dc59ba6757e336279e41c1f36d'
       - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/m1/Dockerfile:33'
       - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/m1/Dockerfile:42'
       - 'Warn: containerImage not pinned by hash: dev-support/hbase_docker/m1/Dockerfile:60'
-      - 'Warn: containerImage not pinned by hash: dev-support/read-replica/Dockerfile:19: pin your Docker image by updating registry.access.redhat.com/ubi8/openjdk-17:1.23 to registry.access.redhat.com/ubi8/openjdk-17:1.23@sha256:36c243e5e46132fcb98b1dbea24f39ba49f3f6eb4dc698947ca44d5b911a50d9'
-      - 'Warn: containerImage not pinned by hash: dev-support/read-replica/Dockerfile:45: pin your Docker image by updating registry.access.redhat.com/ubi8/openjdk-17:1.23 to registry.access.redhat.com/ubi8/openjdk-17:1.23@sha256:36c243e5e46132fcb98b1dbea24f39ba49f3f6eb4dc698947ca44d5b911a50d9'
-      - 'Warn: containerImage not pinned by hash: dev-support/read-replica/Dockerfile:74: pin your Docker image by updating registry.access.redhat.com/ubi8/openjdk-17:1.23 to registry.access.redhat.com/ubi8/openjdk-17:1.23@sha256:36c243e5e46132fcb98b1dbea24f39ba49f3f6eb4dc698947ca44d5b911a50d9'
+      - 'Warn: containerImage not pinned by hash: dev-support/read-replica/Dockerfile:19: pin your Docker image by updating registry.access.redhat.com/ubi8/openjdk-17:1.23 to registry.access.redhat.com/ubi8/openjdk-17:1.23@sha256:c784f77df695303b2d8bd3ac528080d543c9df52eac8f5f7ebcbead1b32ffc54'
+      - 'Warn: containerImage not pinned by hash: dev-support/read-replica/Dockerfile:45: pin your Docker image by updating registry.access.redhat.com/ubi8/openjdk-17:1.23 to registry.access.redhat.com/ubi8/openjdk-17:1.23@sha256:c784f77df695303b2d8bd3ac528080d543c9df52eac8f5f7ebcbead1b32ffc54'
+      - 'Warn: containerImage not pinned by hash: dev-support/read-replica/Dockerfile:74: pin your Docker image by updating registry.access.redhat.com/ubi8/openjdk-17:1.23 to registry.access.redhat.com/ubi8/openjdk-17:1.23@sha256:c784f77df695303b2d8bd3ac528080d543c9df52eac8f5f7ebcbead1b32ffc54'
       - 'Warn: containerImage not pinned by hash: hbase-website/Dockerfile:19: pin your Docker image by updating node:22-alpine to node:22-alpine@sha256:1314fb30ec37592d5845e5a160d522c0e680972aa534549940b8d73bde88481a'
       - 'Warn: containerImage not pinned by hash: hbase-website/Dockerfile:24: pin your Docker image by updating node:22-alpine to node:22-alpine@sha256:1314fb30ec37592d5845e5a160d522c0e680972aa534549940b8d73bde88481a'
       - 'Warn: containerImage not pinned by hash: hbase-website/Dockerfile:29: pin your Docker image by updating node:22-alpine to node:22-alpine@sha256:1314fb30ec37592d5845e5a160d522c0e680972aa534549940b8d73bde88481a'
@@ -393,10 +398,5 @@ checks:
       - 'Info:   0 out of  27 containerImage dependencies pinned'
       - 'Info:   0 out of   2 pipCommand dependencies pinned'
       - 'Info:   2 out of   2 npmCommand dependencies pinned'
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 28 are checked with a SAST tool'
 ---
 {"id":365932918,"author":{"login":"Apache9","id":4958168,"node_id":"MDQ6VXNlcjQ5NTgxNjg=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOATKMAc4Vz7F2","tag_name":"rel/3.0.0","target_commitish":"master","name":"Apache HBase 3.0.0 is now available for download","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-08-05T04:56:56Z","updated_at":"2026-08-06T02:06:26Z","published_at":"2026-08-06T02:06:26Z","assets":[],"body":"The HBase team is happy to announce the immediate availability of HBase\r\n3.0.0.\r\n\r\nApache HBase™ is an open-source, distributed, versioned, non-relational\r\ndatabase. Apache HBase gives you low latency random access to billions of rows\r\nwith millions of columns atop non-specialized hardware. To learn more about\r\nHBase, see https://hbase.apache.org/.\r\n\r\nHBase 3.0.0 is the first GA release for the 3.x release line, which includes\r\nroughly 5000+ resolved issues since 2.0.0.\r\n\r\nNotice that, starting from 3.0.0, we have moved up to JDK17. JDK8 and JDK11\r\nsupport have been dropped.\r\n\r\nNotable new features include:\r\n  Synchronous Replication\r\n  OpenTelemetry Tracing\r\n  Distributed MOB Compaction\r\n  Backup and Restore\r\n  Decouple region replication and general replication framework, and also\r\n    make region replication can work when SKIP_WAL is used\r\n  A new file system based replication peer storage\r\n  Use hbase table instead of zookeeper for tracking hbase replication queue\r\n\r\nFor other important changes:\r\n  We do not support hadoop 2.x any more\r\n  Move RSGroup balancer to core\r\n  Reimplement sync client on async client\r\n  CPEPs on shaded proto\r\n  Move the logging framework from log4j to log4j2\r\n  Yield SCP and TRSP to improve MTTR when restarting large cluster\r\n\r\nThe full list of issues and release notes can be found here:\r\n\r\nCHANGELOG: https://downloads.apache.org/hbase/3.0.0/CHANGES.md\r\nRELEASENOTES: https://downloads.apache.org/hbase/3.0.0/RELEASENOTES.md\r\n\r\nor via our issue tracker:\r\n\r\n  https://issues.apache.org/jira/projects/HBASE/versions/12353161\r\n\r\nTo download please follow the links and instructions on our website:\r\n\r\n  https://hbase.apache.org/downloads.html\r\n\r\nQuestions, comments, and problems are always welcome at:\r\n\r\n  dev@hbase.apache.org\r\n  user@hbase.apache.org\r\n  user-zh@hbase.apache.org\r\n\r\nThanks to all who contributed and made this release possible.\r\n\r\nCheers,\r\nThe HBase Dev Team","reactions":{"total_count":9,"+1":6,"-1":0,"laugh":0,"hooray":3,"confused":0,"heart":0,"rocket":0,"eyes":0}}

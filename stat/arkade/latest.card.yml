@@ -7,7 +7,7 @@ about:
   latestVersion: "0.12.1"
   latestRelease: "0.12.1"
   latestPrerelease: "0.11.78"
-  collectedAt: 2026-11-23T08:27:44Z
+  collectedAt: 2026-11-24T10:33:49Z
 timeline:
   created: 2020-02-26
   lastCommit: 2026-11-12
@@ -29,7 +29,7 @@ language:
 totalBytes: 1103006
 recent:
   last30d:
-    since: 2026-10-24
+    since: 2026-10-25
     release: 2
     mergedPR: 2
     openPR: 4
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 5
   last60d:
-    since: 2026-09-24
+    since: 2026-09-25
     release: 10
     mergedPR: 10
     openPR: 5
@@ -45,7 +45,7 @@ recent:
     openIssue: 3
     commit: 27
   last90d:
-    since: 2026-08-25
+    since: 2026-08-26
     release: 12
     mergedPR: 13
     openPR: 5
@@ -53,7 +53,7 @@ recent:
     openIssue: 4
     commit: 30
   last180d:
-    since: 2026-05-27
+    since: 2026-05-28
     release: 37
     mergedPR: 29
     openPR: 5
@@ -61,7 +61,7 @@ recent:
     openIssue: 5
     commit: 93
   last360d:
-    since: 2025-11-28
+    since: 2025-11-29
     release: 76
     mergedPR: 37
     openPR: 5
@@ -69,7 +69,7 @@ recent:
     openIssue: 9
     commit: 160
   last720d:
-    since: 2024-12-03
+    since: 2024-12-04
     release: 100
     mergedPR: 66
     openPR: 5
@@ -85,7 +85,7 @@ total:
   commit: 1244
 ---
 path: /home/runner/.x-repo/github.com/alexellis/arkade
-collectedAt: 2026-11-23T08:27:46Z
+collectedAt: 2026-11-24T10:33:52Z
 loc:
   Go:
     code: 333525
@@ -143,24 +143,24 @@ total:
   blanks: 47938
   files: 1288
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/alexellis/arkade
   commit: 18ccdbc73f00d18a1aef0b9a4184ebc0b4894b2f
 scorecard:
-  version: v5.6.0
-  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
 score: 3.8
 checks:
-  - name: Code-Review
-    score: 0
-    reason: Found 1/18 approved changesets -- score normalized to 0
-    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 0
+    reason: Found 1/18 approved changesets -- score normalized to 0
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
@@ -185,6 +185,29 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: Security-Policy
+    score: 0
+    reason: security policy file not detected
+    details:
+      - 'Warn: no security policy file detected'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
+      - 'Warn: no security file to analyze'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -198,29 +221,6 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/publish.yml:22: update your workflow using https://app.stepsecurity.io/secureworkflow/alexellis/arkade/publish.yml/master?enable=pin'
       - 'Info:   0 out of   6 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Security-Policy
-    score: 0
-    reason: security policy file not detected
-    details:
-      - 'Warn: no security policy file detected'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-      - 'Warn: no security file to analyze'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -230,6 +230,11 @@ checks:
       - 'Warn: release artifact 0.11.134 not signed: https://api.github.com/repos/alexellis/arkade/releases/421887663'
       - 'Warn: release artifact 0.11.133 not signed: https://api.github.com/repos/alexellis/arkade/releases/420890428'
       - 'Warn: release artifact 0.11.132 not signed: https://api.github.com/repos/alexellis/arkade/releases/405996452'
+      - 'Warn: release artifact 0.12.1 is not immutable: https://api.github.com/repos/alexellis/arkade/releases/442761919'
+      - 'Warn: release artifact 0.12.0 is not immutable: https://api.github.com/repos/alexellis/arkade/releases/434985808'
+      - 'Warn: release artifact 0.11.134 is not immutable: https://api.github.com/repos/alexellis/arkade/releases/421887663'
+      - 'Warn: release artifact 0.11.133 is not immutable: https://api.github.com/repos/alexellis/arkade/releases/420890428'
+      - 'Warn: release artifact 0.11.132 is not immutable: https://api.github.com/repos/alexellis/arkade/releases/405996452'
       - 'Warn: release artifact 0.12.1 does not have provenance: https://api.github.com/repos/alexellis/arkade/releases/442761919'
       - 'Warn: release artifact 0.12.0 does not have provenance: https://api.github.com/repos/alexellis/arkade/releases/434985808'
       - 'Warn: release artifact 0.11.134 does not have provenance: https://api.github.com/repos/alexellis/arkade/releases/421887663'
