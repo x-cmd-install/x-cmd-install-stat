@@ -7,7 +7,7 @@ about:
   latestVersion: "v3.2.7"
   latestRelease: "v3.2.7"
   latestPrerelease: "v3.0.9-rc1"
-  collectedAt: 2026-11-23T09:52:50Z
+  collectedAt: 2026-11-24T11:39:39Z
 timeline:
   created: 2012-06-01
   lastCommit: 2026-11-21
@@ -17,10 +17,10 @@ timeline:
 popularity:
   star: 4493
   watcher: 134
-  fork: 1229
+  fork: 1230
   release: 30
   contributor: 69
-  pullRequest: 751
+  pullRequest: 752
   issue: 723
 language:
   Shell: 229607
@@ -28,63 +28,63 @@ language:
 totalBytes: 230863
 recent:
   last30d:
-    since: 2026-10-24
+    since: 2026-10-25
     release: 0
     mergedPR: 2
-    openPR: 1
+    openPR: 2
     closedIssue: 0
     openIssue: 1
     commit: 3
   last60d:
-    since: 2026-09-24
+    since: 2026-09-25
     release: 0
     mergedPR: 10
-    openPR: 1
+    openPR: 2
     closedIssue: 7
     openIssue: 2
     commit: 12
   last90d:
-    since: 2026-08-25
+    since: 2026-08-26
     release: 1
     mergedPR: 12
-    openPR: 2
+    openPR: 3
     closedIssue: 11
     openIssue: 3
     commit: 19
   last180d:
-    since: 2026-05-27
+    since: 2026-05-28
     release: 1
     mergedPR: 17
-    openPR: 2
+    openPR: 3
     closedIssue: 15
     openIssue: 5
     commit: 36
   last360d:
-    since: 2025-11-28
+    since: 2025-11-29
     release: 3
     mergedPR: 26
-    openPR: 8
+    openPR: 9
     closedIssue: 26
     openIssue: 10
     commit: 83
   last720d:
-    since: 2024-12-03
+    since: 2024-12-04
     release: 6
-    mergedPR: 90
-    openPR: 8
-    closedIssue: 92
+    mergedPR: 89
+    openPR: 9
+    closedIssue: 90
     openIssue: 11
-    commit: 539
+    commit: 528
 total:
   release: 30
   mergedPR: 498
-  openPR: 8
+  openPR: 9
   closedIssue: 708
   openIssue: 15
   commit: 3010
 ---
 path: /home/runner/.x-repo/github.com/OpenVPN/easy-rsa
-collectedAt: 2026-11-23T09:52:55Z
+collectedAt: 2026-11-24T11:39:49Z
 loc:
   Sh:
     code: 6272
@@ -112,23 +112,26 @@ total:
   blanks: 1536
   files: 24
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/OpenVPN/easy-rsa
-  commit: 374bc1f608e55faff7c14545412ca5a2d8caba21
+  commit: 0ad2602f9b644971ccd7caf34ac3daa58f82238c
 scorecard:
-  version: v5.6.0
-  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 3.4
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
+score: 3.5
 checks:
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Code-Review
+    score: 1
+    reason: Found 3/21 approved changesets -- score normalized to 1
+    details: null
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 15 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 16 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
     details: null
   - name: Token-Permissions
     score: 0
@@ -136,14 +139,11 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/action.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Code-Review
-    score: 0
-    reason: Found 0/19 approved changesets -- score normalized to 0
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Binary-Artifacts
     score: 0
     reason: binaries present in source code
@@ -173,14 +173,6 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Pinned-Dependencies
-    score: 0
-    reason: dependency not pinned by hash detected -- score normalized to 0
-    details:
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/action.yml:34: update your workflow using https://app.stepsecurity.io/secureworkflow/OpenVPN/easy-rsa/action.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/action.yml:62: update your workflow using https://app.stepsecurity.io/secureworkflow/OpenVPN/easy-rsa/action.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/action.yml:90: update your workflow using https://app.stepsecurity.io/secureworkflow/OpenVPN/easy-rsa/action.yml/master?enable=pin'
-      - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
@@ -192,6 +184,14 @@ checks:
     details:
       - 'Info: project has a license file: COPYING.md:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
+  - name: Pinned-Dependencies
+    score: 0
+    reason: dependency not pinned by hash detected -- score normalized to 0
+    details:
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/action.yml:34: update your workflow using https://app.stepsecurity.io/secureworkflow/OpenVPN/easy-rsa/action.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/action.yml:62: update your workflow using https://app.stepsecurity.io/secureworkflow/OpenVPN/easy-rsa/action.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/action.yml:90: update your workflow using https://app.stepsecurity.io/secureworkflow/OpenVPN/easy-rsa/action.yml/master?enable=pin'
+      - 'Info:   0 out of   3 GitHub-owned GitHubAction dependencies pinned'
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -218,7 +218,7 @@ checks:
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
-      - 'Warn: 0 commits out of 19 are checked with a SAST tool'
+      - 'Warn: 0 commits out of 18 are checked with a SAST tool'
   - name: Branch-Protection
     score: 2
     reason: branch protection is not maximal on development and all release branches

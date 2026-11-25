@@ -7,7 +7,7 @@ about:
   latestVersion: "1.28.0"
   latestRelease: "1.28.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-23T08:11:09Z
+  collectedAt: 2026-11-24T10:27:14Z
 timeline:
   created: 2010-09-07
   lastCommit: 2023-12-17
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2022-07-09
   lastPrerelease: 
 popularity:
-  star: 3498
+  star: 3497
   watcher: 153
   fork: 790
   release: 27
@@ -27,7 +27,7 @@ language:
 totalBytes: 157712
 recent:
   last30d:
-    since: 2026-10-24
+    since: 2026-10-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,15 +35,15 @@ recent:
     openIssue: 1
     commit: 0
   last60d:
-    since: 2026-09-24
+    since: 2026-09-25
     release: 0
     mergedPR: 0
     openPR: 0
     closedIssue: 0
-    openIssue: 2
+    openIssue: 1
     commit: 0
   last90d:
-    since: 2026-08-25
+    since: 2026-08-26
     release: 0
     mergedPR: 0
     openPR: 0
@@ -51,7 +51,7 @@ recent:
     openIssue: 4
     commit: 0
   last180d:
-    since: 2026-05-27
+    since: 2026-05-28
     release: 0
     mergedPR: 0
     openPR: 1
@@ -59,7 +59,7 @@ recent:
     openIssue: 8
     commit: 0
   last360d:
-    since: 2025-11-28
+    since: 2025-11-29
     release: 0
     mergedPR: 0
     openPR: 3
@@ -67,7 +67,7 @@ recent:
     openIssue: 8
     commit: 0
   last720d:
-    since: 2024-12-03
+    since: 2024-12-04
     release: 0
     mergedPR: 0
     openPR: 10
@@ -83,7 +83,7 @@ total:
   commit: 382
 ---
 path: /home/runner/.x-repo/github.com/achillean/shodan-python
-collectedAt: 2026-11-23T08:11:10Z
+collectedAt: 2026-11-24T10:27:15Z
 loc:
   Python:
     code: 3335
@@ -131,30 +131,27 @@ total:
   blanks: 1124
   files: 41
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/achillean/shodan-python
   commit: 87a0688d1e5b7e4bb13ae4f5fd7cb937a671cba8
 scorecard:
-  version: v5.6.0
-  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
 score: 2.9
 checks:
-  - name: Dangerous-Workflow
+  - name: Packaging
     score: -1
-    reason: no workflows found
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Code-Review
     score: 6
     reason: Found 10/16 approved changesets -- score normalized to 6
     details: null
-  - name: Pinned-Dependencies
+  - name: Dangerous-Workflow
     score: -1
-    reason: no dependencies found
+    reason: no workflows found
     details: null
   - name: Token-Permissions
     score: -1
@@ -164,11 +161,14 @@ checks:
     score: 0
     reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
-  - name: Packaging
+  - name: Pinned-Dependencies
     score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+    reason: no dependencies found
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -192,15 +192,15 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Warn: project license file does not contain an FSF or OSI license.'
+  - name: Signed-Releases
+    score: -1
+    reason: no releases found
+    details: null
   - name: Branch-Protection
     score: 0
     reason: branch protection not enabled on development/release branches
     details:
       - 'Warn: branch protection not enabled for branch ''master'''
-  - name: Signed-Releases
-    score: -1
-    reason: no releases found
-    details: null
   - name: SAST
     score: 0
     reason: SAST tool is not run on all commits -- score normalized to 0

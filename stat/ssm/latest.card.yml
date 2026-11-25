@@ -2,15 +2,15 @@ about:
   description: "A fast, keyboard-driven TUI that makes your existing ~/.ssh/config delightful to use at fleet scale."
   license: MIT
   homepage: 
-  head: 01a5bdb
+  head: a21203a
   archived: false
   latestVersion: "2.6.0"
   latestRelease: "2.6.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-23T07:26:10Z
+  collectedAt: 2026-11-24T09:46:42Z
 timeline:
   created: 2025-04-12
-  lastCommit: 2026-11-16
+  lastCommit: 2026-11-23
   lastVersion: 2026-06-05
   lastRelease: 2026-06-05
   lastPrerelease: 
@@ -20,7 +20,7 @@ popularity:
   fork: 8
   release: 31
   contributor: 3
-  pullRequest: 209
+  pullRequest: 220
   issue: 19
 language:
   Go: 195065
@@ -30,63 +30,63 @@ language:
 totalBytes: 212127
 recent:
   last30d:
-    since: 2026-10-24
+    since: 2026-10-25
     release: 0
-    mergedPR: 21
-    openPR: 3
+    mergedPR: 27
+    openPR: 5
     closedIssue: 0
     openIssue: 0
-    commit: 0
+    commit: 17
   last60d:
-    since: 2026-09-24
+    since: 2026-09-25
     release: 0
-    mergedPR: 43
-    openPR: 4
+    mergedPR: 49
+    openPR: 6
     closedIssue: 0
     openIssue: 0
-    commit: 0
+    commit: 36
   last90d:
-    since: 2026-08-25
+    since: 2026-08-26
     release: 0
-    mergedPR: 63
-    openPR: 5
+    mergedPR: 69
+    openPR: 7
     closedIssue: 0
     openIssue: 0
-    commit: 0
+    commit: 68
   last180d:
-    since: 2026-05-27
-    release: 4
-    mergedPR: 123
-    openPR: 5
+    since: 2026-05-28
+    release: 2
+    mergedPR: 129
+    openPR: 7
     closedIssue: 0
     openIssue: 0
-    commit: 0
+    commit: 129
   last360d:
-    since: 2025-11-28
+    since: 2025-11-29
     release: 17
-    mergedPR: 138
-    openPR: 5
+    mergedPR: 144
+    openPR: 7
     closedIssue: 2
     openIssue: 2
-    commit: 0
+    commit: 333
   last720d:
-    since: 2024-12-03
+    since: 2024-12-04
     release: 31
-    mergedPR: 145
-    openPR: 5
+    mergedPR: 151
+    openPR: 7
     closedIssue: 12
     openIssue: 7
-    commit: 545
+    commit: 551
 total:
   release: 31
-  mergedPR: 145
-  openPR: 5
+  mergedPR: 151
+  openPR: 7
   closedIssue: 12
   openIssue: 7
-  commit: 545
+  commit: 551
 ---
 path: /home/runner/.x-repo/github.com/lfaoro/ssm
-collectedAt: 2026-11-23T07:26:13Z
+collectedAt: 2026-11-24T09:46:43Z
 loc:
   Go:
     code: 6667
@@ -119,33 +119,36 @@ total:
   blanks: 1401
   files: 44
 ---
-date: "2026-11-16T17:32:57Z"
+date: "2026-11-23T19:33:16Z"
 repo:
   name: github.com/lfaoro/ssm
-  commit: 5162c380846f1d7c32fb53c1f0641c1c64396f90
+  commit: 01a5bdbc422f7846a16cfabaf9661aadc2e71dda
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 8.5
+score: 8.6
 checks:
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Code-Review
+    score: -1
+    reason: Found no human activity in the last 30 changesets
+    details: null
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Token-Permissions
+  - name: Dangerous-Workflow
     score: 10
-    reason: GitHub workflow tokens follow principle of least privilege
-    details:
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/dependabot-auto-merge.yml:11'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/codeql.yml:10'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/dependabot-auto-merge.yml:4'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/go-tests.yml:8'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/install_live.yml:7'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/install_tests.yml:6'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/lint.yml:8'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:9'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/shellcheck.yml:4'
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    details: null
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -154,27 +157,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
-    details: null
-  - name: Code-Review
-    score: -1
-    reason: Found no human activity in the last 30 changesets
-    details: null
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Pinned-Dependencies
     score: 4
     reason: dependency not pinned by hash detected -- score normalized to 4
@@ -190,22 +172,33 @@ checks:
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/lint.yml:24: update your workflow using https://app.stepsecurity.io/secureworkflow/lfaoro/ssm/lint.yml/main?enable=pin'
       - 'Info:  12 out of  17 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   1 out of   5 third-party GitHubAction dependencies pinned'
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+  - name: Token-Permissions
+    score: 10
+    reason: GitHub workflow tokens follow principle of least privilege
+    details:
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/dependabot-auto-merge.yml:11'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/codeql.yml:10'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/dependabot-auto-merge.yml:4'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/go-tests.yml:8'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/install_live.yml:7'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/install_tests.yml:6'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/lint.yml:8'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:9'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/shellcheck.yml:4'
   - name: CII-Best-Practices
     score: 5
     reason: 'badge detected: Passing'
     details: null
   - name: Vulnerabilities
-    score: 7
-    reason: 3 existing vulnerabilities detected
+    score: 9
+    reason: 1 existing vulnerabilities detected
     details:
       - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-5932'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6860'
-      - 'Warn: Project is vulnerable to: https://osv.dev/GO-2026-6866'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Signed-Releases
     score: 8
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
@@ -220,6 +213,17 @@ checks:
       - 'Warn: release artifact 2.5.0 does not have provenance: https://api.github.com/repos/lfaoro/ssm/releases/330455474'
       - 'Warn: release artifact 2.4.1 does not have provenance: https://api.github.com/repos/lfaoro/ssm/releases/330393482'
       - 'Warn: release artifact 2.4.0 does not have provenance: https://api.github.com/repos/lfaoro/ssm/releases/329795081'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: SAST
     score: 10
     reason: SAST tool is run on all commits
@@ -230,12 +234,6 @@ checks:
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
     details: null
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Contributors
     score: 10
     reason: project has 3 contributing companies or organizations -- score normalized to 10

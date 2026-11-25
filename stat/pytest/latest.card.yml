@@ -2,25 +2,25 @@ about:
   description: "The pytest framework makes it easy to write small tests, yet scales to support complex functional testing"
   license: MIT
   homepage: https://pytest.org
-  head: 7189292
+  head: 27fd96a
   archived: false
   latestVersion: "9.2.0"
   latestRelease: "9.2.0"
   latestPrerelease: "8.1.0"
-  collectedAt: 2026-11-23T08:28:46Z
+  collectedAt: 2026-11-24T09:56:34Z
 timeline:
   created: 2015-06-15
-  lastCommit: 2026-11-22
+  lastCommit: 2026-11-24
   lastVersion: 2026-10-27
   lastRelease: 2026-10-27
   lastPrerelease: 2024-03-03
 popularity:
-  star: 14739
-  watcher: 201
-  fork: 3763
+  star: 14744
+  watcher: 199
+  fork: 3762
   release: 85
   contributor: 1021
-  pullRequest: 7796
+  pullRequest: 7801
   issue: 6461
 language:
   Python: 3950646
@@ -28,63 +28,63 @@ language:
 totalBytes: 3950838
 recent:
   last30d:
-    since: 2026-10-24
+    since: 2026-10-25
     release: 1
     mergedPR: 26
-    openPR: 70
+    openPR: 71
     closedIssue: 8
     openIssue: 25
-    commit: 39
+    commit: 40
   last60d:
-    since: 2026-09-24
+    since: 2026-09-25
     release: 1
-    mergedPR: 61
+    mergedPR: 62
     openPR: 130
     closedIssue: 19
     openIssue: 32
-    commit: 135
+    commit: 136
   last90d:
-    since: 2026-08-25
+    since: 2026-08-26
     release: 1
-    mergedPR: 102
-    openPR: 170
-    closedIssue: 33
-    openIssue: 52
-    commit: 232
+    mergedPR: 103
+    openPR: 169
+    closedIssue: 32
+    openIssue: 51
+    commit: 233
   last180d:
-    since: 2026-05-27
+    since: 2026-05-28
     release: 3
     mergedPR: 274
-    openPR: 218
+    openPR: 220
     closedIssue: 80
     openIssue: 74
-    commit: 623
+    commit: 624
   last360d:
-    since: 2025-11-28
+    since: 2025-11-29
     release: 5
-    mergedPR: 528
-    openPR: 236
+    mergedPR: 525
+    openPR: 238
     closedIssue: 146
     openIssue: 101
-    commit: 1020
+    commit: 1021
   last720d:
-    since: 2024-12-03
+    since: 2024-12-04
     release: 11
-    mergedPR: 997
-    openPR: 252
-    closedIssue: 370
+    mergedPR: 998
+    openPR: 254
+    closedIssue: 369
     openIssue: 176
-    commit: 1536
+    commit: 1537
 total:
   release: 85
-  mergedPR: 6223
-  openPR: 257
+  mergedPR: 6224
+  openPR: 259
   closedIssue: 5764
   openIssue: 697
-  commit: 17929
+  commit: 17930
 ---
 path: /home/runner/.x-repo/github.com/pytest-dev/pytest
-collectedAt: 2026-11-23T08:28:54Z
+collectedAt: 2026-11-24T09:56:43Z
 loc:
   Python:
     code: 99920
@@ -162,22 +162,26 @@ total:
   blanks: 34537
   files: 598
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/pytest-dev/pytest
-  commit: 36eed6b7b0eb59760fc4b33e90bdaac5057388f0
+  commit: 718929265449ca33040264152ba5e7022e766a52
 scorecard:
-  version: v5.6.0
-  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 6.8
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
+score: 7.9
 checks:
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Maintained
     score: 10
-    reason: 30 commit(s) and 8 issue activity found in the last 90 days -- score normalized to 10
+    reason: 30 commit(s) and 10 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Code-Review
-    score: 8
-    reason: Found 8/9 approved changesets -- score normalized to 8
+    score: 10
+    reason: all changesets reviewed
     details: null
   - name: Security-Policy
     score: 9
@@ -187,17 +191,13 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 9
     reason: detected GitHub workflow tokens with excessive permissions
     details:
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/deploy.yml:116'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/deploy.yml:43'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/deploy.yml:95'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/deploy.yml:116'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/prepare-release-pr.yml:26'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/test.yml:53'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/update-plugin-list.yml:18'
@@ -221,36 +221,31 @@ checks:
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/deploy.yml:68'
   - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
+    score: 10
+    reason: 5 out of the last 5 releases have a total of 0 signed artifacts and 5 immutable releases.
     details:
-      - 'Warn: release artifact 9.2.0 not signed: https://api.github.com/repos/pytest-dev/pytest/releases/426006480'
-      - 'Warn: release artifact 9.1.1 not signed: https://api.github.com/repos/pytest-dev/pytest/releases/341891948'
-      - 'Warn: release artifact 9.1.0 not signed: https://api.github.com/repos/pytest-dev/pytest/releases/339029752'
-      - 'Warn: release artifact 9.0.3 not signed: https://api.github.com/repos/pytest-dev/pytest/releases/306206930'
-      - 'Warn: release artifact 9.0.2 not signed: https://api.github.com/repos/pytest-dev/pytest/releases/268037113'
-      - 'Warn: release artifact 9.2.0 does not have provenance: https://api.github.com/repos/pytest-dev/pytest/releases/426006480'
-      - 'Warn: release artifact 9.1.1 does not have provenance: https://api.github.com/repos/pytest-dev/pytest/releases/341891948'
-      - 'Warn: release artifact 9.1.0 does not have provenance: https://api.github.com/repos/pytest-dev/pytest/releases/339029752'
-      - 'Warn: release artifact 9.0.3 does not have provenance: https://api.github.com/repos/pytest-dev/pytest/releases/306206930'
-      - 'Warn: release artifact 9.0.2 does not have provenance: https://api.github.com/repos/pytest-dev/pytest/releases/268037113'
+      - 'Info: immutable release: 9.2.0: https://api.github.com/repos/pytest-dev/pytest/releases/426006480'
+      - 'Info: immutable release: 9.1.1: https://api.github.com/repos/pytest-dev/pytest/releases/341891948'
+      - 'Info: immutable release: 9.1.0: https://api.github.com/repos/pytest-dev/pytest/releases/339029752'
+      - 'Info: immutable release: 9.0.3: https://api.github.com/repos/pytest-dev/pytest/releases/306206930'
+      - 'Info: immutable release: 9.0.2: https://api.github.com/repos/pytest-dev/pytest/releases/268037113'
   - name: Branch-Protection
     score: 4
     reason: branch protection is not maximal on development and all release branches

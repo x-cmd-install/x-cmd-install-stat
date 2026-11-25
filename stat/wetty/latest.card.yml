@@ -7,7 +7,7 @@ about:
   latestVersion: "v4.2.1"
   latestRelease: "v4.2.1"
   latestPrerelease: ""
-  collectedAt: 2026-11-23T08:40:01Z
+  collectedAt: 2026-11-24T11:10:46Z
 timeline:
   created: 2014-03-29
   lastCommit: 2026-11-20
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-10-25
   lastPrerelease: 
 popularity:
-  star: 5486
+  star: 5488
   watcher: 95
   fork: 769
   release: 43
@@ -32,23 +32,23 @@ language:
 totalBytes: 299393
 recent:
   last30d:
-    since: 2026-10-24
-    release: 3
+    since: 2026-10-25
+    release: 2
     mergedPR: 25
     openPR: 1
     closedIssue: 0
     openIssue: 0
     commit: 25
   last60d:
-    since: 2026-09-24
+    since: 2026-09-25
     release: 11
-    mergedPR: 43
+    mergedPR: 41
     openPR: 1
     closedIssue: 1
     openIssue: 0
     commit: 56
   last90d:
-    since: 2026-08-25
+    since: 2026-08-26
     release: 13
     mergedPR: 50
     openPR: 1
@@ -56,15 +56,15 @@ recent:
     openIssue: 0
     commit: 77
   last180d:
-    since: 2026-05-27
-    release: 17
+    since: 2026-05-28
+    release: 15
     mergedPR: 118
     openPR: 2
     closedIssue: 5
     openIssue: 1
     commit: 133
   last360d:
-    since: 2025-11-28
+    since: 2025-11-29
     release: 20
     mergedPR: 133
     openPR: 3
@@ -72,7 +72,7 @@ recent:
     openIssue: 2
     commit: 168
   last720d:
-    since: 2024-12-03
+    since: 2024-12-04
     release: 20
     mergedPR: 138
     openPR: 3
@@ -88,7 +88,7 @@ total:
   commit: 690
 ---
 path: /home/runner/.x-repo/github.com/butlerx/wetty
-collectedAt: 2026-11-23T08:40:03Z
+collectedAt: 2026-11-24T11:10:47Z
 loc:
   TypeScript:
     code: 7014
@@ -156,26 +156,26 @@ total:
   blanks: 2690
   files: 137
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/butlerx/wetty
-  commit: f479bc406757860420fe1e9fb9e0e77669e1dcc7
+  commit: b6fe20643606bd4b38717e984d032425a1a18fbe
 scorecard:
-  version: v5.6.1-0.20261116065636-1a1d63aceae1
-  commit: 1a1d63aceae1cef7ea21b280a57f8353d8e31cf5
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
 score: 5.6
 checks:
   - name: Code-Review
     score: 0
-    reason: Found 0/13 approved changesets -- score normalized to 0
-    details: null
-  - name: Maintained
-    score: 10
-    reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
+    reason: Found 0/7 approved changesets -- score normalized to 0
     details: null
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 10
     details: null
   - name: Binary-Artifacts
     score: 10
@@ -189,10 +189,10 @@ checks:
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:60'
       - 'Warn: jobLevel ''packages'' permission set to ''write'': .github/workflows/ci.yml:68'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:67'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:69'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:13'
       - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/release.yml:20'
       - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:37'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:69'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/release.yml:13'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/build-and-test.workflow.yml:10'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/ci.yml:8'
       - 'Warn: no topLevel permission defined: .github/workflows/codeql-analysis.yml:1'
@@ -222,20 +222,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
-  - name: Branch-Protection
-    score: 3
-    reason: branch protection is not maximal on development and all release branches
-    details:
-      - 'Info: ''allow deletion'' disabled on branch ''main'''
-      - 'Info: ''force pushes'' disabled on branch ''main'''
-      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''main'''
-      - 'Warn: ''stale review dismissal'' is disabled on branch ''main'''
-      - 'Warn: branch ''main'' does not require approvers'
-      - 'Warn: codeowners review is not required on branch ''main'''
-      - 'Warn: ''last push approval'' is disabled on branch ''main'''
-      - 'Warn: ''up-to-date branches'' is disabled on branch ''main'''
-      - 'Info: status check found to merge onto on branch ''main'''
-      - 'Info: PRs are required in order to make changes on branch ''main'''
   - name: Signed-Releases
     score: -1
     reason: no releases found
@@ -253,17 +239,31 @@ checks:
       - 'Warn: npmCommand not pinned by hash: containers/wetty/Dockerfile:15'
       - 'Info:  16 out of  16 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:  17 out of  17 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   2 npmCommand dependencies pinned'
       - 'Info:   0 out of   5 containerImage dependencies pinned'
-  - name: SAST
-    score: 10
-    reason: SAST tool is run on all commits
+      - 'Info:   0 out of   2 npmCommand dependencies pinned'
+  - name: Branch-Protection
+    score: 3
+    reason: branch protection is not maximal on development and all release branches
     details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Info: all commits (19) are checked with a SAST tool'
+      - 'Info: ''allow deletion'' disabled on branch ''main'''
+      - 'Info: ''force pushes'' disabled on branch ''main'''
+      - 'Warn: ''branch protection settings apply to administrators'' is disabled on branch ''main'''
+      - 'Warn: ''stale review dismissal'' is disabled on branch ''main'''
+      - 'Warn: branch ''main'' does not require approvers'
+      - 'Warn: codeowners review is not required on branch ''main'''
+      - 'Warn: ''last push approval'' is disabled on branch ''main'''
+      - 'Warn: ''up-to-date branches'' is disabled on branch ''main'''
+      - 'Info: status check found to merge onto on branch ''main'''
+      - 'Info: PRs are required in order to make changes on branch ''main'''
   - name: Packaging
     score: 10
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/release.yml:31'
+  - name: SAST
+    score: 10
+    reason: SAST tool is run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Info: all commits (25) are checked with a SAST tool'
 ---

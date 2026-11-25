@@ -7,7 +7,7 @@ about:
   latestVersion: "v1.0.23"
   latestRelease: "v1.0.23"
   latestPrerelease: ""
-  collectedAt: 2026-11-23T07:35:03Z
+  collectedAt: 2026-11-24T10:25:16Z
 timeline:
   created: 2020-09-24
   lastCommit: 2026-06-18
@@ -27,7 +27,7 @@ language:
 totalBytes: 10872
 recent:
   last30d:
-    since: 2026-10-24
+    since: 2026-10-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -35,7 +35,7 @@ recent:
     openIssue: 0
     commit: 0
   last60d:
-    since: 2026-09-24
+    since: 2026-09-25
     release: 0
     mergedPR: 0
     openPR: 0
@@ -43,7 +43,7 @@ recent:
     openIssue: 0
     commit: 0
   last90d:
-    since: 2026-08-25
+    since: 2026-08-26
     release: 0
     mergedPR: 0
     openPR: 1
@@ -51,7 +51,7 @@ recent:
     openIssue: 1
     commit: 0
   last180d:
-    since: 2026-05-27
+    since: 2026-05-28
     release: 1
     mergedPR: 0
     openPR: 1
@@ -59,7 +59,7 @@ recent:
     openIssue: 1
     commit: 16
   last360d:
-    since: 2025-11-28
+    since: 2025-11-29
     release: 1
     mergedPR: 2
     openPR: 1
@@ -67,7 +67,7 @@ recent:
     openIssue: 1
     commit: 22
   last720d:
-    since: 2024-12-03
+    since: 2024-12-04
     release: 3
     mergedPR: 4
     openPR: 1
@@ -83,7 +83,7 @@ total:
   commit: 102
 ---
 path: /home/runner/.x-repo/github.com/danielgatis/imgcat
-collectedAt: 2026-11-23T07:35:04Z
+collectedAt: 2026-11-24T10:25:16Z
 loc:
   Go:
     code: 376
@@ -106,18 +106,30 @@ total:
   blanks: 137
   files: 7
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/danielgatis/imgcat
   commit: f71d99da85e614a4eefc0f114b927dc92573475e
 scorecard:
-  version: v5.6.0
-  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
 score: 3
 checks:
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Code-Review
     score: 1
     reason: Found 3/20 approved changesets -- score normalized to 1
+    details: null
+  - name: Maintained
+    score: 0
+    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
     details: null
   - name: Token-Permissions
     score: 0
@@ -125,27 +137,6 @@ checks:
     details:
       - 'Warn: no topLevel permission defined: .github/workflows/goreleaser.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Maintained
-    score: 0
-    reason: 0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
-  - name: Pinned-Dependencies
-    score: 0
-    reason: dependency not pinned by hash detected -- score normalized to 0
-    details:
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/goreleaser.yml:14: update your workflow using https://app.stepsecurity.io/secureworkflow/danielgatis/imgcat/goreleaser.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/goreleaser.yml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/danielgatis/imgcat/goreleaser.yml/master?enable=pin'
-      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/goreleaser.yml:24: update your workflow using https://app.stepsecurity.io/secureworkflow/danielgatis/imgcat/goreleaser.yml/master?enable=pin'
-      - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
@@ -174,11 +165,6 @@ checks:
     reason: packaging workflow detected
     details:
       - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/goreleaser.yml:9'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -187,6 +173,10 @@ checks:
       - 'Warn: release artifact v1.0.22 not signed: https://api.github.com/repos/danielgatis/imgcat/releases/227095702'
       - 'Warn: release artifact v1.0.21 not signed: https://api.github.com/repos/danielgatis/imgcat/releases/211702495'
       - 'Warn: release artifact v1.0.20 not signed: https://api.github.com/repos/danielgatis/imgcat/releases/103224996'
+      - 'Warn: release artifact v1.0.23 is not immutable: https://api.github.com/repos/danielgatis/imgcat/releases/341381418'
+      - 'Warn: release artifact v1.0.22 is not immutable: https://api.github.com/repos/danielgatis/imgcat/releases/227095702'
+      - 'Warn: release artifact v1.0.21 is not immutable: https://api.github.com/repos/danielgatis/imgcat/releases/211702495'
+      - 'Warn: release artifact v1.0.20 is not immutable: https://api.github.com/repos/danielgatis/imgcat/releases/103224996'
       - 'Warn: release artifact v1.0.23 does not have provenance: https://api.github.com/repos/danielgatis/imgcat/releases/341381418'
       - 'Warn: release artifact v1.0.22 does not have provenance: https://api.github.com/repos/danielgatis/imgcat/releases/227095702'
       - 'Warn: release artifact v1.0.21 does not have provenance: https://api.github.com/repos/danielgatis/imgcat/releases/211702495'
@@ -196,4 +186,18 @@ checks:
     reason: SAST tool is not run on all commits -- score normalized to 0
     details:
       - 'Warn: 0 commits out of 13 are checked with a SAST tool'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
+  - name: Pinned-Dependencies
+    score: 0
+    reason: dependency not pinned by hash detected -- score normalized to 0
+    details:
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/goreleaser.yml:14: update your workflow using https://app.stepsecurity.io/secureworkflow/danielgatis/imgcat/goreleaser.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/goreleaser.yml:19: update your workflow using https://app.stepsecurity.io/secureworkflow/danielgatis/imgcat/goreleaser.yml/master?enable=pin'
+      - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/goreleaser.yml:24: update your workflow using https://app.stepsecurity.io/secureworkflow/danielgatis/imgcat/goreleaser.yml/master?enable=pin'
+      - 'Info:   0 out of   2 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   0 out of   1 third-party GitHubAction dependencies pinned'
 ---
