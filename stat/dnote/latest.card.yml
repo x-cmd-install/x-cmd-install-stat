@@ -7,7 +7,7 @@ about:
   latestVersion: "cli-v0.17.0"
   latestRelease: "cli-v0.17.0"
   latestPrerelease: "server-v3.0.0-rc4"
-  collectedAt: 2026-11-24T10:24:02Z
+  collectedAt: 2026-11-25T09:05:43Z
 timeline:
   created: 2017-03-30
   lastCommit: 2026-10-17
@@ -34,7 +34,7 @@ language:
 totalBytes: 1369856
 recent:
   last30d:
-    since: 2026-10-25
+    since: 2026-10-26
     release: 0
     mergedPR: 0
     openPR: 0
@@ -42,7 +42,7 @@ recent:
     openIssue: 2
     commit: 0
   last60d:
-    since: 2026-09-25
+    since: 2026-09-26
     release: 1
     mergedPR: 3
     openPR: 0
@@ -50,7 +50,7 @@ recent:
     openIssue: 2
     commit: 3
   last90d:
-    since: 2026-08-26
+    since: 2026-08-27
     release: 1
     mergedPR: 3
     openPR: 0
@@ -58,7 +58,7 @@ recent:
     openIssue: 2
     commit: 3
   last180d:
-    since: 2026-05-28
+    since: 2026-05-29
     release: 1
     mergedPR: 5
     openPR: 0
@@ -66,7 +66,7 @@ recent:
     openIssue: 2
     commit: 5
   last360d:
-    since: 2025-11-29
+    since: 2025-11-30
     release: 1
     mergedPR: 7
     openPR: 0
@@ -74,7 +74,7 @@ recent:
     openIssue: 2
     commit: 8
   last720d:
-    since: 2024-12-04
+    since: 2024-12-05
     release: 11
     mergedPR: 45
     openPR: 0
@@ -90,7 +90,7 @@ total:
   commit: 382
 ---
 path: /home/runner/.x-repo/github.com/dnote/dnote
-collectedAt: 2026-11-24T10:24:04Z
+collectedAt: 2026-11-25T09:05:46Z
 loc:
   Go:
     code: 26924
@@ -178,14 +178,14 @@ total:
   blanks: 6956
   files: 286
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/dnote/dnote
   commit: 6a40c516e627b38069cf74fc468e2c38fab48f5d
 scorecard:
-  version: v5.6.1-0.20261116065636-1a1d63aceae1
-  commit: 1a1d63aceae1cef7ea21b280a57f8353d8e31cf5
-score: 3.2
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
+score: 3.1
 checks:
   - name: Maintained
     score: 3
@@ -196,8 +196,8 @@ checks:
     reason: no dangerous workflow patterns detected
     details: null
   - name: Code-Review
-    score: 1
-    reason: Found 3/24 approved changesets -- score normalized to 1
+    score: 0
+    reason: Found 2/24 approved changesets -- score normalized to 0
     details: null
   - name: Token-Permissions
     score: 0
@@ -224,33 +224,22 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
   - name: Packaging
     score: -1
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Branch-Protection
-    score: 3
-    reason: branch protection is not maximal on development and all release branches
-    details:
-      - 'Info: ''allow deletion'' disabled on branch ''master'''
-      - 'Info: ''force pushes'' disabled on branch ''master'''
-      - 'Info: ''branch protection settings apply to administrators'' is required to merge on branch ''master'''
-      - 'Warn: branch ''master'' does not require approvers'
-      - 'Warn: codeowners review is not required on branch ''master'''
-      - 'Warn: no status checks found to merge onto branch ''master'''
-      - 'Warn: PRs are not required to make changes on branch ''master''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -270,11 +259,17 @@ checks:
       - 'Warn: release artifact server-v3.0.0 does not have provenance: https://api.github.com/repos/dnote/dnote/releases/259026672'
       - 'Warn: release artifact cli-v0.15.5 does not have provenance: https://api.github.com/repos/dnote/dnote/releases/257340507'
       - 'Warn: release artifact server-v3.0.0-rc4 does not have provenance: https://api.github.com/repos/dnote/dnote/releases/257340392'
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
+  - name: Branch-Protection
+    score: 3
+    reason: branch protection is not maximal on development and all release branches
     details:
-      - 'Warn: 0 commits out of 30 are checked with a SAST tool'
+      - 'Info: ''allow deletion'' disabled on branch ''master'''
+      - 'Info: ''force pushes'' disabled on branch ''master'''
+      - 'Info: ''branch protection settings apply to administrators'' is required to merge on branch ''master'''
+      - 'Warn: branch ''master'' does not require approvers'
+      - 'Warn: codeowners review is not required on branch ''master'''
+      - 'Warn: no status checks found to merge onto branch ''master'''
+      - 'Warn: PRs are not required to make changes on branch ''master''; or we don''t have data to detect it.If you think it might be the latter, make sure to run Scorecard with a PAT or use Repo Rules (that are always public) instead of Branch Protection settings'
   - name: Pinned-Dependencies
     score: 1
     reason: dependency not pinned by hash detected -- score normalized to 1
@@ -297,4 +292,9 @@ checks:
       - 'Info:   0 out of   4 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   1 containerImage dependencies pinned'
       - 'Info:   1 out of   3 goCommand dependencies pinned'
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 29 are checked with a SAST tool'
 ---

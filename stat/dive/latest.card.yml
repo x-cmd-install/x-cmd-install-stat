@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.13.1"
   latestRelease: "v0.13.1"
   latestPrerelease: "v0.9.0"
-  collectedAt: 2026-11-24T10:33:52Z
+  collectedAt: 2026-11-25T10:03:39Z
 timeline:
   created: 2018-05-13
   lastCommit: 2026-11-17
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2025-03-29
   lastPrerelease: 2019-11-05
 popularity:
-  star: 54755
+  star: 54761
   watcher: 364
   fork: 2009
   release: 28
@@ -29,7 +29,7 @@ language:
 totalBytes: 542354
 recent:
   last30d:
-    since: 2026-10-25
+    since: 2026-10-26
     release: 0
     mergedPR: 3
     openPR: 12
@@ -37,7 +37,7 @@ recent:
     openIssue: 0
     commit: 3
   last60d:
-    since: 2026-09-25
+    since: 2026-09-26
     release: 0
     mergedPR: 3
     openPR: 13
@@ -45,7 +45,7 @@ recent:
     openIssue: 0
     commit: 3
   last90d:
-    since: 2026-08-26
+    since: 2026-08-27
     release: 0
     mergedPR: 3
     openPR: 14
@@ -53,7 +53,7 @@ recent:
     openIssue: 0
     commit: 3
   last180d:
-    since: 2026-05-28
+    since: 2026-05-29
     release: 0
     mergedPR: 3
     openPR: 20
@@ -61,7 +61,7 @@ recent:
     openIssue: 0
     commit: 3
   last360d:
-    since: 2025-11-29
+    since: 2025-11-30
     release: 0
     mergedPR: 3
     openPR: 32
@@ -69,7 +69,7 @@ recent:
     openIssue: 4
     commit: 3
   last720d:
-    since: 2024-12-04
+    since: 2024-12-05
     release: 2
     mergedPR: 24
     openPR: 37
@@ -85,7 +85,7 @@ total:
   commit: 511
 ---
 path: /home/runner/.x-repo/github.com/wagoodman/dive
-collectedAt: 2026-11-24T10:33:52Z
+collectedAt: 2026-11-25T10:03:40Z
 loc:
   Go:
     code: 14656
@@ -128,13 +128,13 @@ total:
   blanks: 2636
   files: 211
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/wagoodman/dive
   commit: 75dea9077a4f0c0328cf0084d9b1e32f2f22df87
 scorecard:
-  version: v5.6.0
-  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
 score: 3.6
 checks:
   - name: Code-Review
@@ -178,17 +178,45 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: Fuzzing
-    score: 0
-    reason: project is not fuzzed
-    details:
-      - 'Warn: no fuzzer integrations found'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Fuzzing
+    score: 0
+    reason: project is not fuzzed
+    details:
+      - 'Warn: no fuzzer integrations found'
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v0.13.1 not signed: https://api.github.com/repos/wagoodman/dive/releases/209160155'
+      - 'Warn: release artifact v0.13.0 not signed: https://api.github.com/repos/wagoodman/dive/releases/207517813'
+      - 'Warn: release artifact v0.12.0 not signed: https://api.github.com/repos/wagoodman/dive/releases/139692093'
+      - 'Warn: release artifact v0.11.0 not signed: https://api.github.com/repos/wagoodman/dive/releases/111432456'
+      - 'Warn: release artifact v0.10.0 not signed: https://api.github.com/repos/wagoodman/dive/releases/39405272'
+      - 'Warn: release artifact v0.13.1 is not immutable: https://api.github.com/repos/wagoodman/dive/releases/209160155'
+      - 'Warn: release artifact v0.13.0 is not immutable: https://api.github.com/repos/wagoodman/dive/releases/207517813'
+      - 'Warn: release artifact v0.12.0 is not immutable: https://api.github.com/repos/wagoodman/dive/releases/139692093'
+      - 'Warn: release artifact v0.11.0 is not immutable: https://api.github.com/repos/wagoodman/dive/releases/111432456'
+      - 'Warn: release artifact v0.10.0 is not immutable: https://api.github.com/repos/wagoodman/dive/releases/39405272'
+      - 'Warn: release artifact v0.13.1 does not have provenance: https://api.github.com/repos/wagoodman/dive/releases/209160155'
+      - 'Warn: release artifact v0.13.0 does not have provenance: https://api.github.com/repos/wagoodman/dive/releases/207517813'
+      - 'Warn: release artifact v0.12.0 does not have provenance: https://api.github.com/repos/wagoodman/dive/releases/139692093'
+      - 'Warn: release artifact v0.11.0 does not have provenance: https://api.github.com/repos/wagoodman/dive/releases/111432456'
+      - 'Warn: release artifact v0.10.0 does not have provenance: https://api.github.com/repos/wagoodman/dive/releases/39405272'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 28 are checked with a SAST tool'
   - name: Pinned-Dependencies
     score: 1
     reason: dependency not pinned by hash detected -- score normalized to 1
@@ -202,7 +230,6 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release.yaml:87: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/release.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yaml:109: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/release.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release.yaml:112: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/release.yaml/main?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:35: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:47: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/validations.yaml:53: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/validations.yaml:56: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
@@ -215,33 +242,11 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:124: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:126: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:15: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/validations.yaml:35: update your workflow using https://app.stepsecurity.io/secureworkflow/wagoodman/dive/validations.yaml/main?enable=pin'
       - 'Warn: containerImage not pinned by hash: .data/Dockerfile.example:1: pin your Docker image by updating busybox:latest to busybox:latest@sha256:a46257e06c82ad85242d0d38077d0a52d9896389ca60a1a59d3463db586e5fa4'
       - 'Warn: containerImage not pinned by hash: .data/Dockerfile.test-image:1: pin your Docker image by updating busybox:latest to busybox:latest@sha256:a46257e06c82ad85242d0d38077d0a52d9896389ca60a1a59d3463db586e5fa4'
       - 'Warn: containerImage not pinned by hash: Dockerfile:1: pin your Docker image by updating alpine:3.24 to alpine:3.24@sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf'
       - 'Info:   0 out of  13 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   2 out of  11 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   3 containerImage dependencies pinned'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v0.13.1 not signed: https://api.github.com/repos/wagoodman/dive/releases/209160155'
-      - 'Warn: release artifact v0.13.0 not signed: https://api.github.com/repos/wagoodman/dive/releases/207517813'
-      - 'Warn: release artifact v0.12.0 not signed: https://api.github.com/repos/wagoodman/dive/releases/139692093'
-      - 'Warn: release artifact v0.11.0 not signed: https://api.github.com/repos/wagoodman/dive/releases/111432456'
-      - 'Warn: release artifact v0.10.0 not signed: https://api.github.com/repos/wagoodman/dive/releases/39405272'
-      - 'Warn: release artifact v0.13.1 does not have provenance: https://api.github.com/repos/wagoodman/dive/releases/209160155'
-      - 'Warn: release artifact v0.13.0 does not have provenance: https://api.github.com/repos/wagoodman/dive/releases/207517813'
-      - 'Warn: release artifact v0.12.0 does not have provenance: https://api.github.com/repos/wagoodman/dive/releases/139692093'
-      - 'Warn: release artifact v0.11.0 does not have provenance: https://api.github.com/repos/wagoodman/dive/releases/111432456'
-      - 'Warn: release artifact v0.10.0 does not have provenance: https://api.github.com/repos/wagoodman/dive/releases/39405272'
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 28 are checked with a SAST tool'
 ---

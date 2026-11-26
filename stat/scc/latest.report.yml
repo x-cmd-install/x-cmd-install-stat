@@ -7,7 +7,7 @@ about:
   latestVersion: "v4.1.0"
   latestRelease: "v4.1.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-24T07:52:02Z
+  collectedAt: 2026-11-25T06:24:04Z
 timeline:
   created: 2018-03-01
   lastCommit: 2026-11-24
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-07
   lastPrerelease: 
 popularity:
-  star: 8891
+  star: 8893
   watcher: 34
   fork: 365
   release: 45
@@ -33,7 +33,7 @@ language:
 totalBytes: 1827787
 recent:
   last30d:
-    since: 2026-10-25
+    since: 2026-10-26
     release: 0
     mergedPR: 22
     openPR: 1
@@ -41,7 +41,7 @@ recent:
     openIssue: 2
     commit: 21
   last60d:
-    since: 2026-09-25
+    since: 2026-09-26
     release: 0
     mergedPR: 42
     openPR: 1
@@ -49,23 +49,23 @@ recent:
     openIssue: 2
     commit: 48
   last90d:
-    since: 2026-08-26
+    since: 2026-08-27
     release: 1
-    mergedPR: 56
+    mergedPR: 55
     openPR: 1
     closedIssue: 5
     openIssue: 3
     commit: 60
   last180d:
-    since: 2026-05-28
+    since: 2026-05-29
     release: 2
-    mergedPR: 102
+    mergedPR: 101
     openPR: 1
     closedIssue: 13
     openIssue: 3
     commit: 138
   last360d:
-    since: 2025-11-29
+    since: 2025-11-30
     release: 3
     mergedPR: 137
     openPR: 3
@@ -73,7 +73,7 @@ recent:
     openIssue: 4
     commit: 196
   last720d:
-    since: 2024-12-04
+    since: 2024-12-05
     release: 5
     mergedPR: 207
     openPR: 3
@@ -89,7 +89,7 @@ total:
   commit: 1731
 ---
 path: /home/runner/.x-repo/github.com/boyter/scc
-collectedAt: 2026-11-24T07:52:04Z
+collectedAt: 2026-11-25T06:24:07Z
 loc:
   Go:
     code: 59830
@@ -487,15 +487,19 @@ total:
   blanks: 18309
   files: 355
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/boyter/scc
-  commit: 324f65ef2045b0e37f5ba1c43e0b2f093345c4db
+  commit: 5a131106c7eb3bd849bc3b944eb13687df05b758
 scorecard:
-  version: v5.6.0
-  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
 score: 5.6
 checks:
+  - name: Code-Review
+    score: 8
+    reason: Found 26/30 approved changesets -- score normalized to 8
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 5 issue activity found in the last 90 days -- score normalized to 10
@@ -503,10 +507,6 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Code-Review
-    score: 8
-    reason: Found 26/30 approved changesets -- score normalized to 8
     details: null
   - name: Token-Permissions
     score: 0
@@ -538,13 +538,48 @@ checks:
     reason: project is fuzzed
     details:
       - 'Info: GoBuiltInFuzzer integration found: processor/counters_fuzz_test.go:55'
-      - 'Info: GoBuiltInFuzzer integration found: processor/counters_fuzz_test.go:208'
+      - 'Info: GoBuiltInFuzzer integration found: processor/counters_fuzz_test.go:210'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v4.1.0 not signed: https://api.github.com/repos/boyter/scc/releases/384346607'
+      - 'Warn: release artifact v4.0.0 not signed: https://api.github.com/repos/boyter/scc/releases/375391154'
+      - 'Warn: release artifact v3.7.0 not signed: https://api.github.com/repos/boyter/scc/releases/293192420'
+      - 'Warn: release artifact v3.6.0 not signed: https://api.github.com/repos/boyter/scc/releases/258697320'
+      - 'Warn: release artifact v3.5.0 not signed: https://api.github.com/repos/boyter/scc/releases/200608244'
+      - 'Warn: release artifact v4.1.0 is not immutable: https://api.github.com/repos/boyter/scc/releases/384346607'
+      - 'Warn: release artifact v4.0.0 is not immutable: https://api.github.com/repos/boyter/scc/releases/375391154'
+      - 'Warn: release artifact v3.7.0 is not immutable: https://api.github.com/repos/boyter/scc/releases/293192420'
+      - 'Warn: release artifact v3.6.0 is not immutable: https://api.github.com/repos/boyter/scc/releases/258697320'
+      - 'Warn: release artifact v3.5.0 is not immutable: https://api.github.com/repos/boyter/scc/releases/200608244'
+      - 'Warn: release artifact v4.1.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/384346607'
+      - 'Warn: release artifact v4.0.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/375391154'
+      - 'Warn: release artifact v3.7.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/293192420'
+      - 'Warn: release artifact v3.6.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/258697320'
+      - 'Warn: release artifact v3.5.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/200608244'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker-publish.yml:26'
+  - name: SAST
+    score: 9
+    reason: SAST tool detected but not run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: 22 commits out of 26 are checked with a SAST tool'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -567,37 +602,7 @@ checks:
       - 'Warn: goCommand not pinned by hash: vendor/github.com/json-iterator/go/build.sh:10'
       - 'Info:   0 out of   7 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   5 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   2 goCommand dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v4.1.0 not signed: https://api.github.com/repos/boyter/scc/releases/384346607'
-      - 'Warn: release artifact v4.0.0 not signed: https://api.github.com/repos/boyter/scc/releases/375391154'
-      - 'Warn: release artifact v3.7.0 not signed: https://api.github.com/repos/boyter/scc/releases/293192420'
-      - 'Warn: release artifact v3.6.0 not signed: https://api.github.com/repos/boyter/scc/releases/258697320'
-      - 'Warn: release artifact v3.5.0 not signed: https://api.github.com/repos/boyter/scc/releases/200608244'
-      - 'Warn: release artifact v4.1.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/384346607'
-      - 'Warn: release artifact v4.0.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/375391154'
-      - 'Warn: release artifact v3.7.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/293192420'
-      - 'Warn: release artifact v3.6.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/258697320'
-      - 'Warn: release artifact v3.5.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/200608244'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker-publish.yml:26'
-  - name: SAST
-    score: 9
-    reason: SAST tool detected but not run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 24 commits out of 27 are checked with a SAST tool'
+      - 'Info:   0 out of   2 goCommand dependencies pinned'
 ---
-{"id":384346607,"author":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOB1rYa84W6Knv","tag_name":"v4.1.0","target_commitish":"master","name":"v4.1.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-07T22:41:12Z","updated_at":"2026-09-07T22:41:50Z","published_at":"2026-09-07T22:41:50Z","assets":[{"id":549478959,"node_id":"RA_kwDOB1rYa84gwGIv","name":"checksums.txt","label":"","uploader":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":712,"digest":"sha256:bd77b4ee491d8bc0da7864ff6022778c60d19ce79ce6f8060ad514fed5e6c76c","download_count":10088,"created_at":"2026-09-07T22:41:49Z","updated_at":"2026-09-07T22:41:50Z"},{"id":549478883,"node_id":"RA_kwDOB1rYa84gwGHj","name":"scc_Darwin_arm64.tar.gz","label":"","uploader":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":6555425,"digest":"sha256:7201c7aa4aace058d43308462cba72adb18f6094c08c0741727455976d0a0747","download_count":5497,"created_at":"2026-09-07T22:41:47Z","updated_at":"2026-09-07T22:41:49Z"},{"id":549478879,"node_id":"RA_kwDOB1rYa84gwGHf","name":"scc_Darwin_x86_64.tar.gz","label":"","uploader":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":7147397,"digest":"sha256:7f705031228add7e55edded409179a60de6b538d41f153ba2922dee95adda50d","download_count":568,"created_at":"2026-09-07T22:41:47Z","updated_at":"2026-09-07T22:41:49Z"},{"id":549478881,"node_id":"RA_kwDOB1rYa84gwGHh","name":"scc_Linux_arm64.tar.gz","label":"","uploader":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":6294379,"digest":"sha256:6e0d2a1f8d3540ba7df185477dec40bb7340f1b214bfd303147de5cad2bd7b8b","download_count":11527,"created_at":"2026-09-07T22:41:47Z","updated_at":"2026-09-07T22:41:49Z"},{"id":549478882,"node_id":"RA_kwDOB1rYa84gwGHi","name":"scc_Linux_i386.tar.gz","label":"","uploader":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":6683974,"digest":"sha256:cddeda90ec848c614c6c390eae8b638f94d88e9450e00bf2ba5f420f83b66de1","download_count":160,"created_at":"2026-09-07T22:41:47Z","updated_at":"2026-09-07T22:41:49Z"},{"id":549478876,"node_id":"RA_kwDOB1rYa84gwGHc","name":"scc_Linux_x86_64.tar.gz","label":"","uploader":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":7016834,"digest":"sha256:c7328436d3027f4357d3d7853f7dc3ac2bbcb4ca08f1adad91a27c593884079b","download_count":139187,"created_at":"2026-09-07T22:41:47Z","updated_at":"2026-09-07T22:41:49Z"},{"id":549478878,"node_id":"RA_kwDOB1rYa84gwGHe","name":"scc_Windows_arm64.zip","label":"","uploader":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":6405521,"digest":"sha256:fdc1188bec07ab46fd391686c404abcd0bed92fffb5f1bb03aa9050dd7bc7f15","download_count":769,"created_at":"2026-09-07T22:41:47Z","updated_at":"2026-09-07T22:41:49Z"},{"id":549478886,"node_id":"RA_kwDOB1rYa84gwGHm","name":"scc_Windows_i386.zip","label":"","uploader":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":7018488,"digest":"sha256:7b5b924e85b6fe7f1ba56f15e7e27220a2c0c7089f815368e61f24c6ef317688","download_count":613,"created_at":"2026-09-07T22:41:47Z","updated_at":"2026-09-07T22:41:49Z"},{"id":549478880,"node_id":"RA_kwDOB1rYa84gwGHg","name":"scc_Windows_x86_64.zip","label":"","uploader":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":7244303,"digest":"sha256:4a433984f45ff29c94eeb3af6db5b511c58f5bf74063dccedafcbf473cb8ff31","download_count":9249,"created_at":"2026-09-07T22:41:47Z","updated_at":"2026-09-07T22:41:49Z"}],"body":"## Changelog\n* 9f95cd6e06de134c1d5274f0595a69b18190edc6  Issue #762 (#763)\n* eb6ac4cb889beabbfb2cb40841c1c07ff6adc25c fix(asp.net): correct the server side comment terminator (#772)\n* 300b452169dc4e2199f7d651910e7d3449f0b02e fix(php): correct the double quoted string delimiter (#759)\n* a1620695ce7a8700e3dd73c9c1b47b4470696ee5 fix: count Rust byte character literals (#764)\n* d96feb79278f82020f31286d2952937c053ce38c fix: normalise negative zero in report SVG coordinates (#767) (#768)\n* de6aac04440809ad6d53c055a6984edd27b5166a fix: resolve HEAD in git worktrees (#765) (#766)\n* 74aeb15421b5cc80d796b8092cf40452567897ed fix: write response body before returning from the handler (#761)\n* 4a2b4d3ff82de0a31193521eeef2c83b157244fd perf: count the kernel in half the time, and count it correctly (#771)\n* c651b07a7d3aa6e97a476380eef0f478a53719a3 prepare 4.1.0 release\n\n","reactions":{"total_count":5,"+1":0,"-1":0,"laugh":0,"hooray":2,"confused":0,"heart":0,"rocket":1,"eyes":2}}
+{"id":384346607,"author":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOB1rYa84W6Knv","tag_name":"v4.1.0","target_commitish":"master","name":"v4.1.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-09-07T22:41:12Z","updated_at":"2026-09-07T22:41:50Z","published_at":"2026-09-07T22:41:50Z","assets":[{"id":549478959,"node_id":"RA_kwDOB1rYa84gwGIv","name":"checksums.txt","label":"","uploader":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"text/plain; charset=utf-8","state":"uploaded","size":712,"digest":"sha256:bd77b4ee491d8bc0da7864ff6022778c60d19ce79ce6f8060ad514fed5e6c76c","download_count":10222,"created_at":"2026-09-07T22:41:49Z","updated_at":"2026-09-07T22:41:50Z"},{"id":549478883,"node_id":"RA_kwDOB1rYa84gwGHj","name":"scc_Darwin_arm64.tar.gz","label":"","uploader":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":6555425,"digest":"sha256:7201c7aa4aace058d43308462cba72adb18f6094c08c0741727455976d0a0747","download_count":5745,"created_at":"2026-09-07T22:41:47Z","updated_at":"2026-09-07T22:41:49Z"},{"id":549478879,"node_id":"RA_kwDOB1rYa84gwGHf","name":"scc_Darwin_x86_64.tar.gz","label":"","uploader":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":7147397,"digest":"sha256:7f705031228add7e55edded409179a60de6b538d41f153ba2922dee95adda50d","download_count":577,"created_at":"2026-09-07T22:41:47Z","updated_at":"2026-09-07T22:41:49Z"},{"id":549478881,"node_id":"RA_kwDOB1rYa84gwGHh","name":"scc_Linux_arm64.tar.gz","label":"","uploader":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":6294379,"digest":"sha256:6e0d2a1f8d3540ba7df185477dec40bb7340f1b214bfd303147de5cad2bd7b8b","download_count":11780,"created_at":"2026-09-07T22:41:47Z","updated_at":"2026-09-07T22:41:49Z"},{"id":549478882,"node_id":"RA_kwDOB1rYa84gwGHi","name":"scc_Linux_i386.tar.gz","label":"","uploader":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":6683974,"digest":"sha256:cddeda90ec848c614c6c390eae8b638f94d88e9450e00bf2ba5f420f83b66de1","download_count":164,"created_at":"2026-09-07T22:41:47Z","updated_at":"2026-09-07T22:41:49Z"},{"id":549478876,"node_id":"RA_kwDOB1rYa84gwGHc","name":"scc_Linux_x86_64.tar.gz","label":"","uploader":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":7016834,"digest":"sha256:c7328436d3027f4357d3d7853f7dc3ac2bbcb4ca08f1adad91a27c593884079b","download_count":141880,"created_at":"2026-09-07T22:41:47Z","updated_at":"2026-09-07T22:41:49Z"},{"id":549478878,"node_id":"RA_kwDOB1rYa84gwGHe","name":"scc_Windows_arm64.zip","label":"","uploader":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":6405521,"digest":"sha256:fdc1188bec07ab46fd391686c404abcd0bed92fffb5f1bb03aa9050dd7bc7f15","download_count":789,"created_at":"2026-09-07T22:41:47Z","updated_at":"2026-09-07T22:41:49Z"},{"id":549478886,"node_id":"RA_kwDOB1rYa84gwGHm","name":"scc_Windows_i386.zip","label":"","uploader":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":7018488,"digest":"sha256:7b5b924e85b6fe7f1ba56f15e7e27220a2c0c7089f815368e61f24c6ef317688","download_count":625,"created_at":"2026-09-07T22:41:47Z","updated_at":"2026-09-07T22:41:49Z"},{"id":549478880,"node_id":"RA_kwDOB1rYa84gwGHg","name":"scc_Windows_x86_64.zip","label":"","uploader":{"login":"boyter","id":612151,"node_id":"MDQ6VXNlcjYxMjE1MQ==","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/zip","state":"uploaded","size":7244303,"digest":"sha256:4a433984f45ff29c94eeb3af6db5b511c58f5bf74063dccedafcbf473cb8ff31","download_count":9563,"created_at":"2026-09-07T22:41:47Z","updated_at":"2026-09-07T22:41:49Z"}],"body":"## Changelog\n* 9f95cd6e06de134c1d5274f0595a69b18190edc6  Issue #762 (#763)\n* eb6ac4cb889beabbfb2cb40841c1c07ff6adc25c fix(asp.net): correct the server side comment terminator (#772)\n* 300b452169dc4e2199f7d651910e7d3449f0b02e fix(php): correct the double quoted string delimiter (#759)\n* a1620695ce7a8700e3dd73c9c1b47b4470696ee5 fix: count Rust byte character literals (#764)\n* d96feb79278f82020f31286d2952937c053ce38c fix: normalise negative zero in report SVG coordinates (#767) (#768)\n* de6aac04440809ad6d53c055a6984edd27b5166a fix: resolve HEAD in git worktrees (#765) (#766)\n* 74aeb15421b5cc80d796b8092cf40452567897ed fix: write response body before returning from the handler (#761)\n* 4a2b4d3ff82de0a31193521eeef2c83b157244fd perf: count the kernel in half the time, and count it correctly (#771)\n* c651b07a7d3aa6e97a476380eef0f478a53719a3 prepare 4.1.0 release\n\n","reactions":{"total_count":5,"+1":0,"-1":0,"laugh":0,"hooray":2,"confused":0,"heart":0,"rocket":1,"eyes":2}}

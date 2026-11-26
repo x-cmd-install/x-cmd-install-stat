@@ -7,7 +7,7 @@ about:
   latestVersion: "v0.18"
   latestRelease: "v0.18"
   latestPrerelease: ""
-  collectedAt: 2026-11-24T11:27:29Z
+  collectedAt: 2026-11-25T09:32:16Z
 timeline:
   created: 2019-12-23
   lastCommit: 2026-11-23
@@ -20,7 +20,7 @@ popularity:
   fork: 3
   release: 4
   contributor: 4
-  pullRequest: 32
+  pullRequest: 33
   issue: 33
 language:
   Nim: 327606
@@ -29,63 +29,63 @@ language:
 totalBytes: 337273
 recent:
   last30d:
-    since: 2026-10-25
+    since: 2026-10-26
     release: 1
     mergedPR: 13
-    openPR: 0
+    openPR: 1
     closedIssue: 2
     openIssue: 1
     commit: 13
   last60d:
-    since: 2026-09-25
+    since: 2026-09-26
     release: 1
     mergedPR: 13
-    openPR: 0
+    openPR: 1
     closedIssue: 2
     openIssue: 1
     commit: 13
   last90d:
-    since: 2026-08-26
+    since: 2026-08-27
     release: 1
     mergedPR: 14
-    openPR: 0
+    openPR: 1
     closedIssue: 2
     openIssue: 1
     commit: 14
   last180d:
-    since: 2026-05-28
+    since: 2026-05-29
     release: 1
     mergedPR: 16
-    openPR: 0
+    openPR: 1
     closedIssue: 2
     openIssue: 2
     commit: 16
   last360d:
-    since: 2025-11-29
+    since: 2025-11-30
     release: 1
     mergedPR: 22
-    openPR: 0
+    openPR: 1
     closedIssue: 2
     openIssue: 2
     commit: 26
   last720d:
-    since: 2024-12-04
+    since: 2024-12-05
     release: 1
     mergedPR: 22
-    openPR: 0
+    openPR: 1
     closedIssue: 2
     openIssue: 3
     commit: 34
 total:
   release: 4
   mergedPR: 31
-  openPR: 0
+  openPR: 1
   closedIssue: 25
   openIssue: 8
   commit: 235
 ---
 path: /home/runner/.x-repo/github.com/zqqw/pakku
-collectedAt: 2026-11-24T11:27:29Z
+collectedAt: 2026-11-25T09:32:17Z
 loc:
   Nim:
     code: 7301
@@ -125,4 +125,4 @@ total:
 ---
 
 ---
-{"id":454929967,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDODbLNt84bHa4v","tag_name":"v0.18","target_commitish":"master","name":"Release v0.18","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-18T23:57:13Z","updated_at":"2026-11-23T02:57:14Z","published_at":"2026-11-23T02:57:14Z","assets":[{"id":781266359,"node_id":"RA_kwDODbLNt84ukS23","name":"pakku-0.18-x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":441361,"digest":"sha256:bff014012ce57f4d0f1a86c4a9c803a20f1555329c232d698613554d70fda658","download_count":14,"created_at":"2026-11-23T02:45:11Z","updated_at":"2026-11-23T02:45:11Z"}],"body":"# pakku v0.18\r\n\r\nFirst since v0.17 that happened more than 3 years ago.\r\n\r\nHighlights: configuration parsing, the install helper, the build pipeline and the dependency list. What shows is control over build artefacts, reuse of archives that were already built, and a smaller binary.\r\n\r\n## Added\r\n\r\n- **Artefact policy.** `PackageOutputDir` moves the package output out of the temporary workspace. `CleanupAfterInstall` (`Full`, `Worktree`, `None`) decides what a successful install keeps, `KeepBuildDirOnFailure` and `KeepBuiltPackagesOnFailure` what a failed one keeps.\r\n- **`PreserveBuilt = Pkgdest`.** The copy destination can now be the effective `PKGDEST` resolved from `makepkg.conf`, next to the existing `Internal` and `User` modes.\r\n- **Reuse.** An exact `name-version-arch` archive in the output directory or the `PreserveBuilt` destination replaces a rebuild, per base and all-or-nothing: every expected archive must be present and non-empty.\r\n- **Install prompts.** Failed AUR builds can be skipped, upgrades accept a numeric skip, and `IgnorePkg` packages are filtered from the AUR prompt.\r\n- **`makepkg.conf` discovery.** `MAKEPKG_CONF`, the user config directory, `~/.makepkg.conf` and `/etc/makepkg.conf`, in that order, instead of the hard-coded `/etc/makepkg.conf`.\r\n\r\n## Changed\r\n\r\n- **Configuration is strict.** Unknown keys, invalid enums and invalid booleans fail. Inline `#` comments after whitespace are accepted, booleans take explicit values, and repeated `IgnorePkg`/`HoldPkg` accumulate as in `pacman.conf`.\r\n- **Dependencies.** `std/re`, PCRE and the `htmlparser`/`xmltree` pair are gone. The affected parsers follow libalpm's rules, and AUR comments use a targeted parser.\r\n- **Build.** `config.nims` is the only source of `Version`, `Prefix` and the release stamp, `make releasecheck` requires a clean checkout on the tag, and CI runs `nim test` and `nim testmakefile` in an Arch container on pull requests.\r\n- **Helper contract.** A fixed argv layout in `src/helperproto.nim` makes a pakku and helper version mismatch visible instead of misparsed.\r\n- **Declined installs follow the cleanup policy.** Refusing the install prompt now runs `CleanupAfterInstall`, so `Full` removes the built archives where 0.17 kept them. `Worktree` and `None` retain them.\r\n\r\n## Fixed\r\n\r\n- Preserved copies are written as `<dest>.part` and renamed, and zero-byte archives are no longer produced. The 0.17 helper copied straight to the final name.\r\n- Commands run with dropped privileges no longer receive an empty environment when pakku was not started through a privilege helper, which had hidden `$HOME` and `$PATH` from them.\r\n- `.SRCINFO` values are stripped of whitespace, a missing dependency no longer deletes build files, and the helper is found from a development checkout.\r\n- **Network.** HTTP 4xx and 5xx fail the transfer instead of being parsed as AUR JSON (#50, #55, #58).\r\n\r\n**Full Changelog**: https://github.com/zqqw/pakku/compare/v0.17...v0.18\r\n"}
+{"id":454929967,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDODbLNt84bHa4v","tag_name":"v0.18","target_commitish":"master","name":"Release v0.18","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-18T23:57:13Z","updated_at":"2026-11-23T02:57:14Z","published_at":"2026-11-23T02:57:14Z","assets":[{"id":781266359,"node_id":"RA_kwDODbLNt84ukS23","name":"pakku-0.18-x86_64.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":441361,"digest":"sha256:bff014012ce57f4d0f1a86c4a9c803a20f1555329c232d698613554d70fda658","download_count":16,"created_at":"2026-11-23T02:45:11Z","updated_at":"2026-11-23T02:45:11Z"}],"body":"# pakku v0.18\r\n\r\nFirst since v0.17 that happened more than 3 years ago.\r\n\r\nHighlights: configuration parsing, the install helper, the build pipeline and the dependency list. What shows is control over build artefacts, reuse of archives that were already built, and a smaller binary.\r\n\r\n## Added\r\n\r\n- **Artefact policy.** `PackageOutputDir` moves the package output out of the temporary workspace. `CleanupAfterInstall` (`Full`, `Worktree`, `None`) decides what a successful install keeps, `KeepBuildDirOnFailure` and `KeepBuiltPackagesOnFailure` what a failed one keeps.\r\n- **`PreserveBuilt = Pkgdest`.** The copy destination can now be the effective `PKGDEST` resolved from `makepkg.conf`, next to the existing `Internal` and `User` modes.\r\n- **Reuse.** An exact `name-version-arch` archive in the output directory or the `PreserveBuilt` destination replaces a rebuild, per base and all-or-nothing: every expected archive must be present and non-empty.\r\n- **Install prompts.** Failed AUR builds can be skipped, upgrades accept a numeric skip, and `IgnorePkg` packages are filtered from the AUR prompt.\r\n- **`makepkg.conf` discovery.** `MAKEPKG_CONF`, the user config directory, `~/.makepkg.conf` and `/etc/makepkg.conf`, in that order, instead of the hard-coded `/etc/makepkg.conf`.\r\n\r\n## Changed\r\n\r\n- **Configuration is strict.** Unknown keys, invalid enums and invalid booleans fail. Inline `#` comments after whitespace are accepted, booleans take explicit values, and repeated `IgnorePkg`/`HoldPkg` accumulate as in `pacman.conf`.\r\n- **Dependencies.** `std/re`, PCRE and the `htmlparser`/`xmltree` pair are gone. The affected parsers follow libalpm's rules, and AUR comments use a targeted parser.\r\n- **Build.** `config.nims` is the only source of `Version`, `Prefix` and the release stamp, `make releasecheck` requires a clean checkout on the tag, and CI runs `nim test` and `nim testmakefile` in an Arch container on pull requests.\r\n- **Helper contract.** A fixed argv layout in `src/helperproto.nim` makes a pakku and helper version mismatch visible instead of misparsed.\r\n- **Declined installs follow the cleanup policy.** Refusing the install prompt now runs `CleanupAfterInstall`, so `Full` removes the built archives where 0.17 kept them. `Worktree` and `None` retain them.\r\n\r\n## Fixed\r\n\r\n- Preserved copies are written as `<dest>.part` and renamed, and zero-byte archives are no longer produced. The 0.17 helper copied straight to the final name.\r\n- Commands run with dropped privileges no longer receive an empty environment when pakku was not started through a privilege helper, which had hidden `$HOME` and `$PATH` from them.\r\n- `.SRCINFO` values are stripped of whitespace, a missing dependency no longer deletes build files, and the helper is found from a development checkout.\r\n- **Network.** HTTP 4xx and 5xx fail the transfer instead of being parsed as AUR JSON (#50, #55, #58).\r\n\r\n**Full Changelog**: https://github.com/zqqw/pakku/compare/v0.17...v0.18\r\n"}

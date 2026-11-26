@@ -7,7 +7,7 @@ about:
   latestVersion: "cli/v2.0.0-rc.0"
   latestRelease: "cli-latest"
   latestPrerelease: "cli/v2.0.0-rc.0"
-  collectedAt: 2026-11-24T11:48:14Z
+  collectedAt: 2026-11-25T09:53:46Z
 timeline:
   created: 2023-08-22
   lastCommit: 2026-11-24
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2026-04-24
   lastPrerelease: 2026-11-20
 popularity:
-  star: 18855
+  star: 18860
   watcher: 69
-  fork: 1190
+  fork: 1191
   release: 16
   contributor: 58
   pullRequest: 961
@@ -69,15 +69,15 @@ language:
 totalBytes: 2218197
 recent:
   last30d:
-    since: 2026-10-25
+    since: 2026-10-26
     release: 1
     mergedPR: 54
     openPR: 12
-    closedIssue: 13
+    closedIssue: 12
     openIssue: 7
     commit: 54
   last60d:
-    since: 2026-09-25
+    since: 2026-09-26
     release: 1
     mergedPR: 90
     openPR: 14
@@ -85,7 +85,7 @@ recent:
     openIssue: 10
     commit: 122
   last90d:
-    since: 2026-08-26
+    since: 2026-08-27
     release: 1
     mergedPR: 123
     openPR: 21
@@ -93,7 +93,7 @@ recent:
     openIssue: 16
     commit: 177
   last180d:
-    since: 2026-05-28
+    since: 2026-05-29
     release: 1
     mergedPR: 135
     openPR: 25
@@ -101,7 +101,7 @@ recent:
     openIssue: 22
     commit: 194
   last360d:
-    since: 2025-11-29
+    since: 2025-11-30
     release: 5
     mergedPR: 192
     openPR: 42
@@ -109,12 +109,12 @@ recent:
     openIssue: 35
     commit: 262
   last720d:
-    since: 2024-12-04
+    since: 2024-12-05
     release: 16
     mergedPR: 396
     openPR: 44
     closedIssue: 162
-    openIssue: 76
+    openIssue: 75
     commit: 1050
 total:
   release: 16
@@ -125,7 +125,7 @@ total:
   commit: 2032
 ---
 path: /home/runner/.x-repo/github.com/google/magika
-collectedAt: 2026-11-24T11:48:23Z
+collectedAt: 2026-11-25T09:53:59Z
 loc:
   Rust:
     code: 33774
@@ -388,7 +388,7 @@ total:
   blanks: 6817
   files: 447
 ---
-date: "2026-11-24T09:45:36Z"
+date: "2026-11-24T21:46:27Z"
 repo:
   name: github.com/google/magika
   commit: 9be2a0a89f1f7fc3be421fd00f9deb09706db5c5
@@ -397,11 +397,6 @@ scorecard:
   commit: c22063e786c11f9dd714d777a687ff7c4599b600
 score: 6.5
 checks:
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Code-Review
     score: 8
     reason: Found 14/16 approved changesets -- score normalized to 8
@@ -418,6 +413,43 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: SECURITY.md:1'
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Token-Permissions
+    score: 0
+    reason: detected GitHub workflow tokens with excessive permissions
+    details:
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/cli-release.yml:117'
+      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql.yml:40'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:41'
+      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/js-docs-builder.yml:20'
+      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/python-coverage.yml:24'
+      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/cli-latest.yml:14'
+      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/cli-release.yml:18'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:23'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/docs-check.yml:24'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/gh-actions-check.yml:17'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/github-pages.yml:19'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/go-test.yml:15'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/js-check-import-scenarios.yml:14'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/js-docs-builder.yml:15'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/js-publish.yml:5'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/js-test.yml:14'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/kb-check.yml:34'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/python-build-test-and-release-package.yml:23'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/python-coverage.yml:15'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/python-test-published-package.yml:17'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/python-test-published-rc-package.yml:17'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/python-test-suite.yml:21'
+      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/rust-test.yml:17'
+      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:19'
   - name: Binary-Artifacts
     score: 0
     reason: binaries present in source code
@@ -479,62 +511,37 @@ checks:
       - 'Warn: binary detected: tests_data/resolvers/fixtures/storage/iso.iso:1'
       - 'Warn: binary detected: tests_data/resolvers/negative/mz_garbage.bin:1'
       - 'Warn: binary detected: tests_data/resolvers/negative/pe_lfanew_out_of_range.bin:1'
-  - name: Token-Permissions
-    score: 0
-    reason: detected GitHub workflow tokens with excessive permissions
-    details:
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/cli-release.yml:117'
-      - 'Info: jobLevel ''actions'' permission set to ''read'': .github/workflows/codeql.yml:40'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:41'
-      - 'Warn: jobLevel ''contents'' permission set to ''write'': .github/workflows/js-docs-builder.yml:20'
-      - 'Info: jobLevel ''contents'' permission set to ''read'': .github/workflows/python-coverage.yml:24'
-      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/cli-latest.yml:14'
-      - 'Warn: topLevel ''contents'' permission set to ''write'': .github/workflows/cli-release.yml:18'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/codeql.yml:23'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/docs-check.yml:24'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/gh-actions-check.yml:17'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/github-pages.yml:19'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/go-test.yml:15'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/js-check-import-scenarios.yml:14'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/js-docs-builder.yml:15'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/js-publish.yml:5'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/js-test.yml:14'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/kb-check.yml:34'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/python-build-test-and-release-package.yml:23'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/python-coverage.yml:15'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/python-test-published-package.yml:17'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/python-test-published-rc-package.yml:17'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/python-test-suite.yml:21'
-      - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/rust-test.yml:17'
-      - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:19'
-  - name: Dangerous-Workflow
+  - name: License
     score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
   - name: CII-Best-Practices
     score: 5
     reason: 'badge detected: Passing'
     details: null
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/python-build-test-and-release-package.yml:494'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: TypeScriptPropertyBasedTesting integration found: js/test/magika.test.ts:27'
-      - 'Info: TypeScriptPropertyBasedTesting integration found: js/test/magika.test.ts:27'
+      - 'Warn: release artifact cli/v2.0.0-rc.0 not signed: https://api.github.com/repos/google/magika/releases/452617567'
+      - 'Warn: release artifact cli/v1.1.0 not signed: https://api.github.com/repos/google/magika/releases/313265945'
+      - 'Warn: release artifact cli-latest not signed: https://api.github.com/repos/google/magika/releases/313267487'
+      - 'Warn: release artifact cli/v1.0.2 not signed: https://api.github.com/repos/google/magika/releases/290269834'
+      - 'Warn: release artifact cli/v2.0.0-rc.0 does not have provenance: https://api.github.com/repos/google/magika/releases/452617567'
+      - 'Warn: release artifact cli/v1.1.0 does not have provenance: https://api.github.com/repos/google/magika/releases/313265945'
+      - 'Warn: release artifact cli-latest does not have provenance: https://api.github.com/repos/google/magika/releases/313267487'
+      - 'Warn: release artifact cli/v1.0.2 does not have provenance: https://api.github.com/repos/google/magika/releases/290269834'
   - name: Pinned-Dependencies
     score: 5
     reason: dependency not pinned by hash detected -- score normalized to 5
     details:
       - 'Info: Possibly incomplete results: error parsing shell code: invalid parameter name: .github/workflows/cli-release.yml:79'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:4: pin your Docker image by updating python:3.11-slim to python:3.11-slim@sha256:788c5fb8a33aa5416623c540a8b4fa5c6f1b5cd805726d47a86cb24d1524e569'
-      - 'Warn: containerImage not pinned by hash: go/docker/Dockerfile:11: pin your Docker image by updating golang:latest to golang:latest@sha256:205c7636d74e0ffbe3d007162df7d74f859f5a8c8322dfb9f907977686c126cf'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:4: pin your Docker image by updating python:3.11-slim to python:3.11-slim@sha256:61e01f72680f86a5279ad510818ab7b2ee9f049822589d4e34e33e044360356c'
+      - 'Warn: containerImage not pinned by hash: go/docker/Dockerfile:11: pin your Docker image by updating golang:latest to golang:latest@sha256:5f1b98fa02fe396ebce2a0227a0e08309e11792915b9dd2e1f71053d7e7e6666'
       - 'Warn: containerImage not pinned by hash: go/docker/Dockerfile:55: pin your Docker image by updating debian:latest to debian:latest@sha256:3cda3ca472ce45507a5109c6a3907093e24d9ae67d55954c9a07a45665dafba2'
-      - 'Warn: containerImage not pinned by hash: tests_data/basic/dockerfile/Dockerfile:4: pin your Docker image by updating python:3.11-slim to python:3.11-slim@sha256:788c5fb8a33aa5416623c540a8b4fa5c6f1b5cd805726d47a86cb24d1524e569'
+      - 'Warn: containerImage not pinned by hash: tests_data/basic/dockerfile/Dockerfile:4: pin your Docker image by updating python:3.11-slim to python:3.11-slim@sha256:61e01f72680f86a5279ad510818ab7b2ee9f049822589d4e34e33e044360356c'
       - 'Warn: pipCommand not pinned by hash: Dockerfile:16'
       - 'Warn: pipCommand not pinned by hash: tests_data/basic/dockerfile/Dockerfile:12'
       - 'Warn: downloadThenRun not pinned by hash: .github/workflows/cli-release.yml:68'
@@ -660,6 +667,11 @@ checks:
       - 'Warn: Project is vulnerable to: GHSA-r825-w8mm-5pxw'
       - 'Warn: Project is vulnerable to: GHSA-rq7h-c2jc-7f22'
       - 'Warn: Project is vulnerable to: GHSA-mrhx-c7xc-m3w5'
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/python-build-test-and-release-package.yml:494'
   - name: Branch-Protection
     score: 8
     reason: branch protection is not maximal on development and all release branches
@@ -674,24 +686,12 @@ checks:
       - 'Info: ''up-to-date branches'' is required to merge on branch ''main'''
       - 'Info: status check found to merge onto on branch ''main'''
       - 'Info: PRs are required in order to make changes on branch ''main'''
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact cli/v2.0.0-rc.0 not signed: https://api.github.com/repos/google/magika/releases/452617567'
-      - 'Warn: release artifact cli/v1.1.0 not signed: https://api.github.com/repos/google/magika/releases/313265945'
-      - 'Warn: release artifact cli-latest not signed: https://api.github.com/repos/google/magika/releases/313267487'
-      - 'Warn: release artifact cli/v1.0.2 not signed: https://api.github.com/repos/google/magika/releases/290269834'
-      - 'Warn: release artifact cli/v2.0.0-rc.0 does not have provenance: https://api.github.com/repos/google/magika/releases/452617567'
-      - 'Warn: release artifact cli/v1.1.0 does not have provenance: https://api.github.com/repos/google/magika/releases/313265945'
-      - 'Warn: release artifact cli-latest does not have provenance: https://api.github.com/repos/google/magika/releases/313267487'
-      - 'Warn: release artifact cli/v1.0.2 does not have provenance: https://api.github.com/repos/google/magika/releases/290269834'
-  - name: License
+  - name: Fuzzing
     score: 10
-    reason: license file detected
+    reason: project is fuzzed
     details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
+      - 'Info: TypeScriptPropertyBasedTesting integration found: js/test/magika.test.ts:27'
+      - 'Info: TypeScriptPropertyBasedTesting integration found: js/test/magika.test.ts:27'
   - name: CI-Tests
     score: 10
     reason: 16 out of 16 merged PRs checked by a CI test -- score normalized to 10

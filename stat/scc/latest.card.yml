@@ -7,7 +7,7 @@ about:
   latestVersion: "v4.1.0"
   latestRelease: "v4.1.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-24T07:52:02Z
+  collectedAt: 2026-11-25T06:24:04Z
 timeline:
   created: 2018-03-01
   lastCommit: 2026-11-24
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-09-07
   lastPrerelease: 
 popularity:
-  star: 8891
+  star: 8893
   watcher: 34
   fork: 365
   release: 45
@@ -33,7 +33,7 @@ language:
 totalBytes: 1827787
 recent:
   last30d:
-    since: 2026-10-25
+    since: 2026-10-26
     release: 0
     mergedPR: 22
     openPR: 1
@@ -41,7 +41,7 @@ recent:
     openIssue: 2
     commit: 21
   last60d:
-    since: 2026-09-25
+    since: 2026-09-26
     release: 0
     mergedPR: 42
     openPR: 1
@@ -49,23 +49,23 @@ recent:
     openIssue: 2
     commit: 48
   last90d:
-    since: 2026-08-26
+    since: 2026-08-27
     release: 1
-    mergedPR: 56
+    mergedPR: 55
     openPR: 1
     closedIssue: 5
     openIssue: 3
     commit: 60
   last180d:
-    since: 2026-05-28
+    since: 2026-05-29
     release: 2
-    mergedPR: 102
+    mergedPR: 101
     openPR: 1
     closedIssue: 13
     openIssue: 3
     commit: 138
   last360d:
-    since: 2025-11-29
+    since: 2025-11-30
     release: 3
     mergedPR: 137
     openPR: 3
@@ -73,7 +73,7 @@ recent:
     openIssue: 4
     commit: 196
   last720d:
-    since: 2024-12-04
+    since: 2024-12-05
     release: 5
     mergedPR: 207
     openPR: 3
@@ -89,7 +89,7 @@ total:
   commit: 1731
 ---
 path: /home/runner/.x-repo/github.com/boyter/scc
-collectedAt: 2026-11-24T07:52:04Z
+collectedAt: 2026-11-25T06:24:07Z
 loc:
   Go:
     code: 59830
@@ -487,15 +487,19 @@ total:
   blanks: 18309
   files: 355
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/boyter/scc
-  commit: 324f65ef2045b0e37f5ba1c43e0b2f093345c4db
+  commit: 5a131106c7eb3bd849bc3b944eb13687df05b758
 scorecard:
-  version: v5.6.0
-  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
 score: 5.6
 checks:
+  - name: Code-Review
+    score: 8
+    reason: Found 26/30 approved changesets -- score normalized to 8
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 5 issue activity found in the last 90 days -- score normalized to 10
@@ -503,10 +507,6 @@ checks:
   - name: Dangerous-Workflow
     score: 10
     reason: no dangerous workflow patterns detected
-    details: null
-  - name: Code-Review
-    score: 8
-    reason: Found 26/30 approved changesets -- score normalized to 8
     details: null
   - name: Token-Permissions
     score: 0
@@ -538,13 +538,48 @@ checks:
     reason: project is fuzzed
     details:
       - 'Info: GoBuiltInFuzzer integration found: processor/counters_fuzz_test.go:55'
-      - 'Info: GoBuiltInFuzzer integration found: processor/counters_fuzz_test.go:208'
+      - 'Info: GoBuiltInFuzzer integration found: processor/counters_fuzz_test.go:210'
   - name: License
     score: 10
     reason: license file detected
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+  - name: Signed-Releases
+    score: 0
+    reason: Project has not signed or included provenance with any releases.
+    details:
+      - 'Warn: release artifact v4.1.0 not signed: https://api.github.com/repos/boyter/scc/releases/384346607'
+      - 'Warn: release artifact v4.0.0 not signed: https://api.github.com/repos/boyter/scc/releases/375391154'
+      - 'Warn: release artifact v3.7.0 not signed: https://api.github.com/repos/boyter/scc/releases/293192420'
+      - 'Warn: release artifact v3.6.0 not signed: https://api.github.com/repos/boyter/scc/releases/258697320'
+      - 'Warn: release artifact v3.5.0 not signed: https://api.github.com/repos/boyter/scc/releases/200608244'
+      - 'Warn: release artifact v4.1.0 is not immutable: https://api.github.com/repos/boyter/scc/releases/384346607'
+      - 'Warn: release artifact v4.0.0 is not immutable: https://api.github.com/repos/boyter/scc/releases/375391154'
+      - 'Warn: release artifact v3.7.0 is not immutable: https://api.github.com/repos/boyter/scc/releases/293192420'
+      - 'Warn: release artifact v3.6.0 is not immutable: https://api.github.com/repos/boyter/scc/releases/258697320'
+      - 'Warn: release artifact v3.5.0 is not immutable: https://api.github.com/repos/boyter/scc/releases/200608244'
+      - 'Warn: release artifact v4.1.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/384346607'
+      - 'Warn: release artifact v4.0.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/375391154'
+      - 'Warn: release artifact v3.7.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/293192420'
+      - 'Warn: release artifact v3.6.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/258697320'
+      - 'Warn: release artifact v3.5.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/200608244'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
+  - name: Packaging
+    score: 10
+    reason: packaging workflow detected
+    details:
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker-publish.yml:26'
+  - name: SAST
+    score: 9
+    reason: SAST tool detected but not run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: 22 commits out of 26 are checked with a SAST tool'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -567,36 +602,6 @@ checks:
       - 'Warn: goCommand not pinned by hash: vendor/github.com/json-iterator/go/build.sh:10'
       - 'Info:   0 out of   7 GitHub-owned GitHubAction dependencies pinned'
       - 'Info:   0 out of   5 third-party GitHubAction dependencies pinned'
-      - 'Info:   0 out of   2 goCommand dependencies pinned'
       - 'Info:   0 out of   2 containerImage dependencies pinned'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
-  - name: Signed-Releases
-    score: 0
-    reason: Project has not signed or included provenance with any releases.
-    details:
-      - 'Warn: release artifact v4.1.0 not signed: https://api.github.com/repos/boyter/scc/releases/384346607'
-      - 'Warn: release artifact v4.0.0 not signed: https://api.github.com/repos/boyter/scc/releases/375391154'
-      - 'Warn: release artifact v3.7.0 not signed: https://api.github.com/repos/boyter/scc/releases/293192420'
-      - 'Warn: release artifact v3.6.0 not signed: https://api.github.com/repos/boyter/scc/releases/258697320'
-      - 'Warn: release artifact v3.5.0 not signed: https://api.github.com/repos/boyter/scc/releases/200608244'
-      - 'Warn: release artifact v4.1.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/384346607'
-      - 'Warn: release artifact v4.0.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/375391154'
-      - 'Warn: release artifact v3.7.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/293192420'
-      - 'Warn: release artifact v3.6.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/258697320'
-      - 'Warn: release artifact v3.5.0 does not have provenance: https://api.github.com/repos/boyter/scc/releases/200608244'
-  - name: Packaging
-    score: 10
-    reason: packaging workflow detected
-    details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker-publish.yml:26'
-  - name: SAST
-    score: 9
-    reason: SAST tool detected but not run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 24 commits out of 27 are checked with a SAST tool'
+      - 'Info:   0 out of   2 goCommand dependencies pinned'
 ---

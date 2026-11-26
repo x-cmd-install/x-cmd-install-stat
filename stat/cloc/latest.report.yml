@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.12"
   latestRelease: "v2.12"
   latestPrerelease: ""
-  collectedAt: 2026-11-24T10:10:13Z
+  collectedAt: 2026-11-25T09:15:24Z
 timeline:
   created: 2015-09-07
   lastCommit: 2026-11-18
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-11-13
   lastPrerelease: 
 popularity:
-  star: 23684
+  star: 23686
   watcher: 210
   fork: 1126
   release: 26
@@ -126,7 +126,7 @@ language:
 totalBytes: 2290351
 recent:
   last30d:
-    since: 2026-10-25
+    since: 2026-10-26
     release: 1
     mergedPR: 1
     openPR: 0
@@ -134,7 +134,7 @@ recent:
     openIssue: 0
     commit: 8
   last60d:
-    since: 2026-09-25
+    since: 2026-09-26
     release: 1
     mergedPR: 6
     openPR: 0
@@ -142,15 +142,15 @@ recent:
     openIssue: 1
     commit: 18
   last90d:
-    since: 2026-08-26
+    since: 2026-08-27
     release: 1
-    mergedPR: 7
+    mergedPR: 6
     openPR: 0
     closedIssue: 7
     openIssue: 2
     commit: 24
   last180d:
-    since: 2026-05-28
+    since: 2026-05-29
     release: 2
     mergedPR: 12
     openPR: 0
@@ -158,7 +158,7 @@ recent:
     openIssue: 2
     commit: 42
   last360d:
-    since: 2025-11-29
+    since: 2025-11-30
     release: 3
     mergedPR: 22
     openPR: 0
@@ -166,7 +166,7 @@ recent:
     openIssue: 3
     commit: 76
   last720d:
-    since: 2024-12-04
+    since: 2024-12-05
     release: 5
     mergedPR: 38
     openPR: 0
@@ -182,7 +182,7 @@ total:
   commit: 1371
 ---
 path: /home/runner/.x-repo/github.com/AlDanial/cloc
-collectedAt: 2026-11-24T10:10:19Z
+collectedAt: 2026-11-25T09:15:28Z
 loc:
   Yaml:
     code: 11735
@@ -820,24 +820,15 @@ total:
   blanks: 2817
   files: 842
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/AlDanial/cloc
-  commit: 751d490f85793527c43c0fc00765f316f057e391
+  commit: 414fe1617b75fa2847844295ac423180db9ca4ea
 scorecard:
-  version: v5.6.0
-  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
 score: 4
 checks:
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 3
-    reason: Found 7/21 approved changesets -- score normalized to 3
-    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 8 issue activity found in the last 90 days -- score normalized to 10
@@ -846,6 +837,15 @@ checks:
     score: 10
     reason: no dangerous workflow patterns detected
     details: null
+  - name: Code-Review
+    score: 3
+    reason: Found 7/21 approved changesets -- score normalized to 3
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -891,11 +891,25 @@ checks:
       - 'Warn: release artifact v2.08 not signed: https://api.github.com/repos/AlDanial/cloc/releases/279680709'
       - 'Warn: release artifact v2.06 not signed: https://api.github.com/repos/AlDanial/cloc/releases/227530712'
       - 'Warn: release artifact v2.04 not signed: https://api.github.com/repos/AlDanial/cloc/releases/197822250'
+      - 'Warn: release artifact v2.12 is not immutable: https://api.github.com/repos/AlDanial/cloc/releases/443840944'
+      - 'Warn: release artifact v2.10 is not immutable: https://api.github.com/repos/AlDanial/cloc/releases/349022484'
+      - 'Warn: release artifact v2.08 is not immutable: https://api.github.com/repos/AlDanial/cloc/releases/279680709'
+      - 'Warn: release artifact v2.06 is not immutable: https://api.github.com/repos/AlDanial/cloc/releases/227530712'
+      - 'Warn: release artifact v2.04 is not immutable: https://api.github.com/repos/AlDanial/cloc/releases/197822250'
       - 'Warn: release artifact v2.12 does not have provenance: https://api.github.com/repos/AlDanial/cloc/releases/443840944'
       - 'Warn: release artifact v2.10 does not have provenance: https://api.github.com/repos/AlDanial/cloc/releases/349022484'
       - 'Warn: release artifact v2.08 does not have provenance: https://api.github.com/repos/AlDanial/cloc/releases/279680709'
       - 'Warn: release artifact v2.06 does not have provenance: https://api.github.com/repos/AlDanial/cloc/releases/227530712'
       - 'Warn: release artifact v2.04 does not have provenance: https://api.github.com/repos/AlDanial/cloc/releases/197822250'
+  - name: Branch-Protection
+    score: -1
+    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
+    details: null
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 16 are checked with a SAST tool'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -907,9 +921,9 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-staging.yml:14: update your workflow using https://app.stepsecurity.io/secureworkflow/AlDanial/cloc/release-staging.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/release-staging.yml:114: update your workflow using https://app.stepsecurity.io/secureworkflow/AlDanial/cloc/release-staging.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/release-staging.yml:121: update your workflow using https://app.stepsecurity.io/secureworkflow/AlDanial/cloc/release-staging.yml/master?enable=pin'
-      - 'Warn: containerImage not pinned by hash: .devcontainer/Dockerfile:3: pin your Docker image by updating perl:slim to perl:slim@sha256:2b59ca705cf3234d62c33e27ed573809498e476d45c4d0904550d0daced6a215'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:2: pin your Docker image by updating perl:slim to perl:slim@sha256:2b59ca705cf3234d62c33e27ed573809498e476d45c4d0904550d0daced6a215'
-      - 'Warn: containerImage not pinned by hash: Dockerfile:21: pin your Docker image by updating perl:slim to perl:slim@sha256:2b59ca705cf3234d62c33e27ed573809498e476d45c4d0904550d0daced6a215'
+      - 'Warn: containerImage not pinned by hash: .devcontainer/Dockerfile:3: pin your Docker image by updating perl:slim to perl:slim@sha256:1fe66e5a3c250ec09c6a63e52dc040115eacedc12a36b435f9cd4f3658200b9c'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:2: pin your Docker image by updating perl:slim to perl:slim@sha256:1fe66e5a3c250ec09c6a63e52dc040115eacedc12a36b435f9cd4f3658200b9c'
+      - 'Warn: containerImage not pinned by hash: Dockerfile:21: pin your Docker image by updating perl:slim to perl:slim@sha256:1fe66e5a3c250ec09c6a63e52dc040115eacedc12a36b435f9cd4f3658200b9c'
       - 'Warn: containerImage not pinned by hash: Dockerfile:35'
       - 'Warn: containerImage not pinned by hash: Dockerfile:56'
       - 'Warn: containerImage not pinned by hash: Dockerfile.build:1: pin your Docker image by updating alpine:3.11 to alpine:3.11@sha256:bcae378eacedab83da66079d9366c8f5df542d7ed9ab23bf487e3e1a8481375d'
@@ -920,14 +934,5 @@ checks:
       - 'Info:   0 out of   2 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   7 containerImage dependencies pinned'
       - 'Info:   0 out of   2 pipCommand dependencies pinned'
-  - name: Branch-Protection
-    score: -1
-    reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
-    details: null
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 16 are checked with a SAST tool'
 ---
-{"id":443840944,"author":{"login":"AlDanial","id":1459933,"node_id":"MDQ6VXNlcjE0NTk5MzM=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAoFRqs4adHmw","tag_name":"v2.12","target_commitish":"master","name":"v2.12 -- Security Update","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-13T05:02:52Z","updated_at":"2026-11-13T05:14:32Z","published_at":"2026-11-13T05:14:32Z","assets":[{"id":742365965,"node_id":"RA_kwDOAoFRqs4sP5sN","name":"cloc-2.12.exe","label":null,"uploader":{"login":"AlDanial","id":1459933,"node_id":"MDQ6VXNlcjE0NTk5MzM=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-msdownload","state":"uploaded","size":10007191,"digest":"sha256:b800034063ae3e3733ce34579d5d74cacd4dc4b842534d3f4b910d5a03ef63b1","download_count":3091,"created_at":"2026-11-13T05:12:27Z","updated_at":"2026-11-13T05:12:33Z"},{"id":742367356,"node_id":"RA_kwDOAoFRqs4sP6B8","name":"cloc-2.12.pl","label":null,"uploader":{"login":"AlDanial","id":1459933,"node_id":"MDQ6VXNlcjE0NTk5MzM=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-perl","state":"uploaded","size":825981,"digest":"sha256:621592d34f835ef178115a1643f15ebc8e73ec1d47b5484c46376fc15b78f03e","download_count":2377,"created_at":"2026-11-13T05:12:56Z","updated_at":"2026-11-13T05:12:57Z"}],"body":"> This is a security release to address vulnerabilities in the handling of archive files (zip, tar, rpm, whl, gem, etc).  A maliciously crafted archive file counted with cloc versions before this release can allow a remote code execution (RCE) attack.\r\n\r\n> All users are encouraged to update to this (or newer, when available) version.\r\n\r\n## New Languages and File Types:\r\n- AL (Business Central)\r\n- CUE\r\n- KDL\r\n- RON\r\n- Salam\r\n- Sema\r\n- Windows INF\r\n- Wren\r\n\r\n## Updates:\r\n- Add ability to count contents of .gem files.\r\n- New switch `--total` to show total column counts\r\n- Make `--exclude-lang` case insensitive to make it consistent with `--include-lang`\r\n- Recognize comment markers in single quoted QML strings\r\n- Add .scp as an extension for SQL stored procedures\r\n- Add `.inc` as an extension for Assembly\r\n\r\nBug fixes:\r\n- Secure handling of system calls to expand archive files.\r\n- Prevent regex timeouts in Swift.\r\n- Lower memory requirements when handling large XML/HTML and binary files.\r\n- Fix double-open on Windows when handling long paths.\r\n- Ensure an archive file is not a directory before attempting to extract it."}
+{"id":443840944,"author":{"login":"AlDanial","id":1459933,"node_id":"MDQ6VXNlcjE0NTk5MzM=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOAoFRqs4adHmw","tag_name":"v2.12","target_commitish":"master","name":"v2.12 -- Security Update","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-13T05:02:52Z","updated_at":"2026-11-13T05:14:32Z","published_at":"2026-11-13T05:14:32Z","assets":[{"id":742365965,"node_id":"RA_kwDOAoFRqs4sP5sN","name":"cloc-2.12.exe","label":null,"uploader":{"login":"AlDanial","id":1459933,"node_id":"MDQ6VXNlcjE0NTk5MzM=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-msdownload","state":"uploaded","size":10007191,"digest":"sha256:b800034063ae3e3733ce34579d5d74cacd4dc4b842534d3f4b910d5a03ef63b1","download_count":3406,"created_at":"2026-11-13T05:12:27Z","updated_at":"2026-11-13T05:12:33Z"},{"id":742367356,"node_id":"RA_kwDOAoFRqs4sP6B8","name":"cloc-2.12.pl","label":null,"uploader":{"login":"AlDanial","id":1459933,"node_id":"MDQ6VXNlcjE0NTk5MzM=","gravatar_id":"","type":"User","user_view_type":"public","site_admin":false},"content_type":"application/x-perl","state":"uploaded","size":825981,"digest":"sha256:621592d34f835ef178115a1643f15ebc8e73ec1d47b5484c46376fc15b78f03e","download_count":2642,"created_at":"2026-11-13T05:12:56Z","updated_at":"2026-11-13T05:12:57Z"}],"body":"> This is a security release to address vulnerabilities in the handling of archive files (zip, tar, rpm, whl, gem, etc).  A maliciously crafted archive file counted with cloc versions before this release can allow a remote code execution (RCE) attack.\r\n\r\n> All users are encouraged to update to this (or newer, when available) version.\r\n\r\n## New Languages and File Types:\r\n- AL (Business Central)\r\n- CUE\r\n- KDL\r\n- RON\r\n- Salam\r\n- Sema\r\n- Windows INF\r\n- Wren\r\n\r\n## Updates:\r\n- Add ability to count contents of .gem files.\r\n- New switch `--total` to show total column counts\r\n- Make `--exclude-lang` case insensitive to make it consistent with `--include-lang`\r\n- Recognize comment markers in single quoted QML strings\r\n- Add .scp as an extension for SQL stored procedures\r\n- Add `.inc` as an extension for Assembly\r\n\r\nBug fixes:\r\n- Secure handling of system calls to expand archive files.\r\n- Prevent regex timeouts in Swift.\r\n- Lower memory requirements when handling large XML/HTML and binary files.\r\n- Fix double-open on Windows when handling long paths.\r\n- Ensure an archive file is not a directory before attempting to extract it."}

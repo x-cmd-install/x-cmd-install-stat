@@ -7,7 +7,7 @@ about:
   latestVersion: "rc/v4.1.0.3"
   latestRelease: "v3.11.1"
   latestPrerelease: "rc/v4.1.0.3"
-  collectedAt: 2026-11-24T11:51:02Z
+  collectedAt: 2026-11-25T09:51:45Z
 timeline:
   created: 2015-04-29
   lastCommit: 2026-11-15
@@ -33,7 +33,7 @@ language:
 totalBytes: 2631029
 recent:
   last30d:
-    since: 2026-10-25
+    since: 2026-10-26
     release: 0
     mergedPR: 5
     openPR: 1
@@ -41,7 +41,7 @@ recent:
     openIssue: 1
     commit: 13
   last60d:
-    since: 2026-09-25
+    since: 2026-09-26
     release: 1
     mergedPR: 8
     openPR: 1
@@ -49,7 +49,7 @@ recent:
     openIssue: 1
     commit: 28
   last90d:
-    since: 2026-08-26
+    since: 2026-08-27
     release: 1
     mergedPR: 13
     openPR: 1
@@ -57,23 +57,23 @@ recent:
     openIssue: 1
     commit: 41
   last180d:
-    since: 2026-05-28
+    since: 2026-05-29
     release: 4
-    mergedPR: 36
+    mergedPR: 34
     openPR: 2
     closedIssue: 16
     openIssue: 4
     commit: 143
   last360d:
-    since: 2025-11-29
+    since: 2025-11-30
     release: 7
     mergedPR: 95
     openPR: 2
     closedIssue: 47
-    openIssue: 11
+    openIssue: 10
     commit: 394
   last720d:
-    since: 2024-12-04
+    since: 2024-12-05
     release: 13
     mergedPR: 195
     openPR: 5
@@ -89,7 +89,7 @@ total:
   commit: 11911
 ---
 path: /home/runner/.x-repo/github.com/commercialhaskell/stack
-collectedAt: 2026-11-24T11:51:12Z
+collectedAt: 2026-11-25T09:51:51Z
 loc:
   Haskell:
     code: 50591
@@ -177,13 +177,13 @@ total:
   blanks: 13272
   files: 1267
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/commercialhaskell/stack
   commit: 0d9a04ef2dda5130a7851cce7cd5fe9a9952c42a
 scorecard:
-  version: v5.6.0
-  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
 score: 4.9
 checks:
   - name: Code-Review
@@ -199,6 +199,10 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -209,10 +213,6 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/stan.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/tmate.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/unit-tests.yml:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -229,12 +229,6 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
-  - name: License
-    score: 9
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Warn: project license file does not contain an FSF or OSI license.'
   - name: Fuzzing
     score: 10
     reason: project is fuzzed
@@ -259,6 +253,36 @@ checks:
       - 'Info: HaskellPropertyBasedTesting integration found: tests/unit/Stack/DotSpec.hs:22'
       - 'Info: HaskellPropertyBasedTesting integration found: tests/unit/Stack/DotSpec.hs:23'
       - 'Info: HaskellPropertyBasedTesting integration found: tests/unit/Stack/PackageDumpSpec.hs:37'
+  - name: License
+    score: 9
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Warn: project license file does not contain an FSF or OSI license.'
+  - name: Branch-Protection
+    score: 0
+    reason: branch protection not enabled on development/release branches
+    details:
+      - 'Warn: branch protection not enabled for branch ''master'''
+  - name: Signed-Releases
+    score: 8
+    reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
+    details:
+      - 'Info: signed release artifact: stack-4.1.0.3-linux-aarch64-bin.asc: https://github.com/commercialhaskell/stack/releases/tag/rc/v4.1.0.3'
+      - 'Info: signed release artifact: stack-4.1.0.1-linux-aarch64-bin.asc: https://github.com/commercialhaskell/stack/releases/tag/rc/v4.1.0.1'
+      - 'Info: signed release artifact: stack-3.11.1-linux-aarch64-bin.asc: https://github.com/commercialhaskell/stack/releases/tag/v3.11.1'
+      - 'Info: signed release artifact: stack-3.11.0.1-linux-aarch64-bin.asc: https://github.com/commercialhaskell/stack/releases/tag/rc/v3.11.0.1'
+      - 'Info: signed release artifact: stack-3.9.3-linux-aarch64-bin.asc: https://github.com/commercialhaskell/stack/releases/tag/v3.9.3'
+      - 'Warn: release artifact rc/v4.1.0.3 does not have provenance: https://api.github.com/repos/commercialhaskell/stack/releases/405172124'
+      - 'Warn: release artifact rc/v4.1.0.1 does not have provenance: https://api.github.com/repos/commercialhaskell/stack/releases/375030993'
+      - 'Warn: release artifact v3.11.1 does not have provenance: https://api.github.com/repos/commercialhaskell/stack/releases/339023687'
+      - 'Warn: release artifact rc/v3.11.0.1 does not have provenance: https://api.github.com/repos/commercialhaskell/stack/releases/332020658'
+      - 'Warn: release artifact v3.9.3 does not have provenance: https://api.github.com/repos/commercialhaskell/stack/releases/288379929'
+  - name: SAST
+    score: 0
+    reason: SAST tool is not run on all commits -- score normalized to 0
+    details:
+      - 'Warn: 0 commits out of 21 are checked with a SAST tool'
   - name: Pinned-Dependencies
     score: 0
     reason: dependency not pinned by hash detected -- score normalized to 0
@@ -284,11 +308,11 @@ checks:
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/stan.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/commercialhaskell/stack/stan.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/stan.yml:36: update your workflow using https://app.stepsecurity.io/secureworkflow/commercialhaskell/stack/stan.yml/master?enable=pin'
       - 'Warn: third-party GitHubAction not pinned by hash: .github/workflows/tmate.yml:27: update your workflow using https://app.stepsecurity.io/secureworkflow/commercialhaskell/stack/tmate.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/unit-tests.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/commercialhaskell/stack/unit-tests.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/unit-tests.yml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/commercialhaskell/stack/unit-tests.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/unit-tests.yml:58: update your workflow using https://app.stepsecurity.io/secureworkflow/commercialhaskell/stack/unit-tests.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/unit-tests.yml:61: update your workflow using https://app.stepsecurity.io/secureworkflow/commercialhaskell/stack/unit-tests.yml/master?enable=pin'
       - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/unit-tests.yml:67: update your workflow using https://app.stepsecurity.io/secureworkflow/commercialhaskell/stack/unit-tests.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/unit-tests.yml:23: update your workflow using https://app.stepsecurity.io/secureworkflow/commercialhaskell/stack/unit-tests.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/unit-tests.yml:25: update your workflow using https://app.stepsecurity.io/secureworkflow/commercialhaskell/stack/unit-tests.yml/master?enable=pin'
       - 'Warn: containerImage not pinned by hash: .devcontainer/GHC.Dockerfile:12'
       - 'Warn: containerImage not pinned by hash: .devcontainer/GHC.Dockerfile:26'
       - 'Warn: containerImage not pinned by hash: .devcontainer/GHC.Dockerfile:28: pin your Docker image by updating quay.io/benz0li/hlsi:latest to quay.io/benz0li/hlsi:latest@sha256:f22bf64150d817acc05dea5db3467862c27683b4b3de086c07cdcd7f392553ed'
@@ -304,28 +328,4 @@ checks:
       - 'Info:   0 out of   8 third-party GitHubAction dependencies pinned'
       - 'Info:   0 out of   8 containerImage dependencies pinned'
       - 'Info:   0 out of   3 downloadThenRun dependencies pinned'
-  - name: Branch-Protection
-    score: 0
-    reason: branch protection not enabled on development/release branches
-    details:
-      - 'Warn: branch protection not enabled for branch ''master'''
-  - name: Signed-Releases
-    score: 8
-    reason: 5 out of the last 5 releases have a total of 5 signed artifacts.
-    details:
-      - 'Info: signed release artifact: stack-4.1.0.3-linux-aarch64-bin.asc: https://github.com/commercialhaskell/stack/releases/tag/rc/v4.1.0.3'
-      - 'Info: signed release artifact: stack-4.1.0.1-linux-aarch64-bin.asc: https://github.com/commercialhaskell/stack/releases/tag/rc/v4.1.0.1'
-      - 'Info: signed release artifact: stack-3.11.1-linux-aarch64-bin.asc: https://github.com/commercialhaskell/stack/releases/tag/v3.11.1'
-      - 'Info: signed release artifact: stack-3.11.0.1-linux-aarch64-bin.asc: https://github.com/commercialhaskell/stack/releases/tag/rc/v3.11.0.1'
-      - 'Info: signed release artifact: stack-3.9.3-linux-aarch64-bin.asc: https://github.com/commercialhaskell/stack/releases/tag/v3.9.3'
-      - 'Warn: release artifact rc/v4.1.0.3 does not have provenance: https://api.github.com/repos/commercialhaskell/stack/releases/405172124'
-      - 'Warn: release artifact rc/v4.1.0.1 does not have provenance: https://api.github.com/repos/commercialhaskell/stack/releases/375030993'
-      - 'Warn: release artifact v3.11.1 does not have provenance: https://api.github.com/repos/commercialhaskell/stack/releases/339023687'
-      - 'Warn: release artifact rc/v3.11.0.1 does not have provenance: https://api.github.com/repos/commercialhaskell/stack/releases/332020658'
-      - 'Warn: release artifact v3.9.3 does not have provenance: https://api.github.com/repos/commercialhaskell/stack/releases/288379929'
-  - name: SAST
-    score: 0
-    reason: SAST tool is not run on all commits -- score normalized to 0
-    details:
-      - 'Warn: 0 commits out of 21 are checked with a SAST tool'
 ---
