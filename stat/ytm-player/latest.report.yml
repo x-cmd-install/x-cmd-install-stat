@@ -7,7 +7,7 @@ about:
   latestVersion: "v2.3.0"
   latestRelease: "v2.3.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-26T08:26:00Z
+  collectedAt: 2026-11-27T08:53:11Z
 timeline:
   created: 2026-02-12
   lastCommit: 2026-11-25
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-11-25
   lastPrerelease: 
 popularity:
-  star: 561
+  star: 560
   watcher: 3
   fork: 52
   release: 34
@@ -29,47 +29,47 @@ language:
 totalBytes: 2950738
 recent:
   last30d:
-    since: 2026-10-27
+    since: 2026-10-28
     release: 2
     mergedPR: 27
     openPR: 0
     closedIssue: 6
     openIssue: 4
-    commit: 0
+    commit: 39
   last60d:
-    since: 2026-09-27
+    since: 2026-09-28
     release: 2
     mergedPR: 34
     openPR: 0
     closedIssue: 10
     openIssue: 5
-    commit: 0
+    commit: 43
   last90d:
-    since: 2026-08-28
+    since: 2026-08-29
     release: 3
     mergedPR: 64
     openPR: 1
-    closedIssue: 20
+    closedIssue: 19
     openIssue: 6
-    commit: 0
+    commit: 83
   last180d:
-    since: 2026-05-30
+    since: 2026-05-31
     release: 6
     mergedPR: 79
     openPR: 1
     closedIssue: 36
     openIssue: 7
-    commit: 0
+    commit: 230
   last360d:
-    since: 2025-12-01
+    since: 2025-12-02
     release: 34
     mergedPR: 108
     openPR: 1
     closedIssue: 94
     openIssue: 7
-    commit: 0
+    commit: 673
   last720d:
-    since: 2024-12-06
+    since: 2024-12-07
     release: 34
     mergedPR: 108
     openPR: 1
@@ -85,7 +85,7 @@ total:
   commit: 703
 ---
 path: /home/runner/.x-repo/github.com/peternaame-boop/ytm-player
-collectedAt: 2026-11-26T08:26:01Z
+collectedAt: 2026-11-27T08:53:14Z
 loc:
   Python:
     code: 60258
@@ -120,4 +120,4 @@ total:
 ---
 
 ---
-{"id":457529846,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOROUOy84bRVn2","tag_name":"v2.3.0","target_commitish":"master","name":"v2.3.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-25T01:15:49Z","updated_at":"2026-11-25T01:17:33Z","published_at":"2026-11-25T01:17:33Z","assets":[{"id":789555087,"node_id":"RA_kwDOROUOy84vD6eP","name":"ytm_player-2.3.0-py3-none-any.whl","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":361045,"digest":"sha256:32c99e0b21fcc84754bf2d3817651b6186b63f599f7a38597810fc4439777d92","download_count":2,"created_at":"2026-11-25T01:17:32Z","updated_at":"2026-11-25T01:17:32Z"},{"id":789555085,"node_id":"RA_kwDOROUOy84vD6eN","name":"ytm_player-2.3.0.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2174139,"digest":"sha256:3202cf2979b000191b6792d2bb4a7d4eaccd9cbb01381f5373e3c0757a2e5b5a","download_count":3,"created_at":"2026-11-25T01:17:32Z","updated_at":"2026-11-25T01:17:32Z"}],"body":"### v2.3.0 (2026-11-25)\n\n**New features**\n\n- **`ytm report`, a diagnostic report that is safe to post**: bug reports asked for `ytm doctor` output, which quoted log lines, crash files and file paths, so private details could end up in a public issue. `ytm report` prints only what ytm-player builds itself: versions, the state of mpv, libmpv and MPRIS, and for recent errors and the latest crash the level, the exception type and the ytm-player functions involved. No text is copied from logs or files. `ytm doctor` with no options now prints the same report, and the detailed output it used to print is `ytm doctor --local`, meant for your own reading. All three only read: they no longer create the config directory or replace a damaged `config.toml`, and `libmpv` is no longer reported as OK when python-mpv is not installed.\n\n- **Prefetch multiple upcoming tracks**: `[cache] prefetch_next` now accepts a track count (`0`-`5`) in addition to `true` (`1`) and `false` (`0`), resolving upcoming queue entries sequentially in the background so quick skips have streams ready ahead of time, and disabling prefetching when set to `false` or `0`. Thanks to @wgordon17 for the feature ([#219](https://github.com/peternaame-boop/ytm-player/pull/219)).\n\n**Fixes**\n\n- **Reduced stream throttling**. On supported builds, mpv requests YouTube audio in 10 MiB chunks over persistent connections. Streams pinned to an IP family use FFmpeg and need FFmpeg 8.1 or newer for chunking. Thanks to @glywil for the fix ([#221](https://github.com/peternaame-boop/ytm-player/pull/221)).\n- **Stereo playback on CoreAudio**. ytm-player requests interleaved float audio on all platforms. On macOS 27 with mpv older than 0.42, this lets stereo tracks with planar audio play through CoreAudio. Mono output can still fall back to AVFoundation ([mpv#18384](https://github.com/mpv-player/mpv/issues/18384)). Thanks to @glywil for the fix ([#221](https://github.com/peternaame-boop/ytm-player/pull/221), [#223](https://github.com/peternaame-boop/ytm-player/pull/223)).\n- **Stop cancels a pending retry**: when a track failed and its retry was still pending, pressing Stop left the retry set. Stop now clears it ([#225](https://github.com/peternaame-boop/ytm-player/issues/225), [#226](https://github.com/peternaame-boop/ytm-player/pull/226)).\n- **Lyrics load again when YouTube Music includes the Comments tab**. ytmusicapi 1.12.0 could not parse watch responses containing that tab. ytm-player now requires ytmusicapi 1.12.1 or newer, which handles it ([#227](https://github.com/peternaame-boop/ytm-player/issues/227)).\n- **Fewer tracks skipped with HTTP 403**: some YouTube streams return 403 when mpv connects over a different IP family (IPv4 or IPv6) than the one recorded in the stream URL, which happens on networks where the two leave from different addresses, as with many VPNs. With FFmpeg 6.1 or newer, ytm-player now fetches each stream over the family recorded in its URL ([#229](https://github.com/peternaame-boop/ytm-player/pull/229)).\n- **Playlist actions work on the Library page at launch**: when Library opened on the last played playlist by itself, the track actions menu had no Remove from Playlist, renaming or deleting that playlist left the view stale, and tracks added to it did not appear. All of these now act on the playlist on screen.\n- **A failing stream no longer cancels the playlist you just picked**: when the playing track's stream failed while a newly chosen playlist, album or radio was still loading, the retry or skip of the failed track discarded the new choice. The new choice now plays once it loads.\n- **Shuffle plays every track you add after the last one**: with shuffle on, if the playing track was the last in the queue and you removed it, then added tracks, an album, a playlist or radio tracks, playback could jump past some of the new tracks or replay earlier ones. Everything added now plays, and earlier tracks are not replayed.\n- **Listening time in `ytm stats`**. Local history now counts the time a track spends playing through its end. Pauses and time skipped by seeking do not add to the total.\n- **Preserve completed downloads**. If playback checks for a missing cached track just as a download finishes, the new offline copy and its cache entry are kept.\n- **Recover from malformed sign-in data**. If `auth.json` contains invalid JSON, invalid UTF-8 or no usable cookie, startup treats the session as signed out. Running `ytm setup` can replace malformed credentials after a successful sign-in. Setup still needs permission to read the existing session files and write the replacement.\n","mentions_count":2}
+{"id":457529846,"author":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"node_id":"RE_kwDOROUOy84bRVn2","tag_name":"v2.3.0","target_commitish":"master","name":"v2.3.0","draft":false,"immutable":false,"prerelease":false,"created_at":"2026-11-25T01:15:49Z","updated_at":"2026-11-25T01:17:33Z","published_at":"2026-11-25T01:17:33Z","assets":[{"id":789555087,"node_id":"RA_kwDOROUOy84vD6eP","name":"ytm_player-2.3.0-py3-none-any.whl","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":361045,"digest":"sha256:32c99e0b21fcc84754bf2d3817651b6186b63f599f7a38597810fc4439777d92","download_count":2,"created_at":"2026-11-25T01:17:32Z","updated_at":"2026-11-25T01:17:32Z"},{"id":789555085,"node_id":"RA_kwDOROUOy84vD6eN","name":"ytm_player-2.3.0.tar.gz","label":"","uploader":{"login":"github-actions[bot]","id":41898282,"node_id":"MDM6Qm90NDE4OTgyODI=","gravatar_id":"","type":"Bot","user_view_type":"public","site_admin":false},"content_type":"application/gzip","state":"uploaded","size":2174139,"digest":"sha256:3202cf2979b000191b6792d2bb4a7d4eaccd9cbb01381f5373e3c0757a2e5b5a","download_count":4,"created_at":"2026-11-25T01:17:32Z","updated_at":"2026-11-25T01:17:32Z"}],"body":"### v2.3.0 (2026-11-25)\n\n**New features**\n\n- **`ytm report`, a diagnostic report that is safe to post**: bug reports asked for `ytm doctor` output, which quoted log lines, crash files and file paths, so private details could end up in a public issue. `ytm report` prints only what ytm-player builds itself: versions, the state of mpv, libmpv and MPRIS, and for recent errors and the latest crash the level, the exception type and the ytm-player functions involved. No text is copied from logs or files. `ytm doctor` with no options now prints the same report, and the detailed output it used to print is `ytm doctor --local`, meant for your own reading. All three only read: they no longer create the config directory or replace a damaged `config.toml`, and `libmpv` is no longer reported as OK when python-mpv is not installed.\n\n- **Prefetch multiple upcoming tracks**: `[cache] prefetch_next` now accepts a track count (`0`-`5`) in addition to `true` (`1`) and `false` (`0`), resolving upcoming queue entries sequentially in the background so quick skips have streams ready ahead of time, and disabling prefetching when set to `false` or `0`. Thanks to @wgordon17 for the feature ([#219](https://github.com/peternaame-boop/ytm-player/pull/219)).\n\n**Fixes**\n\n- **Reduced stream throttling**. On supported builds, mpv requests YouTube audio in 10 MiB chunks over persistent connections. Streams pinned to an IP family use FFmpeg and need FFmpeg 8.1 or newer for chunking. Thanks to @glywil for the fix ([#221](https://github.com/peternaame-boop/ytm-player/pull/221)).\n- **Stereo playback on CoreAudio**. ytm-player requests interleaved float audio on all platforms. On macOS 27 with mpv older than 0.42, this lets stereo tracks with planar audio play through CoreAudio. Mono output can still fall back to AVFoundation ([mpv#18384](https://github.com/mpv-player/mpv/issues/18384)). Thanks to @glywil for the fix ([#221](https://github.com/peternaame-boop/ytm-player/pull/221), [#223](https://github.com/peternaame-boop/ytm-player/pull/223)).\n- **Stop cancels a pending retry**: when a track failed and its retry was still pending, pressing Stop left the retry set. Stop now clears it ([#225](https://github.com/peternaame-boop/ytm-player/issues/225), [#226](https://github.com/peternaame-boop/ytm-player/pull/226)).\n- **Lyrics load again when YouTube Music includes the Comments tab**. ytmusicapi 1.12.0 could not parse watch responses containing that tab. ytm-player now requires ytmusicapi 1.12.1 or newer, which handles it ([#227](https://github.com/peternaame-boop/ytm-player/issues/227)).\n- **Fewer tracks skipped with HTTP 403**: some YouTube streams return 403 when mpv connects over a different IP family (IPv4 or IPv6) than the one recorded in the stream URL, which happens on networks where the two leave from different addresses, as with many VPNs. With FFmpeg 6.1 or newer, ytm-player now fetches each stream over the family recorded in its URL ([#229](https://github.com/peternaame-boop/ytm-player/pull/229)).\n- **Playlist actions work on the Library page at launch**: when Library opened on the last played playlist by itself, the track actions menu had no Remove from Playlist, renaming or deleting that playlist left the view stale, and tracks added to it did not appear. All of these now act on the playlist on screen.\n- **A failing stream no longer cancels the playlist you just picked**: when the playing track's stream failed while a newly chosen playlist, album or radio was still loading, the retry or skip of the failed track discarded the new choice. The new choice now plays once it loads.\n- **Shuffle plays every track you add after the last one**: with shuffle on, if the playing track was the last in the queue and you removed it, then added tracks, an album, a playlist or radio tracks, playback could jump past some of the new tracks or replay earlier ones. Everything added now plays, and earlier tracks are not replayed.\n- **Listening time in `ytm stats`**. Local history now counts the time a track spends playing through its end. Pauses and time skipped by seeking do not add to the total.\n- **Preserve completed downloads**. If playback checks for a missing cached track just as a download finishes, the new offline copy and its cache entry are kept.\n- **Recover from malformed sign-in data**. If `auth.json` contains invalid JSON, invalid UTF-8 or no usable cookie, startup treats the session as signed out. Running `ytm setup` can replace malformed credentials after a successful sign-in. Setup still needs permission to read the existing session files and write the replacement.\n","mentions_count":2}

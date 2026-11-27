@@ -7,7 +7,7 @@ about:
   latestVersion: "v7.0.0"
   latestRelease: "v7.0.0"
   latestPrerelease: ""
-  collectedAt: 2026-11-26T10:04:04Z
+  collectedAt: 2026-11-27T10:08:43Z
 timeline:
   created: 2015-08-02
   lastCommit: 2026-08-25
@@ -15,7 +15,7 @@ timeline:
   lastRelease: 2026-05-04
   lastPrerelease: 
 popularity:
-  star: 12441
+  star: 12442
   watcher: 97
   fork: 299
   release: 55
@@ -31,23 +31,23 @@ language:
 totalBytes: 256639
 recent:
   last30d:
-    since: 2026-10-27
+    since: 2026-10-28
     release: 0
     mergedPR: 0
     openPR: 0
     closedIssue: 2
-    openIssue: 2
+    openIssue: 1
     commit: 0
   last60d:
-    since: 2026-09-27
+    since: 2026-09-28
     release: 0
     mergedPR: 0
     openPR: 1
     closedIssue: 2
-    openIssue: 3
+    openIssue: 2
     commit: 0
   last90d:
-    since: 2026-08-28
+    since: 2026-08-29
     release: 0
     mergedPR: 0
     openPR: 1
@@ -55,7 +55,7 @@ recent:
     openIssue: 4
     commit: 0
   last180d:
-    since: 2026-05-30
+    since: 2026-05-31
     release: 0
     mergedPR: 12
     openPR: 2
@@ -63,7 +63,7 @@ recent:
     openIssue: 8
     commit: 68
   last360d:
-    since: 2025-12-01
+    since: 2025-12-02
     release: 11
     mergedPR: 79
     openPR: 2
@@ -71,11 +71,11 @@ recent:
     openIssue: 18
     commit: 375
   last720d:
-    since: 2024-12-06
+    since: 2024-12-07
     release: 23
     mergedPR: 259
     openPR: 2
-    closedIssue: 300
+    closedIssue: 299
     openIssue: 39
     commit: 1381
 total:
@@ -87,7 +87,7 @@ total:
   commit: 2987
 ---
 path: /home/runner/.x-repo/github.com/mas-cli/mas
-collectedAt: 2026-11-26T10:04:05Z
+collectedAt: 2026-11-27T10:08:45Z
 loc:
   Swift:
     code: 4310
@@ -135,15 +135,33 @@ total:
   blanks: 851
   files: 124
 ---
-date: "2026-11-19T21:29:51Z"
+date: "2026-11-26T21:29:42Z"
 repo:
   name: github.com/mas-cli/mas
   commit: 6c5032dc8da74668c407b76d02463eea20b732a5
 scorecard:
   version: v5.5.0
   commit: c395761df6afe1a69e476bc60a013a94bcbc153f
-score: 7.8
+score: 7.6
 checks:
+  - name: Code-Review
+    score: 2
+    reason: Found 1/5 approved changesets -- score normalized to 2
+    details: null
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
+    details:
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
+    details:
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yaml:1'
   - name: Security-Policy
     score: 10
     reason: security policy file detected
@@ -152,38 +170,10 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Maintained
-    score: 9
-    reason: 3 commit(s) and 8 issue activity found in the last 90 days -- score normalized to 9
-    details: null
-  - name: Dangerous-Workflow
+  - name: Binary-Artifacts
     score: 10
-    reason: no dangerous workflow patterns detected
+    reason: no binaries found in the repo
     details: null
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
-    details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yaml:1'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
-    details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Code-Review
-    score: 2
-    reason: Found 1/5 approved changesets -- score normalized to 2
-    details: null
-  - name: Pinned-Dependencies
-    score: 10
-    reason: all dependencies are pinned
-    details:
-      - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered (: .github/workflows/codeql.yaml:55'
-      - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered (: .github/workflows/tag-pushed.yaml:66'
-      - 'Info: Possibly incomplete results: error parsing shell code: parameter expansion requires a literal: .github/workflows/tag-pushed.yaml:82'
-      - 'Info: Possibly incomplete results: error parsing shell code: parameter expansion requires a literal: .github/workflows/tag-pushed.yaml:110'
-      - 'Info:   9 out of   9 GitHub-owned GitHubAction dependencies pinned'
-      - 'Info:   1 out of   1 third-party GitHubAction dependencies pinned'
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -197,24 +187,34 @@ checks:
       - 'Info: found token with ''none'' permissions: .github/workflows/release-published.yaml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/scorecard.yaml:1'
       - 'Info: found token with ''none'' permissions: .github/workflows/tag-pushed.yaml:1'
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
+  - name: Maintained
+    score: 6
+    reason: 0 commit(s) and 8 issue activity found in the last 90 days -- score normalized to 6
     details: null
+  - name: Pinned-Dependencies
+    score: 10
+    reason: all dependencies are pinned
+    details:
+      - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered (: .github/workflows/codeql.yaml:55'
+      - 'Info: Possibly incomplete results: error parsing shell code: a command can only contain words and redirects; encountered (: .github/workflows/tag-pushed.yaml:66'
+      - 'Info: Possibly incomplete results: error parsing shell code: parameter expansion requires a literal: .github/workflows/tag-pushed.yaml:82'
+      - 'Info: Possibly incomplete results: error parsing shell code: parameter expansion requires a literal: .github/workflows/tag-pushed.yaml:110'
+      - 'Info:   9 out of   9 GitHub-owned GitHubAction dependencies pinned'
+      - 'Info:   1 out of   1 third-party GitHubAction dependencies pinned'
   - name: Vulnerabilities
     score: 10
     reason: 0 existing vulnerabilities detected
     details: null
+  - name: License
+    score: 10
+    reason: license file detected
+    details:
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: CII-Best-Practices
     score: 2
     reason: 'badge detected: InProgress'
     details: null
-  - name: SAST
-    score: 10
-    reason: SAST tool is run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Info: all commits (30) are checked with a SAST tool'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -229,17 +229,17 @@ checks:
       - 'Warn: release artifact v6.0.0 does not have provenance: https://api.github.com/repos/mas-cli/mas/releases/294672668'
       - 'Warn: release artifact v5.2.0 does not have provenance: https://api.github.com/repos/mas-cli/mas/releases/287489868'
       - 'Warn: release artifact v5.1.0 does not have provenance: https://api.github.com/repos/mas-cli/mas/releases/281349122'
-  - name: License
-    score: 10
-    reason: license file detected
-    details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed
     details:
       - 'Warn: no fuzzer integrations found'
+  - name: SAST
+    score: 10
+    reason: SAST tool is run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Info: all commits (30) are checked with a SAST tool'
   - name: Branch-Protection
     score: 9
     reason: branch protection is not maximal on development and all release branches
