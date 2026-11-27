@@ -2,95 +2,95 @@ about:
   description: "The Kubernetes Package Manager"
   license: Apache-2.0
   homepage: https://helm.sh
-  head: 8edbd3c
+  head: 3b82b52
   archived: false
   latestVersion: "v4.3.2"
   latestRelease: "v4.3.2"
   latestPrerelease: "v3.22.0-rc.1"
-  collectedAt: 2026-11-25T09:22:04Z
+  collectedAt: 2026-11-26T10:13:40Z
 timeline:
   created: 2015-10-06
-  lastCommit: 2026-11-24
+  lastCommit: 2026-11-25
   lastVersion: 2026-11-13
   lastRelease: 2026-11-13
   lastPrerelease: 2026-08-31
 popularity:
-  star: 30486
-  watcher: 495
-  fork: 7931
+  star: 30495
+  watcher: 496
+  fork: 7937
   release: 258
   contributor: 861
-  pullRequest: 7394
-  issue: 8553
+  pullRequest: 7402
+  issue: 8554
 language:
-  Go: 3329168
+  Go: 3328692
   Shell: 41832
   Makefile: 8954
-totalBytes: 3379954
+totalBytes: 3379478
 recent:
   last30d:
-    since: 2026-10-26
+    since: 2026-10-27
     release: 1
     mergedPR: 39
-    openPR: 75
+    openPR: 77
     closedIssue: 1
-    openIssue: 26
-    commit: 28
+    openIssue: 27
+    commit: 29
   last60d:
-    since: 2026-09-26
+    since: 2026-09-27
     release: 3
-    mergedPR: 79
-    openPR: 124
+    mergedPR: 80
+    openPR: 130
     closedIssue: 2
-    openIssue: 44
-    commit: 55
+    openIssue: 45
+    commit: 56
   last90d:
-    since: 2026-08-27
+    since: 2026-08-28
     release: 7
     mergedPR: 121
-    openPR: 160
+    openPR: 165
     closedIssue: 8
-    openIssue: 53
-    commit: 99
+    openIssue: 54
+    commit: 100
   last180d:
-    since: 2026-05-29
+    since: 2026-05-30
     release: 15
-    mergedPR: 309
-    openPR: 217
+    mergedPR: 310
+    openPR: 223
     closedIssue: 51
-    openIssue: 86
-    commit: 393
+    openIssue: 87
+    commit: 394
   last360d:
-    since: 2025-11-30
+    since: 2025-12-01
     release: 32
-    mergedPR: 549
-    openPR: 236
-    closedIssue: 163
-    openIssue: 112
-    commit: 898
+    mergedPR: 550
+    openPR: 242
+    closedIssue: 162
+    openIssue: 113
+    commit: 899
   last720d:
-    since: 2024-12-05
+    since: 2024-12-06
     release: 58
-    mergedPR: 1113
-    openPR: 240
-    closedIssue: 535
+    mergedPR: 1111
+    openPR: 246
+    closedIssue: 534
     openIssue: 145
-    commit: 2290
+    commit: 2289
 total:
   release: 258
-  mergedPR: 4877
-  openPR: 245
-  closedIssue: 8283
+  mergedPR: 4878
+  openPR: 251
+  closedIssue: 8284
   openIssue: 270
-  commit: 10052
+  commit: 10053
 ---
 path: /home/runner/.x-repo/github.com/helm/helm
-collectedAt: 2026-11-25T09:22:09Z
+collectedAt: 2026-11-26T10:13:44Z
 loc:
   Go:
-    code: 81586
+    code: 81580
     comments: 16887
-    blanks: 13402
+    blanks: 13399
     files: 559
   Yaml:
     code: 7638
@@ -148,29 +148,29 @@ loc:
     blanks: 173
     files: 267
 total:
-  code: 92564
+  code: 92558
   comments: 22279
-  blanks: 15005
+  blanks: 15002
   files: 1747
 ---
-date: "2026-11-25T03:17:51Z"
+date: "2026-11-25T23:27:00Z"
 repo:
   name: github.com/helm/helm
-  commit: 8edbd3cc1894e69fe0e7caa2f2e68fbf2ee476a8
+  commit: 3b82b52a52b8d856fe6314411280c842938a1c20
 scorecard:
   version: v5.7.0
   commit: d7552fb3cdc05e9f6426177d3328887304fce554
 score: 9.4
 checks:
-  - name: Maintained
+  - name: Code-Review
     score: 10
-    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    reason: all changesets reviewed
     details: null
-  - name: Dependency-Update-Tool
-    score: 10
-    reason: update tool detected
+  - name: Packaging
+    score: -1
+    reason: packaging workflow not detected
     details:
-      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+      - 'Warn: no GitHub/GitLab publishing workflow detected.'
   - name: Security-Policy
     score: 9
     reason: security policy file detected
@@ -179,23 +179,11 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Warn: One or no descriptive hints of disclosure, vulnerability, and/or timelines in security policy'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Packaging
-    score: -1
-    reason: packaging workflow not detected
+  - name: Dependency-Update-Tool
+    score: 10
+    reason: update tool detected
     details:
-      - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
-  - name: Code-Review
-    score: 10
-    reason: all changesets reviewed
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
+      - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -213,6 +201,18 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecards.yml:14'
       - 'Info: found token with ''none'' permissions: .github/workflows/stale.yaml:1'
       - 'Info: no jobLevel write permissions found'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
+  - name: Maintained
+    score: 10
+    reason: 30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10
+    details: null
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: Pinned-Dependencies
     score: 10
     reason: all dependencies are pinned
@@ -223,6 +223,16 @@ checks:
     score: 5
     reason: 'badge detected: Passing'
     details: null
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: OSSFuzz integration found'
+      - 'Info: GoBuiltInFuzzer integration found: internal/chart/v3/fuzz_test.go:24'
+      - 'Info: GoBuiltInFuzzer integration found: internal/chart/v3/fuzz_test.go:37'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/chart/v2/fuzz_test.go:24'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/chart/v2/fuzz_test.go:37'
+      - 'Info: GoBuiltInFuzzer integration found: pkg/strvals/fuzz_test.go:22'
   - name: Signed-Releases
     score: 10
     reason: 5 out of the last 5 releases have a total of 5 signed artifacts and 5 immutable releases.
@@ -243,16 +253,6 @@ checks:
     details:
       - 'Info: project has a license file: LICENSE:0'
       - 'Info: FSF or OSI recognized license: Apache License 2.0: LICENSE:0'
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: OSSFuzz integration found'
-      - 'Info: GoBuiltInFuzzer integration found: internal/chart/v3/fuzz_test.go:24'
-      - 'Info: GoBuiltInFuzzer integration found: internal/chart/v3/fuzz_test.go:37'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/chart/v2/fuzz_test.go:24'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/chart/v2/fuzz_test.go:37'
-      - 'Info: GoBuiltInFuzzer integration found: pkg/strvals/fuzz_test.go:22'
   - name: Vulnerabilities
     score: 10
     reason: 0 existing vulnerabilities detected

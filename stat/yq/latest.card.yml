@@ -2,25 +2,25 @@ about:
   description: "yq is a portable command-line YAML, JSON, XML, CSV, TOML, HCL  and properties processor"
   license: MIT
   homepage: https://mikefarah.gitbook.io/yq/
-  head: f2944b8
+  head: e1e216a
   archived: false
   latestVersion: "v4.54.3"
   latestRelease: "v4.54.3"
   latestPrerelease: "v4.40.1"
-  collectedAt: 2026-11-25T10:04:33Z
+  collectedAt: 2026-11-26T09:48:53Z
 timeline:
   created: 2015-09-26
-  lastCommit: 2026-11-09
+  lastCommit: 2026-11-25
   lastVersion: 2026-11-09
   lastRelease: 2026-11-09
   lastPrerelease: 2023-11-07
 popularity:
-  star: 16352
+  star: 16361
   watcher: 67
-  fork: 1451
+  fork: 1455
   release: 172
   contributor: 168
-  pullRequest: 854
+  pullRequest: 866
   issue: 1639
 language:
   Go: 1288061
@@ -30,63 +30,63 @@ language:
 totalBytes: 1408723
 recent:
   last30d:
-    since: 2026-10-26
+    since: 2026-10-27
     release: 2
-    mergedPR: 11
+    mergedPR: 19
     openPR: 32
     closedIssue: 4
     openIssue: 11
-    commit: 18
+    commit: 26
   last60d:
-    since: 2026-09-26
+    since: 2026-09-27
     release: 3
-    mergedPR: 35
+    mergedPR: 42
     openPR: 52
     closedIssue: 4
     openIssue: 19
-    commit: 43
+    commit: 51
   last90d:
-    since: 2026-08-27
+    since: 2026-08-28
     release: 3
-    mergedPR: 54
+    mergedPR: 62
     openPR: 60
     closedIssue: 7
-    openIssue: 23
-    commit: 67
+    openIssue: 22
+    commit: 75
   last180d:
-    since: 2026-05-29
+    since: 2026-05-30
     release: 6
-    mergedPR: 108
+    mergedPR: 116
     openPR: 81
     closedIssue: 19
     openIssue: 30
-    commit: 150
+    commit: 158
   last360d:
-    since: 2025-11-30
+    since: 2025-12-01
     release: 12
-    mergedPR: 199
+    mergedPR: 207
     openPR: 91
     closedIssue: 61
     openIssue: 56
-    commit: 319
+    commit: 327
   last720d:
-    since: 2024-12-05
+    since: 2024-12-06
     release: 24
-    mergedPR: 268
+    mergedPR: 276
     openPR: 92
     closedIssue: 140
     openIssue: 114
-    commit: 531
+    commit: 539
 total:
   release: 172
-  mergedPR: 592
+  mergedPR: 600
   openPR: 92
-  closedIssue: 1383
-  openIssue: 256
-  commit: 2376
+  closedIssue: 1384
+  openIssue: 255
+  commit: 2384
 ---
 path: /home/runner/.x-repo/github.com/mikefarah/yq
-collectedAt: 2026-11-25T10:04:34Z
+collectedAt: 2026-11-26T09:48:56Z
 loc:
   Go:
     code: 40814
@@ -159,20 +159,28 @@ total:
   blanks: 7753
   files: 531
 ---
-date: "2026-11-24T07:40:31Z"
+date: "2026-11-25T22:12:18Z"
 repo:
   name: github.com/mikefarah/yq
-  commit: f2944b823f84906a127dbd29e4c2a3e60c4e550e
+  commit: e1e216a366b80f98dc8f905d56b13f2d8aad052d
 scorecard:
   version: v5.6.0
   commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
-score: 7.5
+score: 7.4
 checks:
+  - name: Code-Review
+    score: 2
+    reason: Found 3/12 approved changesets -- score normalized to 2
+    details: null
   - name: Dependency-Update-Tool
     score: 10
     reason: update tool detected
     details:
       - 'Info: detected update tool: Dependabot: .github/dependabot.yml:1'
+  - name: Dangerous-Workflow
+    score: 10
+    reason: no dangerous workflow patterns detected
+    details: null
   - name: Maintained
     score: 10
     reason: 30 commit(s) and 8 issue activity found in the last 90 days -- score normalized to 10
@@ -185,10 +193,6 @@ checks:
       - 'Info: Found linked content: SECURITY.md:1'
       - 'Info: Found disclosure, vulnerability, and/or timelines in security policy: SECURITY.md:1'
       - 'Info: Found text in security policy: SECURITY.md:1'
-  - name: Dangerous-Workflow
-    score: 10
-    reason: no dangerous workflow patterns detected
-    details: null
   - name: Token-Permissions
     score: 10
     reason: GitHub workflow tokens follow principle of least privilege
@@ -208,10 +212,6 @@ checks:
       - 'Info: topLevel permissions set to ''read-all'': .github/workflows/scorecard.yml:18'
       - 'Info: found token with ''none'' permissions: .github/workflows/snap-release.yml:1'
       - 'Info: topLevel ''contents'' permission set to ''read'': .github/workflows/test-yq.yml:7'
-  - name: Code-Review
-    score: 3
-    reason: Found 7/18 approved changesets -- score normalized to 3
-    details: null
   - name: Binary-Artifacts
     score: 10
     reason: no binaries found in the repo
@@ -234,17 +234,12 @@ checks:
     score: 10
     reason: 0 existing vulnerabilities detected
     details: null
-  - name: SAST
-    score: 9
-    reason: SAST tool detected but not run on all commits
-    details:
-      - 'Info: SAST configuration detected: CodeQL'
-      - 'Warn: 25 commits out of 26 are checked with a SAST tool'
-  - name: Packaging
+  - name: License
     score: 10
-    reason: packaging workflow detected
+    reason: license file detected
     details:
-      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker-githubaction.yml:9'
+      - 'Info: project has a license file: LICENSE:0'
+      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
   - name: Signed-Releases
     score: 0
     reason: Project has not signed or included provenance with any releases.
@@ -259,12 +254,17 @@ checks:
       - 'Warn: release artifact v4.54.1 does not have provenance: https://api.github.com/repos/mikefarah/yq/releases/398818604'
       - 'Warn: release artifact v4.53.6 does not have provenance: https://api.github.com/repos/mikefarah/yq/releases/373613231'
       - 'Warn: release artifact v4.53.4 does not have provenance: https://api.github.com/repos/mikefarah/yq/releases/372802948'
-  - name: License
+  - name: Packaging
     score: 10
-    reason: license file detected
+    reason: packaging workflow detected
     details:
-      - 'Info: project has a license file: LICENSE:0'
-      - 'Info: FSF or OSI recognized license: MIT License: LICENSE:0'
+      - 'Info: Project packages its releases by way of GitHub Actions.: .github/workflows/docker-githubaction.yml:9'
+  - name: SAST
+    score: 9
+    reason: SAST tool detected but not run on all commits
+    details:
+      - 'Info: SAST configuration detected: CodeQL'
+      - 'Warn: 25 commits out of 26 are checked with a SAST tool'
   - name: Fuzzing
     score: 0
     reason: project is not fuzzed

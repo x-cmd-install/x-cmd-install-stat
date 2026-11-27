@@ -7,7 +7,7 @@ about:
   latestVersion: "0.28.1"
   latestRelease: "0.28.1"
   latestPrerelease: "1.0.0.beta0"
-  collectedAt: 2026-11-25T08:15:09Z
+  collectedAt: 2026-11-26T08:40:09Z
 timeline:
   created: 2019-04-04
   lastCommit: 2026-11-16
@@ -15,9 +15,9 @@ timeline:
   lastRelease: 2024-12-06
   lastPrerelease: 2021-09-14
 popularity:
-  star: 15852
-  watcher: 168
-  fork: 2009
+  star: 15860
+  watcher: 170
+  fork: 2007
   release: 51
   contributor: 235
   pullRequest: 1832
@@ -28,7 +28,7 @@ language:
 totalBytes: 572851
 recent:
   last30d:
-    since: 2026-10-26
+    since: 2026-10-27
     release: 0
     mergedPR: 4
     openPR: 21
@@ -36,7 +36,7 @@ recent:
     openIssue: 0
     commit: 4
   last60d:
-    since: 2026-09-26
+    since: 2026-09-27
     release: 0
     mergedPR: 4
     openPR: 21
@@ -44,7 +44,7 @@ recent:
     openIssue: 0
     commit: 4
   last90d:
-    since: 2026-08-27
+    since: 2026-08-28
     release: 0
     mergedPR: 4
     openPR: 21
@@ -52,7 +52,7 @@ recent:
     openIssue: 0
     commit: 4
   last180d:
-    since: 2026-05-29
+    since: 2026-05-30
     release: 0
     mergedPR: 4
     openPR: 21
@@ -60,15 +60,15 @@ recent:
     openIssue: 0
     commit: 4
   last360d:
-    since: 2025-11-30
+    since: 2025-12-01
     release: 0
     mergedPR: 6
-    openPR: 54
+    openPR: 53
     closedIssue: 1
     openIssue: 3
     commit: 7
   last720d:
-    since: 2024-12-05
+    since: 2024-12-06
     release: 1
     mergedPR: 34
     openPR: 79
@@ -84,7 +84,7 @@ total:
   commit: 1527
 ---
 path: /home/runner/.x-repo/github.com/encode/httpx
-collectedAt: 2026-11-25T08:15:10Z
+collectedAt: 2026-11-26T08:40:10Z
 loc:
   Python:
     code: 14025
@@ -137,15 +137,19 @@ total:
   blanks: 4733
   files: 102
 ---
-date: "2026-11-16"
+date: "2026-11-23"
 repo:
   name: github.com/encode/httpx
   commit: 7cff5f79bc78649bbcd3fd9aa7a74c86e0f63016
 scorecard:
-  version: v5.6.0
-  commit: 61e84743356275f6ffca23b1b2f2cb945e19eb96
+  version: v5.7.0
+  commit: d7552fb3cdc05e9f6426177d3328887304fce554
 score: 5.5
 checks:
+  - name: Maintained
+    score: 5
+    reason: 4 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 5
+    details: null
   - name: Code-Review
     score: 9
     reason: Found 26/27 approved changesets -- score normalized to 9
@@ -159,14 +163,6 @@ checks:
     reason: packaging workflow not detected
     details:
       - 'Warn: no GitHub/GitLab publishing workflow detected.'
-  - name: Maintained
-    score: 5
-    reason: 4 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 5
-    details: null
-  - name: Binary-Artifacts
-    score: 10
-    reason: no binaries found in the repo
-    details: null
   - name: Token-Permissions
     score: 0
     reason: detected GitHub workflow tokens with excessive permissions
@@ -174,24 +170,14 @@ checks:
       - 'Warn: no topLevel permission defined: .github/workflows/publish.yml:1'
       - 'Warn: no topLevel permission defined: .github/workflows/test-suite.yml:1'
       - 'Info: no jobLevel write permissions found'
-  - name: Pinned-Dependencies
-    score: 0
-    reason: dependency not pinned by hash detected -- score normalized to 0
-    details:
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/encode/httpx/publish.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish.yml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/encode/httpx/publish.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test-suite.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/encode/httpx/test-suite.yml/master?enable=pin'
-      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test-suite.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/encode/httpx/test-suite.yml/master?enable=pin'
-      - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
+  - name: Binary-Artifacts
+    score: 10
+    reason: no binaries found in the repo
+    details: null
   - name: CII-Best-Practices
     score: 0
     reason: no effort to earn an OpenSSF best practices badge detected
     details: null
-  - name: Fuzzing
-    score: 10
-    reason: project is fuzzed
-    details:
-      - 'Info: OSSFuzz integration found'
   - name: Security-Policy
     score: 0
     reason: security policy file not detected
@@ -200,6 +186,11 @@ checks:
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
       - 'Warn: no security file to analyze'
+  - name: Fuzzing
+    score: 10
+    reason: project is fuzzed
+    details:
+      - 'Info: OSSFuzz integration found'
   - name: License
     score: 10
     reason: license file detected
@@ -210,6 +201,15 @@ checks:
     score: -1
     reason: no releases found
     details: null
+  - name: Pinned-Dependencies
+    score: 0
+    reason: dependency not pinned by hash detected -- score normalized to 0
+    details:
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish.yml:17: update your workflow using https://app.stepsecurity.io/secureworkflow/encode/httpx/publish.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/publish.yml:18: update your workflow using https://app.stepsecurity.io/secureworkflow/encode/httpx/publish.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test-suite.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/encode/httpx/test-suite.yml/master?enable=pin'
+      - 'Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/test-suite.yml:21: update your workflow using https://app.stepsecurity.io/secureworkflow/encode/httpx/test-suite.yml/master?enable=pin'
+      - 'Info:   0 out of   4 GitHub-owned GitHubAction dependencies pinned'
   - name: Branch-Protection
     score: -1
     reason: 'internal error: error during branchesHandler.setup: internal error: some github tokens can''t read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md'
